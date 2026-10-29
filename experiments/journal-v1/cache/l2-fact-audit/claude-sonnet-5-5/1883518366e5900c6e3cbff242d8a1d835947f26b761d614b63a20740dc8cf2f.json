@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Line Traffic Controller, label=selects holding, skip-stop, turnback, or run-through measures)\n\nSource sentences (the last one is where the fact was extracted):\nS100: The Maintenance Diagnostic Server records route command outcomes, point operation timing, and detection transitions for later engineering review without participating in vital decisions.\nS101: The Operations Control Centre workflow begins with the Line Traffic Controller maintaining a live view of train positions, route status, alarms, and service performance across the Greenvale Metro line.\nS102: The Metro Operations Control System presents regulating options based on timetable variance, platform dwell time, headway spacing, and the current availability of routes.\nS103: The Line Traffic Controller selects holding, skip-stop, turnback, or run-through measures only after checking that passenger impact and downstream recovery have been assessed.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S103 states that the Line Traffic Controller selects holding, skip-stop, turnback, or run-through measures, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 738,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 65,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.82,
+ "created": "2026-10-14T12:52:26"
+}

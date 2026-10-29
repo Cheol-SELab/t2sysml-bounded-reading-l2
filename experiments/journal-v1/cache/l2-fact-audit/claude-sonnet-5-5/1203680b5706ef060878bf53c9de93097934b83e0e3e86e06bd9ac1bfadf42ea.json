@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Platform Screen Door Controller, payload=door closed and locked indications)\n\nSource sentences (the last one is where the fact was extracted):\nS090: West Junction Interlocking sends the Route Release Exception List when normal sectional release cannot be completed within the configured timing rules.\nS091: The zone controller treats any release exception as a retained hazard until the affected path is excluded from new movement authorities.\nS092: Platform approach protection is enforced by combining the active route state with train stopping accuracy supervision near the platform berth.\nS093: The Platform Screen Door Controller provides door closed and locked indications to the supervising wayside systems, but those indications do not replace interlocking route proof.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S093 states the Platform Screen Door Controller provides door closed and locked indications to supervising wayside systems, so the source and payload match; the target is not specified in the fact, so nothing in it is contradicted.\"}",
+ "usage": {
+  "input_tokens": 681,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.071,
+ "created": "2026-10-14T12:52:09"
+}

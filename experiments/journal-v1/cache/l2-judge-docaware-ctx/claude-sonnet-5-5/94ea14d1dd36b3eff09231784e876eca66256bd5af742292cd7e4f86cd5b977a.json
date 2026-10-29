@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport Duty Manager provides \"the Customs Hold Release Note\" to Airline Operations Coordinator (an information or material flow).\n\nSource sentences:\nS567: Border release status is represented as a readiness attribute on each affected flight record in the Regional Flow Platform, separate from aircraft readiness and airline commercial readiness.\nS568: The Airport Duty Manager produces the Customs Hold Release Note when border processing confirms that a held arrival may proceed to normal turnaround handling.\nS678: Airport Duty Manager uses the Apron Sweep Completion Note to confirm that apron availability constraints do not invalidate an approved substitution.\nS679: Airline Operations Coordinator uses the release note to confirm that a candidate substitution is eligible for customs release before requesting a slot swap.\n\nAnswer \"supported\" only if the sentences state that Airport Duty Manager produces or sends this item AND that Airline Operations Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\nS060: The Tower Supervisor sends the Runway Inspection Note before the first planning consolidation window.\nS181: The Airport Duty Manager uses the Runway Inspection Note to confirm that the duty desk has a current record of pavement status before endorsing any declared capacity change.\nS647: Ramp Control Lead sends the Apron Sweep Completion Note after the responsible sweep team confirms that the assigned apron area is clean, safe, and free of observed foreign object debris.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S568 says the Airport Duty Manager produces the Customs Hold Release Note, and S679 says the Airline Operations Coordinator uses 'the release note' to confirm customs release eligibility, which refers to the same item.\"}",
+ "usage": {
+  "input_tokens": 914,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 90,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.079,
+ "created": "2026-10-19T19:06:40"
+}

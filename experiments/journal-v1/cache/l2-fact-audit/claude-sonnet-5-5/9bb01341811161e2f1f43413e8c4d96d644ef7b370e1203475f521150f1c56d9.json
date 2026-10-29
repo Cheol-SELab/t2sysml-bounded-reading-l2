@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=North District Zone Controller, label=applies movement authority constraints)\n\nSource sentences (the last one is where the fact was extracted):\nS102: The Metro Operations Control System presents regulating options based on timetable variance, platform dwell time, headway spacing, and the current availability of routes.\nS103: The Line Traffic Controller selects holding, skip-stop, turnback, or run-through measures only after checking that passenger impact and downstream recovery have been assessed.\nS104: Lantern displays the proposed regulating action, affected train identities, and predicted recovery time before the Line Traffic Controller confirms the command.\nS105: The North District Zone Controller applies movement authority constraints according to the confirmed operating state and reports any conflict or unavailable route condition for controller review.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S105 states that the North District Zone Controller applies movement authority constraints, so both the performer and the action label match the text.\"}",
+ "usage": {
+  "input_tokens": 709,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 54,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.168,
+ "created": "2026-10-14T12:52:26"
+}

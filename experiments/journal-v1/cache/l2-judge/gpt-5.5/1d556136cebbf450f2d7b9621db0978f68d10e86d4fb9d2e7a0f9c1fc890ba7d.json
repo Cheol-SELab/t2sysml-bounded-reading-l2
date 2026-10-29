@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: dispatch transmission provides \"incident identifier, location, priority, response assignment, and any immediate hazard information\" to Triage Supervisor (an information or material flow).\n\nSource sentences:\nS005: Call Taker Mara obtains essential incident details, confirms the reported location, and enters the request for assessment.\nS006: The Triage Supervisor reviews incident information, assigns or confirms priority, and directs cases requiring additional clinical review.\nS113: The Radio Coordinator selects the appropriate talkgroup and confirms that it is available before transmitting.\nS114: The dispatch transmission states the incident identifier, location, priority, response assignment, and any immediate hazard information.\n\nAnswer \"supported\" only if the sentences state that dispatch transmission produces or sends this item AND that Triage Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S114 states that the dispatch transmission includes the listed incident details, and S006 says the Triage Supervisor reviews incident information, but the text does not state that the dispatch transmission provides those details to the Triage Supervisor.\"}",
+ "usage": {
+  "input_tokens": 304,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 373,
+  "output_tokens_details": {
+   "reasoning_tokens": 309
+  },
+  "total_tokens": 677
+ },
+ "attempts": 1,
+ "wall_s": 8.618,
+ "created": "2026-10-13T23:53:58"
+}

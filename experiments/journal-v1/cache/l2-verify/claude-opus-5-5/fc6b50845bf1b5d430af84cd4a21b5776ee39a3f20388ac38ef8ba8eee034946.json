@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: approved sources provides \"runway condition weather inputs\" to Meteorology Briefing Officer (an information or material flow).\n\nSource sentences:\nS107: The Capacity Assessment Module combines demand projections with the Airport Capacity Plan to determine whether a published Airport Acceptance Rate remains feasible.\nS108: The Weather Ingest Gateway accepts aviation forecasts, radar-derived precipitation fields, lightning alerts, wind forecasts, ceiling and visibility forecasts, and runway condition weather inputs from approved sources.\nS111: When a forecast product arrives late or fails validation, the Weather Ingest Gateway marks the feed as degraded rather than silently excluding it from the operational picture.\nS112: The Meteorology Briefing Officer reviews degraded weather inputs when they affect capacity assumptions for the next planning period.\n\nAnswer \"supported\" only if the sentences state that approved sources produces or sends this item AND that Meteorology Briefing Officer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S108 says approved sources send runway condition weather inputs to the Weather Ingest Gateway, not the Meteorology Briefing Officer, who per S112 only reviews degraded weather inputs in general rather than receiving this item from approved sources.\"}",
+ "usage": {
+  "input_tokens": 743,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 265,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 166
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.122,
+ "created": "2026-10-14T12:45:46"
+}

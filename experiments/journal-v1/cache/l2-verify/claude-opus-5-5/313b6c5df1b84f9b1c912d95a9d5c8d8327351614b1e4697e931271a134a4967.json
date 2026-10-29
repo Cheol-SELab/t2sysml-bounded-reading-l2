@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Call Taker Mara provides \"the Caller Location Correction Slip\" to Regional Dispatch Center (an information or material flow).\n\nSource sentences:\nS061: Call Taker Mara notes access barriers such as locked entrances, restricted roads, or difficulty reaching the patient.\nS062: Call Taker Mara produces the Caller Location Correction Slip when the caller's address needs documented clarification.\nS152: The Hospital Liaison Desk contacts the Emergency Department to confirm whether the proposed destination can receive the patient.\nS153: The Regional Dispatch Center uses the correction slip to reconcile a reported destination change with the active incident record.\n\nAnswer \"supported\" only if the sentences state that Call Taker Mara produces or sends this item AND that Regional Dispatch Center receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S062 says Call Taker Mara produces the Caller Location Correction Slip, and S153 says the Regional Dispatch Center uses the correction slip, a shorter name for the same item.\"}",
+ "usage": {
+  "input_tokens": 677,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 78,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.532,
+ "created": "2026-10-14T00:08:31"
+}

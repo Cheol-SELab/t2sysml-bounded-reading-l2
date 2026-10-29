@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=are diverted to the Secondary Inspection Chute)\n\nSource sentences (the last one is where the fact was extracted):\nS090: The Baggage Operations Supervisor sets local congestion thresholds and confirms the authorized response to sustained overload.\nS091: Tern is the operational alias used for the Baggage Operations Supervisor in sortation coordination.\nS092: When a planned lane is unavailable, the Baggage Control System selects an approved alternate route only if screening status and flight timing remain valid.\nS093: Bags with an unresolved destination or a route outside their handling limits are diverted to the Secondary Inspection Chute.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S093 states that bags with an unresolved destination or a route outside handling limits are diverted to the Secondary Inspection Chute, which matches the action label.\"}",
+ "usage": {
+  "input_tokens": 665,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.992,
+ "created": "2026-10-14T12:52:35"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metro Operations Control System provides \"the Crew Login Token Bundle\" to Atlas Onboard Controller (an information or material flow).\n\nSource sentences:\nS023: Cyber Security Officer oversees access controls, key-management processes supported by Cryptographic Key Management Appliance, and the response to security events that could affect train control availability or integrity.\nS024: Metro Operations Control System sends the Crew Login Token Bundle as part of the controlled start-of-duty process.\nS094: If platform door readiness is absent, the approaching train may be held outside the platform stopping window even when the junction route is otherwise proved.\nS095: The Atlas Onboard Controller uses the token bundle to validate that onboard operating context is current before accepting supervised route-related data.\n\nAnswer \"supported\" only if the sentences state that Metro Operations Control System produces or sends this item AND that Atlas Onboard Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S024 states that Metro Operations Control System sends the Crew Login Token Bundle, and S095 states that Atlas Onboard Controller uses the token bundle, a shorter name for the same item.\"}",
+ "usage": {
+  "input_tokens": 709,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 81,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.193,
+ "created": "2026-10-14T01:35:22"
+}

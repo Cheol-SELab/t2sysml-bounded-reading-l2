@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ramp Movement Board provides \"surface movement status\" to Tower Sequence Manager (an information or material flow).\n\nSource sentences:\nS179: The Surface Surveillance Adapter consolidates position updates from the East Apron Sensor and West Apron Sensor and presents movement indications to the Airport CDM Portal.\nS180: The Tower Sequence Manager uses validated surface status to support local sequencing decisions without replacing controller judgment or established radio procedures.\nS941: The Demand Prediction Service should use this data to create more stable demand pictures across longer planning horizons while still preserving tactical responsiveness.\nS942: Trajectory prediction should also make greater use of weather features, sector configuration, runway direction, and surface movement status when estimating flight progress.\n\nAnswer \"supported\" only if the sentences state that Ramp Movement Board produces or sends this item AND that Tower Sequence Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"None of the sentences mention the Ramp Movement Board; S180 has Tower Sequence Manager using validated surface status, but no sentence names its source, and S179 has the Surface Surveillance Adapter sending movement indications to the Airport CDM Portal instead.\"}",
+ "usage": {
+  "input_tokens": 713,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 106,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.451,
+ "created": "2026-10-14T12:46:17"
+}

@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Following the network coordination described in the preceding section, the Mission Control Center treats every scheduled contact as a controlled operational activity with a defined readiness check, live monitoring period, and post-pass closure step.",
+   "tags": []
+  },
+  {
+   "text": "The North S-Band Antenna and South S-Band Antenna are normally assigned for command and low-rate telemetry contacts, while the Kiruna X-Band Antenna and Svalbard X-Band Antenna support high-rate telemetry reception when the visibility geometry and data volume justify their use.",
+   "tags": []
+  },
+  {
+   "text": "The Network Control System provides the Mission Control Center with antenna status, link configuration, timing references, and routing readiness before each pass begins.",
+   "tags": []
+  },
+  {
+   "text": "The Telemetry Ingest Service accepts real-time frames, validates basic framing and time continuity, and records reception metadata needed for later operational review.",
+   "tags": []
+  },
+  {
+   "text": "The Telemetry Ingest Service produces the Pass Replay Packet after a contact when the received stream must be reconstructed for engineering review.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "During live operations, the Spacecraft Operations Team monitors spacecraft mode, power state, thermal margins, attitude indicators, command counters, onboard storage, and fault protection messages from the Mission Control Center consoles.",
+   "tags": []
+  },
+  {
+   "text": "Console displays emphasize deviations from expected state rather than raw parameter volume, because operators must identify safety trends while a contact is still available.",
+   "tags": []
+  },
+  {
+   "text": "The console lead is responsible for declaring pass status, authorizing planned command execution through the Command Validation Gateway, and pausing the activity when telemetry does not match the expected configuration.",
+   "tags": []
+  },
+  {
+   "text": "The telemetry engineer verifies reception quality, frame loss, latency, and stream continuity, and advises the console lead when degraded link conditions could affect command confidence.",
+   "tags": []
+  },
+  {
+   "text": "The spacecraft systems engineer interprets health telemetry, confirms that subsystem states remain within flight rules, and records any anomaly context needed by subsystem specialists.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Network Manager remains accountable for antenna assignment, ground link availability, and coordination with site operations when weather, equipment status, or routing issues affect a contact.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team uses tracking measurements and validated time tags from the contact to support orbit assessment at the Flight Dynamics Facility.",
+   "tags": []
+  },
+  {
+   "text": "The Orbit Determination Engine supports routine state updates and provides the basis for predicting future visibility periods, maneuver planning constraints, and antenna pointing expectations.",
+   "tags": []
+  },
+  {
+   "text": "Pass reconstruction begins when the contact closes and combines command history, received telemetry timing, ground station status, and operator log entries into a single operational narrative.",
+   "tags": []
+  },
+  {
+   "text": "The reconstructed pass record is used to confirm whether planned objectives were completed, whether any onboard event occurred outside the timeline, and whether additional engineering analysis is required.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Processing Facility is also known operationally as Forgehouse in console discussions and shift logs.",
+   "tags": [
+    "ALIAS:E_PAYLOAD_PROCESSING_FACILITY"
+   ]
+  },
+  {
+   "text": "The Mission Control Center coordinates with the Payload Processing Facility when instrument mode changes, data downlink priorities, or reception gaps could affect downstream processing.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Calibration Team sends the Calibration Patch Bundle after calibration analysis identifies an approved update for payload processing behavior.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "Subsystem specialists are not expected to staff every live contact, but they must be reachable during planned critical activities and whenever a console operator declares an off-nominal condition.",
+   "tags": []
+  },
+  {
+   "text": "Escalation from the Mission Control Center begins with the console lead, moves to the responsible discipline lead, and then reaches mission management when the condition threatens spacecraft safety, contact continuity, or recovery schedule.",
+   "tags": []
+  },
+  {
+   "text": "The Spacecraft Operations Team and Flight Dynamics Team coordinate closely before orbit-control activities so that command timing, attitude constraints, tracking expectations, and post-burn assessment steps remain consistent.",
+   "tags": []
+  },
+  {
+   "text": "When telemetry indicates a possible onboard fault, operators preserve the command state, avoid discretionary commanding, and request specialist review before changing spacecraft configuration.",
+   "tags": []
+  },
+  {
+   "text": "The Mission Planning System receives operational constraints from mission control after anomalies, station outages, or spacecraft configuration changes require adjustment of future contacts or payload activities.",
+   "tags": []
+  },
+  {
+   "text": "At the end of each shift, the Mission Control Center records unresolved actions, open engineering questions, and expected specialist responses so that the next operations crew can maintain continuity without relying on informal handover.",
+   "tags": []
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Following maintenance closeout, disinfection control is returned to normal service only after the Chief Operator confirms that the chlorine feed controls, residual instruments, and level indications are responding consistently in the SCADA Historian Server.",
+   "tags": []
+  },
+  {
+   "text": "The Chlorine Contact Basin is operated to maintain the required contact time under the current production rate, basin level, and measured disinfectant residual.",
+   "tags": []
+  },
+  {
+   "text": "Operators adjust chlorine feed gradually so that changes in residual do not outrun mixing and contact time through the Chlorine Contact Basin.",
+   "tags": []
+  },
+  {
+   "text": "When a Chlorine Residual Alarm occurs, the control room verifies analyzer sample flow, compares the reading with a grab sample result, and holds any planned production increase until the condition is understood.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Technician provides confirmatory residual results when analyzer drift, sample line fouling, or an unexpected residual trend is suspected.",
+   "tags": []
+  },
+  {
+   "text": "The Clearwell Level Controller maintains normal storage within established operating limits that protect disinfectant contact, reserve volume, and high-service pump suction conditions.",
+   "tags": []
+  },
+  {
+   "text": "Low clearwell level interlocks are configured to prevent pump operation from drawing the storage volume below the minimum level needed for safe hydraulic operation.",
+   "tags": []
+  },
+  {
+   "text": "High clearwell level alarms give operators time to reduce production or adjust downstream pumping before overflow conditions develop.",
+   "tags": []
+  },
+  {
+   "text": "The Clearwell Level Controller sends the Clearwell Diver Entry Permit when level and isolation prerequisites have been verified by the control system.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "Clearwell level changes are trended against filter production and high-service demand so that slow instrumentation errors can be distinguished from actual storage changes.",
+   "tags": []
+  },
+  {
+   "text": "The High Service Pump Header is identified in voice radio traffic by the alias Juniper when operators need a short confirmation name.",
+   "tags": [
+    "ALIAS:E_HIGH_SERVICE_PUMP_HEADER"
+   ]
+  },
+  {
+   "text": "The High Service Pump Header sequences available pumps to meet distribution demand while avoiding unnecessary starts, short cycling, and operation near unstable portions of the pump curves.",
+   "tags": []
+  },
+  {
+   "text": "Lead and lag pump assignments are rotated according to runtime, availability, and any operating restriction entered by the Chief Operator.",
+   "tags": []
+  },
+  {
+   "text": "Header pressure control uses a paced response so that pump starts, pump speed changes, and valve movements do not create avoidable pressure transients in the distribution system.",
+   "tags": []
+  },
+  {
+   "text": "The High Service Pump Header produces the Pump Bearing Vibration Clip after a configured vibration threshold is exceeded during pump operation.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "text": "If a high-service pump trips, the remaining available pumps are evaluated automatically against the current pressure setpoint before another unit is started.",
+   "tags": []
+  },
+  {
+   "text": "The North Distribution Pressure Station and South Distribution Pressure Station receive pressure support through coordinated setpoints that reflect system demand and storage conditions.",
+   "tags": []
+  },
+  {
+   "text": "The Distribution Dispatcher is identified by the alias Falcon during pressure coordination calls with plant staff.",
+   "tags": [
+    "ALIAS:E_DISTRIBUTION_DISPATCHER"
+   ]
+  },
+  {
+   "text": "The Distribution Dispatcher communicates expected demand changes, main break impacts, and pressure complaints so that plant pumping decisions match field conditions.",
+   "tags": []
+  },
+  {
+   "text": "During Storm Intake Mode, operators watch the relationship between raw water quality, filter loading, disinfectant demand, and high-service pumping to avoid forcing production beyond treatment capability.",
+   "tags": []
+  },
+  {
+   "text": "Abnormal clearwell level, loss of residual, loss of pump header pressure, or conflicting instrument readings require the Duty Engineer to review the operating condition before setpoints are changed outside normal ranges.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Historian Server stores residual, level, pressure, and pump status data at sufficient resolution to support event reconstruction after alarms or customer pressure complaints.",
+   "tags": []
+  },
+  {
+   "text": "Manual operation is allowed only when the operator can maintain residual targets, clearwell limits, and distribution pressure with direct observation of the affected indications.",
+   "tags": []
+  },
+  {
+   "text": "Return to automatic control requires stable chlorine residual, stable clearwell level response, and confirmed high-service pressure control for a period set by the Chief Operator.",
+   "tags": []
+  }
+ ]
+}

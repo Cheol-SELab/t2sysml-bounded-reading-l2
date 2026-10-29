@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Substation Field Crew provides \"Breaker Inspection Tag\" to Bay Automation Controller (an information or material flow).\n\nSource sentences:\nS088: The crew promptly reports uncertain equipment conditions through the designated operational communication channel.\nS089: Substation Field Crew completes and sends the Breaker Inspection Tag after recording the observed breaker condition and inspection time.\nS178: Bay Automation Controller compares returned indications with the requested state and identifies incomplete or contradictory operation.\nS179: Bay Automation Controller uses the inspection tag to associate the applicable equipment context with an authorized record.\n\nAnswer \"supported\" only if the sentences state that Substation Field Crew produces or sends this item AND that Bay Automation Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S089 states the Substation Field Crew sends the Breaker Inspection Tag, and S179 states the Bay Automation Controller uses 'the inspection tag' to associate equipment context with a record, which refers to the same item.\"}",
+ "usage": {
+  "input_tokens": 663,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 90,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.128,
+ "created": "2026-10-14T12:38:19"
+}

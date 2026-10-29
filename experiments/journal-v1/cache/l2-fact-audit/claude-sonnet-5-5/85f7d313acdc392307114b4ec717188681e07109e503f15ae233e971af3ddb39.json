@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=is released into the revised process)\n\nSource sentences (the last one is where the fact was extracted):\nS197: The Maintenance Technician performs corrective work and reports any condition that prevents safe restart.\nS198: The Baggage Operations Supervisor controls the operational hold, communicates its scope, and confirms that affected staff understand the restriction.\nS199: A recovery begins with a controlled inspection of the affected equipment and confirmation that bags in the area have been accounted for.\nS200: If a route or flight assignment has changed, the operator obtains approval before the bag is released into the revised process.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S200 states that the bag is released into the revised process after approval, so an action labeled 'is released into the revised process' is directly stated.\"}",
+ "usage": {
+  "input_tokens": 647,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 58,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.128,
+ "created": "2026-10-14T12:51:55"
+}

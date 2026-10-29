@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Primary Crossbelt Sorter provides \"a Chute Occupancy Note\" to Baggage Operations Supervisor (an information or material flow).\n\nSource sentences:\nS084: The Primary Crossbelt Sorter applies the assigned destination and screening status to each identified bag.\nS085: The Primary Crossbelt Sorter sends a Chute Occupancy Note when a destination lane approaches its configured limit.\nS183: Guards and access panels remain in place during operation, and bypasses are permitted only under an approved maintenance procedure.\nS184: The Baggage Operations Supervisor uses the occupancy note to confirm that a chute can safely accept bags.\n\nAnswer \"supported\" only if the sentences state that Primary Crossbelt Sorter produces or sends this item AND that Baggage Operations Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S085 states that the Primary Crossbelt Sorter sends a Chute Occupancy Note, and S184 states that the Baggage Operations Supervisor uses the occupancy note.\"}",
+ "usage": {
+  "input_tokens": 307,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 51,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 358
+ },
+ "attempts": 1,
+ "wall_s": 3.46,
+ "created": "2026-10-14T12:40:34"
+}

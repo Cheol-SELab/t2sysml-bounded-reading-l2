@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Uninterruptible power supplies, label=bridge transfer events)\n\nSource sentences (the last one is where the fact was extracted):\nS213: During Storm Intake Mode, alarm response expectations shall account for higher debris load, faster raw water quality changes, and increased dependence on intake screening and chemical dose verification.\nS214: Backup power shall support safe operation or controlled shutdown of the River Intake Pump Station, Raw Water Screen Channel, Chlorine Contact Basin, Clearwell Level Controller, SCADA Historian Server, High Service Pump Header, and essential control-room equipment.\nS215: The plant shall maintain written expectations for generator start time, automatic transfer performance, fuel availability, and operator checks during extended utility outages.\nS216: Uninterruptible power supplies shall be sized to bridge transfer events and allow orderly shutdown of servers, network switches, control processors, and communication equipment.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S216 states that uninterruptible power supplies shall be sized to bridge transfer events, so the performer and the action label both match the text.\"}",
+ "usage": {
+  "input_tokens": 768,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 59,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.802,
+ "created": "2026-10-14T12:52:23"
+}

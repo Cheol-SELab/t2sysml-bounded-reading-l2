@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metocean Buoy provides \"the Wave Burst Record\" to Weather Analyst (an information or material flow).\n\nSource sentences:\nS193: The Control Engineer reviews persistent alarms and coordinates electrical support with the Substation Operator.\nS194: Metocean Buoy produces the Wave Burst Record at the configured sampling interval.\nS322: The HSE Officer reviews task hazards and confirms that required controls are assigned before the permit is authorized.\nS323: The Weather Analyst uses the Wave Burst Record to assess whether the planned access period remains suitable.\n\nAnswer \"supported\" only if the sentences state that Metocean Buoy produces or sends this item AND that Weather Analyst receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S194 states Metocean Buoy produces the Wave Burst Record, and S323 states the Weather Analyst uses the same Wave Burst Record, so the flow from buoy to analyst is supported.\"}",
+ "usage": {
+  "input_tokens": 648,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 83,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.222,
+ "created": "2026-10-14T12:51:05"
+}

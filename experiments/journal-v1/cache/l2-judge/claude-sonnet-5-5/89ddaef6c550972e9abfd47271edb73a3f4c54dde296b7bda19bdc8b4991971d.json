@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Staff provides \"notification\" to Security Duty Manager (an information or material flow).\n\nSource sentences:\nS070: The Bag Reconciliation Station verifies that the bag presented for examination matches the screening record before further handling.\nS071: If an examination requires the bag to remain isolated, staff secure the area and notify the Baggage Operations Supervisor.\nS072: The Baggage Operations Supervisor coordinates decisions that affect flight readiness, staffing, or continued operation of a screening lane.\nS073: The Security Duty Manager is notified when an alarm response requires a security decision beyond routine screening procedures.\n\nAnswer \"supported\" only if the sentences state that Staff produces or sends this item AND that Security Duty Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S073 says the Security Duty Manager is notified in certain alarm situations but does not name who sends the notification, and S071 has staff notifying a different role (the Baggage Operations Supervisor), so Staff as sender to the Security Duty Manager is not stated.\"}",
+ "usage": {
+  "input_tokens": 654,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 104,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.785,
+ "created": "2026-10-14T12:40:09"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=issued through approved operational channels)\n\nSource sentences (the last one is where the fact was extracted):\nS004: The principal service objective is to maintain safe train movements while achieving the advertised headway, predictable dwell performance, and rapid recovery from routine disturbances.\nS005: The control philosophy assigns strategic regulation to the control room and tactical protection to safety-related train and wayside functions.\nS006: The Line Traffic Controller is responsible for monitoring service performance, authorizing planned operational changes, coordinating incident response, and directing recovery actions when automatic regulation is insufficient.\nS007: The Revenue Train Operator remains responsible for train readiness, cab procedures, passenger-facing actions, and compliance with instructions issued through approved operational channels.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S007 mentions instructions 'issued through approved operational channels', so the label text is grounded, but it describes how instructions reach the operator, not a discrete action with a stated actor, so modeling it as an action is a loose fit.\"}",
+ "usage": {
+  "input_tokens": 709,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 92,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.243,
+ "created": "2026-10-14T12:52:03"
+}

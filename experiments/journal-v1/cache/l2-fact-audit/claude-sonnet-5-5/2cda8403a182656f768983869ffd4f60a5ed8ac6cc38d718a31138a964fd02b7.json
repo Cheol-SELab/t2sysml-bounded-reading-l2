@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Telemetry Ingest Service, label=produces the Pass Replay Packet)\n\nSource sentences (the last one is where the fact was extracted):\nS078: The North S-Band Antenna and South S-Band Antenna are normally assigned for command and low-rate telemetry contacts, while the Kiruna X-Band Antenna and Svalbard X-Band Antenna support high-rate telemetry reception when the visibility geometry and data volume justify their use.\nS079: The Network Control System provides the Mission Control Center with antenna status, link configuration, timing references, and routing readiness before each pass begins.\nS080: The Telemetry Ingest Service accepts real-time frames, validates basic framing and time continuity, and records reception metadata needed for later operational review.\nS081: The Telemetry Ingest Service produces the Pass Replay Packet after a contact when the received stream must be reconstructed for engineering review.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S081 states directly that the Telemetry Ingest Service produces the Pass Replay Packet after a contact, matching the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 757,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 63,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.823,
+ "created": "2026-10-14T12:52:25"
+}

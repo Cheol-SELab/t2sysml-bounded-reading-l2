@@ -1,0 +1,120 @@
+{
+ "sentences": [
+  {
+   "text": "This section defines how the system converts detection observations, aerial imagery, weather updates, and geospatial overlays into a shared fire behavior assessment for operational use.",
+   "tags": []
+  },
+  {
+   "text": "The assessment begins when visual detections are correlated with incident geometry, terrain, fuel type, and current resource locations in the mapping workspace.",
+   "tags": []
+  },
+  {
+   "text": "North Lookout Camera Mast captures a time-stamped smoke column bearing and reports the pan, tilt, zoom, and confidence values needed to project the observation onto terrain.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "text": "South Lookout Camera Mast supplies a separate bearing track so the mapping workflow can triangulate a probable origin area and bound the uncertainty ellipse.",
+   "tags": []
+  },
+  {
+   "text": "The Smoke Classifier Module assigns each observation a smoke likelihood, growth trend, and obscuration flag before the result is made available for analyst review.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Detection Officer uses the spot snippet to compare the automated classification with visible flame, smoke color, and terrain context before accepting the observation into the assessment queue.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "text": "Drone imagery is treated as a higher-resolution confirmation layer when weather, airspace, and communications conditions permit flight operations.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Tasking Service packages approved imaging objectives as map footprints, altitude bands, and revisit intervals so the requested coverage can be compared with the active perimeter model.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Pilot Operator uses the swap ticket to keep imaging sorties aligned with available aircraft endurance and expected return time.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "Frames collected during a sortie are orthorectified against the terrain model and registered to the incident grid before they are used for perimeter adjustment.",
+   "tags": []
+  },
+  {
+   "text": "The Sentinel Fireline Analytics Engine identifies heat signatures, smoke edges, flame fronts, and potential spot fire indicators in the registered imagery.",
+   "tags": []
+  },
+  {
+   "text": "Analytic results are not displayed as final fireline until confidence thresholds, sensor age, and positional error are applied as explicit map attributes.",
+   "tags": []
+  },
+  {
+   "text": "The MesoWest Weather Fusion Node ingests station observations, forecast grids, and local quality checks to maintain the wind, humidity, temperature, and stability fields used by the spread model.",
+   "tags": []
+  },
+  {
+   "text": "Brindle publishes a time-indexed weather update that marks significant forecast changes and identifies which map products require recomputation.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "text": "Weather fields are interpolated across the incident area with terrain-aware weighting so ridge, drainage, and slope effects are represented at operational map scale.",
+   "tags": []
+  },
+  {
+   "text": "Geospatial overlays include fuels, slope, aspect, roads, structures, water sources, jurisdiction boundaries, evacuation zones, and known communications coverage.",
+   "tags": []
+  },
+  {
+   "text": "The fire behavior model combines the accepted perimeter, recent growth vectors, weather fields, and fuel conditions to estimate short-term spread direction and rate.",
+   "tags": []
+  },
+  {
+   "text": "Model output is expressed as probability bands rather than a single line so supervisors can see both the most likely path and the practical planning margin.",
+   "tags": []
+  },
+  {
+   "text": "Emberhall renders the current perimeter, projected spread, resource positions, and decision annotations into a common operating picture with role-based symbology.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "text": "The Caldera Incident Command Portal produces the Crew Staging Pin from the approved map layer and assigns it an effective time, location accuracy, and incident identifier.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "text": "Operational recommendations are generated from rule checks that compare projected fire arrival times with values at risk, road access, crew travel time, and aircraft availability.",
+   "tags": []
+  },
+  {
+   "text": "Recommendations may include confirming an ignition, increasing camera monitoring, requesting drone coverage, preparing aviation options, repositioning ground crews, or notifying county partners.",
+   "tags": []
+  },
+  {
+   "text": "The Air Attack Supervisor receives map products that emphasize projected columns, flight hazards, target areas, and timing constraints without obscuring ground resource information.",
+   "tags": []
+  },
+  {
+   "text": "The County Emergency Liaison receives a simplified view that preserves perimeter confidence, threatened areas, and recommended public safety coordination actions while hiding tactical details not needed for civil coordination.",
+   "tags": []
+  },
+  {
+   "text": "Every map product records source time, processing time, model version, analyst acceptance, and supersession status so users can distinguish current guidance from archived assessments.",
+   "tags": []
+  },
+  {
+   "text": "When inputs conflict, the common operating picture shows the conflict explicitly and requires review before the affected recommendation is promoted for command use.",
+   "tags": []
+  }
+ ]
+}

@@ -1,0 +1,300 @@
+package L2Model {
+    item def AlertItem { doc /* @S192 */ }
+    item def BatchReleaseNoteItem { doc /* @S204 */ }
+    item def CabinetDowntimeNoticeItem { doc /* @S064,S222 */ }
+    item def ColdChainHandoffCardItem { doc /* @S177 */ }
+    item def CompletedPackageItem { doc /* @S077 */ }
+    item def CompletedRepairsAndAnyEquipmentLimitationsItem { doc /* @S234 */ }
+    item def DiscrepanciesItem { doc /* @S010 */ }
+    item def DiversionReviewPacketItem { doc /* @S141 */ }
+    item def DoseExceptionReviewSlipItem { doc /* @S128 */ }
+    item def OrderReconciliationSnapshotItem { doc /* @S149 */ }
+    item def PneumaticCapsuleSealRecordItem { doc /* @S238 */ }
+    item def PriorityRefillToteTagItem { doc /* @S103 */ }
+    item def ReturnBinAuditLabelItem { doc /* @S117 */ }
+    item def SegmentStatusTransferProgressAndDeliveryConfirmationItem { doc /* @S188 */ }
+    item def TubeRouteExceptionTicketItem { doc /* @S052,S211 */ }
+    item def UrgentPatientCareConcernItem { doc /* @S132 */ }
+    part def BiomedicalEngineer { doc /* @S024,S050,S052,S060,S068,S142,S210,S211,S212,S214,S218,S234 */ }
+    part def ChargeNurse { doc /* @S019,S059,S064,S070,S122,S134,S222 */ }
+    part def ClinicalPharmacist { doc /* @S009,S010,S012,S034,S044,S057,S075,S083,S128,S129,S132,S145,S178,S196,S197,S203,S217,S232 */ }
+    part def Correction { doc /* @S130 */ }
+    part def EastTubeDispatchConsole { doc /* @S016,S051,S052,S094,S183,S184,S185,S187,S188,S189,S192,S193,S211 */ }
+    part def Equipment { doc /* @S213 */ }
+    part def HospitalCourier { doc /* @S023,S089,S090,S091,S092,S121,S238,S241 */ }
+    part def ITOperationsSpecialist { doc /* @S024,S061,S064,S069,S141,S143,S215,S222,S223,S224,S226,S228,S231,S234,S235,S243 */ }
+    part def MedicationOrderGateway { doc /* @S008,S029,S030,S031,S032,S081,S136,S147,S149,S227 */ }
+    part def MedicationReturnKiosk { doc /* @S020,S021,S116,S117 */ }
+    part def MedicationSafetyOfficer { doc /* @S025,S046,S047,S140,S141,S216 */ }
+    part def NorthWardCabinetController { doc /* @S066,S072,S101,S103,S137,S161,S168,S170 */ }
+    part def PharmacyFulfillmentRobot { doc /* @S011,S013,S037,S077,S103,S125,S126,S149,S152,S153 */ }
+    part def PharmacyTechnician { doc /* @S010,S035,S040,S041,S045,S056,S076,S117,S135,S148,S177,S192,S198 */ }
+    part def PharmacyVerificationStation { doc /* @S014,S033,S048,S077,S078,S079,S127,S128,S195,S204,S229 */ }
+    part def PneumaticTubeNetwork { doc /* @S017,S093,S188 */ }
+    part def RegisteredNurse { doc /* @S058,S100,S107,S114,S131,S132,S207,S233 */ }
+    part def SensorMonitoredMedicationCooler { doc /* @S015,S038,S039,S088,S108,S139,S171,S172,S173,S176,S177,S179 */ }
+    part def SouthWardCabinetController { doc /* @S067,S072,S102,S138,S204,S205,S208,S209,S225 */ }
+    part def WestTubeDispatchConsole { doc /* @S016,S238,S239,S242 */ }
+    part system {
+        part biomedicalEngineer : BiomedicalEngineer {
+            perform action a0 { doc /* maintains supported equipment @S024 */ }
+            perform action a1 { doc /* supports technical recovery for dispensing and transport equipment @S050 */ }
+            perform action a2 { doc /* inspects tube hardware, switches, and sensors @S060 */ }
+            perform action a3 { doc /* evaluates cabinet hardware @S068 */ }
+            perform action a4 { doc /* verifies safe operation @S068 */ }
+            perform action a5 { doc /* evaluates a suspected mechanical or sensor fault @S142 */ }
+            perform action a6 { doc /* advises whether the affected equipment can safely return to service @S142 */ }
+            perform action a7 { doc /* reviews the received operational record @S210 */ }
+            perform action a8 { doc /* records an engineering disposition @S210 */ }
+            perform action a9 { doc /* uses the exception ticket to identify the affected path @S211 */ }
+            perform action a10 { doc /* checks whether the reported condition is isolated to one device @S212 */ }
+            perform action a11 { doc /* isolates the affected subsystem @S214 */ }
+            perform action a12 { doc /* performs only the diagnostic steps approved @S214 */ }
+            perform action a13 { doc /* records the corrective action, test evidence, and approvals @S218 */ }
+            perform action a14 { doc /* reports completed repairs and any equipment limitations @S234 */ }
+        }
+        part chargeNurse : ChargeNurse {
+            perform action a0 { doc /* coordinates ward readiness @S019 */ }
+            perform action a1 { doc /* communicates operational constraints @S019 */ }
+            perform action a2 { doc /* keeps ward staff informed about expected delivery delays @S059 */ }
+            perform action a3 { doc /* sends a Cabinet Downtime Notice @S064 */ }
+            perform action a4 { doc /* confirms that clinical staff have been notified @S070 */ }
+            perform action a5 { doc /* ensures that unresolved receipt or return discrepancies remain assigned for follow-up @S122 */ }
+            perform action a6 { doc /* assigns unresolved exceptions to a named role @S134 */ }
+        }
+        part clinicalPharmacist : ClinicalPharmacist {
+            perform action a0 { doc /* reviews clinical appropriateness @S009 */ }
+            perform action a1 { doc /* resolves medication questions @S009 */ }
+            perform action a2 { doc /* produces the Dose Exception Review Slip @S012 */ }
+            perform action a3 { doc /* evaluates clinical appropriateness, dose limits, allergies, and relevant interactions @S034 */ }
+            perform action a4 { doc /* approving an order @S034 */ }
+            perform action a5 { doc /* determines whether affected medication remains suitable for dispensing @S044 */ }
+            perform action a6 { doc /* reviews any medication whose storage conditions or delivery timing may affect its suitability @S057 */ }
+            perform action a7 { doc /* reviews clinical and labeling exceptions @S075 */ }
+            perform action a8 { doc /* authorizing release @S075 */ }
+            perform action a9 { doc /* documents the disposition of any clinical concern @S083 */ }
+            perform action a10 { doc /* assesses dose, route, timing, and patient-specific clinical concerns @S129 */ }
+            perform action a11 { doc /* approving a correction or rejecting the order @S129 */ }
+            perform action a12 { doc /* seeks a higher-level clinical decision @S145 */ }
+            perform action a13 { doc /* reviews excursion details @S178 */ }
+            perform action a14 { doc /* compares the active medication order with the product, strength, dosage form, dose, route, and scheduled time @S196 */ }
+            perform action a15 { doc /* confirms that the patient identifiers and pharmacy label agree with the authorized order @S197 */ }
+            perform action a16 { doc /* resolves unclear or conflicting order details through the Medication Order Gateway @S203 */ }
+            perform action a17 { doc /* authorizing release @S203 */ }
+            perform action a18 { doc /* keeps affected medication unavailable @S217 */ }
+            perform action a19 { doc /* reviews medication orders affected by the outage @S232 */ }
+        }
+        part correction : Correction;
+        part eastTubeDispatchConsole : EastTubeDispatchConsole {
+            perform action a0 { doc /* routing authorized pharmacy deliveries @S016 */ }
+            perform action a1 { doc /* monitors capsule movement @S051 */ }
+            perform action a2 { doc /* records route, timing, and equipment status for each dispatch @S051 */ }
+            perform action a3 { doc /* sends a Tube Route Exception Ticket @S052 */ }
+            perform action a4 { doc /* checks the requested route @S094 */ }
+            perform action a5 { doc /* reports whether the route is available for dispatch @S094 */ }
+            perform action a6 { doc /* maintains the approved route map @S183 */ }
+            perform action a7 { doc /* checks the selected route against the destination cabinet @S184 */ }
+            perform action a8 { doc /* releasing a capsule @S184 */ }
+            perform action a9 { doc /* confirms that the destination is reachable @S185 */ }
+            perform action a10 { doc /* checks for conflicting capsule movements @S187 */ }
+            perform action a11 { doc /* holds the capsule @S189 */ }
+            perform action a12 { doc /* displays the condition for operator review @S189 */ }
+            perform action a13 { doc /* alerts a Pharmacy Technician @S192 */ }
+            perform action a14 { doc /* requires refreshed segment status and an approved route decision @S193 */ }
+        }
+        part equipment : Equipment {
+            exhibit state modes {
+                state s0 { doc /* Out of Service @S213 */ }
+            }
+        }
+        part hospitalCourier : HospitalCourier {
+            perform action a0 { doc /* supports authorized movement of medication and returns @S023 */ }
+            perform action a1 { doc /* checks package count, packaging integrity, destination information, and any special handling instructions @S089 */ }
+            perform action a2 { doc /* records the time and identity associated with acceptance @S090 */ }
+            perform action a3 { doc /* produces the Pneumatic Capsule Seal Record @S091 */ }
+            perform action a4 { doc /* verifies that the capsule is closed securely @S092 */ }
+            perform action a5 { doc /* collects only bins that are closed and recorded as ready for collection @S121 */ }
+            perform action a6 { doc /* confirms physical receipt @S241 */ }
+        }
+        part iTOperationsSpecialist : ITOperationsSpecialist {
+            perform action a0 { doc /* monitors system connectivity and service availability @S024 */ }
+            perform action a1 { doc /* checks console connectivity, interface health, and relevant system logs @S061 */ }
+            perform action a2 { doc /* checks controller communications and application health @S069 */ }
+            perform action a3 { doc /* checks access, transaction, and device logs @S141 */ }
+            perform action a4 { doc /* investigates software or connectivity faults @S143 */ }
+            perform action a5 { doc /* records the technical findings @S143 */ }
+            perform action a6 { doc /* investigates authentication, interface, and time-synchronization faults @S215 */ }
+            perform action a7 { doc /* uses the Cabinet Downtime Notice to open a controlled incident record @S222 */ }
+            perform action a8 { doc /* checks controller status, network connectivity, and recent event logs @S223 */ }
+            perform action a9 { doc /* attempting recovery @S223 */ }
+            perform action a10 { doc /* records the time the fault was detected and the affected equipment identifier @S224 */ }
+            perform action a11 { doc /* isolates the fault @S226 */ }
+            perform action a12 { doc /* checks whether any transaction was interrupted @S228 */ }
+            perform action a13 { doc /* coordinates technical troubleshooting with the Biomedical Engineer @S231 */ }
+            perform action a14 { doc /* verifies communications, status reporting, and cabinet transaction behavior @S235 */ }
+            perform action a15 { doc /* monitors cabinet and tube service status for recurrence @S243 */ }
+        }
+        part medicationOrderGateway : MedicationOrderGateway {
+            perform action a0 { doc /* communicates order status to authorized hospital systems @S008 */ }
+            perform action a1 { doc /* accepts medication orders from authorized clinical systems @S029 */ }
+            perform action a2 { doc /* records their arrival times @S029 */ }
+            perform action a3 { doc /* checks required order fields, patient identifiers, medication codes, quantities, and destination details @S030 */ }
+            perform action a4 { doc /* routing an order for pharmacy review @S030 */ }
+            perform action a5 { doc /* flags missing data, duplicate submissions, and changes @S031 */ }
+            perform action a6 { doc /* produces the Order Reconciliation Snapshot @S032 */ }
+            perform action a7 { doc /* provides the current order status @S081 */ }
+            perform action a8 { doc /* rejects incomplete or internally inconsistent order updates @S136 */ }
+            perform action a9 { doc /* retains the rejection reason @S136 */ }
+            perform action a10 { doc /* validates each medication order for patient, product, dose, route, and timing fields @S147 */ }
+            perform action a11 { doc /* making it available for downstream processing @S147 */ }
+            perform action a12 { doc /* retains pending requests for review @S227 */ }
+        }
+        part medicationReturnKiosk : MedicationReturnKiosk {
+            perform action a0 { doc /* recording medication returns and capturing return details @S020 */ }
+            perform action a1 { doc /* produces the Return Bin Audit Label @S021 */ }
+            perform action a2 { doc /* guides ward staff through return-bin checks @S116 */ }
+            perform action a3 { doc /* records each check outcome @S116 */ }
+        }
+        part medicationSafetyOfficer : MedicationSafetyOfficer {
+            perform action a0 { doc /* oversees safety concerns @S025 */ }
+            perform action a1 { doc /* reviews relevant trends @S025 */ }
+            perform action a2 { doc /* reviews patterns of discrepancies and handling events @S046 */ }
+            perform action a3 { doc /* produces the Diversion Review Packet @S047 */ }
+            perform action a4 { doc /* reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm @S140 */ }
+            perform action a5 { doc /* reviews any discrepancy @S216 */ }
+        }
+        part northWardCabinetController : NorthWardCabinetController {
+            perform action a0 { doc /* reports cabinet availability @S066 */ }
+            perform action a1 { doc /* prevents dispensing @S066 */ }
+            perform action a2 { doc /* records the arrival time and the destination cabinet @S101 */ }
+            perform action a3 { doc /* uses the Priority Refill Tote Tag to confirm the intended ward @S103 */ }
+            perform action a4 { doc /* prevents access to a held transaction @S137 */ }
+            perform action a5 { doc /* applies the North Ward medication access rules @S161 */ }
+            perform action a6 { doc /* rejects a transaction @S168 */ }
+            perform action a7 { doc /* prevents routine dispensing @S170 */ }
+            perform action a8 { doc /* reports the condition for investigation @S170 */ }
+            exhibit state modes {
+                state s0 { doc /* Out of Service @S066 */ }
+                state s1 { doc /* Ready for Dispense @S072 */ }
+            }
+        }
+        part pharmacyFulfillmentRobot : PharmacyFulfillmentRobot {
+            perform action a0 { doc /* produces the Priority Refill Tote Tag @S011 */ }
+            perform action a1 { doc /* prepares eligible medication against the active order @S013 */ }
+            perform action a2 { doc /* records its handling actions @S013 */ }
+            perform action a3 { doc /* prepares only orders that have passed the required review and authorization checks @S037 */ }
+            perform action a4 { doc /* presents the completed package at the Pharmacy Verification Station @S077 */ }
+            perform action a5 { doc /* stops the affected pick sequence @S125 */ }
+            perform action a6 { doc /* keeps the package in a controlled hold location @S125 */ }
+            perform action a7 { doc /* preserves the scanned product and quantity data @S126 */ }
+            perform action a8 { doc /* uses the Order Reconciliation Snapshot to compare requested quantities with completed dispense events and current cabinet balances @S149 */ }
+            perform action a9 { doc /* retains the patient, medication, dose, route, and timing details @S152 */ }
+            perform action a10 { doc /* checks whether the order is active and whether its authorization remains valid @S153 */ }
+        }
+        part pharmacyTechnician : PharmacyTechnician {
+            perform action a0 { doc /* performs routine preparation tasks @S010 */ }
+            perform action a1 { doc /* escalates discrepancies to the Clinical Pharmacist @S010 */ }
+            perform action a2 { doc /* investigates administrative discrepancies @S035 */ }
+            perform action a3 { doc /* requests clarification through approved clinical channels @S035 */ }
+            perform action a4 { doc /* checks the cooler's status @S040 */ }
+            perform action a5 { doc /* confirms that refrigerated stock remains within handling limits @S040 */ }
+            perform action a6 { doc /* produces the Cold Chain Handoff Card @S041 */ }
+            perform action a7 { doc /* checks packaging, product identity, lot details, and expiry information @S045 */ }
+            perform action a8 { doc /* verifies capsule contents and order identifiers @S056 */ }
+            perform action a9 { doc /* confirms that the package contents and patient identifiers match the verified order @S076 */ }
+            perform action a10 { doc /* uses the audit label to identify a return bin @S117 */ }
+            perform action a11 { doc /* gather package and transaction evidence @S135 */ }
+            perform action a12 { doc /* confirms that the reconciliation queue has no unresolved discrepancy @S148 */ }
+            perform action a13 { doc /* authorizing routine cabinet replenishment @S148 */ }
+            perform action a14 { doc /* checks package integrity, lot identification, and expiry @S198 */ }
+            perform action a15 { doc /* presenting the medication for verification @S198 */ }
+        }
+        part pharmacyVerificationStation : PharmacyVerificationStation {
+            perform action a0 { doc /* supports a final verification step @S014 */ }
+            perform action a1 { doc /* displays queued orders and their validation results @S033 */ }
+            perform action a2 { doc /* preserves review decisions and order status changes in an auditable record @S048 */ }
+            perform action a3 { doc /* records the verification outcome @S078 */ }
+            perform action a4 { doc /* prevents release @S078 */ }
+            perform action a5 { doc /* produces the Batch Release Note @S079 */ }
+            perform action a6 { doc /* compares the active order with the scanned product, strength, and measured quantity @S127 */ }
+            perform action a7 { doc /* blocks verification @S127 */ }
+            perform action a8 { doc /* uses the review slip to record the exception category, evidence checked, disposition, and reviewer identity @S128 */ }
+            perform action a9 { doc /* serves as the final controlled checkpoint @S195 */ }
+            perform action a10 { doc /* confirm that pending medication orders remain valid @S229 */ }
+        }
+        part pneumaticTubeNetwork : PneumaticTubeNetwork {
+            perform action a0 { doc /* carries compatible deliveries between designated hospital locations @S017 */ }
+            perform action a1 { doc /* accepts only loads that meet the applicable packaging and routing requirements @S093 */ }
+            perform action a2 { doc /* reports segment status, transfer progress, and delivery confirmation @S188 */ }
+        }
+        part registeredNurse : RegisteredNurse {
+            perform action a0 { doc /* confirms whether the ward still requires the medication @S058 */ }
+            perform action a1 { doc /* follows the approved contingency process @S058 */ }
+            perform action a2 { doc /* verifies that the load is intended for the ward @S100 */ }
+            perform action a3 { doc /* checks that the load remained within the required handling conditions @S107 */ }
+            perform action a4 { doc /* confirms that the contents are eligible for return @S114 */ }
+            perform action a5 { doc /* keeps the cabinet transaction locked @S131 */ }
+            perform action a6 { doc /* confirms that the medication has not been administered @S131 */ }
+            perform action a7 { doc /* escalates an urgent patient-care concern to the Clinical Pharmacist @S132 */ }
+            perform action a8 { doc /* authenticates at the cabinet @S207 */ }
+            perform action a9 { doc /* selects the medication associated with the active patient order @S207 */ }
+            perform action a10 { doc /* uses the established clinical process for urgent medication needs @S233 */ }
+        }
+        part sensorMonitoredMedicationCooler : SensorMonitoredMedicationCooler {
+            perform action a0 { doc /* maintains monitored storage conditions @S015 */ }
+            perform action a1 { doc /* maintains refrigerated medications within the facility's approved temperature range @S038 */ }
+            perform action a2 { doc /* record temperature readings @S039 */ }
+            perform action a3 { doc /* report excursions or loss of monitoring connectivity @S039 */ }
+            perform action a4 { doc /* records temperature conditions @S088 */ }
+            perform action a5 { doc /* displays the current temperature and any recorded excursion @S108 */ }
+            perform action a6 { doc /* reports excursions @S139 */ }
+            perform action a7 { doc /* maintains a time-stamped temperature history @S171 */ }
+            perform action a8 { doc /* raises an alarm @S171 */ }
+            perform action a9 { doc /* applies approved upper and lower temperature limits @S172 */ }
+            perform action a10 { doc /* records probe identity and calibration status @S173 */ }
+            perform action a11 { doc /* preserves the affected stock in its current controlled environment @S176 */ }
+            perform action a12 { doc /* uses the handoff card to compare a transfer's recorded custody time with its temperature history @S177 */ }
+            perform action a13 { doc /* retains the disposition status @S179 */ }
+            perform action a14 { doc /* prevents stock marked ineligible from being selected @S179 */ }
+        }
+        part southWardCabinetController : SouthWardCabinetController {
+            perform action a0 { doc /* applies the same availability controls for its assigned ward @S067 */ }
+            perform action a1 { doc /* records the arrival time and the destination cabinet @S102 */ }
+            perform action a2 { doc /* reports a failed lock or an unrecognized access attempt @S138 */ }
+            perform action a3 { doc /* applies its own approved cabinet configuration @S204 */ }
+            perform action a4 { doc /* enabling any compartment @S204 */ }
+            perform action a5 { doc /* checks its local compartment mapping, access rules, and supported medication classes @S205 */ }
+            perform action a6 { doc /* checks the requested selection against its local authorization rules @S208 */ }
+            perform action a7 { doc /* unlocking a compartment @S208 */ }
+            perform action a8 { doc /* records the user, order reference, compartment access, and transaction time @S209 */ }
+            exhibit state modes {
+                state s0 { doc /* Out of Service @S225 */ }
+                state s1 { doc /* Ready for Dispense @S072 */ }
+            }
+        }
+        part westTubeDispatchConsole : WestTubeDispatchConsole {
+            perform action a0 { doc /* routing authorized pharmacy deliveries @S016 */ }
+            perform action a1 { doc /* uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status @S238 */ }
+            perform action a2 { doc /* closing its dispatch-side handoff checks @S238 */ }
+            perform action a3 { doc /* records completion of its handoff checks @S239 */ }
+            perform action a4 { doc /* retains the handoff completion status @S242 */ }
+        }
+        flow f0 of DiscrepanciesItem from pharmacyTechnician to clinicalPharmacist { doc /* @S010 */ }
+        flow f1 of TubeRouteExceptionTicketItem from eastTubeDispatchConsole to biomedicalEngineer { doc /* @S052 */ }
+        flow f2 of CabinetDowntimeNoticeItem from chargeNurse to iTOperationsSpecialist { doc /* @S064 */ }
+        flow f3 of CompletedPackageItem from pharmacyFulfillmentRobot to pharmacyVerificationStation { doc /* @S077 */ }
+        flow f4 of PriorityRefillToteTagItem from pharmacyFulfillmentRobot to northWardCabinetController { doc /* @S103 */ }
+        flow f5 of ReturnBinAuditLabelItem from medicationReturnKiosk to pharmacyTechnician { doc /* @S117 */ }
+        flow f6 of DoseExceptionReviewSlipItem from clinicalPharmacist to pharmacyVerificationStation { doc /* @S128 */ }
+        flow f7 of UrgentPatientCareConcernItem from registeredNurse to clinicalPharmacist { doc /* @S132 */ }
+        flow f8 of DiversionReviewPacketItem from medicationSafetyOfficer to iTOperationsSpecialist { doc /* @S141 */ }
+        flow f9 of OrderReconciliationSnapshotItem from medicationOrderGateway to pharmacyFulfillmentRobot { doc /* @S149 */ }
+        flow f10 of ColdChainHandoffCardItem from pharmacyTechnician to sensorMonitoredMedicationCooler { doc /* @S177 */ }
+        flow f11 of SegmentStatusTransferProgressAndDeliveryConfirmationItem from pneumaticTubeNetwork to eastTubeDispatchConsole { doc /* @S188 */ }
+        flow f12 of AlertItem from eastTubeDispatchConsole to pharmacyTechnician { doc /* @S192 */ }
+        flow f13 of BatchReleaseNoteItem from pharmacyVerificationStation to southWardCabinetController { doc /* @S204 */ }
+        flow f16 of CompletedRepairsAndAnyEquipmentLimitationsItem from biomedicalEngineer to iTOperationsSpecialist { doc /* @S234 */ }
+        flow f17 of PneumaticCapsuleSealRecordItem from hospitalCourier to westTubeDispatchConsole { doc /* @S238 */ }
+    }
+    requirement def R0 { doc /* A correction requires a valid authorized order and must not be inferred from prior dispensing history. @S130 */ subject s : Correction; }
+}

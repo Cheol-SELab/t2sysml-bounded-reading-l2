@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Tower Sequence Manager provides \"operational status\" to Ramp Movement Board (an information or material flow).\n\nSource sentences:\nS692: The Airport Duty Manager is responsible for ensuring that declared service reductions are entered promptly and that the operational description is consistent with local aerodrome control procedures.\nS693: The Tower Supervisor uses the Runway Lighting Outage Card to confirm which runway lighting elements are unavailable before approving the operational status shown in the Tower Sequence Manager.\nS702: The Tower Sequence Manager displays the accepted constraint to support runway sequencing decisions and to reduce conflicting tactical instructions.\nS703: The Ramp Movement Board receives the same operational status so that apron movements can be coordinated with restricted taxi routes or stand access limitations.\n\nAnswer \"supported\" only if the sentences state that Tower Sequence Manager produces or sends this item AND that Ramp Movement Board receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S703 says Ramp Movement Board receives 'the same operational status' as shown in Tower Sequence Manager (S693), but no sentence states that Tower Sequence Manager sends or provides it to the Ramp Movement Board; it only displays it, and the source of the Ramp Board's feed is unspecified.\"}",
+ "usage": {
+  "input_tokens": 727,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 121,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.413,
+ "created": "2026-10-14T12:45:39"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Arrival Regulation Console provides \"expected delay\" to Common Situation Display (an information or material flow).\n\nSource sentences:\nS240: The Data Governance Steward ensures that exemption categories, priority codes, and fairness metrics are versioned in the Business Rules Registry before they are used in live allocation.\nS241: The Arrival Regulation Console presents proposed arrival opportunities with the capacity source, regulation start time, and expected delay for each affected flight.\nS612: In Adverse Weather Mode or Capacity Reduction State, the same inputs are allowed to produce binding metering values, revised rates, and additional coordination tasks.\nS613: All converted measures are displayed on Common Situation Display with the source constraint, effective interval, affected runway or fix, and expected delay impact.\n\nAnswer \"supported\" only if the sentences state that Arrival Regulation Console produces or sends this item AND that Common Situation Display receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S241 has the Arrival Regulation Console presenting expected delay, and S613 has the Common Situation Display showing expected delay impact for converted measures, but neither sentence says the console sends that item to the display.\"}",
+ "usage": {
+  "input_tokens": 717,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 217,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 131
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.029,
+ "created": "2026-10-14T12:47:12"
+}

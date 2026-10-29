@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Fleet Maintenance Cell provides \"the battery swap voucher\" to Regional Dispatch Center (an information or material flow).\n\nSource sentences:\nS040: The Fleet Maintenance Cell monitors vehicle availability, scheduled servicing, and reported defects that could reduce zone coverage.\nS041: The Fleet Maintenance Cell produces the Battery Swap Voucher to document an authorized battery replacement.\nS137: Shift Commander sends the Mutual Aid Release Form when a neighboring service is released from regional coverage.\nS138: Regional Dispatch Center uses the swap voucher to confirm that a unit's battery readiness is current before it is placed in service.\n\nAnswer \"supported\" only if the sentences state that Fleet Maintenance Cell produces or sends this item AND that Regional Dispatch Center receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"Fleet Maintenance Cell produces the Battery Swap Voucher, and Regional Dispatch Center uses the swap voucher to confirm battery readiness.\"}",
+ "usage": {
+  "input_tokens": 293,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 87,
+  "output_tokens_details": {
+   "reasoning_tokens": 46
+  },
+  "total_tokens": 380
+ },
+ "attempts": 1,
+ "wall_s": 5.112,
+ "created": "2026-10-13T23:52:22"
+}

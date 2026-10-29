@@ -1,0 +1,430 @@
+{
+ "doc_id": "L2T7",
+ "writer": "gpt-5.5",
+ "verifier": "gpt-6-luna",
+ "budget": 1024,
+ "doc_tokens": 6947,
+ "far_share": 1.0,
+ "entities": [
+  {
+   "entity_id": "E_NORTH_S_BAND_ANTENNA",
+   "canonical": "North S-Band Antenna",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_S_BAND_ANTENNA",
+   "canonical": "South S-Band Antenna",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_KIRUNA_X_BAND_ANTENNA",
+   "canonical": "Kiruna X-Band Antenna",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SVALBARD_X_BAND_ANTENNA",
+   "canonical": "Svalbard X-Band Antenna",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MISSION_CONTROL_CENTER",
+   "canonical": "Mission Control Center",
+   "kind": "part",
+   "aliases": [
+    "Bluebell"
+   ]
+  },
+  {
+   "entity_id": "E_FLIGHT_DYNAMICS_FACILITY",
+   "canonical": "Flight Dynamics Facility",
+   "kind": "part",
+   "aliases": [
+    "Mistral"
+   ]
+  },
+  {
+   "entity_id": "E_PAYLOAD_PROCESSING_FACILITY",
+   "canonical": "Payload Processing Facility",
+   "kind": "part",
+   "aliases": [
+    "Forgehouse"
+   ]
+  },
+  {
+   "entity_id": "E_NETWORK_CONTROL_SYSTEM",
+   "canonical": "Network Control System",
+   "kind": "part",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "entity_id": "E_LONG_TERM_ARCHIVE",
+   "canonical": "Long Term Archive",
+   "kind": "part",
+   "aliases": [
+    "Granite"
+   ]
+  },
+  {
+   "entity_id": "E_USER_SERVICES_PORTAL",
+   "canonical": "User Services Portal",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MISSION_PLANNING_SYSTEM",
+   "canonical": "Mission Planning System",
+   "kind": "part",
+   "aliases": [
+    "Cedar"
+   ]
+  },
+  {
+   "entity_id": "E_COMMAND_VALIDATION_GATEWAY",
+   "canonical": "Command Validation Gateway",
+   "kind": "part",
+   "aliases": [
+    "Osprey"
+   ]
+  },
+  {
+   "entity_id": "E_TELEMETRY_INGEST_SERVICE",
+   "canonical": "Telemetry Ingest Service",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ORBIT_DETERMINATION_ENGINE",
+   "canonical": "Orbit Determination Engine",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PRODUCT_QUALITY_SERVICE",
+   "canonical": "Product Quality Service",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PRIMARY_PROCESSING_CLUSTER",
+   "canonical": "Primary Processing Cluster",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BACKUP_PROCESSING_CLUSTER",
+   "canonical": "Backup Processing Cluster",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GROUND_NETWORK_MANAGER",
+   "canonical": "Ground Network Manager",
+   "kind": "actor",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "entity_id": "E_SPACECRAFT_OPERATIONS_TEAM",
+   "canonical": "Spacecraft Operations Team",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FLIGHT_DYNAMICS_TEAM",
+   "canonical": "Flight Dynamics Team",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PAYLOAD_CALIBRATION_TEAM",
+   "canonical": "Payload Calibration Team",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_DESK",
+   "canonical": "Cybersecurity Desk",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DOPPLER_RESIDUAL_REPORT",
+   "canonical": "Doppler Residual Report",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PASS_REPLAY_PACKET",
+   "canonical": "Pass Replay Packet",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CALIBRATION_PATCH_BUNDLE",
+   "canonical": "Calibration Patch Bundle",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ANTENNA_DEICING_NOTICE",
+   "canonical": "Antenna Deicing Notice",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_STAR_TRACKER_MASK_FILE",
+   "canonical": "Star Tracker Mask File",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PRODUCT_HOLD_LIST",
+   "canonical": "Product Hold List",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EPHEMERIS_DELTA_NOTE",
+   "canonical": "Ephemeris Delta Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SECURITY_EXCEPTION_TICKET",
+   "canonical": "Security Exception Ticket",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LASER_RETROREFLECTOR_WINDOW",
+   "canonical": "Laser Retroreflector Window",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_STORAGE_WATERMARK_SNAPSHOT",
+   "canonical": "Storage Watermark Snapshot",
+   "kind": "item",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_ORBIT_DETERMINATION_ENGINE",
+   "consumer": "E_FLIGHT_DYNAMICS_TEAM",
+   "item": "E_DOPPLER_RESIDUAL_REPORT",
+   "link_ref": "short",
+   "short_ref": "the residual report",
+   "intro_unit": "S041",
+   "link_unit": "S131",
+   "distance_tokens": 2645
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_TELEMETRY_INGEST_SERVICE",
+   "consumer": "E_SPACECRAFT_OPERATIONS_TEAM",
+   "item": "E_PASS_REPLAY_PACKET",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S081",
+   "link_unit": "S198",
+   "distance_tokens": 3063
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_PAYLOAD_CALIBRATION_TEAM",
+   "consumer": "E_PRODUCT_QUALITY_SERVICE",
+   "item": "E_CALIBRATION_PATCH_BUNDLE",
+   "link_ref": "short",
+   "short_ref": "the patch bundle",
+   "intro_unit": "S094",
+   "link_unit": "S162",
+   "distance_tokens": 1823
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_GROUND_NETWORK_MANAGER",
+   "consumer": "E_SPACECRAFT_OPERATIONS_TEAM",
+   "item": "E_ANTENNA_DEICING_NOTICE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S044",
+   "link_unit": "S113",
+   "distance_tokens": 2065
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_FLIGHT_DYNAMICS_FACILITY",
+   "consumer": "E_COMMAND_VALIDATION_GATEWAY",
+   "item": "E_STAR_TRACKER_MASK_FILE",
+   "link_ref": "short",
+   "short_ref": "the mask file",
+   "intro_unit": "S139",
+   "link_unit": "S206",
+   "distance_tokens": 1649
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_PRODUCT_QUALITY_SERVICE",
+   "consumer": "E_USER_SERVICES_PORTAL",
+   "item": "E_PRODUCT_HOLD_LIST",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S168",
+   "link_unit": "S239",
+   "distance_tokens": 1854
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_FLIGHT_DYNAMICS_TEAM",
+   "consumer": "E_MISSION_PLANNING_SYSTEM",
+   "item": "E_EPHEMERIS_DELTA_NOTE",
+   "link_ref": "short",
+   "short_ref": "the delta note",
+   "intro_unit": "S144",
+   "link_unit": "S240",
+   "distance_tokens": 2497
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_CYBERSECURITY_DESK",
+   "consumer": "E_NETWORK_CONTROL_SYSTEM",
+   "item": "E_SECURITY_EXCEPTION_TICKET",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S074",
+   "link_unit": "S170",
+   "distance_tokens": 2642
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_ORBIT_DETERMINATION_ENGINE",
+   "consumer": "E_MISSION_PLANNING_SYSTEM",
+   "item": "E_LASER_RETROREFLECTOR_WINDOW",
+   "link_ref": "short",
+   "short_ref": "the retroreflector window",
+   "intro_unit": "S145",
+   "link_unit": "S207",
+   "distance_tokens": 1525
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_LONG_TERM_ARCHIVE",
+   "consumer": "E_BACKUP_PROCESSING_CLUSTER",
+   "item": "E_STORAGE_WATERMARK_SNAPSHOT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S174",
+   "link_unit": "S241",
+   "distance_tokens": 1760
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_MISSION_CONTROL_CENTER",
+   "alias": "Bluebell",
+   "intro_unit": "S006",
+   "link_unit": "S140",
+   "distance_tokens": 3778
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_FLIGHT_DYNAMICS_FACILITY",
+   "alias": "Mistral",
+   "intro_unit": "S039",
+   "link_unit": "S194",
+   "distance_tokens": 4266
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_PAYLOAD_PROCESSING_FACILITY",
+   "alias": "Forgehouse",
+   "intro_unit": "S092",
+   "link_unit": "S215",
+   "distance_tokens": 3186
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_NETWORK_CONTROL_SYSTEM",
+   "alias": "Lantern",
+   "intro_unit": "S057",
+   "link_unit": "S171",
+   "distance_tokens": 3203
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_MISSION_PLANNING_SYSTEM",
+   "alias": "Cedar",
+   "intro_unit": "S102",
+   "link_unit": "S216",
+   "distance_tokens": 2905
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_COMMAND_VALIDATION_GATEWAY",
+   "alias": "Osprey",
+   "intro_unit": "S119",
+   "link_unit": "S242",
+   "distance_tokens": 3223
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_LONG_TERM_ARCHIVE",
+   "alias": "Granite",
+   "intro_unit": "S159",
+   "link_unit": "S243",
+   "distance_tokens": 2176
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_GROUND_NETWORK_MANAGER",
+   "alias": "Juniper",
+   "intro_unit": "S037",
+   "link_unit": "S112",
+   "distance_tokens": 2206
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_S_BAND_ANTENNA",
+   "confusable_entity_id": "E_SOUTH_S_BAND_ANTENNA",
+   "shared_head": "S-Band Antenna",
+   "link_unit": "S028",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_PRIMARY_PROCESSING_CLUSTER",
+   "confusable_entity_id": "E_BACKUP_PROCESSING_CLUSTER",
+   "shared_head": "Processing Cluster",
+   "link_unit": "S220",
+   "distance_tokens": 0
+  }
+ ]
+}

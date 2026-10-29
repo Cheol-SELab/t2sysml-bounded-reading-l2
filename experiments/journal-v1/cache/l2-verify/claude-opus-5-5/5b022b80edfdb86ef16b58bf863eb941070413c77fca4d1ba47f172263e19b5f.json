@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Baggage Operations Supervisor provides \"bag identity\" to South Gate Scanner (an information or material flow).\n\nSource sentences:\nS025: Service objectives are to maintain safe screening, accurate bag-to-flight association, predictable throughput, and timely delivery within applicable departure cutoffs.\nS026: Equipment status, bag identity, routing state, and operating restrictions are exchanged through defined interfaces, with local staff responsible for resolving conditions that automated controls cannot clear.\nS086: Route selection favors the approved path with adequate capacity and sufficient time for the planned handling.\nS087: The North Gate Scanner and South Gate Scanner verify bag identity at their respective route decision points.\n\nAnswer \"supported\" only if the sentences state that Baggage Operations Supervisor produces or sends this item AND that South Gate Scanner receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S087 says the South Gate Scanner verifies bag identity and S026 says bag identity is exchanged through interfaces, but no sentence names the Baggage Operations Supervisor as the source of bag identity for the scanner.\"}",
+ "usage": {
+  "input_tokens": 695,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 92,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.24,
+ "created": "2026-10-29T01:01:22"
+}

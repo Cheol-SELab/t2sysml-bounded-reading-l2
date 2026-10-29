@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: South Filter Gallery provides \"the Filter Run Exception Note\" to Chief Operator (an information or material flow).\n\nSource sentences:\nS060: North Filter Gallery records individual filter effluent turbidity and headloss at the end of each control scan.\nS061: South Filter Gallery sends the Filter Run Exception Note when a filter run ends outside the normal operating limits.\nS152: The SCADA Historian Server records recovery volume, tank level, turbidity trend, and return timing for each backwash recovery event.\nS153: The Chief Operator uses the Filter Run Exception Note to determine whether a shortened run, high headloss, or abnormal turbidity response requires follow-up before the next wash sequence.\n\nAnswer \"supported\" only if the sentences state that South Filter Gallery produces or sends this item AND that Chief Operator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S061 says South Filter Gallery sends the Filter Run Exception Note, and S153 says the Chief Operator uses that same note to decide on follow-up, so both the sender and the user of the item are stated.\"}",
+ "usage": {
+  "input_tokens": 689,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.61,
+ "created": "2026-10-14T12:38:49"
+}

@@ -1,0 +1,4263 @@
+{
+ "tag": "test-main",
+ "judge": "claude-sonnet-5-5",
+ "context_cap": 4096,
+ "sample": 120,
+ "seed": 7,
+ "offline": false,
+ "n_joins_total": 994,
+ "n_judged": 120,
+ "cache_misses": 0,
+ "errors": 0,
+ "summary": {
+  "gpt-6.1-sol|C1": {
+   "n": 26,
+   "rn_prec_evidence": [
+    26,
+    26,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    26,
+    26,
+    1.0
+   ],
+   "rnv_n": 26,
+   "rnv_prec_evidence": [
+    26,
+    26,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    26,
+    26,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 26,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 26
+   }
+  },
+  "gpt-6.1-sol|C2": {
+   "n": 4,
+   "rn_prec_evidence": [
+    4,
+    4,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    4,
+    4,
+    1.0
+   ],
+   "rnv_n": 4,
+   "rnv_prec_evidence": [
+    4,
+    4,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    4,
+    4,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 4,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 4
+   }
+  },
+  "gpt-6.1-sol|C4": {
+   "n": 29,
+   "rn_prec_evidence": [
+    29,
+    29,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    29,
+    29,
+    1.0
+   ],
+   "rnv_n": 29,
+   "rnv_prec_evidence": [
+    29,
+    29,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    29,
+    29,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 29,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 29
+   }
+  },
+  "gpt-6.1-sol|OL": {
+   "n": 11,
+   "rn_prec_evidence": [
+    11,
+    11,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    11,
+    11,
+    1.0
+   ],
+   "rnv_n": 11,
+   "rnv_prec_evidence": [
+    11,
+    11,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    11,
+    11,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 11,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 11
+   }
+  },
+  "claude-opus-5-5|C1": {
+   "n": 31,
+   "rn_prec_evidence": [
+    31,
+    31,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    31,
+    31,
+    1.0
+   ],
+   "rnv_n": 30,
+   "rnv_prec_evidence": [
+    30,
+    30,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    30,
+    30,
+    1.0
+   ],
+   "withdrawn_by_verifier": 1,
+   "verifier_errors": 1,
+   "agree": 31,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 31
+   }
+  },
+  "claude-opus-5-5|C2": {
+   "n": 4,
+   "rn_prec_evidence": [
+    4,
+    4,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    4,
+    4,
+    1.0
+   ],
+   "rnv_n": 4,
+   "rnv_prec_evidence": [
+    4,
+    4,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    4,
+    4,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 4,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 4
+   }
+  },
+  "claude-opus-5-5|C4": {
+   "n": 13,
+   "rn_prec_evidence": [
+    13,
+    13,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    13,
+    13,
+    1.0
+   ],
+   "rnv_n": 13,
+   "rnv_prec_evidence": [
+    13,
+    13,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    13,
+    13,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 13,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 13
+   }
+  },
+  "claude-opus-5-5|OL": {
+   "n": 2,
+   "rn_prec_evidence": [
+    2,
+    2,
+    1.0
+   ],
+   "rn_prec_docaware": [
+    2,
+    2,
+    1.0
+   ],
+   "rnv_n": 2,
+   "rnv_prec_evidence": [
+    2,
+    2,
+    1.0
+   ],
+   "rnv_prec_docaware": [
+    2,
+    2,
+    1.0
+   ],
+   "withdrawn_by_verifier": 0,
+   "verifier_errors": 0,
+   "agree": 2,
+   "evonly_sup_docaware_not": 0,
+   "evonly_not_docaware_sup": 0,
+   "docaware_verdicts": {
+    "supported": 2
+   }
+  }
+ },
+ "joins": [
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C2",
+   "sample": 2,
+   "source": "Platform Screen Door Controller",
+   "target": "Metro Operations Control System",
+   "payload": "the Platform Door Status Snapshot",
+   "unit_id": "S233",
+   "evidence_units": [
+    "S129",
+    "S233"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S128",
+    "S129",
+    "S232",
+    "S233"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 123,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S129 says the Platform Screen Door Controller produces the Platform Door Status Snapshot, and S233 says the Metro Operations Control System uses the 'status snapshot' to confirm platform interface conditions; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Safety Data Communication Network",
+   "target": "Cryptographic Key Management Appliance",
+   "payload": "the Clock Drift Sample Report",
+   "unit_id": "S123",
+   "evidence_units": [
+    "S041",
+    "S123"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S122",
+    "S123"
+   ],
+   "extra_units": [
+    "S068",
+    "S109",
+    "S144",
+    "S160",
+    "S181",
+    "S222"
+   ],
+   "extra_units_available": 6,
+   "context_tokens": 310,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Safety Data Communication Network sends the Clock Drift Sample Report, S123 states the Cryptographic Key Management Appliance uses 'the sample report' to verify clock tolerance, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Platform Screen Door Controller",
+   "target": "Metro Operations Control System",
+   "payload": "the Platform Door Status Snapshot",
+   "unit_id": "S233",
+   "evidence_units": [
+    "S129",
+    "S233"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S128",
+    "S129",
+    "S232",
+    "S233"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 123,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S129 says the Platform Screen Door Controller produces the Platform Door Status Snapshot, and S233 says the Metro Operations Control System uses 'the status snapshot' to confirm platform interface conditions; no other producer or similarly named item is stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Safety Data Communication Network",
+   "target": "Cryptographic Key Management Appliance",
+   "payload": "the Clock Drift Sample Report",
+   "unit_id": "S123",
+   "evidence_units": [
+    "S041",
+    "S123"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S122",
+    "S123"
+   ],
+   "extra_units": [
+    "S068",
+    "S109",
+    "S144",
+    "S160",
+    "S181",
+    "S222"
+   ],
+   "extra_units_available": 6,
+   "context_tokens": 310,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 says the Safety Data Communication Network sends the Clock Drift Sample Report, S123 says the Cryptographic Key Management Appliance uses 'the sample report' to verify clock tolerance, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Cryptographic Key Management Appliance",
+   "target": "Train Radio Modem",
+   "payload": "the Encryption Certificate Renewal Pack",
+   "unit_id": "S146",
+   "evidence_units": [
+    "S124",
+    "S146"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S123",
+    "S124",
+    "S145",
+    "S146"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 113,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S124 states the Cryptographic Key Management Appliance produces the Encryption Certificate Renewal Pack, S146 states Train Radio Modem uses that same named item, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Atlas Onboard Controller",
+   "target": "Maintenance Diagnostic Server",
+   "payload": "the Brake Curve Checksum Log",
+   "unit_id": "S154",
+   "evidence_units": [
+    "S037",
+    "S154"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S036",
+    "S037",
+    "S153",
+    "S154"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S037 states Atlas Onboard Controller produces the Brake Curve Checksum Log, and S154 states Maintenance Diagnostic Server uses 'the checksum log' for comparison, with no conflicting producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "West Junction Interlocking",
+   "target": "Line Traffic Controller",
+   "payload": "the Route Release Exception List",
+   "unit_id": "S157",
+   "evidence_units": [
+    "S090",
+    "S157"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S089",
+    "S090",
+    "S156",
+    "S157"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 109,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S090 states West Junction Interlocking sends the Route Release Exception List, and S157 states the Line Traffic Controller receives and uses that same list; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Line Traffic Controller",
+   "target": "North District Zone Controller",
+   "payload": "the Temporary Speed Restriction Notice",
+   "unit_id": "S183",
+   "evidence_units": [
+    "S109",
+    "S183"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S108",
+    "S109",
+    "S182",
+    "S183"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 126,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S109 says the Line Traffic Controller produces the Temporary Speed Restriction Notice, S183 says the North District Zone Controller applies that same notice, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Platform Screen Door Controller",
+   "target": "Metro Operations Control System",
+   "payload": "the Platform Door Status Snapshot",
+   "unit_id": "S233",
+   "evidence_units": [
+    "S129",
+    "S233"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S128",
+    "S129",
+    "S232",
+    "S233"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 123,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S129 says the Platform Screen Door Controller produces the Platform Door Status Snapshot, and S233 says the Metro Operations Control System uses the 'status snapshot' to confirm platform interface conditions; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 0,
+   "source": "Cryptographic Key Management Appliance",
+   "target": "Train Radio Modem",
+   "payload": "the Encryption Certificate Renewal Pack",
+   "unit_id": "S146",
+   "evidence_units": [
+    "S124",
+    "S146"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S123",
+    "S124",
+    "S145",
+    "S146"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 113,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S124 states the Cryptographic Key Management Appliance produces the Encryption Certificate Renewal Pack, S146 states Train Radio Modem uses that same-named pack, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 2,
+   "source": "Atlas Onboard Controller",
+   "target": "Maintenance Diagnostic Server",
+   "payload": "the Brake Curve Checksum Log",
+   "unit_id": "S154",
+   "evidence_units": [
+    "S037",
+    "S154"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S036",
+    "S037",
+    "S153",
+    "S154"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S037 states Atlas Onboard Controller produces the Brake Curve Checksum Log, and S154 states Maintenance Diagnostic Server uses 'the checksum log' for comparison, with no conflicting producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Safety Data Communication Network",
+   "target": "Cryptographic Key Management Appliance",
+   "payload": "the Clock Drift Sample Report",
+   "unit_id": "S123",
+   "evidence_units": [
+    "S041",
+    "S123"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S122",
+    "S123"
+   ],
+   "extra_units": [
+    "S068",
+    "S109",
+    "S144",
+    "S160",
+    "S181",
+    "S222"
+   ],
+   "extra_units_available": 6,
+   "context_tokens": 310,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Safety Data Communication Network sends the Clock Drift Sample Report, S123 states the Cryptographic Key Management Appliance uses 'the sample report' to verify clock tolerance, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "East Junction Interlocking",
+   "target": "Signal Maintenance Engineer",
+   "payload": "the Axle Counter Reset Request",
+   "unit_id": "S189",
+   "evidence_units": [
+    "S087",
+    "S189"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S086",
+    "S087",
+    "S188",
+    "S189"
+   ],
+   "extra_units": [
+    "S033",
+    "S099",
+    "S214"
+   ],
+   "extra_units_available": 3,
+   "context_tokens": 207,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S087 states East Junction Interlocking sends the Axle Counter Reset Request, and S189 states the Signal Maintenance Engineer uses the same-named item as controlling authority; no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Metro Operations Control System",
+   "target": "Atlas Onboard Controller",
+   "payload": "the Crew Login Token Bundle",
+   "unit_id": "S095",
+   "evidence_units": [
+    "S024",
+    "S095"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S023",
+    "S024",
+    "S094",
+    "S095"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 116,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S024 states Metro Operations Control System sends the Crew Login Token Bundle, and S095 states Atlas Onboard Controller uses the token bundle (a shorter name for the same item), with no conflicting producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Line Traffic Controller",
+   "target": "North District Zone Controller",
+   "payload": "the Temporary Speed Restriction Notice",
+   "unit_id": "S183",
+   "evidence_units": [
+    "S109",
+    "S183"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S108",
+    "S109",
+    "S182",
+    "S183"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 126,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S109 states the Line Traffic Controller produces the Temporary Speed Restriction Notice, and S183 states the North District Zone Controller applies the same notice after validation; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Platform Screen Door Controller",
+   "target": "Metro Operations Control System",
+   "payload": "the Platform Door Status Snapshot",
+   "unit_id": "S233",
+   "evidence_units": [
+    "S129",
+    "S233"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S128",
+    "S129",
+    "S232",
+    "S233"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 123,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S129 says the Platform Screen Door Controller produces the Platform Door Status Snapshot, and S233 says the Metro Operations Control System uses 'the status snapshot' to confirm platform interface conditions; no other producer or similarly named item is stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Atlas Onboard Controller",
+   "target": "Maintenance Diagnostic Server",
+   "payload": "the Brake Curve Checksum Log",
+   "unit_id": "S154",
+   "evidence_units": [
+    "S037",
+    "S154"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S036",
+    "S037",
+    "S153",
+    "S154"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S037 states Atlas Onboard Controller produces the Brake Curve Checksum Log, and S154 states Maintenance Diagnostic Server uses 'the checksum log' for comparison, with no conflicting producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "East Junction Interlocking",
+   "target": "Signal Maintenance Engineer",
+   "payload": "the Axle Counter Reset Request",
+   "unit_id": "S189",
+   "evidence_units": [
+    "S087",
+    "S189"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S086",
+    "S087",
+    "S188",
+    "S189"
+   ],
+   "extra_units": [
+    "S033",
+    "S099",
+    "S214"
+   ],
+   "extra_units_available": 3,
+   "context_tokens": 207,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S087 states East Junction Interlocking sends the Axle Counter Reset Request, and S189 states the Signal Maintenance Engineer uses that same item as controlling authority; no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C2",
+   "sample": 1,
+   "source": "Safety Data Communication Network",
+   "target": "Cryptographic Key Management Appliance",
+   "payload": "the Clock Drift Sample Report",
+   "unit_id": "S123",
+   "evidence_units": [
+    "S041",
+    "S123"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S122",
+    "S123"
+   ],
+   "extra_units": [
+    "S068",
+    "S109",
+    "S144",
+    "S160",
+    "S181",
+    "S222"
+   ],
+   "extra_units_available": 6,
+   "context_tokens": 310,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 says the Safety Data Communication Network sends the Clock Drift Sample Report, S123 says the Cryptographic Key Management Appliance uses 'the sample report' to verify clock tolerance, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Safety Data Communication Network",
+   "target": "Cryptographic Key Management Appliance",
+   "payload": "the Clock Drift Sample Report",
+   "unit_id": "S123",
+   "evidence_units": [
+    "S041",
+    "S123"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S122",
+    "S123"
+   ],
+   "extra_units": [
+    "S068",
+    "S109",
+    "S144",
+    "S160",
+    "S181",
+    "S222"
+   ],
+   "extra_units_available": 6,
+   "context_tokens": 310,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Safety Data Communication Network sends the Clock Drift Sample Report, S123 states the Cryptographic Key Management Appliance uses 'the sample report' to verify clock tolerance, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T1",
+   "model": "claude-opus-5-5",
+   "cond": "OL",
+   "sample": 0,
+   "source": "Line Traffic Controller",
+   "target": "North District Zone Controller",
+   "payload": "the Temporary Speed Restriction Notice",
+   "unit_id": "S183",
+   "evidence_units": [
+    "S109",
+    "S183"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S108",
+    "S109",
+    "S182",
+    "S183"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 126,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S109 states the Line Traffic Controller produces the Temporary Speed Restriction Notice, S183 states the North District Zone Controller applies the same notice, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 0,
+   "source": "East Tube Dispatch Console",
+   "target": "Biomedical Engineer",
+   "payload": "a Tube Route Exception Ticket",
+   "unit_id": "S211",
+   "evidence_units": [
+    "S052",
+    "S211"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S051",
+    "S052",
+    "S210",
+    "S211"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S052 states the East Tube Dispatch Console sends a Tube Route Exception Ticket, and S211 states the Biomedical Engineer uses the exception ticket (a brief name for the same item), with no contradicting producer found.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Charge Nurse",
+   "target": "IT Operations Specialist",
+   "payload": "a Cabinet Downtime Notice",
+   "unit_id": "S222",
+   "evidence_units": [
+    "S064",
+    "S222"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S063",
+    "S064",
+    "S221",
+    "S222"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S064 states the Charge Nurse sends the Cabinet Downtime Notice, S222 states the IT Operations Specialist uses that same notice to open an incident record, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Pharmacy Technician",
+   "target": "Sensor-monitored Medication Cooler",
+   "payload": "the Cold Chain Handoff Card",
+   "unit_id": "S177",
+   "evidence_units": [
+    "S041",
+    "S177"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S176",
+    "S177"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 89,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Pharmacy Technician produces the Cold Chain Handoff Card, and S177 states the Sensor-monitored Medication Cooler uses the handoff card, which refers to the same item, with no other producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Pharmacy Verification Station",
+   "target": "South Ward Cabinet Controller",
+   "payload": "the Batch Release Note",
+   "unit_id": "S204",
+   "evidence_units": [
+    "S079",
+    "S204"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S078",
+    "S079",
+    "S203",
+    "S204"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 87,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S079 states the Pharmacy Verification Station produces the Batch Release Note, S204 states the South Ward Cabinet Controller receives 'the release note' and uses it, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Pharmacy Technician",
+   "target": "Sensor-monitored Medication Cooler",
+   "payload": "the Cold Chain Handoff Card",
+   "unit_id": "S177",
+   "evidence_units": [
+    "S041",
+    "S177"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S176",
+    "S177"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 89,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Pharmacy Technician produces the Cold Chain Handoff Card, S177 states the Sensor-monitored Medication Cooler uses the handoff card, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Medication Return Kiosk",
+   "target": "Pharmacy Technician",
+   "payload": "the Return Bin Audit Label",
+   "unit_id": "S117",
+   "evidence_units": [
+    "S021",
+    "S117"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S020",
+    "S021",
+    "S116",
+    "S117"
+   ],
+   "extra_units": [
+    "S197"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 106,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S021 states the Medication Return Kiosk produces the Return Bin Audit Label, and S117 states the Pharmacy Technician uses the audit label to identify a return bin; no other sentence names a different producer or a different similarly named item (S197 concerns a pharmacy label for patient orders, which is unrelated).",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Clinical Pharmacist",
+   "target": "Pharmacy Verification Station",
+   "payload": "the Dose Exception Review Slip",
+   "unit_id": "S128",
+   "evidence_units": [
+    "S012",
+    "S128"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S011",
+    "S012",
+    "S127",
+    "S128"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 95,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S012 says the Clinical Pharmacist produces the Dose Exception Review Slip, and S128 says Pharmacy Verification Station uses 'the review slip' to record exception details; this is the same item named more briefly, and no other producer or similarly named item appears.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 0,
+   "source": "Medication Return Kiosk",
+   "target": "Pharmacy Technician",
+   "payload": "the Return Bin Audit Label",
+   "unit_id": "S117",
+   "evidence_units": [
+    "S021",
+    "S117"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S020",
+    "S021",
+    "S116",
+    "S117"
+   ],
+   "extra_units": [
+    "S197"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 106,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S021 states the Medication Return Kiosk produces the Return Bin Audit Label, and S117 states the Pharmacy Technician uses the audit label to identify a return bin, with no sentence naming another producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 2,
+   "source": "Clinical Pharmacist",
+   "target": "Pharmacy Verification Station",
+   "payload": "the Dose Exception Review Slip",
+   "unit_id": "S128",
+   "evidence_units": [
+    "S012",
+    "S128"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S011",
+    "S012",
+    "S127",
+    "S128"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 95,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S012 says the Clinical Pharmacist produces the Dose Exception Review Slip, and S128 says Pharmacy Verification Station uses 'the review slip' to record exception details; this is the same item named more briefly, and no other producer or similarly named item appears.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Medication Safety Officer",
+   "target": "IT Operations Specialist",
+   "payload": "the Diversion Review Packet",
+   "unit_id": "S141",
+   "evidence_units": [
+    "S047",
+    "S141"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S046",
+    "S047",
+    "S140",
+    "S141"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 91,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S047 says the Medication Safety Officer produces the Diversion Review Packet, and S141 says the IT Operations Specialist receives that same packet; no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Pharmacy Fulfillment Robot",
+   "target": "North Ward Cabinet Controller",
+   "payload": "the Priority Refill Tote Tag",
+   "unit_id": "S103",
+   "evidence_units": [
+    "S011",
+    "S103"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S010",
+    "S011",
+    "S102",
+    "S103"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 91,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S011 states the Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag, S103 states North Ward Cabinet Controller uses the same tag, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Clinical Pharmacist",
+   "target": "Pharmacy Verification Station",
+   "payload": "the Dose Exception Review Slip",
+   "unit_id": "S128",
+   "evidence_units": [
+    "S012",
+    "S128"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S011",
+    "S012",
+    "S127",
+    "S128"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 95,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S012 says the Clinical Pharmacist produces the Dose Exception Review Slip, S128 says Pharmacy Verification Station uses 'the review slip' to record exception details, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "C2",
+   "sample": 1,
+   "source": "Charge Nurse",
+   "target": "IT Operations Specialist",
+   "payload": "a Cabinet Downtime Notice",
+   "unit_id": "S222",
+   "evidence_units": [
+    "S064",
+    "S222"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S063",
+    "S064",
+    "S221",
+    "S222"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S064 states the Charge Nurse sends the Cabinet Downtime Notice, S222 states the IT Operations Specialist uses that same notice to open an incident record, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "C2",
+   "sample": 2,
+   "source": "Charge Nurse",
+   "target": "IT Operations Specialist",
+   "payload": "a Cabinet Downtime Notice",
+   "unit_id": "S222",
+   "evidence_units": [
+    "S064",
+    "S222"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S063",
+    "S064",
+    "S221",
+    "S222"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S064 states the Charge Nurse sends the Cabinet Downtime Notice, S222 states the IT Operations Specialist uses that same notice to open an incident record, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Medication Safety Officer",
+   "target": "IT Operations Specialist",
+   "payload": "the Diversion Review Packet",
+   "unit_id": "S141",
+   "evidence_units": [
+    "S047",
+    "S141"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S046",
+    "S047",
+    "S140",
+    "S141"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 91,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S047 says the Medication Safety Officer produces the Diversion Review Packet, and S141 says the IT Operations Specialist receives that same packet; no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T2",
+   "model": "claude-opus-5-5",
+   "cond": "OL",
+   "sample": 2,
+   "source": "Pharmacy Technician",
+   "target": "Sensor-monitored Medication Cooler",
+   "payload": "the Cold Chain Handoff Card",
+   "unit_id": "S177",
+   "evidence_units": [
+    "S041",
+    "S177"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S176",
+    "S177"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 89,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Pharmacy Technician produces the Cold Chain Handoff Card, and S177 states the Sensor-monitored Medication Cooler uses the handoff card, which refers to the same item, with no other producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 0,
+   "source": "North Lookout Camera Mast",
+   "target": "Duty Detection Officer",
+   "payload": "the Thermal Spot Snippet",
+   "unit_id": "S106",
+   "evidence_units": [
+    "S030",
+    "S106"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S029",
+    "S030",
+    "S105",
+    "S106"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 125,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S030 states the North Lookout Camera Mast sends the Thermal Spot Snippet, and S106 states the Duty Detection Officer uses the spot snippet (a shorter name for the same item), with no sentence naming a different producer.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Horizon Ridge Drone Dock",
+   "target": "Drone Pilot Operator",
+   "payload": "the Battery Swap Ticket",
+   "unit_id": "S109",
+   "evidence_units": [
+    "S034",
+    "S109"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S033",
+    "S034",
+    "S108",
+    "S109"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 121,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S034 states the Horizon Ridge Drone Dock produces the Battery Swap Ticket, S109 states the Drone Pilot Operator uses the swap ticket (same item, shorter name), and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "MesoWest Weather Fusion Node",
+   "target": "Air Attack Supervisor",
+   "payload": "the Wind Shift Bulletin",
+   "unit_id": "S136",
+   "evidence_units": [
+    "S043",
+    "S136"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S042",
+    "S043",
+    "S135",
+    "S136"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 113,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S043 states the MesoWest Weather Fusion Node sends the Wind Shift Bulletin, S136 states the Air Attack Supervisor uses the same Wind Shift Bulletin, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Horizon Ridge Drone Dock",
+   "target": "Drone Pilot Operator",
+   "payload": "the Battery Swap Ticket",
+   "unit_id": "S109",
+   "evidence_units": [
+    "S034",
+    "S109"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S033",
+    "S034",
+    "S108",
+    "S109"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 121,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S034 says Horizon Ridge Drone Dock produces the Battery Swap Ticket, S109 says the Drone Pilot Operator uses the swap ticket (same item, shorter name), and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "Tanker Base Manager",
+   "payload": "the Runway Release Note",
+   "unit_id": "S233",
+   "evidence_units": [
+    "S140",
+    "S233"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S139",
+    "S140",
+    "S232",
+    "S233"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 110,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S140 says the Talon Air Tanker Dispatch Console produces the Runway Release Note, S233 says the Tanker Base Manager uses the same-named note during acceptance review, and no other sentence names a different producer or a similar item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "North Lookout Camera Mast",
+   "target": "Duty Detection Officer",
+   "payload": "the Thermal Spot Snippet",
+   "unit_id": "S106",
+   "evidence_units": [
+    "S030",
+    "S106"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S029",
+    "S030",
+    "S105",
+    "S106"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 125,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S030 states the North Lookout Camera Mast sends the Thermal Spot Snippet, and S106 states the Duty Detection Officer uses the spot snippet (a shorter name for the same item), with no sentence naming a different producer.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "County Emergency Liaison",
+   "payload": "the Suppression Drop Receipt",
+   "unit_id": "S234",
+   "evidence_units": [
+    "S148",
+    "S234"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S147",
+    "S148",
+    "S233",
+    "S234"
+   ],
+   "extra_units": [
+    "S173"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 150,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S148 states the Talon Air Tanker Dispatch Console sends the Suppression Drop Receipt, S234 states the County Emergency Liaison uses the same item, and no sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Horizon Ridge Drone Dock",
+   "target": "Drone Pilot Operator",
+   "payload": "the Battery Swap Ticket",
+   "unit_id": "S109",
+   "evidence_units": [
+    "S034",
+    "S109"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S033",
+    "S034",
+    "S108",
+    "S109"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 121,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S034 says Horizon Ridge Drone Dock produces the Battery Swap Ticket, S109 says the Drone Pilot Operator uses the swap ticket (same item, shorter name), and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "MesoWest Weather Fusion Node",
+   "target": "Air Attack Supervisor",
+   "payload": "the Wind Shift Bulletin",
+   "unit_id": "S136",
+   "evidence_units": [
+    "S043",
+    "S136"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S042",
+    "S043",
+    "S135",
+    "S136"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 113,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S043 states MesoWest Weather Fusion Node sends the Wind Shift Bulletin, S136 states the Air Attack Supervisor uses the same Wind Shift Bulletin, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 0,
+   "source": "Horizon Ridge Drone Dock",
+   "target": "Drone Pilot Operator",
+   "payload": "the Battery Swap Ticket",
+   "unit_id": "S109",
+   "evidence_units": [
+    "S034",
+    "S109"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S033",
+    "S034",
+    "S108",
+    "S109"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 121,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S034 says the Horizon Ridge Drone Dock produces the Battery Swap Ticket, S109 says the Drone Pilot Operator uses the swap ticket (same item, shortened name), and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 2,
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "Tanker Base Manager",
+   "payload": "the Runway Release Note",
+   "unit_id": "S233",
+   "evidence_units": [
+    "S140",
+    "S233"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S139",
+    "S140",
+    "S232",
+    "S233"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 110,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S140 says the Talon Air Tanker Dispatch Console produces the Runway Release Note, S233 says the Tanker Base Manager uses the same-named note during acceptance review, and no other sentence names a different producer or a similar item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T3",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "South Lookout Camera Mast",
+   "target": "Smoke Classifier Module",
+   "payload": "the Camera Cleaning Log",
+   "unit_id": "S163",
+   "evidence_units": [
+    "S095",
+    "S163"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S094",
+    "S095",
+    "S162",
+    "S163"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S095 says the South Lookout Camera Mast produces the Camera Cleaning Log and S163 says the Smoke Classifier Module uses the same-named log, with no other producer or similar-named item stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "South Lookout Camera Mast",
+   "target": "Smoke Classifier Module",
+   "payload": "the Camera Cleaning Log",
+   "unit_id": "S163",
+   "evidence_units": [
+    "S095",
+    "S163"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S094",
+    "S095",
+    "S162",
+    "S163"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S095 states the South Lookout Camera Mast produces the Camera Cleaning Log and S163 states the Smoke Classifier Module uses the same-named log, with no other producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 1,
+   "source": "East Retardant Loading Pump",
+   "target": "Tanker Base Manager",
+   "payload": "Retardant Batch Slip",
+   "unit_id": "S141",
+   "evidence_units": [
+    "S073",
+    "S141"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S072",
+    "S073",
+    "S140",
+    "S141"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 109,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S073 states the East Retardant Loading Pump sends the Retardant Batch Slip, and S141 states the Tanker Base Manager uses the batch slip (a shorter name for the same item), with no other producer or similarly named item contradicting this.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T3",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 1,
+   "source": "South Lookout Camera Mast",
+   "target": "Smoke Classifier Module",
+   "payload": "the Camera Cleaning Log",
+   "unit_id": "S163",
+   "evidence_units": [
+    "S095",
+    "S163"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S094",
+    "S095",
+    "S162",
+    "S163"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S095 states the South Lookout Camera Mast produces the Camera Cleaning Log and S163 states the Smoke Classifier Module uses the same-named log, with no other producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Feeder Protection Relay",
+   "target": "Protection Relay Engineer",
+   "payload": "a Relay Diagnostic Note",
+   "unit_id": "S109",
+   "evidence_units": [
+    "S009",
+    "S109"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S008",
+    "S009",
+    "S108",
+    "S109"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 80,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S009 states the Feeder Protection Relay produces the Relay Diagnostic Note and S109 states the Protection Relay Engineer uses the same-named note, with no conflicting producer or similarly named item found.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Bay Automation Controller",
+   "target": "Station Supervisory Control System",
+   "payload": "a Bay Status Digest",
+   "unit_id": "S139",
+   "evidence_units": [
+    "S006",
+    "S139"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S005",
+    "S006",
+    "S138",
+    "S139"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 75,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S006 states the Bay Automation Controller produces a Bay Status Digest, S139 states the Station Supervisory Control System uses the status digest, and no sentence names a different producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Station Supervisory Control System",
+   "target": "Control Room Operator",
+   "payload": "the Alarm Acknowledgement Slip",
+   "unit_id": "S152",
+   "evidence_units": [
+    "S048",
+    "S152"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S047",
+    "S048",
+    "S151",
+    "S152"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 87,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S048 states the Station Supervisory Control System produces the Alarm Acknowledgement Slip, S152 states the Control Room Operator uses the acknowledgement slip (same item, shorter name), and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Station DC System",
+   "target": "Bay Automation Controller",
+   "payload": "a Battery Load Test Record",
+   "unit_id": "S207",
+   "evidence_units": [
+    "S120",
+    "S207"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S119",
+    "S120",
+    "S206",
+    "S207"
+   ],
+   "extra_units": [
+    "S080",
+    "S101",
+    "S152",
+    "S179",
+    "S235"
+   ],
+   "extra_units_available": 5,
+   "context_tokens": 195,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S120 states the Station DC System produces a Battery Load Test Record, S207 states the Bay Automation Controller uses the load test record (a shorter name for the same item), and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Control Room Operator",
+   "target": "Switching Desk Coordinator",
+   "payload": "the Clearance Handoff Memo",
+   "unit_id": "S235",
+   "evidence_units": [
+    "S168",
+    "S235"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S167",
+    "S168",
+    "S234",
+    "S235"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 91,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S168 states the Control Room Operator produces the Clearance Handoff Memo and S235 states the Switching Desk Coordinator receives it, with no conflicting producer or similarly named item in the document.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Station DC System",
+   "target": "Bay Automation Controller",
+   "payload": "a Battery Load Test Record",
+   "unit_id": "S207",
+   "evidence_units": [
+    "S120",
+    "S207"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S119",
+    "S120",
+    "S206",
+    "S207"
+   ],
+   "extra_units": [
+    "S080",
+    "S101",
+    "S152",
+    "S179",
+    "S235"
+   ],
+   "extra_units_available": 5,
+   "context_tokens": 195,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S120 states the Station DC System produces a Battery Load Test Record, S207 states the Bay Automation Controller uses the load test record (a shorter name for the same item), and no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Control Room Operator",
+   "target": "Switching Desk Coordinator",
+   "payload": "the Clearance Handoff Memo",
+   "unit_id": "S235",
+   "evidence_units": [
+    "S168",
+    "S235"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S167",
+    "S168",
+    "S234",
+    "S235"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 91,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S168 states the Control Room Operator produces the Clearance Handoff Memo, S235 states the Switching Desk Coordinator receives and uses that same memo, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Substation Field Crew",
+   "target": "Bay Automation Controller",
+   "payload": "the Breaker Inspection Tag",
+   "unit_id": "S179",
+   "evidence_units": [
+    "S089",
+    "S179"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S088",
+    "S089",
+    "S178",
+    "S179"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 83,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S089 states the Substation Field Crew completes and sends the Breaker Inspection Tag, S179 states the Bay Automation Controller uses the inspection tag, and no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Station DC System",
+   "target": "Bay Automation Controller",
+   "payload": "a Battery Load Test Record",
+   "unit_id": "S207",
+   "evidence_units": [
+    "S120",
+    "S207"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S119",
+    "S120",
+    "S206",
+    "S207"
+   ],
+   "extra_units": [
+    "S080",
+    "S101",
+    "S152",
+    "S179",
+    "S235"
+   ],
+   "extra_units_available": 5,
+   "context_tokens": 195,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S120 states the Station DC System produces a Battery Load Test Record, S207 states the Bay Automation Controller uses the load test record (a shorter name for the same item), and no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T4",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 2,
+   "source": "Station Gateway",
+   "target": "Station Supervisory Control System",
+   "payload": "the Protocol Retry Summary",
+   "unit_id": "S208",
+   "evidence_units": [
+    "S142",
+    "S208"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S141",
+    "S142",
+    "S207",
+    "S208"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 67,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S142 states the Station Gateway produces the Protocol Retry Summary and S208 states the Station Supervisory Control System receives the same-named item, with no conflicting producer or similarly named item in the document.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Substation Field Crew",
+   "target": "Bay Automation Controller",
+   "payload": "Breaker Inspection Tag",
+   "unit_id": "S179",
+   "evidence_units": [
+    "S089",
+    "S179"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S088",
+    "S089",
+    "S178",
+    "S179"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 83,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S089 states the Substation Field Crew completes and sends the Breaker Inspection Tag, S179 states the Bay Automation Controller uses the inspection tag, and no other sentence names a different producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Station DC System",
+   "target": "Bay Automation Controller",
+   "payload": "a Battery Load Test Record",
+   "unit_id": "S207",
+   "evidence_units": [
+    "S120",
+    "S207"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S119",
+    "S120",
+    "S206",
+    "S207"
+   ],
+   "extra_units": [
+    "S080",
+    "S101",
+    "S152",
+    "S179",
+    "S235"
+   ],
+   "extra_units_available": 5,
+   "context_tokens": 195,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S120 says the Station DC System produces a Battery Load Test Record, S207 says the Bay Automation Controller uses the load test record (a shorter name for the same item), and no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Station Gateway",
+   "target": "Station Supervisory Control System",
+   "payload": "the Protocol Retry Summary",
+   "unit_id": "S208",
+   "evidence_units": [
+    "S142",
+    "S208"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S141",
+    "S142",
+    "S207",
+    "S208"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 67,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S142 states the Station Gateway produces the Protocol Retry Summary and S208 states the Station Supervisory Control System receives the same-named item, with no conflicting producer or similarly named item found.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Satellite Time Receiver",
+   "target": "Sequence Event Archive",
+   "payload": "the Clock Drift Snapshot",
+   "unit_id": "S140",
+   "evidence_units": [
+    "S044",
+    "S140"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S043",
+    "S044",
+    "S139",
+    "S140"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 80,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S044 states the Satellite Time Receiver produces the Clock Drift Snapshot and S140 states the Sequence Event Archive receives the same Clock Drift Snapshot, with no conflicting producer or similarly named item mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Station DC System",
+   "target": "Bay Automation Controller",
+   "payload": "a Battery Load Test Record",
+   "unit_id": "S207",
+   "evidence_units": [
+    "S120",
+    "S207"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S119",
+    "S120",
+    "S206",
+    "S207"
+   ],
+   "extra_units": [
+    "S080",
+    "S101",
+    "S152",
+    "S179",
+    "S235"
+   ],
+   "extra_units_available": 5,
+   "context_tokens": 195,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S120 says the Station DC System produces a Battery Load Test Record, S207 says the Bay Automation Controller uses the load test record (a shorter name for the same item), and no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Engineering Workstation",
+   "target": "Maintenance Remote Terminal",
+   "payload": "the Settings Review Receipt",
+   "unit_id": "S206",
+   "evidence_units": [
+    "S057",
+    "S206"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S056",
+    "S057",
+    "S205",
+    "S206"
+   ],
+   "extra_units": [
+    "S101"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 97,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S057 says Engineering Workstation produces the Settings Review Receipt, and S206 says Maintenance Remote Terminal uses the review receipt (a shorter name for the same item), with no sentence naming a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Bay Automation Controller",
+   "target": "Station Supervisory Control System",
+   "payload": "a Bay Status Digest",
+   "unit_id": "S139",
+   "evidence_units": [
+    "S006",
+    "S139"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S005",
+    "S006",
+    "S138",
+    "S139"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 75,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S006 says the Bay Automation Controller produces a Bay Status Digest, S139 says the Station Supervisory Control System uses the status digest, and no sentence names a different producer or a similarly named but different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T4",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Station Gateway",
+   "target": "Station Supervisory Control System",
+   "payload": "the Protocol Retry Summary",
+   "unit_id": "S208",
+   "evidence_units": [
+    "S142",
+    "S208"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S141",
+    "S142",
+    "S207",
+    "S208"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 67,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S142 states the Station Gateway produces the Protocol Retry Summary and S208 states the Station Supervisory Control System receives the same-named item, with no conflicting producer or similarly named item in the document.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Chemical Supplier Driver",
+   "target": "Duty Engineer",
+   "payload": "the Chlorine Cylinder Seal Log",
+   "unit_id": "S223",
+   "evidence_units": [
+    "S112",
+    "S223"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S111",
+    "S112",
+    "S222",
+    "S223"
+   ],
+   "extra_units": [
+    "S088",
+    "S188"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 154,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S112 states the Chemical Supplier Driver sends the Chlorine Cylinder Seal Log, and S223 states the Duty Engineer reviews the same log; no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Laboratory Technician",
+   "target": "SCADA Historian Server",
+   "payload": "the Sample Chain Slip",
+   "unit_id": "S188",
+   "evidence_units": [
+    "S084",
+    "S188"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S083",
+    "S084",
+    "S187",
+    "S188"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 101,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S084 says the Laboratory Technician prepares and sends the Sample Chain Slip, S188 says the SCADA Historian Server uses the same-named Sample Chain Slip, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Chemical Supplier Driver",
+   "target": "Duty Engineer",
+   "payload": "the Chlorine Cylinder Seal Log",
+   "unit_id": "S223",
+   "evidence_units": [
+    "S112",
+    "S223"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S111",
+    "S112",
+    "S222",
+    "S223"
+   ],
+   "extra_units": [
+    "S088",
+    "S188"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 154,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S112 states the Chemical Supplier Driver sends the Chlorine Cylinder Seal Log, S223 states the Duty Engineer reviews the same log, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Chief Operator",
+   "target": "Residuals Hauler",
+   "payload": "the Backwash Solids Manifest",
+   "unit_id": "S245",
+   "evidence_units": [
+    "S173",
+    "S245"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S172",
+    "S173",
+    "S244",
+    "S245"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 122,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S173 states the Chief Operator produces the Backwash Solids Manifest and S245 states the Residuals Hauler uses the same-named manifest, with no conflicting producer stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C2",
+   "sample": 1,
+   "source": "Chemical Supplier Driver",
+   "target": "Duty Engineer",
+   "payload": "the Chlorine Cylinder Seal Log",
+   "unit_id": "S223",
+   "evidence_units": [
+    "S112",
+    "S223"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S111",
+    "S112",
+    "S222",
+    "S223"
+   ],
+   "extra_units": [
+    "S088",
+    "S188"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 154,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S112 says the Chemical Supplier Driver sends the Chlorine Cylinder Seal Log, and S223 says the Duty Engineer reviews that same log, with no sentence naming a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Chief Operator",
+   "target": "Residuals Hauler",
+   "payload": "the Backwash Solids Manifest",
+   "unit_id": "S245",
+   "evidence_units": [
+    "S173",
+    "S245"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S172",
+    "S173",
+    "S244",
+    "S245"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 122,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S173 states the Chief Operator produces the Backwash Solids Manifest, S245 states the Residuals Hauler uses the same named manifest, and no sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Laboratory Technician",
+   "target": "SCADA Historian Server",
+   "payload": "the Sample Chain Slip",
+   "unit_id": "S188",
+   "evidence_units": [
+    "S084",
+    "S188"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S083",
+    "S084",
+    "S187",
+    "S188"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 101,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S084 says the Laboratory Technician prepares and sends the Sample Chain Slip, S188 says the SCADA Historian Server uses the same-named Sample Chain Slip, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Chemical Supplier Driver",
+   "target": "Duty Engineer",
+   "payload": "the Chlorine Cylinder Seal Log",
+   "unit_id": "S223",
+   "evidence_units": [
+    "S112",
+    "S223"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S111",
+    "S112",
+    "S222",
+    "S223"
+   ],
+   "extra_units": [
+    "S088",
+    "S188"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 154,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S112 states the Chemical Supplier Driver sends the Chlorine Cylinder Seal Log, S223 states the Duty Engineer reviews the same log, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 0,
+   "source": "Chief Operator",
+   "target": "Residuals Hauler",
+   "payload": "the Backwash Solids Manifest",
+   "unit_id": "S245",
+   "evidence_units": [
+    "S173",
+    "S245"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S172",
+    "S173",
+    "S244",
+    "S245"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 122,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S173 states the Chief Operator produces the Backwash Solids Manifest, S245 states the Residuals Hauler uses the same named manifest, and no sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T5",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 2,
+   "source": "Chief Operator",
+   "target": "Residuals Hauler",
+   "payload": "the Backwash Solids Manifest",
+   "unit_id": "S245",
+   "evidence_units": [
+    "S173",
+    "S245"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S172",
+    "S173",
+    "S244",
+    "S245"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 122,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S173 states the Chief Operator produces the Backwash Solids Manifest and S245 states the Residuals Hauler uses the same-named manifest, with no conflicting producer stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T5",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "South Filter Gallery",
+   "target": "Chief Operator",
+   "payload": "the Filter Run Exception Note",
+   "unit_id": "S153",
+   "evidence_units": [
+    "S061",
+    "S153"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S060",
+    "S061",
+    "S152",
+    "S153"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 114,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S061 states South Filter Gallery sends the Filter Run Exception Note, S153 states the Chief Operator uses that same note, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "South Filter Gallery",
+   "target": "Chief Operator",
+   "payload": "the Filter Run Exception Note",
+   "unit_id": "S153",
+   "evidence_units": [
+    "S061",
+    "S153"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S060",
+    "S061",
+    "S152",
+    "S153"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 114,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S061 states South Filter Gallery sends the Filter Run Exception Note, S153 states the Chief Operator uses that same note, and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Laboratory Technician",
+   "target": "SCADA Historian Server",
+   "payload": "Sample Chain Slip",
+   "unit_id": "S188",
+   "evidence_units": [
+    "S084",
+    "S188"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S083",
+    "S084",
+    "S187",
+    "S188"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 101,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S084 says the Laboratory Technician prepares and sends the Sample Chain Slip, S188 says the SCADA Historian Server uses the same Sample Chain Slip, and no sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Coagulant Dosing Skid",
+   "target": "Laboratory Technician",
+   "payload": "Alum Batch Ticket",
+   "unit_id": "S083",
+   "evidence_units": [
+    "S056",
+    "S083"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S055",
+    "S056",
+    "S082",
+    "S083"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 125,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S056 says the Coagulant Dosing Skid sends the Alum Batch Ticket, and S083 says the Laboratory Technician uses that same ticket to verify chemical lot identity; no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T5",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Coagulant Dosing Skid",
+   "target": "Laboratory Technician",
+   "payload": "the Alum Batch Ticket",
+   "unit_id": "S083",
+   "evidence_units": [
+    "S056",
+    "S083"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S055",
+    "S056",
+    "S082",
+    "S083"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 125,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S056 states the Coagulant Dosing Skid sends the Alum Batch Ticket, and S083 states the Laboratory Technician uses the Alum Batch Ticket; the item name is identical and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Bag Tag Printer",
+   "target": "Maintenance Technician",
+   "payload": "a Calibration Witness Tag",
+   "unit_id": "S176",
+   "evidence_units": [
+    "S074",
+    "S176"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S073",
+    "S074",
+    "S175",
+    "S176"
+   ],
+   "extra_units": [
+    "S030",
+    "S031",
+    "S053",
+    "S151",
+    "S157",
+    "S161",
+    "S167",
+    "S168"
+   ],
+   "extra_units_available": 8,
+   "context_tokens": 276,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S074 states the Bag Tag Printer produces a Calibration Witness Tag, S176 states the Maintenance Technician uses 'the witness tag' to verify calibration status, and no other sentence names a different producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Bag Tag Printer",
+   "target": "Maintenance Technician",
+   "payload": "a Calibration Witness Tag",
+   "unit_id": "S176",
+   "evidence_units": [
+    "S074",
+    "S176"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S073",
+    "S074",
+    "S175",
+    "S176"
+   ],
+   "extra_units": [
+    "S030",
+    "S031",
+    "S053",
+    "S151",
+    "S157",
+    "S161",
+    "S167",
+    "S168"
+   ],
+   "extra_units_available": 8,
+   "context_tokens": 276,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S074 says the Bag Tag Printer produces a Calibration Witness Tag, S176 says the Maintenance Technician uses the witness tag to verify calibration status, and no other sentence names a different producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "South Gate Scanner",
+   "target": "Image Resolution Desk",
+   "payload": "a Manual Rescan Receipt",
+   "unit_id": "S159",
+   "evidence_units": [
+    "S061",
+    "S159"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S060",
+    "S061",
+    "S158",
+    "S159"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 102,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S061 states South Gate Scanner produces the Manual Rescan Receipt, and S159 states Image Resolution Desk uses the rescan receipt, which is the same item named more briefly; no other producer or conflicting item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Concourse Zone Controller",
+   "target": "Maintenance Technician",
+   "payload": "the Recovery Route Card",
+   "unit_id": "S185",
+   "evidence_units": [
+    "S013",
+    "S185"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S012",
+    "S013",
+    "S184",
+    "S185"
+   ],
+   "extra_units": [
+    "S038",
+    "S143"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 134,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S013 states the Concourse Zone Controller produces the Recovery Route Card and S185 states the Maintenance Technician consults the same card, with no sentence naming a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Bag Tag Printer",
+   "target": "Maintenance Technician",
+   "payload": "a Calibration Witness Tag",
+   "unit_id": "S176",
+   "evidence_units": [
+    "S074",
+    "S176"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S073",
+    "S074",
+    "S175",
+    "S176"
+   ],
+   "extra_units": [
+    "S030",
+    "S031",
+    "S053",
+    "S151",
+    "S157",
+    "S161",
+    "S167",
+    "S168"
+   ],
+   "extra_units_available": 8,
+   "context_tokens": 276,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S074 states the Bag Tag Printer produces a Calibration Witness Tag, S176 states the Maintenance Technician uses 'the witness tag' to verify calibration status, and no other sentence names a different producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Concourse Zone Controller",
+   "target": "Maintenance Technician",
+   "payload": "the Recovery Route Card",
+   "unit_id": "S185",
+   "evidence_units": [
+    "S013",
+    "S185"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S012",
+    "S013",
+    "S184",
+    "S185"
+   ],
+   "extra_units": [
+    "S038",
+    "S143"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 134,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S013 states the Concourse Zone Controller produces the Recovery Route Card and S185 states the Maintenance Technician consults the same card, with no sentence naming a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 1,
+   "source": "Concourse Zone Controller",
+   "target": "Maintenance Technician",
+   "payload": "the Recovery Route Card",
+   "unit_id": "S185",
+   "evidence_units": [
+    "S013",
+    "S185"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S012",
+    "S013",
+    "S184",
+    "S185"
+   ],
+   "extra_units": [
+    "S038",
+    "S143"
+   ],
+   "extra_units_available": 2,
+   "context_tokens": 134,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S013 states the Concourse Zone Controller produces the Recovery Route Card and S185 states the Maintenance Technician consults the same card, with no sentence naming a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T6",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Primary Crossbelt Sorter",
+   "target": "Baggage Operations Supervisor",
+   "payload": "a Chute Occupancy Note",
+   "unit_id": "S184",
+   "evidence_units": [
+    "S085",
+    "S184"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S084",
+    "S085",
+    "S183",
+    "S184"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 94,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S085 says the Primary Crossbelt Sorter sends a Chute Occupancy Note, S184 says the Baggage Operations Supervisor uses 'the occupancy note' (the same item, named more briefly), and no other producer is stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Explosives Response Team",
+   "target": "Security Duty Manager",
+   "payload": "the Custody Seal Log",
+   "unit_id": "S213",
+   "evidence_units": [
+    "S120",
+    "S213"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "error",
+   "in_rnv": false,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S119",
+    "S120",
+    "S212",
+    "S213"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 89,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S120 states the Explosives Response Team produces the Custody Seal Log, S213 states the Security Duty Manager uses the seal log (a shorter name for the same item), and no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Pier 4 Bag-Drop Unit",
+   "target": "Image Resolution Desk",
+   "payload": "an Oversize Exception Ticket",
+   "unit_id": "S141",
+   "evidence_units": [
+    "S035",
+    "S141"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S034",
+    "S035",
+    "S140",
+    "S141"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 86,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S035 states the Pier 4 Bag-Drop Unit sends an Oversize Exception Ticket, S141 states Image Resolution Desk uses 'the exception ticket' for an oversize bag, and no other sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Bag Tag Printer",
+   "target": "Maintenance Technician",
+   "payload": "a Calibration Witness Tag",
+   "unit_id": "S176",
+   "evidence_units": [
+    "S074",
+    "S176"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S073",
+    "S074",
+    "S175",
+    "S176"
+   ],
+   "extra_units": [
+    "S030",
+    "S031",
+    "S053",
+    "S151",
+    "S157",
+    "S161",
+    "S167",
+    "S168"
+   ],
+   "extra_units_available": 8,
+   "context_tokens": 276,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S074 says the Bag Tag Printer produces a Calibration Witness Tag, S176 says the Maintenance Technician uses the witness tag to verify calibration status, and no other sentence names a different producer or a different similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T6",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 1,
+   "source": "South Gate Scanner",
+   "target": "Image Resolution Desk",
+   "payload": "a Manual Rescan Receipt",
+   "unit_id": "S159",
+   "evidence_units": [
+    "S061",
+    "S159"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S060",
+    "S061",
+    "S158",
+    "S159"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 102,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S061 states the South Gate Scanner produces a Manual Rescan Receipt, S159 states Image Resolution Desk uses the rescan receipt (a shorter name for the same item), and no sentence names a different producer.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Orbit Determination Engine",
+   "target": "Flight Dynamics Team",
+   "payload": "the Doppler Residual Report",
+   "unit_id": "S131",
+   "evidence_units": [
+    "S041",
+    "S131"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S130",
+    "S131"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Orbit Determination Engine produces the Doppler Residual Report, S131 states the Flight Dynamics Team uses 'the residual report' (a shorter name for the same item), and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "C2",
+   "sample": 0,
+   "source": "Product Quality Service",
+   "target": "User Services Portal",
+   "payload": "the Product Hold List",
+   "unit_id": "S239",
+   "evidence_units": [
+    "S168",
+    "S239"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S167",
+    "S168",
+    "S238",
+    "S239"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 111,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S168 states Product Quality Service produces the Product Hold List and S239 states User Services Portal uses the same Product Hold List, with no conflicting producer or similarly named item given.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "C2",
+   "sample": 2,
+   "source": "Ground Network Manager",
+   "target": "Spacecraft Operations Team",
+   "payload": "the Antenna Deicing Notice",
+   "unit_id": "S113",
+   "evidence_units": [
+    "S044",
+    "S113"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S043",
+    "S044",
+    "S112",
+    "S113"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 109,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S044 states Ground Network Manager issues the Antenna Deicing Notice and S113 states the Spacecraft Operations Team uses the same-named notice, with no sentence indicating a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 0,
+   "source": "Flight Dynamics Team",
+   "target": "Mission Planning System",
+   "payload": "the Ephemeris Delta Note",
+   "unit_id": "S240",
+   "evidence_units": [
+    "S144",
+    "S240"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S143",
+    "S144",
+    "S239",
+    "S240"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 109,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S144 says the Flight Dynamics Team produces the Ephemeris Delta Note, and S240 says the Mission Planning System applies 'the delta note' during schedule validation, which is a shorter name for the same item, with no conflicting producer stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Payload Calibration Team",
+   "target": "Product Quality Service",
+   "payload": "the Calibration Patch Bundle",
+   "unit_id": "S162",
+   "evidence_units": [
+    "S094",
+    "S162"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S093",
+    "S094",
+    "S161",
+    "S162"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S094 states the Payload Calibration Team sends the Calibration Patch Bundle, and S162 states the Product Quality Service uses the patch bundle (a shorter name for the same item); no sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Telemetry Ingest Service",
+   "target": "Spacecraft Operations Team",
+   "payload": "the Pass Replay Packet",
+   "unit_id": "S198",
+   "evidence_units": [
+    "S081",
+    "S198"
+   ],
+   "match": 3,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S080",
+    "S081",
+    "S197",
+    "S198"
+   ],
+   "extra_units": [
+    "S067"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 153,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S081 states the Telemetry Ingest Service produces the Pass Replay Packet and S198 states the Spacecraft Operations Team uses the same-named packet, with no sentence naming a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "gpt-6.1-sol",
+   "cond": "OL",
+   "sample": 0,
+   "source": "Orbit Determination Engine",
+   "target": "Flight Dynamics Team",
+   "payload": "the Doppler Residual Report",
+   "unit_id": "S131",
+   "evidence_units": [
+    "S041",
+    "S131"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S040",
+    "S041",
+    "S130",
+    "S131"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S041 states the Orbit Determination Engine produces the Doppler Residual Report, S131 states the Flight Dynamics Team uses 'the residual report' (a shorter name for the same item), and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T7",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Flight Dynamics Team",
+   "target": "Mission Planning System",
+   "payload": "the Ephemeris Delta Note",
+   "unit_id": "S240",
+   "evidence_units": [
+    "S144",
+    "S240"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S143",
+    "S144",
+    "S239",
+    "S240"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 109,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S144 states the Flight Dynamics Team produces the Ephemeris Delta Note, and S240 states the Mission Planning System applies 'the delta note' during schedule validation, which is a shorter name for the same item, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T7",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Ground Network Manager",
+   "target": "Spacecraft Operations Team",
+   "payload": "the Antenna Deicing Notice",
+   "unit_id": "S113",
+   "evidence_units": [
+    "S044",
+    "S113"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S043",
+    "S044",
+    "S112",
+    "S113"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 109,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S044 states Ground Network Manager issues the Antenna Deicing Notice and S113 states the Spacecraft Operations Team uses the same-named notice, with no sentence indicating a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T7",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Telemetry Ingest Service",
+   "target": "Spacecraft Operations Team",
+   "payload": "the Pass Replay Packet",
+   "unit_id": "S198",
+   "evidence_units": [
+    "S081",
+    "S198"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S080",
+    "S081",
+    "S197",
+    "S198"
+   ],
+   "extra_units": [
+    "S067"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 153,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S081 states the Telemetry Ingest Service produces the Pass Replay Packet and S198 states the Spacecraft Operations Team uses the same-named packet, with no sentence naming a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T7",
+   "model": "claude-opus-5-5",
+   "cond": "C2",
+   "sample": 1,
+   "source": "Payload Calibration Team",
+   "target": "Product Quality Service",
+   "payload": "the Calibration Patch Bundle",
+   "unit_id": "S162",
+   "evidence_units": [
+    "S094",
+    "S162"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S093",
+    "S094",
+    "S161",
+    "S162"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 105,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S094 states the Payload Calibration Team sends the Calibration Patch Bundle, and S162 states the Product Quality Service uses the patch bundle (a shorter name for the same item); no sentence names a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T8",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Inbound Inspection Desk",
+   "target": "Yard Gate Controller",
+   "payload": "the Trailer Seal Exception Note",
+   "unit_id": "S129",
+   "evidence_units": [
+    "S036",
+    "S129"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S035",
+    "S036",
+    "S128",
+    "S129"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 88,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S036 states the Inbound Inspection Desk sends the Trailer Seal Exception Note, and S129 states the Yard Gate Controller uses 'the exception note' to manage a receiving discrepancy at the gate; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "gpt-6.1-sol",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Maintenance Release Terminal",
+   "target": "North Aisle Stacker Crane",
+   "payload": "the Crane Service Release Card",
+   "unit_id": "S228",
+   "evidence_units": [
+    "S140",
+    "S228"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S139",
+    "S140",
+    "S227",
+    "S228"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 81,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S140 states the Maintenance Release Terminal produces the Crane Service Release Card, S228 states the North Aisle Stacker Crane accepts 'the release card' as authorization to return to service, and no sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "North Aisle Stacker Crane",
+   "target": "Warehouse Management System",
+   "payload": "the Aisle Occupancy Snapshot",
+   "unit_id": "S177",
+   "evidence_units": [
+    "S092",
+    "S177"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S091",
+    "S092",
+    "S176",
+    "S177"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 75,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S092 states the North Aisle Stacker Crane sends the Aisle Occupancy Snapshot, and S177 states Morrowglass, the Warehouse Management System, receives the occupancy snapshot, a shorter name for the same item, with no other producer mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Maintenance Release Terminal",
+   "target": "North Aisle Stacker Crane",
+   "payload": "the Crane Service Release Card",
+   "unit_id": "S228",
+   "evidence_units": [
+    "S140",
+    "S228"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S139",
+    "S140",
+    "S227",
+    "S228"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 81,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S140 states the Maintenance Release Terminal produces the Crane Service Release Card, S228 states the North Aisle Stacker Crane accepts 'the release card' as authorization to return to service, and no sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T8",
+   "model": "gpt-6.1-sol",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Autonomous Forklift Fleet",
+   "target": "Warehouse Management System",
+   "payload": "the Forklift Handoff Confirmation",
+   "unit_id": "S225",
+   "evidence_units": [
+    "S115",
+    "S225"
+   ],
+   "match": 2,
+   "verifier": "claude-opus-5-5",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S114",
+    "S115",
+    "S224",
+    "S225"
+   ],
+   "extra_units": [
+    "S058"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S115 states the Autonomous Forklift Fleet produces the Forklift Handoff Confirmation, and S225 states the Warehouse Management System uses the handoff confirmation to close the movement record; no other sentence names a different producer or a similarly named item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Inbound Inspection Desk",
+   "target": "Yard Gate Controller",
+   "payload": "the Trailer Seal Exception Note",
+   "unit_id": "S129",
+   "evidence_units": [
+    "S036",
+    "S129"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S035",
+    "S036",
+    "S128",
+    "S129"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 88,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S036 states the Inbound Inspection Desk sends the Trailer Seal Exception Note, and S129 states the Yard Gate Controller uses 'the exception note' to manage a receiving discrepancy at the gate; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": true
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 0,
+   "source": "Warehouse Management System",
+   "target": "North Aisle Stacker Crane",
+   "payload": "Slot Reservation Receipt",
+   "unit_id": "S154",
+   "evidence_units": [
+    "S057",
+    "S154"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S056",
+    "S057",
+    "S153",
+    "S154"
+   ],
+   "extra_units": [
+    "S003"
+   ],
+   "extra_units_available": 1,
+   "context_tokens": 108,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S057 states the Warehouse Management System produces the Slot Reservation Receipt and S154 states the North Aisle Stacker Crane uses that same receipt, with no sentence naming a different producer or a similarly named different item.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 1,
+   "source": "Conveyor Line Controller",
+   "target": "Autonomous Forklift Fleet",
+   "payload": "the Transfer Induction Ticket",
+   "unit_id": "S200",
+   "evidence_units": [
+    "S088",
+    "S200"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S087",
+    "S088",
+    "S199",
+    "S200"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 82,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S088 states the Conveyor Line Controller produces the Transfer Induction Ticket, and S200 states the Autonomous Forklift Fleet receives that same ticket; no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C1",
+   "sample": 2,
+   "source": "Outbound Checkweigh Scale",
+   "target": "Shipping Documentation Desk",
+   "payload": "the Gross Weight Variance Slip",
+   "unit_id": "S226",
+   "evidence_units": [
+    "S167",
+    "S226"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S166",
+    "S167",
+    "S225",
+    "S226"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 97,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S167 states Outbound Checkweigh Scale produces the Gross Weight Variance Slip, S226 states Shipping Documentation Desk receives and reconciles the same slip, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 0,
+   "source": "North Aisle Stacker Crane",
+   "target": "Warehouse Management System",
+   "payload": "the Aisle Occupancy Snapshot",
+   "unit_id": "S177",
+   "evidence_units": [
+    "S092",
+    "S177"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S091",
+    "S092",
+    "S176",
+    "S177"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 75,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S092 states the North Aisle Stacker Crane sends the Aisle Occupancy Snapshot, and S177 states Morrowglass, the Warehouse Management System, receives the occupancy snapshot (a shorter name for the same item), with no conflicting producer stated.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 1,
+   "source": "Fire Alarm Panel",
+   "target": "Safety Zone Controller",
+   "payload": "the Sprinkler Zone Inhibit Notice",
+   "unit_id": "S204",
+   "evidence_units": [
+    "S117",
+    "S204"
+   ],
+   "match": 3,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S116",
+    "S117",
+    "S203",
+    "S204"
+   ],
+   "extra_units": [],
+   "extra_units_available": 0,
+   "context_tokens": 98,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S117 states Fire Alarm Panel produces the Sprinkler Zone Inhibit Notice, S204 states Safety Zone Controller applies that same notice, and no other producer or similarly named item is mentioned.",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  },
+  {
+   "doc": "L2T8",
+   "model": "claude-opus-5-5",
+   "cond": "C4",
+   "sample": 2,
+   "source": "Pallet Dimension Scanner",
+   "target": "Warehouse Management System",
+   "payload": "the Oversize Load Advisory",
+   "unit_id": "S156",
+   "evidence_units": [
+    "S070",
+    "S156"
+   ],
+   "match": 2,
+   "verifier": "gpt-6.1-sol",
+   "verifier_verdict": "supported",
+   "in_rnv": true,
+   "verdict_evidence_only": "supported",
+   "evidence_ids_shown": [
+    "S069",
+    "S070",
+    "S155",
+    "S156"
+   ],
+   "extra_units": [
+    "S071",
+    "S072",
+    "S151",
+    "S157"
+   ],
+   "extra_units_available": 4,
+   "context_tokens": 174,
+   "verdict_docaware": "supported",
+   "reason_docaware": "S070 states the Pallet Dimension Scanner produces the Oversize Load Advisory, and S156 states Morrowglass, the Warehouse Management System, consumes the load advisory; S071 and S157 use 'dimension advisory' and 'the advisory' for the same item, and no sentence names a different producer (S151's Cinderbay consumes a distinct inspection-stage advisory for its own purposes).",
+   "judge": "claude-sonnet-5-5",
+   "cached": false
+  }
+ ]
+}

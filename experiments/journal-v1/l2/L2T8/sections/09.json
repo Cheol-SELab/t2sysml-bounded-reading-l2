@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Performance is assessed against transfer throughput, task completion time, equipment availability, and the rate of safely resolved exceptions.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Management System records transaction times and reconciles completed movements against the active shift plan.",
+   "tags": []
+  },
+  {
+   "text": "At shift start, the Warehouse Operations Supervisor reviews open alarms, equipment status, and the previous shift's unresolved work.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Operations Supervisor confirms that operators understand current speed limits, exclusion boundaries, and stop-work criteria.",
+   "tags": []
+  },
+  {
+   "text": "Autonomous Forklift Fleet receives the Transfer Induction Ticket and validates its destination against the assigned route.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "Fleet availability is measured as the proportion of scheduled operating time during which vehicles are ready for service.",
+   "tags": []
+  },
+  {
+   "text": "Route performance is reviewed using completed tasks, travel time, and the number of blocked or delayed movements.",
+   "tags": []
+  },
+  {
+   "text": "Safety checks verify that personnel detection, audible warnings, and emergency stops respond before production movement begins.",
+   "tags": []
+  },
+  {
+   "text": "Safety Zone Controller applies the Sprinkler Zone Inhibit Notice by maintaining the specified exclusion boundary until release criteria are met.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "The shift check confirms that the active boundary is visible to operators and enforced by the applicable control logic.",
+   "tags": []
+  },
+  {
+   "text": "Juniperwake verifies aisle clearance before resuming a stored-pallet movement and stops if an obstruction is detected.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "Moonquarry checks each pallet profile against configured dimensional limits and flags measurements outside tolerance.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "text": "Dimensional exceptions are held for review rather than passed forward on an assumed measurement.",
+   "tags": []
+  },
+  {
+   "text": "The Outbound Checkweigh Scale is checked with a known reference load at the start of the shift and after maintenance.",
+   "tags": []
+  },
+  {
+   "text": "East Transfer Conveyor demonstrates a controlled restart by running empty at reduced speed for one complete cycle before accepting a pallet.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "The restart record includes the initiating authorization, observed speed, cycle result, and any alarm response.",
+   "tags": []
+  },
+  {
+   "text": "The Conveyor Line Controller inhibits feed if the restart cycle is incomplete or a protective device changes state.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Release Terminal status is checked before equipment is returned to automatic service.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Operations Supervisor compares reported downtime with control-system event records at each shift review.",
+   "tags": []
+  },
+  {
+   "text": "Any unexplained difference is investigated before the affected performance measure is accepted.",
+   "tags": []
+  },
+  {
+   "text": "Near misses, protective stops, and repeated process delays are reviewed for corrective action and accountable ownership.",
+   "tags": []
+  },
+  {
+   "text": "At handover, the outgoing shift records equipment restrictions, pending checks, and unresolved safety concerns.",
+   "tags": []
+  },
+  {
+   "text": "The incoming shift acknowledges those conditions before authorizing routine movements.",
+   "tags": []
+  }
+ ]
+}

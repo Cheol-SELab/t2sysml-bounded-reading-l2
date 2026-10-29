@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "This section extends the remote stand performance concept by describing how border, customs, and apron sensing inputs become constraints in the daily operating plan.",
+   "tags": []
+  },
+  {
+   "text": "Border release status is represented as a readiness attribute on each affected flight record in the Regional Flow Platform, separate from aircraft readiness and airline commercial readiness.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager produces the Customs Hold Release Note when border processing confirms that a held arrival may proceed to normal turnaround handling.",
+   "tags": [
+    "F15:intro"
+   ]
+  },
+  {
+   "text": "Customs hold indicators are represented as operational constraints that prevent premature stand release, passenger transfer assumptions, or departure readiness claims.",
+   "tags": []
+  },
+  {
+   "text": "A flight under a customs hold may remain physically parked and technically serviceable while still being unavailable for normal passenger, baggage, or crew movement decisions.",
+   "tags": []
+  },
+  {
+   "text": "When border release status is unknown, the Demand Prediction Service treats the turnaround milestone as uncertain rather than assuming that the planned connection interval is valid.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal displays border and customs status in a controlled view so that only authorized operational users see the clearance condition needed for coordination.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager uses aggregated border delay exposure to decide whether an arrival regulation should be adjusted or whether delay absorption should remain local to the airport.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator uses customs hold visibility to adjust connection protection, passenger messaging assumptions, and expected aircraft turnaround timing.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine treats an unresolved customs hold as a reason to avoid assigning an aggressive departure sequence position to the affected flight.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console uses the Medical Diversion Notice to protect arrival priority, stand assignment timing, and downstream border coordination in the active arrival plan.",
+   "tags": [
+    "F12:link"
+   ]
+  },
+  {
+   "text": "Customs status changes are time stamped before they are used in sequencing so that operational decisions are based on the latest authoritative clearance state.",
+   "tags": []
+  },
+  {
+   "text": "The East Apron Sensor reports stand occupancy transitions, pushback lane blockage durations, and sensor confidence values at a synchronized event time.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "West Apron Sensor observations are used to verify whether remote stand areas and service roads are actually available for the traffic pattern shown in the plan.",
+   "tags": []
+  },
+  {
+   "text": "The Surface Surveillance Adapter normalizes apron sensing data into movement, occupancy, and blockage events that can be correlated with flight milestones.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board presents apron sensor events as operational evidence for stand release, taxi lane availability, and vehicle conflict assessment.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector uses border status and apron occupancy evidence to distinguish a true gate conflict from a temporary clearance delay.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager considers confirmed apron blockage when determining whether a departure can be included in the next practical movement sequence.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module applies persistent apron congestion as a local capacity factor when estimating achievable departure throughput during Normal Operations and Adverse Weather Mode.",
+   "tags": []
+  },
+  {
+   "text": "The Time Synchronization Service is required because customs status events and apron sensor events must align with Calculated Takeoff Time and Target Off Block Time decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Business Rules Registry defines which border and customs states block sequencing, which states require human confirmation, and which states are informational only.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward maintains the access rules and retention rules for border and customs data because the data can affect both operational outcomes and passenger privacy obligations.",
+   "tags": []
+  },
+  {
+   "text": "The Alert Distribution Hub issues targeted alerts when a customs hold conflicts with an assigned stand plan or when apron sensing contradicts a declared off-block milestone.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log records the operational reason when border release status, customs hold status, or apron sensing data changes a sequencing or stand allocation decision.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse compares planned clearance assumptions with actual border release timing and apron availability to improve future demand prediction and resource planning.",
+   "tags": []
+  }
+ ]
+}

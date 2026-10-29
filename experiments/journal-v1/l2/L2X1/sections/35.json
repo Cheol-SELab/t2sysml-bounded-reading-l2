@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Performance measurement for the Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System shall convert operational events into repeatable indicators that can be reviewed after each operating day.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse shall calculate delay absorption as the portion of expected airborne or terminal-area delay that is converted into controlled ground delay before departure.",
+   "tags": []
+  },
+  {
+   "text": "Delay absorption shall be measured by comparing the unconstrained demand predicted by the Demand Prediction Service with the regulated demand produced by the Slot Allocation Engine and the realized movement times captured through the Flight Data Exchange.",
+   "tags": []
+  },
+  {
+   "text": "The principal delay absorption indicator shall report minutes absorbed at origin, minutes remaining in the arrival stream, and minutes transferred to surface queues within the region.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager shall use this indicator to verify that a Ground Delay Program reduced airborne holding without creating excessive departure congestion at constrained airports.",
+   "tags": []
+  },
+  {
+   "text": "Queue length performance shall be measured for runway departure queues, arrival metering queues, apron movement queues, and regulation waiting lists.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager shall provide runway sequence counts, while the Ramp Movement Board shall provide surface queue counts based on movement status and surveillance confirmation.",
+   "tags": []
+  },
+  {
+   "text": "The North Runway Meter, South Runway Meter, East Apron Sensor, and West Apron Sensor shall support independent checks of queue length where surveillance coverage is available.",
+   "tags": []
+  },
+  {
+   "text": "Queue metrics shall include maximum queue length, average queue length, time above threshold, and recovery time after a constraint is lifted.",
+   "tags": []
+  },
+  {
+   "text": "Slot adherence shall be measured as the difference between actual movement times and the assigned Calculated Takeoff Time or Target Off Block Time.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator shall review slot adherence by operator, airport, time band, and regulation identifier to detect recurring causes of noncompliance.",
+   "tags": []
+  },
+  {
+   "text": "A flight shall be counted within tolerance when the actual takeoff or off-block event occurs inside the operating window defined in the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Compliance State shall be used to identify periods when adherence monitoring has operational priority over advisory optimization.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service uses the Passenger Misconnect Count to weight departure sequencing decisions when connection protection is an approved local objective.",
+   "tags": [
+    "F20:link"
+   ]
+  },
+  {
+   "text": "Cancellation avoidance shall be estimated by comparing actual cancellations with a baseline scenario derived from demand, capacity, weather, and historical disruption outcomes.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module shall record the available Airport Acceptance Rate used in each baseline so that avoided cancellation estimates remain traceable.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator and Aircraft Operator Representative shall be able to challenge cancellation avoidance results through the Collaborative Decision Log when local business decisions affected the outcome.",
+   "tags": []
+  },
+  {
+   "text": "Emissions reduction shall be estimated from reduced airborne holding, reduced taxi-out time, avoided engine running in queues, and smoother departure metering.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse shall apply approved fuel burn and emissions factors by aircraft category, operating phase, and delay location.",
+   "tags": []
+  },
+  {
+   "text": "Emissions metrics shall distinguish between actual reductions and delay transfers that only move fuel burn from one phase of flight to another.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer shall support interpretation of emissions results by identifying periods when weather routing or convective avoidance dominated fuel performance.",
+   "tags": []
+  },
+  {
+   "text": "Stakeholder benefit tracking shall allocate measured outcomes to aircraft operators, airport operations, air navigation service functions, ground handling activities, and passengers where the source data supports that attribution.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager shall receive benefit summaries that show changes in stand occupancy, surface congestion, recovery duration, and passenger-facing disruption indicators.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward shall ensure that published performance measures identify data sources, calculation versions, confidence limits, and known exclusions.",
+   "tags": []
+  },
+  {
+   "text": "The Post Operations Report shall present regional benefits alongside operational trade-offs so that decision makers can see whether delay, queue, slot, cancellation, and emissions objectives were balanced in practice.",
+   "tags": []
+  }
+ ]
+}

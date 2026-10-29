@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Offshore Substation provides \"a Transformer Tap Snapshot\" to Shore Control Room (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS266: The HSE Officer reviews hazards and confirms that proposed controls match the task scope and site conditions.\nS267: The Offshore Substation sends a Transformer Tap Snapshot when a transformer condition review is requested.\nS373: Wildmere applies the accepted export ceiling to control outputs and records its effective time for audit.\nS374: Shore Control Room uses the tap snapshot to check the recorded transformer position during export reviews.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\n(none found)\n\nAnswer \"supported\" only if the document states that Offshore Substation produces or sends this item AND that Shore Control Room receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Shore Control Room uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S267 states the Offshore Substation sends a Transformer Tap Snapshot, and S374 states Shore Control Room uses the tap snapshot (a shorter name for the same item) to check transformer position, with no conflicting producer or similarly named item found.\"}",
+ "usage": {
+  "input_tokens": 764,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 100,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.755,
+ "created": "2026-10-19T18:59:34"
+}

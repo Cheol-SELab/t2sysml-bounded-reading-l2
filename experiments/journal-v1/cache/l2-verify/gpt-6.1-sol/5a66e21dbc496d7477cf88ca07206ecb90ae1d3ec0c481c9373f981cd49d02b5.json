@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: local users provides \"operational decisions\" to Data Governance Steward (an information or material flow).\n\nSource sentences:\nS097: The System Support Engineer is the technical escalation contact for degraded Regional Flow Platform functions, interface outages, or abnormal behavior in the Flight Data Exchange.\nS098: The Data Governance Steward verifies that operational decisions, role acknowledgements, and exception handling are captured in the Audit Event Ledger with synchronized timestamps from the Time Synchronization Service.\nS906: The cutover decision shall be based on measured agreement between local practice and Regional Flow Platform outputs, user confidence, defect closure, and demonstrated recovery from simulated failures.\nS907: After cutover, local users shall enter operational decisions through the Airport CDM Portal and shall avoid reintroducing uncontrolled parallel records that undermine common situational awareness.\n\nAnswer \"supported\" only if the sentences state that local users produces or sends this item AND that Data Governance Steward receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S907 states that local users enter operational decisions, and S098 states that the Data Governance Steward verifies that those operational decisions are captured in the Audit Event Ledger.\"}",
+ "usage": {
+  "input_tokens": 337,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 78,
+  "output_tokens_details": {
+   "reasoning_tokens": 27
+  },
+  "total_tokens": 415
+ },
+ "attempts": 1,
+ "wall_s": 3.599,
+ "created": "2026-10-14T12:46:15"
+}

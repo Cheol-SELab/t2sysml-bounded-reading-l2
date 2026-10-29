@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=tools or test equipment are brought near electrical apparatus)\n\nSource sentences (the last one is where the fact was extracted):\nS078: The Substation Supervisor confirms that the requested work is consistent with current operating conditions and approved procedures.\nS079: The crew reviews the work scope, access route, known hazards, and communication arrangements before entering the yard.\nS080: Personnel use the site access process to record arrival and departure so that the control room can account for field staff.\nS081: Work boundaries are established before tools or test equipment are brought near electrical apparatus.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S081 states that tools or test equipment are brought near electrical apparatus, after work boundaries are established, so the action label matches the text.\"}",
+ "usage": {
+  "input_tokens": 637,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 59,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.472,
+ "created": "2026-10-14T12:52:28"
+}

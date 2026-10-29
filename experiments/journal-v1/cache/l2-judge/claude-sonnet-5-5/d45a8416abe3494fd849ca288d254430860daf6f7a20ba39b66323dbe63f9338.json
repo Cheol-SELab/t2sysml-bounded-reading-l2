@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: DWR List provides \"flight\" to list (an information or material flow).\n\nSource sentences:\nU0089: Auxiliary waypoints are added when needed to avoid weather, or optionally weather and traffic, and provide the minimum-delay route based on geometry and winds.\nU0090: If a route correction is found that can save the user-defined minimum time or more relative to the current flight plan, the flight is posted to a list displayed to an FAA traffic manager or to an airline ATC coordinator (see Figure 4).\nU0105: The downstream ‘Capture fix’ used to compute the direct route, and the ‘Auxiliary waypoint’ used to find the route around convective weather polygons, are displayed as well.\nU0106: Flights that have sufficient user-defined flight-time savings are displayed in the ‘DWR list’ on the top-left part of the big window.\n\nAnswer \"supported\" only if the sentences state that DWR List produces or sends this item AND that list receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The candidate says DWR List provides flight to list, but the DWR list is the list itself that receives or displays flights (flights are posted to it), so there is no distinct producer-to-list flow and the direction is wrong.\"}",
+ "usage": {
+  "input_tokens": 724,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 87,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.691,
+ "created": "2026-10-15T00:19:21"
+}

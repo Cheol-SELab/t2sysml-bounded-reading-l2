@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: requirement(subject=Chief Operator, text=After any cybersecurity event, major alarm failure, or emergency control action, the Chief Operator shall require a brief operational review that identifies the cause, affected services, corrective actions, and any needed procedure changes.)\n\nSource sentences (the last one is where the fact was extracted):\nS222: The Maintenance Planner uses the permit to verify isolation boundaries before confined-space work is released.\nS223: The Duty Engineer reviews the Chlorine Cylinder Seal Log before accepting a change in chlorine storage status.\nS224: Reliability targets for critical plant services shall include prompt detection of failed sensors, redundant communication paths where practical, recoverable configuration backups, and periodic restoration testing.\nS225: After any cybersecurity event, major alarm failure, or emergency control action, the Chief Operator shall require a brief operational review that identifies the cause, affected services, corrective actions, and any needed procedure changes.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S225 states verbatim that after any cybersecurity event, major alarm failure, or emergency control action the Chief Operator shall require a brief operational review identifying cause, affected services, corrective actions, and needed procedure changes; the subject and text match.\"}",
+ "usage": {
+  "input_tokens": 775,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 97,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.455,
+ "created": "2026-10-14T12:51:42"
+}

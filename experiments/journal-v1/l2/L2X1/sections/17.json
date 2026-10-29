@@ -1,0 +1,102 @@
+{
+ "sentences": [
+  {
+   "text": "Arrival regulation begins when the Demand Prediction Service shows that inbound demand will exceed the Airport Acceptance Rate within the planning horizon.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager evaluates regulation options in the Arrival Regulation Console using runway availability, sector load, stand readiness, and forecast weather as the controlling inputs.",
+   "tags": []
+  },
+  {
+   "text": "The preferred option in Normal Operations is a minor time-based sequence adjustment that moves delay to upstream departure points rather than to airborne holding near Meridian.",
+   "tags": []
+  },
+  {
+   "text": "When the imbalance is larger, the Slot Allocation Engine can support a Ground Delay Program that meters selected arrivals before they depart for the region.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager uses the restriction notice to bound the arrival regulation timeline before committing new landing-rate values in the Arrival Regulation Console.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "text": "The Capacity Assessment Module calculates candidate Airport Acceptance Rate values for each runway configuration and exposes the operational basis for each value on the Common Situation Display.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor confirms whether the proposed landing rate is compatible with runway occupancy, missed approach protection, and local spacing constraints.",
+   "tags": []
+  },
+  {
+   "text": "The Airspace Sector Planner confirms whether terminal and en-route sector loads can absorb the regulated stream without generating unsafe compression.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator reviews the proposed treatment for network impact and identifies flights where upstream delay would create a disproportionate connection or aircraft rotation penalty.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator then uses the Slot Allocation Engine to distribute arrival times according to the approved business rules and any protected flight criteria in the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal presents the resulting arrival plan to Aircraft Operator Representative users and records acknowledgements in the Collaborative Decision Log.",
+   "tags": []
+  },
+  {
+   "text": "Airborne holding prevention is the primary design objective because excess holding increases fuel burn, controller workload, and the likelihood of unplanned diversion.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console therefore issues alerts before predicted holding stacks form, not after airborne delay has already accumulated.",
+   "tags": []
+  },
+  {
+   "text": "The Sector Load Monitor contributes early warnings when converging arrival flows are projected to exceed terminal sector capacity under the current metering plan.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Ingest Gateway updates the arrival model when wind shifts, visibility reductions, or convective activity change achievable runway throughput.",
+   "tags": []
+  },
+  {
+   "text": "If weather or runway conditions degrade faster than the model forecast, the Regional Flow Manager may apply a tactical landing-rate reduction for a defined review interval.",
+   "tags": []
+  },
+  {
+   "text": "If conditions improve, the Regional Flow Manager may approve a staged landing-rate increase, but the increase is limited until the Tower Sequence Manager confirms stable spacing and runway occupancy performance.",
+   "tags": []
+  },
+  {
+   "text": "Diversion triggers are monitored continuously and include predicted holding beyond operator fuel thresholds, loss of required approach capability, sustained sector saturation, and runway availability below the minimum safe acceptance rate.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison coordinates with affected airline control centers when diversion risk becomes material so that alternate airport decisions can be made before fuel margins become critical.",
+   "tags": []
+  },
+  {
+   "text": "The Emergency Response Coordinator is informed when a diversion trigger is associated with an aircraft condition that could affect rescue and firefighting readiness at Meridian or at an alternate airport.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, tactical adjustments are reviewed more frequently because landing-rate stability may depend on short-lived runway configuration and approach spacing opportunities.",
+   "tags": []
+  },
+  {
+   "text": "During Capacity Reduction State, the Regional Flow Manager may combine arrival regulation with departure metering to protect surface balance and prevent inbound aircraft from occupying gates needed for recovery flights.",
+   "tags": []
+  },
+  {
+   "text": "All rate changes, rejected options, coordination outcomes, and effective times are written to the Audit Event Ledger for later review.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse uses the recorded regulation history to compare predicted holding, actual airborne delay, diversion outcomes, and achieved landing rates for continuous improvement of Meridian arrival management.",
+   "tags": []
+  }
+ ]
+}

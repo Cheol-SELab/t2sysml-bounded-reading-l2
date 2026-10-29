@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: requirement(text=Performance measures shall include time from automated detection to human review, time from review to command notification, time to resource assignment, communication completion rate, and accuracy of incident status updates.)\n\nSource sentences (the last one is where the fact was extracted):\nS215: Tabletop exercises shall be conducted before the expected peak fire period and shall test detection triage, command notification, airspace coordination, tanker-base coordination, crew deployment, and public-agency liaison actions.\nS216: Live exercises shall be scheduled at least once per season when conditions permit and shall include field crews, aircraft coordination staff, drone operations staff, and command-center personnel.\nS217: Exercise controllers shall inject realistic complications such as intermittent network service, obscured camera views, delayed field confirmation, resource conflicts, and conflicting reports from external observers.\nS218: Performance measures shall include time from automated detection to human review, time from review to command notification, time to resource assignment, communication completion rate, and accuracy of incident status updates.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"The requirement text is taken verbatim from S218, which lists exactly these performance measures.\"}",
+ "usage": {
+  "input_tokens": 787,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 45,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.483,
+ "created": "2026-10-14T12:52:27"
+}

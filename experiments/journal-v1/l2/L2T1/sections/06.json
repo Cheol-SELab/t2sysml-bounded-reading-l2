@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "This section describes the operational interfaces between the Greenvale Metro Communications-Based Train Control System and station equipment that affects departures, passenger information, and dispatcher awareness.",
+   "tags": []
+  },
+  {
+   "text": "Platform equipment is treated as part of the movement-authority environment when its state can prevent a train from arriving, dwelling, or departing safely.",
+   "tags": []
+  },
+  {
+   "text": "Platform Screen Door Controller produces the Platform Door Status Snapshot at each monitored platform face for operational use by the CBTC system.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "The door interface reports closed, locked, bypassed, inhibited, and faulted conditions using coded states that are interpreted consistently across the line.",
+   "tags": []
+  },
+  {
+   "text": "A departure command is not considered available to the Revenue Train Operator until the relevant platform door state is compatible with the requested direction of travel.",
+   "tags": []
+  },
+  {
+   "text": "North District Zone Controller suppresses platform departure authority when the associated berth reports an unsafe door interface state.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "text": "Station status indications presented to local station staff are derived from validated CBTC states rather than from unverified field contacts alone.",
+   "tags": []
+  },
+  {
+   "text": "These indications distinguish normal service, held train, door interlock fault, radio degraded, emergency stop active, and evacuation support conditions.",
+   "tags": []
+  },
+  {
+   "text": "The Metro Operations Control System displays station and platform states with the same identifiers used in controller workstations to reduce interpretation errors during incidents.",
+   "tags": []
+  },
+  {
+   "text": "Passenger Information Gateway receives train prediction data, stopping pattern changes, and platform allocation updates after the CBTC system has reconciled them with the active timetable.",
+   "tags": []
+  },
+  {
+   "text": "The Passenger Information Gateway shall not publish a revised destination or skip-stop message until the underlying train identity and route have been confirmed by the CBTC system.",
+   "tags": []
+  },
+  {
+   "text": "When a platform is taken out of service, the passenger information interface marks the affected train movements as unavailable for boarding while retaining their operational tracking in the control center.",
+   "tags": []
+  },
+  {
+   "text": "Service Timetable Server provides planned service context used to compare predicted arrivals against scheduled platform usage.",
+   "tags": []
+  },
+  {
+   "text": "Metro Operations Control System coordinates timetable deviation, platform closure, and station crowding information before it is released to passenger-facing systems.",
+   "tags": []
+  },
+  {
+   "text": "Voice Dispatch Console displays train calling identity, current platform association, and the latest operational hold reason so that spoken instructions match automated indications.",
+   "tags": []
+  },
+  {
+   "text": "The Line Traffic Controller may apply a station hold through dispatch controls, and the hold is reflected in CBTC departure logic without changing the underlying route locking rules.",
+   "tags": []
+  },
+  {
+   "text": "Dispatch-related controls use positive confirmation and cancellation states so that a cancelled hold is not confused with a timeout, failed message, or rejected command.",
+   "tags": []
+  },
+  {
+   "text": "Kestrel shall report train door enable side, berth identity, and departure readiness to support platform interface checks during dwell and dispatch.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "text": "Saffron shall maintain message delivery paths for station interface traffic during normal radio coverage transitions and degraded coverage recovery.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "text": "Train Radio Modem uses the Encryption Certificate Renewal Pack before accepting renewed secure sessions for passenger-facing and station-interface data paths.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "text": "Safety Data Communication Network carries safety-relevant station interface messages separately from nonvital passenger information messages.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Diagnostic Server records station interface faults, rejected commands, and inconsistent indications for later investigation by the Signal Maintenance Engineer.",
+   "tags": []
+  },
+  {
+   "text": "Cyber Security Officer reviews access rights for passenger information and dispatch integration workstations when station-facing interfaces are commissioned or materially changed.",
+   "tags": []
+  },
+  {
+   "text": "During degraded operation, the CBTC system favours restrictive platform states and requires explicit controller action before restoring automatic departure support at the affected station.",
+   "tags": []
+  }
+ ]
+}

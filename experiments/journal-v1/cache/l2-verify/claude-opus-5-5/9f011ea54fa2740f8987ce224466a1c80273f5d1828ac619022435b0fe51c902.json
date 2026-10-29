@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Hospital Courier provides \"the Pneumatic Capsule Seal Record\" to West Tube Dispatch Console (an information or material flow).\n\nSource sentences:\nS090: The courier records the time and identity associated with acceptance so the custody history remains traceable.\nS091: The Hospital Courier produces the Pneumatic Capsule Seal Record when the capsule is sealed for transfer.\nS237: The cabinet remains Out of Service until required functional checks pass and the responsible staff approve its return to Ready for Dispense.\nS238: The West Tube Dispatch Console uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status before closing its dispatch-side handoff checks.\n\nAnswer \"supported\" only if the sentences state that Hospital Courier produces or sends this item AND that West Tube Dispatch Console receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S091 says the Hospital Courier produces the Pneumatic Capsule Seal Record, and S238 says the West Tube Dispatch Console uses that same record to verify capsule identity and seal status.\"}",
+ "usage": {
+  "input_tokens": 694,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 83,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.363,
+ "created": "2026-10-14T01:36:33"
+}

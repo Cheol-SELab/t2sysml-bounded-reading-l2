@@ -1,0 +1,49 @@
+plan sample 0: ['F11 short_ref not shorter']
+plan sample 1: ['split_flows n=20 far=20 short=11']
+plan sample 2: ['F5 short_ref inside another entity name', 'F6 short_ref inside another entity name', 'F8 short_ref inside another entity name', 'F14 short_ref inside another entity name', 'F17 short_ref inside another entity name']
+plan sample 3: ok
+section 1: 25 sentences
+section 2: 25 sentences
+section 3: 24 sentences
+section 4: 24 sentences
+section 5: 24 sentences
+section 6: 26 sentences
+section 7: 24 sentences
+section 8: 24 sentences
+section 9: 25 sentences
+section 10: 24 sentences
+section 11: 24 sentences
+section 12: 24 sentences
+section 13: 24 sentences
+section 14: 24 sentences
+section 15: 24 sentences
+section 16: 24 sentences
+section 17: 25 sentences
+section 18: 25 sentences
+section 19: 25 sentences
+section 20: 25 sentences
+section 21: 24 sentences
+section 22: 24 sentences
+section 23: 25 sentences
+section 24: 24 sentences
+section 25: 25 sentences
+section 26: 24 sentences
+section 27: 25 sentences
+section 28: 25 sentences
+section 29: 25 sentences
+section 30: 25 sentences
+section 31: 24 sentences
+section 32: 25 sentences
+section 33: 25 sentences
+section 34: 25 sentences
+section 35: 24 sentences
+section 36: 25 sentences
+section 37: 24 sentences
+section 38: 26 sentences
+section 39: 24 sentences
+section 40: 26 sentences
+983 units, 18235 tokens
+kept 38, rejected 0; doc 18264 tokens, 983 units; far share 1.00
+round 0: nothing to repair
+probe GT: 38 probes {'split_flow': 20, 'alias_ref': 16, 'homonym': 2}, short-ref flows 10, far share 1.00
+exit 0

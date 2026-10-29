@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Computer Aided Dispatch Console provides \"relevant access constraints\" to Shift Commander (an information or material flow).\n\nSource sentences:\nS102: The Ambulance Coordination Platform presents units whose reported status and capabilities match the incident requirements.\nS103: The Computer Aided Dispatch Console displays estimated travel times, unit availability, and relevant access constraints.\nS162: The South Gate Status Board displays current access information for crews approaching the receiving facility through the south entrance.\nS163: The Shift Commander reviews access constraints that could affect arrival timing or safe patient transfer.\n\nAnswer \"supported\" only if the sentences state that Computer Aided Dispatch Console produces or sends this item AND that Shift Commander receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S103 says the Computer Aided Dispatch Console displays relevant access constraints and S163 says the Shift Commander reviews access constraints, but S163 sits next to S162's South Gate Status Board context, so the text does not make clear the commander gets them from the console.\"}",
+ "usage": {
+  "input_tokens": 657,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 249,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 144
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.214,
+ "created": "2026-10-14T00:08:34"
+}

@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "A dose exception is any mismatch, omission, duplicate request, or clinically implausible value detected before a medication is released for use.",
+   "tags": []
+  },
+  {
+   "text": "The affected transaction remains on hold until an authorized reviewer documents a disposition.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Fulfillment Robot stops the affected pick sequence and keeps the package in a controlled hold location pending review.",
+   "tags": []
+  },
+  {
+   "text": "Cinderwake preserves the scanned product and quantity data associated with the exception.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "text": "Juniper compares the active order with the scanned product, strength, and measured quantity, and blocks verification when a field differs.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "text": "Pharmacy Verification Station uses the review slip to record the exception category, evidence checked, disposition, and reviewer identity.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "text": "The Clinical Pharmacist assesses dose, route, timing, and patient-specific clinical concerns before approving a correction or rejecting the order.",
+   "tags": []
+  },
+  {
+   "text": "A correction requires a valid authorized order and must not be inferred from prior dispensing history.",
+   "tags": []
+  },
+  {
+   "text": "Larkspur keeps the cabinet transaction locked and confirms that the medication has not been administered while review is pending.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "The Registered Nurse escalates an urgent patient-care concern to the Clinical Pharmacist and follows the hospital's clinical response procedure.",
+   "tags": []
+  },
+  {
+   "text": "The Registered Nurse does not bypass a hold or substitute a product to clear an exception.",
+   "tags": []
+  },
+  {
+   "text": "The Charge Nurse assigns unresolved exceptions to a named role and confirms that ownership is maintained at shift handover.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician may gather package and transaction evidence but may not make a clinical dose decision.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Order Gateway rejects incomplete or internally inconsistent order updates and retains the rejection reason for review.",
+   "tags": []
+  },
+  {
+   "text": "The North Ward Cabinet Controller prevents access to a held transaction until an authorized disposition is recorded.",
+   "tags": []
+  },
+  {
+   "text": "The South Ward Cabinet Controller reports a failed lock or an unrecognized access attempt for immediate operational review.",
+   "tags": []
+  },
+  {
+   "text": "The Sensor-monitored Medication Cooler reports excursions that could affect medication suitability, and affected stock remains unavailable pending assessment.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Safety Officer reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm.",
+   "tags": []
+  },
+  {
+   "text": "IT Operations Specialist receives the Diversion Review Packet and checks access, transaction, and device logs without changing the clinical disposition.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "The Biomedical Engineer evaluates a suspected mechanical or sensor fault and advises whether the affected equipment can safely return to service.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist investigates software or connectivity faults and records the technical findings for the responsible operational team.",
+   "tags": []
+  },
+  {
+   "text": "A serious or time-critical exception is escalated immediately by the observing staff member rather than held for routine review.",
+   "tags": []
+  },
+  {
+   "text": "If the clinical review remains inconclusive, the transaction stays on hold and the Clinical Pharmacist seeks a higher-level clinical decision.",
+   "tags": []
+  },
+  {
+   "text": "The final disposition records who reviewed the exception, what evidence supported the decision, and whether the medication was released, corrected, or withheld.",
+   "tags": []
+  }
+ ]
+}

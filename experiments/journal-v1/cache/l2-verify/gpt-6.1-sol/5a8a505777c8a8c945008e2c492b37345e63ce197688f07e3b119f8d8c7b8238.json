@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Bay Automation Controller provides \"a Bay Status Digest\" to Station Supervisory Control System (an information or material flow).\n\nSource sentences:\nS005: The Bay Automation Controller performs bay-level sequencing, status evaluation, and control permissive checks.\nS006: The Bay Automation Controller produces a Bay Status Digest for operational awareness.\nS138: The Transformer Protection Panel retains its protection authority independently of the bay switching sequence.\nS139: The Station Supervisory Control System uses the status digest to review current station operating conditions.\n\nAnswer \"supported\" only if the sentences state that Bay Automation Controller produces or sends this item AND that Station Supervisory Control System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S006 states that the Bay Automation Controller produces a Bay Status Digest, and S139 states that the Station Supervisory Control System uses the status digest.\"}",
+ "usage": {
+  "input_tokens": 282,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 47,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 329
+ },
+ "attempts": 1,
+ "wall_s": 4.89,
+ "created": "2026-10-14T12:38:32"
+}

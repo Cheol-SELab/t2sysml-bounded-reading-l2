@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: primary workspace provides \"Common Situation Display\" to Regional Flow Manager (an information or material flow).\n\nSource sentences:\nS116: The Airport Duty Manager may request a manual capacity review when local observations differ materially from the automated weather interpretation.\nS117: The Regional Flow Manager uses the Common Situation Display to compare forecast demand, assessed capacity, and any active Ground Delay Program effects in one operational view.\nS152: Access to the Airport CDM Portal is controlled by the Identity Access Service so that each user sees only the workspaces, aircraft, stands, and decision records appropriate to the assigned role.\nS153: The primary workspace presents the Common Situation Display with synchronized clocks, active operating state, airport demand, runway configuration, stand occupancy, and milestone status for each managed movement.\nS337: The Airport CDM Portal displays the active restriction status, expected operational effect, and any related coordination notes on the Common Situation Display.\nS338: The Airline Operations Coordinator uses the shared display to identify flights that may need rerouting, delayed pushback planning, or revised operator intent.\nS424: Arrival demand is monitored against the Airport Acceptance Rate, current sequencing performance, and any Ground Delay Program that remains in effect.\nS425: The Tower Supervisor uses the display to see runway assignment pressure, airborne sequence spacing, and expected crossing points at the North Runway Meter and the South Runway Meter.\nS870: The Slot Coordinator shall receive training on the Slot Allocation Engine, Airport CDM Portal, and applicable Business Rules Registry entries so that slot actions are applied consistently and transparently.\nS871: The Network Operations Liaison and Airspace Sector Planner shall be trained to coordinate regional constraints, sector load conditions, and network measures using the Sector Load Monitor and Common Situation Display.\n\nAnswer \"supported\" only if the sentences state that primary workspace produces or sends this item AND that Regional Flow Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S153 states the primary workspace presents the Common Situation Display, and S117 states the Regional Flow Manager uses the Common Situation Display, so the same item flows from the primary workspace to the Regional Flow Manager.\"}",
+ "usage": {
+  "input_tokens": 1087,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.645,
+ "created": "2026-10-14T12:45:49"
+}

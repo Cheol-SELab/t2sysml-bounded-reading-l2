@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: North Gate Status Board provides \"a current view of access conditions that may affect ambulance approach or handover timing\" to Triage Supervisor (an information or material flow).\n\nSource sentences:\nS194: Data Quality Officer reviews unresolved record discrepancies through the established quality process without delaying active patient care.\nS195: North Gate Status Board provides a current view of access conditions that may affect ambulance approach or handover timing.\nS223: The Data Quality Officer samples incident records for completeness, timestamp consistency, and alignment between dispatch decisions and recorded outcomes.\nS224: The Triage Supervisor reviews cases in which acuity decisions or escalation timing may have affected patient risk.\n\nAnswer \"supported\" only if the sentences state that North Gate Status Board produces or sends this item AND that Triage Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The board provides access-condition information, but the Triage Supervisor is only said to review cases, with no statement that they receive or use that information.\"}",
+ "usage": {
+  "input_tokens": 309,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 106
+  },
+  "total_tokens": 464
+ },
+ "attempts": 1,
+ "wall_s": 2.553,
+ "created": "2026-10-13T23:47:27"
+}

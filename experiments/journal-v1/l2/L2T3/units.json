@@ -1,0 +1,1565 @@
+{
+ "doc_id": "L2T3",
+ "title": "Operational Concept for the Caldera Wildfire Detection and Suppression Support System",
+ "writer": "gpt-5.5",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "The Caldera Wildfire Detection and Suppression Support System operates in a wildfire threat environment shaped by dry fuels, steep terrain, variable winds, lightning, human-caused ignitions, and expanding wildland-urban interface exposure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The operational area includes ridgelines, drainages, access roads, utility corridors, remote recreation areas, and communities where a small ignition can become a life-safety incident within minutes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "Caldera Incident Command Portal, also known as Emberhall, is the shared operating environment for presenting incident information, recommended actions, and operational status to authorized wildfire personnel.",
+   "tags": [
+    "ALIAS:E_CALDERA_INCIDENT_COMMAND_PORTAL"
+   ]
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "The North Lookout Camera Mast and South Lookout Camera Mast provide fixed observation coverage over high-risk sectors where smoke columns, flame growth, and visibility changes must be assessed quickly.",
+   "tags": []
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "The Horizon Ridge Drone Dock and Drone Tasking Service support directed aerial observation when fixed views are inconclusive, terrain blocks line of sight, or incident staff need updated scene awareness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "The Sentinel Fireline Analytics Engine and Smoke Classifier Module assist in screening imagery and other observations for potential fire activity, but their outputs remain decision support rather than authoritative findings.",
+   "tags": []
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "The MesoWest Weather Fusion Node contributes localized weather context needed to evaluate spread potential, aviation feasibility, firefighter exposure, and the timing of field operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "The VHF Radio Gateway Repeater supports continuity between digital coordination and field radio practices when crews and aircraft operate beyond reliable broadband coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "Participating organizations include local fire agencies, county emergency management, state wildland fire resources, aviation support units, and cooperating public safety partners with assigned incident responsibilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "The County Emergency Liaison represents county coordination needs related to public warning, road impacts, shelter considerations, and integration with emergency operations procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Duty Detection Officer, also known as Orion, is the assigned operations role responsible for monitoring detection cues, requesting verification, and recommending whether a suspected ignition should be escalated.",
+   "tags": [
+    "ALIAS:E_DUTY_DETECTION_OFFICER"
+   ]
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The Duty Detection Officer may recommend a Confirmed Ignition State only after the available observations and operating procedures support that status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The Air Attack Supervisor uses the system to understand fire location, smoke behavior, aircraft constraints, and resource priorities before advising on aerial tactics.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The Tanker Base Manager uses the system to understand mission demand, loading status, and operational tempo associated with the Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "The Helitack Crew Leader and Drone Pilot Operator use the system to maintain shared awareness of field conditions, mission timing, and hazards that could affect crew safety.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The Crewline Mobile Tablet provides mobile access to approved operational information for personnel who need current situational awareness away from a command workstation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "Supported decisions include whether a smoke report warrants verification, whether an ignition should be treated as confirmed, whether aerial observation is justified, and whether changing conditions require adjusted priorities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "Supported suppression decisions include where to focus initial attack planning, when to request aviation coordination, which field resources need updated information, and whether operations should pause for safety reasons.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The system also supports recognition of an Airspace Restricted State so that aviation and drone activity can be coordinated under the applicable incident rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "Detection support begins with observation, automated screening, operator review, and presentation of confidence, location, and context for suspected fire activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "Detection support ends at the point where an authorized role accepts, rejects, or requests further verification of a suspected ignition under agency procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "Suppression support begins after incident staff need coordinated information for resource movement, aviation planning, field safety, and ongoing assessment of fire behavior.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "Suppression support does not include autonomous dispatch, independent command decisions, or direct control of aircraft, vehicles, pumps, cameras, drones, or field crews.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "Command authority remains with the designated incident command structure, and the system is limited to timely information presentation, procedural support, traceable recommendations, and operational coordination aids.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 2,
+   "text": "The system architecture is organized around fixed ridge sensors, a staffed operations portal, advisory analytics services, and communications paths that preserve incident command authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 2,
+   "text": "North Lookout Camera Mast is positioned on the northern rim of the operating area to provide long-range visual coverage of drainages, access roads, and known ignition corridors.",
+   "tags": []
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "South Lookout Camera Mast covers the opposing viewshed and provides overlapping observation where terrain breaks line of sight from the northern site.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "Each camera mast is installed with hardened power distribution, local equipment cabinets, lightning protection, and service access suitable for seasonal maintenance windows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "The camera mast video paths are backhauled through licensed wireless links to the operations network, with cellular service available as a degraded-mode path where coverage permits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "North Lookout Camera Mast sends the Thermal Spot Snippet after local sensor processing identifies a candidate heat signature.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "Horizon Ridge Drone Dock is referred to by the site engineering alias Kestrel in drawings and maintenance records for this deployment.",
+   "tags": [
+    "ALIAS:E_HORIZON_RIDGE_DRONE_DOCK"
+   ]
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "Horizon Ridge Drone Dock is located on a graded pad near the central ridge road so that launch, recovery, charging, and shelter functions remain accessible to maintenance personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "The dock includes weather-rated enclosures, charging interfaces, local health monitoring, and a secure network termination for coordination with the rest of the support system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "Horizon Ridge Drone Dock produces the Battery Swap Ticket when its maintenance controller records that a flight battery has reached the configured replacement threshold.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "Drone Tasking Service manages approved unmanned flight requests, records mission constraints, and presents task status without acting as an independent authority for flight release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "The Drone Pilot Operator uses Drone Tasking Service to review proposed routes, current dock status, and operational constraints before coordinating any field action through established procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "Sentinel Fireline Analytics Engine is referred to by the site engineering alias Lantern in architecture diagrams and configuration work orders.",
+   "tags": [
+    "ALIAS:E_SENTINEL_FIRELINE_ANALYTICS_ENGINE"
+   ]
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "Sentinel Fireline Analytics Engine aggregates camera detections, weather inputs, geospatial context, and operator feedback into traceable recommendations for fire detection and suppression support.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "Smoke Classifier Module runs as a bounded analytics component that scores visual observations for plume likelihood and passes confidence values to the broader analytics workflow.",
+   "tags": []
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "The analytics services retain event timing, source identifiers, model version information, and operator acknowledgments so that later review can reconstruct how a recommendation was presented.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "MesoWest Weather Fusion Node is referred to by the site engineering alias Brindle in network inventory and integration test records.",
+   "tags": [
+    "ALIAS:E_MESOWEST_WEATHER_FUSION_NODE"
+   ]
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "MesoWest Weather Fusion Node ingests station observations, forecast grids, and configured quality checks to provide a consistent weather picture for the operating area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "MesoWest Weather Fusion Node sends the Wind Shift Bulletin when its configured weather rules identify a significant change in local wind behavior.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "VHF Radio Gateway Repeater provides a monitored bridge between selected radio traffic and operator workstations, with recording and access controls aligned to incident policy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "Caldera Incident Command Portal is the primary operator interface for the Duty Detection Officer, County Emergency Liaison, and other command staff who need consolidated situational information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "The portal displays camera views, detection history, weather context, map layers, and status transitions such as Confirmed Ignition State and Airspace Restricted State.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "Talon Air Tanker Dispatch Console supports the Air Attack Supervisor and Tanker Base Manager by presenting aircraft coordination data, loading status, and mission notes relevant to suppression support.",
+   "tags": []
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "East Retardant Loading Pump and West Retardant Loading Pump are represented in the site layout as monitored ground assets whose readiness and fault indications are visible to authorized operations staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "Crewline Mobile Tablet provides the Helitack Crew Leader with field access to assigned incident context, map references, and updates that have been approved for mobile distribution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 2,
+   "text": "Across the site, network segmentation, time synchronization, equipment health checks, and audit logging are treated as baseline infrastructure rather than optional add-ons.",
+   "tags": []
+  },
+  {
+   "unit_id": "S051",
+   "section": 3,
+   "text": "The detection workflow begins when the North Lookout Camera Mast, South Lookout Camera Mast, or Horizon Ridge Drone Dock provides an observation that may indicate a new ignition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 3,
+   "text": "Each observation is time stamped, georeferenced, and associated with equipment status before it is evaluated as operational evidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "The Sentinel Fireline Analytics Engine receives the observation context and normalizes image, thermal, and weather attributes into a common event record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "Smoke indications are initially assessed for plume texture, persistence, motion, and contrast against the background terrain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "Thermal cues are treated as supporting evidence unless they persist across sequential frames or align with a visible smoke indication.",
+   "tags": []
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "The Smoke Classifier Module produces the Ridge Shadow Mask when terrain-shadow conditions could otherwise inflate a smoke confidence score.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "The analytics score is not considered a declaration of fire, because atmospheric glare, dust, vehicle exhaust, and cloud shadow can produce similar signatures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "MesoWest Weather Fusion Node provides local wind, humidity, temperature, and stability context that helps determine whether an indication is plausible for active combustion.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "When the automated confidence level exceeds the screening threshold, the Caldera Incident Command Portal opens a triage case for human review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "The Duty Detection Officer reviews the triage case, compares current imagery with recent frames, and checks whether the indication is growing, drifting, or disappearing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "The Duty Detection Officer may request a fresh pan, tilt, or zoom view from the nearest fixed camera when the initial frame is ambiguous.",
+   "tags": []
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "If terrain, smoke column height, or occlusion prevents a clear fixed-camera view, the Drone Tasking Service may prepare a verification task for the Horizon Ridge Drone Dock.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "The Drone Pilot Operator confirms that the proposed verification task is safe for launch conditions and consistent with current operating constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "The VHF Radio Gateway Repeater supports voice coordination when field observers or aviation personnel can provide independent confirmation from their location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "The Air Attack Supervisor may be referred to by the alias Redtail during radio coordination, but the operational record uses Air Attack Supervisor.",
+   "tags": [
+    "ALIAS:E_AIR_ATTACK_SUPERVISOR"
+   ]
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The Talon Air Tanker Dispatch Console may be referred to by the alias Marigold during dispatch coordination, but the operational record uses Talon Air Tanker Dispatch Console.",
+   "tags": [
+    "ALIAS:E_TALON_AIR_TANKER_DISPATCH_CONSOLE"
+   ]
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "Confirmation requires at least one persistent smoke indication or thermal cue, plus either independent sensor corroboration, field report corroboration, or a direct human visual judgment recorded by an authorized reviewer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "A suspected ignition remains in triage when evidence is inconsistent, stale, or limited to a single low-confidence source.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "The Caldera Incident Command Portal records the reason for each triage decision so later operators can understand whether the case was advanced, held, or dismissed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "When the confirmation rule is satisfied, the incident record is advanced to the Confirmed Ignition State and becomes available for suppression planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "The Confirmed Ignition State includes the best known location, confidence basis, observation history, reviewer identity, and current recommended coordination posture.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "Crewline Mobile Tablet users receive only the confirmed incident context that has been released for field distribution by the command workflow.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "East Retardant Loading Pump sends the Retardant Batch Slip after a load cycle is metered and sealed.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S074",
+   "section": 3,
+   "text": "If air operations are constrained, the Caldera Incident Command Portal can associate the incident with the Airspace Restricted State before aircraft tasking is attempted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S075",
+   "section": 3,
+   "text": "Dismissed cases remain searchable for audit and model improvement, but they do not create a suppression assignment or public incident notification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 4,
+   "text": "This section defines how the Caldera Incident Command Portal supports coordinated air and ground operations after an incident enters a managed response posture.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "When the Caldera Incident Command Portal shows the Airspace Restricted State, aircraft tasking is treated as conditional until the Air Attack Supervisor confirms the active operating window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "The Duty Detection Officer records the restriction basis in the Caldera Incident Command Portal so later decisions can be traced to the operational condition in effect at the time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The Air Attack Supervisor is responsible for deconflicting fixed-wing, rotary-wing, and uncrewed routes before the Drone Pilot Operator launches from the Horizon Ridge Drone Dock.",
+   "tags": []
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "The Drone Tasking Service shall not issue a launch task that conflicts with an active aviation lane maintained by the Talon Air Tanker Dispatch Console.",
+   "tags": []
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "The Talon Air Tanker Dispatch Console provides the aviation status view used by the Tanker Base Manager to sequence retardant aircraft availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "The Tanker Base Manager coordinates pump readiness for the East Retardant Loading Pump and the West Retardant Loading Pump before confirming that a tanker can accept an assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "The VHF Radio Gateway Repeater is also known as Badger for voice traffic when a short call sign is needed during congested incident radio operations.",
+   "tags": [
+    "ALIAS:E_VHF_RADIO_GATEWAY_REPEATER"
+   ]
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "The VHF Radio Gateway Repeater bridges command, air-to-ground, and county liaison talk paths when direct radio coverage is degraded by terrain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "Radio bridging shall preserve the original speaker identity when the source channel provides it, because aviation supervisors use that identity to validate tasking and hazard reports.",
+   "tags": []
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "If a bridge path fails, the Caldera Incident Command Portal marks the affected radio route as impaired and requires manual acknowledgement by the Duty Detection Officer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "Orion must verify that the impaired route has an alternate contact method before any new aviation coordination message is accepted.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "The County Emergency Liaison is the primary contact for county dispatch, road control, evacuation support, and local public safety notifications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "The County Emergency Liaison sends the Drone Corridor Permit after local jurisdiction review is complete.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "County liaison procedures require that jurisdictional constraints be entered in the Caldera Incident Command Portal before the Drone Pilot Operator receives a route briefing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "Temporary flight restrictions are requested through the established incident aviation chain and are represented internally by the Airspace Restricted State only after acceptance by the responsible authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "The Air Attack Supervisor reviews each temporary restriction against current fire perimeter intelligence from the Sentinel Fireline Analytics Engine before approving a release of air assets.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "The MesoWest Weather Fusion Node supplies wind and visibility context used by aviation supervisors during route selection and holding-area planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "The North Lookout Camera Mast and the South Lookout Camera Mast provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "The South Lookout Camera Mast produces the Camera Cleaning Log as part of its maintenance reporting.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "The Smoke Classifier Module may be temporarily down-weighted by the Sentinel Fireline Analytics Engine when observation quality is suspected to be degraded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "The Helitack Crew Leader uses the Crewline Mobile Tablet to acknowledge air-to-ground instructions and report whether crews are inside any planned drop or reconnaissance area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "The Caldera Incident Command Portal displays crew acknowledgements beside aviation tasks so the Air Attack Supervisor can verify that ground resources are clear before authorizing flight activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 4,
+   "text": "If the Confirmed Ignition State is active and airspace approval is delayed, the system keeps suppression planning visible while preventing premature aircraft dispatch.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 4,
+   "text": "Coordination records are retained with timestamps, participant identities, and radio path status so post-incident review can reconstruct both aviation decisions and interagency notifications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "This section defines how the system converts detection observations, aerial imagery, weather updates, and geospatial overlays into a shared fire behavior assessment for operational use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "The assessment begins when visual detections are correlated with incident geometry, terrain, fuel type, and current resource locations in the mapping workspace.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "North Lookout Camera Mast captures a time-stamped smoke column bearing and reports the pan, tilt, zoom, and confidence values needed to project the observation onto terrain.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "South Lookout Camera Mast supplies a separate bearing track so the mapping workflow can triangulate a probable origin area and bound the uncertainty ellipse.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "The Smoke Classifier Module assigns each observation a smoke likelihood, growth trend, and obscuration flag before the result is made available for analyst review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "The Duty Detection Officer uses the spot snippet to compare the automated classification with visible flame, smoke color, and terrain context before accepting the observation into the assessment queue.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "Drone imagery is treated as a higher-resolution confirmation layer when weather, airspace, and communications conditions permit flight operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "The Drone Tasking Service packages approved imaging objectives as map footprints, altitude bands, and revisit intervals so the requested coverage can be compared with the active perimeter model.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "The Drone Pilot Operator uses the swap ticket to keep imaging sorties aligned with available aircraft endurance and expected return time.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "Frames collected during a sortie are orthorectified against the terrain model and registered to the incident grid before they are used for perimeter adjustment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "The Sentinel Fireline Analytics Engine identifies heat signatures, smoke edges, flame fronts, and potential spot fire indicators in the registered imagery.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "Analytic results are not displayed as final fireline until confidence thresholds, sensor age, and positional error are applied as explicit map attributes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "The MesoWest Weather Fusion Node ingests station observations, forecast grids, and local quality checks to maintain the wind, humidity, temperature, and stability fields used by the spread model.",
+   "tags": []
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "Brindle publishes a time-indexed weather update that marks significant forecast changes and identifies which map products require recomputation.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "Weather fields are interpolated across the incident area with terrain-aware weighting so ridge, drainage, and slope effects are represented at operational map scale.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "Geospatial overlays include fuels, slope, aspect, roads, structures, water sources, jurisdiction boundaries, evacuation zones, and known communications coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "The fire behavior model combines the accepted perimeter, recent growth vectors, weather fields, and fuel conditions to estimate short-term spread direction and rate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "Model output is expressed as probability bands rather than a single line so supervisors can see both the most likely path and the practical planning margin.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "Emberhall renders the current perimeter, projected spread, resource positions, and decision annotations into a common operating picture with role-based symbology.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "The Caldera Incident Command Portal produces the Crew Staging Pin from the approved map layer and assigns it an effective time, location accuracy, and incident identifier.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "Operational recommendations are generated from rule checks that compare projected fire arrival times with values at risk, road access, crew travel time, and aircraft availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "Recommendations may include confirming an ignition, increasing camera monitoring, requesting drone coverage, preparing aviation options, repositioning ground crews, or notifying county partners.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 5,
+   "text": "The Air Attack Supervisor receives map products that emphasize projected columns, flight hazards, target areas, and timing constraints without obscuring ground resource information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S124",
+   "section": 5,
+   "text": "The County Emergency Liaison receives a simplified view that preserves perimeter confidence, threatened areas, and recommended public safety coordination actions while hiding tactical details not needed for civil coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S125",
+   "section": 5,
+   "text": "Every map product records source time, processing time, model version, analyst acceptance, and supersession status so users can distinguish current guidance from archived assessments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 5,
+   "text": "When inputs conflict, the common operating picture shows the conflict explicitly and requires review before the affected recommendation is promoted for command use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "Suppression planning begins after the Caldera Incident Command Portal promotes an accepted fire location into the operational map and marks it available for aviation review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "The Air Attack Supervisor reviews the promoted location, the confidence history, and the current airspace status before authorizing reconnaissance or retardant planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "The Drone Tasking Service converts reconnaissance objectives into trackable missions with launch windows, image requirements, altitude limits, and abort criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "Horizon Ridge Drone Dock supports initial attack by keeping assigned aircraft charged, positioned, and ready for rapid launch when mission approval is granted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "Kestrel is required to report launch readiness, aircraft health, and recovery availability before a reconnaissance task can be released.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "The Drone Pilot Operator confirms that the proposed route is consistent with field conditions and can be flown without interfering with suppression aircraft.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "Reconnaissance imagery is used to verify access, flame spread direction, and exposure to structures before crews are committed to a line assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "The Sentinel Fireline Analytics Engine compares recent reconnaissance observations with camera detections and weather-driven projections to support tactical recommendations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "The Smoke Classifier Module remains a supporting source during suppression planning and is not treated as the sole basis for aircraft commitment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "The Air Attack Supervisor uses the Wind Shift Bulletin to reassess aircraft sequencing, holding areas, and drop approach direction.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "The Talon Air Tanker Dispatch Console maintains a planning view of tanker availability, estimated time to target, base turnaround time, and assigned incident priority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "Marigold must prevent a dispatch plan from being released when required aviation approvals, airspace status, or tanker readiness fields are incomplete.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "The Airspace Restricted State limits dispatch options until the Air Attack Supervisor confirms that the planned route and working altitude are acceptable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "The Talon Air Tanker Dispatch Console produces the Runway Release Note after the planned departure sequence has been validated against runway constraints.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "The Tanker Base Manager uses the batch slip to confirm that the loading record matches the aircraft assignment and planned retardant quantity.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "The East Retardant Loading Pump and West Retardant Loading Pump report equipment state, flow readiness, and out-of-service conditions to support base capacity estimates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "Loading status is displayed as operational information rather than as an approval, so a supervisor decision is still required before aircraft are committed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "The Tanker Base Manager resolves discrepancies in loading status before the dispatch plan is presented as ready for release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "The VHF Radio Gateway Repeater provides an operational fallback for relaying approved aviation instructions when data connectivity is degraded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "The Crewline Mobile Tablet shows approved suppression objectives, aircraft caution areas, and current assignment notes for crews operating near the incident.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 6,
+   "text": "The Helitack Crew Leader acknowledges nearby aircraft activity before personnel are moved into a drop zone or a reconnaissance overflight area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 6,
+   "text": "The Talon Air Tanker Dispatch Console sends the Suppression Drop Receipt after a completed drop has been recorded and checked for required timing fields.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S149",
+   "section": 6,
+   "text": "During extended attack, the Caldera Incident Command Portal preserves each aviation decision with the approving supervisor, operational period, and reason for change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S150",
+   "section": 6,
+   "text": "The County Emergency Liaison can view approved aviation status and public safety implications without gaining authority to alter dispatch or suppression records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 6,
+   "text": "If reconnaissance, loading status, or weather guidance conflicts with an active plan, the system holds the affected recommendation for Air Attack Supervisor review before further action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "This section describes how helitack and ground crews receive assignments, staging information, hazards, and updated intelligence from the support system during active wildfire operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "When a held recommendation is cleared, the Air Attack Supervisor selects the operational intent in the Caldera Incident Command Portal.",
+   "tags": []
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "The Caldera Incident Command Portal records each assignment package with an objective, time validity, confirmation status, and required acknowledgments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "The Crewline Mobile Tablet displays the current division assignment, route guidance, rally location, and assigned communications channel for the logged-in crew.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "The Helitack Crew Leader receives the same operational package with aviation constraints and landing zone notes after Air Attack Supervisor approval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "Ground crew assignments are formatted for field execution and avoid analytic scores that are not needed for tactical movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "Staging information is maintained as georeferenced areas and route descriptions so that crews can confirm location without relying on informal landmarks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "The Crewline Mobile Tablet caches the latest accepted staging information and marks any expired package as unavailable for execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "If the Confirmed Ignition State changes the perimeter or priority area, the Caldera Incident Command Portal marks affected crew assignments for review before release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "The Sentinel Fireline Analytics Engine updates hazard summaries when fire spread estimates, access constraints, or field observations change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "The Sentinel Fireline Analytics Engine applies the Ridge Shadow Mask when estimating crew-visible fire edge confidence in steep terrain.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "The Smoke Classifier Module uses the Camera Cleaning Log to suppress confidence changes caused by lens contamination and service timing.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "Lantern issues a crew exposure refresh only after the current reconnaissance confidence and weather timing fields are both valid.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "Hazards shown to crews include unstable snags, limited access, steep slope exposure, utility conflicts, and escape route degradation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "The MesoWest Weather Fusion Node provides weather-derived exposure flags that support staging decisions near ridgelines and drainages.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "When the system enters the Airspace Restricted State, helitack assignments show the restriction boundary and require confirmation before aircraft-dependent movement is planned.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "The Drone Tasking Service maintains reconnaissance task status so that ground teams can see whether requested intelligence is pending, active, or complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "Horizon Ridge Drone Dock status is shown as an availability input only and does not by itself authorize crew movement into a new area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "The Drone Pilot Operator confirms launch readiness separately from crew assignment acceptance to keep reconnaissance execution independent from ground deployment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 7,
+   "text": "The VHF Radio Gateway Repeater mirrors priority assignment summaries for crews that cannot maintain a data session in canyon or timbered terrain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S172",
+   "section": 7,
+   "text": "If the data link is degraded, the Crewline Mobile Tablet presents the last verified assignment package and clearly identifies the time of last update.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 7,
+   "text": "The Helitack Crew Leader acknowledges assignment receipt, reports readiness, and records any exception that prevents safe execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 7,
+   "text": "The County Emergency Liaison can view staging posture and public safety implications without gaining authority to alter crew assignments or hazard records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 7,
+   "text": "All assignment and staging changes preserve an audit trail so that later reviews can reconstruct what information was available to each crew at the time of action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 8,
+   "text": "During prolonged wildfire operations, the system shall favor continuity of command decisions over full automation when communications, power, or sensor coverage is impaired.",
+   "tags": []
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "The Caldera Incident Command Portal enters a disconnected operating mode when its primary network path is unavailable and clearly marks all displayed information with the last synchronization time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "In disconnected operating mode, the Caldera Incident Command Portal allows authorized users to review cached incident data and create queued updates, but it prevents irreversible releases until connectivity is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "The Duty Detection Officer receives a visible warning whenever a detection, assignment, or hazard record is based on stale data or partial sensor coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "The Sentinel Fireline Analytics Engine shall continue using the last approved model configuration after a repository outage and shall reject unversioned rules or unsigned analytic packages.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "The Smoke Classifier Module shall label detections as advisory when either camera mast is unavailable or when image quality falls below the validated threshold.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "The North Lookout Camera Mast and the South Lookout Camera Mast shall report heartbeat, temperature, storage, and pointing-status telemetry so that maintenance staff can distinguish sensor failure from environmental obscuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "The MesoWest Weather Fusion Node shall retain a local weather cache sufficient to support near-term fire behavior review when upstream feeds are intermittent.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "Crewline Mobile Tablet clients shall queue field updates locally, encrypt the queue at rest, and reconcile conflicts by preserving the original author, device time, and server acceptance time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "All interactive access to the Caldera Incident Command Portal requires named accounts, role-based authorization, and multifactor authentication when the authentication service is reachable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "When the authentication service is unreachable, emergency access uses pre-issued signed credentials that expire automatically and require supervisor review after restoration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "The Air Attack Supervisor, Tanker Base Manager, Helitack Crew Leader, Drone Pilot Operator, and County Emergency Liaison receive only the permissions required for their operational responsibilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "Administrative privileges for production configuration changes require separate approval from operational command roles and are not granted through field user accounts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "Security-relevant events, including failed logons, role changes, queued update releases, model changes, and maintenance overrides, shall be written to an append-only audit store.",
+   "tags": []
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "Audit records shall include synchronized time, user identity, device identity, source network, affected record, and outcome so that incident reconstruction remains possible after the event.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "If central audit storage is unavailable, each field component shall buffer signed audit records locally and forward them without modification when connectivity returns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "Drone Tasking Service validates the corridor permit before releasing an automated flight task in degraded communications mode.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "Badger shall queue outbound voice-to-data acknowledgments for at least fifteen minutes during backhaul loss and forward them when the link is restored.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "East Retardant Loading Pump shall enter a metered recirculation mode when pressure variance exceeds the calibrated maintenance limit.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "The West Retardant Loading Pump shall be inspected at shift change for hose wear, valve position, controller alarms, and leakage before it is returned to operational availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "Maintenance actions on field equipment shall be recorded with technician identity, time, observed condition, corrective action, and verification result before the equipment status is changed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 8,
+   "text": "Operational records that support command decisions and safety reviews shall be retained for the incident record period defined by agency policy, while high-volume raw sensor data may follow a shorter approved retention schedule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 8,
+   "text": "The system shall protect retained data with encryption at rest, controlled export procedures, and deletion workflows that require documented authorization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S199",
+   "section": 8,
+   "text": "For incidents lasting multiple operational periods, spare power, replacement network equipment, field cleaning supplies, and documented recovery procedures shall be staged so that no single equipment fault stops detection or suppression-support operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 9,
+   "text": "Training for the Caldera Wildfire Detection and Suppression Support System shall be completed before each fire season and refreshed whenever operating procedures or field configurations change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 9,
+   "text": "The training program shall be role based so that each participant practices the decisions, system functions, communications, and safety constraints that apply to the assigned position.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "The Duty Detection Officer shall be trained to operate the Caldera Incident Command Portal, review detections, validate confidence indicators, and escalate suspected ignitions according to the approved incident workflow.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "Camera familiarization shall cover the North Lookout Camera Mast and the South Lookout Camera Mast, including normal image behavior, degraded visibility conditions, routine inspection cues, and reporting of equipment faults.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "The Duty Detection Officer shall also learn how the Sentinel Fireline Analytics Engine and the Smoke Classifier Module present uncertainty so that human confirmation remains part of every operational decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "The Drone Pilot Operator shall be trained on Horizon Ridge Drone Dock procedures, Drone Tasking Service mission controls, safe launch checks, recovery actions, and loss-of-link coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "The Air Attack Supervisor shall be trained to interpret system status during aerial operations and to coordinate with the Talon Air Tanker Dispatch Console without bypassing airspace safety requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "The Tanker Base Manager shall receive practical instruction on status entry, loading coordination, and abnormal-condition reporting for the East Retardant Loading Pump and the West Retardant Loading Pump.",
+   "tags": []
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "The Helitack Crew Leader shall be trained on use of the Crewline Mobile Tablet, field acknowledgments, location updates, and communication discipline during changing fire behavior.",
+   "tags": []
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "During field mobilization drills, the Helitack Crew Leader shall use the staging pin to confirm that the assigned crew is positioned at the exercise location.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "The County Emergency Liaison shall be trained to interpret public-safety information from the Caldera Incident Command Portal and to coordinate notifications with county procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "All operational users shall receive communications training that includes VHF Radio Gateway Repeater failure modes, alternate contact paths, call signs, message brevity, and confirmation readbacks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "Weather training shall explain how the MesoWest Weather Fusion Node supports situational awareness and how operators should treat weather inputs when local observations conflict with displayed values.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "Initial qualification shall include supervised console practice, scenario walkthroughs, and a documented check by an instructor who is authorized by the operations lead.",
+   "tags": []
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "Annual refresher training shall include changes to software screens, revised thresholds, updated contact rosters, seasonal hazard briefings, and lessons learned from prior incidents.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "Tabletop exercises shall be conducted before the expected peak fire period and shall test detection triage, command notification, airspace coordination, tanker-base coordination, crew deployment, and public-agency liaison actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "Live exercises shall be scheduled at least once per season when conditions permit and shall include field crews, aircraft coordination staff, drone operations staff, and command-center personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "Exercise controllers shall inject realistic complications such as intermittent network service, obscured camera views, delayed field confirmation, resource conflicts, and conflicting reports from external observers.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "Performance measures shall include time from automated detection to human review, time from review to command notification, time to resource assignment, communication completion rate, and accuracy of incident status updates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "Detection quality shall be evaluated using confirmed events, benign smoke sources, weather-related artifacts, and operator notes so that both missed detections and false alarms are visible to program management.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "Every false-alarm review shall identify the apparent cause, affected sensors or analytic outputs, operator actions, dispatch consequences, and any recommended tuning or training change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 9,
+   "text": "The review board shall include operations, aviation, field crew, maintenance, and county liaison representatives when the event affected more than one operational function.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 9,
+   "text": "Seasonal readiness shall require each active user to demonstrate current proficiency, complete required safety briefings, and acknowledge the current operating procedures before receiving operational access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S223",
+   "section": 9,
+   "text": "Personnel who do not meet proficiency requirements shall complete remedial training and a repeat evaluation before performing unsupervised duties in the Caldera Wildfire Detection and Suppression Support System.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 10,
+   "text": "Deployment governance for the Caldera Wildfire Detection and Suppression Support System shall be managed as a staged release process that follows completion of seasonal readiness activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 10,
+   "text": "The deployment governance board shall include operational leadership, maintenance representation, information security representation, and designated representatives for detection, aviation, ground crew, and county coordination functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 10,
+   "text": "The board shall approve each seasonal rollout only after reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "A release candidate shall not enter operational service until the Caldera Incident Command Portal, Sentinel Fireline Analytics Engine, and Smoke Classifier Module complete documented functional testing against the approved mission scenarios.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "Acceptance criteria shall require the North Lookout Camera Mast, South Lookout Camera Mast, and MesoWest Weather Fusion Node to meet agreed availability, timing, and data-quality thresholds during the readiness window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "The Drone Tasking Service and Horizon Ridge Drone Dock shall be accepted only after controlled field validation shows that task execution, abort behavior, and status reporting remain stable under expected seasonal conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump shall pass integration checks that verify operator controls, fault handling, and audit capture before activation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The VHF Radio Gateway Repeater and Crewline Mobile Tablet shall be validated for coverage, message persistence, authentication behavior, and degraded-network operation before release approval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "Redtail shall confirm that deployment readiness evidence is sufficient before air operations functionality is enabled for the season.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "The Tanker Base Manager shall use the Runway Release Note during acceptance review to verify that tanker-base operating constraints are documented before seasonal activation.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "The County Emergency Liaison shall use the Suppression Drop Receipt during post-incident reconciliation to verify that reported suppression activity can be traced to county situation reporting.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "Acceptance of the Confirmed Ignition State workflow shall require traceable evidence that operator acknowledgement, escalation timing, and command visibility meet the approved concept of operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "Acceptance of the Airspace Restricted State workflow shall require evidence that operational users can recognize restrictions, apply required controls, and recover normal coordination when restrictions are lifted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "Any waiver to acceptance criteria shall identify the operational impact, compensating procedure, expiration date, and accountable owner before the board may authorize limited use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "After-action reviews shall be held after major incidents, readiness exercises, significant false alarms, missed detections, and any event that exposes a gap in operational coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "Each after-action review shall reconstruct the timeline from system logs, user accounts, communications records, and maintenance notes without assigning blame to individual operators.",
+   "tags": []
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "Review facilitators shall document what was expected to happen, what actually happened, why differences occurred, and which corrective actions are necessary before the next readiness cycle.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "Corrective actions shall be entered into a controlled improvement backlog with assigned ownership, target completion dates, verification methods, and linkage to the originating event.",
+   "tags": []
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "Data stewardship shall define retention, access control, quality review, and disposition rules for operational records, sensor data, model outputs, configuration records, and user activity records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "Operational data used for model evaluation shall be protected from unauthorized alteration and shall preserve enough context to support later engineering review and regulatory inquiry.",
+   "tags": []
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "Changes to the Sentinel Fireline Analytics Engine or Smoke Classifier Module shall be evaluated with representative seasonal data before deployment to confirm that detection performance improves without unacceptable increases in false alerts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "Configuration changes to field equipment shall be versioned, reviewed, and tested in a nonoperational environment before being promoted into the seasonal baseline.",
+   "tags": []
+  },
+  {
+   "unit_id": "S246",
+   "section": 10,
+   "text": "At the end of each fire season, the governance board shall compare system performance, operational workload, maintenance burden, and user feedback against the acceptance criteria approved for that season.",
+   "tags": []
+  },
+  {
+   "unit_id": "S247",
+   "section": 10,
+   "text": "The resulting improvement plan shall define which procedures, training materials, interfaces, algorithms, and support arrangements will be revised before the next seasonal readiness campaign begins.",
+   "tags": []
+  }
+ ]
+}

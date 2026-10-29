@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: someone else provides \"information\" to Triage Supervisor (an information or material flow).\n\nSource sentences:\nS005: Call Taker Mara obtains essential incident details, confirms the reported location, and enters the request for assessment.\nS006: The Triage Supervisor reviews incident information, assigns or confirms priority, and directs cases requiring additional clinical review.\nS058: Call Taker Mara gathers the patient's age, level of consciousness, breathing status, and the main reason emergency help is needed.\nS059: Call Taker Mara uses direct questions to distinguish observed symptoms from information reported by someone else.\n\nAnswer \"supported\" only if the sentences state that someone else produces or sends this item AND that Triage Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The text says someone else reports information and that the Triage Supervisor reviews incident information, but it does not clearly state that the reported information is what the Supervisor receives or uses.\"}",
+ "usage": {
+  "input_tokens": 295,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 407,
+  "output_tokens_details": {
+   "reasoning_tokens": 352
+  },
+  "total_tokens": 702
+ },
+ "attempts": 1,
+ "wall_s": 9.377,
+ "created": "2026-10-13T23:47:02"
+}

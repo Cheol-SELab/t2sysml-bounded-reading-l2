@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: local controls provides \"failures\" to Distribution Dispatcher (an information or material flow).\n\nSource sentences:\nS180: The South Distribution Pressure Station starts its lead booster pump when discharge pressure remains below the configured start band for the required delay period.\nS181: When a distribution station is in automatic operation, local controls are expected to sequence pumps within approved limits and report abnormal starts, failures, or valve positions to the control system.\nS219: The Duty Engineer may authorize temporary control workarounds during an emergency, but the workaround shall be logged, bounded by time or condition, and removed when normal control is restored.\nS220: The Distribution Dispatcher shall be informed when failures at the High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station may affect pressure zones or fire-flow readiness.\n\nAnswer \"supported\" only if the sentences state that local controls produces or sends this item AND that Distribution Dispatcher receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S181 says local controls report failures to the control system, not to the Distribution Dispatcher, and S220 says the Dispatcher is informed of failures but does not name local controls as the source, so the two sentences do not link local controls to the Dispatcher directly.\"}",
+ "usage": {
+  "input_tokens": 730,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 100,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.397,
+ "created": "2026-10-14T12:38:59"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Smoke Classifier Module, label=suppress confidence changes caused by lens contamination and service timing)\n\nSource sentences (the last one is where the fact was extracted):\nS160: If the Confirmed Ignition State changes the perimeter or priority area, the Caldera Incident Command Portal marks affected crew assignments for review before release.\nS161: The Sentinel Fireline Analytics Engine updates hazard summaries when fire spread estimates, access constraints, or field observations change.\nS162: The Sentinel Fireline Analytics Engine applies the Ridge Shadow Mask when estimating crew-visible fire edge confidence in steep terrain.\nS163: The Smoke Classifier Module uses the Camera Cleaning Log to suppress confidence changes caused by lens contamination and service timing.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S163 states that the Smoke Classifier Module suppresses confidence changes caused by lens contamination and service timing (using the Camera Cleaning Log), so both the performer and the action label match the text.\"}",
+ "usage": {
+  "input_tokens": 724,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 81,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.276,
+ "created": "2026-10-14T12:51:41"
+}

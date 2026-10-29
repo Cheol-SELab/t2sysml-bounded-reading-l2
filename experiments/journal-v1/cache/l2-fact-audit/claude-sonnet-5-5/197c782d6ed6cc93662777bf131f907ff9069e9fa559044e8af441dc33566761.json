@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=consider upstream and downstream protection behavior across the expected operating range)\n\nSource sentences (the last one is where the fact was extracted):\nS059: The Protection Relay Engineer verifies that proposed values agree with the approved coordination objectives.\nS060: A second qualified reviewer independently checks calculations, logic changes, and device applicability.\nS061: The review confirms that the proposed configuration is complete, internally consistent, and suitable for the intended feeder.\nS062: Coordination checks consider upstream and downstream protection behavior across the expected operating range.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S062 states that coordination checks consider upstream and downstream protection behavior across the expected operating range, which matches the action label directly.\"}",
+ "usage": {
+  "input_tokens": 638,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 58,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.26,
+ "created": "2026-10-14T12:52:16"
+}

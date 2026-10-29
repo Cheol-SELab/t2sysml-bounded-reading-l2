@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: primary workspace provides \"Common Situation Display\" to Regional Flow Manager (an information or material flow).\n\nSource sentences:\nS116: The Airport Duty Manager may request a manual capacity review when local observations differ materially from the automated weather interpretation.\nS117: The Regional Flow Manager uses the Common Situation Display to compare forecast demand, assessed capacity, and any active Ground Delay Program effects in one operational view.\nS152: Access to the Airport CDM Portal is controlled by the Identity Access Service so that each user sees only the workspaces, aircraft, stands, and decision records appropriate to the assigned role.\nS153: The primary workspace presents the Common Situation Display with synchronized clocks, active operating state, airport demand, runway configuration, stand occupancy, and milestone status for each managed movement.\n\nAnswer \"supported\" only if the sentences state that primary workspace produces or sends this item AND that Regional Flow Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S153 states that the primary workspace presents the Common Situation Display, and S117 states that the Regional Flow Manager uses that same display.\"}",
+ "usage": {
+  "input_tokens": 332,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 44,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 376
+ },
+ "attempts": 1,
+ "wall_s": 2.522,
+ "created": "2026-10-14T12:46:14"
+}

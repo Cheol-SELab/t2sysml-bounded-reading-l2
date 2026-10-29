@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "The station communications design separates supervisory requests, bay-level execution, and protection action so loss of one layer does not silently substitute for another.",
+   "tags": []
+  },
+  {
+   "text": "Station Gateway brokers authorized station traffic across control-room and bay networks, applying configured protocol mappings, addressing, and access controls.",
+   "tags": []
+  },
+  {
+   "text": "It rejects malformed, stale, or unauthorized requests and records each rejection with enough context for operations review.",
+   "tags": []
+  },
+  {
+   "text": "Station Supervisory Control System presents available controls and indications to authorized operating personnel.",
+   "tags": []
+  },
+  {
+   "text": "Control Room Operator issues state-changing requests only through approved operating procedures and the configured supervisory interface.",
+   "tags": []
+  },
+  {
+   "text": "Bay Automation Controller validates each received request against local mode, interlocks, command authority, and equipment availability before issuing bay-level outputs.",
+   "tags": []
+  },
+  {
+   "text": "Breaker Control Unit applies accepted output commands at the breaker interface and returns the resulting position and circuit-health indications.",
+   "tags": []
+  },
+  {
+   "text": "Bay Automation Controller compares returned indications with the requested state and identifies incomplete or contradictory operation.",
+   "tags": []
+  },
+  {
+   "text": "Bay Automation Controller uses the inspection tag to associate the applicable equipment context with an authorized record.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "text": "Station Gateway carries updated indications through the station interface using configured quality and timestamp attributes.",
+   "tags": []
+  },
+  {
+   "text": "Station Supervisory Control System displays indication quality and stale-data status so operators can distinguish a current value from a retained value.",
+   "tags": []
+  },
+  {
+   "text": "Sequence Event Archive retains time-tagged changes and control outcomes for event reconstruction and operational review.",
+   "tags": []
+  },
+  {
+   "text": "Satellite Time Receiver supplies the station time reference used to align event timestamps, subject to configured quality checks.",
+   "tags": []
+  },
+  {
+   "text": "Bay Automation Controller monitors communication health and places affected points in a defined degraded state when updates exceed configured age limits.",
+   "tags": []
+  },
+  {
+   "text": "Station Gateway reports link condition and protocol errors without converting a communication failure into an equipment-state change.",
+   "tags": []
+  },
+  {
+   "text": "Tandem evaluates electrical quantities against approved settings and issues protective trip outputs without relying on supervisory communications.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "text": "North Protection Panel applies its assigned zone logic and maintains trip paths independently of supervisory network availability.",
+   "tags": []
+  },
+  {
+   "text": "Transformer Protection Panel applies its assigned protective logic and reports abnormal protection conditions through its configured interface.",
+   "tags": []
+  },
+  {
+   "text": "North Bay Controller maintains local bay control within the approved operating mode when supervisory communications are interrupted.",
+   "tags": []
+  },
+  {
+   "text": "South Bay Controller reports local mode and control availability through its configured bay interface.",
+   "tags": []
+  },
+  {
+   "text": "Engineering Workstation supports approved configuration review and does not serve as a routine source of operating commands.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Remote Terminal access is restricted to authorized maintenance sessions and is not used to bypass local interlocks.",
+   "tags": []
+  },
+  {
+   "text": "Station DC System supports control and protection functions through monitored station supply circuits, and supply loss is indicated as an abnormal station condition.",
+   "tags": []
+  },
+  {
+   "text": "Protection Relay Engineer reviews protection event records and verifies that approved settings remain consistent with coordination requirements.",
+   "tags": []
+  },
+  {
+   "text": "Substation Supervisor ensures communication changes, point mapping changes, and control logic changes are managed through station change control.",
+   "tags": []
+  },
+  {
+   "text": "Substation Field Crew verifies equipment indications locally when remote status is uncertain and reports discrepancies through established operating channels.",
+   "tags": []
+  }
+ ]
+}

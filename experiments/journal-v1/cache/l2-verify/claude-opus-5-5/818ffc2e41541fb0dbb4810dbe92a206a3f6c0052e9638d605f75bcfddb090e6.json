@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Tower Supervisor provides \"the Runway Inspection Note\" to Airport Duty Manager (an information or material flow).\n\nSource sentences:\nS059: The Military Airspace Liaison confirms whether shared airspace assumptions remain valid for the morning and identifies any conditional availability that must be treated as uncertain.\nS060: The Tower Supervisor sends the Runway Inspection Note before the first planning consolidation window.\nS180: The Tower Sequence Manager uses validated surface status to support local sequencing decisions without replacing controller judgment or established radio procedures.\nS181: The Airport Duty Manager uses the Runway Inspection Note to confirm that the duty desk has a current record of pavement status before endorsing any declared capacity change.\n\nAnswer \"supported\" only if the sentences state that Tower Supervisor produces or sends this item AND that Airport Duty Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S060 states the Tower Supervisor sends the Runway Inspection Note, and S181 states the Airport Duty Manager uses that same note to confirm pavement status.\"}",
+ "usage": {
+  "input_tokens": 705,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 72,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.166,
+ "created": "2026-10-14T12:46:02"
+}

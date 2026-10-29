@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: SCADA Gateway provides \"supply alarms and generator status\" to SCADA Engineer (an information or material flow).\n\nSource sentences:\nS191: The Turbine Controller enters its configured safe operating mode when required auxiliary services are unavailable.\nS192: The SCADA Gateway presents supply alarms and generator status to the Shore Control Room for remote awareness.\nS953: Required inspections and functional checks are completed before affected equipment is returned to automatic control or normal duty.\nS954: The SCADA Engineer verifies that status, alarms, and command feedback are consistent across the available control views.\n\nAnswer \"supported\" only if the sentences state that SCADA Gateway produces or sends this item AND that SCADA Engineer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S192 says the SCADA Gateway presents supply alarms and generator status to the Shore Control Room, not to the SCADA Engineer; S954 only says the SCADA Engineer verifies consistency across control views, which does not state receipt of this item from the Gateway.\"}",
+ "usage": {
+  "input_tokens": 653,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 106,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.993,
+ "created": "2026-10-14T12:48:24"
+}

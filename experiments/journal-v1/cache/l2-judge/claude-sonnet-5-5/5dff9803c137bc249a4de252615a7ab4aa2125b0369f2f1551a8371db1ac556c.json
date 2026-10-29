@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport CDM Portal provides \"gate conflict with the affected flights, passenger connection exposure, aircraft size compatibility, and the latest feasible off-block time\" to Training assessments (an information or material flow).\n\nSource sentences:\nS469: The Ramp Movement Board maintains the operational view of occupied, blocked, cleaning, boarding, and tow-ready positions so that ramp decisions are based on the same stand timeline used by airport and airline users.\nS470: The Airport CDM Portal presents each gate conflict with the affected flights, passenger connection exposure, aircraft size compatibility, and the latest feasible off-block time.\nS885: Workstation layouts shall support rapid comparison between the Common Situation Display, Airport CDM Portal, Tower Sequence Manager, Ramp Movement Board, and relevant advisory messages without forcing users to copy critical values manually.\nS886: Training assessments shall verify that users can identify stale data, time synchronization problems, duplicate flights, conflicting constraints, and inappropriate automation reliance before such issues affect live operations.\n\nAnswer \"supported\" only if the sentences state that Airport CDM Portal produces or sends this item AND that Training assessments receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S470 says the Portal presents gate conflict details, but no sentence says Training assessments receive or use that information; S886 only describes what assessments verify (stale data, sync problems, etc.).\"}",
+ "usage": {
+  "input_tokens": 814,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 81,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.954,
+ "created": "2026-10-14T12:46:03"
+}

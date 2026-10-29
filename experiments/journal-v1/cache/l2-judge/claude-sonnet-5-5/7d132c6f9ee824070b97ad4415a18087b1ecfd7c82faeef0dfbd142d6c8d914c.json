@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport Duty Manager provides \"the Medical Diversion Notice\" to Arrival Regulation Console (an information or material flow).\n\nSource sentences:\nS495: The Arrival Regulation Console presents diversion options with estimated holding exposure, likely gate or stand impact, and any expected effect on regulated arrivals already in the plan.\nS496: The Airport Duty Manager sends the Medical Diversion Notice when a medical priority aircraft requires airport-level coordination before landing.\nS575: The Slot Allocation Engine treats an unresolved customs hold as a reason to avoid assigning an aggressive departure sequence position to the affected flight.\nS576: The Arrival Regulation Console uses the Medical Diversion Notice to protect arrival priority, stand assignment timing, and downstream border coordination in the active arrival plan.\n\nAnswer \"supported\" only if the sentences state that Airport Duty Manager produces or sends this item AND that Arrival Regulation Console receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S496 says the Airport Duty Manager sends the Medical Diversion Notice, and S576 says the Arrival Regulation Console uses that same notice, so both the sender and the user of the item are stated.\"}",
+ "usage": {
+  "input_tokens": 737,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 83,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.339,
+ "created": "2026-10-14T12:45:32"
+}

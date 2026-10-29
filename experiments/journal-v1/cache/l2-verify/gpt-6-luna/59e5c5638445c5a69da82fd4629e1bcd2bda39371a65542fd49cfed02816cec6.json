@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Paramedic Crew provides \"unit status\" to Fleet Maintenance Cell (an information or material flow).\n\nSource sentences:\nS127: Computer Aided Dispatch Console presents staging options that account for response demand, travel time, and access constraints.\nS128: Paramedic Crew reports when a unit is available, responding, on scene, transporting, or temporarily unavailable.\nS131: Mistral confirms approved route changes over the Regional Radio Network before a crew diverts.\nS132: Bluejay verifies maintenance clearance before a unit returns to available status.\n\nAnswer \"supported\" only if the sentences state that Paramedic Crew produces or sends this item AND that Fleet Maintenance Cell receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"Paramedic Crew reports unit status, but the sentences do not say that Fleet Maintenance Cell receives or uses it.\"}",
+ "usage": {
+  "input_tokens": 289,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 122,
+  "output_tokens_details": {
+   "reasoning_tokens": 80
+  },
+  "total_tokens": 411
+ },
+ "attempts": 1,
+ "wall_s": 2.075,
+ "created": "2026-10-13T23:47:11"
+}

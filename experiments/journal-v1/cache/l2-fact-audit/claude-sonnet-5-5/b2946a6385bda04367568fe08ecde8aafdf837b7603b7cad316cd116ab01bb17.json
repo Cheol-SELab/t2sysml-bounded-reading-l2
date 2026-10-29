@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=loss of position confidence, label=causes an immediate stop and reassessment)\n\nSource sentences (the last one is where the fact was extracted):\nS183: The maneuver uses only the travel needed to reach a stable position or clear the obstruction under review.\nS184: Personnel remain outside the crane travel envelope throughout the maneuver.\nS185: A spotter may observe from a protected location but does not enter the isolated aisle while motion is enabled.\nS186: Any unexpected movement, loss of position confidence, or renewed alarm causes an immediate stop and reassessment.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S186 states that any unexpected movement, loss of position confidence, or renewed alarm causes an immediate stop and reassessment, so loss of position confidence is a valid trigger with the label matching the text.\"}",
+ "usage": {
+  "input_tokens": 644,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 82,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.556,
+ "created": "2026-10-14T12:51:50"
+}

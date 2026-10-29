@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Inbound Inspection Desk provides \"the Trailer Seal Exception Note\" to Yard Gate Controller (an information or material flow).\n\nSource sentences:\nS035: Visible damage, mismatched identifiers, or compromised seals are recorded with the affected shipment details.\nS036: The Inbound Inspection Desk sends the Trailer Seal Exception Note when a seal discrepancy requires follow-up.\nS128: Yard Gate Controller records unresolved discrepancies for review and prevents an affected vehicle from proceeding when the discrepancy creates an operating risk.\nS129: Yard Gate Controller uses the exception note to manage a receiving discrepancy at the gate.\n\nAnswer \"supported\" only if the sentences state that Inbound Inspection Desk produces or sends this item AND that Yard Gate Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S036 states that Inbound Inspection Desk sends the Trailer Seal Exception Note, and S129 states that Yard Gate Controller uses the exception note to manage a receiving discrepancy.\"}",
+ "usage": {
+  "input_tokens": 294,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 87,
+  "output_tokens_details": {
+   "reasoning_tokens": 35
+  },
+  "total_tokens": 381
+ },
+ "attempts": 1,
+ "wall_s": 5.042,
+ "created": "2026-10-14T12:42:55"
+}

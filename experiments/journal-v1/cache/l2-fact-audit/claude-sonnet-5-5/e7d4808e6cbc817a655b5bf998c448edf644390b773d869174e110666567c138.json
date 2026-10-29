@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=quality investigations, label=materially change product fitness for use)\n\nSource sentences (the last one is where the fact was extracted):\nS189: Older product copies may be moved to lower-cost storage when catalogue metadata, checksums, and restore procedures remain available.\nS190: Deletion is performed only against superseded temporary products, expired working copies, or objects covered by an approved disposal rule.\nS191: Retention exceptions require traceability to the approving authority, the affected product classes, and the expected operational impact.\nS192: Reprocessing is triggered when calibration improvements, processor corrections, orbit updates, or quality investigations materially change product fitness for use.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S192 states that quality investigations, among other triggers, materially change product fitness for use, so the performer and the action label both match the text.\"}",
+ "usage": {
+  "input_tokens": 670,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 57,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.249,
+ "created": "2026-10-14T12:52:01"
+}

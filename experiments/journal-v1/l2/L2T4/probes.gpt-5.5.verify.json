@@ -1,0 +1,104 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "S009 states the Feeder Protection Relay produces the Relay Diagnostic Note, and S109 says the Protection Relay Engineer uses that same note during fault analysis."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "S006 identifies the Bay Automation Controller as producing a Bay Status Digest, and S139's shorter reference to the status digest is used by the Station Supervisory Control System with no competing digest identified."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "S048 says the Station Supervisory Control System produces the Alarm Acknowledgement Slip, and S152 says the Control Room Operator uses the acknowledgement slip for the alarm response record."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "S044 states the Satellite Time Receiver produces the Clock Drift Snapshot, and S140 explicitly says the Sequence Event Archive receives the Clock Drift Snapshot."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "S089 says the Substation Field Crew completes and sends the Breaker Inspection Tag, and S179 says the Bay Automation Controller uses the inspection tag."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "S057 states the Engineering Workstation produces the Settings Review Receipt, and S206 says the Maintenance Remote Terminal uses the review receipt, with no other review receipt introduced."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "S141 says the Switching Desk Coordinator produces the Isolation Boundary Card, and S233 says the Substation Field Crew uses that card to verify the approved work boundary."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "S120 states the Station DC System produces a Battery Load Test Record, and S207 says the Bay Automation Controller uses the load test record."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "S142 identifies the Station Gateway as producing the Protocol Retry Summary, and S208 says the Station Supervisory Control System receives that summary."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "S168 states the Control Room Operator produces the Clearance Handoff Memo, and S235 says the Switching Desk Coordinator receives that memo."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "S004 assigns the project codename Juniper to the Bay Automation Controller, and S121 uses Juniper consistently for that entity."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "S026 names the Station Supervisory Control System Glasswing, and S156 uses Glasswing in a role matching that system."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "S050 identifies Tandem as the Feeder Protection Relay, and S186 describes Tandem performing feeder relay protection functions."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "S074 states the Substation Field Crew is known operationally as Cinder, and S209 uses Cinder for field-work boundary verification."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "S051 identifies Larkspur as the Protection Relay Engineer, and S143 uses Larkspur for protection coordination review."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "S037 names the Satellite Time Receiver Bluefin, and S144 uses Bluefin as the provider of the station time reference."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "S099 identifies Orchard as the Sequence Event Archive, and S210 uses Orchard for retaining event information."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "S123 identifies Keystone as the Switching Desk Coordinator, and S236 uses Keystone for switching-authority coordination duties."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "S130 explicitly names the North Bay Controller as the controller blocking the close command, not the South Bay Controller."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "S161 explicitly concerns the Transformer Protection Panel and transformer protection operation, not the North Protection Panel."
+  }
+ ]
+}

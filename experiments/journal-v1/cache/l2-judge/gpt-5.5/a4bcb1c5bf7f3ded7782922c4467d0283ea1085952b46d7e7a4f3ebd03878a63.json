@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Dynamic Weather Routes provides \"DWR route advisory\" to user (an information or material flow).\n\nSource sentences:\nU0062: The MSP or any inserted waypoints may optionally be further adjusted automatically to achieve an integrated resolution to weather and traffic conflicts.\nU0063: If a solution is found that can save the minimum wind-corrected flight time as defined by the user (5 min default), then a DWR route advisory is posted to an alert list on the user display.\nU0067: The current flight plan trajectory and the DWR-advised trajectory are both analyzed for conflict with congested airspace sectors and with Special Use Airspace (SUA).\nU0068: The traffic congestion and SUA status are incorporated into the user interface display so the user may consider these factors when evaluating the DWR route advisory.\n\nAnswer \"supported\" only if the sentences state that Dynamic Weather Routes produces or sends this item AND that user receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"The text states that a DWR route advisory is posted to an alert list on the user display and that the user evaluates the DWR route advisory.\"}",
+ "usage": {
+  "input_tokens": 343,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 169,
+  "output_tokens_details": {
+   "reasoning_tokens": 120
+  },
+  "total_tokens": 512
+ },
+ "attempts": 1,
+ "wall_s": 8.739,
+ "created": "2026-10-14T00:27:41"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Sensor-monitored Medication Cooler, label=maintains a time-stamped temperature history)\n\nSource sentences (the last one is where the fact was extracted):\nS168: The controller rejects a transaction when its location mapping does not match the reconciled medication identity.\nS169: Configuration changes are versioned, reviewed, and recorded with the effective time and approving authority.\nS170: If the controller has not received a current approved configuration, it prevents routine dispensing and reports the condition for investigation.\nS171: Bluejay maintains a time-stamped temperature history for each refrigerated medication compartment and raises an alarm when a configured limit is exceeded.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S171 says Bluejay maintains a time-stamped temperature history for each refrigerated medication compartment; 'Bluejay' is plausibly the alias for the Sensor-monitored Medication Cooler, and the action label matches the sentence.\"}",
+ "usage": {
+  "input_tokens": 671,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 97,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.093,
+ "created": "2026-10-14T12:52:10"
+}

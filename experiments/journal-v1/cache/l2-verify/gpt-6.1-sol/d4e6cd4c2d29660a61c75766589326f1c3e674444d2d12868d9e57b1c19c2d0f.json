@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Capacity Assessment Module provides \"Airport Acceptance Rate\" to Slot Allocation Engine (an information or material flow).\n\nSource sentences:\nS225: The Slot Allocation Engine proposes regulated departure and arrival opportunities by matching demand from the Demand Prediction Service to constraints supplied by the Capacity Assessment Module.\nS226: The primary inputs are the Flight Intent Message, the Airport Capacity Plan, the current Airport Acceptance Rate, runway metering limits, and airspace sector loading conditions.\nS340: Late airspace capacity changes are treated as high-priority operational updates because they can invalidate demand forecasts, slot allocations, and airport acceptance assumptions already in use.\nS341: When a late reduction occurs, the Capacity Assessment Module recalculates the effective Airport Acceptance Rate and passes the revised assumption into the operational planning cycle.\n\nAnswer \"supported\" only if the sentences state that Capacity Assessment Module produces or sends this item AND that Slot Allocation Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S341 states that the Capacity Assessment Module recalculates and passes on the Airport Acceptance Rate, while S225–S226 identify that rate as an input used by the Slot Allocation Engine.\"}",
+ "usage": {
+  "input_tokens": 333,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 102,
+  "output_tokens_details": {
+   "reasoning_tokens": 45
+  },
+  "total_tokens": 435
+ },
+ "attempts": 1,
+ "wall_s": 4.603,
+ "created": "2026-10-14T12:45:51"
+}

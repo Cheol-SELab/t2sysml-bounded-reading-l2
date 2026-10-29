@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Alert Distribution Hub provides \"surface equipment\" to Collaborative Decision Log (an information or material flow).\n\nSource sentences:\nS460: The Handling Resource Planner evaluates whether additional ground handling resources can remove the constraint faster than a flow management measure would absorb it.\nS461: Lantern must distribute surface equipment and apron congestion advisories to subscribed operational roles within the latency target defined in the Business Rules Registry.\nS465: During the Recovery Phase, the system prioritizes removal of surface holds that constrain multiple rotations before optimizing isolated punctuality impacts.\nS466: Every accepted surface equipment, fuel hold, runway metering, or apron congestion adjustment is written to the Collaborative Decision Log and the Audit Event Ledger with the actor, timestamp, affected flight, and planning rationale.\n\nAnswer \"supported\" only if the sentences state that Alert Distribution Hub produces or sends this item AND that Collaborative Decision Log receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S461 says Lantern distributes surface equipment advisories to subscribed roles (not the Collaborative Decision Log, and Alert Distribution Hub is not named), while S466 says accepted adjustments are written to the log, which is a different item with a different source.\"}",
+ "usage": {
+  "input_tokens": 745,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 102,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.029,
+ "created": "2026-10-14T12:45:15"
+}

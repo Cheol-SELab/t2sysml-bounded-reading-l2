@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: succession(before=request specialist review, after=changing spacecraft configuration)\n\nSource sentences (the last one is where the fact was extracted):\nS095: Subsystem specialists are not expected to staff every live contact, but they must be reachable during planned critical activities and whenever a console operator declares an off-nominal condition.\nS096: Escalation from the Mission Control Center begins with the console lead, moves to the responsible discipline lead, and then reaches mission management when the condition threatens spacecraft safety, contact continuity, or recovery schedule.\nS097: The Spacecraft Operations Team and Flight Dynamics Team coordinate closely before orbit-control activities so that command timing, attitude constraints, tracking expectations, and post-burn assessment steps remain consistent.\nS098: When telemetry indicates a possible onboard fault, operators preserve the command state, avoid discretionary commanding, and request specialist review before changing spacecraft configuration.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S098 says operators request specialist review before changing spacecraft configuration, so the review request precedes the configuration change.\"}",
+ "usage": {
+  "input_tokens": 765,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 53,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.981,
+ "created": "2026-10-14T12:52:19"
+}

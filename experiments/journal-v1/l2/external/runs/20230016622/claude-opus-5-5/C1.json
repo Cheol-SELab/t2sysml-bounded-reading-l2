@@ -1,0 +1,828 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0003",
+   "type": "requirement",
+   "subject": "existing human spaceflight work domain",
+   "text": "The existing human spaceflight work domain must undergo a substantial transformation to redistribute and create work capabilities among future flight teams"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "composition",
+   "whole": "flight team",
+   "parts": [
+    "crew",
+    "Earth based mission support personnel"
+   ]
+  },
+  {
+   "unit_id": "U0004",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "crew will be given greater access to a variety of information to make locally informed decisions"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "performer": "crew",
+   "label": "make locally informed decisions"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "requirement",
+   "subject": "flight team",
+   "text": "The broader flight team will need to simultaneously interact with this data and provide new means of support throughout the mission"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "flight team",
+   "label": "interact with this data"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "flight team",
+   "label": "provide new means of support"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "proposed requirements for a digital display"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "composition",
+   "whole": "EVA spacesuit",
+   "parts": [
+    "digital display"
+   ]
+  },
+  {
+   "unit_id": "U0007",
+   "type": "flow",
+   "source": "digital display",
+   "target": "crew",
+   "payload": "relevant information"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "digital display",
+   "label": "provide relevant information to the crew member"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "Joint Augmented Reality Visual Informatics System",
+   "label": "pursued four years of research and development towards a suit-display system"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "constraint",
+   "subject": "Joint Augmented Reality Visual Informatics System",
+   "expression": "four years of research and development"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "performer": "Joint Augmented Reality Visual Informatics System",
+   "label": "developing software"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "requirement",
+   "subject": "JSC-EV3",
+   "text": "Proposed changes to this document shall be submitted to JSC-EV3 for consideration and disposition"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "null",
+   "label": "submitted to JSC-EV3"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "released its Moon-to-Mars Architecture Definition Document"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "requirement",
+   "subject": "Moon-to-Mars Architecture Definition Document",
+   "text": "Meeting these objectives will provide the scientific and technical capabilities for sustained lunar and eventual Martian presence"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "monitored and coordinated all aspects of space missions"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "requirement",
+   "text": "future missions to be independent from Earth"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "Crew on these long duration missions will need technologies that promote autonomy across all phases of flight."
+  },
+  {
+   "unit_id": "U0026",
+   "type": "requirement",
+   "text": "technologies and new ways of working need to be developed to ensure mission goals are accomplished within the environmental constraints that will be present in future missions"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "state",
+   "label": "EVA Operations"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "spacesuit-compatible informatics system",
+   "label": "help the user"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "subject": "exploration EVA system",
+   "text": "anticipated interconnections that will be required if an advanced informatics display such as an augmented reality display is to ever be realized"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "requirement",
+   "subject": "advanced informatics device",
+   "text": "an advanced informatics device must not only service the needs of the suited crew member, but it must also support the broader team of remote support personnel and accommodate interfaces with a variety of other EVA assets"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "advanced informatics device",
+   "label": "service the needs of the suited crew member"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "advanced informatics device",
+   "label": "support the broader team of remote support personnel"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "advanced informatics device",
+   "label": "accommodate interfaces with a variety of other EVA assets"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "requirement",
+   "subject": "advanced informatics device",
+   "text": "the advanced informatics device cannot simply be designed for a single user when EVA operations requires a team of people and a variety of assets"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "xEVAS System Requirements Document",
+   "label": "outlines the expected advanced informatics capabilities of future spacesuits"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "crew",
+   "label": "perform engineering and science tasks"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "requirement",
+   "subject": "xEVAS vendors",
+   "text": "current xEVAS vendors are not required to implement an AR form factor as the necessary display for their spacesuits"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "requirement",
+   "subject": "AR Device",
+   "text": "an AR Device must be integrated with the surrounding assets that encompass the broader EVA system"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "composition",
+   "whole": "EVA system",
+   "parts": [
+    "AR Device",
+    "suited crew members"
+   ]
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "suited crew members",
+   "label": "perform EVA work"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "state",
+   "owner": "xEVA System",
+   "label": "Phase 7 EVA Operations"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Maximize EV crew productivity without compromising their safety"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Minimize the number of discrete physical acts required by the EV crew to operate"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Minimize the amount of time required to change from the current state to a desired state"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Minimize the interference with other means of communication among the work system"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Provide redundant means of control for EV crew"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "performer": "augmented reality system",
+   "label": "offers the fastest mode of information access"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "requirement",
+   "subject": "crew member",
+   "text": "crew would not be required to physically handle a piece of separate display hardware like a portable display"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "augmented reality system",
+   "label": "align digital content within the real-world view"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "composition",
+   "whole": "helmet bubble",
+   "parts": [
+    "augmented reality system"
+   ]
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "crew member",
+   "label": "view and understand digital content"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "crew member",
+   "label": "performing EVA"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew member",
+   "label": "see the destination they need to reach"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew member",
+   "label": "transform 2-D map data into their 3-D surroundings"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "requirement",
+   "subject": "augmented reality system",
+   "text": "numerous different control schemes should be considered for feasibility, ease of use, and overall functionality compatible with a suit-compatible AR system"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "multi-modal control scheme",
+   "label": "offers the most flexibility to support EVA work dynamics"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "crew",
+   "label": "experience a brief communication outage with their remote teammates"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "activation of voice control commands"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "display and control system",
+   "text": "the display and control system must be capable of coping with the complexities of the jobs that crew will face in future operational scenarios"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "performer": "display and control system",
+   "label": "coping with the complexities of the jobs"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "requirement",
+   "subject": "interface prototypes",
+   "text": "These efforts should be coupled with iterative prototype testing of a real-world solution"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "requirement",
+   "subject": "null",
+   "text": "The framing described here should serve as a means by which a group of people can imagine in a common direction"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "requirement",
+   "subject": "null",
+   "text": "Agreement and discussion should be iteratively assessed on the use case narratives, momentary demands, and user interface prototypes"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "action",
+   "label": "represented with their respective icons"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "label": "showcases the sequence of interactions among appropriate agent(s) and their informatics display"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "informatics display",
+   "label": "addresses pertinent momentary demands related to information needs"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "label": "indicated in superscript within the narrative"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "label": "annotated with the features represented on the screen"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "attribute",
+   "owner": "user interface",
+   "name": "black components transparency",
+   "value": "transparent to the user"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "attribute",
+   "owner": "user interface",
+   "name": "color",
+   "value": "monochrome green"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "attribute",
+   "owner": "Joint AR prototype",
+   "name": "AR solution type",
+   "value": "monocular, monochromatic transparent"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "composition",
+   "whole": "helmet bubble",
+   "parts": [
+    "Joint AR prototype"
+   ]
+  },
+  {
+   "unit_id": "U0098",
+   "type": "attribute",
+   "owner": "display",
+   "name": "placement",
+   "value": "slightly offset to the right side of the user and slightly above the horizontal field of view"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "composition",
+   "whole": "multi-modal control scheme",
+   "parts": [
+    "crew physical hand controller"
+   ]
+  },
+  {
+   "unit_id": "U0101",
+   "type": "attribute",
+   "owner": "crew physical hand controller",
+   "name": "configuration",
+   "value": "two-button and dial configuration"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "multi-modal control scheme",
+   "label": "supports all user interface solutions"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "composition",
+   "whole": "Hands-free control",
+   "parts": [
+    "voice control",
+    "remote control"
+   ]
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "performer": "Joint AR team",
+   "label": "considered specific features"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "prototype solutions are provided for a large portion of the work demands"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "requirement",
+   "subject": "reader",
+   "text": "The reader should approach this content with the expectation that the moments and corresponding work assumptions described in each use case should be a topic of specific debate and discussion."
+  }
+ ],
+ "entities": [
+  {
+   "name": "National Aeronautics and Space Administration",
+   "aliases": [
+    "NASA"
+   ]
+  },
+  {
+   "name": "Joint Augmented Reality Visual Informatics System",
+   "aliases": [
+    "Joint AR"
+   ]
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "flight team",
+   "aliases": []
+  },
+  {
+   "name": "EVA spacesuit",
+   "aliases": []
+  },
+  {
+   "name": "digital display",
+   "aliases": []
+  },
+  {
+   "name": "JSC-EV3",
+   "aliases": []
+  },
+  {
+   "name": "Earth based mission support personnel",
+   "aliases": []
+  },
+  {
+   "name": "Moon-to-Mars Architecture Definition Document",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": [
+    "MCC"
+   ]
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics device",
+   "aliases": []
+  },
+  {
+   "name": "suited crew member",
+   "aliases": []
+  },
+  {
+   "name": "remote support personnel",
+   "aliases": []
+  },
+  {
+   "name": "EVA assets",
+   "aliases": []
+  },
+  {
+   "name": "spacesuit-compatible informatics system",
+   "aliases": []
+  },
+  {
+   "name": "spacesuit-compatible augmented reality informatics system",
+   "aliases": []
+  },
+  {
+   "name": "exploration EVA system",
+   "aliases": []
+  },
+  {
+   "name": "xEVAS System Requirements Document",
+   "aliases": [
+    "SRD"
+   ]
+  },
+  {
+   "name": "EVA-EXP-0042",
+   "aliases": [
+    "Exploration EVA System Concept of Operations"
+   ]
+  },
+  {
+   "name": "Advanced Informatics Display System",
+   "aliases": []
+  },
+  {
+   "name": "augmented reality display",
+   "aliases": []
+  },
+  {
+   "name": "future spacesuits",
+   "aliases": []
+  },
+  {
+   "name": "xEVAS vendors",
+   "aliases": []
+  },
+  {
+   "name": "augmented reality system",
+   "aliases": [
+    "AR"
+   ]
+  },
+  {
+   "name": "crew member",
+   "aliases": [
+    "crew"
+   ]
+  },
+  {
+   "name": "AR Device",
+   "aliases": []
+  },
+  {
+   "name": "EVA system",
+   "aliases": []
+  },
+  {
+   "name": "suited crew members",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display and control system",
+   "aliases": []
+  },
+  {
+   "name": "EV crew",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR",
+   "aliases": []
+  },
+  {
+   "name": "portable display",
+   "aliases": []
+  },
+  {
+   "name": "helmet bubble",
+   "aliases": []
+  },
+  {
+   "name": "registered AR",
+   "aliases": []
+  },
+  {
+   "name": "multi-modal control scheme",
+   "aliases": []
+  },
+  {
+   "name": "flight team",
+   "aliases": []
+  },
+  {
+   "name": "xEVA System",
+   "aliases": []
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "remote teammates",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display",
+   "aliases": [
+    "display"
+   ]
+  },
+  {
+   "name": "display and control system",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR project",
+   "aliases": []
+  },
+  {
+   "name": "interface prototypes",
+   "aliases": [
+    "user interface prototypes"
+   ]
+  },
+  {
+   "name": "use case narratives",
+   "aliases": []
+  },
+  {
+   "name": "momentary demands",
+   "aliases": []
+  },
+  {
+   "name": "informatics display",
+   "aliases": []
+  },
+  {
+   "name": "EXP-EVA-0042 document",
+   "aliases": []
+  },
+  {
+   "name": "agents",
+   "aliases": []
+  },
+  {
+   "name": "momentary demand",
+   "aliases": [
+    "\"I want to...\" statements"
+   ]
+  },
+  {
+   "name": "Joint AR",
+   "aliases": []
+  },
+  {
+   "name": "user interface",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR prototype",
+   "aliases": []
+  },
+  {
+   "name": "helmet bubble",
+   "aliases": []
+  },
+  {
+   "name": "display",
+   "aliases": []
+  },
+  {
+   "name": "multi-modal control scheme",
+   "aliases": []
+  },
+  {
+   "name": "crew physical hand controller",
+   "aliases": []
+  },
+  {
+   "name": "Hands-free control",
+   "aliases": []
+  },
+  {
+   "name": "voice control",
+   "aliases": []
+  },
+  {
+   "name": "remote control",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR team",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display",
+   "aliases": []
+  },
+  {
+   "name": "crew members",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0021"
+   ],
+   "chunk_tokens": 916,
+   "memory_tokens": 0,
+   "prompt_tokens": 1665,
+   "input": 3402,
+   "output": 1622,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0022",
+    "U0045"
+   ],
+   "chunk_tokens": 913,
+   "memory_tokens": 0,
+   "prompt_tokens": 1673,
+   "input": 3318,
+   "output": 1403,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0046",
+    "U0066"
+   ],
+   "chunk_tokens": 939,
+   "memory_tokens": 0,
+   "prompt_tokens": 1688,
+   "input": 3327,
+   "output": 1793,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0067",
+    "U0087"
+   ],
+   "chunk_tokens": 932,
+   "memory_tokens": 0,
+   "prompt_tokens": 1681,
+   "input": 3330,
+   "output": 928,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0088",
+    "U0111"
+   ],
+   "chunk_tokens": 849,
+   "memory_tokens": 0,
+   "prompt_tokens": 1610,
+   "input": 3236,
+   "output": 1310,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

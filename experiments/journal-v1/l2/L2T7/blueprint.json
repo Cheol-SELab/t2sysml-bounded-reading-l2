@@ -1,0 +1,422 @@
+{
+ "title": "Operational Concept for the Sentinel Vale Earth-Observation Ground Segment",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Mission Context and Ground Segment Boundaries",
+   "topic": "Defines the Sentinel Vale mission objectives, the operational scope of the ground segment, the main facilities, and the shared assumptions for service hours, autonomy, and mission assurance."
+  },
+  {
+   "index": 2,
+   "heading": "Ground Station Estate and Contact Allocation",
+   "topic": "Describes the S-band and X-band antenna resources, contact booking rules, local station responsibilities, weather constraints, and ground network management practices."
+  },
+  {
+   "index": 3,
+   "heading": "Wide Area Connectivity and Timing Services",
+   "topic": "Explains the network topology, routing controls, latency budgets, time synchronization approach, and cybersecurity monitoring applied across all operational sites."
+  },
+  {
+   "index": 4,
+   "heading": "Telemetry Reception and Mission Control Operations",
+   "topic": "Covers telemetry ingest, spacecraft state monitoring, pass reconstruction, console roles, escalation routines, and the relationship between mission control and subsystem specialists."
+  },
+  {
+   "index": 5,
+   "heading": "Mission Planning and Command Preparation",
+   "topic": "Details observation request intake, schedule generation, command stack validation, constraints checking, and approval gates before uplink opportunities."
+  },
+  {
+   "index": 6,
+   "heading": "Flight Dynamics Products and Orbit Maintenance",
+   "topic": "Describes orbit determination, maneuver screening, attitude geometry support, collision assessment inputs, and delivery of flight dynamics products to operations users."
+  },
+  {
+   "index": 7,
+   "heading": "Payload Processing and Product Quality Control",
+   "topic": "Defines raw data transfer, image processing levels, calibration handling, quality flags, product holds, and fallback behavior between processing clusters."
+  },
+  {
+   "index": 8,
+   "heading": "Archive, Catalogue, and User Dissemination",
+   "topic": "Explains long-term storage, catalogue publication, user download services, retention policies, data reprocessing triggers, and external service interfaces."
+  },
+  {
+   "index": 9,
+   "heading": "Security, Resilience, and Anomaly Response",
+   "topic": "Sets out operational security controls, anomaly triage, continuity modes, cross-site failover, evidence preservation, and recovery criteria after degraded operations."
+  },
+  {
+   "index": 10,
+   "heading": "Readiness Reviews, Exercises, and Operational Metrics",
+   "topic": "Specifies rehearsals, acceptance evidence, operational key performance indicators, configuration baselines, and handover conditions for routine mission service."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_NORTH_S_BAND_ANTENNA",
+   "canonical": "North S-Band Antenna",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_S_BAND_ANTENNA",
+   "canonical": "South S-Band Antenna",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_KIRUNA_X_BAND_ANTENNA",
+   "canonical": "Kiruna X-Band Antenna",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SVALBARD_X_BAND_ANTENNA",
+   "canonical": "Svalbard X-Band Antenna",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MISSION_CONTROL_CENTER",
+   "canonical": "Mission Control Center",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FLIGHT_DYNAMICS_FACILITY",
+   "canonical": "Flight Dynamics Facility",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PAYLOAD_PROCESSING_FACILITY",
+   "canonical": "Payload Processing Facility",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NETWORK_CONTROL_SYSTEM",
+   "canonical": "Network Control System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_LONG_TERM_ARCHIVE",
+   "canonical": "Long Term Archive",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_USER_SERVICES_PORTAL",
+   "canonical": "User Services Portal",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MISSION_PLANNING_SYSTEM",
+   "canonical": "Mission Planning System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_COMMAND_VALIDATION_GATEWAY",
+   "canonical": "Command Validation Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TELEMETRY_INGEST_SERVICE",
+   "canonical": "Telemetry Ingest Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ORBIT_DETERMINATION_ENGINE",
+   "canonical": "Orbit Determination Engine",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PRODUCT_QUALITY_SERVICE",
+   "canonical": "Product Quality Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PRIMARY_PROCESSING_CLUSTER",
+   "canonical": "Primary Processing Cluster",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BACKUP_PROCESSING_CLUSTER",
+   "canonical": "Backup Processing Cluster",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_GROUND_NETWORK_MANAGER",
+   "canonical": "Ground Network Manager",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SPACECRAFT_OPERATIONS_TEAM",
+   "canonical": "Spacecraft Operations Team",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_FLIGHT_DYNAMICS_TEAM",
+   "canonical": "Flight Dynamics Team",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PAYLOAD_CALIBRATION_TEAM",
+   "canonical": "Payload Calibration Team",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_DESK",
+   "canonical": "Cybersecurity Desk",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DOPPLER_RESIDUAL_REPORT",
+   "canonical": "Doppler Residual Report",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PASS_REPLAY_PACKET",
+   "canonical": "Pass Replay Packet",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CALIBRATION_PATCH_BUNDLE",
+   "canonical": "Calibration Patch Bundle",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ANTENNA_DEICING_NOTICE",
+   "canonical": "Antenna Deicing Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_STAR_TRACKER_MASK_FILE",
+   "canonical": "Star Tracker Mask File",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PRODUCT_HOLD_LIST",
+   "canonical": "Product Hold List",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_EPHEMERIS_DELTA_NOTE",
+   "canonical": "Ephemeris Delta Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SECURITY_EXCEPTION_TICKET",
+   "canonical": "Security Exception Ticket",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_LASER_RETROREFLECTOR_WINDOW",
+   "canonical": "Laser Retroreflector Window",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_STORAGE_WATERMARK_SNAPSHOT",
+   "canonical": "Storage Watermark Snapshot",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_MISSION_CONTROL_CENTER",
+   "alias": "Bluebell",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_FLIGHT_DYNAMICS_FACILITY",
+   "alias": "Mistral",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_PAYLOAD_PROCESSING_FACILITY",
+   "alias": "Forgehouse",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_NETWORK_CONTROL_SYSTEM",
+   "alias": "Lantern",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_MISSION_PLANNING_SYSTEM",
+   "alias": "Cedar",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_COMMAND_VALIDATION_GATEWAY",
+   "alias": "Osprey",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_LONG_TERM_ARCHIVE",
+   "alias": "Granite",
+   "intro_section": 7
+  },
+  {
+   "entity_id": "E_GROUND_NETWORK_MANAGER",
+   "alias": "Juniper",
+   "intro_section": 2
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_ORBIT_DETERMINATION_ENGINE",
+   "item": "E_DOPPLER_RESIDUAL_REPORT",
+   "consumer": "E_FLIGHT_DYNAMICS_TEAM",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the residual report"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_TELEMETRY_INGEST_SERVICE",
+   "item": "E_PASS_REPLAY_PACKET",
+   "consumer": "E_SPACECRAFT_OPERATIONS_TEAM",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_PAYLOAD_CALIBRATION_TEAM",
+   "item": "E_CALIBRATION_PATCH_BUNDLE",
+   "consumer": "E_PRODUCT_QUALITY_SERVICE",
+   "intro_section": 4,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the patch bundle"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_GROUND_NETWORK_MANAGER",
+   "item": "E_ANTENNA_DEICING_NOTICE",
+   "consumer": "E_SPACECRAFT_OPERATIONS_TEAM",
+   "intro_section": 2,
+   "link_section": 5,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_FLIGHT_DYNAMICS_FACILITY",
+   "item": "E_STAR_TRACKER_MASK_FILE",
+   "consumer": "E_COMMAND_VALIDATION_GATEWAY",
+   "intro_section": 6,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the mask file"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_PRODUCT_QUALITY_SERVICE",
+   "item": "E_PRODUCT_HOLD_LIST",
+   "consumer": "E_USER_SERVICES_PORTAL",
+   "intro_section": 7,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_FLIGHT_DYNAMICS_TEAM",
+   "item": "E_EPHEMERIS_DELTA_NOTE",
+   "consumer": "E_MISSION_PLANNING_SYSTEM",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the delta note"
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_CYBERSECURITY_DESK",
+   "item": "E_SECURITY_EXCEPTION_TICKET",
+   "consumer": "E_NETWORK_CONTROL_SYSTEM",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_ORBIT_DETERMINATION_ENGINE",
+   "item": "E_LASER_RETROREFLECTOR_WINDOW",
+   "consumer": "E_MISSION_PLANNING_SYSTEM",
+   "intro_section": 6,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the retroreflector window"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_LONG_TERM_ARCHIVE",
+   "item": "E_STORAGE_WATERMARK_SNAPSHOT",
+   "consumer": "E_BACKUP_PROCESSING_CLUSTER",
+   "intro_section": 7,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_MISSION_CONTROL_CENTER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_FLIGHT_DYNAMICS_FACILITY",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_PAYLOAD_PROCESSING_FACILITY",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_NETWORK_CONTROL_SYSTEM",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_MISSION_PLANNING_SYSTEM",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_COMMAND_VALIDATION_GATEWAY",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_LONG_TERM_ARCHIVE",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_GROUND_NETWORK_MANAGER",
+   "link_section": 5
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_S_BAND_ANTENNA",
+   "confusable_entity_id": "E_SOUTH_S_BAND_ANTENNA",
+   "shared_head": "S-Band Antenna",
+   "link_section": 2
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_PRIMARY_PROCESSING_CLUSTER",
+   "confusable_entity_id": "E_BACKUP_PROCESSING_CLUSTER",
+   "shared_head": "Processing Cluster",
+   "link_section": 9
+  }
+ ],
+ "writer": "gpt-5.5",
+ "plan_sample": 0,
+ "domain": "a satellite ground segment for an Earth-observation mission (antennas, mission control, flight dynamics, payload data processing)"
+}

@@ -1,0 +1,120 @@
+{
+ "sentences": [
+  {
+   "text": "The system architecture is organized around fixed ridge sensors, a staffed operations portal, advisory analytics services, and communications paths that preserve incident command authority.",
+   "tags": []
+  },
+  {
+   "text": "North Lookout Camera Mast is positioned on the northern rim of the operating area to provide long-range visual coverage of drainages, access roads, and known ignition corridors.",
+   "tags": []
+  },
+  {
+   "text": "South Lookout Camera Mast covers the opposing viewshed and provides overlapping observation where terrain breaks line of sight from the northern site.",
+   "tags": []
+  },
+  {
+   "text": "Each camera mast is installed with hardened power distribution, local equipment cabinets, lightning protection, and service access suitable for seasonal maintenance windows.",
+   "tags": []
+  },
+  {
+   "text": "The camera mast video paths are backhauled through licensed wireless links to the operations network, with cellular service available as a degraded-mode path where coverage permits.",
+   "tags": []
+  },
+  {
+   "text": "North Lookout Camera Mast sends the Thermal Spot Snippet after local sensor processing identifies a candidate heat signature.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "text": "Horizon Ridge Drone Dock is referred to by the site engineering alias Kestrel in drawings and maintenance records for this deployment.",
+   "tags": [
+    "ALIAS:E_HORIZON_RIDGE_DRONE_DOCK"
+   ]
+  },
+  {
+   "text": "Horizon Ridge Drone Dock is located on a graded pad near the central ridge road so that launch, recovery, charging, and shelter functions remain accessible to maintenance personnel.",
+   "tags": []
+  },
+  {
+   "text": "The dock includes weather-rated enclosures, charging interfaces, local health monitoring, and a secure network termination for coordination with the rest of the support system.",
+   "tags": []
+  },
+  {
+   "text": "Horizon Ridge Drone Dock produces the Battery Swap Ticket when its maintenance controller records that a flight battery has reached the configured replacement threshold.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "Drone Tasking Service manages approved unmanned flight requests, records mission constraints, and presents task status without acting as an independent authority for flight release.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Pilot Operator uses Drone Tasking Service to review proposed routes, current dock status, and operational constraints before coordinating any field action through established procedures.",
+   "tags": []
+  },
+  {
+   "text": "Sentinel Fireline Analytics Engine is referred to by the site engineering alias Lantern in architecture diagrams and configuration work orders.",
+   "tags": [
+    "ALIAS:E_SENTINEL_FIRELINE_ANALYTICS_ENGINE"
+   ]
+  },
+  {
+   "text": "Sentinel Fireline Analytics Engine aggregates camera detections, weather inputs, geospatial context, and operator feedback into traceable recommendations for fire detection and suppression support.",
+   "tags": []
+  },
+  {
+   "text": "Smoke Classifier Module runs as a bounded analytics component that scores visual observations for plume likelihood and passes confidence values to the broader analytics workflow.",
+   "tags": []
+  },
+  {
+   "text": "The analytics services retain event timing, source identifiers, model version information, and operator acknowledgments so that later review can reconstruct how a recommendation was presented.",
+   "tags": []
+  },
+  {
+   "text": "MesoWest Weather Fusion Node is referred to by the site engineering alias Brindle in network inventory and integration test records.",
+   "tags": [
+    "ALIAS:E_MESOWEST_WEATHER_FUSION_NODE"
+   ]
+  },
+  {
+   "text": "MesoWest Weather Fusion Node ingests station observations, forecast grids, and configured quality checks to provide a consistent weather picture for the operating area.",
+   "tags": []
+  },
+  {
+   "text": "MesoWest Weather Fusion Node sends the Wind Shift Bulletin when its configured weather rules identify a significant change in local wind behavior.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "VHF Radio Gateway Repeater provides a monitored bridge between selected radio traffic and operator workstations, with recording and access controls aligned to incident policy.",
+   "tags": []
+  },
+  {
+   "text": "Caldera Incident Command Portal is the primary operator interface for the Duty Detection Officer, County Emergency Liaison, and other command staff who need consolidated situational information.",
+   "tags": []
+  },
+  {
+   "text": "The portal displays camera views, detection history, weather context, map layers, and status transitions such as Confirmed Ignition State and Airspace Restricted State.",
+   "tags": []
+  },
+  {
+   "text": "Talon Air Tanker Dispatch Console supports the Air Attack Supervisor and Tanker Base Manager by presenting aircraft coordination data, loading status, and mission notes relevant to suppression support.",
+   "tags": []
+  },
+  {
+   "text": "East Retardant Loading Pump and West Retardant Loading Pump are represented in the site layout as monitored ground assets whose readiness and fault indications are visible to authorized operations staff.",
+   "tags": []
+  },
+  {
+   "text": "Crewline Mobile Tablet provides the Helitack Crew Leader with field access to assigned incident context, map references, and updates that have been approved for mobile distribution.",
+   "tags": []
+  },
+  {
+   "text": "Across the site, network segmentation, time synchronization, equipment health checks, and audit logging are treated as baseline infrastructure rather than optional add-ons.",
+   "tags": []
+  }
+ ]
+}

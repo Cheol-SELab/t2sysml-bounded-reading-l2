@@ -1,0 +1,99 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "The Raw Water Screen Channel sends the Rake Torque Snapshot, and the Maintenance Planner uses “the snapshot” to compare planned rake work with mechanical loading."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "South Filter Gallery sends the Filter Run Exception Note, which the Chief Operator uses to determine whether follow-up is needed."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "The Coagulant Dosing Skid sends the Alum Batch Ticket, and the Laboratory Technician uses it to verify the chemical lot identity."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "The Laboratory Technician sends the Sample Chain Slip, and the SCADA Historian Server uses it to associate water-quality entries with an operating period."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "The Clearwell Level Controller sends the Clearwell Diver Entry Permit after level and isolation checks, and the Maintenance Planner uses “the permit” to verify isolation boundaries for confined-space work."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "The Chief Operator produces the Backwash Solids Manifest, and the Residuals Hauler uses it to confirm load identity, destination, and acceptance requirements."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "The Distribution Dispatcher sends the Pressure Zone Handoff Card, and the South Distribution Pressure Station uses “the card” to confirm zone status and related checks."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "The Chemical Supplier Driver sends the Chlorine Cylinder Seal Log, which the Duty Engineer reviews before accepting a change in chlorine storage status."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "The High Service Pump Header produces the Pump Bearing Vibration Clip, and the Maintenance Planner uses “the clip” to compare pump condition with inspection plans."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "The document identifies Ironwood as the local name for the River Intake Pump Station, and the link uses that name for the station."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "The document identifies Lantern as the local name for the SCADA Historian Server, and the link uses Lantern for that server."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "The document identifies Marigold as the local name for the Coagulant Dosing Skid, and the link uses Marigold for that skid."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "The document identifies Cobalt as the local name for the North Filter Gallery, and the link uses Cobalt for that gallery."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "The document identifies Sparrow as the local name for the Laboratory Sample Receiving Bench, and the link uses Sparrow for that bench."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "The document identifies Quarry as the radio alias for the Maintenance Planner, and the link uses Quarry for that role."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "The document identifies Juniper as the radio alias for the High Service Pump Header, and the link uses Juniper for that header."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "The document identifies Falcon as the pressure-coordination alias for the Distribution Dispatcher, and the link uses Falcon for that dispatcher."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "The link explicitly names the North Filter Gallery, so it is about that gallery rather than the South Filter Gallery."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "The link explicitly names the South Distribution Pressure Station, so it is about that station rather than the North Distribution Pressure Station."
+  }
+ ]
+}

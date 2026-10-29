@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=pre-issued signed credentials, label=expire automatically)\n\nSource sentences (the last one is where the fact was extracted):\nS183: The MesoWest Weather Fusion Node shall retain a local weather cache sufficient to support near-term fire behavior review when upstream feeds are intermittent.\nS184: Crewline Mobile Tablet clients shall queue field updates locally, encrypt the queue at rest, and reconcile conflicts by preserving the original author, device time, and server acceptance time.\nS185: All interactive access to the Caldera Incident Command Portal requires named accounts, role-based authorization, and multifactor authentication when the authentication service is reachable.\nS186: When the authentication service is unreachable, emergency access uses pre-issued signed credentials that expire automatically and require supervisor review after restoration.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S186 states that emergency access uses pre-issued signed credentials that expire automatically, so the performer and the action label both match the text.\"}",
+ "usage": {
+  "input_tokens": 727,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 58,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.237,
+ "created": "2026-10-14T12:51:59"
+}

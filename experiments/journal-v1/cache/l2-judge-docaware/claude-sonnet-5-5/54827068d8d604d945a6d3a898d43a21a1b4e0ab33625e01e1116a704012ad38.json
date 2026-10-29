@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Bag Tag Printer provides \"a Calibration Witness Tag\" to Maintenance Technician (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS073: The Security Duty Manager is notified when an alarm response requires a security decision beyond routine screening procedures.\nS074: The Bag Tag Printer produces a Calibration Witness Tag when a calibration witness record is required.\nS175: Concourse Zone Controller applies the authorized routing state without bypassing required screening controls.\nS176: Maintenance Technician uses the witness tag to verify that the applicable calibration status was witnessed before equipment returns to service.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS030: The Bag Tag Printer produces a durable tag with a unique identifier for each accepted bag.\nS031: The tag identifier is associated with the passenger and flight record in the Baggage Control System.\nS053: The Baggage Control System applies the approved screening profile to each bag using its tag data and the current operating configuration.\nS151: Bag Tag Printer produces replacement identification only when authorized personnel have confirmed the required bag details.\nS157: The operator compares visible bag features with the recorded tag number and the handling data associated with the bag.\nS161: The identity check verifies that the physical tag is attached to the inspected bag and that its number agrees with the recorded bag identity.\nS167: Kestrel captures a readable tag image when the bag is presented for a permitted scan.\nS168: North Gate Scanner records the tag read and image data needed to support an operator's identity check.\n\nAnswer \"supported\" only if the document states that Bag Tag Printer produces or sends this item AND that Maintenance Technician receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Maintenance Technician uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S074 says the Bag Tag Printer produces a Calibration Witness Tag, S176 says the Maintenance Technician uses the witness tag to verify calibration status, and no other sentence names a different producer or a different similarly named item.\"}",
+ "usage": {
+  "input_tokens": 1060,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.824,
+ "created": "2026-10-19T19:04:16"
+}

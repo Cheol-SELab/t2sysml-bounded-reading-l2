@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Storage allocation begins after the shipment count, inspection status, and door release have been recorded.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Management System evaluates available positions against pallet dimensions, mass, storage compatibility, and expected retrieval demand.",
+   "tags": []
+  },
+  {
+   "text": "Fast-moving inventory is generally assigned to positions that support short travel paths to its next handling step.",
+   "tags": []
+  },
+  {
+   "text": "Pallets with restricted handling requirements are assigned only to positions approved for those conditions.",
+   "tags": []
+  },
+  {
+   "text": "The allocation logic preserves clearances for the pallet and the equipment needed to access it.",
+   "tags": []
+  },
+  {
+   "text": "A position is excluded when its capacity, status, or operating restrictions conflict with the pallet profile.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Management System produces the Slot Reservation Receipt.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "A reservation remains subject to confirmation that the selected position and its access path are available for operation.",
+   "tags": []
+  },
+  {
+   "text": "The reservation record identifies the selected position and the conditions used to validate its suitability.",
+   "tags": []
+  },
+  {
+   "text": "Crane operations are divided into aisle zones to limit conflicting equipment movement.",
+   "tags": []
+  },
+  {
+   "text": "Each stacker crane normally retrieves and stores pallets within its assigned aisle boundaries.",
+   "tags": []
+  },
+  {
+   "text": "The North Aisle Stacker Crane is also known by the alias Juniperwake.",
+   "tags": [
+    "ALIAS:E_NORTH_CRANE"
+   ]
+  },
+  {
+   "text": "The North Aisle Stacker Crane serves storage positions in the north aisle and follows the aisle's configured travel limits.",
+   "tags": []
+  },
+  {
+   "text": "The South Aisle Stacker Crane serves its assigned storage positions under equivalent travel and access controls.",
+   "tags": []
+  },
+  {
+   "text": "Cross-aisle movement is controlled so that crane travel does not extend beyond authorized operating zones.",
+   "tags": []
+  },
+  {
+   "text": "Crane commands are issued only when the target position and the required aisle conditions are valid.",
+   "tags": []
+  },
+  {
+   "text": "The Pallet Dimension Scanner is also known by the alias Moonquarry.",
+   "tags": [
+    "ALIAS:E_DIMENSION_SCANNER"
+   ]
+  },
+  {
+   "text": "The Pallet Dimension Scanner measures pallet height, width, and length before storage suitability is finalized.",
+   "tags": []
+  },
+  {
+   "text": "The measured profile is checked against configured dimensional limits and the declared pallet profile.",
+   "tags": []
+  },
+  {
+   "text": "The Pallet Dimension Scanner produces the Oversize Load Advisory.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "The dimension advisory identifies a measured profile that exceeds an applicable storage or handling limit.",
+   "tags": []
+  },
+  {
+   "text": "An advisory does not by itself authorize placement in a position that fails the storage rules.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Management System can retain the measured dimensions with the pallet's inventory record for later allocation decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Operations Supervisor can review unresolved allocation conditions through established operational procedures.",
+   "tags": []
+  }
+ ]
+}

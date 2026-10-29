@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "Distribution monitoring begins at the High Service Pump Header, where discharge pressure, total flow, and pump status provide the control room with the first indication of system demand changes.",
+   "tags": []
+  },
+  {
+   "text": "The Distribution Dispatcher watches each pressure zone for sustained deviations rather than reacting to every short pressure fluctuation caused by hydrant use, valve movement, or customer demand changes.",
+   "tags": []
+  },
+  {
+   "text": "Normal control-room practice is to compare pressure trends with reservoir level trends, pump starts, and recent field activity before changing a setpoint.",
+   "tags": []
+  },
+  {
+   "text": "The North Distribution Pressure Station is monitored as a separate zone asset with its own suction pressure, discharge pressure, pump availability, and communication status.",
+   "tags": []
+  },
+  {
+   "text": "The South Distribution Pressure Station starts its lead booster pump when discharge pressure remains below the configured start band for the required delay period.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "When a distribution station is in automatic operation, local controls are expected to sequence pumps within approved limits and report abnormal starts, failures, or valve positions to the control system.",
+   "tags": []
+  },
+  {
+   "text": "When a distribution station is in local or manual operation, the Distribution Dispatcher records the reason, the expected duration, and the field contact responsible for the change.",
+   "tags": []
+  },
+  {
+   "text": "The Clearwell Level Controller is checked before large distribution adjustments so that high service pumping does not create avoidable level instability.",
+   "tags": []
+  },
+  {
+   "text": "The Chief Operator may direct a conservative pumping posture during unusual demand, main repair activity, or recovery from a treatment upset.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Engineer reviews persistent low-pressure complaints, repeated station alarms, or mismatches between observed pressure and modeled expectations.",
+   "tags": []
+  },
+  {
+   "text": "Cobalt shall provide a reliable filter service status indication before the control room treats increased distribution demand as available finished-water capacity.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "Sparrow records incoming distribution check samples with the pressure zone, collection point, and time needed for control-room review.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "The SCADA Historian Server uses the Sample Chain Slip to associate distribution water-quality entries with the operating period shown in the electronic log.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "The Distribution Dispatcher sends the Pressure Zone Handoff Card after verifying current pressure-zone setpoints, active alarms, and open field work.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "Shift handoff includes any disabled alarms, temporary operating limits, pending station inspections, and customer complaint trends that may affect dispatch decisions.",
+   "tags": []
+  },
+  {
+   "text": "If communication to a distribution station is lost, the control room assumes the last confirmed operating mode remains in effect until field verification or telemetry restoration proves otherwise.",
+   "tags": []
+  },
+  {
+   "text": "Field crews notify the control room before opening or closing major distribution valves so that pressure changes can be distinguished from pump or instrumentation problems.",
+   "tags": []
+  },
+  {
+   "text": "The Distribution Dispatcher coordinates planned hydrant flushing, valve exercising, and main isolation work with pumping schedules to limit avoidable pressure swings.",
+   "tags": []
+  },
+  {
+   "text": "When a Chlorine Residual Alarm is active, distribution pressure decisions remain coordinated with water-quality response actions rather than being treated as a purely hydraulic issue.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Sample Receiving Bench provides analytical status through normal plant reporting channels, and the control room uses that status to interpret pressure-zone complaints involving taste, odor, or disinfectant concerns.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Historian Server retains pressure, flow, pump status, and alarm data needed to reconstruct dispatch decisions after an event.",
+   "tags": []
+  },
+  {
+   "text": "During Storm Intake Mode, the Distribution Dispatcher avoids unnecessary zone changes unless demand, storage, or public-safety conditions require action.",
+   "tags": []
+  },
+  {
+   "text": "Control-room coordination with field crews is conducted by radio or phone using clear station names, valve identifiers, expected direction of pressure change, and confirmation when work is complete.",
+   "tags": []
+  },
+  {
+   "text": "Normal distribution operation is restored when pressure zones are stable, station alarms are cleared or assigned, field work is accounted for, and the Chief Operator has no remaining operating restrictions.",
+   "tags": []
+  }
+ ]
+}

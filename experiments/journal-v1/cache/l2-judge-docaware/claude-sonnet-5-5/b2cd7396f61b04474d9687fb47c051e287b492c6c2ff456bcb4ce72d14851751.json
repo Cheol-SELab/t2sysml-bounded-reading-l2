@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Tower Supervisor provides \"the Runway Inspection Note\" to Airport Duty Manager (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS059: The Military Airspace Liaison confirms whether shared airspace assumptions remain valid for the morning and identifies any conditional availability that must be treated as uncertain.\nS060: The Tower Supervisor sends the Runway Inspection Note before the first planning consolidation window.\nS180: The Tower Sequence Manager uses validated surface status to support local sequencing decisions without replacing controller judgment or established radio procedures.\nS181: The Airport Duty Manager uses the Runway Inspection Note to confirm that the duty desk has a current record of pavement status before endorsing any declared capacity change.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS568: The Airport Duty Manager produces the Customs Hold Release Note when border processing confirms that a held arrival may proceed to normal turnaround handling.\nS647: Ramp Control Lead sends the Apron Sweep Completion Note after the responsible sweep team confirms that the assigned apron area is clean, safe, and free of observed foreign object debris.\nS678: Airport Duty Manager uses the Apron Sweep Completion Note to confirm that apron availability constraints do not invalidate an approved substitution.\nS679: Airline Operations Coordinator uses the release note to confirm that a candidate substitution is eligible for customs release before requesting a slot swap.\n\nAnswer \"supported\" only if the document states that Tower Supervisor produces or sends this item AND that Airport Duty Manager receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Airport Duty Manager uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S060 states the Tower Supervisor sends the Runway Inspection Note, S181 states the Airport Duty Manager uses that same note, and no other sentence names a different producer or a similarly named item for it.\"}",
+ "usage": {
+  "input_tokens": 1041,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.964,
+ "created": "2026-10-19T18:55:43"
+}

@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "This section defines how the Caldera Incident Command Portal supports coordinated air and ground operations after an incident enters a managed response posture.",
+   "tags": []
+  },
+  {
+   "text": "When the Caldera Incident Command Portal shows the Airspace Restricted State, aircraft tasking is treated as conditional until the Air Attack Supervisor confirms the active operating window.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Detection Officer records the restriction basis in the Caldera Incident Command Portal so later decisions can be traced to the operational condition in effect at the time.",
+   "tags": []
+  },
+  {
+   "text": "The Air Attack Supervisor is responsible for deconflicting fixed-wing, rotary-wing, and uncrewed routes before the Drone Pilot Operator launches from the Horizon Ridge Drone Dock.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Tasking Service shall not issue a launch task that conflicts with an active aviation lane maintained by the Talon Air Tanker Dispatch Console.",
+   "tags": []
+  },
+  {
+   "text": "The Talon Air Tanker Dispatch Console provides the aviation status view used by the Tanker Base Manager to sequence retardant aircraft availability.",
+   "tags": []
+  },
+  {
+   "text": "The Tanker Base Manager coordinates pump readiness for the East Retardant Loading Pump and the West Retardant Loading Pump before confirming that a tanker can accept an assignment.",
+   "tags": []
+  },
+  {
+   "text": "The VHF Radio Gateway Repeater is also known as Badger for voice traffic when a short call sign is needed during congested incident radio operations.",
+   "tags": [
+    "ALIAS:E_VHF_RADIO_GATEWAY_REPEATER"
+   ]
+  },
+  {
+   "text": "The VHF Radio Gateway Repeater bridges command, air-to-ground, and county liaison talk paths when direct radio coverage is degraded by terrain.",
+   "tags": []
+  },
+  {
+   "text": "Radio bridging shall preserve the original speaker identity when the source channel provides it, because aviation supervisors use that identity to validate tasking and hazard reports.",
+   "tags": []
+  },
+  {
+   "text": "If a bridge path fails, the Caldera Incident Command Portal marks the affected radio route as impaired and requires manual acknowledgement by the Duty Detection Officer.",
+   "tags": []
+  },
+  {
+   "text": "Orion must verify that the impaired route has an alternate contact method before any new aviation coordination message is accepted.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "text": "The County Emergency Liaison is the primary contact for county dispatch, road control, evacuation support, and local public safety notifications.",
+   "tags": []
+  },
+  {
+   "text": "The County Emergency Liaison sends the Drone Corridor Permit after local jurisdiction review is complete.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "County liaison procedures require that jurisdictional constraints be entered in the Caldera Incident Command Portal before the Drone Pilot Operator receives a route briefing.",
+   "tags": []
+  },
+  {
+   "text": "Temporary flight restrictions are requested through the established incident aviation chain and are represented internally by the Airspace Restricted State only after acceptance by the responsible authority.",
+   "tags": []
+  },
+  {
+   "text": "The Air Attack Supervisor reviews each temporary restriction against current fire perimeter intelligence from the Sentinel Fireline Analytics Engine before approving a release of air assets.",
+   "tags": []
+  },
+  {
+   "text": "The MesoWest Weather Fusion Node supplies wind and visibility context used by aviation supervisors during route selection and holding-area planning.",
+   "tags": []
+  },
+  {
+   "text": "The North Lookout Camera Mast and the South Lookout Camera Mast provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility.",
+   "tags": []
+  },
+  {
+   "text": "The South Lookout Camera Mast produces the Camera Cleaning Log as part of its maintenance reporting.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "The Smoke Classifier Module may be temporarily down-weighted by the Sentinel Fireline Analytics Engine when observation quality is suspected to be degraded.",
+   "tags": []
+  },
+  {
+   "text": "The Helitack Crew Leader uses the Crewline Mobile Tablet to acknowledge air-to-ground instructions and report whether crews are inside any planned drop or reconnaissance area.",
+   "tags": []
+  },
+  {
+   "text": "The Caldera Incident Command Portal displays crew acknowledgements beside aviation tasks so the Air Attack Supervisor can verify that ground resources are clear before authorizing flight activity.",
+   "tags": []
+  },
+  {
+   "text": "If the Confirmed Ignition State is active and airspace approval is delayed, the system keeps suppression planning visible while preventing premature aircraft dispatch.",
+   "tags": []
+  },
+  {
+   "text": "Coordination records are retained with timestamps, participant identities, and radio path status so post-incident review can reconstruct both aviation decisions and interagency notifications.",
+   "tags": []
+  }
+ ]
+}

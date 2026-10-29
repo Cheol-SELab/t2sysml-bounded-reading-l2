@@ -1,0 +1,896 @@
+{
+ "doc_id": "L2X2",
+ "writer": "gpt-6-luna",
+ "verifier": "gpt-5.5",
+ "budget": 1024,
+ "doc_tokens": 18264,
+ "far_share": 1.0,
+ "entities": [
+  {
+   "entity_id": "E_TURBINE_CONTROLLER",
+   "canonical": "Turbine Controller",
+   "kind": "part",
+   "aliases": [
+    "Glassfin"
+   ]
+  },
+  {
+   "entity_id": "E_PITCH_SYSTEM",
+   "canonical": "Pitch System",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CONVERTER_CABINET",
+   "canonical": "Converter Cabinet",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_NACELLE_CONDITION_MONITOR",
+   "canonical": "Nacelle Condition Monitor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ROTOR_BRAKE_UNIT",
+   "canonical": "Rotor Brake Unit",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BLADE_INSPECTION_DRONE",
+   "canonical": "Blade Inspection Drone",
+   "kind": "part",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "entity_id": "E_OFFSHORE_SUBSTATION",
+   "canonical": "Offshore Substation",
+   "kind": "part",
+   "aliases": [
+    "Morrowick"
+   ]
+  },
+  {
+   "entity_id": "E_MAIN_TRANSFORMER",
+   "canonical": "Main Transformer",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EXPORT_CABLE_MONITOR",
+   "canonical": "Export Cable Monitor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SCADA_GATEWAY",
+   "canonical": "SCADA Gateway",
+   "kind": "part",
+   "aliases": [
+    "Juniper Vale"
+   ]
+  },
+  {
+   "entity_id": "E_SHORE_CONTROL_ROOM",
+   "canonical": "Shore Control Room",
+   "kind": "part",
+   "aliases": [
+    "Amber Quay"
+   ]
+  },
+  {
+   "entity_id": "E_FLEET_DISPATCH_CONSOLE",
+   "canonical": "Fleet Dispatch Console",
+   "kind": "part",
+   "aliases": [
+    "Sable Orchard"
+   ]
+  },
+  {
+   "entity_id": "E_MAINTENANCE_PLANNING_ENGINE",
+   "canonical": "Maintenance Planning Engine",
+   "kind": "part",
+   "aliases": [
+    "Thistle Crown"
+   ]
+  },
+  {
+   "entity_id": "E_WEATHER_SERVICE",
+   "canonical": "Weather Service",
+   "kind": "part",
+   "aliases": [
+    "Pale Lantern"
+   ]
+  },
+  {
+   "entity_id": "E_METOCEAN_BUOY",
+   "canonical": "Metocean Buoy",
+   "kind": "part",
+   "aliases": [
+    "Copper Finch"
+   ]
+  },
+  {
+   "entity_id": "E_CREW_TRANSFER_VESSEL",
+   "canonical": "Crew Transfer Vessel",
+   "kind": "part",
+   "aliases": [
+    "Kestrel Bay"
+   ]
+  },
+  {
+   "entity_id": "E_DAUGHTER_CRAFT",
+   "canonical": "Daughter Craft",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SERVICE_OPERATIONS_VESSEL",
+   "canonical": "Service Operations Vessel",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HELIDECK",
+   "canonical": "Helideck",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PERSONNEL_TRACKING_CONSOLE",
+   "canonical": "Personnel Tracking Console",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WAREHOUSE_SYSTEM",
+   "canonical": "Warehouse System",
+   "kind": "part",
+   "aliases": [
+    "Mosslight"
+   ]
+  },
+  {
+   "entity_id": "E_SPARES_HUB",
+   "canonical": "Spares Hub",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WORK_PERMIT_PORTAL",
+   "canonical": "Work Permit Portal",
+   "kind": "part",
+   "aliases": [
+    "Redoubt"
+   ]
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_GATEWAY",
+   "canonical": "Cybersecurity Gateway",
+   "kind": "part",
+   "aliases": [
+    "Quiet Harbor"
+   ]
+  },
+  {
+   "entity_id": "E_GRID_INTERFACE_RELAY",
+   "canonical": "Grid Interface Relay",
+   "kind": "part",
+   "aliases": [
+    "Wildmere"
+   ]
+  },
+  {
+   "entity_id": "E_FIRE_DETECTION_PANEL",
+   "canonical": "Fire Detection Panel",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EMERGENCY_GENERATOR",
+   "canonical": "Emergency Generator",
+   "kind": "part",
+   "aliases": [
+    "Foxglove"
+   ]
+  },
+  {
+   "entity_id": "E_NORTH_ACCESS_SCANNER",
+   "canonical": "North Access Scanner",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_ACCESS_SCANNER",
+   "canonical": "South Access Scanner",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TURBINE_SENSOR_BUS",
+   "canonical": "Turbine Sensor Bus",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_VESSEL_AIS_RECEIVER",
+   "canonical": "Vessel AIS Receiver",
+   "kind": "part",
+   "aliases": [
+    "Blue Granite"
+   ]
+  },
+  {
+   "entity_id": "E_OPERATIONS_RADIO_CONSOLE",
+   "canonical": "Operations Radio Console",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EAST_SERVICE_LIFT",
+   "canonical": "East Service Lift",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WEST_SERVICE_LIFT",
+   "canonical": "West Service Lift",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CONTROL_ENGINEER",
+   "canonical": "Control Engineer",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DUTY_PLANNER",
+   "canonical": "Duty Planner",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MARINE_COORDINATOR",
+   "canonical": "Marine Coordinator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_VESSEL_MASTER",
+   "canonical": "Vessel Master",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ELECTRICAL_TECHNICIAN",
+   "canonical": "Electrical Technician",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BLADE_SPECIALIST",
+   "canonical": "Blade Specialist",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HSE_OFFICER",
+   "canonical": "HSE Officer",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SUBSTATION_OPERATOR",
+   "canonical": "Substation Operator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WEATHER_ANALYST",
+   "canonical": "Weather Analyst",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SCADA_ENGINEER",
+   "canonical": "SCADA Engineer",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_STOREKEEPER",
+   "canonical": "Storekeeper",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GRID_DISPATCHER",
+   "canonical": "Grid Dispatcher",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_ANALYST",
+   "canonical": "Cybersecurity Analyst",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FIELD_SUPERVISOR",
+   "canonical": "Field Supervisor",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PORT_AGENT",
+   "canonical": "Port Agent",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RESCUE_COORDINATOR",
+   "canonical": "Rescue Coordinator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PITCH_DEVIATION_NOTICE",
+   "canonical": "Pitch Deviation Notice",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SQUALL_WINDOW_BULLETIN",
+   "canonical": "Squall Window Bulletin",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_POSITION_QUALITY_FLAG",
+   "canonical": "Position Quality Flag",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TRANSFER_MANIFEST_ADDENDUM",
+   "canonical": "Transfer Manifest Addendum",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BACKORDER_EXCEPTION_SLIP",
+   "canonical": "Backorder Exception Slip",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WAVE_BURST_RECORD",
+   "canonical": "Wave Burst Record",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SESSION_REVOCATION_RECEIPT",
+   "canonical": "Session Revocation Receipt",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HARNESS_AUDIT_CARD",
+   "canonical": "Harness Audit Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TRANSFORMER_TAP_SNAPSHOT",
+   "canonical": "Transformer Tap Snapshot",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DEFERRED_TASK_RATIONALE",
+   "canonical": "Deferred Task Rationale",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LEADING_EDGE_TILE_IMAGE",
+   "canonical": "Leading Edge Tile Image",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BERTH_SLOT_CONFIRMATION",
+   "canonical": "Berth Slot Confirmation",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_START_TEST_TRACE",
+   "canonical": "Start Test Trace",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EXPORT_LIMIT_ADVISORY",
+   "canonical": "Export Limit Advisory",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CREW_COUNT_CORRECTION",
+   "canonical": "Crew Count Correction",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FIRMWARE_HASH_ATTESTATION",
+   "canonical": "Firmware Hash Attestation",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RECOVERY_BASKET_LOAD_SHEET",
+   "canonical": "Recovery Basket Load Sheet",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_VISIBILITY_CONFIDENCE_NOTE",
+   "canonical": "Visibility Confidence Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ISOLATION_BOUNDARY_SKETCH",
+   "canonical": "Isolation Boundary Sketch",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SWITCHING_WINDOW_ACKNOWLEDGMENT",
+   "canonical": "Switching Window Acknowledgment",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WEATHER_HOLD",
+   "canonical": "Weather Hold",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TURBINE_LOCKOUT",
+   "canonical": "Turbine Lockout",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SUBSTATION_DEGRADED",
+   "canonical": "Substation Degraded",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_VESSEL_STANDBY",
+   "canonical": "Vessel Standby",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GRID_CONSTRAINT",
+   "canonical": "Grid Constraint",
+   "kind": "state",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_TURBINE_CONTROLLER",
+   "consumer": "E_SCADA_GATEWAY",
+   "item": "E_PITCH_DEVIATION_NOTICE",
+   "link_ref": "short",
+   "short_ref": "the deviation notice",
+   "intro_unit": "S061",
+   "link_unit": "S159",
+   "distance_tokens": 1603
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_WEATHER_SERVICE",
+   "consumer": "E_MAINTENANCE_PLANNING_ENGINE",
+   "item": "E_SQUALL_WINDOW_BULLETIN",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S083",
+   "link_unit": "S213",
+   "distance_tokens": 2218
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_VESSEL_AIS_RECEIVER",
+   "consumer": "E_FLEET_DISPATCH_CONSOLE",
+   "item": "E_POSITION_QUALITY_FLAG",
+   "link_ref": "short",
+   "short_ref": "the quality flag",
+   "intro_unit": "S105",
+   "link_unit": "S225",
+   "distance_tokens": 2024
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_DUTY_PLANNER",
+   "consumer": "E_VESSEL_MASTER",
+   "item": "E_TRANSFER_MANIFEST_ADDENDUM",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S126",
+   "link_unit": "S278",
+   "distance_tokens": 2641
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_WAREHOUSE_SYSTEM",
+   "consumer": "E_STOREKEEPER",
+   "item": "E_BACKORDER_EXCEPTION_SLIP",
+   "link_ref": "short",
+   "short_ref": "the exception slip",
+   "intro_unit": "S163",
+   "link_unit": "S262",
+   "distance_tokens": 1729
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_METOCEAN_BUOY",
+   "consumer": "E_WEATHER_ANALYST",
+   "item": "E_WAVE_BURST_RECORD",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S194",
+   "link_unit": "S323",
+   "distance_tokens": 2377
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_SCADA_GATEWAY",
+   "consumer": "E_CYBERSECURITY_GATEWAY",
+   "item": "E_SESSION_REVOCATION_RECEIPT",
+   "link_ref": "short",
+   "short_ref": "the revocation receipt",
+   "intro_unit": "S212",
+   "link_unit": "S357",
+   "distance_tokens": 2746
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_HSE_OFFICER",
+   "consumer": "E_CREW_TRANSFER_VESSEL",
+   "item": "E_HARNESS_AUDIT_CARD",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S237",
+   "link_unit": "S312",
+   "distance_tokens": 1463
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_OFFSHORE_SUBSTATION",
+   "consumer": "E_SHORE_CONTROL_ROOM",
+   "item": "E_TRANSFORMER_TAP_SNAPSHOT",
+   "link_ref": "short",
+   "short_ref": "the tap snapshot",
+   "intro_unit": "S267",
+   "link_unit": "S374",
+   "distance_tokens": 2133
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_MAINTENANCE_PLANNING_ENGINE",
+   "consumer": "E_FIELD_SUPERVISOR",
+   "item": "E_DEFERRED_TASK_RATIONALE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S285",
+   "link_unit": "S430",
+   "distance_tokens": 2717
+  },
+  {
+   "probe_id": "F11",
+   "type": "split_flow",
+   "producer": "E_BLADE_INSPECTION_DRONE",
+   "consumer": "E_BLADE_SPECIALIST",
+   "item": "E_LEADING_EDGE_TILE_IMAGE",
+   "link_ref": "short",
+   "short_ref": "the tile image",
+   "intro_unit": "S313",
+   "link_unit": "S445",
+   "distance_tokens": 2431
+  },
+  {
+   "probe_id": "F12",
+   "type": "split_flow",
+   "producer": "E_PORT_AGENT",
+   "consumer": "E_MARINE_COORDINATOR",
+   "item": "E_BERTH_SLOT_CONFIRMATION",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S324",
+   "link_unit": "S473",
+   "distance_tokens": 2795
+  },
+  {
+   "probe_id": "F13",
+   "type": "split_flow",
+   "producer": "E_EMERGENCY_GENERATOR",
+   "consumer": "E_SUBSTATION_OPERATOR",
+   "item": "E_START_TEST_TRACE",
+   "link_ref": "short",
+   "short_ref": "the test trace",
+   "intro_unit": "S353",
+   "link_unit": "S532",
+   "distance_tokens": 3359
+  },
+  {
+   "probe_id": "F14",
+   "type": "split_flow",
+   "producer": "E_GRID_INTERFACE_RELAY",
+   "consumer": "E_GRID_DISPATCHER",
+   "item": "E_EXPORT_LIMIT_ADVISORY",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S372",
+   "link_unit": "S541",
+   "distance_tokens": 3177
+  },
+  {
+   "probe_id": "F15",
+   "type": "split_flow",
+   "producer": "E_VESSEL_MASTER",
+   "consumer": "E_PERSONNEL_TRACKING_CONSOLE",
+   "item": "E_CREW_COUNT_CORRECTION",
+   "link_ref": "short",
+   "short_ref": "the count correction",
+   "intro_unit": "S390",
+   "link_unit": "S573",
+   "distance_tokens": 3427
+  },
+  {
+   "probe_id": "F16",
+   "type": "split_flow",
+   "producer": "E_CYBERSECURITY_ANALYST",
+   "consumer": "E_SCADA_ENGINEER",
+   "item": "E_FIRMWARE_HASH_ATTESTATION",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S428",
+   "link_unit": "S593",
+   "distance_tokens": 3154
+  },
+  {
+   "probe_id": "F17",
+   "type": "split_flow",
+   "producer": "E_SERVICE_OPERATIONS_VESSEL",
+   "consumer": "E_RESCUE_COORDINATOR",
+   "item": "E_RECOVERY_BASKET_LOAD_SHEET",
+   "link_ref": "short",
+   "short_ref": "the load sheet",
+   "intro_unit": "S461",
+   "link_unit": "S646",
+   "distance_tokens": 3443
+  },
+  {
+   "probe_id": "F18",
+   "type": "split_flow",
+   "producer": "E_WEATHER_ANALYST",
+   "consumer": "E_DUTY_PLANNER",
+   "item": "E_VISIBILITY_CONFIDENCE_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S472",
+   "link_unit": "S669",
+   "distance_tokens": 3673
+  },
+  {
+   "probe_id": "F19",
+   "type": "split_flow",
+   "producer": "E_WORK_PERMIT_PORTAL",
+   "consumer": "E_ELECTRICAL_TECHNICIAN",
+   "item": "E_ISOLATION_BOUNDARY_SKETCH",
+   "link_ref": "short",
+   "short_ref": "the boundary sketch",
+   "intro_unit": "S492",
+   "link_unit": "S716",
+   "distance_tokens": 4201
+  },
+  {
+   "probe_id": "F20",
+   "type": "split_flow",
+   "producer": "E_SHORE_CONTROL_ROOM",
+   "consumer": "E_OFFSHORE_SUBSTATION",
+   "item": "E_SWITCHING_WINDOW_ACKNOWLEDGMENT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S531",
+   "link_unit": "S752",
+   "distance_tokens": 4134
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_TURBINE_CONTROLLER",
+   "alias": "Glassfin",
+   "intro_unit": "S030",
+   "link_unit": "S127",
+   "distance_tokens": 1599
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_OFFSHORE_SUBSTATION",
+   "alias": "Morrowick",
+   "intro_unit": "S031",
+   "link_unit": "S189",
+   "distance_tokens": 2680
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_WEATHER_SERVICE",
+   "alias": "Pale Lantern",
+   "intro_unit": "S032",
+   "link_unit": "S128",
+   "distance_tokens": 1586
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_SCADA_GATEWAY",
+   "alias": "Juniper Vale",
+   "intro_unit": "S053",
+   "link_unit": "S171",
+   "distance_tokens": 1952
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_MAINTENANCE_PLANNING_ENGINE",
+   "alias": "Thistle Crown",
+   "intro_unit": "S055",
+   "link_unit": "S195",
+   "distance_tokens": 2389
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_SHORE_CONTROL_ROOM",
+   "alias": "Amber Quay",
+   "intro_unit": "S057",
+   "link_unit": "S214",
+   "distance_tokens": 2669
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_CREW_TRANSFER_VESSEL",
+   "alias": "Kestrel Bay",
+   "intro_unit": "S078",
+   "link_unit": "S215",
+   "distance_tokens": 2347
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_FLEET_DISPATCH_CONSOLE",
+   "alias": "Sable Orchard",
+   "intro_unit": "S080",
+   "link_unit": "S260",
+   "distance_tokens": 3076
+  },
+  {
+   "probe_id": "A9",
+   "type": "alias_ref",
+   "entity_id": "E_WAREHOUSE_SYSTEM",
+   "alias": "Mosslight",
+   "intro_unit": "S090",
+   "link_unit": "S241",
+   "distance_tokens": 2537
+  },
+  {
+   "probe_id": "A10",
+   "type": "alias_ref",
+   "entity_id": "E_METOCEAN_BUOY",
+   "alias": "Copper Finch",
+   "intro_unit": "S101",
+   "link_unit": "S231",
+   "distance_tokens": 2195
+  },
+  {
+   "probe_id": "A11",
+   "type": "alias_ref",
+   "entity_id": "E_CYBERSECURITY_GATEWAY",
+   "alias": "Quiet Harbor",
+   "intro_unit": "S110",
+   "link_unit": "S287",
+   "distance_tokens": 3064
+  },
+  {
+   "probe_id": "A12",
+   "type": "alias_ref",
+   "entity_id": "E_VESSEL_AIS_RECEIVER",
+   "alias": "Blue Granite",
+   "intro_unit": "S124",
+   "link_unit": "S288",
+   "distance_tokens": 2862
+  },
+  {
+   "probe_id": "A13",
+   "type": "alias_ref",
+   "entity_id": "E_BLADE_INSPECTION_DRONE",
+   "alias": "Larkspur",
+   "intro_unit": "S125",
+   "link_unit": "S314",
+   "distance_tokens": 3414
+  },
+  {
+   "probe_id": "A14",
+   "type": "alias_ref",
+   "entity_id": "E_WORK_PERMIT_PORTAL",
+   "alias": "Redoubt",
+   "intro_unit": "S150",
+   "link_unit": "S321",
+   "distance_tokens": 3178
+  },
+  {
+   "probe_id": "A15",
+   "type": "alias_ref",
+   "entity_id": "E_EMERGENCY_GENERATOR",
+   "alias": "Foxglove",
+   "intro_unit": "S176",
+   "link_unit": "S355",
+   "distance_tokens": 3354
+  },
+  {
+   "probe_id": "A16",
+   "type": "alias_ref",
+   "entity_id": "E_GRID_INTERFACE_RELAY",
+   "alias": "Wildmere",
+   "intro_unit": "S198",
+   "link_unit": "S373",
+   "distance_tokens": 3290
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_ACCESS_SCANNER",
+   "confusable_entity_id": "E_SOUTH_ACCESS_SCANNER",
+   "shared_head": "Access Scanner",
+   "link_unit": "S810",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_EAST_SERVICE_LIFT",
+   "confusable_entity_id": "E_WEST_SERVICE_LIFT",
+   "shared_head": "Service Lift",
+   "link_unit": "S859",
+   "distance_tokens": 0
+  }
+ ]
+}

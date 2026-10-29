@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: someone else provides \"information\" to operational staff (an information or material flow).\n\nSource sentences:\nS044: The Ambulance Coordination Platform provides a shared operational view of zone coverage and unit availability.\nS045: The Computer Aided Dispatch Console supports dispatch work, while operational staff remain responsible for verifying that displayed information is current.\nS058: Call Taker Mara gathers the patient's age, level of consciousness, breathing status, and the main reason emergency help is needed.\nS059: Call Taker Mara uses direct questions to distinguish observed symptoms from information reported by someone else.\n\nAnswer \"supported\" only if the sentences state that someone else produces or sends this item AND that operational staff receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"Someone else is stated to report information, and Call Taker Mara uses direct questions to distinguish that reported information from observed symptoms.\"}",
+ "usage": {
+  "input_tokens": 291,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 300,
+  "output_tokens_details": {
+   "reasoning_tokens": 256
+  },
+  "total_tokens": 591
+ },
+ "attempts": 1,
+ "wall_s": 4.346,
+ "created": "2026-10-13T23:47:13"
+}

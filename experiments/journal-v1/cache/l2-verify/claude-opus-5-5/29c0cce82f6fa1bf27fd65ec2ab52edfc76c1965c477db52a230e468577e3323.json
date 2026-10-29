@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Arrival Regulation Console provides \"diversion options with estimated holding exposure, likely gate or stand impact, and any expected effect on regulated arrivals already in the plan\" to Slot Coordinator (an information or material flow).\n\nSource sentences:\nS480: The Network Operations Liaison reviews whether protecting a connecting passenger group supports wider network recovery or only transfers delay to a later sector.\nS481: The Slot Coordinator protects constrained rotations by checking that a recovered gate plan remains compatible with the applicable Calculated Takeoff Time and any slot compliance expectation.\nS494: The Capacity Assessment Module evaluates runway availability, stand availability, sector load, handling capacity, and service constraints before a diversion recommendation is displayed.\nS495: The Arrival Regulation Console presents diversion options with estimated holding exposure, likely gate or stand impact, and any expected effect on regulated arrivals already in the plan.\n\nAnswer \"supported\" only if the sentences state that Arrival Regulation Console produces or sends this item AND that Slot Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S495 says the Arrival Regulation Console presents the diversion options, but no sentence says the Slot Coordinator receives or uses them; S481 only links the Slot Coordinator to gate plans and Calculated Takeoff Time compliance.\"}",
+ "usage": {
+  "input_tokens": 774,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 99,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.138,
+ "created": "2026-10-14T12:46:49"
+}

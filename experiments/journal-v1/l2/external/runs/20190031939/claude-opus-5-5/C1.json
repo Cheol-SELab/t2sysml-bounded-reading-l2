@@ -1,0 +1,1720 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0002",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "dictates schedules"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "ZFW TBFM system",
+   "label": "schedules DFW arrivals to metering fixes, Extended Metering Points and Coupled Metering Points"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "performer": "TBFM Timeline Graphical User Interface",
+   "label": "displayed schedules for all Metering Points"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "flow",
+   "source": "TBFM system",
+   "target": "TBFM Timeline Graphical User Interface",
+   "payload": "schedules"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "composition",
+   "whole": "Arrival Group",
+   "parts": [
+    "metering fixes"
+   ]
+  },
+  {
+   "unit_id": "U0004",
+   "type": "composition",
+   "whole": "En Route/Departure Coordination Group",
+   "parts": [
+    "Extended Metering Points",
+    "Coupled Metering Points"
+   ]
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "null",
+   "label": "displayed TBFM TGUIs for the Arrival or EDC Groups"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "performer": "null",
+   "label": "determined metering delays based upon frozen STA and ETA"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "communicates delays for flights with frozen STAs"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "flow",
+   "source": "TBFM system",
+   "target": "En Route Automation Modernization (ERAM) system",
+   "payload": "delays"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "null",
+   "label": "displayed delays as a 4-digit metering list"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "flow",
+   "source": "En Route Automation Modernization (ERAM) system",
+   "target": "controllers",
+   "payload": "4-digit metering list"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "controllers",
+   "label": "achieve the desired delay at each MP"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "manage arrival traffic demand into major airports"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "provides scheduling, spacing, and sequencing guidance"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "flow",
+   "source": "TBFM system",
+   "target": "Traffic Managers",
+   "payload": "scheduling, spacing, and sequencing guidance"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "flow",
+   "source": "TBFM system",
+   "target": "controllers",
+   "payload": "scheduling, spacing, and sequencing guidance"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "generate effective arrival schedules"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "allocate metering delay"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "controllers",
+   "label": "implementation of metering delay"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "Traffic Managers",
+   "label": "employ traffic management initiatives"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "null",
+   "label": "routed arrivals to a different arrival route"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "null",
+   "label": "identify and alert TMCs about routing inefficiencies"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "adjust its predicted times of arrival"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "controllers",
+   "label": "revert back to miles-in-trail operations"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "TBFM system",
+   "label": "metering of arrivals during periods of high demand"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "state",
+   "owner": "controllers",
+   "label": "miles-in-trail operations"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "transition",
+   "from": "time-based metering",
+   "to": "miles-in-trail operations",
+   "trigger": "weather"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "state",
+   "owner": "TBFM system",
+   "label": "time-based metering"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "null",
+   "label": "impact the metering STA and delay for that aircraft"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Traffic Manager",
+   "label": "evalaute the impact of arrival rerouting on STAs"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "TBFM",
+   "label": "is unable to determine the impact of such changes"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "action",
+   "performer": "Traffic Manager",
+   "label": "evaluate the impact of any prospective change"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "performer": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "label": "improving arrival traffic flow"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "label": "aids Center Traffic Managers in identifying and evaluating route changes"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "composition",
+   "whole": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "parts": [
+    "Dynamic Weather Routes",
+    "arrival-specific rerouting algorithm"
+   ]
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "performer": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "label": "combines the weather avoidance capability of NASA's Dynamic Weather Routes (DWR) with arrival-specific rerouting algorithms"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "performer": "arrival-specific rerouting algorithm",
+   "label": "continuously searches for reroute opportunities"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "performer": "null",
+   "label": "track and flight plan data are updated"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "composition",
+   "whole": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "parts": [
+    "route trial planning capability"
+   ]
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "performer": "Traffic Management Coordinators",
+   "label": "evaluate the impact of proposed DRAW reroutes on arrival scheduling"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "performer": "Traffic Management Coordinators",
+   "label": "implementing them"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "succession",
+   "before": "evaluate the impact of proposed DRAW reroutes on arrival scheduling",
+   "after": "implementing them"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "Traffic Manager",
+   "label": "manually build and trial plan a route of their own choosing"
+  },
+  {
+   "unit_id": "U0030",
+   "type": "allocation",
+   "action": "decision support tool for TMCs",
+   "to": "Center Traffic Management Units"
+  },
+  {
+   "unit_id": "U0030",
+   "type": "requirement",
+   "subject": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "text": "The DRAW system is intended to reside in Center Traffic Management Units (TMUs) as a decision support tool for TMCs."
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "label": "providing route advisories"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "flow",
+   "source": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "target": "null",
+   "payload": "route advisories"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "TBFM",
+   "label": "adjust its STAs and resulting schedule delay"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "arrival controllers",
+   "label": "work the flight"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "succession",
+   "before": "adjust its STAs and resulting schedule delay",
+   "after": "work the flight"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "label": "provide route advisories for flights with frozen STAs"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "Traffic Management Coordinators",
+   "label": "manual STA assignment or schedule rippling"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "flow",
+   "source": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "target": "null",
+   "payload": "route advisories"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "composition",
+   "whole": "DRAW interface",
+   "parts": [
+    "planview map display",
+    "scheduling timeline display"
+   ]
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "performer": "null",
+   "label": "is shown in Figure 3"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "composition",
+   "whole": "DRAW interface",
+   "parts": [
+    "DRAW Advisory List",
+    "integrated route and schedule trial planner"
+   ]
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "DRAW Advisory List",
+   "label": "displays proposed reroutes"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "flow",
+   "source": "DRAW Advisory List",
+   "target": "null",
+   "payload": "proposed reroutes"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "integrated route and schedule trial planner",
+   "label": "allows routes and corresponding schedule impact to be evaluated simultaneously"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "allocation",
+   "action": "trajectory-based route trial planner functionality",
+   "to": "planview map display"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "Traffic Management Coordinators",
+   "label": "initiate a trial plan by modifying either a DRAW-proposed route or the flight's current flight plan route"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "performer": "null",
+   "label": "Modifications can be made to the point at which the flight deviates from the flight plan route"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "performer": "trial plan trajectory",
+   "label": "automatically updates the flight's ETA, weather conflict status, and/or changes to the flight trajectory"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "null",
+   "label": "The PGUI may be displayed in both the 'home TBFM' ARTCC TMU as well as adjacent facilities"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "allocation",
+   "action": "DRAW trial planning functionality",
+   "to": "planview map display"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "composition",
+   "whole": "TBFM",
+   "parts": [
+    "integrated trial scheduler"
+   ]
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "integrated trial scheduler",
+   "label": "calculated the impact of the trial plan route and the updated ETA on the meter point(s) and runway ETAs/STAs"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "scheduling timeline display",
+   "label": "displayed on the TGUI(s)"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "flow",
+   "source": "integrated trial scheduler",
+   "target": "scheduling timeline display",
+   "payload": "impact of the trial plan route and the updated ETA"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "performer": "TGUI",
+   "label": "display trial plan impacts on schedules"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "flow",
+   "source": "TGUI",
+   "payload": "trial plan impacts on schedules"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "allocation",
+   "action": "display trial plan impacts on schedules",
+   "to": "ARTCC TMU"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "calculate polygon-based weather avoidance fields"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "utilizes current and forecasted convective weather data"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "flow",
+   "source": "Corridor Integrated Weather System",
+   "target": "DRAW",
+   "payload": "convective weather data"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "flow",
+   "source": "Convective Weather Avoidance Model",
+   "target": "DRAW",
+   "payload": "weather avoidance polygons"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "constraint",
+   "subject": "weather avoidance fields",
+   "expression": "represented by polygons"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "combines a Center-based trajectory to the meter fix with a TRACON trajectory"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "null",
+   "label": "Two weather products are displayed"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "flow",
+   "source": "Corridor Integrated Weather System",
+   "payload": "current weather"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "TMC",
+   "label": "uses the trial planner capability"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "detects and highlights forecasted weather conflicts and nearby convective weather avoidance polygons"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "succession",
+   "before": "uses the trial planner capability",
+   "after": "detects and highlights forecasted weather conflicts and nearby convective weather avoidance polygons"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "null",
+   "label": "derived from weather forecasts"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "performer": "Convective Weather Avoidance Model",
+   "label": "derived from CIWS forecast data"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "flow",
+   "source": "Corridor Integrated Weather System",
+   "target": "Convective Weather Avoidance Model",
+   "payload": "CIWS forecast data"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "constraint",
+   "subject": "weather avoidance fields",
+   "expression": "regions that 70% of pilots are likely to avoid"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "null",
+   "label": "Weather polygons are only displayed during trial planning"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "DRAW routing algorithm",
+   "label": "analyzing trajectories for conflicts internally"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "DRAW routing algorithm",
+   "label": "continuously analyzes flight trajectories"
+  },
+  {
+   "unit_id": "U0057",
+   "type": "action",
+   "performer": "null",
+   "label": "Arrival trajectories are analyzed"
+  },
+  {
+   "unit_id": "U0057",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "generate one of two types of DRAW route advisories"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "action",
+   "performer": "null",
+   "label": "DRAW route advisories are calculated"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "performer": "trial planner",
+   "label": "manually create a route"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "searches for time- savings opportunities"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "comparing the flight's current flight plan trajectory with a series of trajectories"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "constraint",
+   "subject": "DRAW route advisories",
+   "expression": "time-savings is in excess of the user defined threshold (e.g., 5 minutes)"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "requirement",
+   "subject": "DRAW",
+   "text": "If time-savings is in excess of the user defined threshold (e.g., 5 minutes), a DRAW route advisory will be triggered."
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "null",
+   "label": "a DRAW route advisory will be triggered"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "analyzes more direct routes available to MF1"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "triggers route advisories for multiple flights (AC4 and AC5)"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "constraint",
+   "subject": "DRAW route advisories",
+   "expression": "save 5 minutes or more in flight time"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "null",
+   "label": "proposed DRAW routes and their corresponding metering impacts are shown in magenta"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "provides reroutes advisories"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "flow",
+   "source": "DRAW",
+   "payload": "reroutes advisories"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "performer": "TGUI",
+   "label": "shows the current times of arrival for AC1, as well as AC2"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "flow",
+   "source": "TGUI",
+   "payload": "current times of arrival for AC1 and AC2"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "constraint",
+   "subject": "STAs",
+   "expression": "outdated and cannot be used for metering"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "composition",
+   "whole": "DRAW",
+   "parts": [
+    "dynamic weather avoidance function"
+   ]
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "dynamic weather avoidance function",
+   "label": "detects the weather conflict"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "calculate a route correction around the weather"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "post it on the DRAW Advisory List"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "flow",
+   "source": "DRAW",
+   "target": "DRAW Advisory List",
+   "payload": "route correction"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "shown in magenta in Figure 6"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "calculates a reroute to avoid the conflict and return to the currently assigned STAR"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "requirement",
+   "subject": "DRAW",
+   "text": "If returning to the current STAR is not possible, DRAW will attempt to reroute the flight to the most efficient weather-free alternate STAR."
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "attempt to reroute the flight to the most efficient weather-free alternate STAR"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "TMC",
+   "label": "selects a DRAW route advisory from the DRAW Advisory List"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "loaded into the integrated route and schedule trial planner"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "performer": "TMC",
+   "label": "evaluate before implementing"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "flow",
+   "source": "DRAW Advisory List",
+   "target": "integrated route and schedule trial planner",
+   "payload": "DRAW route advisory"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "succession",
+   "before": "selects a DRAW route advisory from the DRAW Advisory List",
+   "after": "loaded into the integrated route and schedule trial planner"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "integrated route and schedule trial planner",
+   "label": "provides functionality for the user to modify and evaluate the route being trial planned"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "TMC",
+   "label": "coordinate with the Area Supervisor"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "Area Supervisor",
+   "label": "coordinate with the appropriate sector controller to implement the reroute"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "succession",
+   "before": "evaluate before implementing",
+   "after": "coordinate with the Area Supervisor"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "succession",
+   "before": "coordinate with the Area Supervisor",
+   "after": "coordinate with the appropriate sector controller to implement the reroute"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "relay reroutes to the controller's En Route Automation Modernization display"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "flow",
+   "source": "DRAW",
+   "target": "En Route Automation Modernization display",
+   "payload": "reroutes"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "performer": "DRAW",
+   "label": "digitally communicate reroutes to the flight crew"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "flow",
+   "source": "DRAW",
+   "target": "flight crew",
+   "payload": "reroutes"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "allocation",
+   "action": "relay reroutes to the controller's En Route Automation Modernization display",
+   "to": "Airborne Reroute"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "allocation",
+   "action": "digitally communicate reroutes to the flight crew",
+   "to": "Data Comm"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "label": "coordinated with relative ease between the TMU, area supervisors and controllers"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "label": "effectively assess/modify proposed weather avoidance reroutes"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "achieved via telephone between TMCs and Area Supervisors"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "requirement",
+   "subject": "facility",
+   "text": "When flights are rerouted while located in an adjacent Center's airspace, coordination with that facility is required."
+  },
+  {
+   "unit_id": "U0093",
+   "type": "requirement",
+   "subject": "TMC",
+   "text": "This method of precoordination would require input from sectors/areas to the TMCs coordinating the reroute plan."
+  },
+  {
+   "unit_id": "U0093",
+   "type": "flow",
+   "source": "null",
+   "target": "TMC",
+   "payload": "input"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "requirement",
+   "subject": "facility",
+   "text": "each facility would be responsible for rerouting as necessary to avoid weather and meet internal operational constraints while meeting agreed-upon inter-facility boundary conditions."
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "performer": "facility",
+   "label": "rerouting as necessary to avoid weather"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "managed in real time either manually or supported by electronic requests/approval"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "action",
+   "label": "inform manual coordination with weather conflict prediction and integrated trial planning capability",
+   "performer": "DRAW"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "review both weather and schedule impact of proposed reroutes",
+   "performer": "facility"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "label": "manually coordinating operational constraints across multiple facilities",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "label": "expedite the approval process",
+   "performer": "Electronic approval requests"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "label": "conduct other tasks",
+   "performer": "TMC"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "build a trial plan reroute",
+   "performer": "TMC"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "await electronic approval of those changes",
+   "performer": "TMC"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "succession",
+   "before": "build a trial plan reroute",
+   "after": "await electronic approval of those changes"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "label": "approve the proposed reroute",
+   "performer": "TMU"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "label": "implement the reroute as originally proposed",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "succession",
+   "before": "approve the proposed reroute",
+   "after": "implement the reroute as originally proposed"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "label": "coordinate changes with additional APREQs or via telephone",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "issue a reroute without proper coordination",
+   "performer": "facility"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "approve pending flight plan amendment",
+   "performer": "TMU"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "label": "accomplish implementation",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "communicate pending flight plan amendment by voice to sector controller",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "flow",
+   "source": "null",
+   "target": "sector controller",
+   "payload": "pending flight plan amendment"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "flow",
+   "source": "sector controller",
+   "target": "flight crew",
+   "payload": "clearance"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "clearance to the flight crew",
+   "performer": "sector controller"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "entry into ERAM",
+   "performer": "sector controller"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "requirement",
+   "subject": "reroute",
+   "text": "routes should avoid use of Fix-Radial-Distance waypoints if possible"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "label": "send a reroute directly to ERAM",
+   "performer": "TBFM"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "flow",
+   "source": "TBFM",
+   "target": "ERAM",
+   "payload": "reroute"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "label": "voice communication of reroutes",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "label": "ABRR implementation of reroutes within a single facility",
+   "performer": "Airborne Reroute"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "label": "continuously evaluating flights",
+   "performer": "DRAW"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "label": "assists traffic managers",
+   "performer": "DRAW"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "label": "receives current arrival flight plan trajectories",
+   "performer": "DRAW"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "flow",
+   "source": "null",
+   "target": "DRAW",
+   "payload": "arrival flight plan trajectories"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "label": "analyzes them for opportunities to save time",
+   "performer": "DRAW"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "requirement",
+   "subject": "DRAW",
+   "text": "Data from external sources must be acquired to define the constraints and the filed flight plans"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "action",
+   "label": "acquire data from external sources",
+   "performer": "null"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "flow",
+   "source": "ERAM",
+   "target": "DRAW",
+   "payload": "Flight plan and tracks"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "flow",
+   "source": "TBFM",
+   "target": "DRAW",
+   "payload": "metering data"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "constraint",
+   "subject": "DRAW",
+   "expression": "(At least) hourly wind updates"
+  }
+ ],
+ "entities": [
+  {
+   "name": "TBFM system",
+   "aliases": [
+    "TBFM",
+    "Time-Based Flow Management (TBFM) system",
+    "home TBFM system"
+   ]
+  },
+  {
+   "name": "ZFW TBFM system",
+   "aliases": []
+  },
+  {
+   "name": "metering fixes",
+   "aliases": [
+    "MFs"
+   ]
+  },
+  {
+   "name": "Extended Metering Points",
+   "aliases": [
+    "XMPs"
+   ]
+  },
+  {
+   "name": "Coupled Metering Points",
+   "aliases": [
+    "CMPs"
+   ]
+  },
+  {
+   "name": "TBFM Timeline Graphical User Interface",
+   "aliases": [
+    "TGUI",
+    "TBFM TGUIs"
+   ]
+  },
+  {
+   "name": "Arrival Group",
+   "aliases": []
+  },
+  {
+   "name": "En Route/Departure Coordination Group",
+   "aliases": [
+    "EDC Group"
+   ]
+  },
+  {
+   "name": "home TBFM TMU",
+   "aliases": []
+  },
+  {
+   "name": "adjacent facility TMU",
+   "aliases": []
+  },
+  {
+   "name": "En Route Automation Modernization (ERAM) system",
+   "aliases": [
+    "ERAM"
+   ]
+  },
+  {
+   "name": "controllers",
+   "aliases": [
+    "air traffic controllers"
+   ]
+  },
+  {
+   "name": "4-digit metering list",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Managers",
+   "aliases": [
+    "TMCs"
+   ]
+  },
+  {
+   "name": "Traffic Flow Management System",
+   "aliases": [
+    "TFMS"
+   ]
+  },
+  {
+   "name": "traffic management initiatives",
+   "aliases": [
+    "TMIs"
+   ]
+  },
+  {
+   "name": "Severe Weather Avoidance Plan routes",
+   "aliases": [
+    "SWAP"
+   ]
+  },
+  {
+   "name": "miles-in-trail operations",
+   "aliases": [
+    "MIT"
+   ]
+  },
+  {
+   "name": "Traffic Manager",
+   "aliases": [
+    "traffic managers"
+   ]
+  },
+  {
+   "name": "TBFM",
+   "aliases": [
+    "arrival scheduling system"
+   ]
+  },
+  {
+   "name": "Dynamic Routes for Arrivals in Weather (DRAW) system",
+   "aliases": [
+    "DRAW",
+    "DRAW system"
+   ]
+  },
+  {
+   "name": "Center Traffic Managers",
+   "aliases": []
+  },
+  {
+   "name": "Dynamic Weather Routes",
+   "aliases": [
+    "DWR"
+   ]
+  },
+  {
+   "name": "arrival-specific rerouting algorithm",
+   "aliases": []
+  },
+  {
+   "name": "route trial planning capability",
+   "aliases": []
+  },
+  {
+   "name": "arrival scheduling components",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Management Coordinators",
+   "aliases": [
+    "TMCs",
+    "TMC"
+   ]
+  },
+  {
+   "name": "integrated route and schedule trial planner",
+   "aliases": [
+    "trial planner"
+   ]
+  },
+  {
+   "name": "Center Traffic Management Units",
+   "aliases": [
+    "TMUs"
+   ]
+  },
+  {
+   "name": "DRAW interface",
+   "aliases": []
+  },
+  {
+   "name": "planview map display",
+   "aliases": [
+    "Planview Graphical User Interface",
+    "PGUI"
+   ]
+  },
+  {
+   "name": "scheduling timeline display",
+   "aliases": [
+    "Timeline Graphical User Interface",
+    "TGUI"
+   ]
+  },
+  {
+   "name": "DRAW Advisory List",
+   "aliases": []
+  },
+  {
+   "name": "trial plan trajectory",
+   "aliases": []
+  },
+  {
+   "name": "integrated trial scheduler",
+   "aliases": []
+  },
+  {
+   "name": "Metering Points",
+   "aliases": [
+    "MP"
+   ]
+  },
+  {
+   "name": "arrival controllers",
+   "aliases": []
+  },
+  {
+   "name": "route advisories",
+   "aliases": []
+  },
+  {
+   "name": "proposed reroutes",
+   "aliases": []
+  },
+  {
+   "name": "track and flight plan data",
+   "aliases": []
+  },
+  {
+   "name": "Standard Terminal Arrival Route",
+   "aliases": [
+    "STAR"
+   ]
+  },
+  {
+   "name": "TGUI",
+   "aliases": [
+    "TGUIs"
+   ]
+  },
+  {
+   "name": "Arrival Group",
+   "aliases": []
+  },
+  {
+   "name": "EDC Group",
+   "aliases": []
+  },
+  {
+   "name": "ARTCC TMU",
+   "aliases": []
+  },
+  {
+   "name": "adjacent facility TMU",
+   "aliases": []
+  },
+  {
+   "name": "DRAW",
+   "aliases": [
+    "DRAW system"
+   ]
+  },
+  {
+   "name": "MIT Lincoln Labs",
+   "aliases": []
+  },
+  {
+   "name": "Corridor Integrated Weather System",
+   "aliases": [
+    "CIWS"
+   ]
+  },
+  {
+   "name": "Convective Weather Avoidance Model",
+   "aliases": [
+    "CWAM"
+   ]
+  },
+  {
+   "name": "Terminal Sequencing and Spacing",
+   "aliases": [
+    "TSAS"
+   ]
+  },
+  {
+   "name": "TRACON trajectory",
+   "aliases": []
+  },
+  {
+   "name": "Center-based trajectory",
+   "aliases": []
+  },
+  {
+   "name": "TMC",
+   "aliases": []
+  },
+  {
+   "name": "trial planner",
+   "aliases": []
+  },
+  {
+   "name": "weather avoidance fields",
+   "aliases": [
+    "WAFs",
+    "weather avoidance polygons"
+   ]
+  },
+  {
+   "name": "DRAW routing algorithm",
+   "aliases": [
+    "DRAW's rerouting algorithm"
+   ]
+  },
+  {
+   "name": "DRAW route advisories",
+   "aliases": []
+  },
+  {
+   "name": "Meter Fix 1",
+   "aliases": [
+    "MF1"
+   ]
+  },
+  {
+   "name": "Meter Fix 2",
+   "aliases": [
+    "MF2"
+   ]
+  },
+  {
+   "name": "AC1",
+   "aliases": []
+  },
+  {
+   "name": "AC2",
+   "aliases": []
+  },
+  {
+   "name": "AC4",
+   "aliases": []
+  },
+  {
+   "name": "AC5",
+   "aliases": []
+  },
+  {
+   "name": "convective weather data",
+   "aliases": []
+  },
+  {
+   "name": "current weather",
+   "aliases": []
+  },
+  {
+   "name": "forecast weather",
+   "aliases": []
+  },
+  {
+   "name": "STAs",
+   "aliases": []
+  },
+  {
+   "name": "DRAW",
+   "aliases": [
+    "DRAW system",
+    "DRAW tool"
+   ]
+  },
+  {
+   "name": "dynamic weather avoidance function",
+   "aliases": []
+  },
+  {
+   "name": "DRAW Advisory List",
+   "aliases": []
+  },
+  {
+   "name": "TMC",
+   "aliases": []
+  },
+  {
+   "name": "DRAW route advisory",
+   "aliases": []
+  },
+  {
+   "name": "integrated route and schedule trial planner",
+   "aliases": [
+    "DRAW trial planner"
+   ]
+  },
+  {
+   "name": "Area Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "sector controller",
+   "aliases": []
+  },
+  {
+   "name": "adjacent Center TMU",
+   "aliases": []
+  },
+  {
+   "name": "Airborne Reroute",
+   "aliases": [
+    "ABRR"
+   ]
+  },
+  {
+   "name": "Data Comm",
+   "aliases": []
+  },
+  {
+   "name": "En Route Automation Modernization display",
+   "aliases": [
+    "ERAM display"
+   ]
+  },
+  {
+   "name": "flight crew",
+   "aliases": []
+  },
+  {
+   "name": "STAR",
+   "aliases": []
+  },
+  {
+   "name": "route correction",
+   "aliases": []
+  },
+  {
+   "name": "TMU",
+   "aliases": []
+  },
+  {
+   "name": "Controller",
+   "aliases": []
+  },
+  {
+   "name": "facility",
+   "aliases": []
+  },
+  {
+   "name": "NAS",
+   "aliases": []
+  },
+  {
+   "name": "DRAW",
+   "aliases": [
+    "DRAW system"
+   ]
+  },
+  {
+   "name": "facility",
+   "aliases": []
+  },
+  {
+   "name": "Electronic approval requests",
+   "aliases": [
+    "APREQs",
+    "APREQ"
+   ]
+  },
+  {
+   "name": "TMC",
+   "aliases": [
+    "TMCs"
+   ]
+  },
+  {
+   "name": "TMU",
+   "aliases": [
+    "TMUs"
+   ]
+  },
+  {
+   "name": "Airborne Reroute",
+   "aliases": [
+    "ABRR"
+   ]
+  },
+  {
+   "name": "TBFM",
+   "aliases": []
+  },
+  {
+   "name": "TFMS",
+   "aliases": []
+  },
+  {
+   "name": "ERAM",
+   "aliases": []
+  },
+  {
+   "name": "sector controller",
+   "aliases": []
+  },
+  {
+   "name": "area supervisor",
+   "aliases": []
+  },
+  {
+   "name": "flight crew",
+   "aliases": []
+  },
+  {
+   "name": "pending flight plan amendment",
+   "aliases": [
+    "pending amendment"
+   ]
+  },
+  {
+   "name": "reroute",
+   "aliases": []
+  },
+  {
+   "name": "trial plan reroute",
+   "aliases": []
+  },
+  {
+   "name": "traffic managers",
+   "aliases": []
+  },
+  {
+   "name": "arrival flight plan trajectories",
+   "aliases": []
+  },
+  {
+   "name": "NOAA Rapid Refresh",
+   "aliases": []
+  },
+  {
+   "name": "CIWS",
+   "aliases": []
+  },
+  {
+   "name": "CWAM",
+   "aliases": []
+  },
+  {
+   "name": "metering data",
+   "aliases": []
+  },
+  {
+   "name": "flight track information",
+   "aliases": []
+  },
+  {
+   "name": "ABRR interface",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0019"
+   ],
+   "chunk_tokens": 914,
+   "memory_tokens": 0,
+   "prompt_tokens": 1656,
+   "input": 3390,
+   "output": 2641,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0020",
+    "U0043"
+   ],
+   "chunk_tokens": 911,
+   "memory_tokens": 0,
+   "prompt_tokens": 1672,
+   "input": 3500,
+   "output": 3954,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0044",
+    "U0071"
+   ],
+   "chunk_tokens": 893,
+   "memory_tokens": 0,
+   "prompt_tokens": 1670,
+   "input": 3435,
+   "output": 3823,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0072",
+    "U0097"
+   ],
+   "chunk_tokens": 891,
+   "memory_tokens": 0,
+   "prompt_tokens": 1660,
+   "input": 3405,
+   "output": 2925,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0098",
+    "U0116"
+   ],
+   "chunk_tokens": 907,
+   "memory_tokens": 0,
+   "prompt_tokens": 1648,
+   "input": 3348,
+   "output": 2870,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Baggage Operations Supervisor provides \"routing state\" to Concourse Zone Controller (an information or material flow).\n\nSource sentences:\nS025: Service objectives are to maintain safe screening, accurate bag-to-flight association, predictable throughput, and timely delivery within applicable departure cutoffs.\nS026: Equipment status, bag identity, routing state, and operating restrictions are exchanged through defined interfaces, with local staff responsible for resolving conditions that automated controls cannot clear.\nS174: Airline Ramp Coordinator confirms any flight-side constraint that could prevent the reconciled bag from being accepted.\nS175: Concourse Zone Controller applies the authorized routing state without bypassing required screening controls.\n\nAnswer \"supported\" only if the sentences state that Baggage Operations Supervisor produces or sends this item AND that Concourse Zone Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S175 shows the Concourse Zone Controller applying an authorized routing state, but no sentence names the Baggage Operations Supervisor as the one who produces, authorizes or sends it.\"}",
+ "usage": {
+  "input_tokens": 706,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 297,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 217
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.576,
+ "created": "2026-10-29T01:01:32"
+}

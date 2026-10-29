@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Common Situation Display provides \"Calculated Takeoff Time and Target Off Block Time\" to Slot Allocation Engine (an information or material flow).\n\nSource sentences:\nS624: The same representation supports aircraft and crew combinations that are valid only if a Target Off Block Time is achieved within a limited tolerance.\nS625: Slot Allocation Engine uses these constraints when evaluating whether a Calculated Takeoff Time should be offered, retained, exchanged, or released.\nS684: The Flight Data Exchange publishes revised Flight Intent Message content only after the approved substitution is final and time synchronized.\nS685: The Common Situation Display presents the updated Calculated Takeoff Time and Target Off Block Time so that operational users share the same view of the accepted change.\n\nAnswer \"supported\" only if the sentences state that Common Situation Display produces or sends this item AND that Slot Allocation Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Common Situation Display presents the updated times to operational users, while the Slot Allocation Engine uses constraints rather than receiving those times from the display.\"}",
+ "usage": {
+  "input_tokens": 322,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 100,
+  "output_tokens_details": {
+   "reasoning_tokens": 53
+  },
+  "total_tokens": 422
+ },
+ "attempts": 1,
+ "wall_s": 3.865,
+ "created": "2026-10-14T12:46:23"
+}

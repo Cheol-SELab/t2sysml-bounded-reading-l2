@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Helitack Crew Leader, label=acknowledge air-to-ground instructions)\n\nSource sentences (the last one is where the fact was extracted):\nS094: The North Lookout Camera Mast and the South Lookout Camera Mast provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility.\nS095: The South Lookout Camera Mast produces the Camera Cleaning Log as part of its maintenance reporting.\nS096: The Smoke Classifier Module may be temporarily down-weighted by the Sentinel Fireline Analytics Engine when observation quality is suspected to be degraded.\nS097: The Helitack Crew Leader uses the Crewline Mobile Tablet to acknowledge air-to-ground instructions and report whether crews are inside any planned drop or reconnaissance area.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S097 states that the Helitack Crew Leader uses the Crewline Mobile Tablet to acknowledge air-to-ground instructions, so the performer and the action label are both stated.\"}",
+ "usage": {
+  "input_tokens": 740,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 77,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.535,
+ "created": "2026-10-14T12:52:05"
+}

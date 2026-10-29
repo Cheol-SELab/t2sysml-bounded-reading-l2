@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Meteorology Briefing Officer provides \"the Storm Cell Snapshot\" to Capacity Assessment Module (an information or material flow).\n\nSource sentences:\nS084: The Network Operations Liaison also records external coordination outcomes in the Collaborative Decision Log so that later decisions can be reconstructed without relying on informal communications.\nS085: The Meteorology Briefing Officer produces the Storm Cell Snapshot before the pre-tactical capacity review begins.\nS132: The Capacity Assessment Module compares that demand with the Airport Capacity Plan and the current Airport Acceptance Rate before recommending operating limits.\nS133: The Capacity Assessment Module uses the Storm Cell Snapshot to qualify capacity confidence during convective weather impacts.\n\nAnswer \"supported\" only if the sentences state that Meteorology Briefing Officer produces or sends this item AND that Capacity Assessment Module receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S085 states that the Meteorology Briefing Officer produces the Storm Cell Snapshot, and S133 states that the Capacity Assessment Module uses the same item.\"}",
+ "usage": {
+  "input_tokens": 309,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 47,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 356
+ },
+ "attempts": 1,
+ "wall_s": 2.145,
+ "created": "2026-10-14T12:46:13"
+}

@@ -1,0 +1,412 @@
+{
+ "title": "Operational Concept for Automated Medication Dispensing and Delivery",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Mission, Scope, and Operating Roles",
+   "topic": "Establish the hospital workflow and introduce the Pharmacy Fulfillment Robot as “Cinderwake,” the Pharmacy Verification Station as “Juniper,” the Medication Return Kiosk as “Tallowmere,” and the Registered Nurse as “Larkspur,” while outlining initial pharmacy and return operations."
+  },
+  {
+   "index": 2,
+   "heading": "Orders, Inventory, and Cold-Chain Controls",
+   "topic": "Describe the Medication Order Gateway as “Morrowglass,” the Sensor-monitored Medication Cooler as “Bluejay,” and the Pharmacy Technician as “Copperfield,” and explain order reconciliation, cold-chain handling, and pharmacy review work."
+  },
+  {
+   "index": 3,
+   "heading": "Transport Network and Downtime Coordination",
+   "topic": "Introduce the Biomedical Engineer as “Stonewake” and explain how tube dispatch exceptions and cabinet downtime are coordinated with operations and technical support."
+  },
+  {
+   "index": 4,
+   "heading": "Verification and Physical Handoffs",
+   "topic": "Explain final pharmacy release and courier-to-tube handoffs, including the supporting records prepared before loads enter the delivery network."
+  },
+  {
+   "index": 5,
+   "heading": "Ward Receipt and Return Handling",
+   "topic": "Describe ward-side receipt and return-bin checks, including how Tallowmere supports the return process and how ward cabinet staff handle arriving loads."
+  },
+  {
+   "index": 6,
+   "heading": "Clinical Exceptions and Escalation",
+   "topic": "Set out dose-exception review and safety escalation paths, while showing Cinderwake, Juniper, and Larkspur taking distinct actions within their assigned roles."
+  },
+  {
+   "index": 7,
+   "heading": "Reconciliation and Cabinet Configuration",
+   "topic": "Explain how Morrowglass supports reconciliation, how the Pharmacy Fulfillment Robot uses order context, and how the North Ward Cabinet Controller applies its ward-specific configuration."
+  },
+  {
+   "index": 8,
+   "heading": "Cold-Chain and Tube-Route Assurance",
+   "topic": "Describe how Bluejay supports refrigerated stock controls and how the East Tube Dispatch Console handles route assurance within the pneumatic network."
+  },
+  {
+   "index": 9,
+   "heading": "Audit, Release, and Engineering Response",
+   "topic": "Explain pharmacy release checks and engineering response, with Stonewake acting on a received operational record and the South Ward Cabinet Controller applying its own configuration."
+  },
+  {
+   "index": 10,
+   "heading": "Resilience, Monitoring, and Service Recovery",
+   "topic": "Describe IT response to cabinet outages and how the West Tube Dispatch Console completes its side of the courier handoff during monitored service recovery."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_PHARMACY_ROBOT",
+   "canonical": "Pharmacy Fulfillment Robot",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_VERIFICATION_STATION",
+   "canonical": "Pharmacy Verification Station",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_CABINET",
+   "canonical": "North Ward Cabinet Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_CABINET",
+   "canonical": "South Ward Cabinet Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EAST_TUBE_CONSOLE",
+   "canonical": "East Tube Dispatch Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_TUBE_CONSOLE",
+   "canonical": "West Tube Dispatch Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MEDICATION_COOLER",
+   "canonical": "Sensor-monitored Medication Cooler",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ORDER_GATEWAY",
+   "canonical": "Medication Order Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RETURN_KIOSK",
+   "canonical": "Medication Return Kiosk",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TUBE_NETWORK",
+   "canonical": "Pneumatic Tube Network",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PHARMACIST",
+   "canonical": "Clinical Pharmacist",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PHARMACY_TECHNICIAN",
+   "canonical": "Pharmacy Technician",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_REGISTERED_NURSE",
+   "canonical": "Registered Nurse",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CHARGE_NURSE",
+   "canonical": "Charge Nurse",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_COURIER",
+   "canonical": "Hospital Courier",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_BIOMED_ENGINEER",
+   "canonical": "Biomedical Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_IT_OPERATOR",
+   "canonical": "IT Operations Specialist",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SAFETY_OFFICER",
+   "canonical": "Medication Safety Officer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PRIORITY_TOTE_TAG",
+   "canonical": "Priority Refill Tote Tag",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DOSE_REVIEW_SLIP",
+   "canonical": "Dose Exception Review Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RECONCILIATION_SNAPSHOT",
+   "canonical": "Order Reconciliation Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_HANDOFF_CARD",
+   "canonical": "Cold Chain Handoff Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ROUTE_EXCEPTION_TICKET",
+   "canonical": "Tube Route Exception Ticket",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DOWNTIME_NOTICE",
+   "canonical": "Cabinet Downtime Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_AUDIT_LABEL",
+   "canonical": "Return Bin Audit Label",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DIVERSION_PACKET",
+   "canonical": "Diversion Review Packet",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RELEASE_NOTE",
+   "canonical": "Batch Release Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SEAL_RECORD",
+   "canonical": "Pneumatic Capsule Seal Record",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_OUT_OF_SERVICE",
+   "canonical": "Out of Service",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_READY_FOR_DISPENSE",
+   "canonical": "Ready for Dispense",
+   "kind": "state"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_PHARMACY_ROBOT",
+   "alias": "Cinderwake",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_VERIFICATION_STATION",
+   "alias": "Juniper",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_RETURN_KIOSK",
+   "alias": "Tallowmere",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_REGISTERED_NURSE",
+   "alias": "Larkspur",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_ORDER_GATEWAY",
+   "alias": "Morrowglass",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_MEDICATION_COOLER",
+   "alias": "Bluejay",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_PHARMACY_TECHNICIAN",
+   "alias": "Copperfield",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_BIOMED_ENGINEER",
+   "alias": "Stonewake",
+   "intro_section": 3
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_PHARMACY_ROBOT",
+   "item": "E_PRIORITY_TOTE_TAG",
+   "consumer": "E_NORTH_CABINET",
+   "intro_section": 1,
+   "link_section": 5,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_PHARMACIST",
+   "item": "E_DOSE_REVIEW_SLIP",
+   "consumer": "E_VERIFICATION_STATION",
+   "intro_section": 1,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the review slip"
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_ORDER_GATEWAY",
+   "item": "E_RECONCILIATION_SNAPSHOT",
+   "consumer": "E_PHARMACY_ROBOT",
+   "intro_section": 2,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_PHARMACY_TECHNICIAN",
+   "item": "E_HANDOFF_CARD",
+   "consumer": "E_MEDICATION_COOLER",
+   "intro_section": 2,
+   "link_section": 8,
+   "link_ref": "short",
+   "short_ref": "the handoff card"
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_EAST_TUBE_CONSOLE",
+   "item": "E_ROUTE_EXCEPTION_TICKET",
+   "consumer": "E_BIOMED_ENGINEER",
+   "intro_section": 3,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the exception ticket"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_CHARGE_NURSE",
+   "item": "E_DOWNTIME_NOTICE",
+   "consumer": "E_IT_OPERATOR",
+   "intro_section": 3,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_RETURN_KIOSK",
+   "item": "E_AUDIT_LABEL",
+   "consumer": "E_PHARMACY_TECHNICIAN",
+   "intro_section": 1,
+   "link_section": 5,
+   "link_ref": "short",
+   "short_ref": "the audit label"
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_SAFETY_OFFICER",
+   "item": "E_DIVERSION_PACKET",
+   "consumer": "E_IT_OPERATOR",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_VERIFICATION_STATION",
+   "item": "E_RELEASE_NOTE",
+   "consumer": "E_SOUTH_CABINET",
+   "intro_section": 4,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the release note"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_COURIER",
+   "item": "E_SEAL_RECORD",
+   "consumer": "E_WEST_TUBE_CONSOLE",
+   "intro_section": 4,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_PHARMACY_ROBOT",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_VERIFICATION_STATION",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_RETURN_KIOSK",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_REGISTERED_NURSE",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_ORDER_GATEWAY",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_MEDICATION_COOLER",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_PHARMACY_TECHNICIAN",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_BIOMED_ENGINEER",
+   "link_section": 9
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_CABINET",
+   "confusable_entity_id": "E_SOUTH_CABINET",
+   "shared_head": "Ward Cabinet Controller",
+   "link_section": 7
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_TUBE_CONSOLE",
+   "confusable_entity_id": "E_WEST_TUBE_CONSOLE",
+   "shared_head": "Tube Dispatch Console",
+   "link_section": 8
+  }
+ ],
+ "writer": "gpt-6-luna",
+ "plan_sample": 0,
+ "domain": "a hospital automated medication dispensing and delivery system (pharmacy robots, ward cabinets, pneumatic tubes, nurses)"
+}

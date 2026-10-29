@@ -1,0 +1,2090 @@
+{
+  "doc_id": "20180003519",
+  "title": "Air Traffic Management Technology Demonstration - 3 (ATD-3) Dynamic Weather Routes Domestic En Route Concept of Operations Synopsis Version 1.0",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "1 INTRODUCTION Increasing the capacity and efficiency of the National Airspace System (NAS) is a primary goal of the FAA’s NextGen program."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "With the advent of area navigation capability and direct routing enabled by air traffic automation upgrades over the past decade, capacity and efficiency for en route operations is generally high during fair weather conditions."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "However, the same is not true for en route operations during adverse weather."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "Automation system limitations and the associated policies and procedures, continue to present challenges in coping with adverse weather, and lead to excessive delays, fuel consumption and environmental impacts."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "Adverse weather, namely convection/thunderstorms, winds, turbulence, snow/ice, and visibility/low ceilings, is responsible for roughly 70% of the delays in US operations."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "Weather related delays were responsible for 32,000 minutes of average delay in the NAS during the summer of 2014 [1]."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "During significant convective activity, the FAA traffic managers use severe weather avoidance plans, or Playbook routes, to safely divert traffic around weather-impacted regions."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "These strategic plans devised two or more hours in advance of departure provide predictability, but introduce large deviations from the nominal routes."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "Automation that would notify traffic managers when weather constraints have changed and that avoidance routes may no longer be necessary is not available today."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "As a result, aircraft fly longer distances, consuming more time and fuel, with higher costs for the flight operators and the general public. 2 SCOPE NASA conducted a survey in 2015 of stakeholders in industry, flight operators, and others to collect data on the most pressing air traffic management (ATM) issues impacting en route operations."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "Weather related delays and interruptions were identified as the most significant and costly problem impacting en route operations in today’s system."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "Additionally, future traffic demands will place greater demands on the FAA’s air traffic control system, necessitate a more efficient and integrated traffic management system and provide controller tools to leverage human productivity."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "Consequently, NASA is assembling a suite of integrated ground and aircraft-based technologies and decision-making aids under the Airspace Technology Demonstrations 3 (ATD-3) project to continuously search for more efficient weather-avoidance routes and to rapidly respond to weather changes and associated traffic management initiatives."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "These route efficiency enhancements are targeted at en route airspace and will enable continued use of en route and arrival metering in the presence of weather."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "NASA’s Dynamic Weather Routes (DWR) concept represents a subset of those technologies and focuses primarily on the cruise phase of flight."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "It leverages existing air traffic weather, airspace, and traffic data, as well as improvements in navigation, surveillance, communication and digital network technologies, and builds upon existing ATM automation to address the shortcomings associated with strategic traffic flow management initiatives and weather forecasting uncertainties."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "The potential benefits in the form of time, fuel, and cost savings are significant."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "This concept of operations synopsis provides a detailed description of DWR, its potential benefits and notional implementation paths. 3 CURRENT SYSTEM - SHORTFALLS In today’s operations, Traffic Management Initiatives, or TMIs, are necessary to ensure aircraft safely avoid areas of adverse weather and to meter traffic when demand in a given area exceeds air traffic control’s capacity to safely separate aircraft."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "Although necessary for safety, route diversions and metering can be overly conservative due to uncertainty in weather forecasts and air traffic control capacity limitations in sectors adjacent to the weather."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "When significant convective activity is forecasted to develop in an area of the NAS, FAA traffic managers identify those areas as Flow Constrained Area (FCA), and may implement Severe Weather Avoidance Plans (SWAP), or Playbook routes, to safely divert traffic around those weather-impacted regions."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "Playbook routes are identified 2 to 8 hours prior to the time the constraint is predicted to develop, to provide traffic managers and aircraft operators with ample time to prepare and assign the necessary resources where needed."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "This lead time combined with uncertainties in weather forecasts often results in overly conservative deviations around actual weather."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "Playbook routes tend to be very conservative both geographically and temporally to account for uncertainties in forecast accuracy."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "This typically results in the selected playbook routes giving predicted weather-impacted areas a wide berth to account for those forecast uncertainties, and helps minimize subsequent changes, which can be complicated and time-consuming to implement once the SWAP routes are in play."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "Additionally, these large-scale rerouting actions also tend to use a static approach by finding the best compromise between weather avoidance, controller workload, and route efficiency...prioritized in that order."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "Due to the difficulty in applying changes, aircraft often remain on conservative routes which are not required for weather avoidance."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "Modifying those routes for aircraft already in flight requires a lot of coordination and can be time-consuming."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "And there is no automation in the current system to help operators identify workable opportunities for time and fuel- saving corrections to weather avoidance routes that have become stale due to changing weather and forecast uncertainty."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "Air traffic controllers, airline dispatchers and pilots can manually identify and request or amend these conservative routes as things progress to improve efficiency."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "However, the associated workload to do so is very high at a time when controllers and dispatchers are very busy."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "Consequently, aircraft often remain on circuitous routes long after the driving constraint is gone thereby incurring costly and unnecessary delays, and fuel consumption."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "Airline flight dispatchers must file flight plans at least 45 min before push-back from the gate using their best available weather forecasts, but in practice flight plans are typically filed 1-2 hours before take-off."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "When SWAP routes are in effect, dispatchers determine which SWAP routes are applicable to a flight’s planned route of flight and file a revised route accordingly."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "Efforts have been made to apply more tactical operational tools to account for changes."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "A good example is the Collaborative Trajectory Options Program (CTOP), which allows operators to file multiple routes on a single flight plan based on the amount of departure delay to which the flight is subjected and the operators associated preferences for that flight."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "Although this provides a level of improvement over traditional single-route flight plans and rerouting procedures, it is still strategic in nature."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "Therefore it provides no improvement in efficiency, flexibility and responsiveness to changes after departure."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "Additionally, flight crews lack the tools to identify more efficient routes that will avoid congested airspace or conflicts with other aircraft."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "And although they can identify more efficient trajectories using flight management systems and weather radar, they are unable to see convective weather anywhere beyond the limits of their on-board radar."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "They often must consult either the controller or airline dispatch about alternate trajectories that will avoid large areas of adverse weather and flow restrictions, and must coordinate with the controller to ensure an alternate trajectory will not conflict with another aircraft."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "Therefore, automation tools for controllers, dispatchers, and/or flight crews that can continuously monitor real-time and short-term weather forecasts, and dynamically find workable opportunities for time- and fuel-saving corrections to weather avoidance routes, have the potential to significantly improve the efficiency in both en route and terminal transition airspace. 4 DYNAMIC WEATHER ROUTES (DWR) SYSTEM DESCRIPTION Over the past several years, NASA has developed and tested a ground-based concept called Dynamic Weather Routes (DWR) to automatically identify opportunities for more efficient trajectories around convective constraints [2][3][10]."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "DWR is trajectory-based concept that continuously and automatically analyzes in-flight aircraft within en route airspace to find simple amendments to flight plan routes that can save significant flying time, while accounting for convective weather, traffic conflicts, airspace sector congestion, special use airspace, and FAA routing restrictions."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "DWR then alerts the user to proposed route corrections and allows them to view and modify the route prior to requesting or issuing a new route clearance."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "Additionally, the DWR user interface provides strong warnings if a user modifies a DWR route such that its trial trajectory conflicts with forecast weather or traffic."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "Because there are various methods and degrees to which DWR could be implemented in FAA automation systems, the term “automation” as used in this paper is intended to be generic unless specified otherwise."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "DWR is an extension of the Direct-To tool developed and tested at NASA from 1998 through 2001 [4], and as a result the Direct-To functionality of identifying conflict free, operationally acceptable, direct route clearances is an integral part of DWR."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "Any Direct-To route that meets the minimum wind- corrected, time-savings criteria (user-definable) will appear as a DWR route correction advisory regardless of the presence of convective weather."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "Although DWR is designed to address weather related inefficiencies, its underlying logic of identifying and avoiding constraints defined by polygons would enable it to be applied to non-weather related obstacles."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "Doing so could result in substantial benefits in the form of fuel, emissions and controller/pilot workload savings."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "DWR works by continuously and automatically analyzing in-flight aircraft operating within en route airspace above 10,000 ft to find opportunities for time- and fuel-saving corrections to weather avoidance routes, or simple wind-favorable direct to routes."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "Route corrections are simple route changes like those typically used in today’s operations."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "DWR analyzes and updates trajectories as new radar track and flight plan data are received [2]."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "DWR identifies flights that could save a user-defined minimum amount of time (default of five minutes) by short-cutting their current trajectory and returning to the flight plan trajectory via a downstream waypoint on their current flight plan route."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "The DWR flight selection and route correction advisory logic are illustrated in Figures 1 and 2 and summarized as follows."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "All flights at or above 10,000 ft are continuously and automatically analyzed to determine if a direct route trajectory from a Maneuver Start Point (MSP) to a default Return Capture Fix (RCF) could save the user-defined minimum time or more in wind-corrected flight time."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "The MSP is programmable and currently defaults to a point 5 min downstream of present position or to the first point in the high altitude airspace."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "The default RCF for any flight is intended to approximate an operationally acceptable direct route clearance given the location and routing of the flight, the local airspace, and arrival routing limits at the destination airport."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "RCF selection is described in more detail below."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "It is assumed that if a direct route to the RCF, the so-called reference direct route, can save 5 min or more, the flight is likely on some kind of weather avoidance route."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "The reference direct route is then probed for weather and traffic conflicts."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "If weather conflicts are detected, DWR automation inserts one or two auxiliary waypoints as needed in an attempt to identify a minimum delay route around the weather."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "The MSP or any inserted waypoints may optionally be further adjusted automatically to achieve an integrated resolution to weather and traffic conflicts."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "If a solution is found that can save the minimum wind-corrected flight time as defined by the user (5 min default), then a DWR route advisory is posted to an alert list on the user display."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "Figure 1: DWR Concept Overview Inserted auxiliary waypoints are initially computed using fix-radial-distance points which may be placed anywhere for a minimum delay solution."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "A snap-to named fix option automatically replaces any auxiliary waypoints with nearby named fixes for ease of use in voice-based operations."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "Snap-To solutions that avoid weather, or optionally weather and traffic, are posted to the DWR alert list if they meet the minimum flight-time savings criteria."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "The current flight plan trajectory and the DWR-advised trajectory are both analyzed for conflict with congested airspace sectors and with Special Use Airspace (SUA)."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "The traffic congestion and SUA status are incorporated into the user interface display so the user may consider these factors when evaluating the DWR route advisory."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "By clicking the DWR advisory the user activates an automated interactive trial planning function to visualize the route and if necessary modify the RCF, the MSP, and any inserted auxiliary waypoints."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "Flight-time savings and weather and traffic conflicts status update rapidly (within 1 sec) and automatically as the user modifies the DWR route."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "Figure 2: DWR Automation Process The RCF is a downstream fix on the current Center route of flight at which the DWR route correction rejoins the original flight plan trajectory."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "A limit function unique to the particular airspace region (i.e., unique to each Center’s airspace) determines the default RCF to be used for DWR route correction computations."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "The purpose of the limit function is to define a default RCF for any flight given its present position and current route of flight such that a direct route from present aircraft track position to the RCF is generally operationally acceptable if weather were not a factor."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "The RCF is a function of Center airspace and arrival routing limits, and may be a function of other factors such as the particular routing (city pair routing for example) in the given Center airspace and the first-tier adjacent Center airspace."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "The RCF is generally not the last fix within the Center boundary where the aircraft is currently located."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "The NASA DWR automation for Fort Worth Center employs a limit rectangle that extends roughly 200 nmi beyond the ZFW boundary (see Figure 3)."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "The default RCF is either the last flight plan fix inside the limit rectangle or, for aircraft landing inside the limit rectangle, the last fix before the arrival STAR."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Another approach is to analyze historically observed direct route clearances in each Center and use frequently occurring direct route clearances to define a convex limit polygon."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "In this approach the limit polygon replaces the simpler limit rectangle, but the fix selection logic is otherwise the same."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "This empirically derived limit polygon approach has been implemented in the Future ATM Concept Evaluation Tool (FACET) implementation of DWR called National Airspace System Constraint Evaluation and Notification Tool (NASCENT)."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "Other methods, such as choosing the RCF based on the particular city pair routing within a Center, could also be implemented."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "Figure 3: Capture Fix Limit Regions (rectangle and polygon) Early in the testing of DWR at American Airlines, users identified the need for an MSP in the DWR trajectory modeling."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "Depending on workload and other factors, users may need several minutes of coordination time before the point at which a flight is expected to depart the current trajectory to fly a DWR route."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "An MSP located a user-definable number of minutes downstream of present position on the current flight plan trajectory, or for climbing flights, the point at which the flight is predicted to be in high-altitude airspace (FL240 for ZFW), enables users to see the effect of coordination delay on trajectory status parameters like weather proximity, flying time savings, traffic conflicts, and level flight status, which is particularly important for climbing flights that may not have reached the high altitude airspace."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "Five minutes was generally the accepted default value used during the trials with American Airlines [3]."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "All DWR advisories initially incorporate the default MSP."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "Once in trial planning, the user may adjust the MSP using click and drag inputs and assess the effect on status parameters."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "If the MSP is within 10 nmi of a flight plan fix, the MSP snaps to the flight plan fix."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "Auxiliary waypoints are added when needed to avoid weather, or optionally weather and traffic, and provide the minimum-delay route based on geometry and winds."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "If a route correction is found that can save the user-defined minimum time or more relative to the current flight plan, the flight is posted to a list displayed to an FAA traffic manager or to an airline ATC coordinator (see Figure 4)."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "The user is provided with a DWR reroute advisory for each flight that fits the weather-avoidance and time-savings criteria, and can select and modify the new route prior to clearing the aircraft to fly it."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "Auxiliary waypoints are defined using fix-radial-distance format, and a “snap-to” option utilizes nearby named fixes for ease of use in today’s operations (see Figure 1)."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "DWR route correction advisories are posted to a DWR flight list as shown in Figure 4."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "The list, ordered by potential flight-time savings, includes all flights for which a route correction advisory has been identified, and for which the user has responsibility, and is prominently displayed on the user’s traffic display."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "Each list element includes the flight ID (call sign), the estimated flight-time savings, and other relevant summary information such as city pair, aircraft type, route correction summary (e.g., RCF and number of inserted auxiliary waypoints), and summary information pertinent to the status of traffic conflicts, traffic congestion, and any FAA routing restrictions."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "Any given flight for which a route correction advisory has been identified at the last trajectory update remains on the flight list."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "Figure 4: DWR List Also shown for each list entry there are traffic (TR), sector load (SC), and weather (WX) conflict status indicators."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "A number in the TR column indicates minutes to a detected conflict on the DWR route."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "An “SC” entry in the SC column is color coded yellow or red indicating the DWR route is predicted to pass through a sector in yellow or red congestion status."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "An R in the TMI columns indicates that the flight is currently impacted by an active Route TMI."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "Figure 5 shows the display interface for DWR."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "The big window on the left is the Plan-view Graphical User Interface."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "In this window, a flight’s ‘Current flight plan route’ is shown in a solid-white line and represents a SWAP/Playbook route."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "The proposed ‘DWR’ advisory is shown as a dashed-white line."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "The downstream ‘Capture fix’ used to compute the direct route, and the ‘Auxiliary waypoint’ used to find the route around convective weather polygons, are displayed as well."
+    },
+    {
+      "unit_id": "U0106",
+      "text": "Flights that have sufficient user-defined flight-time savings are displayed in the ‘DWR list’ on the top-left part of the big window."
+    },
+    {
+      "unit_id": "U0107",
+      "text": "Figure 5: DWR Route Display Auxiliary Waypoint Return Capture Fix Maneuver Start (SWAP Route) Point (MSP) The long window at the bottom shows the current flight plan route and DWR advisory, along with time- savings for various downstream fixes at left."
+    },
+    {
+      "unit_id": "U0108",
+      "text": "This is labeled as the ‘Capture fix menu & flying time savings’ in the figure."
+    },
+    {
+      "unit_id": "U0109",
+      "text": "The two windows on the right show the sector congestion for the current flight plan route (top) and the DWR advisory (bottom)."
+    },
+    {
+      "unit_id": "U0110",
+      "text": "The corresponding sector congestion values (as red or yellow sectors) for those routes are shown within."
+    },
+    {
+      "unit_id": "U0111",
+      "text": "Red sectors are those where the congestion is caused by aircraft that are all currently airborne, while yellow sectors have proposed departure aircraft causing predicted congestion."
+    },
+    {
+      "unit_id": "U0112",
+      "text": "This allows DWR users to visualize proposed routes and modify them if necessary using point, click, and drag inputs."
+    },
+    {
+      "unit_id": "U0113",
+      "text": "Users can adjust the RCF, the number and position of auxiliary waypoints, and the MSP through interactive points, click, and drag actions if needed."
+    },
+    {
+      "unit_id": "U0114",
+      "text": "Metrics, including flight time savings (or delay), proximity to current and forecast weather, downstream sector congestion, traffic conflicts, and SUA conflicts, all update dynamically as the user modifies a proposed route."
+    },
+    {
+      "unit_id": "U0115",
+      "text": "Conflicts with weather or traffic cause DWR to dismiss a potential reroute (trial plan) and keep searching for another (see Figure 6)."
+    },
+    {
+      "unit_id": "U0116",
+      "text": "Figure 6: Example of trial plan with weather and traffic conflicts that would prevent DWR from suggesting this route."
+    },
+    {
+      "unit_id": "U0117",
+      "text": "Research indicates that digital communication of proposed DWR routes between ATC and the flight deck combined with on-board display of proposed route, would allow much faster review and approval of the DWR route [4] [5]. 4.1 CONVECTIVE WEATHER MODEL DWR utilizes convective weather forecast data from FAA’s Corridor Integrated Weather System (CIWS) and Convective Weather Avoidance Model (CWAM) [15-17] to identify routes that will avoid convective cells."
+    },
+    {
+      "unit_id": "U0118",
+      "text": "CIWS forecasts the growth, decay, and movement of convective weather and updates every 5 minutes with a 2-hour look-ahead time in 5-minute increments (see Figure 7)."
+    },
+    {
+      "unit_id": "U0119",
+      "text": "This allows DWR to identify alternative routes that are predicted to remain clear of weather at the time the flight is calculated to pass the cell(s)."
+    },
+    {
+      "unit_id": "U0120",
+      "text": "Figure 7: CIWS and CWAM Forecast Sample Figure 8: CIWS cell and corresponding 60, 70, & 80% CWAM polygons CWAM identifies boundaries around convective cells that represent the distance by which flight crews are expected to deviate around the cell [15][16][17]."
+    },
+    {
+      "unit_id": "U0121",
+      "text": "The boundary polygon, known as a Weather Avoidance Field (WAF), represents the probability a flight crew will deviate around the cell based on storm intensity, echo tops, and look-ahead time."
+    },
+    {
+      "unit_id": "U0122",
+      "text": "A WAF is identified by the probability that a given percentage of pilots would deviate around the storm at that distance based on extensive historical data."
+    },
+    {
+      "unit_id": "U0123",
+      "text": "For a given weather cell and altitude, 70% of WAF polygons are generally smaller with their boundaries closer to the weather cells than are 60% WAF polygons (see Figure 8)."
+    },
+    {
+      "unit_id": "U0124",
+      "text": "WAF polygons (60, 70, and 80%) are identified for every 5-minute CWIS forecast interval out to 2 hours, at flight levels ranging from FL250 to FL450 in 1,000’ increments."
+    },
+    {
+      "unit_id": "U0125",
+      "text": "DWR normally utilizes 70% WAF polygons when generating route advisories, but the default WAF parameter can be selected at system start up. 4.2 CONVECTIVE CELL GAP DETECTION AND REJECTION DWR logic includes gap detection and rejection logic to ensure a gap is large enough to safely route aircraft."
+    },
+    {
+      "unit_id": "U0126",
+      "text": "This function includes a distance buffer that will reject a route amendment if it will go through a gap that is narrower than 50nm laterally (user-adjustable parameter) either side of route and 75nm longitudinally (user-adjustable parameter) to the predicted cells at the time the aircraft reaches the point closest to the cells (see Figure 9)."
+    },
+    {
+      "unit_id": "U0127",
+      "text": "If convective cells are predicted to encroach on one side of a trajectory but not on the other, (blue polygons in left graphic of Figure 9) it is generally not considered an operational problem because there is room for flight crews to maneuver around the cell."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        0,
+        139
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        140,
+        367
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        368,
+        445
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        446,
+        656
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        657,
+        827
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        828,
+        945
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        946,
+        1124
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        1125,
+        1276
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        1277,
+        1437
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        1438,
+        1780
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        1781,
+        1929
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        1930,
+        2165
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2166,
+        2503
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2504,
+        2664
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2665,
+        2803
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2804,
+        3144
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3145,
+        3228
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "normalized_body_span": [
+        3229,
+        3644
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        3645,
+        3853
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        3854,
+        4153
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4154,
+        4382
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4383,
+        4517
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4518,
+        4648
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4649,
+        4931
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4932,
+        5145
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5146,
+        5279
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5280,
+        5391
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5392,
+        5629
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5630,
+        5796
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5797,
+        5909
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5910,
+        6079
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6080,
+        6298
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6299,
+        6461
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6462,
+        6549
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6550,
+        6821
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6822,
+        6969
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        6970,
+        7080
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7081,
+        7225
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7226,
+        7429
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7430,
+        7709
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7710,
+        8364
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8365,
+        8712
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8713,
+        8866
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8867,
+        9034
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9035,
+        9239
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9240,
+        9490
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9491,
+        9686
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9687,
+        9899
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9900,
+        10015
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10016,
+        10271
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10272,
+        10363
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10364,
+        10459
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10460,
+        10710
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10711,
+        10833
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10834,
+        11105
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11106,
+        11253
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11254,
+        11483
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11484,
+        11532
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11533,
+        11705
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11706,
+        11782
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11783,
+        11949
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11950,
+        12102
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        12103,
+        12292
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "normalized_body_span": [
+        12293,
+        12467
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12468,
+        12608
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12609,
+        12769
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12770,
+        12935
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12936,
+        13101
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13102,
+        13301
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13302,
+        13446
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13447,
+        13624
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13625,
+        13800
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13801,
+        14072
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14073,
+        14317
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14318,
+        14423
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14424,
+        14564
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14565,
+        14733
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14734,
+        14912
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14913,
+        15036
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "normalized_body_span": [
+        15037,
+        15264
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15265,
+        15390
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15391,
+        15569
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15570,
+        15762
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15763,
+        16281
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16282,
+        16386
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16387,
+        16444
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16445,
+        16568
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16569,
+        16656
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16657,
+        16816
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16817,
+        17052
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "normalized_body_span": [
+        17053,
+        17258
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17259,
+        17429
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17430,
+        17515
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17516,
+        17750
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17751,
+        18117
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18118,
+        18250
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18251,
+        18387
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18388,
+        18472
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18473,
+        18631
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18632,
+        18727
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18728,
+        18773
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18774,
+        18843
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18844,
+        18967
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18968,
+        19028
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19029,
+        19202
+      ]
+    },
+    {
+      "unit_id": "U0106",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19203,
+        19336
+      ]
+    },
+    {
+      "unit_id": "U0107",
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "normalized_body_span": [
+        19337,
+        19589
+      ]
+    },
+    {
+      "unit_id": "U0108",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19590,
+        19668
+      ]
+    },
+    {
+      "unit_id": "U0109",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19669,
+        19795
+      ]
+    },
+    {
+      "unit_id": "U0110",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19796,
+        19900
+      ]
+    },
+    {
+      "unit_id": "U0111",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19901,
+        20082
+      ]
+    },
+    {
+      "unit_id": "U0112",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20083,
+        20199
+      ]
+    },
+    {
+      "unit_id": "U0113",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20200,
+        20348
+      ]
+    },
+    {
+      "unit_id": "U0114",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20349,
+        20572
+      ]
+    },
+    {
+      "unit_id": "U0115",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20573,
+        20707
+      ]
+    },
+    {
+      "unit_id": "U0116",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20708,
+        20825
+      ]
+    },
+    {
+      "unit_id": "U0117",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "normalized_body_span": [
+        20826,
+        21281
+      ]
+    },
+    {
+      "unit_id": "U0118",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21282,
+        21447
+      ]
+    },
+    {
+      "unit_id": "U0119",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21448,
+        21598
+      ]
+    },
+    {
+      "unit_id": "U0120",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21599,
+        21859
+      ]
+    },
+    {
+      "unit_id": "U0121",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21860,
+        22051
+      ]
+    },
+    {
+      "unit_id": "U0122",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22052,
+        22208
+      ]
+    },
+    {
+      "unit_id": "U0123",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22209,
+        22381
+      ]
+    },
+    {
+      "unit_id": "U0124",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22382,
+        22552
+      ]
+    },
+    {
+      "unit_id": "U0125",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "normalized_body_span": [
+        22553,
+        22850
+      ]
+    },
+    {
+      "unit_id": "U0126",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        22851,
+        23195
+      ]
+    },
+    {
+      "unit_id": "U0127",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        23196,
+        23457
+      ]
+    }
+  ],
+  "removed_blocks": [
+    {
+      "page": 9,
+      "block": 5,
+      "text": "7",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 8,
+      "text": "8",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 8,
+      "text": "9",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 5,
+      "text": "10",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 3,
+      "text": "11",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 6,
+      "text": "12",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 6,
+      "text": "13",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 7,
+      "text": "14",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 6,
+      "text": "15",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 6,
+      "text": "16",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 9,
+      "text": "17",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 7,
+      "text": "18",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 7,
+      "text": "19",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 6,
+      "text": "20",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 7,
+      "text": "21",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 11,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 13,
+      "text": "22",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 3,
+      "text": "23",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 9,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 10,
+      "text": "24",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 6,
+      "text": "25",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 12,
+      "text": "26",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 7,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 8,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 9,
+      "text": "27",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 30,
+      "block": 8,
+      "text": "28",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 31,
+      "block": 5,
+      "text": "29",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 9,
+      "text": "30",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 3,
+      "text": "31",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 34,
+      "block": 8,
+      "text": "32",
+      "reason": "numeric_or_repeated_header"
+    }
+  ],
+  "source_only": true
+}

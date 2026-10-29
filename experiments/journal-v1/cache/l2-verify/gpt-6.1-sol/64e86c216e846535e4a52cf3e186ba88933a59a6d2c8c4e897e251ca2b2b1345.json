@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Weather Service provides \"the Squall Window Bulletin\" to Maintenance Planning Engine (an information or material flow).\n\nSource sentences:\nS082: The Marine Coordinator uses that view to coordinate the Crew Transfer Vessel, the Service Operations Vessel, and the Daughter Craft as conditions require.\nS083: The Weather Service produces the Squall Window Bulletin for operational awareness.\nS212: SCADA Gateway produces the Session Revocation Receipt when an authenticated control session is terminated.\nS213: Maintenance Planning Engine uses the Squall Window Bulletin when reviewing the timing of planned work.\n\nAnswer \"supported\" only if the sentences state that Weather Service produces or sends this item AND that Maintenance Planning Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S083 states that Weather Service produces the Squall Window Bulletin, and S213 states that Maintenance Planning Engine uses the same bulletin.\"}",
+ "usage": {
+  "input_tokens": 287,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 43,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 330
+ },
+ "attempts": 1,
+ "wall_s": 6.874,
+ "created": "2026-10-14T12:52:51"
+}

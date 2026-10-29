@@ -1,0 +1,2806 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "is embarking on a 21st century space exploration initiative via the Moon to Mars and Artemis programs"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "Moon to Mars",
+   "label": "aim to es- tablish a sustained lunar presence and explore the moon’s surface using innovative technologies"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "Artemis",
+   "label": "aim to es- tablish a sustained lunar presence and explore the moon’s surface using innovative technologies"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "Moon to Mars",
+   "label": "es- tablish a sustained lunar presence"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "Artemis",
+   "label": "es- tablish a sustained lunar presence"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "Moon to Mars",
+   "label": "explore the moon’s surface using innovative technologies"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "Artemis",
+   "label": "explore the moon’s surface using innovative technologies"
+  },
+  {
+   "unit_id": "U0002",
+   "type": "action",
+   "label": "enable crew autonomy"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "requirement",
+   "subject": "human spaceflight work domain",
+   "text": "The existing human spaceflight work domain must undergo a substantial transformation to redistribute and create work capabilities among future flight teams, which includes both crew and Earth based mission support personnel."
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "human spaceflight work domain",
+   "label": "must undergo a substantial transformation"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "label": "redistribute and create work capabilities among future flight teams"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "composition",
+   "whole": "future flight teams",
+   "parts": [
+    "crew",
+    "Earth based mission support personnel"
+   ]
+  },
+  {
+   "unit_id": "U0004",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "crew will be given greater access to a variety of information to make locally informed decisions."
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "label": "will be given greater access to a variety of information"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "performer": "crew",
+   "label": "make locally informed decisions"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "requirement",
+   "subject": "broader flight team",
+   "text": "The broader flight team will need to simultaneously interact with this data and provide new means of support throughout the mission as crew take on more responsibility and authority."
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "broader flight team",
+   "label": "simultaneously interact with this data"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "broader flight team",
+   "label": "provide new means of support throughout the mission"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "crew",
+   "label": "take on more responsibility and authority"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "requirement",
+   "text": "Achieving increased crew autonomy will require new technologies and operational concepts to fa- cilitate information exchange among the flight team and crew in future planetary exploration work demands."
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "label": "Achieving increased crew autonomy"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "label": "will require new technologies and operational concepts"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "performer": "new technologies",
+   "label": "fa- cilitate information exchange among the flight team and crew in future planetary exploration work demands"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "performer": "operational concepts",
+   "label": "fa- cilitate information exchange among the flight team and crew in future planetary exploration work demands"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "proposed requirements for a digital display for an EVA spacesuit"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "digital display",
+   "label": "provide relevant information to the crew member"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "flow",
+   "source": "digital display",
+   "target": "crew member",
+   "payload": "relevant information"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "Joint Augmented Reality Visual Informatics System",
+   "label": "pursued four years of research and development towards a suit-display system in a near-eye, AR form factor"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "constraint",
+   "subject": "Joint Augmented Reality Visual Informatics System",
+   "expression": "four years of research and development"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "attribute",
+   "owner": "suit-display system",
+   "name": "form factor",
+   "value": "near-eye, AR"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "performer": "Joint Augmented Reality Visual Informatics System",
+   "label": "developing software (cus- tom graphics engine and core flight software), physical hardware prototyping (controls, projection display optics, suited display platform), virtual prototyping platform (a virtual reality testbed), and human-in-the-loop (HITL) operational testing"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "label": "informed by EVA flight controllers, crew members, and human factors engineers for con-ops definition"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "composition",
+   "whole": "software",
+   "parts": [
+    "custom graphics engine",
+    "core flight software"
+   ]
+  },
+  {
+   "unit_id": "U0009",
+   "type": "composition",
+   "whole": "physical hardware",
+   "parts": [
+    "controls",
+    "projection display optics",
+    "suited display platform"
+   ]
+  },
+  {
+   "unit_id": "U0009",
+   "type": "composition",
+   "whole": "virtual prototyping platform",
+   "parts": [
+    "virtual reality testbed"
+   ]
+  },
+  {
+   "unit_id": "U0010",
+   "type": "composition",
+   "whole": "Concept of Operations",
+   "parts": [
+    "revision"
+   ]
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "label": "was pro- duced by the project"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "allocation",
+   "action": "was pro- duced by the project",
+   "to": "Joint Augmented Reality Visual Informatics System"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "revision",
+   "label": "summarize the use-cases and and user experiences developed throughout the project"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "label": "developed throughout the project"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "revision",
+   "label": "refine the Basic revision originally drafted at the beginning of the project life cycle"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "label": "originally drafted at the beginning of the project life cycle"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "summarize and make available the scenario devel- opment efforts"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "label": "have been pursued and explored within the Joint AR project"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "performer": "advanced informatics displays",
+   "label": "support those specified scenarios"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "provides a variety of approaches to deconstruct and hypothesize how future technological capabilities so that with future EVA work demands can be satisfied within future human planetary spaceflight missions"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "label": "deconstruct and hypothesize how future technological capabilities"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "label": "can be satisfied within future human planetary spaceflight missions"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "label": "is intended to support two audiences"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "label": "enable advanced informatics for EVA operations"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "extends the spacesuit informatics concepts found within published NASA documentation"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "label": "found within published NASA documentation"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "exploring a variety of possi- ble envisioned futures"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "help imagine and describe what future EVA operations could look like"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "crew",
+   "label": "having decision support capabilities via an advanced informatics display"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "offering solutions"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "of- fers a deliberate attempt to articulate the simultaneous creation of both the situated work demands of future EVA operations and the corresponding value propositions of Joint AR capabilities"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "articulate the simultaneous creation of both the situated work demands of future EVA operations and the corresponding value propositions of Joint AR capabilities"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "label": "can be distilled to inform subsequent work domain development efforts in conjunction with technological development"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "shared vision of future EVA operations",
+   "label": "inform subsequent work domain development efforts in conjunction with technological development"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "requirement",
+   "subject": "Proposed changes",
+   "text": "Proposed changes to this document shall be submitted to JSC-EV3 for consideration and disposi- tion."
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "label": "shall be submitted to JSC-EV3 for consideration and disposi- tion"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "flow",
+   "target": "JSC-EV3",
+   "payload": "Proposed changes"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "released its Moon-to-Mars Architecture Definition Document"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "flow",
+   "source": "National Aeronautics and Space Administration",
+   "payload": "Moon-to-Mars Architecture Definition Document"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "Moon-to-Mars Architecture Definition Document",
+   "label": "serves to set the baseline goals"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "Moon-to-Mars Architecture Definition Document",
+   "label": "set the baseline goals"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "create a systems engineering framework for the necessary program contributions"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "return to the Moon"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "journey on to Mars"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "Moon-to-Mars Architecture Definition Document",
+   "label": "has established high level objectives in a variety of domains including science, infrastructure, transportation and habitation, and operations"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "Meeting these objectives"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "will provide the scientific and technical capabilities for sustained lunar and eventual Martian presence"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "requirement",
+   "text": "Meeting these objectives will provide the scientific and technical capabilities for sustained lunar and eventual Martian presence."
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "label": "have been monitored and coordinated with reliance on Earth-based Mission Control Center (MCC)"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "action",
+   "label": "require future missions to be independent from Earth in a way not yet seen in space flight"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "Crew on these long duration missions will need technologies that promote autonomy across all phases of flight."
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "performer": "crew",
+   "label": "will need technologies that promote autonomy across all phases of flight"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "performer": "technologies",
+   "label": "promote autonomy across all phases of flight"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "Objective OP-2",
+   "label": "reads Optimize operations, training and interaction between the team on Earth, crew members on orbit, and a Martian surface team considering communication delays, autonomy level, and time required for an early return to the Earth"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "label": "Optimize operations, training and interaction between the team on Earth, crew members on orbit, and a Martian surface team considering communication delays, autonomy level, and time required for an early return to the Earth"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "requirement",
+   "subject": "technologies",
+   "text": "technologies and new ways of working need to be developed to ensure mission goals are accomplished within the environmental constraints that will be present in future missions (e.g. limited communication bandwidth between all members of the flight team)."
+  },
+  {
+   "unit_id": "U0026",
+   "type": "requirement",
+   "subject": "new ways of working",
+   "text": "technologies and new ways of working need to be developed to ensure mission goals are accomplished within the environmental constraints that will be present in future missions (e.g. limited communication bandwidth between all members of the flight team)."
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "label": "need to be developed"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "label": "ensure mission goals are accomplished within the environmental constraints that will be present in future missions"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "label": "are accomplished within the environmental constraints that will be present in future missions"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "Imagining how to support all phases of a future mission in new ways, with novel technology"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "support all phases of a future mission in new ways, with novel technology"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "label": "broadly aligns with the envisioned world problem"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "label": "is offered as a case study for how to begin the process of enabling Earth-independence"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "label": "begin the process of enabling Earth-independence"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "label": "enabling Earth-independence"
+  },
+  {
+   "unit_id": "U0030",
+   "type": "action",
+   "label": "employed in this document"
+  },
+  {
+   "unit_id": "U0030",
+   "type": "action",
+   "label": "are inspired by the deliberate discussion of user context [14, 13, 1], function allocation [2], and work domain construction [8]"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "attempt to help imagine the work domain that might one day exist and grapple with the practical realities of working in that hypothetical future"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "help imagine the work domain that might one day exist"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "grapple with the practical realities of working in that hypothetical future"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "working in that hypothetical future"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "label": "aim to explore hypothetical future moments during EVA execution"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "label": "explore hypothetical future moments during EVA execution"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "label": "establish more specific account of the contextually relevant details of existing concept of operations documents"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "Section 5",
+   "label": "explores moments within Phase 7 \"EVA Operations\" as shown in Figure 3.1"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "label": "shown in Figure 3.1"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "state",
+   "label": "Phase 7"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "Section 6",
+   "label": "describes potential solutions within the context of those hypothesized moments"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "Section 6",
+   "label": "help show how a spacesuit-compatible informatics system could help the user in that particular situation"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "spacesuit-compatible informatics system",
+   "label": "could help the user in that particular situation"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "action",
+   "performer": "Section 4",
+   "label": "provides an overview of the methods involved in this detailed concept of operations process"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "describes how this document builds upon details found in parent concept of operations documents (Section 3.1)"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "builds upon details found in parent concept of operations documents (Section 3.1)"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "found in parent concept of operations documents (Section 3.1)"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "Section 3.2",
+   "label": "provides rationale on why a spacesuit-compatible augmented reality informatics system is the highest value proposition solution regarding an EVA informatics display system"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "label": "were used to prioritize the scope of content in this document"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "label": "prioritize the scope of content in this document"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "Figure 3.1",
+   "label": "outlines the over-arching phases of operation that are anticipated to be involved in future EVA operations"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "label": "are anticipated to be involved in future EVA operations"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "Section 7.2.8",
+   "label": "adds details regarding the variety of potential engineering and science tasks crew might perform"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "APPENDIX F",
+   "label": "adds details regarding the variety of potential engineering and science tasks crew might perform"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "crew",
+   "label": "might perform"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "composition",
+   "whole": "EVA-EXP-0042 - Exploration EVA System Concept of Operations",
+   "parts": [
+    "Section 7.2.8",
+    "APPENDIX F"
+   ]
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "performer": "APPENDIX H INFORMATICS",
+   "label": "outlines a list of potentially desirable advanced digital content capabilities"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "found in EVA-EXP-0042"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "is shown in Figure 3.2 with annotations of the anticipated interconnections"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "will be required if an advanced informatics display such as an augmented reality display is to ever be realized"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "is to ever be realized"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "text": "the anticipated interconnections that will be required if an advanced informatics display such as an augmented reality display is to ever be realized"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "requirement",
+   "subject": "advanced informatics device",
+   "text": "an advanced informatics device must not only service the needs of the suited crew member, but it must also support the broader team of remote support personnel and accommodate interfaces with a variety of other EVA assets."
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "advanced informatics device",
+   "label": "must not only service the needs of the suited crew member"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "advanced informatics device",
+   "label": "must also support the broader team of remote support personnel"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "advanced informatics device",
+   "label": "accommodate interfaces with a variety of other EVA assets"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "label": "cannot simply be designed for a single user"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "performer": "subset of human spaceflight operations",
+   "label": "requires a team of people and a variety of assets"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "xEVAS System Requirements Document",
+   "label": "outlines the expected advanced informatics capabilities of future spacesuits within RQMT-065"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "composition",
+   "whole": "xEVAS System Requirements Document",
+   "parts": [
+    "RQMT-065"
+   ]
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "is summarized along- side the desired features outlined in EVA-EXP-0042 in Figure 3.3"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "outlined in EVA-EXP-0042"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "help bound the capabilities discussed in the remainder of this document"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "discussed in the remainder of this document"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "label": "align with concept of operations expectations"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "requirement",
+   "subject": "xEVAS vendors",
+   "text": "current xEVAS vendors are not required to imple- ment an AR form factor as the necessary display for their spacesuits"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "xEVAS vendors",
+   "label": "are not required to imple- ment an AR form factor as the necessary display for their spacesuits"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "xEVAS vendors",
+   "label": "imple- ment an AR form factor as the necessary display for their spacesuits"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "EXP-EVA-0042",
+   "label": "continues to hypothesize that an augmented reality experience for the crew member will yield the most desired crew informatics interface possible to conduct an EVA"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "continues to hypothesize that an augmented reality experience for the crew member will yield the most desired crew informatics interface possible to conduct an EVA"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "augmented reality experience",
+   "label": "will yield the most desired crew informatics interface possible"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "requirement",
+   "subject": "augmented reality experience",
+   "text": "an augmented reality experience for the crew member will yield the most desired crew informatics interface possible to conduct an EVA."
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "crew member",
+   "label": "conduct an EVA"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "label": "See Section 3.2 for more discussion on the value proposition of an augmented reality system"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "action",
+   "label": "might be performed"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "do not provide the amount of detail required to actually situate how an advanced informatics system might support future user work demands during an EVA"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "defined in Section 4.1.3 of EXP- EVA-0042"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "Figure 3.2",
+   "label": "highlights how an AR Device must be integrated with the surrounding assets that encompass the broader EVA system"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "requirement",
+   "subject": "AR Device",
+   "text": "an AR Device must be integrated with the surrounding assets that encompass the broader EVA system"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "label": "must be integrated with the surrounding assets that encompass the broader EVA system"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "composition",
+   "whole": "broader EVA system",
+   "parts": [
+    "electronic systems",
+    "human agents"
+   ]
+  },
+  {
+   "unit_id": "U0051",
+   "type": "requirement",
+   "subject": "suited crew members",
+   "text": "the suited crew members must dependent to perform EVA work."
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "suited crew members",
+   "label": "perform EVA work"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "label": "actually situate how an advanced informatics system might support future user work demands during an EVA"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "advanced informatics system",
+   "label": "might support future user work demands during an EVA"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "label": "found in Section 5 below"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "label": "focus on expanding Phase 7 \"EVA Operations\" via a series of use-cases"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "label": "expanding Phase 7 \"EVA Operations\" via a series of use-cases"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "does not attempt to document all possible informatics display form factors and their corresponding value propositions"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "document all possible informatics display form factors and their corresponding value propositions"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "label": "make a deliberate attempt to propose that an augmented reality system as an informatics display technology offers the most desired end result of capabilities to support future EVA operations"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "label": "propose that an augmented reality system as an informatics display technology offers the most desired end result of capabilities to support future EVA operations"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "augmented reality system",
+   "label": "offers the most desired end result of capabilities to support future EVA operations"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "augmented reality system",
+   "label": "support future EVA operations"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "discussed in this section"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "motivates the Joint AR solution"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "was driven by the design philosophies outlined below"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "outlined below"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system for suited crew operations",
+   "text": "An advanced informatics display and control system for suited crew operations should: Maximize EV crew productivity without compromising their safety."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system for suited crew operations",
+   "text": "An advanced informatics display and control system for suited crew operations should: Minimize the number of discrete physical acts required by the EV crew to operate."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system for suited crew operations",
+   "text": "An advanced informatics display and control system for suited crew operations should: Minimize the amount of time required to change from the current state to a desired state."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system for suited crew operations",
+   "text": "An advanced informatics display and control system for suited crew operations should: Minimize the interference with other means of communication among the work system (e.g., audio, visual)."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system for suited crew operations",
+   "text": "An advanced informatics display and control system for suited crew operations should: Provide redundant means of control for EV crew."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "advanced informatics display and control system for suited crew operations",
+   "label": "Maximize EV crew productivity without compromising their safety"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "advanced informatics display and control system for suited crew operations",
+   "label": "compromising their safety"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "advanced informatics display and control system for suited crew operations",
+   "label": "Minimize the number of discrete physical acts required by the EV crew to operate"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "EV crew",
+   "label": "operate"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "advanced informatics display and control system for suited crew operations",
+   "label": "Minimize the amount of time required to change from the current state to a desired state"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "change from the current state to a desired state"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "advanced informatics display and control system for suited crew operations",
+   "label": "Minimize the interference with other means of communication among the work system (e.g., audio, visual)"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "advanced informatics display and control system for suited crew operations",
+   "label": "Provide redundant means of control for EV crew"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "action",
+   "label": "achieving EVA goals"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "label": "theoretically offers the fastest mode of information access"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "label": "having the data immediately in view and contextualized within crew surroundings for consumption"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "crew would not be required to physically handle a piece of separate display hard- ware like a portable display (e.g. tablet)"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "action",
+   "performer": "crew",
+   "label": "would not be required to physically handle a piece of separate display hard- ware like a portable display (e.g. tablet)"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "action",
+   "performer": "crew",
+   "label": "physically handle a piece of separate display hard- ware like a portable display (e.g. tablet)"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "action",
+   "performer": "portable display",
+   "label": "requires time and attention of the crew member"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "is integrated with the helmet bubble"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "offers the potential to align digital content within the real-world view from the crew member’s first person perspective"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "align digital content within the real-world view from the crew member’s first person perspective"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "registered AR",
+   "label": "could further reduce the necessary time for the crew member to view and understand digital content while performing EVA"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "crew member",
+   "label": "view and understand digital content"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "crew member",
+   "label": "performing EVA"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "could simply see the desti- nation they need to reach in their real-world"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "need to reach"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "looking at the horizon"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "look at a 2-dimensional map"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "perform the orienting work required to transform 2-D map data into their 3-D surroundings to identify where to travel"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "transform 2-D map data into their 3-D surroundings"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "identify where to travel"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "crew",
+   "label": "travel"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "requirement",
+   "subject": "control schemes",
+   "text": "numerous different control schemes should be considered for feasibility, ease of use, and overall functionality compatible with a suit-compatible AR system."
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "label": "should be considered for feasibility, ease of use, and overall functionality compatible with a suit-compatible AR system"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "Joint Augmented Reality Visual Informatics System",
+   "label": "advocates that a multi-modal control scheme that includes both direct EV control (e.g. physical crew control and hands free control), in tandem with remote control offers the most flexibil- ity to support EVA work dynamics"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "composition",
+   "whole": "multi-modal control scheme",
+   "parts": [
+    "direct EV control",
+    "remote control"
+   ]
+  },
+  {
+   "unit_id": "U0065",
+   "type": "composition",
+   "whole": "direct EV control",
+   "parts": [
+    "physical crew control",
+    "hands free control"
+   ]
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "multi-modal control scheme",
+   "label": "offers the most flexibil- ity to support EVA work dynamics"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "multi-modal control scheme",
+   "label": "support EVA work dynamics"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "label": "ebbs and flows through a series of possible situations that necessitate a fluid control scheme among the broader flight team"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "label": "necessitate a fluid control scheme among the broader flight team"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "crew",
+   "label": "are facing"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "crew",
+   "label": "might experience a brief communication outage with their remote teammates"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "might be prevented when crew hands are occupied with task work"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "are occupied with task work"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "audio conversations",
+   "label": "might preclude or interrupt the activation of voice control commands"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "label": "is to be used and found useful by crew"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "display and control system",
+   "text": "if an advanced informatics display is to be used and found useful by crew, the display and control system must be capable of coping with the complexities of the jobs that crew will face in future operational scenarios."
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "performer": "display and control system",
+   "label": "must be capable of coping with the complexities of the jobs that crew will face in future operational scenarios"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "performer": "crew",
+   "label": "will face in future operational scenarios"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "label": "please see Refs: [10, 11]"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "prioritizes the deliberate articulation of future work domain attributes and potential corresponding solutions to demands faced by users in those hypothetical situations"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "action",
+   "label": "faced by users in those hypothetical situations"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "summarized below"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "can begin to be addressed"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "Proposed changes",
+   "label": "will effect the character of the field of practice in the future"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "function in that field of practice in the future"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "practice when that envisioned world becomes concrete"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "can easily be disconnected or even contradict, from the research base, the actual consequences of the changes on people, technology and work"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "can be realized"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "stem from many people having internalized assumptions about what a future system is and what it could and should do"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "having internalized assumptions about what a future system is and what it could and should do"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "could and should do"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "label": "help build a common vision for what the future work could look like"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "performer": "Concept of Operations",
+   "label": "implements the approach shown Figure 4.1"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "label": "shown Figure 4.1"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "label": "acknowledge that there is a boundless set of options that might exist one day"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "cope with the limitless possibilities"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "encourage the deliberate construction of a finite set of imagined futures to help narrow the discussion"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "help narrow the discussion"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "discussed in Section 4.1"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "overcome some of the initial challenges of the envisioned world problem"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "performer": "use case narratives",
+   "label": "provide a deliberate set of specific instances that address plurality, underspecification, and ungrounded concerns"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "performer": "momentary demands",
+   "label": "provide a deliberate set of specific instances that address plurality, underspecification, and ungrounded concerns"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "address plurality, underspecification, and ungrounded concerns"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "Providing interface prototypes that trace directly to momentary de- mands"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "performer": "interface prototypes",
+   "label": "trace directly to momentary de- mands"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "provide a mechanism to help address being overconfident by calibrating user expectations to meet the moment in question"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "help address being overconfident"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "calibrating user expectations to meet the moment in question"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "meet the moment in question"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "requirement",
+   "text": "These efforts should be coupled with iterative prototype testing of a real-world solution help build alignment with system expectations and capabilities within the work domain being built."
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "should be coupled with iterative prototype testing of a real-world solution"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "help build alignment with system expectations and capabilities within the work domain being built"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "being built"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "described here"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "depends on a highly iterative refinement"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "requirement",
+   "text": "The framing described here depends on a highly iterative refinement and should serve as a means by which a group of people can imagine in a common direction."
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "should serve as a means by which a group of people can imagine in a common direction"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "can imagine in a common direction"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "requirement",
+   "text": "Agreement and discussion should be iteratively assessed on the use case narratives, momentary demands, and user interface prototypes."
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "label": "should be iteratively assessed on the use case narratives, momentary demands, and user interface prototypes"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "is not meant to serve as a standalone method"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "serve as a standalone method"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "demonstrate how to start the process of understanding envisioned user needs and iteratively discover potential solutions as documented in existing human-centered design processes"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "start the process of understanding envisioned user needs"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "understanding envisioned user needs"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "iteratively discover potential solutions"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "documented in existing human-centered design processes"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "Figure 4.2",
+   "label": "shows the components of the use cases defined in this document"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "defined in this document"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "flow",
+   "source": "Figure 4.2",
+   "payload": "components of the use cases"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "performer": "section header",
+   "label": "conveys the primary work goal illustrated within the hypothetical use case narrative"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "label": "illustrated within the hypothetical use case narrative"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "flow",
+   "source": "section header",
+   "payload": "primary work goal"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "action",
+   "label": "are represented with their respective icons"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "performer": "icons",
+   "label": "representing all possible agents"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "are derived from the elements outlined in the EXP-EVA-0042 document"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "outlined in the EXP-EVA-0042 document"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "see Figure 3.2"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "label": "is written in the third person perspective"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "performer": "body of the narrative",
+   "label": "showcases the sequence of interactions among appropriate agent(s) and their informatics display"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "flow",
+   "source": "body of the narrative",
+   "payload": "sequence of interactions among appropriate agent(s) and their informatics display"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "informatics display",
+   "label": "addresses pertinent momentary demands related to information needs for successful task completion"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "label": "is indicated in superscript within the narrative"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "may not be listed in the footnote for that use case"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "was already referenced/defined in a previously stated narrative"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "performer": "Figure 4.3",
+   "label": "shows the synthesized work demands identified in the use cases with corresponding feature elements"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "label": "identified in the use cases"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "flow",
+   "source": "Figure 4.3",
+   "payload": "synthesized work demands"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "label": "were considered the minimum amount of necessary information a user could hypothetically require in order to answer that specific work demand"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "user",
+   "label": "could hypothetically require"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "user",
+   "label": "answer that specific work demand"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "performer": "Figure 4.4",
+   "label": "shows the corresponding work demand and representative user interface"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "flow",
+   "source": "Figure 4.4",
+   "payload": "corresponding work demand and representative user interface"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "label": "is annotated with the features represented on the screen"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "label": "represented on the screen"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "label": "indicate how those features might be represented for user interpretation"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "label": "might be represented for user interpretation"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "flow",
+   "source": "screen",
+   "target": "user",
+   "payload": "feature elements"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "attribute",
+   "owner": "Black components of the user interface",
+   "name": "transparency",
+   "value": "transparent to the user"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "label": "was selected for early prototyping"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "label": "increase the likelihood of fielding a visible and legible interface solution"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "label": "fielding a visible and legible interface solution"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "attribute",
+   "owner": "user interface",
+   "name": "early prototyping color",
+   "value": "monochrome green"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "action",
+   "label": "is outlined approximately in Figure 4.5"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "performer": "prototype user interface solutions",
+   "label": "assume a monocular, monochromatic transparent AR solution that is seam- lessly integrated with the helmet bubble"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "is seam- lessly integrated with the helmet bubble"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "attribute",
+   "owner": "monocular, monochromatic transparent AR solution",
+   "name": "optical configuration",
+   "value": "monocular, monochromatic transparent"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "attribute",
+   "owner": "display",
+   "name": "placement",
+   "value": "slightly offset to the right side of the user and slightly above the horizontal field of view"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "shown in Figure 4.5"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "help situate the context of the user interface displays described in the subsequent section"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "described in the subsequent section"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "label": "See Ref: [11] for more details on the broader Joint AR solution"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "label": "described in this document"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "label": "are supported by a multi-modal control scheme"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "composition",
+   "whole": "multi-modal control scheme",
+   "parts": [
+    "crew physical hand controller"
+   ]
+  },
+  {
+   "unit_id": "U0101",
+   "type": "composition",
+   "whole": "crew physical hand controller",
+   "parts": [
+    "button",
+    "dial"
+   ]
+  },
+  {
+   "unit_id": "U0101",
+   "type": "attribute",
+   "owner": "crew physical hand controller",
+   "name": "configuration",
+   "value": "two-button and dial configuration"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "attribute",
+   "owner": "crew physical hand controller",
+   "name": "button count",
+   "value": "2"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "composition",
+   "whole": "Hands-free control",
+   "parts": [
+    "voice control",
+    "remote control"
+   ]
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "is decomposed into specific features considered by the Joint AR team"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "considered by the Joint AR team"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "allocation",
+   "action": "considered by the Joint AR team",
+   "to": "Joint AR team"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "are provided for a large portion of the work demands discussed in this document"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "discussed in this document"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "label": "Note"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "label": "provided here"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "label": "offer a specific traceable method to connect use case demands to user interface and experience considerations"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "label": "connect use case demands to user interface and experience considerations"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "label": "provided"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "performer": "prototype solutions",
+   "label": "offer a snapshot of potential solutions to critique, examine, and adjust via iterative prototype development and testing"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "critique, examine, and adjust via iterative prototype development and testing"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "label": "providing potential system solution content in this concept of operations document"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "label": "help explicitly link use case assumptions and corresponding system design concepts"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "contains a variety of EVA operations tasks as summarized in parent documents found in Section 3.1"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "summarized in parent documents found in Section 3.1"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "found in Section 3.1"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "label": "extends this content by elaborating on specific hypothetical moments that future crew members might face"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "label": "elaborating on specific hypothetical moments that future crew members might face"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "crew members",
+   "label": "might face"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "crew members",
+   "label": "utilizing an advanced informatics display"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "label": "summarized below"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "label": "are presented in the form as described in Section 4.1.1"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "label": "described in Section 4.1.1"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "requirement",
+   "subject": "reader",
+   "text": "The reader should approach this content with the expectation that the moments and corresponding work as- sumptions described in each use case should be a topic of specific debate and discussion."
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "reader",
+   "label": "should approach this content with the expectation that the moments and corresponding work as- sumptions described in each use case should be a topic of specific debate and discussion"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "label": "described in each use case"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "requirement",
+   "text": "the moments and corresponding work as- sumptions described in each use case should be a topic of specific debate and discussion."
+  }
+ ],
+ "entities": [
+  {
+   "name": "Concept of Operations",
+   "aliases": []
+  },
+  {
+   "name": "National Aeronautics and Space Administration",
+   "aliases": [
+    "NASA"
+   ]
+  },
+  {
+   "name": "Moon to Mars",
+   "aliases": []
+  },
+  {
+   "name": "Artemis",
+   "aliases": []
+  },
+  {
+   "name": "moon",
+   "aliases": []
+  },
+  {
+   "name": "Mars",
+   "aliases": []
+  },
+  {
+   "name": "Earth",
+   "aliases": []
+  },
+  {
+   "name": "human spaceflight work domain",
+   "aliases": []
+  },
+  {
+   "name": "work capabilities",
+   "aliases": []
+  },
+  {
+   "name": "future flight teams",
+   "aliases": []
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "Earth based mission support personnel",
+   "aliases": []
+  },
+  {
+   "name": "information",
+   "aliases": []
+  },
+  {
+   "name": "locally informed decisions",
+   "aliases": []
+  },
+  {
+   "name": "broader flight team",
+   "aliases": []
+  },
+  {
+   "name": "new technologies",
+   "aliases": []
+  },
+  {
+   "name": "operational concepts",
+   "aliases": []
+  },
+  {
+   "name": "digital display",
+   "aliases": []
+  },
+  {
+   "name": "EVA spacesuit",
+   "aliases": []
+  },
+  {
+   "name": "relevant information",
+   "aliases": []
+  },
+  {
+   "name": "crew member",
+   "aliases": []
+  },
+  {
+   "name": "Joint Augmented Reality Visual Informatics System",
+   "aliases": [
+    "Joint AR"
+   ]
+  },
+  {
+   "name": "suit-display system",
+   "aliases": []
+  },
+  {
+   "name": "software",
+   "aliases": []
+  },
+  {
+   "name": "custom graphics engine",
+   "aliases": []
+  },
+  {
+   "name": "core flight software",
+   "aliases": []
+  },
+  {
+   "name": "physical hardware",
+   "aliases": []
+  },
+  {
+   "name": "controls",
+   "aliases": []
+  },
+  {
+   "name": "projection display optics",
+   "aliases": []
+  },
+  {
+   "name": "suited display platform",
+   "aliases": []
+  },
+  {
+   "name": "virtual prototyping platform",
+   "aliases": []
+  },
+  {
+   "name": "virtual reality testbed",
+   "aliases": []
+  },
+  {
+   "name": "human-in-the-loop operational testing",
+   "aliases": [
+    "HITL operational testing"
+   ]
+  },
+  {
+   "name": "EVA flight controllers",
+   "aliases": []
+  },
+  {
+   "name": "crew members",
+   "aliases": []
+  },
+  {
+   "name": "human factors engineers",
+   "aliases": []
+  },
+  {
+   "name": "con-ops definition",
+   "aliases": []
+  },
+  {
+   "name": "CTSD-ADV-1788 Rev. Basic",
+   "aliases": []
+  },
+  {
+   "name": "revision",
+   "aliases": []
+  },
+  {
+   "name": "use-cases",
+   "aliases": []
+  },
+  {
+   "name": "user experiences",
+   "aliases": []
+  },
+  {
+   "name": "scenario development efforts",
+   "aliases": []
+  },
+  {
+   "name": "scenarios",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics displays",
+   "aliases": []
+  },
+  {
+   "name": "future technological capabilities",
+   "aliases": []
+  },
+  {
+   "name": "future EVA work demands",
+   "aliases": []
+  },
+  {
+   "name": "future human planetary spaceflight missions",
+   "aliases": []
+  },
+  {
+   "name": "vendor",
+   "aliases": []
+  },
+  {
+   "name": "researchers",
+   "aliases": []
+  },
+  {
+   "name": "technology developers",
+   "aliases": []
+  },
+  {
+   "name": "spacesuit informatics concepts",
+   "aliases": []
+  },
+  {
+   "name": "published NASA documentation",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR capabilities",
+   "aliases": []
+  },
+  {
+   "name": "shared vision of future EVA operations",
+   "aliases": []
+  },
+  {
+   "name": "Proposed changes",
+   "aliases": []
+  },
+  {
+   "name": "JSC-EV3",
+   "aliases": []
+  },
+  {
+   "name": "Moon-to-Mars Architecture Definition Document",
+   "aliases": []
+  },
+  {
+   "name": "systems engineering framework",
+   "aliases": []
+  },
+  {
+   "name": "high level objectives",
+   "aliases": []
+  },
+  {
+   "name": "Earth-independent missions",
+   "aliases": []
+  },
+  {
+   "name": "space missions",
+   "aliases": []
+  },
+  {
+   "name": "Earth-based Mission Control Center",
+   "aliases": [
+    "MCC"
+   ]
+  },
+  {
+   "name": "radio communications",
+   "aliases": []
+  },
+  {
+   "name": "future missions",
+   "aliases": []
+  },
+  {
+   "name": "technologies",
+   "aliases": []
+  },
+  {
+   "name": "Objective OP-2",
+   "aliases": []
+  },
+  {
+   "name": "team on Earth",
+   "aliases": []
+  },
+  {
+   "name": "crew members on orbit",
+   "aliases": []
+  },
+  {
+   "name": "Martian surface team",
+   "aliases": []
+  },
+  {
+   "name": "new ways of working",
+   "aliases": []
+  },
+  {
+   "name": "mission goals",
+   "aliases": []
+  },
+  {
+   "name": "environmental constraints",
+   "aliases": []
+  },
+  {
+   "name": "envisioned world problem",
+   "aliases": []
+  },
+  {
+   "name": "subset of human spaceflight operations",
+   "aliases": [
+    "EVA"
+   ]
+  },
+  {
+   "name": "user context",
+   "aliases": []
+  },
+  {
+   "name": "function allocation",
+   "aliases": []
+  },
+  {
+   "name": "work domain construction",
+   "aliases": []
+  },
+  {
+   "name": "Section 5",
+   "aliases": []
+  },
+  {
+   "name": "Phase 7",
+   "aliases": [
+    "EVA Operations"
+   ]
+  },
+  {
+   "name": "Figure 3.1",
+   "aliases": []
+  },
+  {
+   "name": "Section 6",
+   "aliases": []
+  },
+  {
+   "name": "spacesuit-compatible informatics system",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": []
+  },
+  {
+   "name": "Section 4",
+   "aliases": []
+  },
+  {
+   "name": "parent concept of operations documents",
+   "aliases": []
+  },
+  {
+   "name": "Section 3.1",
+   "aliases": []
+  },
+  {
+   "name": "Section 3.2",
+   "aliases": []
+  },
+  {
+   "name": "spacesuit-compatible augmented reality informatics system",
+   "aliases": []
+  },
+  {
+   "name": "EVA informatics display system",
+   "aliases": []
+  },
+  {
+   "name": "EVA-EXP-0042 - Exploration EVA System Concept of Operations",
+   "aliases": []
+  },
+  {
+   "name": "xEVAS System Requirement Document",
+   "aliases": []
+  },
+  {
+   "name": "RQMT-065",
+   "aliases": []
+  },
+  {
+   "name": "Section 7.2.8",
+   "aliases": []
+  },
+  {
+   "name": "APPENDIX F",
+   "aliases": []
+  },
+  {
+   "name": "engineering and science tasks",
+   "aliases": []
+  },
+  {
+   "name": "APPENDIX H INFORMATICS",
+   "aliases": []
+  },
+  {
+   "name": "advanced digital content capabilities",
+   "aliases": []
+  },
+  {
+   "name": "exploration EVA system",
+   "aliases": []
+  },
+  {
+   "name": "Figure 3.2",
+   "aliases": []
+  },
+  {
+   "name": "augmented reality display",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics device",
+   "aliases": []
+  },
+  {
+   "name": "suited crew member",
+   "aliases": []
+  },
+  {
+   "name": "remote support personnel",
+   "aliases": []
+  },
+  {
+   "name": "EVA assets",
+   "aliases": []
+  },
+  {
+   "name": "xEVAS System Requirements Document",
+   "aliases": [
+    "SRD"
+   ]
+  },
+  {
+   "name": "future spacesuits",
+   "aliases": []
+  },
+  {
+   "name": "Figure 3.3",
+   "aliases": []
+  },
+  {
+   "name": "xEVAS vendors",
+   "aliases": []
+  },
+  {
+   "name": "AR form factor",
+   "aliases": []
+  },
+  {
+   "name": "EXP-EVA-0042",
+   "aliases": []
+  },
+  {
+   "name": "augmented reality experience",
+   "aliases": []
+  },
+  {
+   "name": "crew informatics interface",
+   "aliases": []
+  },
+  {
+   "name": "augmented reality system",
+   "aliases": []
+  },
+  {
+   "name": "xEVA System",
+   "aliases": []
+  },
+  {
+   "name": "Section 4.1.3",
+   "aliases": []
+  },
+  {
+   "name": "EXP-0042",
+   "aliases": []
+  },
+  {
+   "name": "Figure 5.2",
+   "aliases": []
+  },
+  {
+   "name": "AR Device",
+   "aliases": []
+  },
+  {
+   "name": "broader EVA system",
+   "aliases": []
+  },
+  {
+   "name": "electronic systems",
+   "aliases": []
+  },
+  {
+   "name": "human agents",
+   "aliases": []
+  },
+  {
+   "name": "suited crew members",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics system",
+   "aliases": []
+  },
+  {
+   "name": "narratives",
+   "aliases": []
+  },
+  {
+   "name": "user interface solutions",
+   "aliases": []
+  },
+  {
+   "name": "display form factors",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR solution",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display and control system for suited crew operations",
+   "aliases": []
+  },
+  {
+   "name": "EV crew",
+   "aliases": []
+  },
+  {
+   "name": "data",
+   "aliases": []
+  },
+  {
+   "name": "separate display hardware",
+   "aliases": []
+  },
+  {
+   "name": "portable display",
+   "aliases": []
+  },
+  {
+   "name": "tablet",
+   "aliases": []
+  },
+  {
+   "name": "helmet bubble",
+   "aliases": []
+  },
+  {
+   "name": "digital content",
+   "aliases": []
+  },
+  {
+   "name": "registered AR",
+   "aliases": []
+  },
+  {
+   "name": "destination",
+   "aliases": []
+  },
+  {
+   "name": "2-dimensional map",
+   "aliases": []
+  },
+  {
+   "name": "2-D map data",
+   "aliases": []
+  },
+  {
+   "name": "3-D surroundings",
+   "aliases": []
+  },
+  {
+   "name": "control schemes",
+   "aliases": []
+  },
+  {
+   "name": "suit-compatible AR system",
+   "aliases": []
+  },
+  {
+   "name": "multi-modal control scheme",
+   "aliases": []
+  },
+  {
+   "name": "direct EV control",
+   "aliases": []
+  },
+  {
+   "name": "physical crew control",
+   "aliases": []
+  },
+  {
+   "name": "hands free control",
+   "aliases": []
+  },
+  {
+   "name": "remote control",
+   "aliases": []
+  },
+  {
+   "name": "control method",
+   "aliases": []
+  },
+  {
+   "name": "remote teammates",
+   "aliases": []
+  },
+  {
+   "name": "physical hand control",
+   "aliases": []
+  },
+  {
+   "name": "audio conversations",
+   "aliases": []
+  },
+  {
+   "name": "voice control commands",
+   "aliases": []
+  },
+  {
+   "name": "display and control system",
+   "aliases": []
+  },
+  {
+   "name": "future work domain attributes",
+   "aliases": []
+  },
+  {
+   "name": "Figure 4.1",
+   "aliases": []
+  },
+  {
+   "name": "use case narratives",
+   "aliases": []
+  },
+  {
+   "name": "momentary demands",
+   "aliases": [
+    "I want to... statements"
+   ]
+  },
+  {
+   "name": "interface prototypes",
+   "aliases": []
+  },
+  {
+   "name": "user expectations",
+   "aliases": []
+  },
+  {
+   "name": "iterative prototype testing",
+   "aliases": []
+  },
+  {
+   "name": "real-world solution",
+   "aliases": []
+  },
+  {
+   "name": "user interface prototypes",
+   "aliases": []
+  },
+  {
+   "name": "envisioned user needs",
+   "aliases": []
+  },
+  {
+   "name": "Figure 4.2",
+   "aliases": []
+  },
+  {
+   "name": "use cases",
+   "aliases": []
+  },
+  {
+   "name": "section header",
+   "aliases": []
+  },
+  {
+   "name": "primary work goal",
+   "aliases": []
+  },
+  {
+   "name": "use case narrative",
+   "aliases": []
+  },
+  {
+   "name": "agents",
+   "aliases": []
+  },
+  {
+   "name": "icons",
+   "aliases": []
+  },
+  {
+   "name": "body of the narrative",
+   "aliases": []
+  },
+  {
+   "name": "informatics display",
+   "aliases": []
+  },
+  {
+   "name": "Figure 4.3",
+   "aliases": []
+  },
+  {
+   "name": "synthesized work demands",
+   "aliases": []
+  },
+  {
+   "name": "feature elements",
+   "aliases": []
+  },
+  {
+   "name": "Figure 4.4",
+   "aliases": []
+  },
+  {
+   "name": "user interface",
+   "aliases": []
+  },
+  {
+   "name": "screen",
+   "aliases": []
+  },
+  {
+   "name": "Black components of the user interface",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR prototype",
+   "aliases": []
+  },
+  {
+   "name": "Figure 4.5",
+   "aliases": []
+  },
+  {
+   "name": "prototype user interface solutions",
+   "aliases": []
+  },
+  {
+   "name": "monocular, monochromatic transparent AR solution",
+   "aliases": []
+  },
+  {
+   "name": "display",
+   "aliases": []
+  },
+  {
+   "name": "crew physical hand controller",
+   "aliases": []
+  },
+  {
+   "name": "two-button and dial configuration",
+   "aliases": []
+  },
+  {
+   "name": "button",
+   "aliases": []
+  },
+  {
+   "name": "dial",
+   "aliases": []
+  },
+  {
+   "name": "Hands-free control",
+   "aliases": []
+  },
+  {
+   "name": "voice control",
+   "aliases": []
+  },
+  {
+   "name": "Joint AR team",
+   "aliases": []
+  },
+  {
+   "name": "prototype solutions",
+   "aliases": []
+  },
+  {
+   "name": "Navigation Use Cases",
+   "aliases": []
+  },
+  {
+   "name": "Tool and Hardware Use Cases",
+   "aliases": []
+  },
+  {
+   "name": "Science Exploration Use Cases",
+   "aliases": []
+  },
+  {
+   "name": "reader",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0111"
+   ],
+   "chunk_tokens": 4549,
+   "memory_tokens": 0,
+   "prompt_tokens": 5657,
+   "input": 5863,
+   "output": 17622,
+   "reasoning": 231,
+   "cached": false
+  }
+ ]
+}

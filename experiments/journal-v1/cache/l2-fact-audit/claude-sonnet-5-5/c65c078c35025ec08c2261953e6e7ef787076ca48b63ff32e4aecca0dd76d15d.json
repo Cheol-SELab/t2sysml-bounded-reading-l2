@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=treats any release exception as a retained hazard)\n\nSource sentences (the last one is where the fact was extracted):\nS088: Reset processing is inhibited while any associated route remains locked or while a train is approaching the affected detection section.\nS089: Maple verifies local track clearance evidence and records the result before authorising restoration of normal route setting after a detection anomaly.\nS090: West Junction Interlocking sends the Route Release Exception List when normal sectional release cannot be completed within the configured timing rules.\nS091: The zone controller treats any release exception as a retained hazard until the affected path is excluded from new movement authorities.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S091 states that the zone controller treats any release exception as a retained hazard, which matches the action label exactly.\"}",
+ "usage": {
+  "input_tokens": 658,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 51,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.6,
+ "created": "2026-10-14T12:52:02"
+}

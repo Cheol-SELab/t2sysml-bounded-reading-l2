@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(target=Security Duty Manager, payload=notification)\n\nSource sentences (the last one is where the fact was extracted):\nS070: The Bag Reconciliation Station verifies that the bag presented for examination matches the screening record before further handling.\nS071: If an examination requires the bag to remain isolated, staff secure the area and notify the Baggage Operations Supervisor.\nS072: The Baggage Operations Supervisor coordinates decisions that affect flight readiness, staffing, or continued operation of a screening lane.\nS073: The Security Duty Manager is notified when an alarm response requires a security decision beyond routine screening procedures.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S073 supports a notification going to the Security Duty Manager, but the fact gives no source of the flow, and the sentence is passive, so the sender is unstated.\"}",
+ "usage": {
+  "input_tokens": 663,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.091,
+ "created": "2026-10-14T12:52:35"
+}

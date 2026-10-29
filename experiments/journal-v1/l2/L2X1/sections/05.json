@@ -1,0 +1,104 @@
+{
+ "sentences": [
+  {
+   "text": "The capacity picture is built from demand forecasts, observed traffic, airport resource status, airspace constraints, and weather products that are updated throughout the tactical planning horizon.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service, also known as Marlinstone, generates the demand forecast used by the Regional Flow Platform.",
+   "tags": [
+    "ALIAS:E_DEMAND_PREDICTION_SERVICE"
+   ]
+  },
+  {
+   "text": "The Weather Ingest Gateway, also known as Orchard, normalizes external and local meteorological feeds before they are used in operational capacity calculations.",
+   "tags": [
+    "ALIAS:E_WEATHER_INGEST_GATEWAY"
+   ]
+  },
+  {
+   "text": "The Demand Prediction Service receives filed flight information through the Flight Data Exchange and compares it with the current operating schedule held by the Airline Interface Adapter.",
+   "tags": []
+  },
+  {
+   "text": "Flight Intent Message updates are treated as the primary indicator of operator intent when the system detects a material difference from the published schedule.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service uses recent conformance history, aircraft rotation timing, and known bank structures to estimate arrival and departure loads by planning interval.",
+   "tags": []
+  },
+  {
+   "text": "The Sector Load Monitor contributes airspace demand indicators so that airport capacity is not assessed independently of nearby sector saturation.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module combines demand projections with the Airport Capacity Plan to determine whether a published Airport Acceptance Rate remains feasible.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Ingest Gateway accepts aviation forecasts, radar-derived precipitation fields, lightning alerts, wind forecasts, ceiling and visibility forecasts, and runway condition weather inputs from approved sources.",
+   "tags": []
+  },
+  {
+   "text": "Each weather feed is checked for source identity, issue time, valid time, spatial reference, and unit consistency before it is made available to the Regional Flow Platform.",
+   "tags": []
+  },
+  {
+   "text": "The Time Synchronization Service provides the reference clock used to compare forecast issue times with operational decision times.",
+   "tags": []
+  },
+  {
+   "text": "When a forecast product arrives late or fails validation, the Weather Ingest Gateway marks the feed as degraded rather than silently excluding it from the operational picture.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer reviews degraded weather inputs when they affect capacity assumptions for the next planning period.",
+   "tags": []
+  },
+  {
+   "text": "Weather impacts are translated into capacity modifiers for runway configuration, arrival spacing, departure spacing, surface movement constraints, and approach sector availability.",
+   "tags": []
+  },
+  {
+   "text": "The North Runway Meter and South Runway Meter receive runway-specific capacity values after the Capacity Assessment Module applies the current wind, visibility, and precipitation assumptions.",
+   "tags": []
+  },
+  {
+   "text": "Surface constraints from the East Apron Sensor and West Apron Sensor are correlated with weather-driven taxi speed assumptions before the Ramp Movement Board is updated.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager may request a manual capacity review when local observations differ materially from the automated weather interpretation.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager uses the Common Situation Display to compare forecast demand, assessed capacity, and any active Ground Delay Program effects in one operational view.",
+   "tags": []
+  },
+  {
+   "text": "Forecast confidence is recorded as a confidence class, a probability value where provided by the source, a valid time range, and the forecast horizon used for the calculation.",
+   "tags": []
+  },
+  {
+   "text": "The confidence record also stores the originating feed, the processing time, the transformation version, and any manual override applied by the Meteorology Briefing Officer.",
+   "tags": []
+  },
+  {
+   "text": "Low-confidence weather forecasts remain visible to users, but the Capacity Assessment Module flags the associated capacity values as provisional.",
+   "tags": []
+  },
+  {
+   "text": "When confidence decreases below the configured threshold, the Alert Distribution Hub notifies the Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator that the capacity picture may change.",
+   "tags": []
+  },
+  {
+   "text": "All forecast confidence changes, feed quality changes, and capacity recalculations are written to the Collaborative Decision Log with synchronized timestamps.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger retains the trace from incoming forecast product to capacity value so that the Performance Analytics Warehouse can reconstruct the decision basis after operations.",
+   "tags": []
+  }
+ ]
+}

@@ -1,0 +1,4577 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "support continuous production of potable water"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "give operators timely visibility, dependable automatic control, and clear manual intervention points"
+  },
+  {
+   "unit_id": "S003",
+   "type": "flow",
+   "source": "River Intake Pump Station",
+   "target": "Raw Water Screen Channel",
+   "payload": "raw water"
+  },
+  {
+   "unit_id": "S003",
+   "type": "action",
+   "label": "discharge to the High Service Pump Header"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "River Intake Pump Station",
+   "label": "provides the first controlled pumping function"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "River Intake Pump Station",
+   "label": "maintain reliable raw-water availability within approved withdrawal limits"
+  },
+  {
+   "unit_id": "S006",
+   "type": "composition",
+   "whole": "controlled intake process",
+   "parts": [
+    "Raw Water Screen Channel"
+   ]
+  },
+  {
+   "unit_id": "S007",
+   "type": "state",
+   "owner": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S007",
+   "type": "transition",
+   "from": "null",
+   "to": "Storm Intake Mode",
+   "trigger": "river conditions require more conservative intake operation"
+  },
+  {
+   "unit_id": "S008",
+   "type": "composition",
+   "whole": "treatment scope",
+   "parts": [
+    "Coagulant Dosing Skid",
+    "North Filter Gallery",
+    "South Filter Gallery",
+    "Chlorine Contact Basin",
+    "Clearwell Level Controller",
+    "Backwash Recovery Tank"
+   ]
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "supports chemical feed control"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "North Filter Gallery",
+   "label": "presented local equipment status, headloss indication, turbidity monitoring, and backwash control to plant staff"
+  },
+  {
+   "unit_id": "S010",
+   "type": "flow",
+   "source": "North Filter Gallery",
+   "target": "plant staff",
+   "payload": "local equipment status, headloss indication, turbidity monitoring, and backwash control"
+  },
+  {
+   "unit_id": "S010",
+   "type": "flow",
+   "source": "South Filter Gallery",
+   "target": "plant staff",
+   "payload": "local equipment status, headloss indication, turbidity monitoring, and backwash control"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Chlorine Contact Basin",
+   "label": "provide the principal control points for disinfection contact management"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Clearwell Level Controller",
+   "label": "provide the principal control points for finished-water storage coordination"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "stores operating data"
+  },
+  {
+   "unit_id": "S014",
+   "type": "constraint",
+   "subject": "SCADA Historian Server",
+   "expression": "remain synchronized to plant time standards"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Chemical Supplier Driver",
+   "label": "interacts with the plant through controlled delivery procedures"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "label": "chemical inventory changes to be checked before operating setpoints are affected"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Laboratory Sample Receiving Bench",
+   "label": "receiving point for process and compliance samples"
+  },
+  {
+   "unit_id": "S017",
+   "type": "flow",
+   "target": "Laboratory Sample Receiving Bench",
+   "payload": "process and compliance samples"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "provides analytical confirmation"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "communicates unusual results to operations"
+  },
+  {
+   "unit_id": "S018",
+   "type": "flow",
+   "source": "Laboratory Technician",
+   "target": "operations",
+   "payload": "unusual results"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "helps determine whether process adjustments require additional verification"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "has overall operating authority for plant mode selection, production targets, treatment response, and coordination of abnormal condition response"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "supports configuration control"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "evaluates control-system problems"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "approves engineering changes that affect operating behavior or documented boundaries"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "converts equipment condition information into planned work"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "coordinating with operations to avoid unnecessary treatment or distribution risk"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "coordinates finished-water delivery expectations with the plant"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "communicates demand changes that may affect pumping and storage strategy"
+  },
+  {
+   "unit_id": "S022",
+   "type": "flow",
+   "source": "Distribution Dispatcher",
+   "target": "plant",
+   "payload": "demand changes"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "North Distribution Pressure Station",
+   "label": "influence finished-water pumping decisions"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "South Distribution Pressure Station",
+   "label": "influence finished-water pumping decisions"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Residuals Hauler",
+   "label": "removal activities associated with treatment residuals and backwash recovery operations"
+  },
+  {
+   "unit_id": "S025",
+   "type": "state",
+   "owner": "Chlorine Residual Alarm",
+   "label": "high-priority condition"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Chlorine Residual Alarm",
+   "label": "indicate a public-health risk, an analyzer fault, or a process condition requiring immediate operator assessment"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "plant staff",
+   "label": "supervise automatic control"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "plant staff",
+   "label": "place equipment in safe manual operation when needed"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "plant staff",
+   "label": "document deviations through approved plant procedures"
+  },
+  {
+   "unit_id": "S026",
+   "type": "state",
+   "owner": "plant",
+   "label": "Routine operation"
+  },
+  {
+   "unit_id": "S027",
+   "type": "state",
+   "owner": "River Intake Pump Station",
+   "label": "automatic service"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "River Intake Pump Station",
+   "label": "operates in automatic service"
+  },
+  {
+   "unit_id": "S027",
+   "type": "constraint",
+   "subject": "River Intake Pump Station",
+   "expression": "pump starts governed by raw-water demand and available channel depth"
+  },
+  {
+   "unit_id": "S028",
+   "type": "state",
+   "owner": "River Intake Pump Station",
+   "label": "Reduced-capacity service"
+  },
+  {
+   "unit_id": "S028",
+   "type": "transition",
+   "to": "Reduced-capacity service",
+   "trigger": "river level, equipment condition, or downstream process demand does not support full intake operation"
+  },
+  {
+   "unit_id": "S029",
+   "type": "state",
+   "owner": "River Intake Pump Station",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S029",
+   "type": "transition",
+   "to": "Storm Intake Mode",
+   "trigger": "rainfall, river rise, debris loading, or upstream runoff creates conditions that require closer supervision of the intake"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "authorizes entry into Storm Intake Mode"
+  },
+  {
+   "unit_id": "S030",
+   "type": "transition",
+   "to": "Storm Intake Mode",
+   "trigger": "field observations or instrument trends show that normal assumptions are no longer reliable"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "plant staff",
+   "label": "increase observation of river level, screen loading, turbidity, and pump cycling frequency"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "label": "monitored for upstream level, downstream level, differential level, rake run status, and high-debris indications"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "label": "is treated as an early indication of screen blinding or heavy floating debris"
+  },
+  {
+   "unit_id": "S034",
+   "type": "flow",
+   "source": "Raw Water Screen Channel",
+   "payload": "Rake Torque Snapshot"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "Raw Water Screen Channel",
+   "label": "sends the Rake Torque Snapshot at the end of each cleaning cycle"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "plant staff",
+   "label": "verify that the cleaning mechanism is running and that the River Intake Pump Station is not drawing the channel down too quickly"
+  },
+  {
+   "unit_id": "S036",
+   "type": "requirement",
+   "subject": "Raw Water Screen Channel",
+   "text": "A high-high level condition at the Raw Water Screen Channel requires immediate field confirmation because it may indicate restricted passage, failed cleaning, or abnormal river backwater."
+  },
+  {
+   "unit_id": "S036",
+   "type": "state",
+   "owner": "Raw Water Screen Channel",
+   "label": "high-high level condition"
+  },
+  {
+   "unit_id": "S037",
+   "type": "attribute",
+   "name": "Raw-water quality triggers",
+   "value": "high turbidity, unusual color, odor complaints from field staff, visible sheen, algae accumulation, and rapid temperature change"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "determines whether to adjust pumping rate, request additional laboratory testing, or increase downstream process monitoring"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "supports intake decisions"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "prioritizing raw-water checks"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "label": "is placed under closer observation"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "label": "are advised when incoming water quality is expected to shorten filter run time or increase solids loading"
+  },
+  {
+   "unit_id": "S042",
+   "type": "attribute",
+   "owner": "River Intake Pump Station",
+   "name": "Pump permissives",
+   "value": "adequate suction level, available discharge path, healthy motor status, open isolation valves, and absence of active protective trips"
+  },
+  {
+   "unit_id": "S043",
+   "type": "constraint",
+   "subject": "pump",
+   "expression": "not permitted to start when the Raw Water Screen Channel downstream level is below the established low-level limit"
+  },
+  {
+   "unit_id": "S044",
+   "type": "constraint",
+   "subject": "pump",
+   "expression": "pump start is also blocked when the associated drive reports a fault, when local control is selected, or when a safety interlock is not proven"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "drive",
+   "label": "reports a fault"
+  },
+  {
+   "unit_id": "S044",
+   "type": "flow",
+   "source": "drive",
+   "payload": "fault"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "alarms the condition"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "stops the affected pump"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "authorize temporary manual operation"
+  },
+  {
+   "unit_id": "S046",
+   "type": "state",
+   "owner": "pump",
+   "label": "temporary manual operation"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "retains river level, screen differential, pump status, and raw-water quality trends"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "reviews storm forecasts and river-stage information"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "label": "is notified when intake limitations could reduce the ability of the High Service Pump Header to meet planned system demand"
+  },
+  {
+   "unit_id": "S049",
+   "type": "flow",
+   "target": "Distribution Dispatcher",
+   "payload": "notification of intake limitations"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "label": "is watched during intake restrictions"
+  },
+  {
+   "unit_id": "S050",
+   "type": "state",
+   "owner": "Clearwell Level Controller",
+   "label": "intake restrictions"
+  },
+  {
+   "unit_id": "S051",
+   "type": "state",
+   "owner": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "normal service"
+  },
+  {
+   "unit_id": "S051",
+   "type": "transition",
+   "to": "normal service",
+   "trigger": "river level, screen differential, raw-water quality, and pump cycling have stabilized for a period accepted by the Chief Operator"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "accepted a period"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "reviews intake equipment condition"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "schedules cleaning or inspection work"
+  },
+  {
+   "unit_id": "S052",
+   "type": "succession",
+   "before": "reviews intake equipment condition",
+   "after": "schedules cleaning or inspection work"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "label": "control of coagulation and filtration returns to normal"
+  },
+  {
+   "unit_id": "S053",
+   "type": "transition",
+   "to": "normal service",
+   "trigger": "raw-water quality trends support stable chemical feed and predictable filter loading"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "establishes the starting coagulant dose"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "meters the primary coagulant"
+  },
+  {
+   "unit_id": "S055",
+   "type": "state",
+   "owner": "Coagulant Dosing Skid",
+   "label": "automatic control"
+  },
+  {
+   "unit_id": "S056",
+   "type": "flow",
+   "source": "Coagulant Dosing Skid",
+   "payload": "Alum Batch Ticket"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "sends the Alum Batch Ticket"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "label": "Automatic dose trimming"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "authorize a temporary dose adjustment"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "confirms the sustained control point"
+  },
+  {
+   "unit_id": "S059",
+   "type": "composition",
+   "whole": "North Filter Gallery",
+   "parts": [
+    "filter"
+   ]
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "operated a bank of gravity filters"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "North Filter Gallery",
+   "label": "records individual filter effluent turbidity and headloss"
+  },
+  {
+   "unit_id": "S061",
+   "type": "flow",
+   "source": "South Filter Gallery",
+   "payload": "Filter Run Exception Note"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "South Filter Gallery",
+   "label": "sends the Filter Run Exception Note"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "label": "Filter run management"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "label": "returned to service after washing"
+  },
+  {
+   "unit_id": "S063",
+   "type": "constraint",
+   "subject": "filter",
+   "expression": "not returned to service after washing until rinse-to-waste quality meets the operating target and the turbidity trend is stable"
+  },
+  {
+   "unit_id": "S063",
+   "type": "succession",
+   "before": "washing",
+   "after": "returned to service after washing"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "operating staff",
+   "label": "compare the analyzer trend with nearby sample results"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "operating staff",
+   "label": "declaring a process upset"
+  },
+  {
+   "unit_id": "S064",
+   "type": "succession",
+   "before": "compare the analyzer trend with nearby sample results",
+   "after": "declaring a process upset"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "provides confirmation testing"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Laboratory Sample Receiving Bench",
+   "label": "custody-controlled receipt of compliance and process samples"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "retains dose changes, analyzer values, filter status changes, wash sequences, and operator comments"
+  },
+  {
+   "unit_id": "S068",
+   "type": "state",
+   "owner": "plant",
+   "label": "Manual override"
+  },
+  {
+   "unit_id": "S068",
+   "type": "constraint",
+   "subject": "plant",
+   "expression": "Manual override is permitted for chemical feed, valve sequencing, and filter start or stop actions only when automatic control is unavailable or inappropriate for the condition"
+  },
+  {
+   "unit_id": "S069",
+   "type": "state",
+   "owner": "operator",
+   "label": "manual control"
+  },
+  {
+   "unit_id": "S069",
+   "type": "state",
+   "owner": "operator",
+   "label": "automatic control"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "operator",
+   "label": "placing equipment in manual control"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "operator",
+   "label": "state the reason"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "operator",
+   "label": "monitor the affected process variable closely"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "operator",
+   "label": "restore automatic control as soon as practicable"
+  },
+  {
+   "unit_id": "S069",
+   "type": "requirement",
+   "subject": "operator",
+   "text": "An operator placing equipment in manual control is expected to state the reason, monitor the affected process variable closely, and restore automatic control as soon as practicable."
+  },
+  {
+   "unit_id": "S069",
+   "type": "transition",
+   "from": "manual control",
+   "to": "automatic control"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "label": "Manual chemical feed changes are made in small increments"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "approved larger correction"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "operating staff",
+   "label": "hold the last verified safe dose"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "operating staff",
+   "label": "revert to an approved fixed dose"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "operating staff",
+   "label": "collecting additional grab samples"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "label": "prompts review of chemical strength, feed pump status, mixing energy, and raw-water characteristics"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "Chlorine Contact Basin is considered in the response"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Clearwell Level Controller",
+   "label": "remains coordinated with filter production"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "label": "Distribution Dispatcher is advised of expected production limits"
+  },
+  {
+   "unit_id": "S075",
+   "type": "flow",
+   "target": "Distribution Dispatcher",
+   "payload": "expected production limits"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "reviews trends from the affected operating period"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "confirms that corrective actions restored stable clarified and filtered water quality"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "label": "laboratory sampling provides independent confirmation"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "establishes daily sampling priorities"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "label": "Field samples are labeled at collection"
+  },
+  {
+   "unit_id": "S080",
+   "type": "succession",
+   "before": "Field samples are labeled at collection",
+   "after": "leave operating areas"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "checks container type, holding time, temperature, preservative status, and seal condition"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "logging a sample for analysis"
+  },
+  {
+   "unit_id": "S081",
+   "type": "succession",
+   "before": "checks container type, holding time, temperature, preservative status, and seal condition",
+   "after": "logging a sample for analysis"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "label": "verified against the current sampling schedule"
+  },
+  {
+   "unit_id": "S082",
+   "type": "succession",
+   "before": "verified against the current sampling schedule",
+   "after": "testing begins"
+  },
+  {
+   "unit_id": "S083",
+   "type": "flow",
+   "source": "Coagulant Dosing Skid",
+   "target": "Laboratory Technician",
+   "payload": "Alum Batch Ticket"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "verify chemical lot identity"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "recording related laboratory observations"
+  },
+  {
+   "unit_id": "S083",
+   "type": "succession",
+   "before": "verify chemical lot identity",
+   "after": "recording related laboratory observations"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "prepares and sends the Sample Chain Slip"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "verifying that custody entries are complete and legible"
+  },
+  {
+   "unit_id": "S084",
+   "type": "succession",
+   "before": "verifying that custody entries are complete and legible",
+   "after": "prepares and sends the Sample Chain Slip"
+  },
+  {
+   "unit_id": "S084",
+   "type": "flow",
+   "source": "Laboratory Technician",
+   "payload": "Sample Chain Slip"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "Laboratory Sample Receiving Bench",
+   "label": "sends the Jar Test Photograph Set"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "label": "comparison images have been checked for date, time, and sample identifiers"
+  },
+  {
+   "unit_id": "S085",
+   "type": "succession",
+   "before": "comparison images have been checked for date, time, and sample identifiers",
+   "after": "sends the Jar Test Photograph Set"
+  },
+  {
+   "unit_id": "S085",
+   "type": "flow",
+   "source": "Laboratory Sample Receiving Bench",
+   "payload": "Jar Test Photograph Set"
+  },
+  {
+   "unit_id": "S086",
+   "type": "requirement",
+   "subject": "SCADA Historian Server",
+   "text": "Lantern must retain accepted laboratory result timestamps with the associated process trend interval so that reconciliation can be repeated during audits."
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "retain accepted laboratory result timestamps with the associated process trend interval"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "label": "compared with laboratory results collected from the same location and time window"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "records any mismatch between bottle labels, bench log entries, and operator notes"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "assigning an acceptance status to the sample"
+  },
+  {
+   "unit_id": "S088",
+   "type": "succession",
+   "before": "records any mismatch between bottle labels, bench log entries, and operator notes",
+   "after": "assigning an acceptance status to the sample"
+  },
+  {
+   "unit_id": "S089",
+   "type": "constraint",
+   "subject": "sample",
+   "expression": "outside the approved holding time or temperature range"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "label": "Calibration checks, method blanks, duplicate measurements, and control standards are reviewed"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "label": "process measurements are released to operations"
+  },
+  {
+   "unit_id": "S090",
+   "type": "succession",
+   "before": "Calibration checks, method blanks, duplicate measurements, and control standards are reviewed",
+   "after": "process measurements are released to operations"
+  },
+  {
+   "unit_id": "S090",
+   "type": "flow",
+   "target": "operations",
+   "payload": "process measurements"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "Results associated with failed quality checks are flagged"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "investigated"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "corrected with documented justification or rejected from the accepted data set"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "reviews significant differences between field readings and laboratory values"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "confirms that sample mixing, settling time, and instrument range are appropriate for the expected raw or filtered water condition"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "confirms reagent condition, sample contact time, and measurement timing"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "accepting the result"
+  },
+  {
+   "unit_id": "S094",
+   "type": "succession",
+   "before": "confirms reagent condition, sample contact time, and measurement timing",
+   "after": "accepting the result"
+  },
+  {
+   "unit_id": "S095",
+   "type": "state",
+   "owner": "Chlorine Residual Alarm",
+   "label": "active"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "label": "related grab samples receive priority handling"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "The Chief Operator is notified"
+  },
+  {
+   "unit_id": "S096",
+   "type": "flow",
+   "target": "Chief Operator",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "label": "Accepted laboratory results are reconciled to operating trends"
+  },
+  {
+   "unit_id": "S098",
+   "type": "state",
+   "owner": "null",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "label": "the sampling frequency is increased"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "label": "The Backwash Recovery Tank is sampled"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "label": "return-to-process events"
+  },
+  {
+   "unit_id": "S099",
+   "type": "succession",
+   "before": "return-to-process events",
+   "after": "The Backwash Recovery Tank is sampled"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "preserves all custody and acceptance records"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "label": "Planned maintenance is controlled through a work order process"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "reviews the next-day schedule with operations staff"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "label": "work is released"
+  },
+  {
+   "unit_id": "S102",
+   "type": "succession",
+   "before": "reviews the next-day schedule with operations staff",
+   "after": "work is released"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "verifies that each work order identifies affected equipment, required isolations, parts staging, and the evidence needed to close the work"
+  },
+  {
+   "unit_id": "S105",
+   "type": "flow",
+   "source": "Raw Water Screen Channel",
+   "target": "Maintenance Planner",
+   "payload": "Rake Torque Snapshot"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "compare planned rake work against recent mechanical loading"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "releasing the task package"
+  },
+  {
+   "unit_id": "S105",
+   "type": "succession",
+   "before": "compare planned rake work against recent mechanical loading",
+   "after": "releasing the task package"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "checks proposed work against current operating constraints"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "defer nonessential activity"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "label": "Lockout planning identifies electrical, hydraulic, pneumatic, chemical, and stored-energy hazards"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "label": "personnel enter or service plant equipment"
+  },
+  {
+   "unit_id": "S107",
+   "type": "succession",
+   "before": "Lockout planning identifies electrical, hydraulic, pneumatic, chemical, and stored-energy hazards",
+   "after": "personnel enter or service plant equipment"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "craft worker",
+   "label": "Field isolation is verified locally"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "operations",
+   "label": "acknowledged by operations"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "label": "equipment is opened, adjusted, or tested"
+  },
+  {
+   "unit_id": "S108",
+   "type": "succession",
+   "before": "Field isolation is verified locally",
+   "after": "acknowledged by operations"
+  },
+  {
+   "unit_id": "S108",
+   "type": "succession",
+   "before": "acknowledged by operations",
+   "after": "equipment is opened, adjusted, or tested"
+  },
+  {
+   "unit_id": "S109",
+   "type": "requirement",
+   "subject": "River Intake Pump Station",
+   "text": "Ironwood shall remain unavailable for routine maintenance release until isolation points are tagged, verified locally, and acknowledged in the shift turnover record."
+  },
+  {
+   "unit_id": "S109",
+   "type": "state",
+   "owner": "River Intake Pump Station",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "label": "Work in the North Filter Gallery and South Filter Gallery is scheduled"
+  },
+  {
+   "unit_id": "S111",
+   "type": "requirement",
+   "subject": "Clearwell Level Controller",
+   "text": "Any planned change affecting the Clearwell Level Controller requires coordination with the High Service Pump Header operating plan before the change is applied."
+  },
+  {
+   "unit_id": "S112",
+   "type": "flow",
+   "source": "Chemical Supplier Driver",
+   "payload": "Chlorine Cylinder Seal Log"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "Chemical Supplier Driver",
+   "label": "sends the Chlorine Cylinder Seal Log"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "Chemical Supplier Driver",
+   "label": "unloading any replacement cylinders at the plant"
+  },
+  {
+   "unit_id": "S112",
+   "type": "succession",
+   "before": "sends the Chlorine Cylinder Seal Log",
+   "after": "unloading any replacement cylinders at the plant"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "operator",
+   "label": "observe chemical connections and vehicle movement"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "label": "Deliveries for the Coagulant Dosing Skid are staged"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "label": "hoses, containment, and emergency washdown equipment are inspected"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "label": "transfer begins"
+  },
+  {
+   "unit_id": "S114",
+   "type": "succession",
+   "before": "hoses, containment, and emergency washdown equipment are inspected",
+   "after": "transfer begins"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "Chemical work near the Chlorine Contact Basin is coordinated with operating staff"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "label": "Shift communication includes the status of open isolations, temporary operating limits, unavailable equipment, and any abnormal condition"
+  },
+  {
+   "unit_id": "S117",
+   "type": "flow",
+   "target": "Distribution Dispatcher",
+   "payload": "maintenance availability changes"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "label": "The Distribution Dispatcher is informed"
+  },
+  {
+   "unit_id": "S118",
+   "type": "state",
+   "owner": "Storm Intake Mode",
+   "label": "active"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "discretionary work is reviewed again"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "label": "causes the affected task to pause"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "operations",
+   "label": "confirms whether the alarm is process-related or maintenance-induced"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "supports work control"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "confirming sampling needs"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "reporting any acceptance concern that could delay equipment return"
+  },
+  {
+   "unit_id": "S120",
+   "type": "flow",
+   "source": "Laboratory Technician",
+   "payload": "acceptance concern"
+  },
+  {
+   "unit_id": "S121",
+   "type": "state",
+   "owner": "Laboratory Sample Receiving Bench",
+   "label": "available"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "label": "Equipment is returned to service"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "label": "temporary jumpers, bypasses, tools, spare parts, and barriers have been removed or formally accepted for continued use"
+  },
+  {
+   "unit_id": "S123",
+   "type": "succession",
+   "before": "temporary jumpers, bypasses, tools, spare parts, and barriers have been removed or formally accepted for continued use",
+   "after": "Equipment is returned to service"
+  },
+  {
+   "unit_id": "S124",
+   "type": "state",
+   "owner": "work order",
+   "label": "open"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "determines whether the equipment remains isolated or can be operated under restriction"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "retains operating data"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "label": "disinfection control is returned to normal service"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "confirms that the chlorine feed controls, residual instruments, and level indications are responding consistently"
+  },
+  {
+   "unit_id": "S126",
+   "type": "succession",
+   "before": "confirms that the chlorine feed controls, residual instruments, and level indications are responding consistently",
+   "after": "disinfection control is returned to normal service"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Chlorine Contact Basin",
+   "label": "maintain the required contact time"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "operators",
+   "label": "adjust chlorine feed gradually"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "control room",
+   "label": "verifies analyzer sample flow"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "control room",
+   "label": "compares the reading with a grab sample result"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "control room",
+   "label": "holds any planned production increase until the condition is understood"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "provides confirmatory residual results"
+  },
+  {
+   "unit_id": "S130",
+   "type": "flow",
+   "source": "Laboratory Technician",
+   "payload": "confirmatory residual results"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Clearwell Level Controller",
+   "label": "maintains normal storage within established operating limits"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Low clearwell level interlocks",
+   "label": "prevent pump operation from drawing the storage volume below the minimum level"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "High clearwell level alarms",
+   "label": "give operators time to reduce production or adjust downstream pumping"
+  },
+  {
+   "unit_id": "S133",
+   "type": "flow",
+   "source": "High clearwell level alarms",
+   "target": "operators",
+   "payload": "alarm"
+  },
+  {
+   "unit_id": "S134",
+   "type": "flow",
+   "source": "Clearwell Level Controller",
+   "payload": "Clearwell Diver Entry Permit"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Clearwell Level Controller",
+   "label": "sends the Clearwell Diver Entry Permit"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "verified level and isolation prerequisites"
+  },
+  {
+   "unit_id": "S134",
+   "type": "succession",
+   "before": "verified level and isolation prerequisites",
+   "after": "sends the Clearwell Diver Entry Permit"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "label": "trended against filter production and high-service demand"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "High Service Pump Header",
+   "label": "sequences available pumps to meet distribution demand"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "label": "Lead and lag pump assignments are rotated"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "entered operating restriction"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "label": "uses a paced response"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "High Service Pump Header",
+   "label": "produces the Pump Bearing Vibration Clip"
+  },
+  {
+   "unit_id": "S140",
+   "type": "flow",
+   "source": "High Service Pump Header",
+   "payload": "Pump Bearing Vibration Clip"
+  },
+  {
+   "unit_id": "S140",
+   "type": "constraint",
+   "subject": "High Service Pump Header",
+   "expression": "configured vibration threshold is exceeded"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "label": "remaining available pumps are evaluated automatically against the current pressure setpoint"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "label": "another unit is started"
+  },
+  {
+   "unit_id": "S141",
+   "type": "succession",
+   "before": "remaining available pumps are evaluated automatically against the current pressure setpoint",
+   "after": "another unit is started"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "North Distribution Pressure Station",
+   "label": "receive pressure support"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "South Distribution Pressure Station",
+   "label": "receive pressure support"
+  },
+  {
+   "unit_id": "S142",
+   "type": "flow",
+   "target": "North Distribution Pressure Station",
+   "payload": "pressure support"
+  },
+  {
+   "unit_id": "S142",
+   "type": "flow",
+   "target": "South Distribution Pressure Station",
+   "payload": "pressure support"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "communicates expected demand changes, main break impacts, and pressure complaints"
+  },
+  {
+   "unit_id": "S144",
+   "type": "flow",
+   "source": "Distribution Dispatcher",
+   "payload": "expected demand changes, main break impacts, and pressure complaints"
+  },
+  {
+   "unit_id": "S145",
+   "type": "state",
+   "owner": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "operators",
+   "label": "watch the relationship between raw water quality, filter loading, disinfectant demand, and high-service pumping"
+  },
+  {
+   "unit_id": "S146",
+   "type": "requirement",
+   "subject": "Duty Engineer",
+   "text": "Abnormal clearwell level, loss of residual, loss of pump header pressure, or conflicting instrument readings require the Duty Engineer to review the operating condition before setpoints are changed outside normal ranges."
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "review the operating condition"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "label": "setpoints are changed outside normal ranges"
+  },
+  {
+   "unit_id": "S146",
+   "type": "succession",
+   "before": "review the operating condition",
+   "after": "setpoints are changed outside normal ranges"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "stores residual, level, pressure, and pump status data"
+  },
+  {
+   "unit_id": "S148",
+   "type": "constraint",
+   "subject": "operator",
+   "expression": "Manual operation is allowed only when the operator can maintain residual targets, clearwell limits, and distribution pressure with direct observation of the affected indications"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "operator",
+   "label": "maintain residual targets, clearwell limits, and distribution pressure"
+  },
+  {
+   "unit_id": "S149",
+   "type": "requirement",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "text": "Return to automatic control requires stable chlorine residual, stable clearwell level response, and confirmed high-service pressure control for a period set by the Chief Operator."
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "set a period"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "label": "Backwash recovery operation begins"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "North Filter Gallery",
+   "label": "completes a backwash cycle"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "South Filter Gallery",
+   "label": "completes a backwash cycle"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "confirms that turbidity, valve position, and flow indications are within the expected recovery range"
+  },
+  {
+   "unit_id": "S150",
+   "type": "succession",
+   "before": "completes a backwash cycle",
+   "after": "Backwash recovery operation begins"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Backwash Recovery Tank",
+   "label": "receives spent washwater under controlled conditions"
+  },
+  {
+   "unit_id": "S151",
+   "type": "flow",
+   "target": "Backwash Recovery Tank",
+   "payload": "spent washwater"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "label": "recovered water can be returned"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "operator",
+   "label": "has verified acceptable clarity"
+  },
+  {
+   "unit_id": "S151",
+   "type": "succession",
+   "before": "has verified acceptable clarity",
+   "after": "recovered water can be returned"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "records recovery volume, tank level, turbidity trend, and return timing"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "uses the Filter Run Exception Note to determine whether a shortened run, high headloss, or abnormal turbidity response requires follow-up"
+  },
+  {
+   "unit_id": "S153",
+   "type": "flow",
+   "source": "South Filter Gallery",
+   "target": "Chief Operator",
+   "payload": "Filter Run Exception Note"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "holds the return path out of service"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "keeps the Backwash Recovery Tank in a settle-and-decant condition"
+  },
+  {
+   "unit_id": "S154",
+   "type": "state",
+   "owner": "Backwash Recovery Tank",
+   "label": "settle-and-decant condition"
+  },
+  {
+   "unit_id": "S154",
+   "type": "transition",
+   "to": "settle-and-decant condition",
+   "trigger": "recovery water quality is outside the operating band"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "reviews repeated abnormal wash recovery trends"
+  },
+  {
+   "unit_id": "S156",
+   "type": "state",
+   "owner": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S156",
+   "type": "transition",
+   "to": "Storm Intake Mode",
+   "trigger": "runoff or river disturbance is expected to increase solids loading"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "operators",
+   "label": "monitor influent turbidity, screen differential level, coagulant demand, and filter headloss"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "adjusts feed response only within approved operating limits"
+  },
+  {
+   "unit_id": "S158",
+   "type": "constraint",
+   "subject": "Coagulant Dosing Skid",
+   "expression": "adjusts feed response only within approved operating limits and does not substitute automatic changes for required operator review"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "confirm the selected dose response"
+  },
+  {
+   "unit_id": "S160",
+   "type": "requirement",
+   "subject": "Coagulant Dosing Skid",
+   "text": "Marigold shall hold the last operator-approved dose if the supporting process quality indications become inconsistent or unavailable."
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "hold the last operator-approved dose"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "prioritizes turbidity, apparent color, alkalinity, and disinfectant residual checks"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "label": "Results are compared with online readings"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "operators",
+   "label": "make a sustained change to coagulation or filter loading strategy"
+  },
+  {
+   "unit_id": "S162",
+   "type": "flow",
+   "source": "Laboratory Technician",
+   "target": "operators",
+   "payload": "confirmatory residual results"
+  },
+  {
+   "unit_id": "S162",
+   "type": "succession",
+   "before": "Results are compared with online readings",
+   "after": "make a sustained change to coagulation or filter loading strategy"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "North Filter Gallery",
+   "label": "shows rapid headloss growth"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "operator",
+   "label": "stagger wash timing"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "South Filter Gallery",
+   "label": "shows turbidity breakthrough or delayed ripening"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "label": "kept out of normal production"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "approves return to service"
+  },
+  {
+   "unit_id": "S164",
+   "type": "succession",
+   "before": "kept out of normal production",
+   "after": "approves return to service"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "classifies upsets as advisory, controlled, or critical"
+  },
+  {
+   "unit_id": "S165",
+   "type": "state",
+   "owner": "Chief Operator",
+   "label": "advisory"
+  },
+  {
+   "unit_id": "S165",
+   "type": "state",
+   "owner": "Chief Operator",
+   "label": "controlled"
+  },
+  {
+   "unit_id": "S165",
+   "type": "state",
+   "owner": "Chief Operator",
+   "label": "critical"
+  },
+  {
+   "unit_id": "S166",
+   "type": "requirement",
+   "subject": "advisory",
+   "text": "An advisory upset requires closer monitoring and documented operator awareness but does not require immediate removal of treatment capacity."
+  },
+  {
+   "unit_id": "S167",
+   "type": "requirement",
+   "subject": "controlled",
+   "text": "A controlled upset requires an operator-directed change, such as reducing filter loading, extending filter-to-waste operation, increasing verification sampling, or holding recovered washwater."
+  },
+  {
+   "unit_id": "S168",
+   "type": "requirement",
+   "subject": "critical",
+   "text": "A critical upset requires immediate protection of treated water quality."
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "label": "is notified when automatic control cannot maintain the required operating envelope"
+  },
+  {
+   "unit_id": "S168",
+   "type": "flow",
+   "target": "Duty Engineer",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "label": "is treated as a finished water protection issue"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "label": "are monitored together"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "label": "is operated to maintain stable delivery"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "label": "is notified when treatment changes could affect operating reserves"
+  },
+  {
+   "unit_id": "S172",
+   "type": "flow",
+   "target": "Distribution Dispatcher",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "produces the Backwash Solids Manifest"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "label": "solids removal quantities and handling conditions have been verified"
+  },
+  {
+   "unit_id": "S173",
+   "type": "succession",
+   "before": "solids removal quantities and handling conditions have been verified",
+   "after": "produces the Backwash Solids Manifest"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "label": "is informed when repeated solids handling problems indicate a need for inspection"
+  },
+  {
+   "unit_id": "S174",
+   "type": "flow",
+   "target": "Maintenance Planner",
+   "payload": "solids handling problems"
+  },
+  {
+   "unit_id": "S175",
+   "type": "state",
+   "label": "Normal operation"
+  },
+  {
+   "unit_id": "S175",
+   "type": "transition",
+   "to": "Normal operation",
+   "trigger": "recovered water quality is stable, residuals handling is complete, alarms have cleared, and the Chief Operator confirms that the upset classification can be closed"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "confirms that the upset classification can be closed"
+  },
+  {
+   "unit_id": "S176",
+   "type": "flow",
+   "source": "High Service Pump Header",
+   "target": "control room",
+   "payload": "discharge pressure, total flow, and pump status"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "High Service Pump Header",
+   "label": "provide the control room with the first indication of system demand changes"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "watches each pressure zone for sustained deviations"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "control room",
+   "label": "compare pressure trends with reservoir level trends, pump starts, and recent field activity"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "control room",
+   "label": "changing a setpoint"
+  },
+  {
+   "unit_id": "S178",
+   "type": "succession",
+   "before": "compare pressure trends with reservoir level trends, pump starts, and recent field activity",
+   "after": "changing a setpoint"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "label": "is monitored as a separate zone asset"
+  },
+  {
+   "unit_id": "S179",
+   "type": "attribute",
+   "owner": "North Distribution Pressure Station",
+   "name": "suction pressure"
+  },
+  {
+   "unit_id": "S179",
+   "type": "attribute",
+   "owner": "North Distribution Pressure Station",
+   "name": "discharge pressure"
+  },
+  {
+   "unit_id": "S179",
+   "type": "attribute",
+   "owner": "North Distribution Pressure Station",
+   "name": "pump availability"
+  },
+  {
+   "unit_id": "S179",
+   "type": "attribute",
+   "owner": "North Distribution Pressure Station",
+   "name": "communication status"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "South Distribution Pressure Station",
+   "label": "starts its lead booster pump"
+  },
+  {
+   "unit_id": "S180",
+   "type": "composition",
+   "whole": "South Distribution Pressure Station",
+   "parts": [
+    "lead booster pump"
+   ]
+  },
+  {
+   "unit_id": "S181",
+   "type": "state",
+   "owner": "distribution station",
+   "label": "automatic operation"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "local controls",
+   "label": "sequence pumps within approved limits"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "local controls",
+   "label": "report abnormal starts, failures, or valve positions to the control system"
+  },
+  {
+   "unit_id": "S181",
+   "type": "flow",
+   "source": "local controls",
+   "target": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "payload": "abnormal starts, failures, or valve positions"
+  },
+  {
+   "unit_id": "S181",
+   "type": "requirement",
+   "subject": "local controls",
+   "text": "local controls are expected to sequence pumps within approved limits and report abnormal starts, failures, or valve positions to the control system"
+  },
+  {
+   "unit_id": "S182",
+   "type": "state",
+   "owner": "distribution station",
+   "label": "local or manual operation"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "records the reason, the expected duration, and the field contact responsible for the change"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "null",
+   "label": "Clearwell Level Controller is checked"
+  },
+  {
+   "unit_id": "S183",
+   "type": "succession",
+   "before": "Clearwell Level Controller is checked",
+   "after": "large distribution adjustments"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "direct a conservative pumping posture"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "reviews persistent low-pressure complaints, repeated station alarms, or mismatches between observed pressure and modeled expectations"
+  },
+  {
+   "unit_id": "S186",
+   "type": "requirement",
+   "subject": "North Filter Gallery",
+   "text": "Cobalt shall provide a reliable filter service status indication before the control room treats increased distribution demand as available finished-water capacity."
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "North Filter Gallery",
+   "label": "provide a reliable filter service status indication"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "control room",
+   "label": "treats increased distribution demand as available finished-water capacity"
+  },
+  {
+   "unit_id": "S186",
+   "type": "flow",
+   "source": "North Filter Gallery",
+   "target": "control room",
+   "payload": "filter service status indication"
+  },
+  {
+   "unit_id": "S186",
+   "type": "succession",
+   "before": "provide a reliable filter service status indication",
+   "after": "treats increased distribution demand as available finished-water capacity"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Laboratory Sample Receiving Bench",
+   "label": "records incoming distribution check samples with the pressure zone, collection point, and time"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "associate distribution water-quality entries with the operating period shown in the electronic log"
+  },
+  {
+   "unit_id": "S188",
+   "type": "flow",
+   "source": "Laboratory Technician",
+   "target": "SCADA Historian Server",
+   "payload": "Sample Chain Slip"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "sends the Pressure Zone Handoff Card"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "verifying current pressure-zone setpoints, active alarms, and open field work"
+  },
+  {
+   "unit_id": "S189",
+   "type": "flow",
+   "source": "Distribution Dispatcher",
+   "target": "null",
+   "payload": "Pressure Zone Handoff Card"
+  },
+  {
+   "unit_id": "S189",
+   "type": "succession",
+   "before": "verifying current pressure-zone setpoints, active alarms, and open field work",
+   "after": "sends the Pressure Zone Handoff Card"
+  },
+  {
+   "unit_id": "S190",
+   "type": "composition",
+   "whole": "Shift handoff",
+   "parts": [
+    "disabled alarms",
+    "temporary operating limits",
+    "pending station inspections",
+    "customer complaint trends"
+   ]
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "control room",
+   "label": "assumes the last confirmed operating mode remains in effect"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Field crews",
+   "label": "notify the control room"
+  },
+  {
+   "unit_id": "S192",
+   "type": "flow",
+   "source": "Field crews",
+   "target": "control room",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Field crews",
+   "label": "opening or closing major distribution valves"
+  },
+  {
+   "unit_id": "S192",
+   "type": "succession",
+   "before": "notify the control room",
+   "after": "opening or closing major distribution valves"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "coordinates planned hydrant flushing, valve exercising, and main isolation work with pumping schedules"
+  },
+  {
+   "unit_id": "S194",
+   "type": "state",
+   "owner": "Chlorine Residual Alarm",
+   "label": "active"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Laboratory Sample Receiving Bench",
+   "label": "provides analytical status through normal plant reporting channels"
+  },
+  {
+   "unit_id": "S195",
+   "type": "flow",
+   "source": "Laboratory Sample Receiving Bench",
+   "target": "control room",
+   "payload": "analytical status"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "control room",
+   "label": "interpret pressure-zone complaints involving taste, odor, or disinfectant concerns"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "retains pressure, flow, pump status, and alarm data"
+  },
+  {
+   "unit_id": "S197",
+   "type": "state",
+   "owner": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "avoids unnecessary zone changes"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "null",
+   "label": "Control-room coordination with field crews is conducted by radio or phone"
+  },
+  {
+   "unit_id": "S198",
+   "type": "flow",
+   "target": "Field crews",
+   "payload": "station names, valve identifiers, expected direction of pressure change, and confirmation"
+  },
+  {
+   "unit_id": "S199",
+   "type": "state",
+   "owner": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "Normal distribution operation"
+  },
+  {
+   "unit_id": "S199",
+   "type": "transition",
+   "from": "null",
+   "to": "Normal distribution operation",
+   "trigger": "pressure zones are stable, station alarms are cleared or assigned, field work is accounted for, and the Chief Operator has no remaining operating restrictions"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "null",
+   "label": "Normal distribution operation is restored"
+  },
+  {
+   "unit_id": "S200",
+   "type": "requirement",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "text": "shall use role-based access control with named accounts for operators, engineering users, maintenance users, and read-only review users"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "label": "use role-based access control with named accounts"
+  },
+  {
+   "unit_id": "S201",
+   "type": "constraint",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "expression": "Shared credentials are not acceptable for routine operation"
+  },
+  {
+   "unit_id": "S202",
+   "type": "requirement",
+   "subject": "operators",
+   "text": "Operator privileges shall be limited to the actions needed to run assigned plant areas"
+  },
+  {
+   "unit_id": "S202",
+   "type": "requirement",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "text": "engineering privileges shall require separate approval before setpoints, control logic, alarm limits, or historian configuration are changed"
+  },
+  {
+   "unit_id": "S203",
+   "type": "requirement",
+   "subject": "control network",
+   "text": "Remote access to the control network shall require multi-factor authentication, encrypted connectivity, a recorded business reason, and approval by the Chief Operator or Duty Engineer"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "approval of remote access"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "maintains the weekly access review for maintenance accounts"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "disables privileges after reassignment"
+  },
+  {
+   "unit_id": "S204",
+   "type": "constraint",
+   "subject": "Maintenance Planner",
+   "expression": "weekly access review"
+  },
+  {
+   "unit_id": "S205",
+   "type": "requirement",
+   "subject": "SCADA Historian Server",
+   "text": "shall be protected as a critical asset"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "SCADA Historian Server",
+   "label": "supports compliance review, alarm analysis, operational trending, and event reconstruction"
+  },
+  {
+   "unit_id": "S206",
+   "type": "requirement",
+   "subject": "control network",
+   "text": "shall be segmented from administrative networks, and only documented pathways shall be allowed between the SCADA Historian Server, operator workstations, controllers, and approved support systems"
+  },
+  {
+   "unit_id": "S207",
+   "type": "requirement",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "text": "Security patches, firmware updates, and antivirus changes shall be tested in a controlled manner before deployment to equipment that affects water production or distribution pressure"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "null",
+   "label": "tested in a controlled manner"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "null",
+   "label": "deployment to equipment"
+  },
+  {
+   "unit_id": "S207",
+   "type": "succession",
+   "before": "tested in a controlled manner",
+   "after": "deployment to equipment"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "owns alarm governance for process alarms"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "supports alarm limit review"
+  },
+  {
+   "unit_id": "S209",
+   "type": "requirement",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "text": "Alarm priorities shall reflect consequence, response time, operator action, and the risk of losing treatment, storage, or distribution capability"
+  },
+  {
+   "unit_id": "S210",
+   "type": "requirement",
+   "subject": "Chlorine Residual Alarm",
+   "text": "shall remain configured as a high-priority condition when residual concentration indicates a potential treatment compliance or public health concern"
+  },
+  {
+   "unit_id": "S211",
+   "type": "requirement",
+   "subject": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "text": "Alarm shelving, suppression, and disabling shall require a documented reason, a time limit, and review at the end of the operating shift"
+  },
+  {
+   "unit_id": "S212",
+   "type": "requirement",
+   "subject": "operators",
+   "text": "Standing alarms shall be reviewed during each shift turnover so that unresolved equipment failures are not hidden by routine acknowledgement"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "null",
+   "label": "Standing alarms shall be reviewed during each shift turnover"
+  },
+  {
+   "unit_id": "S213",
+   "type": "state",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S213",
+   "type": "requirement",
+   "text": "During Storm Intake Mode, alarm response expectations shall account for higher debris load, faster raw water quality changes, and increased dependence on intake screening and chemical dose verification."
+  },
+  {
+   "unit_id": "S214",
+   "type": "requirement",
+   "subject": "Backup power",
+   "text": "Backup power shall support safe operation or controlled shutdown of the River Intake Pump Station, Raw Water Screen Channel, Chlorine Contact Basin, Clearwell Level Controller, SCADA Historian Server, High Service Pump Header, and essential control-room equipment."
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Backup power",
+   "label": "support safe operation or controlled shutdown of the River Intake Pump Station, Raw Water Screen Channel, Chlorine Contact Basin, Clearwell Level Controller, SCADA Historian Server, High Service Pump Header, and essential control-room equipment"
+  },
+  {
+   "unit_id": "S215",
+   "type": "requirement",
+   "subject": "plant",
+   "text": "The plant shall maintain written expectations for generator start time, automatic transfer performance, fuel availability, and operator checks during extended utility outages."
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "plant",
+   "label": "maintain written expectations for generator start time, automatic transfer performance, fuel availability, and operator checks"
+  },
+  {
+   "unit_id": "S216",
+   "type": "requirement",
+   "subject": "Uninterruptible power supplies",
+   "text": "Uninterruptible power supplies shall be sized to bridge transfer events and allow orderly shutdown of servers, network switches, control processors, and communication equipment."
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Uninterruptible power supplies",
+   "label": "bridge transfer events"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Uninterruptible power supplies",
+   "label": "allow orderly shutdown of servers, network switches, control processors, and communication equipment"
+  },
+  {
+   "unit_id": "S217",
+   "type": "requirement",
+   "text": "Loss of both normal and standby power to a critical service shall be treated as an emergency operating condition requiring immediate notification of the Chief Operator and Duty Engineer."
+  },
+  {
+   "unit_id": "S217",
+   "type": "state",
+   "label": "emergency operating condition"
+  },
+  {
+   "unit_id": "S217",
+   "type": "flow",
+   "target": "Chief Operator",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S217",
+   "type": "flow",
+   "target": "Duty Engineer",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "direct emergency operating priorities"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "authorize temporary control workarounds"
+  },
+  {
+   "unit_id": "S219",
+   "type": "requirement",
+   "subject": "Duty Engineer",
+   "text": "the workaround shall be logged, bounded by time or condition, and removed when normal control is restored."
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "workaround shall be logged"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "removed when normal control is restored"
+  },
+  {
+   "unit_id": "S220",
+   "type": "requirement",
+   "subject": "Distribution Dispatcher",
+   "text": "The Distribution Dispatcher shall be informed when failures at the High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station may affect pressure zones or fire-flow readiness."
+  },
+  {
+   "unit_id": "S220",
+   "type": "flow",
+   "target": "Distribution Dispatcher",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S221",
+   "type": "requirement",
+   "subject": "Laboratory Technician",
+   "text": "The Laboratory Technician shall retain access needed for sample status review and reporting, but laboratory accounts shall not allow control actions on plant equipment."
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "retain access needed for sample status review and reporting"
+  },
+  {
+   "unit_id": "S222",
+   "type": "flow",
+   "source": "Clearwell Level Controller",
+   "target": "Maintenance Planner",
+   "payload": "Clearwell Diver Entry Permit"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "verify isolation boundaries"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "label": "confined-space work is released"
+  },
+  {
+   "unit_id": "S222",
+   "type": "succession",
+   "before": "verify isolation boundaries",
+   "after": "confined-space work is released"
+  },
+  {
+   "unit_id": "S223",
+   "type": "flow",
+   "source": "Chemical Supplier Driver",
+   "target": "Duty Engineer",
+   "payload": "Chlorine Cylinder Seal Log"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "reviews the Chlorine Cylinder Seal Log"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "accepting a change in chlorine storage status"
+  },
+  {
+   "unit_id": "S223",
+   "type": "succession",
+   "before": "reviews the Chlorine Cylinder Seal Log",
+   "after": "accepting a change in chlorine storage status"
+  },
+  {
+   "unit_id": "S224",
+   "type": "requirement",
+   "text": "Reliability targets for critical plant services shall include prompt detection of failed sensors, redundant communication paths where practical, recoverable configuration backups, and periodic restoration testing."
+  },
+  {
+   "unit_id": "S225",
+   "type": "requirement",
+   "subject": "Chief Operator",
+   "text": "After any cybersecurity event, major alarm failure, or emergency control action, the Chief Operator shall require a brief operational review that identifies the cause, affected services, corrective actions, and any needed procedure changes."
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "require a brief operational review"
+  },
+  {
+   "unit_id": "S226",
+   "type": "requirement",
+   "text": "Commissioning shall be planned as a controlled sequence that proves each control function before the plant relies on it for normal service."
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "label": "proves each control function"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "plant",
+   "label": "relies on it for normal service"
+  },
+  {
+   "unit_id": "S226",
+   "type": "succession",
+   "before": "proves each control function",
+   "after": "relies on it for normal service"
+  },
+  {
+   "unit_id": "S227",
+   "type": "requirement",
+   "text": "Each commissioning test shall have defined starting conditions, expected responses, acceptance limits, and a responsible reviewer."
+  },
+  {
+   "unit_id": "S228",
+   "type": "requirement",
+   "subject": "Duty Engineer",
+   "text": "Before wet commissioning begins, the Duty Engineer shall confirm that temporary controls, bypasses, and manual operating instructions are understood by the affected staff."
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "confirm that temporary controls, bypasses, and manual operating instructions are understood by the affected staff"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "label": "wet commissioning begins"
+  },
+  {
+   "unit_id": "S228",
+   "type": "succession",
+   "before": "confirm that temporary controls, bypasses, and manual operating instructions are understood by the affected staff",
+   "after": "wet commissioning begins"
+  },
+  {
+   "unit_id": "S229",
+   "type": "requirement",
+   "subject": "River Intake Pump Station",
+   "text": "Functional testing shall verify that the River Intake Pump Station, Raw Water Screen Channel, North Filter Gallery, South Filter Gallery, and Coagulant Dosing Skid respond correctly to local and supervisory commands."
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "River Intake Pump Station",
+   "label": "respond correctly to local and supervisory commands"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Raw Water Screen Channel",
+   "label": "respond correctly to local and supervisory commands"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "North Filter Gallery",
+   "label": "respond correctly to local and supervisory commands"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "South Filter Gallery",
+   "label": "respond correctly to local and supervisory commands"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Coagulant Dosing Skid",
+   "label": "respond correctly to local and supervisory commands"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "label": "verify that the River Intake Pump Station, Raw Water Screen Channel, North Filter Gallery, South Filter Gallery, and Coagulant Dosing Skid respond correctly"
+  },
+  {
+   "unit_id": "S230",
+   "type": "requirement",
+   "subject": "High Service Pump Header",
+   "text": "During integrated testing, Juniper shall demonstrate stable pressure control through startup, lead-lag transfer, and controlled shutdown."
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "High Service Pump Header",
+   "label": "demonstrate stable pressure control through startup, lead-lag transfer, and controlled shutdown"
+  },
+  {
+   "unit_id": "S231",
+   "type": "requirement",
+   "subject": "SCADA Historian Server",
+   "text": "The SCADA Historian Server shall be checked for correct time synchronization, tag naming, data retention, and retrieval of key commissioning trends."
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "label": "checked for correct time synchronization, tag naming, data retention, and retrieval of key commissioning trends"
+  },
+  {
+   "unit_id": "S232",
+   "type": "requirement",
+   "subject": "Chlorine Contact Basin",
+   "text": "The Chlorine Contact Basin and Clearwell Level Controller shall be tested under representative level, flow, and residual control conditions before treated water is released for routine distribution."
+  },
+  {
+   "unit_id": "S232",
+   "type": "requirement",
+   "subject": "Clearwell Level Controller",
+   "text": "The Chlorine Contact Basin and Clearwell Level Controller shall be tested under representative level, flow, and residual control conditions before treated water is released for routine distribution."
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "label": "tested under representative level, flow, and residual control conditions"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "label": "released treated water for routine distribution"
+  },
+  {
+   "unit_id": "S232",
+   "type": "succession",
+   "before": "tested under representative level, flow, and residual control conditions",
+   "after": "released treated water for routine distribution"
+  },
+  {
+   "unit_id": "S233",
+   "type": "state",
+   "label": "Storm Intake Mode"
+  },
+  {
+   "unit_id": "S233",
+   "type": "requirement",
+   "subject": "Storm Intake Mode",
+   "text": "Storm Intake Mode shall be exercised in a planned drill that confirms operator prompts, intake constraints, and return-to-normal steps."
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "label": "exercised in a planned drill"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "label": "confirms operator prompts, intake constraints, and return-to-normal steps"
+  },
+  {
+   "unit_id": "S234",
+   "type": "requirement",
+   "subject": "Chlorine Residual Alarm",
+   "text": "A Chlorine Residual Alarm test shall verify annunciation, operator response guidance, acknowledgement behavior, and escalation to the appropriate duty staff."
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "label": "verify annunciation, operator response guidance, acknowledgement behavior, and escalation to the appropriate duty staff"
+  },
+  {
+   "unit_id": "S235",
+   "type": "requirement",
+   "subject": "Chief Operator",
+   "text": "The Chief Operator shall coordinate training so that operators understand the control concept, normal sequencing, manual fallback methods, and alarm response expectations."
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "coordinate training"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "operators",
+   "label": "understand the control concept, normal sequencing, manual fallback methods, and alarm response expectations"
+  },
+  {
+   "unit_id": "S236",
+   "type": "requirement",
+   "subject": "operators",
+   "text": "Operator training shall include classroom review, simulator or dry-run practice where practical, field walkdowns, and supervised operation during early service."
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "include classroom review, simulator or dry-run practice where practical, field walkdowns, and supervised operation during early service"
+  },
+  {
+   "unit_id": "S237",
+   "type": "requirement",
+   "subject": "Laboratory Technician",
+   "text": "The Laboratory Technician shall be trained on sample timing, result entry, data review responsibilities, and communication of unusual water quality findings."
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Laboratory Technician",
+   "label": "be trained on sample timing, result entry, data review responsibilities, and communication of unusual water quality findings"
+  },
+  {
+   "unit_id": "S238",
+   "type": "requirement",
+   "subject": "Maintenance Planner",
+   "text": "The Maintenance Planner shall review commissioning defects, recurring nuisance alarms, calibration drift, and equipment access problems before preventive maintenance intervals are finalized."
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "review commissioning defects, recurring nuisance alarms, calibration drift, and equipment access problems"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "label": "preventive maintenance intervals are finalized"
+  },
+  {
+   "unit_id": "S238",
+   "type": "succession",
+   "before": "review commissioning defects, recurring nuisance alarms, calibration drift, and equipment access problems",
+   "after": "preventive maintenance intervals are finalized"
+  },
+  {
+   "unit_id": "S239",
+   "type": "requirement",
+   "subject": "Maintenance Planner",
+   "text": "The Maintenance Planner shall use the clip to compare observed pump condition with planned inspection intervals and corrective work priorities."
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "Maintenance Planner",
+   "label": "compare observed pump condition with planned inspection intervals and corrective work priorities"
+  },
+  {
+   "unit_id": "S239",
+   "type": "flow",
+   "source": "High Service Pump Header",
+   "target": "Maintenance Planner",
+   "payload": "Pump Bearing Vibration Clip"
+  },
+  {
+   "unit_id": "S240",
+   "type": "requirement",
+   "subject": "operations",
+   "text": "Feedback from maintenance work orders shall be reviewed with operations so that control changes do not mask equipment degradation or create avoidable field effort."
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "label": "reviewed feedback from maintenance work orders with operations"
+  },
+  {
+   "unit_id": "S241",
+   "type": "requirement",
+   "subject": "null",
+   "text": "Distribution readiness shall be declared only after pressure control, reservoir or clearwell constraints, communications, and emergency contact paths have been verified."
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "label": "verified pressure control, reservoir or clearwell constraints, communications, and emergency contact paths"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "label": "declared distribution readiness"
+  },
+  {
+   "unit_id": "S241",
+   "type": "succession",
+   "before": "verified pressure control, reservoir or clearwell constraints, communications, and emergency contact paths",
+   "after": "declared distribution readiness"
+  },
+  {
+   "unit_id": "S242",
+   "type": "requirement",
+   "subject": "Distribution Dispatcher",
+   "text": "Falcon shall confirm that distribution readiness messages are acknowledged before any planned change in pressure zone operating status."
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Distribution Dispatcher",
+   "label": "confirm that distribution readiness messages are acknowledged"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "label": "planned change in pressure zone operating status"
+  },
+  {
+   "unit_id": "S242",
+   "type": "succession",
+   "before": "confirm that distribution readiness messages are acknowledged",
+   "after": "planned change in pressure zone operating status"
+  },
+  {
+   "unit_id": "S243",
+   "type": "requirement",
+   "subject": "South Distribution Pressure Station",
+   "text": "Before distribution readiness is declared, the South Distribution Pressure Station shall use the card to confirm zone status, valve lineup, and communication checks."
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "South Distribution Pressure Station",
+   "label": "confirm zone status, valve lineup, and communication checks"
+  },
+  {
+   "unit_id": "S243",
+   "type": "succession",
+   "before": "confirm zone status, valve lineup, and communication checks",
+   "after": "declared distribution readiness"
+  },
+  {
+   "unit_id": "S243",
+   "type": "flow",
+   "source": "Distribution Dispatcher",
+   "target": "South Distribution Pressure Station",
+   "payload": "Pressure Zone Handoff Card"
+  },
+  {
+   "unit_id": "S244",
+   "type": "requirement",
+   "subject": "North Distribution Pressure Station",
+   "text": "The North Distribution Pressure Station shall be included in readiness checks for telemetry validity, pump permissives, local alarm indication, and operator communications."
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "label": "included in readiness checks for telemetry validity, pump permissives, local alarm indication, and operator communications"
+  },
+  {
+   "unit_id": "S245",
+   "type": "requirement",
+   "subject": "Residuals Hauler",
+   "text": "During commissioning of residuals handling, the Residuals Hauler shall use the Backwash Solids Manifest to confirm load identity, destination, and acceptance requirements."
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "performer": "Residuals Hauler",
+   "label": "use the Backwash Solids Manifest to confirm load identity, destination, and acceptance requirements"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "Chemical Supplier Driver",
+   "label": "follow site access, unloading, verification, and communication procedures"
+  },
+  {
+   "unit_id": "S246",
+   "type": "requirement",
+   "subject": "Chemical Supplier Driver",
+   "text": "The Chemical Supplier Driver shall follow site access, unloading, verification, and communication procedures established during commissioning and confirmed during training."
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "label": "Records generated during commissioning and early operation"
+  },
+  {
+   "unit_id": "S247",
+   "type": "requirement",
+   "subject": "Records",
+   "text": "Records generated during commissioning and early operation shall be complete enough to support troubleshooting, regulatory review, warranty claims, and future operator training."
+  },
+  {
+   "unit_id": "S248",
+   "type": "requirement",
+   "subject": "Records",
+   "text": "Records retention shall follow municipal policy and applicable drinking water requirements, with electronic records protected against unauthorized change and accidental loss."
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "label": "follow municipal policy and applicable drinking water requirements"
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "label": "protected against unauthorized change and accidental loss"
+  },
+  {
+   "unit_id": "S249",
+   "type": "action",
+   "performer": "Periodic performance reviews",
+   "label": "compare actual plant operation with the control concept"
+  },
+  {
+   "unit_id": "S249",
+   "type": "requirement",
+   "subject": "Periodic performance reviews",
+   "text": "Periodic performance reviews shall compare actual plant operation with the control concept, including alarm burden, manual interventions, water quality stability, chemical use, and energy use."
+  },
+  {
+   "unit_id": "S250",
+   "type": "requirement",
+   "subject": "Continuous improvement actions",
+   "text": "Continuous improvement actions shall be prioritized by risk, reviewed by the Chief Operator and Duty Engineer, tested before release, and incorporated into updated procedures and training materials."
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "prioritized by risk"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "performer": "Chief Operator",
+   "label": "reviewed Continuous improvement actions"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "performer": "Duty Engineer",
+   "label": "reviewed Continuous improvement actions"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "tested before release"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "incorporated into updated procedures and training materials"
+  }
+ ],
+ "entities": [
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system"
+   ]
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": []
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "Backwash Recovery Tank",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "plant staff",
+   "aliases": []
+  },
+  {
+   "name": "operating data",
+   "aliases": []
+  },
+  {
+   "name": "raw water",
+   "aliases": []
+  },
+  {
+   "name": "Chemical Supplier Driver",
+   "aliases": []
+  },
+  {
+   "name": "plant",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Sample Receiving Bench",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Residuals Hauler",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "plant staff",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "operations",
+   "aliases": []
+  },
+  {
+   "name": "process and compliance samples",
+   "aliases": []
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "Rake Torque Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "plant staff",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": []
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system"
+   ]
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "pump",
+   "aliases": []
+  },
+  {
+   "name": "drive",
+   "aliases": []
+  },
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system",
+    "plant control system"
+   ]
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "name": "Alum Batch Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Filter Run Exception Note",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "filter",
+   "aliases": []
+  },
+  {
+   "name": "operating staff",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Sample Receiving Bench",
+   "aliases": [
+    "Sparrow"
+   ]
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "operating staff",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "plant",
+   "aliases": []
+  },
+  {
+   "name": "filter",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "Alum Batch Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": []
+  },
+  {
+   "name": "Sample Chain Slip",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Sample Receiving Bench",
+   "aliases": [
+    "Sparrow"
+   ]
+  },
+  {
+   "name": "Jar Test Photograph Set",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "Backwash Recovery Tank",
+   "aliases": []
+  },
+  {
+   "name": "operations",
+   "aliases": []
+  },
+  {
+   "name": "regulatory auditors",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "operations staff",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Rake Torque Snapshot",
+   "aliases": [
+    "snapshot"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "craft worker",
+   "aliases": []
+  },
+  {
+   "name": "operations",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": []
+  },
+  {
+   "name": "Chemical Supplier Driver",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Cylinder Seal Log",
+   "aliases": []
+  },
+  {
+   "name": "plant",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "operating staff",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "shift turnover record",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "operations",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Sample Receiving Bench",
+   "aliases": [
+    "Sparrow"
+   ]
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "operating data",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "control room",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "Low clearwell level interlocks",
+   "aliases": []
+  },
+  {
+   "name": "High clearwell level alarms",
+   "aliases": []
+  },
+  {
+   "name": "work order",
+   "aliases": []
+  },
+  {
+   "name": "confirmatory residual results",
+   "aliases": []
+  },
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system",
+    "plant control system"
+   ]
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "plant staff",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Diver Entry Permit",
+   "aliases": []
+  },
+  {
+   "name": "Pump Bearing Vibration Clip",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "pressure support",
+   "aliases": []
+  },
+  {
+   "name": "demand changes",
+   "aliases": []
+  },
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system",
+    "plant control system"
+   ]
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Backwash Recovery Tank",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Filter Run Exception Note",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "spent washwater",
+   "aliases": []
+  },
+  {
+   "name": "raw water",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Backwash Solids Manifest",
+   "aliases": []
+  },
+  {
+   "name": "control room",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "lead booster pump",
+   "aliases": []
+  },
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system",
+    "plant control system"
+   ]
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Laboratory Sample Receiving Bench",
+   "aliases": [
+    "Sparrow"
+   ]
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "Sample Chain Slip",
+   "aliases": []
+  },
+  {
+   "name": "control room",
+   "aliases": []
+  },
+  {
+   "name": "distribution station",
+   "aliases": []
+  },
+  {
+   "name": "local controls",
+   "aliases": []
+  },
+  {
+   "name": "Pressure Zone Handoff Card",
+   "aliases": []
+  },
+  {
+   "name": "Field crews",
+   "aliases": []
+  },
+  {
+   "name": "Shift handoff",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "pump",
+   "aliases": []
+  },
+  {
+   "name": "Cedar Falls Municipal Drinking Water Treatment Plant control system",
+   "aliases": [
+    "control system",
+    "plant control system"
+   ]
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "Field crews",
+   "aliases": []
+  },
+  {
+   "name": "control network",
+   "aliases": []
+  },
+  {
+   "name": "operator workstations",
+   "aliases": []
+  },
+  {
+   "name": "controllers",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Backup power",
+   "aliases": []
+  },
+  {
+   "name": "plant",
+   "aliases": []
+  },
+  {
+   "name": "Uninterruptible power supplies",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Clearwell Diver Entry Permit",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Cylinder Seal Log",
+   "aliases": []
+  },
+  {
+   "name": "Chemical Supplier Driver",
+   "aliases": []
+  },
+  {
+   "name": "notification",
+   "aliases": []
+  },
+  {
+   "name": "River Intake Pump Station",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "name": "Raw Water Screen Channel",
+   "aliases": []
+  },
+  {
+   "name": "North Filter Gallery",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "name": "South Filter Gallery",
+   "aliases": []
+  },
+  {
+   "name": "Coagulant Dosing Skid",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "name": "High Service Pump Header",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "SCADA Historian Server",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Chlorine Contact Basin",
+   "aliases": []
+  },
+  {
+   "name": "Clearwell Level Controller",
+   "aliases": []
+  },
+  {
+   "name": "Storm Intake Mode",
+   "aliases": []
+  },
+  {
+   "name": "Chlorine Residual Alarm",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "Laboratory Technician",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Planner",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Pump Bearing Vibration Clip",
+   "aliases": []
+  },
+  {
+   "name": "operations",
+   "aliases": []
+  },
+  {
+   "name": "Distribution Dispatcher",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "South Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Pressure Zone Handoff Card",
+   "aliases": []
+  },
+  {
+   "name": "North Distribution Pressure Station",
+   "aliases": []
+  },
+  {
+   "name": "Residuals Hauler",
+   "aliases": []
+  },
+  {
+   "name": "Backwash Solids Manifest",
+   "aliases": []
+  },
+  {
+   "name": "treated water",
+   "aliases": []
+  },
+  {
+   "name": "Chemical Supplier Driver",
+   "aliases": []
+  },
+  {
+   "name": "plant",
+   "aliases": []
+  },
+  {
+   "name": "Chief Operator",
+   "aliases": []
+  },
+  {
+   "name": "Duty Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Records",
+   "aliases": []
+  },
+  {
+   "name": "Periodic performance reviews",
+   "aliases": []
+  },
+  {
+   "name": "Continuous improvement actions",
+   "aliases": []
+  },
+  {
+   "name": "electronic records",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S015"
+   ],
+   "chunk_tokens": 451,
+   "memory_tokens": 0,
+   "prompt_tokens": 1161,
+   "input": 2646,
+   "output": 1901,
+   "reasoning": null,
+   "cached": true
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S016",
+    "S032"
+   ],
+   "chunk_tokens": 445,
+   "memory_tokens": 301,
+   "prompt_tokens": 1494,
+   "input": 3197,
+   "output": 3109,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S033",
+    "S048"
+   ],
+   "chunk_tokens": 446,
+   "memory_tokens": 497,
+   "prompt_tokens": 1688,
+   "input": 3464,
+   "output": 2100,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S049",
+    "S065"
+   ],
+   "chunk_tokens": 441,
+   "memory_tokens": 506,
+   "prompt_tokens": 1695,
+   "input": 3483,
+   "output": 2560,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S066",
+    "S082"
+   ],
+   "chunk_tokens": 454,
+   "memory_tokens": 505,
+   "prompt_tokens": 1707,
+   "input": 3542,
+   "output": 2524,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S083",
+    "S100"
+   ],
+   "chunk_tokens": 452,
+   "memory_tokens": 508,
+   "prompt_tokens": 1710,
+   "input": 3471,
+   "output": 3127,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S101",
+    "S117"
+   ],
+   "chunk_tokens": 438,
+   "memory_tokens": 508,
+   "prompt_tokens": 1693,
+   "input": 3529,
+   "output": 3025,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S118",
+    "S133"
+   ],
+   "chunk_tokens": 451,
+   "memory_tokens": 511,
+   "prompt_tokens": 1707,
+   "input": 3490,
+   "output": 2298,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S134",
+    "S149"
+   ],
+   "chunk_tokens": 436,
+   "memory_tokens": 510,
+   "prompt_tokens": 1691,
+   "input": 3485,
+   "output": 2729,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S150",
+    "S164"
+   ],
+   "chunk_tokens": 454,
+   "memory_tokens": 471,
+   "prompt_tokens": 1667,
+   "input": 3467,
+   "output": 3079,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S165",
+    "S180"
+   ],
+   "chunk_tokens": 454,
+   "memory_tokens": 495,
+   "prompt_tokens": 1694,
+   "input": 3509,
+   "output": 2648,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S181",
+    "S197"
+   ],
+   "chunk_tokens": 462,
+   "memory_tokens": 497,
+   "prompt_tokens": 1705,
+   "input": 3574,
+   "output": 3355,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S198",
+    "S212"
+   ],
+   "chunk_tokens": 467,
+   "memory_tokens": 492,
+   "prompt_tokens": 1700,
+   "input": 3533,
+   "output": 2973,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S213",
+    "S228"
+   ],
+   "chunk_tokens": 464,
+   "memory_tokens": 493,
+   "prompt_tokens": 1701,
+   "input": 3574,
+   "output": 4723,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S229",
+    "S245"
+   ],
+   "chunk_tokens": 455,
+   "memory_tokens": 502,
+   "prompt_tokens": 1704,
+   "input": 3573,
+   "output": 5114,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S246",
+    "S250"
+   ],
+   "chunk_tokens": 135,
+   "memory_tokens": 479,
+   "prompt_tokens": 1327,
+   "input": 2863,
+   "output": 1275,
+   "reasoning": null,
+   "cached": false
+  }
+ ],
+ "wall_s": 338.7
+}

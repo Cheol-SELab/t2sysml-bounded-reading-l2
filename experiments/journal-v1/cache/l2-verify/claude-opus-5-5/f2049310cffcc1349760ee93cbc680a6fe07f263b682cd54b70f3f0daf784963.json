@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Orbit Determination Engine provides \"orbit solution\" to Flight Dynamics Team (an information or material flow).\n\nSource sentences:\nS129: Tracking arcs include measurements associated with the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna when those data meet quality and timing criteria.\nS130: The Product Quality Service checks each orbit solution for frame consistency, covariance reasonableness, time-tag continuity, and agreement with recent contact predictions.\nS131: The Flight Dynamics Team uses the residual report to separate station-related tracking biases from dynamic model errors before accepting an orbit solution.\n\nAnswer \"supported\" only if the sentences state that Orbit Determination Engine produces or sends this item AND that Flight Dynamics Team receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S131 shows the Flight Dynamics Team accepting an orbit solution, but no sentence says the Orbit Determination Engine produces or sends it, so the source of the flow is not established.\"}",
+ "usage": {
+  "input_tokens": 694,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 222,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 142
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.896,
+ "created": "2026-10-14T12:41:16"
+}

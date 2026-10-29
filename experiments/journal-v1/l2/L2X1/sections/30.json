@@ -1,0 +1,104 @@
+{
+ "sentences": [
+  {
+   "text": "Contingency operations cover any period in which the Regional Flow Platform cannot provide trusted automation for one or more airport, runway, apron, or airspace flow functions.",
+   "tags": []
+  },
+  {
+   "text": "A degraded operation is declared when data latency, service unavailability, or inconsistent operational outputs prevent users from relying on the normal decision support path without additional verification.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager is accountable for declaring the Contingency Fallback State after consultation with the Regional Flow Manager, Tower Supervisor, and System Support Engineer.",
+   "tags": []
+  },
+  {
+   "text": "The declaration identifies the affected functions, the operational area, the expected duration, and the authority that will approve restoration to Normal Operations or Recovery Phase.",
+   "tags": []
+  },
+  {
+   "text": "For voice coordination, the Contingency Operations Console is referred to as Silverpine during exercises and live fallback operation.",
+   "tags": [
+    "ALIAS:E_CONTINGENCY_OPERATIONS_CONSOLE"
+   ]
+  },
+  {
+   "text": "The Contingency Operations Console provides a protected operating position with independent access to the Flight Data Exchange, Alert Distribution Hub, Audit Event Ledger, and Digital Briefing Room.",
+   "tags": []
+  },
+  {
+   "text": "If the Airport CDM Portal becomes unavailable, participants continue coordination through the Digital Briefing Room and record decisions in the Collaborative Decision Log when service is restored.",
+   "tags": []
+  },
+  {
+   "text": "If the Demand Prediction Service or Capacity Assessment Module is unreliable, the Regional Flow Manager applies the last verified Airport Capacity Plan and adjusts it by direct coordination with the Airspace Sector Planner and Meteorology Briefing Officer.",
+   "tags": []
+  },
+  {
+   "text": "If the Slot Allocation Engine is unavailable, the Slot Coordinator initiates manual slot procedures using a time-ordered control sheet maintained at the Contingency Operations Console.",
+   "tags": []
+  },
+  {
+   "text": "Manual slot procedures preserve the most recent valid Calculated Takeoff Time unless safety, capacity, curfew, or regulatory constraints require a new time.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator assigns any revised Calculated Takeoff Time only after confirming runway capacity with the Tower Supervisor and surface feasibility with the Ramp Control Lead.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator and Aircraft Operator Representative acknowledge manual slot assignments through recorded voice readback or an agreed written channel.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator uses the Crew Duty Extension Log to check whether manually issued slot times remain operationally achievable.",
+   "tags": [
+    "F17:link"
+   ]
+  },
+  {
+   "text": "During manual operation, the Tower Sequence Manager and Ramp Movement Board are treated as advisory displays unless their data quality has been confirmed by the System Support Engineer.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service may remain in monitoring mode while manual slot control is active, but it must not automatically overwrite issued times.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console may continue to display arrival demand, but the Regional Flow Manager approves any arrival regulation changes through direct coordination.",
+   "tags": []
+  },
+  {
+   "text": "Fallback entry criteria include loss of authentication through the Identity Access Service, loss of time alignment from the Time Synchronization Service, corrupted operational data, or a sustained mismatch between surveillance and flight data.",
+   "tags": []
+  },
+  {
+   "text": "Fallback entry also occurs when the Alert Distribution Hub cannot deliver mandatory operational advisories to the required participants within the agreed operational tolerance.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer classifies the technical condition, isolates failed components, and advises whether partial restoration is safe for operational use.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward confirms which data sets may be trusted and marks any later synchronization from fallback records for reconciliation review.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager conducts fallback briefings at intervals appropriate to the traffic level and publishes the current operating basis through the Digital Briefing Room.",
+   "tags": []
+  },
+  {
+   "text": "Transition out of the Contingency Fallback State requires stable service performance, verified data consistency, successful user access, and agreement from the operational leads affected by the outage.",
+   "tags": []
+  },
+  {
+   "text": "Before returning automation to control, the Slot Coordinator reconciles the manual slot record with the Slot Allocation Engine and resolves any conflict in the Collaborative Decision Log.",
+   "tags": []
+  },
+  {
+   "text": "After restoration, the Performance Analytics Warehouse receives the outage timeline, manual intervention record, and recovery milestones for inclusion in the Post Operations Report.",
+   "tags": []
+  }
+ ]
+}

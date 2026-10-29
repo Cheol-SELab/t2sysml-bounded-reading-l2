@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: authorized clinical systems provides \"medication orders\" to Clinical Pharmacist (an information or material flow).\n\nSource sentences:\nS028: The Pharmacy Technician is called Copperfield in this concept.\nS029: The Medication Order Gateway accepts medication orders from authorized clinical systems and records their arrival times.\nS231: The IT Operations Specialist coordinates technical troubleshooting with the Biomedical Engineer when equipment inspection or repair is required.\nS232: The Clinical Pharmacist reviews medication orders affected by the outage when clinical validation is needed.\n\nAnswer \"supported\" only if the sentences state that authorized clinical systems produces or sends this item AND that Clinical Pharmacist receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S029 states that authorized clinical systems send medication orders to the Medication Order Gateway, and S232 states that the Clinical Pharmacist reviews medication orders affected by the outage.\"}",
+ "usage": {
+  "input_tokens": 278,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 90,
+  "output_tokens_details": {
+   "reasoning_tokens": 38
+  },
+  "total_tokens": 368
+ },
+ "attempts": 1,
+ "wall_s": 4.689,
+ "created": "2026-10-14T12:35:53"
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Hospital Courier provides \"the Pneumatic Capsule Seal Record\" to West Tube Dispatch Console (an information or material flow).\n\nSource sentences:\nS090: The courier records the time and identity associated with acceptance so the custody history remains traceable.\nS091: The Hospital Courier produces the Pneumatic Capsule Seal Record when the capsule is sealed for transfer.\nS237: The cabinet remains Out of Service until required functional checks pass and the responsible staff approve its return to Ready for Dispense.\nS238: The West Tube Dispatch Console uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status before closing its dispatch-side handoff checks.\n\nAnswer \"supported\" only if the sentences state that Hospital Courier produces or sends this item AND that West Tube Dispatch Console receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S091 states that the Hospital Courier produces the Pneumatic Capsule Seal Record, and S238 states that the West Tube Dispatch Console uses that same record.\"}",
+ "usage": {
+  "input_tokens": 305,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 47,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 352
+ },
+ "attempts": 1,
+ "wall_s": 3.869,
+ "created": "2026-10-14T12:35:37"
+}

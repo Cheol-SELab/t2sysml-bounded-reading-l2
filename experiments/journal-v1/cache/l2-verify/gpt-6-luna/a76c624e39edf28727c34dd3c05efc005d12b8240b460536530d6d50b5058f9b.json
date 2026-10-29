@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ambulance Unit 417 provides \"arrival\" to Call Taker Mara (an information or material flow).\n\nSource sentences:\nS164: The Regional Radio Network supports updates between dispatch and the Paramedic Crew while the ambulance is en route.\nS165: Call Taker Mara receives the Bedside Arrival Receipt to support completion of the incident record.\nS166: Call Taker Mara verifies that the recorded arrival time is consistent with the dispatch timeline and crew communications.\nS167: Ambulance Unit 417 reports arrival at the receiving facility and confirms when patient handover is complete.\n\nAnswer \"supported\" only if the sentences state that Ambulance Unit 417 produces or sends this item AND that Call Taker Mara receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The unit reports arrival, and the call taker receives a Bedside Arrival Receipt, but the text does not establish that the unit sends that same item to the call taker.\"}",
+ "usage": {
+  "input_tokens": 297,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 431,
+  "output_tokens_details": {
+   "reasoning_tokens": 375
+  },
+  "total_tokens": 728
+ },
+ "attempts": 1,
+ "wall_s": 4.843,
+ "created": "2026-10-13T23:47:52"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Maintenance Planning Engine provides \"the Deferred Task Rationale\" to Field Supervisor (an information or material flow).\n\nSource sentences:\nS284: The Vessel Master can pause or abort an approach when observed conditions differ from the forecast or deteriorate during transit.\nS285: Maintenance Planning Engine produces the Deferred Task Rationale when weather prevents a planned task from proceeding.\nS429: Field Supervisor checks that cybersecurity requirements are included in the work briefing before technicians begin affected tasks.\nS430: Field Supervisor uses the Deferred Task Rationale when a cybersecurity-related work item must be postponed.\n\nAnswer \"supported\" only if the sentences state that Maintenance Planning Engine produces or sends this item AND that Field Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S285 says Maintenance Planning Engine produces the Deferred Task Rationale, and S430 says Field Supervisor uses the same item, so the flow from engine to supervisor is stated across the two sentences.\"}",
+ "usage": {
+  "input_tokens": 679,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 86,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.134,
+ "created": "2026-10-14T12:51:14"
+}

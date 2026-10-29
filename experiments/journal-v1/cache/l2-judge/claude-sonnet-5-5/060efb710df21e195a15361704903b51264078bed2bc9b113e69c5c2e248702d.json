@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Meteorology Briefing Officer provides \"forecast confidence\" to Collaborative Decision Log (an information or material flow).\n\nSource sentences:\nS085: The Meteorology Briefing Officer produces the Storm Cell Snapshot before the pre-tactical capacity review begins.\nS086: The Meteorology Briefing Officer briefs forecast confidence, timing risk, and expected operational impact in the Digital Briefing Room using data supplied through the Weather Ingest Gateway.\nS121: When confidence decreases below the configured threshold, the Alert Distribution Hub notifies the Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator that the capacity picture may change.\nS122: All forecast confidence changes, feed quality changes, and capacity recalculations are written to the Collaborative Decision Log with synchronized timestamps.\n\nAnswer \"supported\" only if the sentences state that Meteorology Briefing Officer produces or sends this item AND that Collaborative Decision Log receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S086 says the officer briefs forecast confidence in the Digital Briefing Room, and S122 says forecast confidence changes are written to the Collaborative Decision Log, but no sentence says the officer sends or writes this item to the log, and the writer in S122 is unspecified.\"}",
+ "usage": {
+  "input_tokens": 753,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 109,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.396,
+ "created": "2026-10-14T12:45:03"
+}

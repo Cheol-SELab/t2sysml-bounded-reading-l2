@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pharmacy Fulfillment Robot provides \"the Priority Refill Tote Tag\" to North Ward Cabinet Controller (an information or material flow).\n\nSource sentences:\nS010: The Pharmacy Technician performs routine preparation tasks within approved procedures and escalates discrepancies to the Clinical Pharmacist.\nS011: The Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag for eligible refill work.\nS102: South Ward Cabinet Controller records the arrival time and the destination cabinet for loads assigned to the south ward.\nS103: North Ward Cabinet Controller uses the Priority Refill Tote Tag to confirm the intended ward before staff accept a tote.\n\nAnswer \"supported\" only if the sentences state that Pharmacy Fulfillment Robot produces or sends this item AND that North Ward Cabinet Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S011 states the Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag, and S103 states the North Ward Cabinet Controller uses that same tag to confirm the intended ward, so the producer-to-user flow is supported.\"}",
+ "usage": {
+  "input_tokens": 713,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 101,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.86,
+ "created": "2026-10-14T12:34:39"
+}

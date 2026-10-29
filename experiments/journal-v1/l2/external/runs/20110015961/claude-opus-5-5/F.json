@@ -1,0 +1,468 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "FIRST Transformational Spaceport and Range Concept of Operations",
+   "label": "presents a long-term, sustainable vision for future U.S. space transportation infrastructure and operations"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "global range",
+   "label": "supports simultaneous flights within hours of notification"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "supports multiple simultaneous flights"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "Managing the System"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "Communicating Information"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "Preparing for Flight"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "Managing Movement"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "composition",
+   "whole": "Future Space Transportation System",
+   "parts": [
+    "Central Control Function",
+    "automated analysis and decision support tools",
+    "basic shared support infrastructure",
+    "industrial and laboratory facilities"
+   ]
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "distribute and archive information"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "Future Space Transportation System",
+   "label": "acquire data from vehicles"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "composition",
+   "whole": "Future Space Transportation System",
+   "parts": [
+    "local area network"
+   ]
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "performer": "local area network",
+   "label": "connects the vehicle and payload elements, control centers, ground systems and support equipment to the Central Control Function"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "composition",
+   "whole": "Future Space Transportation System",
+   "parts": [
+    "radars and optical systems"
+   ]
+  },
+  {
+   "unit_id": "U0030",
+   "type": "requirement",
+   "subject": "Future Space Transportation System",
+   "text": "Over time, this architecture will evolve toward a primarily space-centric capability, supplemented by airborne assets, and with low-cost, modernized, ground-based instrumentation as needed to support particular requirements."
+  },
+  {
+   "unit_id": "U0032",
+   "type": "composition",
+   "whole": "Future Space Transportation System",
+   "parts": [
+    "spaceports"
+   ]
+  },
+  {
+   "unit_id": "U0037",
+   "type": "state",
+   "owner": "Future Space Transportation System",
+   "label": "Planning"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "state",
+   "owner": "Future Space Transportation System",
+   "label": "Processing"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "state",
+   "owner": "Future Space Transportation System",
+   "label": "Departure Operations"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "state",
+   "owner": "Future Space Transportation System",
+   "label": "Flight Operations"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "state",
+   "owner": "Future Space Transportation System",
+   "label": "Return and Landing"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "state",
+   "owner": "Future Space Transportation System",
+   "label": "Refurbishment and Turnaround"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "user",
+   "label": "generates an initial flight profile"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "user",
+   "label": "requests FSTS support"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "transition",
+   "to": "Planning",
+   "trigger": "user generates an initial flight profile and requests FSTS support"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "flow",
+   "source": "user",
+   "target": "Future Space Transportation System",
+   "payload": "flight profile"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "control centers",
+   "label": "monitor the flight"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "performer": "control centers",
+   "label": "re-engage"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "Central Control Function",
+   "label": "coordination to ensure all required support is scheduled and available"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "label": "deactivating, safing, and de-servicing flight vehicle and support systems"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "performer": "Integrated health management systems",
+   "label": "report information for routine post-flight reports"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "flow",
+   "source": "Integrated health management systems",
+   "payload": "post-flight reports"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "Space and Air Traffic Management System",
+   "label": "manage operations"
+  },
+  {
+   "unit_id": "U0057",
+   "type": "action",
+   "performer": "air traffic control system",
+   "label": "manage use of the National Airspace System"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "composition",
+   "whole": "Future Space Transportation System",
+   "parts": [
+    "spaceports",
+    "flight vehicles",
+    "tracking and communications assets",
+    "flight traffic coordination centers"
+   ]
+  },
+  {
+   "unit_id": "U0071",
+   "type": "requirement",
+   "subject": "flight vehicles",
+   "text": "A variety of new space vehicles will be deployed concurrently in the future."
+  },
+  {
+   "unit_id": "U0075",
+   "type": "requirement",
+   "subject": "Future Space Transportation System",
+   "text": "Pre-approved flight paths will become mandatory to ensure orderly, safe transportation to, through, and from space."
+  },
+  {
+   "unit_id": "U0077",
+   "type": "requirement",
+   "subject": "Future Space Transportation System",
+   "text": "Infrastructure systems will integrate with vehicle systems to form the system-of-systems."
+  },
+  {
+   "unit_id": "U0078",
+   "type": "requirement",
+   "subject": "Reusable Launch Vehicles",
+   "text": "Future sub-orbital and orbital Reusable Launch Vehicles (RLVs) will be reliable enough to fly over populated areas without increasing risk to public safety above the currently acceptable levels associated with commercial air traffic."
+  },
+  {
+   "unit_id": "U0084",
+   "type": "constraint",
+   "subject": "Future Space Transportation System",
+   "expression": "over the past 50 years"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "requirement",
+   "subject": "Future Space Transportation System",
+   "text": "For shared infrastructure to be effective, all elements of the FSTS support multiple simultaneous flights."
+  },
+  {
+   "unit_id": "U0126",
+   "type": "action",
+   "performer": "Central Control Function",
+   "label": "manages worldwide assets"
+  },
+  {
+   "unit_id": "U0126",
+   "type": "action",
+   "performer": "Central Control Function",
+   "label": "coordinating the range, flight, and spaceport operations"
+  },
+  {
+   "unit_id": "U0127",
+   "type": "action",
+   "performer": "Central Control Function",
+   "label": "provides a variety of services"
+  },
+  {
+   "unit_id": "U0128",
+   "type": "action",
+   "label": "planned, cleared, and executed within hours of identification of the need"
+  },
+  {
+   "unit_id": "U0132",
+   "type": "action",
+   "performer": "control centers",
+   "label": "manages different operational aspects of space flights"
+  },
+  {
+   "unit_id": "U0132",
+   "type": "action",
+   "performer": "control centers",
+   "label": "links multiple operators"
+  },
+  {
+   "unit_id": "U0136",
+   "type": "action",
+   "performer": "Vehicle health management and self-test capabilities",
+   "label": "inform operators of corrective actions"
+  },
+  {
+   "unit_id": "U0136",
+   "type": "flow",
+   "source": "Vehicle health management and self-test capabilities",
+   "target": "operators",
+   "payload": "corrective actions"
+  },
+  {
+   "unit_id": "U0141",
+   "type": "action",
+   "performer": "Commercial Transportation Centers",
+   "label": "support hypersonic air and space travel"
+  }
+ ],
+ "entities": [
+  {
+   "name": "FIRST Transformational Spaceport and Range Concept of Operations",
+   "aliases": [
+    "CONOPS",
+    "Transformational CONOPS",
+    "Transformational Concept of Operations"
+   ]
+  },
+  {
+   "name": "Department of Defense",
+   "aliases": [
+    "DoD"
+   ]
+  },
+  {
+   "name": "Federal Aviation Administration",
+   "aliases": [
+    "FAA"
+   ]
+  },
+  {
+   "name": "National Aeronautics and Space Administration",
+   "aliases": [
+    "NASA"
+   ]
+  },
+  {
+   "name": "Future Space Transportation System",
+   "aliases": [
+    "FSTS"
+   ]
+  },
+  {
+   "name": "Central Control Function",
+   "aliases": []
+  },
+  {
+   "name": "Global Information Network",
+   "aliases": []
+  },
+  {
+   "name": "automated analysis and decision support tools",
+   "aliases": []
+  },
+  {
+   "name": "basic shared support infrastructure",
+   "aliases": []
+  },
+  {
+   "name": "industrial and laboratory facilities",
+   "aliases": []
+  },
+  {
+   "name": "local area network",
+   "aliases": []
+  },
+  {
+   "name": "control centers",
+   "aliases": []
+  },
+  {
+   "name": "spaceports",
+   "aliases": [
+    "transportation nodes"
+   ]
+  },
+  {
+   "name": "global range",
+   "aliases": []
+  },
+  {
+   "name": "radars and optical systems",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": []
+  },
+  {
+   "name": "flight profile",
+   "aliases": []
+  },
+  {
+   "name": "Integrated health management systems",
+   "aliases": []
+  },
+  {
+   "name": "post-flight reports",
+   "aliases": []
+  },
+  {
+   "name": "Space and Air Traffic Management System",
+   "aliases": [
+    "SATMS"
+   ]
+  },
+  {
+   "name": "National Airspace System",
+   "aliases": [
+    "NAS"
+   ]
+  },
+  {
+   "name": "air traffic control system",
+   "aliases": []
+  },
+  {
+   "name": "Reusable Launch Vehicles",
+   "aliases": [
+    "RLVs"
+   ]
+  },
+  {
+   "name": "Commercial Transportation Centers",
+   "aliases": []
+  },
+  {
+   "name": "Vehicle health management and self-test capabilities",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "flight vehicles",
+   "aliases": []
+  },
+  {
+   "name": "tracking and communications assets",
+   "aliases": []
+  },
+  {
+   "name": "flight traffic coordination centers",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0144"
+   ],
+   "chunk_tokens": 4424,
+   "memory_tokens": 0,
+   "prompt_tokens": 5665,
+   "input": 10244,
+   "output": 4969,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

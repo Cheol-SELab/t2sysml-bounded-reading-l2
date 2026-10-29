@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Surface Surveillance Adapter provides \"the Runway Lighting Outage Card\" to Tower Supervisor (an information or material flow).\n\nSource sentences:\nS605: The Tower Supervisor uses the same result to understand whether a runway queue is being held for surface capacity, runway capacity, or downstream airspace capacity.\nS606: The Surface Surveillance Adapter produces the Runway Lighting Outage Card when monitored runway lighting status affects a declared operating configuration.\nS692: The Airport Duty Manager is responsible for ensuring that declared service reductions are entered promptly and that the operational description is consistent with local aerodrome control procedures.\nS693: The Tower Supervisor uses the Runway Lighting Outage Card to confirm which runway lighting elements are unavailable before approving the operational status shown in the Tower Sequence Manager.\n\nAnswer \"supported\" only if the sentences state that Surface Surveillance Adapter produces or sends this item AND that Tower Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S606 states that the Surface Surveillance Adapter produces the Runway Lighting Outage Card, and S693 states that the Tower Supervisor uses that same card.\"}",
+ "usage": {
+  "input_tokens": 329,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 47,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 376
+ },
+ "attempts": 1,
+ "wall_s": 2.402,
+ "created": "2026-10-14T12:46:41"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=local jurisdiction review)\n\nSource sentences (the last one is where the fact was extracted):\nS086: If a bridge path fails, the Caldera Incident Command Portal marks the affected radio route as impaired and requires manual acknowledgement by the Duty Detection Officer.\nS087: Orion must verify that the impaired route has an alternate contact method before any new aviation coordination message is accepted.\nS088: The County Emergency Liaison is the primary contact for county dispatch, road control, evacuation support, and local public safety notifications.\nS089: The County Emergency Liaison sends the Drone Corridor Permit after local jurisdiction review is complete.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S089 states that the County Emergency Liaison sends the permit after 'local jurisdiction review' is complete, so a local jurisdiction review action is directly implied.\"}",
+ "usage": {
+  "input_tokens": 671,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 70,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.894,
+ "created": "2026-10-14T12:52:28"
+}

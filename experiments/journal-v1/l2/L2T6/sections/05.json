@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "Flight Data Gateway maintains scheduled flight identifiers, destinations, planned departure times, and revisions needed for baggage planning.",
+   "tags": []
+  },
+  {
+   "text": "Flight schedules include airline-specific dispatch targets and connection windows, and changes are time-stamped for operational use.",
+   "tags": []
+  },
+  {
+   "text": "Baggage Control System evaluates flight assignments against current schedule data before accepting bag routing instructions.",
+   "tags": []
+  },
+  {
+   "text": "The planned dispatch time is the reference for prioritizing bags, while the published departure time remains the passenger-facing schedule value.",
+   "tags": []
+  },
+  {
+   "text": "Baggage Control System applies cutoff profiles configured for each carrier, flight, and operating condition.",
+   "tags": []
+  },
+  {
+   "text": "A bag accepted before cutoff retains its assigned flight unless a subsequent schedule or operational change requires reassessment.",
+   "tags": []
+  },
+  {
+   "text": "When schedule revisions move a departure earlier, Baggage Operations Supervisor reviews affected flights and directs priority adjustments.",
+   "tags": []
+  },
+  {
+   "text": "Cutoff values account for screening, sortation, make-up, and transfer handling allowances rather than only aircraft departure.",
+   "tags": []
+  },
+  {
+   "text": "Baggage Control System receives the Flight Cutoff Advisory.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "text": "Baggage Control System compares remaining processing time with route-specific handling estimates.",
+   "tags": []
+  },
+  {
+   "text": "Bags with confirmed screening clearance may proceed to flight-specific sort destinations when capacity is available.",
+   "tags": []
+  },
+  {
+   "text": "Bags awaiting screening are held from final flight induction even when their scheduled departure is near.",
+   "tags": []
+  },
+  {
+   "text": "North Gate Scanner and South Gate Scanner record screening outcomes for inducted bags.",
+   "tags": []
+  },
+  {
+   "text": "The Image Resolution Desk reviews unresolved images, and final routing remains withheld until disposition is recorded.",
+   "tags": []
+  },
+  {
+   "text": "A positive threat indication suspends ordinary routing until the authorized security disposition is entered.",
+   "tags": []
+  },
+  {
+   "text": "Explosives Response Team produces the Custody Seal Log.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "text": "When screening disposition is pending, Baggage Control System preserves a recoverable bag-to-flight association rather than releasing the bag to make-up.",
+   "tags": []
+  },
+  {
+   "text": "Primary Crossbelt Sorter routes eligible bags according to flight assignment and current cutoff priority.",
+   "tags": []
+  },
+  {
+   "text": "Concourse Zone Controller coordinates induction demand with available conveyor capacity across the operating area.",
+   "tags": []
+  },
+  {
+   "text": "Induction Tray Conveyor admits bags in priority order, subject to scan confirmation and safe spacing.",
+   "tags": []
+  },
+  {
+   "text": "East Make-Up Conveyor and West Make-Up Conveyor receive flight groups according to active allocation rules.",
+   "tags": []
+  },
+  {
+   "text": "Carousel 7 Make-Up Unit presents bags for outbound loading only after flight grouping and screening status are confirmed.",
+   "tags": []
+  },
+  {
+   "text": "Outbound Load Control Desk uses planned dispatch time and load-close targets to monitor whether assigned bags can be accepted.",
+   "tags": []
+  },
+  {
+   "text": "Airline Ramp Coordinator reports changes to loading readiness that could alter the usable cutoff.",
+   "tags": []
+  },
+  {
+   "text": "Baggage Operations Supervisor may defer lower-priority bags when a flight's remaining processing window is insufficient.",
+   "tags": []
+  },
+  {
+   "text": "Bags missing the active flight cutoff are held for reassignment or recovery rather than routed into an unavailable departure build.",
+   "tags": []
+  }
+ ]
+}

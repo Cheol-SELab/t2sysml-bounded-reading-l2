@@ -1,0 +1,7747 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "operational concept",
+   "label": "covers checked baggage from acceptance at airport bag-drop or transfer induction through screening, sorting, make-up, and handoff for aircraft loading"
+  },
+  {
+   "unit_id": "S002",
+   "type": "composition",
+   "whole": "system",
+   "parts": [
+    "airport equipment",
+    "control functions"
+   ]
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "system boundary",
+   "label": "includes the airport equipment and control functions that convey, screen, route, reconcile, and stage checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "airport equipment",
+   "label": "convey checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "control functions",
+   "label": "convey checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "airport equipment",
+   "label": "screen checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "control functions",
+   "label": "screen checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "airport equipment",
+   "label": "route checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "control functions",
+   "label": "route checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "airport equipment",
+   "label": "reconcile checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "control functions",
+   "label": "reconcile checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "airport equipment",
+   "label": "stage checked baggage"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "control functions",
+   "label": "stage checked baggage"
+  },
+  {
+   "unit_id": "S003",
+   "type": "action",
+   "performer": "system boundary",
+   "label": "excludes airline aircraft loading activities beyond the handoff at the outbound load control point"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "Pier 4 Bag-Drop Unit",
+   "label": "captures bag identification"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "Pier 4 Bag-Drop Unit",
+   "label": "accepts baggage for processing"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "provides a separate induction interface for eligible transfer baggage"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "presents bags in a controlled manner to the screening and sorting equipment"
+  },
+  {
+   "unit_id": "S006",
+   "type": "flow",
+   "source": "Induction Tray Conveyor",
+   "target": "screening and sorting equipment",
+   "payload": "checked baggage"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "coordinates bag status, routing decisions, and operational visibility across connected equipment"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "coordinates local equipment and conveyance within its assigned operating area"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Flight Data Gateway",
+   "label": "sends the Flight Cutoff Advisory"
+  },
+  {
+   "unit_id": "S011",
+   "type": "flow",
+   "source": "Flight Data Gateway",
+   "payload": "Flight Cutoff Advisory"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "uses current flight and operating data"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "support routing decisions"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "maintain alignment with scheduled departures"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "produces the Recovery Route Card"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "routes cleared bags toward the applicable make-up areas"
+  },
+  {
+   "unit_id": "S014",
+   "type": "flow",
+   "source": "Primary Crossbelt Sorter",
+   "target": "make-up areas",
+   "payload": "checked baggage"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "provide screening interfaces for baggage moving through the system"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "provide screening interfaces for baggage moving through the system"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "checked baggage",
+   "label": "moving through the system"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "supports review of screening images when automated processing requires operator assessment"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "automated processing",
+   "label": "requires operator assessment"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Secondary Inspection Chute",
+   "label": "provides a controlled path for bags selected for additional examination"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "label": "selected for additional examination"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "coordinate security response and disposition for escalated screening events"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Security Duty Manager",
+   "label": "coordinate security response and disposition for escalated screening events"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "supports verification of bag identity and processing status when system records or physical handling require reconciliation"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "system records",
+   "label": "require reconciliation"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "physical handling",
+   "label": "require reconciliation"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "East Make-Up Conveyor",
+   "label": "convey routed baggage toward the relevant loading areas"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "West Make-Up Conveyor",
+   "label": "convey routed baggage toward the relevant loading areas"
+  },
+  {
+   "unit_id": "S020",
+   "type": "flow",
+   "source": "East Make-Up Conveyor",
+   "target": "loading areas",
+   "payload": "checked baggage"
+  },
+  {
+   "unit_id": "S020",
+   "type": "flow",
+   "source": "West Make-Up Conveyor",
+   "target": "loading areas",
+   "payload": "checked baggage"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "supports staging of baggage for its assigned departure operation"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "provides the operational interface for confirming baggage readiness at the aircraft-loading handoff"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "label": "confirming baggage readiness at the aircraft-loading handoff"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "coordinates acceptance of staged baggage for ramp operations"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "oversees routine flow"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "responds to service interruptions"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "coordinates operational recovery with the Security Duty Manager and Maintenance Technician"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "maintain safe screening, accurate bag-to-flight association, predictable throughput, and timely delivery within applicable departure cutoffs"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "are exchanged through defined interfaces"
+  },
+  {
+   "unit_id": "S026",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "target": "Baggage Operations Supervisor",
+   "payload": "Equipment status"
+  },
+  {
+   "unit_id": "S026",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "target": "Baggage Operations Supervisor",
+   "payload": "bag identity"
+  },
+  {
+   "unit_id": "S026",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "target": "Baggage Operations Supervisor",
+   "payload": "routing state"
+  },
+  {
+   "unit_id": "S026",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "target": "Baggage Operations Supervisor",
+   "payload": "operating restrictions"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "local staff",
+   "label": "resolving conditions that automated controls cannot clear"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "automated controls",
+   "label": "cannot clear"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "Check-in acceptance",
+   "label": "begins when staff confirm that the bag is eligible for carriage under the applicable airline rules"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "staff",
+   "label": "confirm that the bag is eligible for carriage under the applicable airline rules"
+  },
+  {
+   "unit_id": "S027",
+   "type": "state",
+   "owner": "bag",
+   "label": "eligible for carriage"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "staff",
+   "label": "verify the passenger and flight details"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "staff",
+   "label": "accepting the bag into the checked-baggage process"
+  },
+  {
+   "unit_id": "S028",
+   "type": "succession",
+   "before": "verify the passenger and flight details",
+   "after": "accepting the bag into the checked-baggage process"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Pier 4 Bag-Drop Unit",
+   "label": "records the accepted bag"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Pier 4 Bag-Drop Unit",
+   "label": "initiates its processing"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "Bag Tag Printer",
+   "label": "produces a durable tag with a unique identifier for each accepted bag"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "Bag Tag Printer",
+   "label": "is associated with the passenger and flight record in the Baggage Control System"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "checks that the flight is open for bag acceptance and that the bag record is complete"
+  },
+  {
+   "unit_id": "S032",
+   "type": "state",
+   "owner": "flight",
+   "label": "open for bag acceptance"
+  },
+  {
+   "unit_id": "S032",
+   "type": "state",
+   "owner": "bag record",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "are held for staff resolution before induction"
+  },
+  {
+   "unit_id": "S033",
+   "type": "state",
+   "owner": "bag",
+   "label": "held for staff resolution"
+  },
+  {
+   "unit_id": "S033",
+   "type": "state",
+   "owner": "acceptance data",
+   "label": "missing"
+  },
+  {
+   "unit_id": "S033",
+   "type": "state",
+   "owner": "acceptance data",
+   "label": "unreadable"
+  },
+  {
+   "unit_id": "S033",
+   "type": "state",
+   "owner": "acceptance data",
+   "label": "conflicting"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "staff",
+   "label": "check bag dimensions and weight against the configured limits for standard conveyor handling"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "Pier 4 Bag-Drop Unit",
+   "label": "sends an Oversize Exception Ticket"
+  },
+  {
+   "unit_id": "S035",
+   "type": "flow",
+   "source": "Pier 4 Bag-Drop Unit",
+   "target": "staff",
+   "payload": "Oversize Exception Ticket"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "bag",
+   "label": "remain in a designated holding area"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "staff",
+   "label": "confirm an approved handling route"
+  },
+  {
+   "unit_id": "S036",
+   "type": "state",
+   "owner": "bag",
+   "label": "in a designated holding area"
+  },
+  {
+   "unit_id": "S036",
+   "type": "succession",
+   "before": "remain in a designated holding area",
+   "after": "confirm an approved handling route"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "identifies each inbound transfer bag"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "records its arrival into the local handling process"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "sends a Late Transfer Bag Card"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "bag",
+   "label": "enters from an inbound transfer stream"
+  },
+  {
+   "unit_id": "S038",
+   "type": "flow",
+   "source": "Transfer Bag Feeder",
+   "target": "staff",
+   "payload": "Late Transfer Bag Card"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "staff",
+   "label": "confirm that transfer-bag identifiers are legible and correspond to a valid onward flight record"
+  },
+  {
+   "unit_id": "S039",
+   "type": "state",
+   "owner": "transfer-bag identifiers",
+   "label": "legible"
+  },
+  {
+   "unit_id": "S039",
+   "type": "state",
+   "owner": "onward flight record",
+   "label": "valid"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "compares transfer-bag data with the current routing information"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "staff",
+   "label": "is released for induction"
+  },
+  {
+   "unit_id": "S040",
+   "type": "succession",
+   "before": "compares transfer-bag data with the current routing information",
+   "after": "is released for induction"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Flight Data Gateway",
+   "label": "supplies flight and routing records used for acceptance and induction decisions"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "used for acceptance and induction decisions"
+  },
+  {
+   "unit_id": "S041",
+   "type": "flow",
+   "source": "Flight Data Gateway",
+   "target": "Baggage Control System",
+   "payload": "flight and routing records"
+  },
+  {
+   "unit_id": "S042",
+   "type": "requirement",
+   "subject": "bag record",
+   "text": "Before induction, the bag record must be valid"
+  },
+  {
+   "unit_id": "S042",
+   "type": "requirement",
+   "subject": "selected route",
+   "text": "Before induction, the selected route must be available"
+  },
+  {
+   "unit_id": "S042",
+   "type": "requirement",
+   "subject": "receiving equipment",
+   "text": "Before induction, the receiving equipment must be ready"
+  },
+  {
+   "unit_id": "S042",
+   "type": "state",
+   "owner": "bag record",
+   "label": "valid"
+  },
+  {
+   "unit_id": "S042",
+   "type": "state",
+   "owner": "selected route",
+   "label": "available"
+  },
+  {
+   "unit_id": "S042",
+   "type": "state",
+   "owner": "receiving equipment",
+   "label": "ready"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "grants an induction permissive"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "local equipment status",
+   "label": "allow movement"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "operating restrictions",
+   "label": "allow movement"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "accepts bags through controlled feed points"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "maintains separation between successive bags"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Interlocks",
+   "label": "stop feed movement"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "label": "is detected"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "reads the bag identifier"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "bag",
+   "label": "enters the screening and sorting network"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "provides an independent read point for bags routed through its assigned entry path"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "label": "routed through its assigned entry path"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "receives inducted bags"
+  },
+  {
+   "unit_id": "S049",
+   "type": "flow",
+   "target": "Primary Crossbelt Sorter",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "directs them according to the active routing data"
+  },
+  {
+   "unit_id": "S049",
+   "type": "flow",
+   "source": "Primary Crossbelt Sorter",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "automated image review",
+   "label": "cannot resolve a bag image"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "staff at the Image Resolution Desk",
+   "label": "assess the available image"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "staff at the Image Resolution Desk",
+   "label": "record a disposition"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "sends a Carousel Release Slip"
+  },
+  {
+   "unit_id": "S052",
+   "type": "flow",
+   "source": "Airline Ramp Coordinator",
+   "payload": "Carousel Release Slip"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "label": "is authorized"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "applies the approved screening profile to each bag"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "using its tag data and the current operating configuration"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "presents bags to the screening equipment at a controlled spacing that supports reliable image capture"
+  },
+  {
+   "unit_id": "S054",
+   "type": "flow",
+   "source": "Induction Tray Conveyor",
+   "target": "screening equipment",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "label": "supports reliable image capture"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "maintains bag identity"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "routes each bag according to the screening disposition available at the time of sorting"
+  },
+  {
+   "unit_id": "S055",
+   "type": "flow",
+   "source": "Primary Crossbelt Sorter",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "acquire screening images"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "acquire screening images"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "return a disposition for each bag that passes through them"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "return a disposition for each bag that passes through them"
+  },
+  {
+   "unit_id": "S056",
+   "type": "flow",
+   "source": "North Gate Scanner",
+   "payload": "disposition"
+  },
+  {
+   "unit_id": "S056",
+   "type": "flow",
+   "source": "South Gate Scanner",
+   "payload": "disposition"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "bag",
+   "label": "passes through them"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "screening equipment",
+   "label": "records image quality and alarm status"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "label": "is not treated as a clear result"
+  },
+  {
+   "unit_id": "S057",
+   "type": "state",
+   "owner": "screening equipment",
+   "label": "alarm status"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "automated image review",
+   "label": "cannot resolve a bag image"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "staff at the Image Resolution Desk",
+   "label": "assess the available image"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "staff at the Image Resolution Desk",
+   "label": "record a disposition"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "reviewer",
+   "label": "considers the full image, bag identification, and any system prompts"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "reviewer",
+   "label": "assigning a disposition"
+  },
+  {
+   "unit_id": "S059",
+   "type": "succession",
+   "before": "considers the full image, bag identification, and any system prompts",
+   "after": "assigning a disposition"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "bag",
+   "label": "remains under controlled routing"
+  },
+  {
+   "unit_id": "S060",
+   "type": "state",
+   "owner": "bag",
+   "label": "controlled routing"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "bag image",
+   "label": "is awaiting review"
+  },
+  {
+   "unit_id": "S060",
+   "type": "state",
+   "owner": "bag image",
+   "label": "awaiting review"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "system",
+   "label": "prevents it from entering an outbound make-up path prematurely"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "bag",
+   "label": "entering an outbound make-up path prematurely"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "produces a Manual Rescan Receipt"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "label": "is required"
+  },
+  {
+   "unit_id": "S061",
+   "type": "requirement",
+   "subject": "manual rescan",
+   "text": "a manual rescan is required"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "clear disposition",
+   "label": "permits normal routing only when the bag identity and screening record agree"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "bag identity",
+   "label": "agree"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "screening record",
+   "label": "agree"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "alarm",
+   "label": "places the bag into an exception status for additional examination"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "unresolved image",
+   "label": "places the bag into an exception status for additional examination"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "missing screening record",
+   "label": "places the bag into an exception status for additional examination"
+  },
+  {
+   "unit_id": "S063",
+   "type": "state",
+   "owner": "bag",
+   "label": "exception status"
+  },
+  {
+   "unit_id": "S063",
+   "type": "transition",
+   "to": "exception status",
+   "trigger": "alarm"
+  },
+  {
+   "unit_id": "S063",
+   "type": "transition",
+   "to": "exception status",
+   "trigger": "unresolved image"
+  },
+  {
+   "unit_id": "S063",
+   "type": "transition",
+   "to": "exception status",
+   "trigger": "missing screening record"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "routes exception-status bags to the Secondary Inspection Chute through a path that avoids normal outbound flows"
+  },
+  {
+   "unit_id": "S064",
+   "type": "flow",
+   "source": "Baggage Control System",
+   "target": "Secondary Inspection Chute",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "label": "avoids normal outbound flows"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "label": "is monitored for occupancy"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "label": "is not released into a blocked or unavailable inspection position"
+  },
+  {
+   "unit_id": "S065",
+   "type": "state",
+   "owner": "inspection position",
+   "label": "blocked"
+  },
+  {
+   "unit_id": "S065",
+   "type": "state",
+   "owner": "inspection position",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S066",
+   "type": "constraint",
+   "subject": "Secondary Inspection Chute",
+   "expression": "Access to the Secondary Inspection Chute and its associated work area is limited to personnel with authorized duties."
+  },
+  {
+   "unit_id": "S066",
+   "type": "constraint",
+   "subject": "associated work area",
+   "expression": "Access to the Secondary Inspection Chute and its associated work area is limited to personnel with authorized duties."
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "responds to escalated alarms"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "coordinates any required safety controls with airport security personnel"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Inspection staff",
+   "label": "maintain physical control of an alarmed bag"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Inspection staff",
+   "label": "do not return it to the sorter until an authorized disposition is recorded"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "label": "is recorded"
+  },
+  {
+   "unit_id": "S069",
+   "type": "constraint",
+   "subject": "Inspection staff",
+   "expression": "do not return it to the sorter until an authorized disposition is recorded"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "verifies that the bag presented for examination matches the screening record"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "label": "presented for examination"
+  },
+  {
+   "unit_id": "S070",
+   "type": "succession",
+   "before": "verifies that the bag presented for examination matches the screening record",
+   "after": "further handling"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "examination",
+   "label": "requires the bag to remain isolated"
+  },
+  {
+   "unit_id": "S071",
+   "type": "state",
+   "owner": "bag",
+   "label": "isolated"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "bag",
+   "label": "remain isolated"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "staff",
+   "label": "secure the area"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "staff",
+   "label": "notify the Baggage Operations Supervisor"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "coordinates decisions that affect flight readiness, staffing, or continued operation of a screening lane"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "is notified"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "alarm response",
+   "label": "requires a security decision beyond routine screening procedures"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Bag Tag Printer",
+   "label": "produces a Calibration Witness Tag"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "accepts only bags with a valid screening disposition and an authorized routing instruction"
+  },
+  {
+   "unit_id": "S076",
+   "type": "constraint",
+   "subject": "Carousel 7 Make-Up Unit",
+   "expression": "accepts only bags with a valid screening disposition and an authorized routing instruction"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "holds transfer bags from release until their screening status and intended onward handling are confirmed"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "label": "are confirmed"
+  },
+  {
+   "unit_id": "S077",
+   "type": "constraint",
+   "subject": "Transfer Bag Feeder",
+   "expression": "holds transfer bags from release until their screening status and intended onward handling are confirmed"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "staff",
+   "label": "return a bag to normal handling only after its identity, examination outcome, and routing authorization are consistent in the operating record"
+  },
+  {
+   "unit_id": "S078",
+   "type": "constraint",
+   "subject": "staff",
+   "expression": "return a bag to normal handling only after its identity, examination outcome, and routing authorization are consistent in the operating record"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "loads the approved sort plan"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "applies its effective time window"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "bag",
+   "label": "enter sortation"
+  },
+  {
+   "unit_id": "S079",
+   "type": "succession",
+   "before": "loads the approved sort plan",
+   "after": "enter sortation"
+  },
+  {
+   "unit_id": "S079",
+   "type": "succession",
+   "before": "applies its effective time window",
+   "after": "enter sortation"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "checks the plan against current flight and handling records"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "assigning a route"
+  },
+  {
+   "unit_id": "S081",
+   "type": "succession",
+   "before": "checks the plan against current flight and handling records",
+   "after": "assigning a route"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "coordinates local conveyor availability with the active sort plan"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "presents bags at controlled spacing"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "label": "can be identified"
+  },
+  {
+   "unit_id": "S083",
+   "type": "succession",
+   "before": "can be identified",
+   "after": "route selection"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "applies the assigned destination and screening status to each identified bag"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "sends a Chute Occupancy Note"
+  },
+  {
+   "unit_id": "S085",
+   "type": "flow",
+   "source": "Primary Crossbelt Sorter",
+   "payload": "Chute Occupancy Note"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "destination lane",
+   "label": "approaches its configured limit"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "label": "favors the approved path with adequate capacity and sufficient time for the planned handling"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "verify bag identity at their respective route decision points"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "verify bag identity at their respective route decision points"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "scan mismatch",
+   "label": "prevents the bag from continuing on a route that depends on the unresolved identity"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "bag",
+   "label": "continuing on a route that depends on the unresolved identity"
+  },
+  {
+   "unit_id": "S088",
+   "type": "constraint",
+   "subject": "bag",
+   "expression": "A scan mismatch prevents the bag from continuing on a route that depends on the unresolved identity."
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Congestion awareness",
+   "label": "uses current lane availability, conveyor stops, and the observed rate of incoming bags"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "sets local congestion thresholds"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "confirms the authorized response to sustained overload"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "selects an approved alternate route only if screening status and flight timing remain valid"
+  },
+  {
+   "unit_id": "S092",
+   "type": "constraint",
+   "subject": "Baggage Control System",
+   "expression": "When a planned lane is unavailable, the Baggage Control System selects an approved alternate route only if screening status and flight timing remain valid."
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "label": "are diverted to the Secondary Inspection Chute"
+  },
+  {
+   "unit_id": "S093",
+   "type": "flow",
+   "target": "Secondary Inspection Chute",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "resolves image-related holds"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "label": "are returned to normal sortation"
+  },
+  {
+   "unit_id": "S094",
+   "type": "state",
+   "owner": "bag",
+   "label": "image-related holds"
+  },
+  {
+   "unit_id": "S094",
+   "type": "state",
+   "owner": "bag",
+   "label": "normal sortation"
+  },
+  {
+   "unit_id": "S094",
+   "type": "transition",
+   "from": "image-related holds",
+   "to": "normal sortation",
+   "trigger": "resolves image-related holds"
+  },
+  {
+   "unit_id": "S094",
+   "type": "succession",
+   "before": "resolves image-related holds",
+   "after": "are returned to normal sortation"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "manages security holds under the applicable response procedures"
+  },
+  {
+   "unit_id": "S095",
+   "type": "state",
+   "owner": "bag",
+   "label": "security holds"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "bag",
+   "label": "returns to normal handling"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "agree"
+  },
+  {
+   "unit_id": "S096",
+   "type": "state",
+   "owner": "bag",
+   "label": "normal handling"
+  },
+  {
+   "unit_id": "S096",
+   "type": "transition",
+   "to": "normal handling",
+   "trigger": "its identity, examination outcome, and routing authorization agree"
+  },
+  {
+   "unit_id": "S096",
+   "type": "succession",
+   "before": "agree",
+   "after": "returns to normal handling"
+  },
+  {
+   "unit_id": "S096",
+   "type": "constraint",
+   "subject": "bag",
+   "expression": "A bag returns to normal handling only after its identity, examination outcome, and routing authorization agree."
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "label": "are selected according to the active plan and available capacity"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "operates within its assigned flight window"
+  },
+  {
+   "unit_id": "S098",
+   "type": "constraint",
+   "subject": "Carousel 7 Make-Up Unit",
+   "expression": "within its assigned flight window"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "reports when its usable capacity is constrained"
+  },
+  {
+   "unit_id": "S098",
+   "type": "flow",
+   "source": "Carousel 7 Make-Up Unit",
+   "payload": "usable capacity"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "continues to hold transfer bags until screening status and intended onward handling are confirmed"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "label": "are confirmed"
+  },
+  {
+   "unit_id": "S099",
+   "type": "constraint",
+   "subject": "Transfer Bag Feeder",
+   "expression": "continues to hold transfer bags until screening status and intended onward handling are confirmed"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "compares bag identity with the active handling record"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "flags unresolved discrepancies"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "sends a Bag Match Query"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "label": "cannot be reconciled with the active handling record"
+  },
+  {
+   "unit_id": "S101",
+   "type": "flow",
+   "source": "Bag Reconciliation Station",
+   "payload": "Bag Match Query"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "label": "found on a stopped or misdirected path"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "label": "are held from onward movement until their location and identity are established"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "label": "are established"
+  },
+  {
+   "unit_id": "S102",
+   "type": "constraint",
+   "subject": "bag",
+   "expression": "Bags found on a stopped or misdirected path are held from onward movement until their location and identity are established."
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "isolates a failed conveyor section"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "confirms that the route is safe"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "service",
+   "label": "resumes"
+  },
+  {
+   "unit_id": "S103",
+   "type": "succession",
+   "before": "confirms that the route is safe",
+   "after": "resumes"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "authorizes recovery to the approved sort plan"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "label": "has been addressed"
+  },
+  {
+   "unit_id": "S104",
+   "type": "succession",
+   "before": "has been addressed",
+   "after": "authorizes recovery to the approved sort plan"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Flight Data Gateway",
+   "label": "maintains scheduled flight identifiers, destinations, planned departure times, and revisions needed for baggage planning"
+  },
+  {
+   "unit_id": "S106",
+   "type": "composition",
+   "whole": "Flight schedules",
+   "parts": [
+    "airline-specific dispatch targets",
+    "connection windows"
+   ]
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "label": "are time-stamped for operational use"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "evaluates flight assignments against current schedule data"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "accepting bag routing instructions"
+  },
+  {
+   "unit_id": "S107",
+   "type": "succession",
+   "before": "evaluates flight assignments against current schedule data",
+   "after": "accepting bag routing instructions"
+  },
+  {
+   "unit_id": "S108",
+   "type": "attribute",
+   "owner": "planned dispatch time",
+   "name": "role",
+   "value": "reference for prioritizing bags"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "label": "prioritizing bags"
+  },
+  {
+   "unit_id": "S108",
+   "type": "attribute",
+   "owner": "published departure time",
+   "name": "role",
+   "value": "passenger-facing schedule value"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "applies cutoff profiles configured for each carrier, flight, and operating condition"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "label": "configured for each carrier, flight, and operating condition"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "label": "accepted before cutoff"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "bag",
+   "label": "retains its assigned flight"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "schedule",
+   "label": "requires reassessment"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "operational change",
+   "label": "requires reassessment"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "schedule revisions",
+   "label": "move a departure earlier"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "reviews affected flights"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "directs priority adjustments"
+  },
+  {
+   "unit_id": "S111",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "payload": "priority adjustments"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "Cutoff values",
+   "label": "account for screening, sortation, make-up, and transfer handling allowances rather than only aircraft departure"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "receives the Flight Cutoff Advisory"
+  },
+  {
+   "unit_id": "S113",
+   "type": "flow",
+   "target": "Baggage Control System",
+   "payload": "Flight Cutoff Advisory"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "compares remaining processing time with route-specific handling estimates"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "bag",
+   "label": "may proceed to flight-specific sort destinations when capacity is available"
+  },
+  {
+   "unit_id": "S115",
+   "type": "state",
+   "owner": "screening clearance",
+   "label": "confirmed"
+  },
+  {
+   "unit_id": "S115",
+   "type": "state",
+   "owner": "capacity",
+   "label": "available"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "bag",
+   "label": "awaiting screening"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "label": "are held from final flight induction even when their scheduled departure is near"
+  },
+  {
+   "unit_id": "S116",
+   "type": "state",
+   "owner": "bag",
+   "label": "awaiting screening"
+  },
+  {
+   "unit_id": "S116",
+   "type": "state",
+   "owner": "bag",
+   "label": "held from final flight induction"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "record screening outcomes for inducted bags"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "record screening outcomes for inducted bags"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "reviews unresolved images"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "remains withheld until disposition is recorded"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "is recorded"
+  },
+  {
+   "unit_id": "S118",
+   "type": "state",
+   "owner": "final routing",
+   "label": "withheld"
+  },
+  {
+   "unit_id": "S118",
+   "type": "state",
+   "owner": "disposition",
+   "label": "recorded"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "positive threat indication",
+   "label": "suspends ordinary routing until the authorized security disposition is entered"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "label": "is entered"
+  },
+  {
+   "unit_id": "S119",
+   "type": "state",
+   "owner": "ordinary routing",
+   "label": "suspended"
+  },
+  {
+   "unit_id": "S119",
+   "type": "transition",
+   "to": "suspended",
+   "trigger": "positive threat indication"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "produces the Custody Seal Log"
+  },
+  {
+   "unit_id": "S121",
+   "type": "state",
+   "owner": "screening disposition",
+   "label": "pending"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "preserves a recoverable bag-to-flight association rather than releasing the bag to make-up"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "routes eligible bags according to flight assignment and current cutoff priority"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "coordinates induction demand with available conveyor capacity across the operating area"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "admits bags in priority order, subject to scan confirmation and safe spacing"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "East Make-Up Conveyor",
+   "label": "receive flight groups according to active allocation rules"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "West Make-Up Conveyor",
+   "label": "receive flight groups according to active allocation rules"
+  },
+  {
+   "unit_id": "S125",
+   "type": "flow",
+   "target": "East Make-Up Conveyor",
+   "payload": "flight groups"
+  },
+  {
+   "unit_id": "S125",
+   "type": "flow",
+   "target": "West Make-Up Conveyor",
+   "payload": "flight groups"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "presents bags for outbound loading only after flight grouping and screening status are confirmed"
+  },
+  {
+   "unit_id": "S126",
+   "type": "flow",
+   "source": "Carousel 7 Make-Up Unit",
+   "payload": "bag"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "label": "are confirmed"
+  },
+  {
+   "unit_id": "S126",
+   "type": "state",
+   "owner": "flight grouping",
+   "label": "confirmed"
+  },
+  {
+   "unit_id": "S126",
+   "type": "state",
+   "owner": "screening status",
+   "label": "confirmed"
+  },
+  {
+   "unit_id": "S126",
+   "type": "succession",
+   "before": "are confirmed",
+   "after": "presents bags for outbound loading only after flight grouping and screening status are confirmed"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "uses planned dispatch time and load-close targets to monitor whether assigned bags can be accepted"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "monitor whether assigned bags can be accepted"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "label": "can be accepted"
+  },
+  {
+   "unit_id": "S127",
+   "type": "flow",
+   "target": "Outbound Load Control Desk",
+   "payload": "planned dispatch time"
+  },
+  {
+   "unit_id": "S127",
+   "type": "flow",
+   "target": "Outbound Load Control Desk",
+   "payload": "load-close targets"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "reports changes to loading readiness that could alter the usable cutoff"
+  },
+  {
+   "unit_id": "S128",
+   "type": "flow",
+   "source": "Airline Ramp Coordinator",
+   "payload": "changes to loading readiness"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "changes to loading readiness",
+   "label": "could alter the usable cutoff"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "may defer lower-priority bags when a flight's remaining processing window is insufficient"
+  },
+  {
+   "unit_id": "S129",
+   "type": "state",
+   "owner": "remaining processing window",
+   "label": "insufficient"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "bag",
+   "label": "missing the active flight cutoff"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "label": "are held for reassignment or recovery rather than routed into an unavailable departure build"
+  },
+  {
+   "unit_id": "S130",
+   "type": "state",
+   "owner": "bag",
+   "label": "held for reassignment or recovery"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Make-up allocation",
+   "label": "begins when the active flight assignment and available build positions are confirmed"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "label": "are confirmed"
+  },
+  {
+   "unit_id": "S131",
+   "type": "state",
+   "owner": "active flight assignment",
+   "label": "confirmed"
+  },
+  {
+   "unit_id": "S131",
+   "type": "state",
+   "owner": "available build positions",
+   "label": "confirmed"
+  },
+  {
+   "unit_id": "S131",
+   "type": "succession",
+   "before": "are confirmed",
+   "after": "begins when the active flight assignment and available build positions are confirmed"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "authorizes release to a make-up position"
+  },
+  {
+   "unit_id": "S132",
+   "type": "constraint",
+   "subject": "Baggage Operations Supervisor",
+   "expression": "only when the flight remains within its processing window"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "Flight Data Gateway",
+   "label": "maintains the flight identity and departure timing used for make-up planning"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "used for make-up planning"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Mosslight",
+   "label": "assigns bags to active make-up lanes using current zone status"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Mosslight",
+   "label": "using current zone status"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "Velvet",
+   "label": "records each bag's screening disposition and release state against its flight assignment"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Pier 4 Bag-Drop Unit",
+   "label": "stages accepted bags for onward processing"
+  },
+  {
+   "unit_id": "S136",
+   "type": "constraint",
+   "subject": "Pier 4 Bag-Drop Unit",
+   "expression": "without changing their flight association"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "meters bags into the handling stream at a rate that avoids accumulation at the make-up interface"
+  },
+  {
+   "unit_id": "S137",
+   "type": "constraint",
+   "subject": "Induction Tray Conveyor",
+   "expression": "at a rate that avoids accumulation at the make-up interface"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "separates bags according to their authorized destination and current operating status"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "verifies readable bag identification"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "bags",
+   "label": "proceed toward their assigned build"
+  },
+  {
+   "unit_id": "S139",
+   "type": "succession",
+   "before": "verifies readable bag identification",
+   "after": "proceed toward their assigned build"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "provides the corresponding verification for bags processed in its coverage area"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "label": "processed in its coverage area"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "uses the exception ticket"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "confirm an authorized make-up position for an oversize bag"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Secondary Inspection Chute",
+   "label": "retains bags requiring further examination"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "label": "is recorded"
+  },
+  {
+   "unit_id": "S142",
+   "type": "succession",
+   "before": "retains bags requiring further examination",
+   "after": "is recorded"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "uses the Late Transfer Bag Card"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "reconcile a transfer bag against its intended flight"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "meters accepted transfer bags into the active handling sequence"
+  },
+  {
+   "unit_id": "S144",
+   "type": "constraint",
+   "subject": "Transfer Bag Feeder",
+   "expression": "without bypassing required checks"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "East Make-Up Conveyor",
+   "label": "delivers assigned bags to the designated make-up position at a controlled rate"
+  },
+  {
+   "unit_id": "S145",
+   "type": "flow",
+   "source": "East Make-Up Conveyor",
+   "target": "make-up position",
+   "payload": "bags"
+  },
+  {
+   "unit_id": "S145",
+   "type": "constraint",
+   "subject": "East Make-Up Conveyor",
+   "expression": "at a controlled rate"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "West Make-Up Conveyor",
+   "label": "provides the equivalent delivery function for positions in its operating area"
+  },
+  {
+   "unit_id": "S146",
+   "type": "flow",
+   "source": "West Make-Up Conveyor",
+   "target": "make-up position",
+   "payload": "bags"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "maintains bag order and position information for its active flight build"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "receives the Carousel Release Slip"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "label": "have been checked"
+  },
+  {
+   "unit_id": "S148",
+   "type": "succession",
+   "before": "have been checked",
+   "after": "receives the Carousel Release Slip"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "confirms staffing, equipment availability, and the planned loading sequence"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "accepting a build for loading"
+  },
+  {
+   "unit_id": "S149",
+   "type": "succession",
+   "before": "confirms staffing, equipment availability, and the planned loading sequence",
+   "after": "accepting a build for loading"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "reconciles the completed build against the permitted flight load"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Bag Tag Printer",
+   "label": "produces replacement identification"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "authorized personnel",
+   "label": "have confirmed the required bag details"
+  },
+  {
+   "unit_id": "S151",
+   "type": "constraint",
+   "subject": "Bag Tag Printer",
+   "expression": "only when authorized personnel have confirmed the required bag details"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Security Duty Manager",
+   "label": "resolves release holds that require a security decision"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "bags",
+   "label": "can enter a departure build"
+  },
+  {
+   "unit_id": "S152",
+   "type": "succession",
+   "before": "resolves release holds that require a security decision",
+   "after": "can enter a departure build"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "reports equipment restrictions that affect lane availability or safe bag delivery"
+  },
+  {
+   "unit_id": "S153",
+   "type": "flow",
+   "source": "Maintenance Technician",
+   "payload": "equipment restrictions"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "coordinates changes to build priority with airline ground operations"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "communicates any resulting delivery constraints"
+  },
+  {
+   "unit_id": "S154",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "payload": "delivery constraints"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Manual resolution",
+   "label": "begins"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "label": "prevents automatic processing from establishing a reliable disposition"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "automatic processing",
+   "label": "establishing a reliable disposition"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "presents the available bag image and exception details to the operator for review"
+  },
+  {
+   "unit_id": "S156",
+   "type": "flow",
+   "source": "Image Resolution Desk",
+   "target": "operator",
+   "payload": "available bag image"
+  },
+  {
+   "unit_id": "S156",
+   "type": "flow",
+   "source": "Image Resolution Desk",
+   "target": "operator",
+   "payload": "exception details"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "operator",
+   "label": "compares visible bag features with the recorded tag number and the handling data associated with the bag"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "operator",
+   "label": "confirms that the image is legible enough to support a decision"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "available bag image",
+   "label": "support a decision"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "operator",
+   "label": "does not rely on an uncertain visual match"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "uses the rescan receipt"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "confirm that a second image was captured under the approved procedure"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "label": "was captured under the approved procedure"
+  },
+  {
+   "unit_id": "S160",
+   "type": "state",
+   "owner": "available bag image",
+   "label": "inconclusive"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "operator",
+   "label": "requests a physical inspection through the established inspection process"
+  },
+  {
+   "unit_id": "S160",
+   "type": "flow",
+   "source": "operator",
+   "target": "established inspection process",
+   "payload": "physical inspection"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "identity check",
+   "label": "verifies that the physical tag is attached to the inspected bag and that its number agrees with the recorded bag identity"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "label": "is attached to the inspected bag"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "number",
+   "label": "agrees with the recorded bag identity"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "checks the recorded bag identity against the current routing data"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "label": "is committed"
+  },
+  {
+   "unit_id": "S162",
+   "type": "succession",
+   "before": "checks the recorded bag identity against the current routing data",
+   "after": "is committed"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "Flight Data Gateway",
+   "label": "provides the flight data used to validate the bag's assigned destination and service date"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "label": "used to validate the bag's assigned destination and service date"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "label": "validate the bag's assigned destination and service date"
+  },
+  {
+   "unit_id": "S163",
+   "type": "flow",
+   "source": "Flight Data Gateway",
+   "payload": "flight data"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "records whether the inspected bag matches the expected flight assignment"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "bag",
+   "label": "matches the expected flight assignment"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "mismatch",
+   "label": "places the bag on hold"
+  },
+  {
+   "unit_id": "S165",
+   "type": "state",
+   "owner": "bag",
+   "label": "on hold"
+  },
+  {
+   "unit_id": "S165",
+   "type": "transition",
+   "to": "on hold",
+   "trigger": "mismatch"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "authorized operator",
+   "label": "resolves the discrepancy"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "authorized operator",
+   "label": "escalates it"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "Juniper",
+   "label": "holds the affected bag from automatic sorting"
+  },
+  {
+   "unit_id": "S166",
+   "type": "state",
+   "owner": "manual disposition",
+   "label": "unresolved"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "Kestrel",
+   "label": "captures a readable tag image"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "label": "is presented for a permitted scan"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "records the tag read and image data needed to support an operator's identity check"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "tag read",
+   "label": "support an operator's identity check"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "image data",
+   "label": "support an operator's identity check"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Secondary Inspection Chute",
+   "label": "provides a controlled location for bags requiring physical examination"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "conducts any security examination assigned under applicable procedures"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "label": "assigned under applicable procedures"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "approves the operational disposition"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "case",
+   "label": "exceeds the operator's authority"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "identity check",
+   "label": "pass"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "flight checks",
+   "label": "pass"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "authorizes the bag to rejoin its previously assigned screening and sort path"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "bag",
+   "label": "rejoin its previously assigned screening and sort path"
+  },
+  {
+   "unit_id": "S172",
+   "type": "succession",
+   "before": "pass",
+   "after": "authorizes the bag to rejoin its previously assigned screening and sort path"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "confirms that the bag remains eligible for inclusion in the planned flight load"
+  },
+  {
+   "unit_id": "S173",
+   "type": "state",
+   "owner": "bag",
+   "label": "eligible for inclusion in the planned flight load"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "confirms any flight-side constraint that could prevent the reconciled bag from being accepted"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "flight-side constraint",
+   "label": "could prevent the reconciled bag from being accepted"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "label": "being accepted"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "applies the authorized routing state"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "without bypassing required screening controls"
+  },
+  {
+   "unit_id": "S175",
+   "type": "state",
+   "owner": "bag",
+   "label": "authorized routing state"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "uses the witness tag"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "verify that the applicable calibration status was witnessed"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "label": "was witnessed"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "equipment",
+   "label": "returns to service"
+  },
+  {
+   "unit_id": "S176",
+   "type": "state",
+   "owner": "equipment",
+   "label": "service"
+  },
+  {
+   "unit_id": "S176",
+   "type": "transition",
+   "to": "service",
+   "trigger": "returns to service"
+  },
+  {
+   "unit_id": "S176",
+   "type": "succession",
+   "before": "was witnessed",
+   "after": "returns to service"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "route",
+   "label": "has changed"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "flight assignment",
+   "label": "has changed"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "operator",
+   "label": "obtains approval"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "label": "is released into the revised process"
+  },
+  {
+   "unit_id": "S177",
+   "type": "succession",
+   "before": "obtains approval",
+   "after": "is released into the revised process"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "label": "are recorded"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "later review",
+   "label": "can trace why the bag returned to the planned process"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "bag",
+   "label": "returned to the planned process"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "label": "keeping people clear of moving equipment"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "label": "maintaining a controlled path for every bag"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "may stop induction"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "label": "is reported"
+  },
+  {
+   "unit_id": "S180",
+   "type": "flow",
+   "payload": "unsafe condition"
+  },
+  {
+   "unit_id": "S180",
+   "type": "flow",
+   "payload": "uncertain bag location"
+  },
+  {
+   "unit_id": "S180",
+   "type": "flow",
+   "payload": "loss of control"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "stop command",
+   "label": "places the affected equipment in a defined safe state"
+  },
+  {
+   "unit_id": "S181",
+   "type": "state",
+   "owner": "affected equipment",
+   "label": "defined safe state"
+  },
+  {
+   "unit_id": "S181",
+   "type": "transition",
+   "to": "defined safe state",
+   "trigger": "stop command"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "stop command",
+   "label": "without disabling unrelated routes that remain safe to operate"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "unrelated routes",
+   "label": "operate"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "entering a conveyor or sorter hazard zone"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "isolates the relevant energy sources"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "verifies that movement has stopped"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "movement",
+   "label": "has stopped"
+  },
+  {
+   "unit_id": "S182",
+   "type": "succession",
+   "before": "isolates the relevant energy sources",
+   "after": "entering a conveyor or sorter hazard zone"
+  },
+  {
+   "unit_id": "S182",
+   "type": "succession",
+   "before": "verifies that movement has stopped",
+   "after": "entering a conveyor or sorter hazard zone"
+  },
+  {
+   "unit_id": "S183",
+   "type": "state",
+   "owner": "Guards",
+   "label": "in place"
+  },
+  {
+   "unit_id": "S183",
+   "type": "state",
+   "owner": "access panels",
+   "label": "in place"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "label": "are permitted only under an approved maintenance procedure"
+  },
+  {
+   "unit_id": "S183",
+   "type": "requirement",
+   "subject": "bypasses",
+   "text": "bypasses are permitted only under an approved maintenance procedure"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "uses the occupancy note"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "confirm that a chute can safely accept bags"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "chute",
+   "label": "can safely accept bags"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "consults the Recovery Route Card"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "returning equipment to service"
+  },
+  {
+   "unit_id": "S185",
+   "type": "succession",
+   "before": "consults the Recovery Route Card",
+   "after": "returning equipment to service"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Pebble",
+   "label": "secures the response area"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Pebble",
+   "label": "directs handling of any bag referred for explosives assessment"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "label": "referred for explosives assessment"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Security Duty Manager",
+   "label": "coordinates access control"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "security response",
+   "label": "affects equipment or staff movement"
+  },
+  {
+   "unit_id": "S188",
+   "type": "requirement",
+   "subject": "affected feed",
+   "text": "A scanner fault requires the affected feed to be held until the fault is assessed and the bag disposition is known."
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "label": "be held"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "label": "is assessed"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "label": "is known"
+  },
+  {
+   "unit_id": "S188",
+   "type": "state",
+   "owner": "affected feed",
+   "label": "held"
+  },
+  {
+   "unit_id": "S188",
+   "type": "transition",
+   "to": "held",
+   "trigger": "scanner fault"
+  },
+  {
+   "unit_id": "S188",
+   "type": "succession",
+   "before": "be held",
+   "after": "is assessed"
+  },
+  {
+   "unit_id": "S188",
+   "type": "succession",
+   "before": "be held",
+   "after": "is known"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "checks for jammed bags, damaged belts, sensor obstruction, and signs of mechanical wear"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "clearing a fault"
+  },
+  {
+   "unit_id": "S189",
+   "type": "succession",
+   "before": "checks for jammed bags, damaged belts, sensor obstruction, and signs of mechanical wear",
+   "after": "clearing a fault"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "performer": "Lantern",
+   "label": "supplies current flight data"
+  },
+  {
+   "unit_id": "S190",
+   "type": "flow",
+   "source": "Lantern",
+   "payload": "current flight data"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "label": "can be checked against active assignments"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "records equipment alarms"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "presents the affected route for review by authorized personnel"
+  },
+  {
+   "unit_id": "S191",
+   "type": "flow",
+   "source": "Baggage Control System",
+   "target": "authorized personnel",
+   "payload": "affected route"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "stops unexpectedly"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "staff",
+   "label": "prevent further bag entry"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "staff",
+   "label": "keep the approach area clear"
+  },
+  {
+   "unit_id": "S192",
+   "type": "succession",
+   "before": "stops unexpectedly",
+   "after": "prevent further bag entry"
+  },
+  {
+   "unit_id": "S192",
+   "type": "succession",
+   "before": "stops unexpectedly",
+   "after": "keep the approach area clear"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "removes a jam"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "confirming isolation"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "arranging safe access to the blockage"
+  },
+  {
+   "unit_id": "S193",
+   "type": "succession",
+   "before": "confirming isolation",
+   "after": "removes a jam"
+  },
+  {
+   "unit_id": "S193",
+   "type": "succession",
+   "before": "arranging safe access to the blockage",
+   "after": "removes a jam"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "supports verification"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "East Make-Up Conveyor",
+   "label": "runs"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "label": "are confirmed closed"
+  },
+  {
+   "unit_id": "S195",
+   "type": "state",
+   "owner": "East Make-Up Conveyor guards",
+   "label": "closed"
+  },
+  {
+   "unit_id": "S195",
+   "type": "succession",
+   "before": "are confirmed closed",
+   "after": "runs"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "is held from receiving bags"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "Carousel 7 Make-Up Unit",
+   "label": "receiving bags"
+  },
+  {
+   "unit_id": "S196",
+   "type": "state",
+   "owner": "Carousel 7 Make-Up Unit",
+   "label": "held from receiving bags"
+  },
+  {
+   "unit_id": "S196",
+   "type": "state",
+   "owner": "discharge area",
+   "label": "obstructed"
+  },
+  {
+   "unit_id": "S196",
+   "type": "state",
+   "owner": "operating status",
+   "label": "uncertain"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "performs corrective work"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "reports any condition that prevents safe restart"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "condition that prevents safe restart",
+   "label": "prevents safe restart"
+  },
+  {
+   "unit_id": "S197",
+   "type": "flow",
+   "source": "Maintenance Technician",
+   "payload": "condition that prevents safe restart"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "controls the operational hold"
+  },
+  {
+   "unit_id": "S198",
+   "type": "state",
+   "label": "operational hold"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "communicates its scope"
+  },
+  {
+   "unit_id": "S198",
+   "type": "flow",
+   "source": "Baggage Operations Supervisor",
+   "payload": "scope of operational hold"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "confirms that affected staff understand the restriction"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "affected staff",
+   "label": "understand the restriction"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "recovery",
+   "label": "begins with a controlled inspection of the affected equipment and confirmation that bags in the area have been accounted for"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "bags",
+   "label": "have been accounted for"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "route",
+   "label": "has changed"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "flight assignment",
+   "label": "has changed"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "operator",
+   "label": "obtains approval"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "bags",
+   "label": "is released into the revised process"
+  },
+  {
+   "unit_id": "S200",
+   "type": "succession",
+   "before": "obtains approval",
+   "after": "is released into the revised process"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "final disposition",
+   "label": "are recorded"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "supporting checks",
+   "label": "are recorded"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "later review",
+   "label": "trace why the bag returned to the planned process"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "bags",
+   "label": "returned to the planned process"
+  },
+  {
+   "unit_id": "S202",
+   "type": "requirement",
+   "subject": "Restart",
+   "text": "Restart requires confirmation that personnel are clear, guards are restored, alarms are understood, and the intended route is available."
+  },
+  {
+   "unit_id": "S202",
+   "type": "state",
+   "owner": "personnel",
+   "label": "clear"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "guards",
+   "label": "are restored"
+  },
+  {
+   "unit_id": "S202",
+   "type": "state",
+   "owner": "guards",
+   "label": "restored"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "alarms",
+   "label": "are understood"
+  },
+  {
+   "unit_id": "S202",
+   "type": "state",
+   "owner": "alarms",
+   "label": "understood"
+  },
+  {
+   "unit_id": "S202",
+   "type": "state",
+   "owner": "intended route",
+   "label": "available"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "bags",
+   "label": "remains under controlled custody from screening release until an authorized loading handoff is confirmed"
+  },
+  {
+   "unit_id": "S203",
+   "type": "state",
+   "owner": "bags",
+   "label": "controlled custody"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "authorized loading handoff",
+   "label": "is confirmed"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "maintains the bag identity, assigned flight, screening disposition, and current handling status as the authoritative record"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "Staff",
+   "label": "keep bags in monitored areas"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "Staff",
+   "label": "prevent access by personnel who are not assigned to the active handling task"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "personnel",
+   "label": "are not assigned to the active handling task"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Induction Tray Conveyor",
+   "label": "carries only bags with readable identity data and a valid route assignment into the screening process"
+  },
+  {
+   "unit_id": "S206",
+   "type": "flow",
+   "source": "Induction Tray Conveyor",
+   "target": "screening process",
+   "payload": "bags"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "directs cleared bags to their assigned make-up destination"
+  },
+  {
+   "unit_id": "S207",
+   "type": "flow",
+   "source": "Primary Crossbelt Sorter",
+   "target": "assigned make-up destination",
+   "payload": "bags"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Primary Crossbelt Sorter",
+   "label": "diverts unresolved items from normal handling"
+  },
+  {
+   "unit_id": "S207",
+   "type": "flow",
+   "source": "Primary Crossbelt Sorter",
+   "target": "normal handling",
+   "payload": "unresolved items"
+  },
+  {
+   "unit_id": "S208",
+   "type": "requirement",
+   "subject": "North Gate Scanner",
+   "text": "The North Gate Scanner and South Gate Scanner must report healthy status before their screening results are relied upon for release."
+  },
+  {
+   "unit_id": "S208",
+   "type": "requirement",
+   "subject": "South Gate Scanner",
+   "text": "The North Gate Scanner and South Gate Scanner must report healthy status before their screening results are relied upon for release."
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "North Gate Scanner",
+   "label": "report healthy status"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "South Gate Scanner",
+   "label": "report healthy status"
+  },
+  {
+   "unit_id": "S208",
+   "type": "flow",
+   "source": "North Gate Scanner",
+   "target": "screening results",
+   "payload": "healthy status"
+  },
+  {
+   "unit_id": "S208",
+   "type": "flow",
+   "source": "South Gate Scanner",
+   "target": "screening results",
+   "payload": "healthy status"
+  },
+  {
+   "unit_id": "S208",
+   "type": "state",
+   "owner": "North Gate Scanner",
+   "label": "healthy"
+  },
+  {
+   "unit_id": "S208",
+   "type": "state",
+   "owner": "South Gate Scanner",
+   "label": "healthy"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "screening results",
+   "label": "are relied upon for release"
+  },
+  {
+   "unit_id": "S208",
+   "type": "succession",
+   "before": "report healthy status",
+   "after": "are relied upon for release"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "reviews images that require operator assessment"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "records a disposition"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "bags",
+   "label": "continue"
+  },
+  {
+   "unit_id": "S209",
+   "type": "succession",
+   "before": "reviews images that require operator assessment",
+   "after": "continue"
+  },
+  {
+   "unit_id": "S209",
+   "type": "succession",
+   "before": "records a disposition",
+   "after": "continue"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "unresolved screening result",
+   "label": "places the bag in a controlled hold area until the required review is complete"
+  },
+  {
+   "unit_id": "S210",
+   "type": "state",
+   "owner": "required review",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "assesses security events referred for specialist action"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "security events",
+   "label": "referred for specialist action"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "Explosives Response Team",
+   "label": "communicates the resulting disposition through approved operational channels"
+  },
+  {
+   "unit_id": "S211",
+   "type": "flow",
+   "source": "Explosives Response Team",
+   "target": "approved operational channels",
+   "payload": "resulting disposition"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "Secondary Inspection Chute",
+   "label": "is kept clear of unrelated bags"
+  },
+  {
+   "unit_id": "S212",
+   "type": "state",
+   "owner": "Secondary Inspection Chute",
+   "label": "clear of unrelated bags"
+  },
+  {
+   "unit_id": "S212",
+   "type": "state",
+   "owner": "identity",
+   "label": "unambiguous"
+  },
+  {
+   "unit_id": "S212",
+   "type": "state",
+   "owner": "custody",
+   "label": "unambiguous"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "Security Duty Manager",
+   "label": "uses the seal log"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "Security Duty Manager",
+   "label": "verify that recorded custody seals remain accounted for and that any discrepancy has been escalated"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "recorded custody seals",
+   "label": "remain accounted for"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "discrepancy",
+   "label": "has been escalated"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "reports equipment faults that could affect bag identity, screening integrity, or controlled access"
+  },
+  {
+   "unit_id": "S214",
+   "type": "flow",
+   "source": "Maintenance Technician",
+   "target": "affected equipment",
+   "payload": "equipment faults"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "equipment faults",
+   "label": "affect bag identity, screening integrity, or controlled access"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "affected equipment",
+   "label": "is returned to service"
+  },
+  {
+   "unit_id": "S214",
+   "type": "succession",
+   "before": "reports equipment faults that could affect bag identity, screening integrity, or controlled access",
+   "after": "is returned to service"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "confirms that outstanding holds and route exceptions have an assigned owner"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "authorizing continuation of processing"
+  },
+  {
+   "unit_id": "S215",
+   "type": "succession",
+   "before": "confirms that outstanding holds and route exceptions have an assigned owner",
+   "after": "authorizing continuation of processing"
+  },
+  {
+   "unit_id": "S216",
+   "type": "requirement",
+   "subject": "Orchard",
+   "text": "Orchard shall release a bag to the next handling stage only when the recorded screening disposition and assigned destination are valid."
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Orchard",
+   "label": "release a bag to the next handling stage"
+  },
+  {
+   "unit_id": "S216",
+   "type": "flow",
+   "source": "Orchard",
+   "target": "next handling stage",
+   "payload": "bags"
+  },
+  {
+   "unit_id": "S216",
+   "type": "state",
+   "owner": "screening disposition",
+   "label": "valid"
+  },
+  {
+   "unit_id": "S216",
+   "type": "state",
+   "owner": "assigned destination",
+   "label": "valid"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "Flight Data Gateway",
+   "label": "provides the flight and destination data used to check that the bag remains assigned to an operating departure"
+  },
+  {
+   "unit_id": "S217",
+   "type": "flow",
+   "source": "Flight Data Gateway",
+   "target": "bags",
+   "payload": "flight and destination data"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "flight and destination data",
+   "label": "used to check that the bag remains assigned to an operating departure"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "bags",
+   "label": "check that the bag remains assigned to an operating departure"
+  },
+  {
+   "unit_id": "S217",
+   "type": "state",
+   "owner": "bags",
+   "label": "assigned to an operating departure"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "compares scanned bag identities against the expected flight population"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "flags missing or duplicate records for resolution"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "uses the Bag Match Query"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "review unresolved bag-to-flight mismatches"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "is granted"
+  },
+  {
+   "unit_id": "S219",
+   "type": "succession",
+   "before": "review unresolved bag-to-flight mismatches",
+   "after": "is granted"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "East Make-Up Conveyor",
+   "label": "moves reconciled bags toward the correct flight position"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "East Make-Up Conveyor",
+   "label": "without bypassing required identity checks"
+  },
+  {
+   "unit_id": "S221",
+   "type": "constraint",
+   "subject": "West Make-Up Conveyor",
+   "expression": "remains subject to the same controlled access and reconciliation rules as other make-up equipment"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Transfer Bag Feeder",
+   "label": "accepts transfer bags only when their identity and intended onward flight can be verified"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "label": "can be verified"
+  },
+  {
+   "unit_id": "S222",
+   "type": "constraint",
+   "subject": "Transfer Bag Feeder",
+   "expression": "accepts transfer bags only when their identity and intended onward flight can be verified"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "confirms that the flight assignment, reconciled bag count, and operational status are consistent"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "Outbound Load Control Desk",
+   "label": "accepting the loading record"
+  },
+  {
+   "unit_id": "S223",
+   "type": "succession",
+   "before": "confirms that the flight assignment, reconciled bag count, and operational status are consistent",
+   "after": "accepting the loading record"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "performer": "Airline Ramp Coordinator",
+   "label": "verifies that the bag identity is readable, the flight assignment is current, and the security disposition permits loading"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "performer": "security disposition",
+   "label": "permits loading"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "aircraft loading"
+  },
+  {
+   "unit_id": "S224",
+   "type": "succession",
+   "before": "verifies that the bag identity is readable, the flight assignment is current, and the security disposition permits loading",
+   "after": "aircraft loading"
+  },
+  {
+   "unit_id": "S224",
+   "type": "state",
+   "owner": "bag identity",
+   "label": "readable"
+  },
+  {
+   "unit_id": "S224",
+   "type": "state",
+   "owner": "flight assignment",
+   "label": "current"
+  },
+  {
+   "unit_id": "S225",
+   "type": "requirement",
+   "subject": "physical bags",
+   "text": "The physical bags presented for loading must agree with the reconciled records, and every unexplained count or identity difference blocks acceptance."
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "label": "presented for loading"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "physical bags",
+   "label": "must agree with the reconciled records"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "unexplained count or identity difference",
+   "label": "blocks acceptance"
+  },
+  {
+   "unit_id": "S226",
+   "type": "state",
+   "owner": "bag",
+   "label": "ready for departure"
+  },
+  {
+   "unit_id": "S226",
+   "type": "constraint",
+   "subject": "bag",
+   "expression": "ready for departure only after screening release, custody continuity, final reconciliation, and loading checks are all complete and recorded"
+  },
+  {
+   "unit_id": "S226",
+   "type": "state",
+   "owner": "screening release",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S226",
+   "type": "state",
+   "owner": "custody continuity",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S226",
+   "type": "state",
+   "owner": "final reconciliation",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S226",
+   "type": "state",
+   "owner": "loading checks",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "label": "recorded"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Operational monitoring",
+   "label": "provides a continuous view of baggage throughput, equipment availability, queue growth, screening status, and reconciliation exceptions"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "records bag events"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "Baggage Control System",
+   "label": "reports missing, duplicate, or delayed event sequences for operational review"
+  },
+  {
+   "unit_id": "S228",
+   "type": "flow",
+   "source": "Baggage Control System",
+   "payload": "missing, duplicate, or delayed event sequences"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Concourse Zone Controller",
+   "label": "reports equipment state changes and alarm conditions to the operations monitoring function"
+  },
+  {
+   "unit_id": "S229",
+   "type": "flow",
+   "source": "Concourse Zone Controller",
+   "target": "operations monitoring function",
+   "payload": "equipment state changes"
+  },
+  {
+   "unit_id": "S229",
+   "type": "flow",
+   "source": "Concourse Zone Controller",
+   "target": "operations monitoring function",
+   "payload": "alarm conditions"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "label": "is monitored for stops, accumulation, and sustained operation below its approved rate"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "label": "is monitored for availability, recirculation, fault frequency, and output rate against the approved operating plan"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "label": "is assessed using availability, image capture quality, alarm frequency, and screening completion records"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "label": "is assessed using the same approved service measures and screening completion criteria"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Image Resolution Desk",
+   "label": "reports unresolved images, review backlog, and processing time against the locally approved service target"
+  },
+  {
+   "unit_id": "S234",
+   "type": "flow",
+   "source": "Image Resolution Desk",
+   "payload": "unresolved images"
+  },
+  {
+   "unit_id": "S234",
+   "type": "flow",
+   "source": "Image Resolution Desk",
+   "payload": "review backlog"
+  },
+  {
+   "unit_id": "S234",
+   "type": "flow",
+   "source": "Image Resolution Desk",
+   "payload": "processing time"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Bag Reconciliation Station",
+   "label": "reports unmatched records and count differences"
+  },
+  {
+   "unit_id": "S235",
+   "type": "flow",
+   "source": "Bag Reconciliation Station",
+   "payload": "unmatched records"
+  },
+  {
+   "unit_id": "S235",
+   "type": "flow",
+   "source": "Bag Reconciliation Station",
+   "payload": "count differences"
+  },
+  {
+   "unit_id": "S235",
+   "type": "constraint",
+   "subject": "unmatched records",
+   "expression": "remain subject to resolution before acceptance"
+  },
+  {
+   "unit_id": "S235",
+   "type": "constraint",
+   "subject": "count differences",
+   "expression": "remain subject to resolution before acceptance"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "is monitored for message timeliness, completeness, and interface errors affecting flight assignment data"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "interface errors",
+   "label": "affecting flight assignment data"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "label": "is monitored for service availability, transaction completion, and accumulation at its entry point"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "label": "is monitored for feed rate, interruptions, and backlog against its scheduled demand"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "label": "is monitored for operating state, accumulation, and the time required to clear assigned work"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "label": "clear assigned work"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "label": "are assessed separately"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "performer": "local fault",
+   "label": "does not obscure the condition of the other conveyor"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Tern",
+   "label": "reviews the operating dashboard"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Tern",
+   "label": "confirms that material service degradation has been assigned an owner and response priority"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "label": "has been assigned an owner and response priority"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "investigates equipment faults that exceed the approved recovery interval"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Maintenance Technician",
+   "label": "records the corrective action taken"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "label": "taken"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "Security Duty Manager",
+   "label": "assesses any condition that could compromise screening coverage, security controls, or custody continuity"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "condition",
+   "label": "could compromise screening coverage, security controls, or custody continuity"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "label": "is escalated to when an unresolved security condition requires its response under airport procedures"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "label": "processed per operating interval"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "label": "are established in the approved operating plan"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "label": "reviewed against demand, flight schedules, and safety constraints"
+  },
+  {
+   "unit_id": "S247",
+   "type": "state",
+   "label": "degraded mode"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "label": "may be used only when the remaining equipment and procedures preserve required screening, traceability, custody, and reconciliation controls"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "remaining equipment",
+   "label": "preserve required screening, traceability, custody, and reconciliation controls"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "procedures",
+   "label": "preserve required screening, traceability, custody, and reconciliation controls"
+  },
+  {
+   "unit_id": "S247",
+   "type": "constraint",
+   "subject": "degraded mode",
+   "expression": "may be used only when the remaining equipment and procedures preserve required screening, traceability, custody, and reconciliation controls"
+  },
+  {
+   "unit_id": "S248",
+   "type": "requirement",
+   "subject": "Operations",
+   "text": "Operations must suspend the affected activity when required controls cannot be maintained or when an unverified equipment state could misroute baggage."
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "performer": "Operations",
+   "label": "must suspend the affected activity"
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "label": "cannot be maintained"
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "performer": "unverified equipment state",
+   "label": "could misroute baggage"
+  },
+  {
+   "unit_id": "S249",
+   "type": "action",
+   "performer": "Baggage Operations Supervisor",
+   "label": "coordinates escalation to maintenance, security, and airline operations according to the severity and operational impact of the condition"
+  },
+  {
+   "unit_id": "S250",
+   "type": "requirement",
+   "text": "Return to service requires the fault to be corrected, required functional checks to pass, alarms to clear, and affected records to be reconciled."
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "to be corrected"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "performer": "required functional checks",
+   "label": "to pass"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "performer": "alarms",
+   "label": "to clear"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "to be reconciled"
+  },
+  {
+   "unit_id": "S251",
+   "type": "action",
+   "performer": "responsible operational and technical personnel",
+   "label": "confirm that screening and custody controls are effective"
+  },
+  {
+   "unit_id": "S251",
+   "type": "action",
+   "performer": "normal routing",
+   "label": "resumes"
+  },
+  {
+   "unit_id": "S251",
+   "type": "succession",
+   "before": "confirm that screening and custody controls are effective",
+   "after": "resumes"
+  },
+  {
+   "unit_id": "S252",
+   "type": "action",
+   "label": "is monitored at increased frequency until performance is stable and outstanding exceptions have been resolved or formally assigned"
+  },
+  {
+   "unit_id": "S252",
+   "type": "action",
+   "label": "have been resolved"
+  },
+  {
+   "unit_id": "S252",
+   "type": "action",
+   "label": "formally assigned"
+  }
+ ],
+ "entities": [
+  {
+   "name": "operational concept",
+   "aliases": []
+  },
+  {
+   "name": "checked baggage",
+   "aliases": []
+  },
+  {
+   "name": "airport bag-drop",
+   "aliases": []
+  },
+  {
+   "name": "transfer induction",
+   "aliases": []
+  },
+  {
+   "name": "system",
+   "aliases": []
+  },
+  {
+   "name": "system boundary",
+   "aliases": []
+  },
+  {
+   "name": "airport equipment",
+   "aliases": []
+  },
+  {
+   "name": "control functions",
+   "aliases": []
+  },
+  {
+   "name": "outbound load control point",
+   "aliases": []
+  },
+  {
+   "name": "passenger interface",
+   "aliases": []
+  },
+  {
+   "name": "Pier 4 Bag-Drop Unit",
+   "aliases": []
+  },
+  {
+   "name": "bag identification",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "induction interface",
+   "aliases": []
+  },
+  {
+   "name": "eligible transfer baggage",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "screening and sorting equipment",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": [
+    "Velvet"
+   ]
+  },
+  {
+   "name": "bag status",
+   "aliases": []
+  },
+  {
+   "name": "routing decisions",
+   "aliases": []
+  },
+  {
+   "name": "connected equipment",
+   "aliases": []
+  },
+  {
+   "name": "Concourse Zone Controller",
+   "aliases": [
+    "Mosslight"
+   ]
+  },
+  {
+   "name": "local equipment",
+   "aliases": []
+  },
+  {
+   "name": "assigned operating area",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Flight Cutoff Advisory",
+   "aliases": []
+  },
+  {
+   "name": "current flight and operating data",
+   "aliases": []
+  },
+  {
+   "name": "scheduled departures",
+   "aliases": []
+  },
+  {
+   "name": "Recovery Route Card",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": []
+  },
+  {
+   "name": "make-up areas",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "screening interfaces",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "screening images",
+   "aliases": []
+  },
+  {
+   "name": "automated processing",
+   "aliases": []
+  },
+  {
+   "name": "operator assessment",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "controlled path",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "escalated screening events",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "bag identity",
+   "aliases": []
+  },
+  {
+   "name": "processing status",
+   "aliases": []
+  },
+  {
+   "name": "system records",
+   "aliases": []
+  },
+  {
+   "name": "physical handling",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "West Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "loading areas",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": []
+  },
+  {
+   "name": "assigned departure operation",
+   "aliases": []
+  },
+  {
+   "name": "Outbound Load Control Desk",
+   "aliases": []
+  },
+  {
+   "name": "operational interface",
+   "aliases": []
+  },
+  {
+   "name": "baggage readiness",
+   "aliases": []
+  },
+  {
+   "name": "aircraft-loading handoff",
+   "aliases": []
+  },
+  {
+   "name": "Airline Ramp Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "routine flow",
+   "aliases": []
+  },
+  {
+   "name": "service interruptions",
+   "aliases": []
+  },
+  {
+   "name": "operational recovery",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "Service objectives",
+   "aliases": []
+  },
+  {
+   "name": "safe screening",
+   "aliases": []
+  },
+  {
+   "name": "accurate bag-to-flight association",
+   "aliases": []
+  },
+  {
+   "name": "predictable throughput",
+   "aliases": []
+  },
+  {
+   "name": "timely delivery",
+   "aliases": []
+  },
+  {
+   "name": "applicable departure cutoffs",
+   "aliases": []
+  },
+  {
+   "name": "Equipment status",
+   "aliases": []
+  },
+  {
+   "name": "bag identity",
+   "aliases": []
+  },
+  {
+   "name": "routing state",
+   "aliases": []
+  },
+  {
+   "name": "operating restrictions",
+   "aliases": []
+  },
+  {
+   "name": "defined interfaces",
+   "aliases": []
+  },
+  {
+   "name": "local staff",
+   "aliases": []
+  },
+  {
+   "name": "conditions",
+   "aliases": []
+  },
+  {
+   "name": "automated controls",
+   "aliases": []
+  },
+  {
+   "name": "Check-in acceptance",
+   "aliases": []
+  },
+  {
+   "name": "staff",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "applicable airline rules",
+   "aliases": []
+  },
+  {
+   "name": "passenger and flight details",
+   "aliases": []
+  },
+  {
+   "name": "checked-baggage process",
+   "aliases": []
+  },
+  {
+   "name": "Pier 4 Bag-Drop Unit",
+   "aliases": []
+  },
+  {
+   "name": "Bag Tag Printer",
+   "aliases": []
+  },
+  {
+   "name": "durable tag",
+   "aliases": []
+  },
+  {
+   "name": "unique identifier",
+   "aliases": []
+  },
+  {
+   "name": "passenger and flight record",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "flight",
+   "aliases": []
+  },
+  {
+   "name": "bag record",
+   "aliases": []
+  },
+  {
+   "name": "acceptance data",
+   "aliases": []
+  },
+  {
+   "name": "bag dimensions",
+   "aliases": []
+  },
+  {
+   "name": "weight",
+   "aliases": []
+  },
+  {
+   "name": "configured limits for standard conveyor handling",
+   "aliases": []
+  },
+  {
+   "name": "Oversize Exception Ticket",
+   "aliases": []
+  },
+  {
+   "name": "configured size envelope",
+   "aliases": []
+  },
+  {
+   "name": "designated holding area",
+   "aliases": []
+  },
+  {
+   "name": "approved handling route",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "inbound transfer bag",
+   "aliases": []
+  },
+  {
+   "name": "local handling process",
+   "aliases": []
+  },
+  {
+   "name": "Late Transfer Bag Card",
+   "aliases": []
+  },
+  {
+   "name": "inbound transfer stream",
+   "aliases": []
+  },
+  {
+   "name": "transfer-bag identifiers",
+   "aliases": []
+  },
+  {
+   "name": "onward flight record",
+   "aliases": []
+  },
+  {
+   "name": "transfer-bag data",
+   "aliases": []
+  },
+  {
+   "name": "current routing information",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "flight and routing records",
+   "aliases": []
+  },
+  {
+   "name": "acceptance and induction decisions",
+   "aliases": []
+  },
+  {
+   "name": "selected route",
+   "aliases": []
+  },
+  {
+   "name": "receiving equipment",
+   "aliases": []
+  },
+  {
+   "name": "Concourse Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "induction permissive",
+   "aliases": []
+  },
+  {
+   "name": "local equipment status",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "controlled feed points",
+   "aliases": []
+  },
+  {
+   "name": "Interlocks",
+   "aliases": []
+  },
+  {
+   "name": "feed movement",
+   "aliases": []
+  },
+  {
+   "name": "jam",
+   "aliases": []
+  },
+  {
+   "name": "access-door opening",
+   "aliases": []
+  },
+  {
+   "name": "loss of downstream readiness",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "bag identifier",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "screening and sorting network",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "independent read point",
+   "aliases": []
+  },
+  {
+   "name": "assigned entry path",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "active routing data",
+   "aliases": []
+  },
+  {
+   "name": "automated image review",
+   "aliases": []
+  },
+  {
+   "name": "bag image",
+   "aliases": []
+  },
+  {
+   "name": "staff at the Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "available image",
+   "aliases": []
+  },
+  {
+   "name": "disposition",
+   "aliases": []
+  },
+  {
+   "name": "Airline Ramp Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Carousel Release Slip",
+   "aliases": []
+  },
+  {
+   "name": "outbound build",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "approved screening profile",
+   "aliases": []
+  },
+  {
+   "name": "tag data",
+   "aliases": []
+  },
+  {
+   "name": "current operating configuration",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "screening equipment",
+   "aliases": []
+  },
+  {
+   "name": "screening disposition",
+   "aliases": []
+  },
+  {
+   "name": "bag identity",
+   "aliases": []
+  },
+  {
+   "name": "screening images",
+   "aliases": []
+  },
+  {
+   "name": "image quality",
+   "aliases": []
+  },
+  {
+   "name": "alarm status",
+   "aliases": []
+  },
+  {
+   "name": "incomplete examination",
+   "aliases": []
+  },
+  {
+   "name": "clear result",
+   "aliases": []
+  },
+  {
+   "name": "reviewer",
+   "aliases": []
+  },
+  {
+   "name": "full image",
+   "aliases": []
+  },
+  {
+   "name": "bag identification",
+   "aliases": []
+  },
+  {
+   "name": "system prompts",
+   "aliases": []
+  },
+  {
+   "name": "controlled routing",
+   "aliases": []
+  },
+  {
+   "name": "system",
+   "aliases": []
+  },
+  {
+   "name": "outbound make-up path",
+   "aliases": []
+  },
+  {
+   "name": "Manual Rescan Receipt",
+   "aliases": []
+  },
+  {
+   "name": "manual rescan",
+   "aliases": []
+  },
+  {
+   "name": "clear disposition",
+   "aliases": []
+  },
+  {
+   "name": "normal routing",
+   "aliases": []
+  },
+  {
+   "name": "screening record",
+   "aliases": []
+  },
+  {
+   "name": "alarm",
+   "aliases": []
+  },
+  {
+   "name": "unresolved image",
+   "aliases": []
+  },
+  {
+   "name": "missing screening record",
+   "aliases": []
+  },
+  {
+   "name": "exception status",
+   "aliases": []
+  },
+  {
+   "name": "additional examination",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "normal outbound flows",
+   "aliases": []
+  },
+  {
+   "name": "inspection position",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "associated work area",
+   "aliases": []
+  },
+  {
+   "name": "personnel with authorized duties",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": [
+    "Pebble"
+   ]
+  },
+  {
+   "name": "escalated alarms",
+   "aliases": []
+  },
+  {
+   "name": "safety controls",
+   "aliases": []
+  },
+  {
+   "name": "airport security personnel",
+   "aliases": []
+  },
+  {
+   "name": "Inspection staff",
+   "aliases": []
+  },
+  {
+   "name": "alarmed bag",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": []
+  },
+  {
+   "name": "authorized disposition",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "screening record",
+   "aliases": []
+  },
+  {
+   "name": "examination",
+   "aliases": []
+  },
+  {
+   "name": "staff",
+   "aliases": []
+  },
+  {
+   "name": "area",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "decisions",
+   "aliases": []
+  },
+  {
+   "name": "screening lane",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "alarm response",
+   "aliases": []
+  },
+  {
+   "name": "security decision",
+   "aliases": []
+  },
+  {
+   "name": "routine screening procedures",
+   "aliases": []
+  },
+  {
+   "name": "Bag Tag Printer",
+   "aliases": []
+  },
+  {
+   "name": "Calibration Witness Tag",
+   "aliases": []
+  },
+  {
+   "name": "calibration witness record",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": [
+    "Orchard"
+   ]
+  },
+  {
+   "name": "valid screening disposition",
+   "aliases": []
+  },
+  {
+   "name": "authorized routing instruction",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "transfer bags",
+   "aliases": []
+  },
+  {
+   "name": "screening status",
+   "aliases": []
+  },
+  {
+   "name": "intended onward handling",
+   "aliases": []
+  },
+  {
+   "name": "identity",
+   "aliases": []
+  },
+  {
+   "name": "examination outcome",
+   "aliases": []
+  },
+  {
+   "name": "routing authorization",
+   "aliases": []
+  },
+  {
+   "name": "operating record",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "approved sort plan",
+   "aliases": []
+  },
+  {
+   "name": "effective time window",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "current flight and handling records",
+   "aliases": []
+  },
+  {
+   "name": "route",
+   "aliases": []
+  },
+  {
+   "name": "Concourse Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "local conveyor availability",
+   "aliases": []
+  },
+  {
+   "name": "active sort plan",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "assigned destination",
+   "aliases": []
+  },
+  {
+   "name": "Chute Occupancy Note",
+   "aliases": []
+  },
+  {
+   "name": "destination lane",
+   "aliases": []
+  },
+  {
+   "name": "approved path",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "route decision points",
+   "aliases": []
+  },
+  {
+   "name": "scan mismatch",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "route",
+   "aliases": []
+  },
+  {
+   "name": "unresolved identity",
+   "aliases": []
+  },
+  {
+   "name": "Congestion awareness",
+   "aliases": []
+  },
+  {
+   "name": "current lane availability",
+   "aliases": []
+  },
+  {
+   "name": "conveyor stops",
+   "aliases": []
+  },
+  {
+   "name": "observed rate of incoming bags",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": [
+    "Tern"
+   ]
+  },
+  {
+   "name": "local congestion thresholds",
+   "aliases": []
+  },
+  {
+   "name": "authorized response",
+   "aliases": []
+  },
+  {
+   "name": "sustained overload",
+   "aliases": []
+  },
+  {
+   "name": "planned lane",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "approved alternate route",
+   "aliases": []
+  },
+  {
+   "name": "screening status",
+   "aliases": []
+  },
+  {
+   "name": "flight timing",
+   "aliases": []
+  },
+  {
+   "name": "unresolved destination",
+   "aliases": []
+  },
+  {
+   "name": "handling limits",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "image-related holds",
+   "aliases": []
+  },
+  {
+   "name": "normal sortation",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": []
+  },
+  {
+   "name": "security holds",
+   "aliases": []
+  },
+  {
+   "name": "applicable response procedures",
+   "aliases": []
+  },
+  {
+   "name": "normal handling",
+   "aliases": []
+  },
+  {
+   "name": "identity",
+   "aliases": []
+  },
+  {
+   "name": "examination outcome",
+   "aliases": []
+  },
+  {
+   "name": "routing authorization",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "West Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "active plan",
+   "aliases": []
+  },
+  {
+   "name": "available capacity",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": []
+  },
+  {
+   "name": "assigned flight window",
+   "aliases": []
+  },
+  {
+   "name": "usable capacity",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "transfer bags",
+   "aliases": []
+  },
+  {
+   "name": "intended onward handling",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "bag identity",
+   "aliases": []
+  },
+  {
+   "name": "active handling record",
+   "aliases": []
+  },
+  {
+   "name": "unresolved discrepancies",
+   "aliases": []
+  },
+  {
+   "name": "Bag Match Query",
+   "aliases": []
+  },
+  {
+   "name": "stopped or misdirected path",
+   "aliases": []
+  },
+  {
+   "name": "onward movement",
+   "aliases": []
+  },
+  {
+   "name": "location",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "failed conveyor section",
+   "aliases": []
+  },
+  {
+   "name": "service",
+   "aliases": []
+  },
+  {
+   "name": "approved sort plan",
+   "aliases": []
+  },
+  {
+   "name": "cause of the abnormal path",
+   "aliases": []
+  },
+  {
+   "name": "abnormal path",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "scheduled flight identifiers",
+   "aliases": []
+  },
+  {
+   "name": "destinations",
+   "aliases": []
+  },
+  {
+   "name": "planned departure times",
+   "aliases": []
+  },
+  {
+   "name": "revisions",
+   "aliases": []
+  },
+  {
+   "name": "Flight schedules",
+   "aliases": []
+  },
+  {
+   "name": "airline-specific dispatch targets",
+   "aliases": []
+  },
+  {
+   "name": "connection windows",
+   "aliases": []
+  },
+  {
+   "name": "changes",
+   "aliases": []
+  },
+  {
+   "name": "flight assignments",
+   "aliases": []
+  },
+  {
+   "name": "current schedule data",
+   "aliases": []
+  },
+  {
+   "name": "bag routing instructions",
+   "aliases": []
+  },
+  {
+   "name": "planned dispatch time",
+   "aliases": []
+  },
+  {
+   "name": "published departure time",
+   "aliases": []
+  },
+  {
+   "name": "passenger-facing schedule value",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "cutoff profiles",
+   "aliases": []
+  },
+  {
+   "name": "carrier",
+   "aliases": []
+  },
+  {
+   "name": "flight",
+   "aliases": []
+  },
+  {
+   "name": "operating condition",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "cutoff",
+   "aliases": []
+  },
+  {
+   "name": "assigned flight",
+   "aliases": []
+  },
+  {
+   "name": "schedule",
+   "aliases": []
+  },
+  {
+   "name": "operational change",
+   "aliases": []
+  },
+  {
+   "name": "reassessment",
+   "aliases": []
+  },
+  {
+   "name": "schedule revisions",
+   "aliases": []
+  },
+  {
+   "name": "departure",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "affected flights",
+   "aliases": []
+  },
+  {
+   "name": "priority adjustments",
+   "aliases": []
+  },
+  {
+   "name": "Cutoff values",
+   "aliases": []
+  },
+  {
+   "name": "screening",
+   "aliases": []
+  },
+  {
+   "name": "sortation",
+   "aliases": []
+  },
+  {
+   "name": "make-up",
+   "aliases": []
+  },
+  {
+   "name": "transfer handling allowances",
+   "aliases": []
+  },
+  {
+   "name": "aircraft departure",
+   "aliases": []
+  },
+  {
+   "name": "Flight Cutoff Advisory",
+   "aliases": []
+  },
+  {
+   "name": "remaining processing time",
+   "aliases": []
+  },
+  {
+   "name": "route-specific handling estimates",
+   "aliases": []
+  },
+  {
+   "name": "screening clearance",
+   "aliases": []
+  },
+  {
+   "name": "flight-specific sort destinations",
+   "aliases": []
+  },
+  {
+   "name": "capacity",
+   "aliases": []
+  },
+  {
+   "name": "final flight induction",
+   "aliases": []
+  },
+  {
+   "name": "scheduled departure",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "screening outcomes",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "unresolved images",
+   "aliases": []
+  },
+  {
+   "name": "final routing",
+   "aliases": []
+  },
+  {
+   "name": "disposition",
+   "aliases": []
+  },
+  {
+   "name": "positive threat indication",
+   "aliases": []
+  },
+  {
+   "name": "ordinary routing",
+   "aliases": []
+  },
+  {
+   "name": "authorized security disposition",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": []
+  },
+  {
+   "name": "Custody Seal Log",
+   "aliases": []
+  },
+  {
+   "name": "screening disposition",
+   "aliases": []
+  },
+  {
+   "name": "recoverable bag-to-flight association",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": []
+  },
+  {
+   "name": "eligible bags",
+   "aliases": []
+  },
+  {
+   "name": "flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "current cutoff priority",
+   "aliases": []
+  },
+  {
+   "name": "Concourse Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "induction demand",
+   "aliases": []
+  },
+  {
+   "name": "available conveyor capacity",
+   "aliases": []
+  },
+  {
+   "name": "operating area",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "priority order",
+   "aliases": []
+  },
+  {
+   "name": "scan confirmation",
+   "aliases": []
+  },
+  {
+   "name": "safe spacing",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "West Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "flight groups",
+   "aliases": []
+  },
+  {
+   "name": "active allocation rules",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": []
+  },
+  {
+   "name": "outbound loading",
+   "aliases": []
+  },
+  {
+   "name": "flight grouping",
+   "aliases": []
+  },
+  {
+   "name": "screening status",
+   "aliases": []
+  },
+  {
+   "name": "Outbound Load Control Desk",
+   "aliases": []
+  },
+  {
+   "name": "planned dispatch time",
+   "aliases": []
+  },
+  {
+   "name": "load-close targets",
+   "aliases": []
+  },
+  {
+   "name": "assigned bags",
+   "aliases": []
+  },
+  {
+   "name": "Airline Ramp Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "changes to loading readiness",
+   "aliases": []
+  },
+  {
+   "name": "loading readiness",
+   "aliases": []
+  },
+  {
+   "name": "usable cutoff",
+   "aliases": []
+  },
+  {
+   "name": "lower-priority bags",
+   "aliases": []
+  },
+  {
+   "name": "remaining processing window",
+   "aliases": []
+  },
+  {
+   "name": "active flight cutoff",
+   "aliases": []
+  },
+  {
+   "name": "reassignment",
+   "aliases": []
+  },
+  {
+   "name": "recovery",
+   "aliases": []
+  },
+  {
+   "name": "unavailable departure build",
+   "aliases": []
+  },
+  {
+   "name": "Make-up allocation",
+   "aliases": []
+  },
+  {
+   "name": "active flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "available build positions",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "release",
+   "aliases": []
+  },
+  {
+   "name": "make-up position",
+   "aliases": []
+  },
+  {
+   "name": "flight",
+   "aliases": []
+  },
+  {
+   "name": "processing window",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "flight identity",
+   "aliases": []
+  },
+  {
+   "name": "departure timing",
+   "aliases": []
+  },
+  {
+   "name": "make-up planning",
+   "aliases": []
+  },
+  {
+   "name": "Mosslight",
+   "aliases": []
+  },
+  {
+   "name": "bags",
+   "aliases": []
+  },
+  {
+   "name": "active make-up lanes",
+   "aliases": []
+  },
+  {
+   "name": "current zone status",
+   "aliases": []
+  },
+  {
+   "name": "Velvet",
+   "aliases": []
+  },
+  {
+   "name": "screening disposition",
+   "aliases": []
+  },
+  {
+   "name": "release state",
+   "aliases": []
+  },
+  {
+   "name": "flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "Pier 4 Bag-Drop Unit",
+   "aliases": []
+  },
+  {
+   "name": "onward processing",
+   "aliases": []
+  },
+  {
+   "name": "flight association",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "handling stream",
+   "aliases": []
+  },
+  {
+   "name": "make-up interface",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": []
+  },
+  {
+   "name": "authorized destination",
+   "aliases": []
+  },
+  {
+   "name": "current operating status",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "readable bag identification",
+   "aliases": []
+  },
+  {
+   "name": "assigned build",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "verification",
+   "aliases": []
+  },
+  {
+   "name": "coverage area",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "exception ticket",
+   "aliases": []
+  },
+  {
+   "name": "oversize bag",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "further examination",
+   "aliases": []
+  },
+  {
+   "name": "applicable disposition",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "Late Transfer Bag Card",
+   "aliases": []
+  },
+  {
+   "name": "transfer bag",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "active handling sequence",
+   "aliases": []
+  },
+  {
+   "name": "required checks",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "West Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "operating area",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": []
+  },
+  {
+   "name": "bag order",
+   "aliases": []
+  },
+  {
+   "name": "position information",
+   "aliases": []
+  },
+  {
+   "name": "active flight build",
+   "aliases": []
+  },
+  {
+   "name": "Carousel Release Slip",
+   "aliases": []
+  },
+  {
+   "name": "Airline Ramp Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "staffing",
+   "aliases": []
+  },
+  {
+   "name": "equipment availability",
+   "aliases": []
+  },
+  {
+   "name": "planned loading sequence",
+   "aliases": []
+  },
+  {
+   "name": "build",
+   "aliases": []
+  },
+  {
+   "name": "Outbound Load Control Desk",
+   "aliases": []
+  },
+  {
+   "name": "completed build",
+   "aliases": []
+  },
+  {
+   "name": "permitted flight load",
+   "aliases": []
+  },
+  {
+   "name": "departure closeout",
+   "aliases": []
+  },
+  {
+   "name": "Bag Tag Printer",
+   "aliases": []
+  },
+  {
+   "name": "replacement identification",
+   "aliases": []
+  },
+  {
+   "name": "authorized personnel",
+   "aliases": []
+  },
+  {
+   "name": "required bag details",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "release holds",
+   "aliases": []
+  },
+  {
+   "name": "security decision",
+   "aliases": []
+  },
+  {
+   "name": "departure build",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "equipment restrictions",
+   "aliases": []
+  },
+  {
+   "name": "lane availability",
+   "aliases": []
+  },
+  {
+   "name": "safe bag delivery",
+   "aliases": []
+  },
+  {
+   "name": "build priority",
+   "aliases": []
+  },
+  {
+   "name": "airline ground operations",
+   "aliases": []
+  },
+  {
+   "name": "delivery constraints",
+   "aliases": []
+  },
+  {
+   "name": "Manual resolution",
+   "aliases": []
+  },
+  {
+   "name": "image exception",
+   "aliases": []
+  },
+  {
+   "name": "identity exception",
+   "aliases": []
+  },
+  {
+   "name": "automatic processing",
+   "aliases": []
+  },
+  {
+   "name": "reliable disposition",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "available bag image",
+   "aliases": []
+  },
+  {
+   "name": "exception details",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "visible bag features",
+   "aliases": []
+  },
+  {
+   "name": "recorded tag number",
+   "aliases": []
+  },
+  {
+   "name": "handling data",
+   "aliases": []
+  },
+  {
+   "name": "decision",
+   "aliases": []
+  },
+  {
+   "name": "uncertain visual match",
+   "aliases": []
+  },
+  {
+   "name": "rescan receipt",
+   "aliases": []
+  },
+  {
+   "name": "second image",
+   "aliases": []
+  },
+  {
+   "name": "approved procedure",
+   "aliases": []
+  },
+  {
+   "name": "physical inspection",
+   "aliases": []
+  },
+  {
+   "name": "established inspection process",
+   "aliases": []
+  },
+  {
+   "name": "identity check",
+   "aliases": []
+  },
+  {
+   "name": "physical tag",
+   "aliases": []
+  },
+  {
+   "name": "number",
+   "aliases": []
+  },
+  {
+   "name": "recorded bag identity",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "current routing data",
+   "aliases": []
+  },
+  {
+   "name": "disposition",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "flight data",
+   "aliases": []
+  },
+  {
+   "name": "assigned destination",
+   "aliases": []
+  },
+  {
+   "name": "service date",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "expected flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "mismatch",
+   "aliases": []
+  },
+  {
+   "name": "authorized operator",
+   "aliases": []
+  },
+  {
+   "name": "discrepancy",
+   "aliases": []
+  },
+  {
+   "name": "Juniper",
+   "aliases": []
+  },
+  {
+   "name": "automatic sorting",
+   "aliases": []
+  },
+  {
+   "name": "manual disposition",
+   "aliases": []
+  },
+  {
+   "name": "Kestrel",
+   "aliases": []
+  },
+  {
+   "name": "readable tag image",
+   "aliases": []
+  },
+  {
+   "name": "permitted scan",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "tag read",
+   "aliases": []
+  },
+  {
+   "name": "image data",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "controlled location",
+   "aliases": []
+  },
+  {
+   "name": "physical examination",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": []
+  },
+  {
+   "name": "security examination",
+   "aliases": []
+  },
+  {
+   "name": "applicable procedures",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "operational disposition",
+   "aliases": []
+  },
+  {
+   "name": "case",
+   "aliases": []
+  },
+  {
+   "name": "operator's authority",
+   "aliases": []
+  },
+  {
+   "name": "flight checks",
+   "aliases": []
+  },
+  {
+   "name": "previously assigned screening and sort path",
+   "aliases": []
+  },
+  {
+   "name": "Outbound Load Control Desk",
+   "aliases": []
+  },
+  {
+   "name": "planned flight load",
+   "aliases": []
+  },
+  {
+   "name": "Airline Ramp Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "flight-side constraint",
+   "aliases": []
+  },
+  {
+   "name": "Concourse Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "authorized routing state",
+   "aliases": []
+  },
+  {
+   "name": "required screening controls",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "witness tag",
+   "aliases": []
+  },
+  {
+   "name": "applicable calibration status",
+   "aliases": []
+  },
+  {
+   "name": "equipment",
+   "aliases": []
+  },
+  {
+   "name": "route",
+   "aliases": []
+  },
+  {
+   "name": "flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "approval",
+   "aliases": []
+  },
+  {
+   "name": "revised process",
+   "aliases": []
+  },
+  {
+   "name": "final disposition",
+   "aliases": []
+  },
+  {
+   "name": "supporting checks",
+   "aliases": []
+  },
+  {
+   "name": "later review",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "planned process",
+   "aliases": []
+  },
+  {
+   "name": "people",
+   "aliases": []
+  },
+  {
+   "name": "moving equipment",
+   "aliases": []
+  },
+  {
+   "name": "controlled path",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "induction",
+   "aliases": []
+  },
+  {
+   "name": "unsafe condition",
+   "aliases": []
+  },
+  {
+   "name": "uncertain bag location",
+   "aliases": []
+  },
+  {
+   "name": "loss of control",
+   "aliases": []
+  },
+  {
+   "name": "stop command",
+   "aliases": []
+  },
+  {
+   "name": "affected equipment",
+   "aliases": []
+  },
+  {
+   "name": "unrelated routes",
+   "aliases": []
+  },
+  {
+   "name": "conveyor or sorter hazard zone",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "relevant energy sources",
+   "aliases": []
+  },
+  {
+   "name": "movement",
+   "aliases": []
+  },
+  {
+   "name": "Guards",
+   "aliases": []
+  },
+  {
+   "name": "access panels",
+   "aliases": []
+  },
+  {
+   "name": "bypasses",
+   "aliases": []
+  },
+  {
+   "name": "approved maintenance procedure",
+   "aliases": []
+  },
+  {
+   "name": "occupancy note",
+   "aliases": []
+  },
+  {
+   "name": "chute",
+   "aliases": []
+  },
+  {
+   "name": "Recovery Route Card",
+   "aliases": []
+  },
+  {
+   "name": "equipment",
+   "aliases": []
+  },
+  {
+   "name": "route change",
+   "aliases": []
+  },
+  {
+   "name": "Pebble",
+   "aliases": []
+  },
+  {
+   "name": "response area",
+   "aliases": []
+  },
+  {
+   "name": "explosives assessment",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "access control",
+   "aliases": []
+  },
+  {
+   "name": "security response",
+   "aliases": []
+  },
+  {
+   "name": "staff",
+   "aliases": []
+  },
+  {
+   "name": "scanner fault",
+   "aliases": []
+  },
+  {
+   "name": "affected feed",
+   "aliases": []
+  },
+  {
+   "name": "bag disposition",
+   "aliases": []
+  },
+  {
+   "name": "jammed bags",
+   "aliases": []
+  },
+  {
+   "name": "damaged belts",
+   "aliases": []
+  },
+  {
+   "name": "sensor obstruction",
+   "aliases": []
+  },
+  {
+   "name": "signs of mechanical wear",
+   "aliases": []
+  },
+  {
+   "name": "fault",
+   "aliases": []
+  },
+  {
+   "name": "Lantern",
+   "aliases": []
+  },
+  {
+   "name": "current flight data",
+   "aliases": []
+  },
+  {
+   "name": "operating routes",
+   "aliases": []
+  },
+  {
+   "name": "active assignments",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "equipment alarms",
+   "aliases": []
+  },
+  {
+   "name": "affected route",
+   "aliases": []
+  },
+  {
+   "name": "authorized personnel",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "approach area",
+   "aliases": []
+  },
+  {
+   "name": "jam",
+   "aliases": []
+  },
+  {
+   "name": "isolation",
+   "aliases": []
+  },
+  {
+   "name": "safe access",
+   "aliases": []
+  },
+  {
+   "name": "blockage",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "interruption",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor guards",
+   "aliases": []
+  },
+  {
+   "name": "downstream capacity",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": []
+  },
+  {
+   "name": "discharge area",
+   "aliases": []
+  },
+  {
+   "name": "operating status",
+   "aliases": []
+  },
+  {
+   "name": "corrective work",
+   "aliases": []
+  },
+  {
+   "name": "condition that prevents safe restart",
+   "aliases": []
+  },
+  {
+   "name": "safe restart",
+   "aliases": []
+  },
+  {
+   "name": "operational hold",
+   "aliases": []
+  },
+  {
+   "name": "scope of operational hold",
+   "aliases": []
+  },
+  {
+   "name": "affected staff",
+   "aliases": []
+  },
+  {
+   "name": "restriction",
+   "aliases": []
+  },
+  {
+   "name": "recovery",
+   "aliases": []
+  },
+  {
+   "name": "affected equipment",
+   "aliases": []
+  },
+  {
+   "name": "bags",
+   "aliases": []
+  },
+  {
+   "name": "area",
+   "aliases": []
+  },
+  {
+   "name": "route",
+   "aliases": []
+  },
+  {
+   "name": "flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "approval",
+   "aliases": []
+  },
+  {
+   "name": "revised process",
+   "aliases": []
+  },
+  {
+   "name": "final disposition",
+   "aliases": []
+  },
+  {
+   "name": "supporting checks",
+   "aliases": []
+  },
+  {
+   "name": "later review",
+   "aliases": []
+  },
+  {
+   "name": "planned process",
+   "aliases": []
+  },
+  {
+   "name": "Restart",
+   "aliases": []
+  },
+  {
+   "name": "personnel",
+   "aliases": []
+  },
+  {
+   "name": "guards",
+   "aliases": []
+  },
+  {
+   "name": "alarms",
+   "aliases": []
+  },
+  {
+   "name": "intended route",
+   "aliases": []
+  },
+  {
+   "name": "screening release",
+   "aliases": []
+  },
+  {
+   "name": "authorized loading handoff",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "bag identity",
+   "aliases": []
+  },
+  {
+   "name": "assigned flight",
+   "aliases": []
+  },
+  {
+   "name": "screening disposition",
+   "aliases": []
+  },
+  {
+   "name": "current handling status",
+   "aliases": []
+  },
+  {
+   "name": "authoritative record",
+   "aliases": []
+  },
+  {
+   "name": "Staff",
+   "aliases": []
+  },
+  {
+   "name": "monitored areas",
+   "aliases": []
+  },
+  {
+   "name": "active handling task",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "readable identity data",
+   "aliases": []
+  },
+  {
+   "name": "valid route assignment",
+   "aliases": []
+  },
+  {
+   "name": "screening process",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": []
+  },
+  {
+   "name": "assigned make-up destination",
+   "aliases": []
+  },
+  {
+   "name": "unresolved items",
+   "aliases": []
+  },
+  {
+   "name": "normal handling",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "healthy status",
+   "aliases": []
+  },
+  {
+   "name": "screening results",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "images",
+   "aliases": []
+  },
+  {
+   "name": "operator assessment",
+   "aliases": []
+  },
+  {
+   "name": "disposition",
+   "aliases": []
+  },
+  {
+   "name": "unresolved screening result",
+   "aliases": []
+  },
+  {
+   "name": "controlled hold area",
+   "aliases": []
+  },
+  {
+   "name": "required review",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": []
+  },
+  {
+   "name": "security events",
+   "aliases": []
+  },
+  {
+   "name": "specialist action",
+   "aliases": []
+  },
+  {
+   "name": "resulting disposition",
+   "aliases": []
+  },
+  {
+   "name": "approved operational channels",
+   "aliases": []
+  },
+  {
+   "name": "Secondary Inspection Chute",
+   "aliases": []
+  },
+  {
+   "name": "identity",
+   "aliases": []
+  },
+  {
+   "name": "custody",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "seal log",
+   "aliases": []
+  },
+  {
+   "name": "recorded custody seals",
+   "aliases": []
+  },
+  {
+   "name": "discrepancy",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "equipment faults",
+   "aliases": []
+  },
+  {
+   "name": "screening integrity",
+   "aliases": []
+  },
+  {
+   "name": "controlled access",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "outstanding holds",
+   "aliases": []
+  },
+  {
+   "name": "route exceptions",
+   "aliases": []
+  },
+  {
+   "name": "assigned owner",
+   "aliases": []
+  },
+  {
+   "name": "Orchard",
+   "aliases": []
+  },
+  {
+   "name": "next handling stage",
+   "aliases": []
+  },
+  {
+   "name": "assigned destination",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "flight and destination data",
+   "aliases": []
+  },
+  {
+   "name": "operating departure",
+   "aliases": []
+  },
+  {
+   "name": "Bag Reconciliation Station",
+   "aliases": []
+  },
+  {
+   "name": "scanned bag identities",
+   "aliases": []
+  },
+  {
+   "name": "expected flight population",
+   "aliases": []
+  },
+  {
+   "name": "missing or duplicate records",
+   "aliases": []
+  },
+  {
+   "name": "Airline Ramp Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Bag Match Query",
+   "aliases": []
+  },
+  {
+   "name": "unresolved bag-to-flight mismatches",
+   "aliases": []
+  },
+  {
+   "name": "loading authorization",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "reconciled bags",
+   "aliases": []
+  },
+  {
+   "name": "correct flight position",
+   "aliases": []
+  },
+  {
+   "name": "required identity checks",
+   "aliases": []
+  },
+  {
+   "name": "West Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "controlled access and reconciliation rules",
+   "aliases": []
+  },
+  {
+   "name": "other make-up equipment",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "transfer bags",
+   "aliases": []
+  },
+  {
+   "name": "identity",
+   "aliases": []
+  },
+  {
+   "name": "intended onward flight",
+   "aliases": []
+  },
+  {
+   "name": "Outbound Load Control Desk",
+   "aliases": []
+  },
+  {
+   "name": "flight assignment",
+   "aliases": []
+  },
+  {
+   "name": "reconciled bag count",
+   "aliases": []
+  },
+  {
+   "name": "operational status",
+   "aliases": []
+  },
+  {
+   "name": "loading record",
+   "aliases": []
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "bag identity",
+   "aliases": []
+  },
+  {
+   "name": "security disposition",
+   "aliases": []
+  },
+  {
+   "name": "physical bags",
+   "aliases": []
+  },
+  {
+   "name": "reconciled records",
+   "aliases": []
+  },
+  {
+   "name": "unexplained count or identity difference",
+   "aliases": []
+  },
+  {
+   "name": "bag",
+   "aliases": []
+  },
+  {
+   "name": "screening release",
+   "aliases": []
+  },
+  {
+   "name": "custody continuity",
+   "aliases": []
+  },
+  {
+   "name": "final reconciliation",
+   "aliases": []
+  },
+  {
+   "name": "loading checks",
+   "aliases": []
+  },
+  {
+   "name": "Operational monitoring",
+   "aliases": []
+  },
+  {
+   "name": "continuous view of baggage throughput, equipment availability, queue growth, screening status, and reconciliation exceptions",
+   "aliases": []
+  },
+  {
+   "name": "baggage throughput",
+   "aliases": []
+  },
+  {
+   "name": "equipment availability",
+   "aliases": []
+  },
+  {
+   "name": "queue growth",
+   "aliases": []
+  },
+  {
+   "name": "screening status",
+   "aliases": []
+  },
+  {
+   "name": "reconciliation exceptions",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Control System",
+   "aliases": []
+  },
+  {
+   "name": "bag events",
+   "aliases": []
+  },
+  {
+   "name": "missing, duplicate, or delayed event sequences",
+   "aliases": []
+  },
+  {
+   "name": "Concourse Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "equipment state changes",
+   "aliases": []
+  },
+  {
+   "name": "alarm conditions",
+   "aliases": []
+  },
+  {
+   "name": "operations monitoring function",
+   "aliases": []
+  },
+  {
+   "name": "Induction Tray Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "stops",
+   "aliases": []
+  },
+  {
+   "name": "accumulation",
+   "aliases": []
+  },
+  {
+   "name": "approved rate",
+   "aliases": []
+  },
+  {
+   "name": "Primary Crossbelt Sorter",
+   "aliases": []
+  },
+  {
+   "name": "availability",
+   "aliases": []
+  },
+  {
+   "name": "recirculation",
+   "aliases": []
+  },
+  {
+   "name": "fault frequency",
+   "aliases": []
+  },
+  {
+   "name": "output rate",
+   "aliases": []
+  },
+  {
+   "name": "approved operating plan",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "image capture quality",
+   "aliases": []
+  },
+  {
+   "name": "alarm frequency",
+   "aliases": []
+  },
+  {
+   "name": "screening completion records",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Scanner",
+   "aliases": []
+  },
+  {
+   "name": "approved service measures",
+   "aliases": []
+  },
+  {
+   "name": "screening completion criteria",
+   "aliases": []
+  },
+  {
+   "name": "Image Resolution Desk",
+   "aliases": []
+  },
+  {
+   "name": "unresolved images",
+   "aliases": []
+  },
+  {
+   "name": "review backlog",
+   "aliases": []
+  },
+  {
+   "name": "processing time",
+   "aliases": []
+  },
+  {
+   "name": "locally approved service target",
+   "aliases": []
+  },
+  {
+   "name": "unmatched records",
+   "aliases": []
+  },
+  {
+   "name": "count differences",
+   "aliases": []
+  },
+  {
+   "name": "Flight Data Gateway",
+   "aliases": []
+  },
+  {
+   "name": "message timeliness",
+   "aliases": []
+  },
+  {
+   "name": "completeness",
+   "aliases": []
+  },
+  {
+   "name": "interface errors",
+   "aliases": []
+  },
+  {
+   "name": "flight assignment data",
+   "aliases": []
+  },
+  {
+   "name": "Pier 4 Bag-Drop Unit",
+   "aliases": []
+  },
+  {
+   "name": "service availability",
+   "aliases": []
+  },
+  {
+   "name": "transaction completion",
+   "aliases": []
+  },
+  {
+   "name": "entry point",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Bag Feeder",
+   "aliases": []
+  },
+  {
+   "name": "feed rate",
+   "aliases": []
+  },
+  {
+   "name": "interruptions",
+   "aliases": []
+  },
+  {
+   "name": "backlog",
+   "aliases": []
+  },
+  {
+   "name": "scheduled demand",
+   "aliases": []
+  },
+  {
+   "name": "Carousel 7 Make-Up Unit",
+   "aliases": []
+  },
+  {
+   "name": "operating state",
+   "aliases": []
+  },
+  {
+   "name": "accumulation",
+   "aliases": []
+  },
+  {
+   "name": "assigned work",
+   "aliases": []
+  },
+  {
+   "name": "East Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "West Make-Up Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "local fault",
+   "aliases": []
+  },
+  {
+   "name": "Tern",
+   "aliases": []
+  },
+  {
+   "name": "operating dashboard",
+   "aliases": []
+  },
+  {
+   "name": "material service degradation",
+   "aliases": []
+  },
+  {
+   "name": "owner",
+   "aliases": []
+  },
+  {
+   "name": "response priority",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Technician",
+   "aliases": []
+  },
+  {
+   "name": "equipment faults",
+   "aliases": []
+  },
+  {
+   "name": "approved recovery interval",
+   "aliases": []
+  },
+  {
+   "name": "corrective action",
+   "aliases": []
+  },
+  {
+   "name": "Security Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "condition",
+   "aliases": []
+  },
+  {
+   "name": "screening coverage",
+   "aliases": []
+  },
+  {
+   "name": "security controls",
+   "aliases": []
+  },
+  {
+   "name": "custody continuity",
+   "aliases": []
+  },
+  {
+   "name": "Explosives Response Team",
+   "aliases": []
+  },
+  {
+   "name": "unresolved security condition",
+   "aliases": []
+  },
+  {
+   "name": "airport procedures",
+   "aliases": []
+  },
+  {
+   "name": "Service measures",
+   "aliases": []
+  },
+  {
+   "name": "availability",
+   "aliases": []
+  },
+  {
+   "name": "bags",
+   "aliases": []
+  },
+  {
+   "name": "operating interval",
+   "aliases": []
+  },
+  {
+   "name": "queue age",
+   "aliases": []
+  },
+  {
+   "name": "screening completion",
+   "aliases": []
+  },
+  {
+   "name": "unresolved reconciliation differences",
+   "aliases": []
+  },
+  {
+   "name": "Thresholds",
+   "aliases": []
+  },
+  {
+   "name": "reporting intervals",
+   "aliases": []
+  },
+  {
+   "name": "approved operating plan",
+   "aliases": []
+  },
+  {
+   "name": "demand",
+   "aliases": []
+  },
+  {
+   "name": "flight schedules",
+   "aliases": []
+  },
+  {
+   "name": "safety constraints",
+   "aliases": []
+  },
+  {
+   "name": "degraded mode",
+   "aliases": []
+  },
+  {
+   "name": "remaining equipment",
+   "aliases": []
+  },
+  {
+   "name": "procedures",
+   "aliases": []
+  },
+  {
+   "name": "required screening",
+   "aliases": []
+  },
+  {
+   "name": "traceability",
+   "aliases": []
+  },
+  {
+   "name": "custody",
+   "aliases": []
+  },
+  {
+   "name": "reconciliation controls",
+   "aliases": []
+  },
+  {
+   "name": "Operations",
+   "aliases": []
+  },
+  {
+   "name": "affected activity",
+   "aliases": []
+  },
+  {
+   "name": "required controls",
+   "aliases": []
+  },
+  {
+   "name": "unverified equipment state",
+   "aliases": []
+  },
+  {
+   "name": "baggage",
+   "aliases": []
+  },
+  {
+   "name": "Baggage Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "maintenance",
+   "aliases": []
+  },
+  {
+   "name": "security",
+   "aliases": []
+  },
+  {
+   "name": "airline operations",
+   "aliases": []
+  },
+  {
+   "name": "fault",
+   "aliases": []
+  },
+  {
+   "name": "required functional checks",
+   "aliases": []
+  },
+  {
+   "name": "alarms",
+   "aliases": []
+  },
+  {
+   "name": "affected records",
+   "aliases": []
+  },
+  {
+   "name": "responsible operational and technical personnel",
+   "aliases": []
+  },
+  {
+   "name": "screening and custody controls",
+   "aliases": []
+  },
+  {
+   "name": "normal routing",
+   "aliases": []
+  },
+  {
+   "name": "recovery",
+   "aliases": []
+  },
+  {
+   "name": "performance",
+   "aliases": []
+  },
+  {
+   "name": "outstanding exceptions",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S023"
+   ],
+   "chunk_tokens": 416,
+   "memory_tokens": 0,
+   "prompt_tokens": 1150,
+   "input": 1356,
+   "output": 4857,
+   "reasoning": 890,
+   "cached": true
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S024",
+    "S044"
+   ],
+   "chunk_tokens": 441,
+   "memory_tokens": 0,
+   "prompt_tokens": 1168,
+   "input": 1374,
+   "output": 5973,
+   "reasoning": 1203,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S045",
+    "S065"
+   ],
+   "chunk_tokens": 433,
+   "memory_tokens": 0,
+   "prompt_tokens": 1160,
+   "input": 1366,
+   "output": 4381,
+   "reasoning": 365,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S066",
+    "S087"
+   ],
+   "chunk_tokens": 435,
+   "memory_tokens": 0,
+   "prompt_tokens": 1165,
+   "input": 1371,
+   "output": 5212,
+   "reasoning": 1552,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S088",
+    "S108"
+   ],
+   "chunk_tokens": 433,
+   "memory_tokens": 0,
+   "prompt_tokens": 1159,
+   "input": 1365,
+   "output": 4313,
+   "reasoning": 516,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S109",
+    "S131"
+   ],
+   "chunk_tokens": 421,
+   "memory_tokens": 0,
+   "prompt_tokens": 1152,
+   "input": 1358,
+   "output": 4798,
+   "reasoning": 508,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S132",
+    "S155"
+   ],
+   "chunk_tokens": 437,
+   "memory_tokens": 0,
+   "prompt_tokens": 1172,
+   "input": 1378,
+   "output": 5683,
+   "reasoning": 1906,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S156",
+    "S177"
+   ],
+   "chunk_tokens": 425,
+   "memory_tokens": 0,
+   "prompt_tokens": 1156,
+   "input": 1362,
+   "output": 5523,
+   "reasoning": 1322,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S178",
+    "S198"
+   ],
+   "chunk_tokens": 437,
+   "memory_tokens": 0,
+   "prompt_tokens": 1163,
+   "input": 1369,
+   "output": 7298,
+   "reasoning": 1549,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S199",
+    "S217"
+   ],
+   "chunk_tokens": 433,
+   "memory_tokens": 0,
+   "prompt_tokens": 1153,
+   "input": 1359,
+   "output": 5611,
+   "reasoning": 516,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S218",
+    "S237"
+   ],
+   "chunk_tokens": 451,
+   "memory_tokens": 0,
+   "prompt_tokens": 1176,
+   "input": 1382,
+   "output": 4401,
+   "reasoning": 516,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S238",
+    "S252"
+   ],
+   "chunk_tokens": 346,
+   "memory_tokens": 0,
+   "prompt_tokens": 1056,
+   "input": 1262,
+   "output": 3156,
+   "reasoning": 516,
+   "cached": false
+  }
+ ],
+ "cond_note": "C1S post-hoc: 512-token chunks, no memory",
+ "wall_s": 560.9
+}

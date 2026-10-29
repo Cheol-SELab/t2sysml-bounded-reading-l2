@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ramp Movement Board provides \"stand readiness\" to Ramp Control Lead (an information or material flow).\n\nSource sentences:\nS062: The Airport Duty Manager confirms terminal opening status, essential facility readiness, and airport service constraints that may affect the first operational waves.\nS063: The Ramp Control Lead reviews early stand readiness using information from the Ramp Movement Board, East Apron Sensor, West Apron Sensor, and handling coordination calls.\nS249: Collaborative target time management establishes a shared operating baseline for each departure by linking the Target Off Block Time, the Calculated Takeoff Time, and the key surface milestone timestamps to the same flight record.\nS250: The Regional Flow Platform creates the initial Target Off Block Time proposal from current flight intent, stand readiness, turnaround progress, and applicable airport capacity constraints.\n\nAnswer \"supported\" only if the sentences state that Ramp Movement Board produces or sends this item AND that Ramp Control Lead receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S063 says the Ramp Control Lead reviews early stand readiness using information from the Ramp Movement Board, so the board supplies stand-readiness information that the Lead uses, though it is one of several listed sources.\"}",
+ "usage": {
+  "input_tokens": 750,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 305,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 219
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.093,
+ "created": "2026-10-14T12:45:57"
+}

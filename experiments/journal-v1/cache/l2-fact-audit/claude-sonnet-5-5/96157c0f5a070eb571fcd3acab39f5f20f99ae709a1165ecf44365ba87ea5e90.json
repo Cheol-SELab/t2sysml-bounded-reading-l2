@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=Constraint checking includes slew time, sun-angle limits, power balance, thermal recovery time, recorder capacity, command load size, and required separation between incompatible activities)\n\nSource sentences (the last one is where the fact was extracted):\nS112: Juniper confirms that planned station use is compatible with network maintenance windows before the schedule is released for command preparation.\nS113: The Spacecraft Operations Team uses the Antenna Deicing Notice to assess whether planned support can proceed without adding contingency contact margin.\nS114: The Mission Planning System flags conflicts when two activities compete for the same spacecraft resource, ground station resource, or operational staffing interval.\nS115: Constraint checking includes slew time, sun-angle limits, power balance, thermal recovery time, recorder capacity, command load size, and required separation between incompatible activities.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S115 states verbatim that constraint checking includes slew time, sun-angle limits, power balance, thermal recovery time, recorder capacity, command load size, and required separation between incompatible activities, matching the action label exactly.\"}",
+ "usage": {
+  "input_tokens": 735,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.541,
+ "created": "2026-10-14T12:52:36"
+}

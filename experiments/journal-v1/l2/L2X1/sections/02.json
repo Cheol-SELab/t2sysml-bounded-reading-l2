@@ -1,0 +1,102 @@
+{
+ "sentences": [
+  {
+   "text": "The system boundary for the Meridian regional capability includes the operational processes, information services, and decision support functions needed to manage demand and capacity across the participating airport network.",
+   "tags": []
+  },
+  {
+   "text": "The initial participating airports are Meridian International Airport, Harbor East Airport, North Valley Airport, Lakeside Regional Airport, and Southport Airport.",
+   "tags": []
+  },
+  {
+   "text": "Each participating airport remains responsible for its local safety management, aerodrome certification obligations, and operational command authority.",
+   "tags": []
+  },
+  {
+   "text": "The regional system provides a shared coordination layer and does not replace statutory air traffic control, airport operator control rooms, airline operational control centers, or ground handling dispatch systems.",
+   "tags": []
+  },
+  {
+   "text": "The core regional platform is the Regional Flow Platform, introduced in this concept with the initial platform name Cedarbell for program governance and stakeholder reference.",
+   "tags": [
+    "ALIAS:E_REGIONAL_FLOW_PLATFORM"
+   ]
+  },
+  {
+   "text": "The Regional Flow Platform is the principal system-of-interest for this concept and contains the common services that support regional flow management and Airport Collaborative Decision-Making participation.",
+   "tags": []
+  },
+  {
+   "text": "Within the boundary, the Demand Prediction Service, Capacity Assessment Module, Slot Allocation Engine, Airport CDM Portal, and Digital Briefing Room support planning and collaborative assessment.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager, Ramp Movement Board, Departure Metering Service, Arrival Regulation Console, and Contingency Operations Console support tactical airport and regional coordination.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Ingest Gateway, Flight Data Exchange, Surface Surveillance Adapter, Airline Interface Adapter, and Alert Distribution Hub provide managed integration points with external systems.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse, Audit Event Ledger, Identity Access Service, Business Rules Registry, and Time Synchronization Service provide governance, security, traceability, and performance measurement capabilities.",
+   "tags": []
+  },
+  {
+   "text": "The North Runway Meter, South Runway Meter, East Apron Sensor, West Apron Sensor, Sector Load Monitor, and Gate Conflict Detector are treated as connected operational components within the defined technical boundary.",
+   "tags": []
+  },
+  {
+   "text": "Systems outside the boundary include airline reservation platforms, crew management systems, baggage reconciliation systems, airport commercial systems, national surveillance infrastructure, and aircraft avionics.",
+   "tags": []
+  },
+  {
+   "text": "Interfaces to external systems are included in the boundary only to the extent required to validate identity, receive authorized operational data, publish approved coordination information, and maintain auditable records.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager is the primary operational role for balancing demand and capacity at the regional level.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator, Network Operations Liaison, Aircraft Operator Representative, and Slot Coordinator participate to align airline intentions, schedule constraints, and slot management decisions with the shared plan.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor, Ramp Control Lead, Airport Duty Manager, Ground Handling Dispatcher, and Deicing Coordinator participate to represent local airport, tower, ramp, handling, and winter operations considerations.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer, Airspace Sector Planner, Military Airspace Liaison, and Emergency Response Coordinator participate when weather, airspace structure, special-use airspace, or emergency response conditions affect available capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward and System Support Engineer participate to maintain data quality, access control, operational continuity, and controlled configuration of the Regional Flow Platform.",
+   "tags": []
+  },
+  {
+   "text": "Airlines participating in the initial operating concept include scheduled passenger operators, cargo operators, charter operators, and based carriers that require coordinated flow management at the participating airports.",
+   "tags": []
+  },
+  {
+   "text": "Ground service providers participating in the concept include contracted handlers, fueling providers, deicing providers, towing providers, passenger transport providers, and ramp service organizations operating under airport approval.",
+   "tags": []
+  },
+  {
+   "text": "Air navigation service participation includes regional flow management personnel, tower supervisory personnel, airspace planning personnel, and any designated military coordination function that affects civil capacity planning.",
+   "tags": []
+  },
+  {
+   "text": "The shared operational picture includes Flight Intent Message status, Airport Capacity Plan assumptions, Target Off Block Time values, Calculated Takeoff Time values, Airport Acceptance Rate constraints, Common Situation Display content, Tactical Regulation Proposal status, Collaborative Decision Log entries, and Post Operations Report outputs.",
+   "tags": []
+  },
+  {
+   "text": "The system boundary explicitly covers Normal Operations, Adverse Weather Mode, Capacity Reduction State, Recovery Phase, Contingency Fallback State, and Slot Compliance State because these states drive stakeholder participation and operating procedures.",
+   "tags": []
+  },
+  {
+   "text": "Participation in the regional system requires each stakeholder organization to assign accountable representatives, maintain current contact details, follow agreed data use rules, and support post-operational review of decisions made through the Regional Flow Platform.",
+   "tags": []
+  }
+ ]
+}

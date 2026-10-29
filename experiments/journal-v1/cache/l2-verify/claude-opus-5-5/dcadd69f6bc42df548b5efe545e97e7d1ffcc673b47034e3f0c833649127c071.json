@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: West Junction Interlocking provides \"the Route Release Exception List\" to Line Traffic Controller (an information or material flow).\n\nSource sentences:\nS089: Maple verifies local track clearance evidence and records the result before authorising restoration of normal route setting after a detection anomaly.\nS090: West Junction Interlocking sends the Route Release Exception List when normal sectional release cannot be completed within the configured timing rules.\nS156: The Cyber Security Officer reviews privileged diagnostic access logs and confirms that remote connections use current credentials and approved encryption settings.\nS157: The Line Traffic Controller receives the Route Release Exception List during incident triage and uses it to check whether a release anomaly could affect service recovery decisions.\n\nAnswer \"supported\" only if the sentences state that West Junction Interlocking produces or sends this item AND that Line Traffic Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S090 states that West Junction Interlocking sends the Route Release Exception List, and S157 states that the Line Traffic Controller receives the same list and uses it during incident triage.\"}",
+ "usage": {
+  "input_tokens": 701,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 74,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 8.506,
+ "created": "2026-10-14T01:35:42"
+}

@@ -1,0 +1,48 @@
+{
+  "_comment": "L2 long-document benchmark (2026-10-13). Corpus writers alternate gpt-6-luna/gpt-5.5 with the other as probe verifier. From 2026-10-13 the user also authorized gpt-6.1-sol and claude-opus-5-5 (Anthropic) for extraction and verification. On 2026-10-14 the user banned new gpt-5.5 calls; gpt-6-tera is not accessible, so the third-model judge is claude-sonnet-5-5 (freeze amendment 1).",
+  "models": {
+    "gpt-6-luna": {
+      "api": "openai_responses",
+      "model": "gpt-6-luna",
+      "vendor": "openai",
+      "temperature": null,
+      "max_output_tokens": 32768
+    },
+    "gpt-5.5": {
+      "api": "openai_responses",
+      "model": "gpt-5.5",
+      "vendor": "openai",
+      "temperature": null,
+      "max_output_tokens": 32768,
+      "reasoning_effort": "medium"
+    },
+    "gpt-6.1-sol": {
+      "api": "openai_responses",
+      "model": "gpt-6.1-sol",
+      "vendor": "openai",
+      "temperature": null,
+      "max_output_tokens": 32768,
+      "reasoning_effort": "medium"
+    },
+    "claude-opus-5-5": {
+      "api": "anthropic",
+      "model": "claude-opus-5-5",
+      "vendor": "anthropic",
+      "temperature": null,
+      "max_output_tokens": 64000,
+      "schema_mode": "output_config",
+      "effort": "medium",
+      "stream": true
+    },
+    "claude-sonnet-5-5": {
+      "api": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "vendor": "anthropic",
+      "temperature": null,
+      "max_output_tokens": 64000,
+      "schema_mode": "output_config",
+      "effort": "medium",
+      "stream": true
+    }
+  }
+}

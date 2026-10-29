@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Caldera Incident Command Portal provides \"the Crew Staging Pin\" to Helitack Crew Leader (an information or material flow).\n\nSource sentences:\nS119: Emberhall renders the current perimeter, projected spread, resource positions, and decision annotations into a common operating picture with role-based symbology.\nS120: The Caldera Incident Command Portal produces the Crew Staging Pin from the approved map layer and assigns it an effective time, location accuracy, and incident identifier.\nS208: The Helitack Crew Leader shall be trained on use of the Crewline Mobile Tablet, field acknowledgments, location updates, and communication discipline during changing fire behavior.\nS209: During field mobilization drills, the Helitack Crew Leader shall use the staging pin to confirm that the assigned crew is positioned at the exercise location.\n\nAnswer \"supported\" only if the sentences state that Caldera Incident Command Portal produces or sends this item AND that Helitack Crew Leader receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S120 states the Caldera Incident Command Portal produces the Crew Staging Pin, and S209 states the Helitack Crew Leader uses the staging pin (a shorter name for the same item) to confirm crew positioning.\"}",
+ "usage": {
+  "input_tokens": 740,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.192,
+ "created": "2026-10-14T01:36:53"
+}

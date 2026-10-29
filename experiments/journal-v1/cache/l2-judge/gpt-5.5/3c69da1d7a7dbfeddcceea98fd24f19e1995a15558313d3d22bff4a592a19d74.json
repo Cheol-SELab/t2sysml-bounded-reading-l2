@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Paramedic Crew provides \"vehicle readiness concerns\" to Shift Commander (an information or material flow).\n\nSource sentences:\nS045: The Computer Aided Dispatch Console supports dispatch work, while operational staff remain responsible for verifying that displayed information is current.\nS046: The Shift Commander reviews readiness concerns that may require repositioning resources or adjusting local coverage plans.\nS047: The Triage Supervisor coordinates clinical prioritization with dispatch operations when demand or access conditions change.\nS048: The Paramedic Crew reports new access barriers and vehicle readiness concerns through established communications procedures.\n\nAnswer \"supported\" only if the sentences state that Paramedic Crew produces or sends this item AND that Shift Commander receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S048 states that the Paramedic Crew reports vehicle readiness concerns, and S046 states that the Shift Commander reviews readiness concerns, indicating the same item is sent and used.\"}",
+ "usage": {
+  "input_tokens": 291,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 185,
+  "output_tokens_details": {
+   "reasoning_tokens": 131
+  },
+  "total_tokens": 476
+ },
+ "attempts": 1,
+ "wall_s": 2.969,
+ "created": "2026-10-13T23:53:59"
+}

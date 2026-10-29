@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=is permitted only on controlled adjacencies)\n\nSource sentences (the last one is where the fact was extracted):\nS056: The Mission Control Center hosts the primary routing policy point, while the Network Control System maintains operational visibility of circuit state, path selection, and active maintenance windows.\nS057: The Network Control System is known operationally as Lantern and is treated as the authoritative view of wide area circuit status.\nS058: Routing policy is based on approved prefixes, authenticated neighbor relationships, and deterministic preference values rather than ad hoc route changes during contacts.\nS059: Dynamic routing is permitted only on controlled adjacencies, and static backup routes are preconfigured for antenna sites where local carrier behavior is not sufficiently predictable.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S059 states that dynamic routing is permitted only on controlled adjacencies, which matches the action label 'is permitted only on controlled adjacencies'.\"}",
+ "usage": {
+  "input_tokens": 708,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 67,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.033,
+ "created": "2026-10-14T12:51:44"
+}

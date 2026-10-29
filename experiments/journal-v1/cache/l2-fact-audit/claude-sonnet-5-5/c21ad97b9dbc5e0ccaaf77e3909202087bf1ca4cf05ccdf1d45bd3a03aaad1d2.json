@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: succession(before=instruction is repeated back, after=action is treated as accepted)\n\nSource sentences (the last one is where the fact was extracted):\nS114: The Wayside Radio Access Network is monitored for coverage alarms, handover irregularities, and capacity conditions that could affect the stability of train control communications.\nS115: The Safety Data Communication Network is monitored as a safety-related bearer, and persistent communication faults are escalated before additional regulating actions are attempted in the affected area.\nS116: For incident management, the Line Traffic Controller records the initial event time, train identifier, location, passenger impact, and the first safe operating instruction issued.\nS117: The Voice Dispatch Console is used when direct verbal instruction is required, and the instruction is repeated back by the Revenue Train Operator before the action is treated as accepted.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S117 states the instruction is repeated back by the Revenue Train Operator before the action is treated as accepted, so repeat-back precedes acceptance.\"}",
+ "usage": {
+  "input_tokens": 725,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.83,
+ "created": "2026-10-14T12:52:15"
+}

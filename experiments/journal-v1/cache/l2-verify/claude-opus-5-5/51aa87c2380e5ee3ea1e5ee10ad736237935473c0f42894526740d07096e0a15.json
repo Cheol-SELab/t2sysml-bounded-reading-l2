@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Port Agent provides \"the Berth Slot Confirmation\" to Marine Coordinator (an information or material flow).\n\nSource sentences:\nS323: The Weather Analyst uses the Wave Burst Record to assess whether the planned access period remains suitable.\nS324: The Port Agent issues the Berth Slot Confirmation for the planned work period.\nS472: The Weather Analyst produces the Visibility Confidence Note to summarize confidence in visibility conditions for near-term port and offshore planning.\nS473: The Marine Coordinator uses the Berth Slot Confirmation to align an approved vessel arrival with the assigned berth window.\n\nAnswer \"supported\" only if the sentences state that Port Agent produces or sends this item AND that Marine Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S324 states the Port Agent issues the Berth Slot Confirmation, and S473 states the Marine Coordinator uses that same Berth Slot Confirmation, which together give the flow from Port Agent to Marine Coordinator.\"}",
+ "usage": {
+  "input_tokens": 666,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 94,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.953,
+ "created": "2026-10-14T12:53:24"
+}

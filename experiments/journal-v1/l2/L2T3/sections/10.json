@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Deployment governance for the Caldera Wildfire Detection and Suppression Support System shall be managed as a staged release process that follows completion of seasonal readiness activities.",
+   "tags": []
+  },
+  {
+   "text": "The deployment governance board shall include operational leadership, maintenance representation, information security representation, and designated representatives for detection, aviation, ground crew, and county coordination functions.",
+   "tags": []
+  },
+  {
+   "text": "The board shall approve each seasonal rollout only after reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period.",
+   "tags": []
+  },
+  {
+   "text": "A release candidate shall not enter operational service until the Caldera Incident Command Portal, Sentinel Fireline Analytics Engine, and Smoke Classifier Module complete documented functional testing against the approved mission scenarios.",
+   "tags": []
+  },
+  {
+   "text": "Acceptance criteria shall require the North Lookout Camera Mast, South Lookout Camera Mast, and MesoWest Weather Fusion Node to meet agreed availability, timing, and data-quality thresholds during the readiness window.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Tasking Service and Horizon Ridge Drone Dock shall be accepted only after controlled field validation shows that task execution, abort behavior, and status reporting remain stable under expected seasonal conditions.",
+   "tags": []
+  },
+  {
+   "text": "The Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump shall pass integration checks that verify operator controls, fault handling, and audit capture before activation.",
+   "tags": []
+  },
+  {
+   "text": "The VHF Radio Gateway Repeater and Crewline Mobile Tablet shall be validated for coverage, message persistence, authentication behavior, and degraded-network operation before release approval.",
+   "tags": []
+  },
+  {
+   "text": "Redtail shall confirm that deployment readiness evidence is sufficient before air operations functionality is enabled for the season.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "text": "The Tanker Base Manager shall use the Runway Release Note during acceptance review to verify that tanker-base operating constraints are documented before seasonal activation.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "text": "The County Emergency Liaison shall use the Suppression Drop Receipt during post-incident reconciliation to verify that reported suppression activity can be traced to county situation reporting.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "text": "Acceptance of the Confirmed Ignition State workflow shall require traceable evidence that operator acknowledgement, escalation timing, and command visibility meet the approved concept of operations.",
+   "tags": []
+  },
+  {
+   "text": "Acceptance of the Airspace Restricted State workflow shall require evidence that operational users can recognize restrictions, apply required controls, and recover normal coordination when restrictions are lifted.",
+   "tags": []
+  },
+  {
+   "text": "Any waiver to acceptance criteria shall identify the operational impact, compensating procedure, expiration date, and accountable owner before the board may authorize limited use.",
+   "tags": []
+  },
+  {
+   "text": "After-action reviews shall be held after major incidents, readiness exercises, significant false alarms, missed detections, and any event that exposes a gap in operational coordination.",
+   "tags": []
+  },
+  {
+   "text": "Each after-action review shall reconstruct the timeline from system logs, user accounts, communications records, and maintenance notes without assigning blame to individual operators.",
+   "tags": []
+  },
+  {
+   "text": "Review facilitators shall document what was expected to happen, what actually happened, why differences occurred, and which corrective actions are necessary before the next readiness cycle.",
+   "tags": []
+  },
+  {
+   "text": "Corrective actions shall be entered into a controlled improvement backlog with assigned ownership, target completion dates, verification methods, and linkage to the originating event.",
+   "tags": []
+  },
+  {
+   "text": "Data stewardship shall define retention, access control, quality review, and disposition rules for operational records, sensor data, model outputs, configuration records, and user activity records.",
+   "tags": []
+  },
+  {
+   "text": "Operational data used for model evaluation shall be protected from unauthorized alteration and shall preserve enough context to support later engineering review and regulatory inquiry.",
+   "tags": []
+  },
+  {
+   "text": "Changes to the Sentinel Fireline Analytics Engine or Smoke Classifier Module shall be evaluated with representative seasonal data before deployment to confirm that detection performance improves without unacceptable increases in false alerts.",
+   "tags": []
+  },
+  {
+   "text": "Configuration changes to field equipment shall be versioned, reviewed, and tested in a nonoperational environment before being promoted into the seasonal baseline.",
+   "tags": []
+  },
+  {
+   "text": "At the end of each fire season, the governance board shall compare system performance, operational workload, maintenance burden, and user feedback against the acceptance criteria approved for that season.",
+   "tags": []
+  },
+  {
+   "text": "The resulting improvement plan shall define which procedures, training materials, interfaces, algorithms, and support arrangements will be revised before the next seasonal readiness campaign begins.",
+   "tags": []
+  }
+ ]
+}

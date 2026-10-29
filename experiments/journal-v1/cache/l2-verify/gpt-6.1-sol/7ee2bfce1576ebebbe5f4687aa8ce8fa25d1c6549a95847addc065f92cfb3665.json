@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Induction Tray Conveyor provides \"bags\" to Secondary Inspection Chute (an information or material flow).\n\nSource sentences:\nS005: The Transfer Bag Feeder provides a separate induction interface for eligible transfer baggage.\nS006: The Induction Tray Conveyor presents bags in a controlled manner to the screening and sorting equipment.\nS053: The Baggage Control System applies the approved screening profile to each bag using its tag data and the current operating configuration.\nS054: The Induction Tray Conveyor presents bags to the screening equipment at a controlled spacing that supports reliable image capture.\nS092: When a planned lane is unavailable, the Baggage Control System selects an approved alternate route only if screening status and flight timing remain valid.\nS093: Bags with an unresolved destination or a route outside their handling limits are diverted to the Secondary Inspection Chute.\n\nAnswer \"supported\" only if the sentences state that Induction Tray Conveyor produces or sends this item AND that Secondary Inspection Chute receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S006 and S054 state that the Induction Tray Conveyor sends bags onward, and S093 states that bags are diverted to the Secondary Inspection Chute, establishing the same material item at both elements.\"}",
+ "usage": {
+  "input_tokens": 349,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 166,
+  "output_tokens_details": {
+   "reasoning_tokens": 107
+  },
+  "total_tokens": 515
+ },
+ "attempts": 1,
+ "wall_s": 5.962,
+ "created": "2026-10-14T12:40:28"
+}

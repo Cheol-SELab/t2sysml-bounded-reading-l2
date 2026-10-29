@@ -1,0 +1,102 @@
+{
+ "sentences": [
+  {
+   "text": "The system treats passenger disruption information as a secondary planning signal that can refine, but not replace, capacity and safety constraints in traffic flow decisions.",
+   "tags": []
+  },
+  {
+   "text": "Its purpose in this area is to help the Regional Flow Manager understand where a small metering adjustment may reduce downstream disruption without degrading the Airport Capacity Plan.",
+   "tags": []
+  },
+  {
+   "text": "Airline Operations Coordinator sends the Passenger Misconnect Count.",
+   "tags": [
+    "F20:intro"
+   ]
+  },
+  {
+   "text": "The Airline Interface Adapter validates the timeliness, flight association, and airline ownership of connection-risk data before it is made available for operational use.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward defines the acceptable aggregation level so that the Regional Flow Platform does not expose passenger names, booking references, or protected itinerary details.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service combines connection-risk indicators with aircraft readiness, scheduled bank structure, and forecast arrival variability to estimate the sensitivity of selected departures.",
+   "tags": []
+  },
+  {
+   "text": "These estimates are advisory and do not create an entitlement for a flight to receive a favorable Calculated Takeoff Time.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine continues to apply the approved sequencing policy, runway capacity, airspace constraints, and published Ground Delay Program parameters as controlling inputs.",
+   "tags": []
+  },
+  {
+   "text": "When several flights have similar operational priority, connection-risk information may be used as a tie breaker if the Business Rules Registry permits that use for the active operating state.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service can therefore recommend a minor hold, release, or resequencing action only when the change remains inside the available runway and surface movement envelope.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor retains authority over tactical runway sequencing and may reject any advisory that would impair safe separation, wake spacing, or local controller workload.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead uses the Ramp Movement Board to determine whether a proposed metering adjustment can be supported by stand availability, pushback feasibility, and taxi route status.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager uses the Airport CDM Portal to see whether airline recovery actions are concentrated in one bank or distributed across the operating day.",
+   "tags": []
+  },
+  {
+   "text": "Typical airline recovery actions include flight retiming, aircraft substitution, passenger protection on later services, and selective holding of departures already inside normal operational tolerance.",
+   "tags": []
+  },
+  {
+   "text": "The system records these actions as operational context rather than as passenger service tasks assigned to the airport flow management process.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager may consider a recovery action credible only when it is aligned with a valid Target Off Block Time, crew availability status, and confirmed aircraft readiness.",
+   "tags": []
+  },
+  {
+   "text": "If an airline indicates a recovery plan that depends on unrealistic turnaround timing, the Demand Prediction Service discounts the associated connection benefit.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, passenger disruption indicators are normally given less influence because the Capacity Assessment Module and Sector Load Monitor have reduced flexibility to absorb discretionary changes.",
+   "tags": []
+  },
+  {
+   "text": "During Recovery Phase, the same indicators can have greater practical value because metering margins may exist after the primary capacity constraint has begun to clear.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console may show inbound connection pressure as context for arrival rate discussions, but it does not convert passenger handling needs into a separate arrival priority scheme.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display presents passenger disruption cues with clear labeling so that participants understand they are decision-support indicators, not commands.",
+   "tags": []
+  },
+  {
+   "text": "Every accepted use of connection-risk information in a metering decision is recorded in the Collaborative Decision Log with the responsible actor, rationale, and affected flight interval.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse compares later delay outcomes with the logged rationale to determine whether the advisory use of passenger disruption data improved recovery performance.",
+   "tags": []
+  },
+  {
+   "text": "This approach keeps the primary system function focused on safe, efficient, and transparent traffic flow management while still allowing airline recovery information to inform proportionate metering choices.",
+   "tags": []
+  }
+ ]
+}

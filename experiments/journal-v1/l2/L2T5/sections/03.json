@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "Following a storm-related recovery, control of coagulation and filtration returns to normal only after raw-water quality trends support stable chemical feed and predictable filter loading.",
+   "tags": []
+  },
+  {
+   "text": "The Chief Operator establishes the starting coagulant dose from recent turbidity, color, alkalinity, pH, temperature, and bench-scale treatment observations.",
+   "tags": []
+  },
+  {
+   "text": "The Coagulant Dosing Skid, known locally as Marigold, meters the primary coagulant under automatic control during routine operation.",
+   "tags": [
+    "ALIAS:E_COAGULANT_DOSING_SKID"
+   ]
+  },
+  {
+   "text": "The Coagulant Dosing Skid sends the Alum Batch Ticket when a new chemical lot is placed into service.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "Automatic dose trimming is based on analyzer feedback, operator-entered targets, and verified process response rather than on a single instrument value.",
+   "tags": []
+  },
+  {
+   "text": "When raw-water turbidity changes quickly, the Duty Engineer may authorize a temporary dose adjustment while the Chief Operator confirms the sustained control point.",
+   "tags": []
+  },
+  {
+   "text": "The North Filter Gallery, known locally as Cobalt, contains a bank of gravity filters operated from the plant control system.",
+   "tags": [
+    "ALIAS:E_NORTH_FILTER_GALLERY"
+   ]
+  },
+  {
+   "text": "North Filter Gallery records individual filter effluent turbidity and headloss at the end of each control scan.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "text": "South Filter Gallery sends the Filter Run Exception Note when a filter run ends outside the normal operating limits.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "Filter run management is based on run time, terminal headloss, effluent turbidity, prior backwash quality, and the current condition of upstream treatment.",
+   "tags": []
+  },
+  {
+   "text": "A filter is not returned to service after washing until rinse-to-waste quality meets the operating target and the turbidity trend is stable.",
+   "tags": []
+  },
+  {
+   "text": "If a filter shows an unusual turbidity rise, operating staff compare the analyzer trend with nearby sample results before declaring a process upset.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Technician provides confirmation testing when online analyzers disagree with observed filter performance or with routine process samples.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Sample Receiving Bench is used for custody-controlled receipt of compliance and process samples collected from treatment locations.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Historian Server retains dose changes, analyzer values, filter status changes, wash sequences, and operator comments for later review.",
+   "tags": []
+  },
+  {
+   "text": "Manual override is permitted for chemical feed, valve sequencing, and filter start or stop actions only when automatic control is unavailable or inappropriate for the condition.",
+   "tags": []
+  },
+  {
+   "text": "An operator placing equipment in manual control is expected to state the reason, monitor the affected process variable closely, and restore automatic control as soon as practicable.",
+   "tags": []
+  },
+  {
+   "text": "Manual chemical feed changes are made in small increments unless an immediate water-quality risk requires a larger correction approved by the Chief Operator.",
+   "tags": []
+  },
+  {
+   "text": "If analyzer feedback is lost, operating staff hold the last verified safe dose or revert to an approved fixed dose while collecting additional grab samples.",
+   "tags": []
+  },
+  {
+   "text": "A sustained loss of coagulation effectiveness is treated as a process deviation and prompts review of chemical strength, feed pump status, mixing energy, and raw-water characteristics.",
+   "tags": []
+  },
+  {
+   "text": "The Chlorine Contact Basin is considered in the response because excessive particulate carryover can affect downstream disinfectant demand and contact performance.",
+   "tags": []
+  },
+  {
+   "text": "The Clearwell Level Controller remains coordinated with filter production so that filter shutdowns, backwashes, and return-to-service decisions do not create avoidable storage swings.",
+   "tags": []
+  },
+  {
+   "text": "When filter capacity is reduced, the Distribution Dispatcher is advised of expected production limits before changes affect the High Service Pump Header.",
+   "tags": []
+  },
+  {
+   "text": "After any significant deviation, the Chief Operator reviews trends from the affected operating period and confirms that corrective actions restored stable clarified and filtered water quality.",
+   "tags": []
+  }
+ ]
+}

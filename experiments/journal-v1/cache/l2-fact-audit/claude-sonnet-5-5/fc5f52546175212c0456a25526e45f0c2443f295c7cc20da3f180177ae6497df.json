@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Duty Engineer, label=reviews repeated abnormal wash recovery trends)\n\nSource sentences (the last one is where the fact was extracted):\nS152: The SCADA Historian Server records recovery volume, tank level, turbidity trend, and return timing for each backwash recovery event.\nS153: The Chief Operator uses the Filter Run Exception Note to determine whether a shortened run, high headloss, or abnormal turbidity response requires follow-up before the next wash sequence.\nS154: When recovery water quality is outside the operating band, the Chief Operator holds the return path out of service and keeps the Backwash Recovery Tank in a settle-and-decant condition.\nS155: The Duty Engineer reviews repeated abnormal wash recovery trends to determine whether the condition is hydraulic, chemical, instrumentation related, or caused by rapid source water change.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S155 states directly that the Duty Engineer reviews repeated abnormal wash recovery trends, so both the performer and the action label match.\"}",
+ "usage": {
+  "input_tokens": 745,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 61,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.079,
+ "created": "2026-10-14T12:52:05"
+}

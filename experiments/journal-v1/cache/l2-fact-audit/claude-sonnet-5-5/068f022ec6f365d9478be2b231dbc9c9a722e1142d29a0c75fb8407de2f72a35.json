@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=plant pumping decisions, label=match field conditions)\n\nSource sentences (the last one is where the fact was extracted):\nS141: If a high-service pump trips, the remaining available pumps are evaluated automatically against the current pressure setpoint before another unit is started.\nS142: The North Distribution Pressure Station and South Distribution Pressure Station receive pressure support through coordinated setpoints that reflect system demand and storage conditions.\nS143: The Distribution Dispatcher is identified by the alias Falcon during pressure coordination calls with plant staff.\nS144: The Distribution Dispatcher communicates expected demand changes, main break impacts, and pressure complaints so that plant pumping decisions match field conditions.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S144 says the dispatcher communicates information so that plant pumping decisions match field conditions, so 'plant pumping decisions' performing 'match field conditions' is directly implied.\"}",
+ "usage": {
+  "input_tokens": 694,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 75,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.516,
+ "created": "2026-10-14T12:51:48"
+}

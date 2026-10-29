@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Computer Aided Dispatch Console provides \"unit availability\" to Ambulance Coordination Platform (an information or material flow).\n\nSource sentences:\nS090: Computer Aided Dispatch Console presents the current incident details and assigned priority to authorized dispatch staff.\nS091: Ambulance Coordination Platform uses the recorded priority alongside unit availability and operational constraints when coordinating response resources.\nS102: The Ambulance Coordination Platform presents units whose reported status and capabilities match the incident requirements.\nS103: The Computer Aided Dispatch Console displays estimated travel times, unit availability, and relevant access constraints.\n\nAnswer \"supported\" only if the sentences state that Computer Aided Dispatch Console produces or sends this item AND that Ambulance Coordination Platform receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The sentences state that the Ambulance Coordination Platform uses unit availability and that the Computer Aided Dispatch Console displays unit availability, but they do not state that the console sends or provides it to the platform.\"}",
+ "usage": {
+  "input_tokens": 292,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 218,
+  "output_tokens_details": {
+   "reasoning_tokens": 159
+  },
+  "total_tokens": 510
+ },
+ "attempts": 1,
+ "wall_s": 4.135,
+ "created": "2026-10-14T00:08:02"
+}

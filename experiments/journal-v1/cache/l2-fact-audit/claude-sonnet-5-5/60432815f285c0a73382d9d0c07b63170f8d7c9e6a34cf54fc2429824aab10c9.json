@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: state(owner=incident record, label=Confirmed Ignition State)\n\nSource sentences (the last one is where the fact was extracted):\nS067: Confirmation requires at least one persistent smoke indication or thermal cue, plus either independent sensor corroboration, field report corroboration, or a direct human visual judgment recorded by an authorized reviewer.\nS068: A suspected ignition remains in triage when evidence is inconsistent, stale, or limited to a single low-confidence source.\nS069: The Caldera Incident Command Portal records the reason for each triage decision so later operators can understand whether the case was advanced, held, or dismissed.\nS070: When the confirmation rule is satisfied, the incident record is advanced to the Confirmed Ignition State and becomes available for suppression planning.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S070 states the incident record is advanced to the Confirmed Ignition State, so a state with that label belonging to the incident record is directly stated.\"}",
+ "usage": {
+  "input_tokens": 711,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 62,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.793,
+ "created": "2026-10-14T12:52:04"
+}

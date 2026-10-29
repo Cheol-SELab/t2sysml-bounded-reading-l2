@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Network Control System, target=Telemetry Ingest Service, payload=contact status and data-flow indicators)\n\nSource sentences (the last one is where the fact was extracted):\nS045: Weather constraints are assessed using local forecasts and real-time measurements for wind, precipitation, temperature, lightning risk, and atmospheric attenuation.\nS046: X-band contacts may be downgraded or moved when heavy precipitation is expected to reduce the link margin below the approved operating threshold.\nS047: S-band contacts are normally more tolerant of weather, but high winds or unsafe outdoor conditions can still make an antenna unavailable for service.\nS048: The Telemetry Ingest Service receives contact status and data-flow indicators so that downstream processing can distinguish planned gaps from station-side interruptions.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S048 supports the Telemetry Ingest Service receiving contact status and data-flow indicators, but it does not name the sender, so the Network Control System as source is unsupported (and no alias declaration is given).\"}",
+ "usage": {
+  "input_tokens": 725,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 87,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.706,
+ "created": "2026-10-14T12:52:13"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: MesoWest Weather Fusion Node provides \"the Wind Shift Bulletin\" to Air Attack Supervisor (an information or material flow).\n\nSource sentences:\nS042: MesoWest Weather Fusion Node ingests station observations, forecast grids, and configured quality checks to provide a consistent weather picture for the operating area.\nS043: MesoWest Weather Fusion Node sends the Wind Shift Bulletin when its configured weather rules identify a significant change in local wind behavior.\nS135: The Smoke Classifier Module remains a supporting source during suppression planning and is not treated as the sole basis for aircraft commitment.\nS136: The Air Attack Supervisor uses the Wind Shift Bulletin to reassess aircraft sequencing, holding areas, and drop approach direction.\n\nAnswer \"supported\" only if the sentences state that MesoWest Weather Fusion Node produces or sends this item AND that Air Attack Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S043 says the MesoWest Weather Fusion Node sends the Wind Shift Bulletin, and S136 says the Air Attack Supervisor uses that same bulletin, so the source and receiver match the candidate relation.\"}",
+ "usage": {
+  "input_tokens": 732,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.379,
+ "created": "2026-10-14T12:36:07"
+}

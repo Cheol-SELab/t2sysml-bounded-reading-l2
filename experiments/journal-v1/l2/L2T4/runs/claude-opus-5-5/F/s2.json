@@ -1,0 +1,1782 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Alder Creek Electrical Distribution Substation",
+   "label": "supplies distribution circuits"
+  },
+  {
+   "unit_id": "S001",
+   "type": "composition",
+   "whole": "Alder Creek Electrical Distribution Substation",
+   "parts": [
+    "transformer bays",
+    "feeder bays"
+   ]
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "performs bay-level sequencing, status evaluation, and control permissive checks"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "produces a Bay Status Digest"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "North Bay Controller",
+   "label": "provide bay-specific automation"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "South Bay Controller",
+   "label": "provide bay-specific automation"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Feeder Protection Relay",
+   "label": "detects feeder faults"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Feeder Protection Relay",
+   "label": "initiates protection actions"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Feeder Protection Relay",
+   "label": "produces a Relay Diagnostic Note"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Breaker Control Unit",
+   "label": "executes authorized breaker operations"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Breaker Control Unit",
+   "label": "enforces its local electrical and mechanical interlocks"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "requests breaker operations"
+  },
+  {
+   "unit_id": "S012",
+   "type": "flow",
+   "source": "Bay Automation Controller",
+   "target": "Breaker Control Unit",
+   "payload": "breaker operation requests"
+  },
+  {
+   "unit_id": "S013",
+   "type": "state",
+   "owner": "equipment",
+   "label": "local operation"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "provides the station-level operating interface and supervisory coordination"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "defines the communications boundary"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "provides the station with a reference for time synchronization"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "retains operational event information"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Engineering Workstation",
+   "label": "supports authorized configuration and maintenance activities"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Station DC System",
+   "label": "supplies control power to automation and protection equipment"
+  },
+  {
+   "unit_id": "S021",
+   "type": "flow",
+   "source": "Station DC System",
+   "target": "automation and protection equipment",
+   "payload": "control power"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "directs routine station operation"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "verifies that commanded equipment states are appropriate"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "maintains protection settings"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "evaluates relay performance"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "performs field checks and equipment work"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "presents available station and bay indications"
+  },
+  {
+   "unit_id": "S027",
+   "type": "flow",
+   "source": "Station Supervisory Control System",
+   "payload": "station and bay indications"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "show operating conditions and communication quality"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "carries supervisory communications"
+  },
+  {
+   "unit_id": "S029",
+   "type": "flow",
+   "source": "Station Gateway",
+   "target": "remote operations interfaces",
+   "payload": "supervisory communications"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "uses the supervisory displays to assess station conditions"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "coordinate operating actions"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "confirm that indications are current"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "acquires a reference from supported satellite timing signals"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "distributes time to station equipment"
+  },
+  {
+   "unit_id": "S039",
+   "type": "flow",
+   "source": "Satellite Time Receiver",
+   "target": "station equipment",
+   "payload": "time"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "produces the Clock Drift Snapshot"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Station DC System",
+   "label": "supplies operating power to station automation equipment"
+  },
+  {
+   "unit_id": "S046",
+   "type": "flow",
+   "source": "Station DC System",
+   "target": "station automation equipment",
+   "payload": "operating power"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "produces the Alarm Acknowledgement Slip"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "oversees operational use of the supervisory system and escalation of unresolved availability concerns"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "Feeder Protection Relay",
+   "label": "provides local protection for its assigned feeder"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "develops setting changes"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "documents the engineering basis and expected operational effect"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Engineering Workstation",
+   "label": "maintains the working configuration under revision control"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "Engineering Workstation",
+   "label": "produces the Settings Review Receipt"
+  },
+  {
+   "unit_id": "S057",
+   "type": "succession",
+   "before": "settings review is completed",
+   "after": "produces the Settings Review Receipt"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "label": "receives a unique revision identifier"
+  },
+  {
+   "unit_id": "S058",
+   "type": "succession",
+   "before": "receives a unique revision identifier",
+   "after": "review begins"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "verifies that proposed values agree with the approved coordination objectives"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "second qualified reviewer",
+   "label": "checks calculations, logic changes, and device applicability"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Engineering Workstation",
+   "label": "retains the approved configuration and its revision history"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "records the approval status"
+  },
+  {
+   "unit_id": "S066",
+   "type": "succession",
+   "before": "records the approval status",
+   "after": "setting change is released for implementation"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "label": "checked against the intended device model and firmware version"
+  },
+  {
+   "unit_id": "S067",
+   "type": "succession",
+   "before": "checked against the intended device model and firmware version",
+   "after": "deployment"
+  },
+  {
+   "unit_id": "S068",
+   "type": "requirement",
+   "subject": "Feeder Protection Relay",
+   "text": "A controlled outage or other approved work window is required when implementation could affect feeder protection."
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "follows the authorized work instructions"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "label": "implemented values are compared with the approved configuration"
+  },
+  {
+   "unit_id": "S070",
+   "type": "succession",
+   "before": "installation",
+   "after": "implemented values are compared with the approved configuration"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "label": "functionally checked to confirm the intended protection behavior"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "ensures that engineering changes follow the established authorization and operational control process"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "performs inspections, maintenance, and switching support"
+  },
+  {
+   "unit_id": "S076",
+   "type": "succession",
+   "before": "required work authorization and site entry controls are confirmed",
+   "after": "Field access begins"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "coordinates operational access with the Switching Desk Coordinator"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "confirms that the requested work is consistent with current operating conditions and approved procedures"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "reviews the work scope, access route, known hazards, and communication arrangements"
+  },
+  {
+   "unit_id": "S079",
+   "type": "succession",
+   "before": "reviews the work scope, access route, known hazards, and communication arrangements",
+   "after": "entering the yard"
+  },
+  {
+   "unit_id": "S081",
+   "type": "succession",
+   "before": "Work boundaries are established",
+   "after": "tools or test equipment are brought near electrical apparatus"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "confirms the applicable switching and clearance arrangements"
+  },
+  {
+   "unit_id": "S082",
+   "type": "succession",
+   "before": "confirms the applicable switching and clearance arrangements",
+   "after": "work begins"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "suspend work"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "verifies equipment identity at the point of work"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "reports uncertain equipment conditions"
+  },
+  {
+   "unit_id": "S088",
+   "type": "flow",
+   "source": "Substation Field Crew",
+   "payload": "uncertain equipment conditions"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "completes and sends the Breaker Inspection Tag"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "recording the observed breaker condition and inspection time"
+  },
+  {
+   "unit_id": "S089",
+   "type": "succession",
+   "before": "recording the observed breaker condition and inspection time",
+   "after": "completes and sends the Breaker Inspection Tag"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "presents available equipment indications for operator review"
+  },
+  {
+   "unit_id": "S090",
+   "type": "state",
+   "owner": "Station Supervisory Control System",
+   "label": "normal operation"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "applies configured permissives and interlocks"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "evaluates reported field conditions"
+  },
+  {
+   "unit_id": "S093",
+   "type": "state",
+   "owner": "Bay Automation Controller",
+   "label": "automated operation"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "stops affected work"
+  },
+  {
+   "unit_id": "S095",
+   "type": "succession",
+   "before": "stops affected work",
+   "after": "follows the approved hold and escalation procedure"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "confirms the operational handback arrangements"
+  },
+  {
+   "unit_id": "S097",
+   "type": "succession",
+   "before": "confirms the operational handback arrangements",
+   "after": "equipment is returned to service"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "preserves event records in their received form"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "preserves original event ordering"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "marks records whose time quality or sequence continuity is uncertain"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "supports station time alignment"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "retains configuration and access history"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "presents current operating indications"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "reviews archived event sequences"
+  },
+  {
+   "unit_id": "S107",
+   "type": "flow",
+   "source": "Sequence Event Archive",
+   "target": "Control Room Operator",
+   "payload": "archived event sequences"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "compares event times and relay indications"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "uses the Relay Diagnostic Note"
+  },
+  {
+   "unit_id": "S109",
+   "type": "flow",
+   "source": "Feeder Protection Relay",
+   "target": "Protection Relay Engineer",
+   "payload": "Relay Diagnostic Note"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Engineering Workstation",
+   "label": "provides approved tools for searching, filtering, and exporting event records"
+  },
+  {
+   "unit_id": "S111",
+   "type": "requirement",
+   "subject": "Engineering Workstation",
+   "text": "Review queries should be bounded by station, equipment identifier, and time interval to keep results reproducible."
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "retains records"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "label": "Archive health is checked"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "Recovery testing verifies that retained records remain readable"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Alder Creek Electrical Distribution Substation",
+   "label": "preserves an additional protected copy of essential event evidence"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Station DC System",
+   "label": "produces a Battery Load Test Record"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "timestamps locally generated state changes"
+  },
+  {
+   "unit_id": "S122",
+   "type": "succession",
+   "before": "confirms operational handback",
+   "after": "evidence from the completed work remains available for authorized engineering review"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "maintains the station-wide switching plan"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "coordinates work across the two bay boundaries"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "submits switching requests"
+  },
+  {
+   "unit_id": "S125",
+   "type": "flow",
+   "source": "Control Room Operator",
+   "target": "Switching Desk Coordinator",
+   "payload": "switching requests"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "checks each request for conflicts"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "resolves priority conflicts"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "confirms the operational authority for exceptional switching conditions"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "North Bay Controller",
+   "label": "manages control and interlocking functions assigned to the north bay"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "North Bay Controller",
+   "label": "blocks a close command"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "South Bay Controller",
+   "label": "manages the corresponding control and interlocking functions assigned to the south bay"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "presents bay control status"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Breaker Control Unit",
+   "label": "executes permitted breaker commands"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "North Protection Panel",
+   "label": "supports protection functions for the north-side equipment"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Transformer Protection Panel",
+   "label": "retains its protection authority"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "uses the status digest to review current station operating conditions"
+  },
+  {
+   "unit_id": "S139",
+   "type": "flow",
+   "source": "Bay Automation Controller",
+   "target": "Station Supervisory Control System",
+   "payload": "Bay Status Digest"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "receives the Clock Drift Snapshot"
+  },
+  {
+   "unit_id": "S140",
+   "type": "flow",
+   "source": "Satellite Time Receiver",
+   "target": "Sequence Event Archive",
+   "payload": "Clock Drift Snapshot"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "produces the Isolation Boundary Card"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "produces the Protocol Retry Summary"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "reviews protection coordination questions"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "provides the station time reference"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "confirms device identity and local conditions"
+  },
+  {
+   "unit_id": "S145",
+   "type": "succession",
+   "before": "confirms device identity and local conditions",
+   "after": "carrying out an authorized operation"
+  },
+  {
+   "unit_id": "S146",
+   "type": "succession",
+   "before": "confirms operational handback",
+   "after": "state-change evidence remains available for authorized engineering review"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "reviews the alarm priority, source, time, and associated bay indications"
+  },
+  {
+   "unit_id": "S148",
+   "type": "succession",
+   "before": "reviews the alarm priority, source, time, and associated bay indications",
+   "after": "deciding on a response"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "distinguishes a new alarm from a standing condition"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "treats the condition as requiring prompt investigation"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "acknowledges alarms"
+  },
+  {
+   "unit_id": "S151",
+   "type": "succession",
+   "before": "reviewing the indication",
+   "after": "acknowledges alarms"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "uses the acknowledgement slip to record the alarm response"
+  },
+  {
+   "unit_id": "S152",
+   "type": "flow",
+   "source": "Station Supervisory Control System",
+   "target": "Control Room Operator",
+   "payload": "Alarm Acknowledgement Slip"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "checks available device status and sequence information"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "provides bay-level status indications"
+  },
+  {
+   "unit_id": "S155",
+   "type": "flow",
+   "source": "Bay Automation Controller",
+   "target": "Control Room Operator",
+   "payload": "bay-level status indications"
+  },
+  {
+   "unit_id": "S156",
+   "type": "requirement",
+   "subject": "Station Supervisory Control System",
+   "text": "Glasswing shall retain alarm state and event information for operator review after an indication has cleared."
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "provides time-ordered evidence"
+  },
+  {
+   "unit_id": "S158",
+   "type": "composition",
+   "whole": "North Protection Panel",
+   "parts": [
+    "protection equipment"
+   ]
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "uses indications from the North Protection Panel to assess feeder protection operations"
+  },
+  {
+   "unit_id": "S159",
+   "type": "flow",
+   "source": "North Protection Panel",
+   "target": "Control Room Operator",
+   "payload": "indications"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Transformer Protection Panel",
+   "label": "provides local indication of transformer protection operation"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "considers the condition of the Station DC System"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "supports investigation"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "produces the Clearance Handoff Memo"
+  },
+  {
+   "unit_id": "S169",
+   "type": "succession",
+   "before": "confirms operational handback",
+   "after": "state-change evidence is considered available for authorized engineering review"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "verifies that alarm status, equipment status, and recorded evidence are consistent"
+  },
+  {
+   "unit_id": "S170",
+   "type": "succession",
+   "before": "verifies that alarm status, equipment status, and recorded evidence are consistent",
+   "after": "closing the response"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "brokers authorized station traffic across control-room and bay networks"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "rejects malformed, stale, or unauthorized requests"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "records each rejection"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "presents available controls and indications"
+  },
+  {
+   "unit_id": "S174",
+   "type": "flow",
+   "source": "Station Supervisory Control System",
+   "target": "authorized operating personnel",
+   "payload": "controls and indications"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "issues state-changing requests"
+  },
+  {
+   "unit_id": "S175",
+   "type": "flow",
+   "source": "Control Room Operator",
+   "target": "Station Supervisory Control System",
+   "payload": "state-changing requests"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "validates each received request"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "issuing bay-level outputs"
+  },
+  {
+   "unit_id": "S176",
+   "type": "succession",
+   "before": "validates each received request",
+   "after": "issuing bay-level outputs"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Breaker Control Unit",
+   "label": "applies accepted output commands"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Breaker Control Unit",
+   "label": "returns the resulting position and circuit-health indications"
+  },
+  {
+   "unit_id": "S177",
+   "type": "flow",
+   "source": "Bay Automation Controller",
+   "target": "Breaker Control Unit",
+   "payload": "output commands"
+  },
+  {
+   "unit_id": "S177",
+   "type": "flow",
+   "source": "Breaker Control Unit",
+   "target": "Bay Automation Controller",
+   "payload": "position and circuit-health indications"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "compares returned indications with the requested state"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "identifies incomplete or contradictory operation"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "uses the inspection tag to associate the applicable equipment context"
+  },
+  {
+   "unit_id": "S179",
+   "type": "flow",
+   "source": "Substation Field Crew",
+   "target": "Bay Automation Controller",
+   "payload": "Breaker Inspection Tag"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "carries updated indications through the station interface"
+  },
+  {
+   "unit_id": "S180",
+   "type": "flow",
+   "source": "Station Gateway",
+   "payload": "updated indications"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "displays indication quality and stale-data status"
+  },
+  {
+   "unit_id": "S181",
+   "type": "flow",
+   "source": "Station Supervisory Control System",
+   "target": "Control Room Operator",
+   "payload": "indication quality and stale-data status"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "retains time-tagged changes and control outcomes"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "Satellite Time Receiver",
+   "label": "supplies the station time reference"
+  },
+  {
+   "unit_id": "S183",
+   "type": "flow",
+   "source": "Satellite Time Receiver",
+   "payload": "station time reference"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "monitors communication health"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "places affected points in a defined degraded state"
+  },
+  {
+   "unit_id": "S184",
+   "type": "state",
+   "owner": "Bay Automation Controller",
+   "label": "degraded state"
+  },
+  {
+   "unit_id": "S184",
+   "type": "transition",
+   "to": "degraded state",
+   "trigger": "updates exceed configured age limits"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Station Gateway",
+   "label": "reports link condition and protocol errors"
+  },
+  {
+   "unit_id": "S185",
+   "type": "flow",
+   "source": "Station Gateway",
+   "payload": "link condition and protocol errors"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Feeder Protection Relay",
+   "label": "evaluates electrical quantities against approved settings"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Feeder Protection Relay",
+   "label": "issues protective trip outputs"
+  },
+  {
+   "unit_id": "S186",
+   "type": "flow",
+   "source": "Feeder Protection Relay",
+   "payload": "protective trip outputs"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "North Protection Panel",
+   "label": "applies its assigned zone logic"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "North Protection Panel",
+   "label": "maintains trip paths"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Transformer Protection Panel",
+   "label": "applies its assigned protective logic"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Transformer Protection Panel",
+   "label": "reports abnormal protection conditions"
+  },
+  {
+   "unit_id": "S188",
+   "type": "flow",
+   "source": "Transformer Protection Panel",
+   "payload": "abnormal protection conditions"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "North Bay Controller",
+   "label": "maintains local bay control"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "performer": "South Bay Controller",
+   "label": "reports local mode and control availability"
+  },
+  {
+   "unit_id": "S190",
+   "type": "flow",
+   "source": "South Bay Controller",
+   "payload": "local mode and control availability"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Engineering Workstation",
+   "label": "supports approved configuration review"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Station DC System",
+   "label": "supports control and protection functions"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "reviews protection event records"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "verifies that approved settings remain consistent with coordination requirements"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "ensures communication changes, point mapping changes, and control logic changes are managed through station change control"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "verifies equipment indications locally"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "reports discrepancies"
+  },
+  {
+   "unit_id": "S196",
+   "type": "flow",
+   "source": "Substation Field Crew",
+   "payload": "discrepancies"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "coordinates work timing with the Switching Desk Coordinator"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "reviews the equipment affected by each work package"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "identifies any required operating restrictions"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "confirms switching prerequisites"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "keeps the approved switching sequence current"
+  },
+  {
+   "unit_id": "S200",
+   "type": "succession",
+   "before": "confirms switching prerequisites",
+   "after": "field work begins"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "performs work"
+  },
+  {
+   "unit_id": "S201",
+   "type": "succession",
+   "before": "required clearances, isolation, and grounding have been confirmed",
+   "after": "performs work"
+  },
+  {
+   "unit_id": "S202",
+   "type": "succession",
+   "before": "Work boundaries are verified locally",
+   "after": "personnel approach exposed conductors or operate equipment under maintenance"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "reviews test scope, approved settings, and restoration criteria"
+  },
+  {
+   "unit_id": "S203",
+   "type": "succession",
+   "before": "reviews test scope, approved settings, and restoration criteria",
+   "after": "protection testing starts"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Maintenance Remote Terminal",
+   "label": "uses the review receipt to support controlled maintenance review"
+  },
+  {
+   "unit_id": "S206",
+   "type": "flow",
+   "source": "Engineering Workstation",
+   "target": "Maintenance Remote Terminal",
+   "payload": "Settings Review Receipt"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Bay Automation Controller",
+   "label": "uses the load test record to support maintenance review"
+  },
+  {
+   "unit_id": "S207",
+   "type": "flow",
+   "source": "Station DC System",
+   "target": "Bay Automation Controller",
+   "payload": "Battery Load Test Record"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "receives the Protocol Retry Summary"
+  },
+  {
+   "unit_id": "S208",
+   "type": "flow",
+   "source": "Station Gateway",
+   "target": "Station Supervisory Control System",
+   "payload": "Protocol Retry Summary"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "verifies that field work remains within the approved work boundary"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "reports any unsafe condition"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "retains event information"
+  },
+  {
+   "unit_id": "S212",
+   "type": "state",
+   "owner": "protection function",
+   "label": "out of service"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "label": "tested using controlled commands"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "label": "Remote commands are inhibited"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "treats remote indications as unavailable"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "verifies equipment indications locally"
+  },
+  {
+   "unit_id": "S216",
+   "type": "flow",
+   "source": "Substation Field Crew",
+   "payload": "discrepancies"
+  },
+  {
+   "unit_id": "S218",
+   "type": "succession",
+   "before": "suspected controller or relay fault is assessed",
+   "after": "restart, bypass, or replacement is attempted"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "confirms that required records are complete and that operating restrictions are formally cleared"
+  },
+  {
+   "unit_id": "S220",
+   "type": "succession",
+   "before": "confirms that required records are complete and that operating restrictions are formally cleared",
+   "after": "returning equipment to normal service"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "deciding whether an automation request is appropriate"
+  },
+  {
+   "unit_id": "S223",
+   "type": "requirement",
+   "subject": "Bay Automation Controller",
+   "text": "The Bay Automation Controller shall execute only commands permitted by its approved logic and configured interlocks."
+  },
+  {
+   "unit_id": "S224",
+   "type": "requirement",
+   "subject": "Feeder Protection Relay",
+   "text": "The Feeder Protection Relay shall retain its protective function independently of supervisory communications."
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "reviews protection behavior after material changes"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "records any unresolved concerns"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Station Supervisory Control System",
+   "label": "presents control indications and command results"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Sequence Event Archive",
+   "label": "retains time-ordered records"
+  },
+  {
+   "unit_id": "S228",
+   "type": "requirement",
+   "subject": "Engineering Workstation",
+   "text": "The Engineering Workstation shall be used for authorized configuration work under established change control."
+  },
+  {
+   "unit_id": "S229",
+   "type": "requirement",
+   "subject": "Satellite Time Receiver",
+   "text": "time-quality concerns shall be investigated before records are relied upon for sequence analysis."
+  },
+  {
+   "unit_id": "S230",
+   "type": "requirement",
+   "subject": "Station Gateway",
+   "text": "The Station Gateway shall maintain the defined boundary between station automation and external communications."
+  },
+  {
+   "unit_id": "S231",
+   "type": "requirement",
+   "subject": "Station DC System",
+   "text": "The Station DC System shall be confirmed available before switching that depends on station control power."
+  },
+  {
+   "unit_id": "S232",
+   "type": "requirement",
+   "subject": "Breaker Control Unit",
+   "text": "The Breaker Control Unit shall reject commands that do not satisfy its configured permissive conditions."
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "uses the Isolation Boundary Card to verify the approved work boundary"
+  },
+  {
+   "unit_id": "S233",
+   "type": "flow",
+   "source": "Switching Desk Coordinator",
+   "target": "Substation Field Crew",
+   "payload": "Isolation Boundary Card"
+  },
+  {
+   "unit_id": "S233",
+   "type": "succession",
+   "before": "uses the Isolation Boundary Card to verify the approved work boundary",
+   "after": "entering the controlled area"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "reports unexpected equipment conditions"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Substation Field Crew",
+   "label": "pauses work"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "receives the Clearance Handoff Memo"
+  },
+  {
+   "unit_id": "S235",
+   "type": "flow",
+   "source": "Control Room Operator",
+   "target": "Switching Desk Coordinator",
+   "payload": "Clearance Handoff Memo"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Switching Desk Coordinator",
+   "label": "confirms that its clearance status agrees with the active switching record"
+  },
+  {
+   "unit_id": "S236",
+   "type": "requirement",
+   "subject": "Switching Desk Coordinator",
+   "text": "Keystone shall confirm that switching authority, equipment state, and communication limits are understood before coordinating any automation-enabled action."
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Substation Supervisor",
+   "label": "verifies that unresolved risks have an assigned owner and an agreed disposition"
+  },
+  {
+   "unit_id": "S237",
+   "type": "succession",
+   "before": "verifies that unresolved risks have an assigned owner and an agreed disposition",
+   "after": "normal service is resumed"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "Control Room Operator",
+   "label": "confirms indications locally"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "Protection Relay Engineer",
+   "label": "assesses unexplained trips and abnormal protection indications"
+  },
+  {
+   "unit_id": "S239",
+   "type": "succession",
+   "before": "assesses unexplained trips and abnormal protection indications",
+   "after": "protection is returned to service"
+  },
+  {
+   "unit_id": "S240",
+   "type": "requirement",
+   "subject": "Maintenance Remote Terminal",
+   "text": "The Maintenance Remote Terminal shall use controlled access, and each maintenance session shall be attributable to an authorized user."
+  },
+  {
+   "unit_id": "S241",
+   "type": "requirement",
+   "subject": "North Bay Controller",
+   "text": "The North Bay Controller shall be checked for expected local behavior after approved configuration work."
+  },
+  {
+   "unit_id": "S242",
+   "type": "requirement",
+   "subject": "South Bay Controller",
+   "text": "The South Bay Controller shall be checked for expected local behavior after approved configuration work."
+  },
+  {
+   "unit_id": "S243",
+   "type": "requirement",
+   "subject": "North Protection Panel",
+   "text": "The North Protection Panel shall remain available for independent protection functions during supervisory control interruptions."
+  },
+  {
+   "unit_id": "S244",
+   "type": "requirement",
+   "subject": "Transformer Protection Panel",
+   "text": "The Transformer Protection Panel shall remain within its approved settings and operating constraints during handover."
+  },
+  {
+   "unit_id": "S245",
+   "type": "requirement",
+   "subject": "Alder Creek Electrical Distribution Substation",
+   "text": "Periodic operational reviews shall examine command outcomes, event records, exceptions, and corrective actions so that automation decisions remain traceable and safe."
+  }
+ ],
+ "entities": [
+  {
+   "name": "Alder Creek Electrical Distribution Substation",
+   "aliases": []
+  },
+  {
+   "name": "Bay Automation Controller",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Bay Status Digest",
+   "aliases": []
+  },
+  {
+   "name": "North Bay Controller",
+   "aliases": []
+  },
+  {
+   "name": "South Bay Controller",
+   "aliases": []
+  },
+  {
+   "name": "Feeder Protection Relay",
+   "aliases": [
+    "Tandem"
+   ]
+  },
+  {
+   "name": "Relay Diagnostic Note",
+   "aliases": []
+  },
+  {
+   "name": "Breaker Control Unit",
+   "aliases": []
+  },
+  {
+   "name": "Station Supervisory Control System",
+   "aliases": [
+    "Glasswing"
+   ]
+  },
+  {
+   "name": "Station Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Satellite Time Receiver",
+   "aliases": [
+    "Bluefin"
+   ]
+  },
+  {
+   "name": "Sequence Event Archive",
+   "aliases": [
+    "Orchard"
+   ]
+  },
+  {
+   "name": "Engineering Workstation",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Remote Terminal",
+   "aliases": []
+  },
+  {
+   "name": "Station DC System",
+   "aliases": []
+  },
+  {
+   "name": "Control Room Operator",
+   "aliases": []
+  },
+  {
+   "name": "Protection Relay Engineer",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Substation Field Crew",
+   "aliases": [
+    "Cinder"
+   ]
+  },
+  {
+   "name": "Clock Drift Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "Alarm Acknowledgement Slip",
+   "aliases": []
+  },
+  {
+   "name": "Substation Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "Settings Review Receipt",
+   "aliases": []
+  },
+  {
+   "name": "Switching Desk Coordinator",
+   "aliases": [
+    "Keystone"
+   ]
+  },
+  {
+   "name": "Breaker Inspection Tag",
+   "aliases": []
+  },
+  {
+   "name": "Battery Load Test Record",
+   "aliases": []
+  },
+  {
+   "name": "Isolation Boundary Card",
+   "aliases": []
+  },
+  {
+   "name": "Protocol Retry Summary",
+   "aliases": []
+  },
+  {
+   "name": "North Protection Panel",
+   "aliases": []
+  },
+  {
+   "name": "Transformer Protection Panel",
+   "aliases": []
+  },
+  {
+   "name": "Clearance Handoff Memo",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S245"
+   ],
+   "chunk_tokens": 4422,
+   "memory_tokens": 0,
+   "prompt_tokens": 5815,
+   "input": 10817,
+   "output": 21342,
+   "reasoning": null,
+   "cached": false
+  }
+ ],
+ "wall_s": 137.9
+}

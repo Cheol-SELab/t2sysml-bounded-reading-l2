@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "The Regional Flow Platform enters the winter operating mode when freezing precipitation, contamination reports, or low surface temperature forecasts make untreated ground movement unreliable.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer confirms the trigger conditions in the Digital Briefing Room so that airport, airline, and tower participants share one operational assumption.",
+   "tags": []
+  },
+  {
+   "text": "In this mode, the Capacity Assessment Module reduces practical departure capacity to account for deicing time, pad transit time, and slower ramp taxi speeds.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Capacity Plan is revised with a winter margin before the Slot Allocation Engine recalculates affected Calculated Takeoff Time values.",
+   "tags": []
+  },
+  {
+   "text": "The Deicing Coordinator maintains the active pad configuration, including open bays, closed bays, fluid limitations, and vehicle availability.",
+   "tags": []
+  },
+  {
+   "text": "Pad queue controls assign aircraft to a deicing lane only after the Target Off Block Time is stable enough to support a realistic treatment sequence.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board displays each aircraft as pending push, taxi to pad, in treatment, awaiting release, or returning to stand when treatment cannot be completed.",
+   "tags": []
+  },
+  {
+   "text": "Ramp Control Lead uses the queue card to verify pad entry order before authorizing a movement from the staging area.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "text": "When demand exceeds the safe holding capacity near the pad, the Departure Metering Service withholds further push clearances until the pad queue falls below the configured threshold.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager reserves departure sequence positions only for aircraft with an achievable pad release time and a valid runway taxi path.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal records the selected fluid type, mixture ratio, treatment start time, treatment completion time, and expected holdover reference for each treated aircraft.",
+   "tags": []
+  },
+  {
+   "text": "Fluid status updates are timestamped through the Time Synchronization Service so that ramp, tower, and airline users interpret treatment age consistently.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher updates remaining fluid inventory and truck serviceability when replenishment, contamination, or equipment faults affect the planned treatment rate.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner compares fluid inventory with scheduled deicing demand and warns when a planned bank cannot be supported without resequencing.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator reviews aircraft readiness and may request a later pad entry when crew, catering, or passenger status would cause holdover time to be wasted.",
+   "tags": []
+  },
+  {
+   "text": "Gate Conflict Detector produces the Gate Reopening Memo when a stand becomes usable after snow clearance and the gate occupancy constraint has been removed.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "Quartzline must coordinate every pad release with the Tower Supervisor before the aircraft leaves the treated area.",
+   "tags": [
+    "A12:link"
+   ]
+  },
+  {
+   "text": "Under freezing conditions, the Tower Supervisor protects runway departure spacing by accounting for reduced braking action, slower lineup, and possible repeat treatment requests.",
+   "tags": []
+  },
+  {
+   "text": "The Surface Surveillance Adapter confirms that aircraft leaving the pad follow the assigned route and do not block inbound traffic to the same treatment complex.",
+   "tags": []
+  },
+  {
+   "text": "If a treated aircraft cannot depart within its applicable holdover reference, the Deicing Coordinator marks the treatment as expired and returns the aircraft to the appropriate queue state.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display highlights expired treatments, pad closures, fluid shortages, and ramp blockages so that participants can resolve conflicts without separate status calls.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log captures winter-mode decisions, including capacity changes, pad flow restrictions, and agreed deviations from the normal departure order.",
+   "tags": []
+  },
+  {
+   "text": "When conditions improve, the Regional Flow Manager authorizes a controlled transition from Capacity Reduction State toward Recovery Phase after pad backlog, runway condition, and surface flow indicators are stable.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse later compares planned treatment throughput, actual pad occupancy, and departure compliance to improve winter capacity assumptions for future events.",
+   "tags": []
+  }
+ ]
+}

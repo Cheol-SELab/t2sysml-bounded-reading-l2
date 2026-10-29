@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pharmacy Fulfillment Robot provides \"eligible medication against the active order\" to Medication Order Gateway (an information or material flow).\n\nSource sentences:\nS012: The Clinical Pharmacist produces the Dose Exception Review Slip when an order requires a documented exception review.\nS013: The Pharmacy Fulfillment Robot prepares eligible medication against the active order and records its handling actions.\nS029: The Medication Order Gateway accepts medication orders from authorized clinical systems and records their arrival times.\nS030: It checks required order fields, patient identifiers, medication codes, quantities, and destination details before routing an order for pharmacy review.\n\nAnswer \"supported\" only if the sentences state that Pharmacy Fulfillment Robot produces or sends this item AND that Medication Order Gateway receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S013 says the Pharmacy Fulfillment Robot prepares eligible medication, but no sentence says the Medication Order Gateway receives or uses that medication; the gateway only accepts and checks medication orders (S029–S030).\"}",
+ "usage": {
+  "input_tokens": 681,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 96,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 8.115,
+ "created": "2026-10-14T01:35:20"
+}

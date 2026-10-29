@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Medication Safety Officer, label=reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm)\n\nSource sentences (the last one is where the fact was extracted):\nS137: The North Ward Cabinet Controller prevents access to a held transaction until an authorized disposition is recorded.\nS138: The South Ward Cabinet Controller reports a failed lock or an unrecognized access attempt for immediate operational review.\nS139: The Sensor-monitored Medication Cooler reports excursions that could affect medication suitability, and affected stock remains unavailable pending assessment.\nS140: The Medication Safety Officer reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S140 states directly that the Medication Safety Officer reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 705,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 78,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.964,
+ "created": "2026-10-14T12:52:09"
+}

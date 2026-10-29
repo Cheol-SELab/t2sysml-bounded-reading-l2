@@ -1,0 +1,1553 @@
+{
+ "doc_id": "L2T4",
+ "title": "Operational Concept for the Alder Creek Electrical Distribution Substation Automation System",
+ "writer": "gpt-6-luna",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "The Alder Creek Electrical Distribution Substation supplies distribution circuits through transformer and feeder bays.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The station automation boundary covers bay-level monitoring and control, station coordination, and the interfaces to external operating personnel and systems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "Primary equipment, protection functions, and field wiring remain subject to their approved designs and operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "The Bay Automation Controller is assigned the project codename Juniper.",
+   "tags": [
+    "ALIAS:E_BAY_AUTOMATION_CONTROLLER"
+   ]
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "The Bay Automation Controller performs bay-level sequencing, status evaluation, and control permissive checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "The Bay Automation Controller produces a Bay Status Digest for operational awareness.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "North Bay Controller and South Bay Controller provide bay-specific automation for their respective portions of the station.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "The Feeder Protection Relay detects feeder faults and initiates protection actions within its configured protection zone.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The Feeder Protection Relay produces a Relay Diagnostic Note when its self-monitoring identifies a condition requiring engineering attention.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "Protection trips remain independent of routine bay-control commands so that a control-system failure does not inhibit fault clearing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Breaker Control Unit executes authorized breaker operations and enforces its local electrical and mechanical interlocks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The Bay Automation Controller requests breaker operations only when the applicable operating mode and permissives allow them.",
+   "tags": []
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "Local control takes precedence when equipment is selected for local operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "Remote commands are subject to station authority, bay selection, interlocking, and equipment availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "The Station Supervisory Control System provides the station-level operating interface and supervisory coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The Station Gateway defines the communications boundary for authorized connections beyond the station automation network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "The Satellite Time Receiver provides the station with a reference for time synchronization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "The Sequence Event Archive retains operational event information for later review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The Engineering Workstation supports authorized configuration and maintenance activities under controlled access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The Maintenance Remote Terminal is limited to approved maintenance access and does not replace local operating authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "The Station DC System supplies control power to automation and protection equipment within its design capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "The Control Room Operator directs routine station operation and verifies that commanded equipment states are appropriate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "The Protection Relay Engineer maintains protection settings and evaluates relay performance within the approved change process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "The Substation Field Crew performs field checks and equipment work under the applicable switching instructions and clearances.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 2,
+   "text": "The supervisory architecture separates station-wide observation from local bay and protection functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 2,
+   "text": "The Station Supervisory Control System is named Glasswing in this document.",
+   "tags": [
+    "ALIAS:E_STATION_SUPERVISORY_CONTROL_SYSTEM"
+   ]
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "The Station Supervisory Control System presents available station and bay indications through a consolidated operator interface.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "Its displays show operating conditions and communication quality without replacing local equipment indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "The Station Gateway carries supervisory communications between station-level functions and remote operations interfaces.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "Supervisory visibility depends on the availability and quality of the underlying communications and status inputs.",
+   "tags": []
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "The supervisory layer does not perform the protective functions assigned to dedicated protection equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "The Control Room Operator uses the supervisory displays to assess station conditions and coordinate operating actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "Any supervisory command remains subject to configured permissions and the applicable operating procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "Local interlocks and equipment-level control logic remain authoritative for permitted switching actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "A communications interruption can leave displayed information stale or temporarily unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "After communications recover, operators confirm that indications are current before relying on them for decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "The Satellite Time Receiver is named Bluefin in this document.",
+   "tags": [
+    "ALIAS:E_SATELLITE_TIME_RECEIVER"
+   ]
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "The Satellite Time Receiver acquires a reference from supported satellite timing signals.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "It distributes time to station equipment over the configured time-distribution network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "Time distribution supports consistent event timestamps across equipment that receives and applies the reference.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "Accurate timestamps assist event correlation but do not establish the validity of an electrical measurement or protection decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "If the external timing reference is lost, equipment behavior depends on its individual clock and holdover capabilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "Holdover performance varies by device and may degrade as the interval without a valid reference increases.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "The Satellite Time Receiver produces the Clock Drift Snapshot when its measured offset meets the configured reporting condition.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "Time-quality indications allow operators to distinguish synchronized operation from degraded or unavailable timing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "The Station DC System supplies operating power to station automation equipment within its designed capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "A loss of station power can interrupt supervisory visibility and time distribution until supported supplies are restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "The Station Supervisory Control System produces the Alarm Acknowledgement Slip for supervisory recordkeeping.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "The Substation Supervisor oversees operational use of the supervisory system and escalation of unresolved availability concerns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 3,
+   "text": "The Feeder Protection Relay is known as Tandem in this concept.",
+   "tags": [
+    "ALIAS:E_FEEDER_PROTECTION_RELAY"
+   ]
+  },
+  {
+   "unit_id": "S051",
+   "section": 3,
+   "text": "The Protection Relay Engineer is known as Larkspur in this concept.",
+   "tags": [
+    "ALIAS:E_PROTECTION_RELAY_ENGINEER"
+   ]
+  },
+  {
+   "unit_id": "S052",
+   "section": 3,
+   "text": "The Feeder Protection Relay provides local protection for its assigned feeder and operates independently of supervisory control availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "Its approved setting group defines the pickup levels, time delays, and logic required for the feeder protection scheme.",
+   "tags": []
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "The Protection Relay Engineer develops setting changes against the approved protection study and the current equipment data.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "The Protection Relay Engineer documents the engineering basis and expected operational effect for each proposed change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "Engineering Workstation maintains the working configuration under revision control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "Engineering Workstation produces the Settings Review Receipt after a settings review is completed.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "Each proposed change receives a unique revision identifier before review begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "The Protection Relay Engineer verifies that proposed values agree with the approved coordination objectives.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "A second qualified reviewer independently checks calculations, logic changes, and device applicability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "The review confirms that the proposed configuration is complete, internally consistent, and suitable for the intended feeder.",
+   "tags": []
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "Coordination checks consider upstream and downstream protection behavior across the expected operating range.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "Protection settings are not approved solely on the basis of copied values from another installation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "Engineering Workstation retains the approved configuration and its revision history for controlled access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "Configuration access is limited to personnel with assigned engineering responsibilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The Protection Relay Engineer records the approval status before any setting change is released for implementation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "Before deployment, the approved configuration is checked against the intended device model and firmware version.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "A controlled outage or other approved work window is required when implementation could affect feeder protection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "The Substation Field Crew follows the authorized work instructions during device access and setting transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "After installation, the implemented values are compared with the approved configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "The Feeder Protection Relay is functionally checked to confirm the intended protection behavior after a change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "Any discrepancy stops release of the configuration until its cause is resolved and reviewed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "The Substation Supervisor ensures that engineering changes follow the established authorization and operational control process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 4,
+   "text": "The Substation Field Crew is known operationally as Cinder during field activities.",
+   "tags": [
+    "ALIAS:E_SUBSTATION_FIELD_CREW"
+   ]
+  },
+  {
+   "unit_id": "S075",
+   "section": 4,
+   "text": "Cinder performs inspections, maintenance, and switching support within the boundaries of approved work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 4,
+   "text": "Field access begins only after the required work authorization and site entry controls are confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "The Control Room Operator coordinates operational access with the Switching Desk Coordinator before work that could affect energized equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "The Substation Supervisor confirms that the requested work is consistent with current operating conditions and approved procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The crew reviews the work scope, access route, known hazards, and communication arrangements before entering the yard.",
+   "tags": []
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "Personnel use the site access process to record arrival and departure so that the control room can account for field staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "Work boundaries are established before tools or test equipment are brought near electrical apparatus.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "The Switching Desk Coordinator confirms the applicable switching and clearance arrangements before work begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "The Control Room Operator retains authority to suspend work when operating conditions change or indications become uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "The Substation Field Crew verifies equipment identity at the point of work against the approved work documentation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "Field personnel do not rely on screen indications alone to establish that equipment is safe to approach or handle.",
+   "tags": []
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "Required checks of position, isolation, and absence of hazardous energy are performed using approved site procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "Any discrepancy between field observations and control-room indications is treated as an unsafe condition until resolved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "The crew promptly reports uncertain equipment conditions through the designated operational communication channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "Substation Field Crew completes and sends the Breaker Inspection Tag after recording the observed breaker condition and inspection time.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "The Station Supervisory Control System presents available equipment indications for operator review during normal operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "The Bay Automation Controller applies configured permissives and interlocks to supported automated operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "Automation does not replace field verification when a procedure requires direct confirmation of equipment condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "The Control Room Operator evaluates reported field conditions before authorizing a return to automated operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "Field crews maintain communications with the control room throughout work that could affect protection, control, or service continuity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "If communications are lost, the crew stops affected work and follows the approved hold and escalation procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "Work is considered complete only after personnel, tools, and temporary connections are accounted for and the work area is left in a safe state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "The Switching Desk Coordinator confirms the operational handback arrangements before equipment is returned to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 5,
+   "text": "The Sequence Event Archive is the station's authoritative repository for time-stamped operational event evidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 5,
+   "text": "The Sequence Event Archive is known operationally as Orchard.",
+   "tags": [
+    "ALIAS:E_SEQUENCE_EVENT_ARCHIVE"
+   ]
+  },
+  {
+   "unit_id": "S100",
+   "section": 5,
+   "text": "It preserves event records in their received form so later review does not depend on transient operator displays.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "Each retained record includes its source identity, event time, archive receipt time, and available quality indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "The archive preserves original event ordering and marks records whose time quality or sequence continuity is uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "The Satellite Time Receiver supports station time alignment, and loss of its reference is treated as a condition affecting interpretation rather than a reason to discard evidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "Events with corrected or estimated times remain distinguishable from records with valid time quality.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "The Sequence Event Archive retains configuration and access history associated with archive administration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "The Station Supervisory Control System presents current operating indications separately from the long-term evidence held by the archive.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "The Control Room Operator reviews archived event sequences to establish the order of alarms, status changes, and operator actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "The Protection Relay Engineer compares event times and relay indications during disturbance analysis.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "The Protection Relay Engineer uses the Relay Diagnostic Note during fault analysis.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "The Engineering Workstation provides approved tools for searching, filtering, and exporting event records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "Review queries should be bounded by station, equipment identifier, and time interval to keep results reproducible.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "Exported evidence retains original timestamps and quality flags, and any derived ordering is identified as an engineering interpretation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "Engineering conclusions are recorded separately from the preserved source evidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "Access to archive functions is limited to authorized roles, and administrative changes are auditable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "The archive retains records under the station records schedule and applicable utility retention requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "Records selected for an investigation are protected from routine deletion until the hold is released by the responsible authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "Archive health is checked for storage capacity, ingestion continuity, and recoverability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "Recovery testing verifies that retained records remain readable and that timestamps and quality indications survive restoration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "The station preserves an additional protected copy of essential event evidence in accordance with approved backup procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "The Station DC System produces a Battery Load Test Record for retention with station engineering records.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "Juniper timestamps locally generated state changes for later correlation.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "After the Switching Desk Coordinator confirms operational handback, evidence from the completed work remains available for authorized engineering review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 6,
+   "text": "The Switching Desk Coordinator is known operationally as Keystone.",
+   "tags": [
+    "ALIAS:E_SWITCHING_DESK_COORDINATOR"
+   ]
+  },
+  {
+   "unit_id": "S124",
+   "section": 6,
+   "text": "The Switching Desk Coordinator maintains the station-wide switching plan and coordinates work across the two bay boundaries.",
+   "tags": []
+  },
+  {
+   "unit_id": "S125",
+   "section": 6,
+   "text": "The Control Room Operator submits switching requests with the affected equipment, intended state changes, and requested timing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 6,
+   "text": "The Switching Desk Coordinator checks each request for conflicts with active clearances and other approved work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "The Substation Supervisor resolves priority conflicts and confirms the operational authority for exceptional switching conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "Approved switching sequences identify the required order of actions, hold points, and conditions for stopping work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "The North Bay Controller manages control and interlocking functions assigned to the north bay under the approved sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "The North Bay Controller blocks a close command when its local interlocks indicate that the bay is not ready.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "The South Bay Controller manages the corresponding control and interlocking functions assigned to the south bay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "The two controllers have separate equipment scopes and do not substitute for one another when executing a switching sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "The bay boundary defines which controller may operate each device and which indications are used to confirm its state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "Equipment shared across the boundary requires explicit coordination before a switching action can affect either bay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "The Bay Automation Controller presents bay control status while preserving the separate operating scopes of the two controllers.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "The Breaker Control Unit executes permitted breaker commands only when the applicable control conditions are satisfied.",
+   "tags": []
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "The North Protection Panel supports protection functions for the north-side equipment within its assigned scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "The Transformer Protection Panel retains its protection authority independently of the bay switching sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "The Station Supervisory Control System uses the status digest to review current station operating conditions.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "The Sequence Event Archive receives the Clock Drift Snapshot for event-time correlation.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "The Switching Desk Coordinator produces the Isolation Boundary Card for the planned work.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "The Station Gateway produces the Protocol Retry Summary for communication review.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "Larkspur reviews protection coordination questions that could affect the planned switching sequence.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "Bluefin provides the station time reference used to align recorded event times.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "The Substation Field Crew confirms device identity and local conditions before carrying out an authorized operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "After the Switching Desk Coordinator confirms operational handback, state-change evidence remains available for authorized engineering review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 7,
+   "text": "Alarm indications are assessed according to protection significance, equipment condition, and the potential effect on service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 7,
+   "text": "The Control Room Operator reviews the alarm priority, source, time, and associated bay indications before deciding on a response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S149",
+   "section": 7,
+   "text": "The operator distinguishes a new alarm from a standing condition and checks whether related indications support the same assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S150",
+   "section": 7,
+   "text": "For a protection operation or an unexplained equipment state, the Control Room Operator treats the condition as requiring prompt investigation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 7,
+   "text": "The Control Room Operator acknowledges alarms only after reviewing the indication and retains awareness of any condition that remains unresolved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "The Control Room Operator uses the acknowledgement slip to record the alarm response and any outstanding action.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "The operator checks available device status and sequence information without treating a cleared indication as proof that the underlying cause has been corrected.",
+   "tags": []
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "The Feeder Protection Relay indication is reviewed against the affected feeder status and any related protection operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "The Bay Automation Controller provides bay-level status indications that support the operator’s assessment of the alarm.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "Glasswing shall retain alarm state and event information for operator review after an indication has cleared.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "The Sequence Event Archive provides time-ordered evidence for later operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "The North Protection Panel contains the protection equipment associated with feeder protection functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "The Control Room Operator uses indications from the North Protection Panel to assess feeder protection operations and related alarms.",
+   "tags": []
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "The Transformer Protection Panel is dedicated to protection functions associated with the power transformer rather than feeder protection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "The Transformer Protection Panel provides local indication of transformer protection operation for assessment during an alarm response.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "The Control Room Operator considers the condition of the Station DC System when alarms or protection indications suggest a possible control-power concern.",
+   "tags": []
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "A breaker status discrepancy is treated as an abnormal condition until its cause and operational significance are understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "The Engineering Workstation is used for authorized review of protection and event information, not as a substitute for immediate operational assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "The Protection Relay Engineer supports investigation when relay indications, settings concerns, or event evidence require technical interpretation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "The Substation Field Crew confirms device identity and local conditions before carrying out an authorized operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "The Substation Supervisor is consulted when the alarm response requires escalation beyond routine operator actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "The Control Room Operator produces the Clearance Handoff Memo when an unresolved alarm condition requires a formal handoff.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "The Switching Desk Coordinator confirms operational handback before the associated state-change evidence is considered available for authorized engineering review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "After handback, the Control Room Operator verifies that alarm status, equipment status, and recorded evidence are consistent before closing the response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 8,
+   "text": "The station communications design separates supervisory requests, bay-level execution, and protection action so loss of one layer does not silently substitute for another.",
+   "tags": []
+  },
+  {
+   "unit_id": "S172",
+   "section": 8,
+   "text": "Station Gateway brokers authorized station traffic across control-room and bay networks, applying configured protocol mappings, addressing, and access controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 8,
+   "text": "It rejects malformed, stale, or unauthorized requests and records each rejection with enough context for operations review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 8,
+   "text": "Station Supervisory Control System presents available controls and indications to authorized operating personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 8,
+   "text": "Control Room Operator issues state-changing requests only through approved operating procedures and the configured supervisory interface.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 8,
+   "text": "Bay Automation Controller validates each received request against local mode, interlocks, command authority, and equipment availability before issuing bay-level outputs.",
+   "tags": []
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "Breaker Control Unit applies accepted output commands at the breaker interface and returns the resulting position and circuit-health indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "Bay Automation Controller compares returned indications with the requested state and identifies incomplete or contradictory operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "Bay Automation Controller uses the inspection tag to associate the applicable equipment context with an authorized record.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "Station Gateway carries updated indications through the station interface using configured quality and timestamp attributes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "Station Supervisory Control System displays indication quality and stale-data status so operators can distinguish a current value from a retained value.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "Sequence Event Archive retains time-tagged changes and control outcomes for event reconstruction and operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "Satellite Time Receiver supplies the station time reference used to align event timestamps, subject to configured quality checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "Bay Automation Controller monitors communication health and places affected points in a defined degraded state when updates exceed configured age limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "Station Gateway reports link condition and protocol errors without converting a communication failure into an equipment-state change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Tandem evaluates electrical quantities against approved settings and issues protective trip outputs without relying on supervisory communications.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "North Protection Panel applies its assigned zone logic and maintains trip paths independently of supervisory network availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "Transformer Protection Panel applies its assigned protective logic and reports abnormal protection conditions through its configured interface.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "North Bay Controller maintains local bay control within the approved operating mode when supervisory communications are interrupted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "South Bay Controller reports local mode and control availability through its configured bay interface.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "Engineering Workstation supports approved configuration review and does not serve as a routine source of operating commands.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "Maintenance Remote Terminal access is restricted to authorized maintenance sessions and is not used to bypass local interlocks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "Station DC System supports control and protection functions through monitored station supply circuits, and supply loss is indicated as an abnormal station condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "Protection Relay Engineer reviews protection event records and verifies that approved settings remain consistent with coordination requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "Substation Supervisor ensures communication changes, point mapping changes, and control logic changes are managed through station change control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "Substation Field Crew verifies equipment indications locally when remote status is uncertain and reports discrepancies through established operating channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 9,
+   "text": "Maintenance windows are planned around feeder loading, switching constraints, and the availability of qualified personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 9,
+   "text": "The Substation Supervisor coordinates work timing with the Switching Desk Coordinator and confirms that operating responsibilities are understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S199",
+   "section": 9,
+   "text": "The Control Room Operator reviews the equipment affected by each work package and identifies any required operating restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 9,
+   "text": "The Switching Desk Coordinator confirms switching prerequisites before field work begins and keeps the approved switching sequence current.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 9,
+   "text": "Substation Field Crew performs work only after required clearances, isolation, and grounding have been confirmed through established procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "Work boundaries are verified locally before personnel approach exposed conductors or operate equipment under maintenance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "The Protection Relay Engineer reviews test scope, approved settings, and restoration criteria before protection testing starts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "Testing is performed with approved procedures, calibrated instruments, and a defined means of stopping the test if unexpected indications occur.",
+   "tags": []
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "The Engineering Workstation is used for authorized configuration review, and changes are applied only through station change control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "The Maintenance Remote Terminal uses the review receipt to support controlled maintenance review.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "The Bay Automation Controller uses the load test record to support maintenance review.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "The Station Supervisory Control System receives the Protocol Retry Summary for operational review.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "Cinder verifies that field work remains within the approved work boundary and reports any unsafe condition through established channels.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "Orchard retains event information needed to review testing and restoration activity.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "Feeder Protection Relay testing is coordinated so that protection coverage is not unintentionally removed from an energized feeder.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "A protection function placed out of service is tracked by the responsible operator until it is restored and verified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "The Breaker Control Unit is tested using controlled commands that cannot bypass local interlocks or approved operating authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "Remote commands are inhibited when equipment status is uncertain or when required permissives are unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "If communications are degraded, the Control Room Operator treats remote indications as unavailable until their reliability is established.",
+   "tags": []
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "Substation Field Crew verifies equipment indications locally when remote status is uncertain and reports discrepancies through established operating channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "Manual operation is permitted only under approved procedures and with the required local checks and communication with the Control Room Operator.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "A suspected controller or relay fault is assessed before any restart, bypass, or replacement is attempted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "Restoration includes confirming normal indications, protection availability, communications status, and the removal of temporary test connections.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "The Substation Supervisor confirms that required records are complete and that operating restrictions are formally cleared before returning equipment to normal service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 10,
+   "text": "Operational assurance at Alder Creek depends on clear authority, verified equipment state, and records that support later review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 10,
+   "text": "The Control Room Operator remains responsible for deciding whether an automation request is appropriate for current operating conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S223",
+   "section": 10,
+   "text": "The Bay Automation Controller shall execute only commands permitted by its approved logic and configured interlocks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 10,
+   "text": "The Feeder Protection Relay shall retain its protective function independently of supervisory communications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 10,
+   "text": "The Protection Relay Engineer reviews protection behavior after material changes and records any unresolved concerns for operational follow-up.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 10,
+   "text": "The Station Supervisory Control System presents control indications and command results for operator assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "The Sequence Event Archive retains time-ordered records needed to reconstruct significant control and protection events.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "The Engineering Workstation shall be used for authorized configuration work under established change control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "The Satellite Time Receiver supports consistent event timing, and time-quality concerns shall be investigated before records are relied upon for sequence analysis.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Station Gateway shall maintain the defined boundary between station automation and external communications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The Station DC System shall be confirmed available before switching that depends on station control power.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "The Breaker Control Unit shall reject commands that do not satisfy its configured permissive conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "Substation Field Crew uses the Isolation Boundary Card to verify the approved work boundary before entering the controlled area.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "Substation Field Crew reports unexpected equipment conditions promptly and pauses work when the approved boundary is uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "Switching Desk Coordinator receives the Clearance Handoff Memo and confirms that its clearance status agrees with the active switching record.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "Keystone shall confirm that switching authority, equipment state, and communication limits are understood before coordinating any automation-enabled action.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "The Substation Supervisor verifies that unresolved risks have an assigned owner and an agreed disposition before normal service is resumed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "The Control Room Operator confirms indications locally when remote status is incomplete, inconsistent, or delayed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The Protection Relay Engineer assesses unexplained trips and abnormal protection indications before protection is returned to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "The Maintenance Remote Terminal shall use controlled access, and each maintenance session shall be attributable to an authorized user.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "The North Bay Controller shall be checked for expected local behavior after approved configuration work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "The South Bay Controller shall be checked for expected local behavior after approved configuration work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "The North Protection Panel shall remain available for independent protection functions during supervisory control interruptions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "The Transformer Protection Panel shall remain within its approved settings and operating constraints during handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "Periodic operational reviews shall examine command outcomes, event records, exceptions, and corrective actions so that automation decisions remain traceable and safe.",
+   "tags": []
+  }
+ ]
+}

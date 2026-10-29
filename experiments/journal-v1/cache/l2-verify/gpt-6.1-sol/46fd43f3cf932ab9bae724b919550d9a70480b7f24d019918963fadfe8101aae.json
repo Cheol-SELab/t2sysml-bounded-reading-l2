@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Radio Coordinator provides \"incident identifier, location, priority, response assignment, and immediate hazard information\" to Triage Supervisor (an information or material flow).\n\nSource sentences:\nS005: Call Taker Mara obtains essential incident details, confirms the reported location, and enters the request for assessment.\nS006: The Triage Supervisor reviews incident information, assigns or confirms priority, and directs cases requiring additional clinical review.\nS113: The Radio Coordinator selects the appropriate talkgroup and confirms that it is available before transmitting.\nS114: The dispatch transmission states the incident identifier, location, priority, response assignment, and any immediate hazard information.\n\nAnswer \"supported\" only if the sentences state that Radio Coordinator produces or sends this item AND that Triage Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The Radio Coordinator transmits the listed information, but the sentences do not establish that the Triage Supervisor receives or uses that transmission.\"}",
+ "usage": {
+  "input_tokens": 303,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 108,
+  "output_tokens_details": {
+   "reasoning_tokens": 62
+  },
+  "total_tokens": 411
+ },
+ "attempts": 1,
+ "wall_s": 10.841,
+ "created": "2026-10-14T00:05:41"
+}

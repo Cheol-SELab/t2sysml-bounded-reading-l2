@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Fire Alarm Panel provides \"the Sprinkler Zone Inhibit Notice\" to Safety Zone Controller (an information or material flow).\n\nSource sentences:\nS116: Handoff reporting records the vehicle identifier, pallet identifier, transfer time, and any incomplete or deferred movement.\nS117: Fire Alarm Panel produces the Sprinkler Zone Inhibit Notice when the applicable fire-protection condition is detected.\nS203: Safety checks verify that personnel detection, audible warnings, and emergency stops respond before production movement begins.\nS204: Safety Zone Controller applies the Sprinkler Zone Inhibit Notice by maintaining the specified exclusion boundary until release criteria are met.\n\nAnswer \"supported\" only if the sentences state that Fire Alarm Panel produces or sends this item AND that Safety Zone Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S117 states that Fire Alarm Panel produces the Sprinkler Zone Inhibit Notice, and S204 states that Safety Zone Controller applies the same notice.\"}",
+ "usage": {
+  "input_tokens": 305,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 47,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 352
+ },
+ "attempts": 1,
+ "wall_s": 3.202,
+ "created": "2026-10-14T12:43:12"
+}

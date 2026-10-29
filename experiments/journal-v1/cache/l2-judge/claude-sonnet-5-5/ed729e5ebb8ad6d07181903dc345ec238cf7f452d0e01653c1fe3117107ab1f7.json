@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Medication Safety Officer provides \"the Diversion Review Packet\" to IT Operations Specialist (an information or material flow).\n\nSource sentences:\nS046: The Medication Safety Officer reviews patterns of discrepancies and handling events for potential safety concerns.\nS047: The Medication Safety Officer produces the Diversion Review Packet when a diversion concern requires documented review.\nS140: The Medication Safety Officer reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm.\nS141: IT Operations Specialist receives the Diversion Review Packet and checks access, transaction, and device logs without changing the clinical disposition.\n\nAnswer \"supported\" only if the sentences state that Medication Safety Officer produces or sends this item AND that IT Operations Specialist receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S047 says the Medication Safety Officer produces the Diversion Review Packet, and S141 says the IT Operations Specialist receives that same packet and uses it to check logs, so the flow from officer to specialist is stated.\"}",
+ "usage": {
+  "input_tokens": 680,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.287,
+ "created": "2026-10-14T12:34:49"
+}

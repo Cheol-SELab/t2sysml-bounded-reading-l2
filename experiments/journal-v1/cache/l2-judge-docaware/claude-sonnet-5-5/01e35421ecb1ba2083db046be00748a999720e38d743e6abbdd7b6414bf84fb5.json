@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Maintenance Planning Engine provides \"the Deferred Task Rationale\" to Field Supervisor (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS284: The Vessel Master can pause or abort an approach when observed conditions differ from the forecast or deteriorate during transit.\nS285: Maintenance Planning Engine produces the Deferred Task Rationale when weather prevents a planned task from proceeding.\nS429: Field Supervisor checks that cybersecurity requirements are included in the work briefing before technicians begin affected tasks.\nS430: Field Supervisor uses the Deferred Task Rationale when a cybersecurity-related work item must be postponed.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS286: The rationale supports later reprioritization without implying that the task is safe under the current conditions.\nS980: Released revisions identify the change, rationale, approval, effective date, and superseded baseline.\n\nAnswer \"supported\" only if the document states that Maintenance Planning Engine produces or sends this item AND that Field Supervisor receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Field Supervisor uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S285 states Maintenance Planning Engine produces the Deferred Task Rationale, S430 states Field Supervisor uses the same named item, and no sentence names a different producer or a similarly named different item.\"}",
+ "usage": {
+  "input_tokens": 854,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 83,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.93,
+ "created": "2026-10-19T19:00:16"
+}

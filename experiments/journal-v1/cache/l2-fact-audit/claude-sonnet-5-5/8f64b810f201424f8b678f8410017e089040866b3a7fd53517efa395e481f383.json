@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Communications-Based Train Control system, label=requires explicit controller action)\n\nSource sentences (the last one is where the fact was extracted):\nS147: Safety Data Communication Network carries safety-relevant station interface messages separately from nonvital passenger information messages.\nS148: Maintenance Diagnostic Server records station interface faults, rejected commands, and inconsistent indications for later investigation by the Signal Maintenance Engineer.\nS149: Cyber Security Officer reviews access rights for passenger information and dispatch integration workstations when station-facing interfaces are commissioned or materially changed.\nS150: During degraded operation, the CBTC system favours restrictive platform states and requires explicit controller action before restoring automatic departure support at the affected station.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S150 says the CBTC system requires explicit controller action before restoring automatic departure support, so the performer (CBTC = Communications-Based Train Control system) and the label match.\"}",
+ "usage": {
+  "input_tokens": 705,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 73,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.336,
+ "created": "2026-10-14T12:52:03"
+}

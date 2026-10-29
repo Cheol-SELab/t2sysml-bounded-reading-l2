@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Conveyor Line Controller provides \"the Transfer Induction Ticket\" to Autonomous Forklift Fleet (an information or material flow).\n\nSource sentences:\nS087: At a merge, the controller grants passage to one approaching pallet at a time.\nS088: The Conveyor Line Controller produces the Transfer Induction Ticket for each accepted induction.\nS199: The Warehouse Operations Supervisor confirms that operators understand current speed limits, exclusion boundaries, and stop-work criteria.\nS200: Autonomous Forklift Fleet receives the Transfer Induction Ticket and validates its destination against the assigned route.\n\nAnswer \"supported\" only if the sentences state that Conveyor Line Controller produces or sends this item AND that Autonomous Forklift Fleet receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S088 states the Conveyor Line Controller produces the Transfer Induction Ticket, and S200 states the Autonomous Forklift Fleet receives and validates the same ticket, so the flow from controller to fleet is supported.\"}",
+ "usage": {
+  "input_tokens": 677,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 92,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.237,
+ "created": "2026-10-14T12:42:36"
+}

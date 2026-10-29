@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Weather Service provides \"the Squall Window Bulletin\" to Maintenance Planning Engine (an information or material flow).\n\nSource sentences:\nS082: The Marine Coordinator uses that view to coordinate the Crew Transfer Vessel, the Service Operations Vessel, and the Daughter Craft as conditions require.\nS083: The Weather Service produces the Squall Window Bulletin for operational awareness.\nS212: SCADA Gateway produces the Session Revocation Receipt when an authenticated control session is terminated.\nS213: Maintenance Planning Engine uses the Squall Window Bulletin when reviewing the timing of planned work.\n\nAnswer \"supported\" only if the sentences state that Weather Service produces or sends this item AND that Maintenance Planning Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\n(none found)",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S083 states the Weather Service produces the Squall Window Bulletin, and S213 states the Maintenance Planning Engine uses that same bulletin, so the flow from Weather Service to Maintenance Planning Engine is supported.\"}",
+ "usage": {
+  "input_tokens": 705,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.99,
+ "created": "2026-10-19T19:09:11"
+}

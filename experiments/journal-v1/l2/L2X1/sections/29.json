@@ -1,0 +1,102 @@
+{
+ "sentences": [
+  {
+   "text": "Aerodrome infrastructure events are treated as capacity inputs when they affect runway availability, taxi route usability, stand access, lighting performance, or supporting navigation services.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform records each event as an operational constraint with an effective time, expected duration, affected resource, confidence level, and approving authority.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager is responsible for ensuring that declared service reductions are entered promptly and that the operational description is consistent with local aerodrome control procedures.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor uses the Runway Lighting Outage Card to confirm which runway lighting elements are unavailable before approving the operational status shown in the Tower Sequence Manager.",
+   "tags": [
+    "F16:link"
+   ]
+  },
+  {
+   "text": "When lighting performance limits night or low-visibility operations, the Capacity Assessment Module converts the limit into a runway configuration constraint rather than treating it as a general advisory.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal presents infrastructure events to authorized airport, airline, and flow management users as part of the shared operating picture.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager reviews the published constraint when it changes the usable runway rate, taxi-out predictability, or the feasibility of the active demand plan.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module calculates the operational effect by comparing the affected resource with the current Airport Capacity Plan and the active weather state.",
+   "tags": []
+  },
+  {
+   "text": "If the event reduces arrival throughput, the Arrival Regulation Console applies the revised Airport Acceptance Rate after confirmation by the Regional Flow Manager.",
+   "tags": []
+  },
+  {
+   "text": "If the event reduces departure throughput, the Departure Metering Service updates metering rates and provides revised inputs to the Slot Allocation Engine.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine uses the reduced capacity value to protect fairness while avoiding schedules that exceed the declared infrastructure capability.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service recalculates short-term demand against the constrained capacity so that delay and queue forecasts reflect the published limitation.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager displays the accepted constraint to support runway sequencing decisions and to reduce conflicting tactical instructions.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board receives the same operational status so that apron movements can be coordinated with restricted taxi routes or stand access limitations.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display shows the affected resource, start time, review time, and current decision status using language that can be understood by operational staff.",
+   "tags": []
+  },
+  {
+   "text": "The Alert Distribution Hub sends notifications when the constraint is created, materially changed, suspended, or cancelled.",
+   "tags": []
+  },
+  {
+   "text": "The Business Rules Registry defines which infrastructure events require approval, which events may be published as advisory information, and which events automatically trigger a Capacity Reduction State.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, lighting and navigation service limits are assessed together with ceiling, visibility, wind, and runway surface conditions before capacity values are released.",
+   "tags": []
+  },
+  {
+   "text": "During a Capacity Reduction State, the Regional Flow Platform maintains the infrastructure event as a controlling assumption until an authorized actor closes or supersedes it.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log records the time of publication, approving role, capacity effect, affected services, and any later amendment made during the operating period.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger preserves the technical record of submission, validation, publication, acknowledgement, and withdrawal for accountability and post-event review.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward monitors data quality for infrastructure events, including duplicate reports, inconsistent effective times, and unclear service descriptions.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse uses completed infrastructure events to measure delay attribution, capacity recovery time, and the accuracy of initial duration estimates.",
+   "tags": []
+  },
+  {
+   "text": "When normal capability is restored, the Airport Duty Manager confirms closure in the Airport CDM Portal and the Regional Flow Platform returns the affected resource to Normal Operations or Recovery Phase handling as appropriate.",
+   "tags": []
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: dispatch staff provides \"contact\" to Hospital Liaison Desk (an information or material flow).\n\nSource sentences:\nS065: Call Taker Mara remains engaged with the caller when further information could change the response priority or access plan.\nS066: The Hospital Liaison Desk supports intake coordination by confirming facility capabilities and clarifying hospital contact pathways.\nS210: Triage Supervisor identifies calls whose clinical priority requires immediate radio access and communicates that priority to dispatch staff.\nS211: Call Taker Mara keeps the caller connected when feasible while dispatch staff attempt to reach the assigned crew through an approved alternate channel.\n\nAnswer \"supported\" only if the sentences state that dispatch staff produces or sends this item AND that Hospital Liaison Desk receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The sentences do not state that dispatch staff sends contact information to the Hospital Liaison Desk; they describe hospital contact pathways and dispatch staff reaching an assigned crew.\"}",
+ "usage": {
+  "input_tokens": 297,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 116,
+  "output_tokens_details": {
+   "reasoning_tokens": 66
+  },
+  "total_tokens": 413
+ },
+ "attempts": 1,
+ "wall_s": 2.227,
+ "created": "2026-10-13T23:47:03"
+}

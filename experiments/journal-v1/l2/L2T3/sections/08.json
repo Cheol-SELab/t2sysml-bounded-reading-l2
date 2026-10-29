@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "During prolonged wildfire operations, the system shall favor continuity of command decisions over full automation when communications, power, or sensor coverage is impaired.",
+   "tags": []
+  },
+  {
+   "text": "The Caldera Incident Command Portal enters a disconnected operating mode when its primary network path is unavailable and clearly marks all displayed information with the last synchronization time.",
+   "tags": []
+  },
+  {
+   "text": "In disconnected operating mode, the Caldera Incident Command Portal allows authorized users to review cached incident data and create queued updates, but it prevents irreversible releases until connectivity is restored.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Detection Officer receives a visible warning whenever a detection, assignment, or hazard record is based on stale data or partial sensor coverage.",
+   "tags": []
+  },
+  {
+   "text": "The Sentinel Fireline Analytics Engine shall continue using the last approved model configuration after a repository outage and shall reject unversioned rules or unsigned analytic packages.",
+   "tags": []
+  },
+  {
+   "text": "The Smoke Classifier Module shall label detections as advisory when either camera mast is unavailable or when image quality falls below the validated threshold.",
+   "tags": []
+  },
+  {
+   "text": "The North Lookout Camera Mast and the South Lookout Camera Mast shall report heartbeat, temperature, storage, and pointing-status telemetry so that maintenance staff can distinguish sensor failure from environmental obscuration.",
+   "tags": []
+  },
+  {
+   "text": "The MesoWest Weather Fusion Node shall retain a local weather cache sufficient to support near-term fire behavior review when upstream feeds are intermittent.",
+   "tags": []
+  },
+  {
+   "text": "Crewline Mobile Tablet clients shall queue field updates locally, encrypt the queue at rest, and reconcile conflicts by preserving the original author, device time, and server acceptance time.",
+   "tags": []
+  },
+  {
+   "text": "All interactive access to the Caldera Incident Command Portal requires named accounts, role-based authorization, and multifactor authentication when the authentication service is reachable.",
+   "tags": []
+  },
+  {
+   "text": "When the authentication service is unreachable, emergency access uses pre-issued signed credentials that expire automatically and require supervisor review after restoration.",
+   "tags": []
+  },
+  {
+   "text": "The Air Attack Supervisor, Tanker Base Manager, Helitack Crew Leader, Drone Pilot Operator, and County Emergency Liaison receive only the permissions required for their operational responsibilities.",
+   "tags": []
+  },
+  {
+   "text": "Administrative privileges for production configuration changes require separate approval from operational command roles and are not granted through field user accounts.",
+   "tags": []
+  },
+  {
+   "text": "Security-relevant events, including failed logons, role changes, queued update releases, model changes, and maintenance overrides, shall be written to an append-only audit store.",
+   "tags": []
+  },
+  {
+   "text": "Audit records shall include synchronized time, user identity, device identity, source network, affected record, and outcome so that incident reconstruction remains possible after the event.",
+   "tags": []
+  },
+  {
+   "text": "If central audit storage is unavailable, each field component shall buffer signed audit records locally and forward them without modification when connectivity returns.",
+   "tags": []
+  },
+  {
+   "text": "Drone Tasking Service validates the corridor permit before releasing an automated flight task in degraded communications mode.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "text": "Badger shall queue outbound voice-to-data acknowledgments for at least fifteen minutes during backhaul loss and forward them when the link is restored.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "East Retardant Loading Pump shall enter a metered recirculation mode when pressure variance exceeds the calibrated maintenance limit.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "The West Retardant Loading Pump shall be inspected at shift change for hose wear, valve position, controller alarms, and leakage before it is returned to operational availability.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance actions on field equipment shall be recorded with technician identity, time, observed condition, corrective action, and verification result before the equipment status is changed.",
+   "tags": []
+  },
+  {
+   "text": "Operational records that support command decisions and safety reviews shall be retained for the incident record period defined by agency policy, while high-volume raw sensor data may follow a shorter approved retention schedule.",
+   "tags": []
+  },
+  {
+   "text": "The system shall protect retained data with encryption at rest, controlled export procedures, and deletion workflows that require documented authorization.",
+   "tags": []
+  },
+  {
+   "text": "For incidents lasting multiple operational periods, spare power, replacement network equipment, field cleaning supplies, and documented recovery procedures shall be staged so that no single equipment fault stops detection or suppression-support operations.",
+   "tags": []
+  }
+ ]
+}

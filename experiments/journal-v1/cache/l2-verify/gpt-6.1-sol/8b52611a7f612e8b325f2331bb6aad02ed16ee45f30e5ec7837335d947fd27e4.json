@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Bag Tag Printer provides \"a Calibration Witness Tag\" to Maintenance Technician (an information or material flow).\n\nSource sentences:\nS073: The Security Duty Manager is notified when an alarm response requires a security decision beyond routine screening procedures.\nS074: The Bag Tag Printer produces a Calibration Witness Tag when a calibration witness record is required.\nS175: Concourse Zone Controller applies the authorized routing state without bypassing required screening controls.\nS176: Maintenance Technician uses the witness tag to verify that the applicable calibration status was witnessed before equipment returns to service.\n\nAnswer \"supported\" only if the sentences state that Bag Tag Printer produces or sends this item AND that Maintenance Technician receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S074 states that Bag Tag Printer produces a Calibration Witness Tag, and S176 states that Maintenance Technician uses the witness tag to verify calibration status.\"}",
+ "usage": {
+  "input_tokens": 286,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 46,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 332
+ },
+ "attempts": 1,
+ "wall_s": 3.581,
+ "created": "2026-10-14T12:40:37"
+}

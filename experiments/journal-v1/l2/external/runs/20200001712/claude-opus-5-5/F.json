@@ -1,0 +1,931 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0003",
+   "type": "requirement",
+   "subject": "human health and performance system",
+   "text": "will be tightly integrated with mission and habitat design"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "requirement",
+   "subject": "suite of systems engineering tools",
+   "text": "will aid in the decision making process for the development of such a human health and performance system"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "requirement",
+   "subject": "Concept of Operations",
+   "text": "will be used to guide the development of IMPACT"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "requirement",
+   "subject": "Concept of Operations",
+   "text": "will be controlled by the Exploration Medical Capability (ExMC) Control Board"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "requirement",
+   "subject": "programs outside of ExMC",
+   "text": "any changes must be communicated to ExMC leadership, and the changes must be processed through the respective control boards"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "flow",
+   "source": "programs outside of ExMC",
+   "target": "ExMC Leadership",
+   "payload": "changes"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "composition",
+   "whole": "Human Research Program",
+   "parts": [
+    "HRP Management",
+    "ExMC Leadership",
+    "Other HRP Element Leadership"
+   ]
+  },
+  {
+   "unit_id": "U0017",
+   "type": "requirement",
+   "subject": "IMPACT",
+   "text": "will provide trade study evaluations to aid stakeholders in making informed decisions"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "provide trade study evaluations"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "requirement",
+   "subject": "IMPACT",
+   "text": "will provide the quantification of the effect of proposed research on risk reduction"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "provide the quantification of the effect of proposed research on risk reduction"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "identifies that a certain percentage of the resources are associated with all conditions"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "flow",
+   "source": "IMPACT",
+   "target": "Exploration Medical Capability",
+   "payload": "new data"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "requirement",
+   "subject": "IMPACT",
+   "text": "will follow the framework shown in Figure 1"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "performer": "stakeholders",
+   "label": "pose a query to the tool suite point of contact"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "flow",
+   "source": "stakeholders",
+   "target": "tool suite point of contact",
+   "payload": "query"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "collect and/or generate the information necessary for inputs into the tool suite"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "succession",
+   "before": "pose a query to the tool suite point of contact",
+   "after": "collect and/or generate the information necessary for inputs into the tool suite"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "flow",
+   "source": "IMPACT",
+   "target": "subject matter experts",
+   "payload": "results"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "subject matter experts",
+   "label": "analyze and validate the output"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "subject matter experts",
+   "label": "provide an interpretation of the results to the POC"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "flow",
+   "source": "subject matter experts",
+   "target": "tool suite point of contact",
+   "payload": "interpretation of the results"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "succession",
+   "before": "analyze and validate the output",
+   "after": "provide an interpretation of the results to the POC"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "provide a set of data or recommendations to the relevant stakeholders"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "flow",
+   "source": "tool suite point of contact",
+   "target": "stakeholders",
+   "payload": "set of data or recommendations"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "succession",
+   "before": "provide an interpretation of the results to the POC",
+   "after": "provide a set of data or recommendations to the relevant stakeholders"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "requirement",
+   "subject": "IMPACT",
+   "text": "Iterations on system options, inputs, and outputs may be required"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "requirement",
+   "subject": "IMPACT",
+   "text": "must perform seven functions to meet the system goals"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Store the stakeholder query"
+  },
+  {
+   "unit_id": "U0030",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Characterize and store system options"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Perform quantitative risk assessment on system options"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Analyze data in the context of the stakeholder query"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Produce query results to enhance stakeholder decision making"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Integrate the tool suite"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Store analyses"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "performer": "Exploration Medical Capability",
+   "label": "characterize the exploration medical system architecture trade space"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "requirement",
+   "subject": "stakeholder query",
+   "text": "must be identified, stored, and understood to ensure that the appropriate system inputs are acquired prior to performing the analysis"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "constraint",
+   "subject": "medical system",
+   "expression": "10% reduction of the mass and volume allocation"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "requirement",
+   "subject": "system options",
+   "text": "must be identified, characterized, and stored to perform trade studies and research prioritization"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "requirement",
+   "subject": "Exploration Medical Capability",
+   "text": "a medical system architecture that encompasses the functions that a medical system will need to provide will be produced"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "subject": "Exploration Medical Capability",
+   "text": "additional data specific to the medical subject matter will be needed"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Model discrete medical events"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Account for the effects of interventions for specific medical conditions"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Run simulations on a given set of input conditions to determine risk metrics"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Perform optimization algorithms to determine the best set of medical resources"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "requirement",
+   "subject": "data",
+   "text": "will need to be obtained, formatted, transferred, and transformed as needed to facilitate the analysis"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "compiling various output files"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "flow",
+   "source": "IMPACT",
+   "target": "user",
+   "payload": "candidate medical system options"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Define inter-tool interfaces"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Provide an operator interface for tool suite POC"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Automate data exchange"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Auto-generate reports"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "Archive the data for future reference"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "flow",
+   "source": "Office of the Chief Health and Medical Officer",
+   "target": "Medical Operations",
+   "payload": "request for medical conditions that may occur most frequently"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "uses the probabilistic risk assessment functionality of IMPACT to help determine the conditions"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "create an Accepted Medical Condition List for each DRM"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "determine the medical capabilities that are needed as interventions"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "succession",
+   "before": "create an Accepted Medical Condition List for each DRM",
+   "after": "determine the medical capabilities that are needed as interventions"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "source": "Medical Operations",
+   "target": "Office of the Chief Health and Medical Officer",
+   "payload": "information"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "Office of the Chief Health and Medical Officer",
+   "label": "clarify the level of care definitions and overall capabilities for the DRMs"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "run several analyses with various mass and volume targets"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "create curves plotting mass and volume against specific risk metrics"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "constraint",
+   "subject": "new countermeasure",
+   "expression": "reduces the occurrence of Spaceflight Associated Neuro-ocular Syndrome by 50%"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "constraint",
+   "subject": "new intervention",
+   "expression": "reduce the likelihood of LOCL due to sepsis by 50%"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "constraint",
+   "subject": "new ultrasound",
+   "expression": "occupies 25% of the footprint of the existing ultrasound machine"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "flow",
+   "source": "ExMC Leadership",
+   "target": "tool suite point of contact",
+   "payload": "information"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "ExMC Leadership",
+   "label": "requests a risk assessment report"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "flow",
+   "source": "medical resource tool",
+   "target": "tool suite point of contact",
+   "payload": "proposed set of available medical capabilities and resources"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "flow",
+   "source": "medical evidence tool",
+   "target": "tool suite point of contact",
+   "payload": "medical evidence"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "creates new evidence and resource files"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "constraint",
+   "subject": "evidence and resource files",
+   "expression": "additional points at one-third and two-thirds of the stated reduction goals"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "runs the scenarios through IMPACT"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "flow",
+   "source": "tool suite point of contact",
+   "payload": "visualizations of risk reduction"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "flow",
+   "source": "tool suite point of contact",
+   "payload": "assessment of figures of merit"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "flow",
+   "source": "tool suite point of contact",
+   "target": "ExMC Leadership",
+   "payload": "report"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "ExMC Leadership",
+   "label": "prioritizes the three proposals based on the quantitative results"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "succession",
+   "before": "report is delivered to ExMC Leadership",
+   "after": "prioritizes the three proposals based on the quantitative results"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "provide a risk assessment of elevated CO2 levels"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "flow",
+   "source": "subject matter experts",
+   "target": "tool suite point of contact",
+   "payload": "evidence base, risk metrics, list of resources, evidence, tailored probabilistic risk assessment tool"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "requirement",
+   "subject": "subject matter experts",
+   "text": "will need to supply the evidence base, risk metrics, list of resources, evidence and tailored probabilistic risk assessment tool to the IMPACT POC"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "consider proposed research that modifies the Environmental Control and Life Support System"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "prepares a comprehensive report"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "HRP Elements",
+   "label": "provide their input for updating the CO2 exposure standards"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "requirement",
+   "subject": "Mars Program CHP System Management",
+   "text": "needs to identify the most appropriate medical system requirements for an upcoming mission to Mars"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "performer": "CHP Systems Engineering Team",
+   "label": "uses IMPACT to help define these requirements"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "performer": "CHP Systems Engineering Team",
+   "label": "capture and analyze the medical requirements"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "succession",
+   "before": "uses IMPACT to help define these requirements",
+   "after": "capture and analyze the medical requirements"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "flow",
+   "source": "CHP Systems Engineering Team",
+   "target": "Mars Program CHP System Management",
+   "payload": "requirements"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "succession",
+   "before": "capture and analyze the medical requirements",
+   "after": "requirements are sent to Mars Program CHP System Management for approval"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "performer": "Exploration Program CHP System Management",
+   "label": "develop requirements, designs, and hardware for a new exploration vehicle's medical system"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "Exploration Program CHP System Management",
+   "label": "contacts the IMPACT POC"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "perform a trade study on the mission constraints"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "provides a candidate medical system that meets the mass and volume constraints"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "constraint",
+   "subject": "medical system",
+   "expression": "below the mass constraint by 1 kg"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "constraint",
+   "subject": "medical system",
+   "expression": "1 kg was filled with medications or an automated external defibrillator (AED) capability"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "action",
+   "performer": "tool suite point of contact",
+   "label": "runs these two different scenarios"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "flow",
+   "source": "tool suite point of contact",
+   "target": "Exploration Program CHP System Management",
+   "payload": "results"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "removes some of the other medical capabilities"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "Exploration Program CHP System Management",
+   "label": "analyzes these runs"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "Exploration Program CHP System Management",
+   "label": "decides to add the AED to the originally proposed medical system"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "flow",
+   "source": "Exploration Program CHP System Management",
+   "target": "Exploration Program Management",
+   "payload": "rationale"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "performer": "Exploration Program Management",
+   "label": "negotiate on mass, volume, and risk"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "succession",
+   "before": "provides the Exploration Program Management with rationale",
+   "after": "negotiate on mass, volume, and risk"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "label": "backup crew is initiated"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "use IMPACT to determine how the difference in knowledge, ability, and skills between the primary and backup crew will affect medical risk"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "constraint",
+   "subject": "mission",
+   "expression": "3-year mission"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "flow",
+   "source": "IMPACT",
+   "payload": "gap in the risk can be reduced"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "action",
+   "performer": "IMPACT",
+   "label": "shows that the risk for QTL can successfully be reduced to an acceptable level"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "flow",
+   "source": "Crew Medical Officer",
+   "target": "Medical Operations",
+   "payload": "alert of diagnosed condition"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "constraint",
+   "subject": "lunar mission",
+   "expression": "45-day mission"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "discusses the matter with the Lunar Program Medical System Management"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "confirm that the medical system was not designed to be prepared to deal with a crewmember with this condition"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "flow",
+   "source": "vehicle",
+   "target": "Medical Operations",
+   "payload": "latest resource inventory data"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "performer": "Medical Operations",
+   "label": "uses IMPACT to determine changes in these risks"
+  }
+ ],
+ "entities": [
+  {
+   "name": "IMPACT",
+   "aliases": []
+  },
+  {
+   "name": "human health and performance system",
+   "aliases": []
+  },
+  {
+   "name": "Exploration Medical Capability",
+   "aliases": [
+    "ExMC"
+   ]
+  },
+  {
+   "name": "ExMC Control Board",
+   "aliases": []
+  },
+  {
+   "name": "ExMC Leadership",
+   "aliases": []
+  },
+  {
+   "name": "Human Research Program",
+   "aliases": [
+    "HRP"
+   ]
+  },
+  {
+   "name": "HRP Management",
+   "aliases": []
+  },
+  {
+   "name": "Other HRP Element Leadership",
+   "aliases": []
+  },
+  {
+   "name": "Medical Operations",
+   "aliases": [
+    "MedOps"
+   ]
+  },
+  {
+   "name": "Program Systems Engineering Team",
+   "aliases": []
+  },
+  {
+   "name": "Crew Health and Performance System Management",
+   "aliases": [
+    "CHP System Management"
+   ]
+  },
+  {
+   "name": "Medical System Management",
+   "aliases": []
+  },
+  {
+   "name": "Office of the Chief Health and Medical Officer",
+   "aliases": [
+    "OCHMO"
+   ]
+  },
+  {
+   "name": "Human System Risk Board",
+   "aliases": [
+    "HSRB"
+   ]
+  },
+  {
+   "name": "Health and Medical Technical Authority",
+   "aliases": [
+    "HMTA"
+   ]
+  },
+  {
+   "name": "stakeholders",
+   "aliases": []
+  },
+  {
+   "name": "tool suite point of contact",
+   "aliases": [
+    "POC",
+    "IMPACT POC"
+   ]
+  },
+  {
+   "name": "subject matter experts",
+   "aliases": [
+    "SMEs"
+   ]
+  },
+  {
+   "name": "Accepted Medical Condition List",
+   "aliases": [
+    "AMCL"
+   ]
+  },
+  {
+   "name": "Design reference mission",
+   "aliases": [
+    "DRM"
+   ]
+  },
+  {
+   "name": "Exploration Program Systems Engineering Team",
+   "aliases": []
+  },
+  {
+   "name": "medical resource tool",
+   "aliases": []
+  },
+  {
+   "name": "medical evidence tool",
+   "aliases": []
+  },
+  {
+   "name": "HRP Elements",
+   "aliases": []
+  },
+  {
+   "name": "Environmental Control and Life Support System",
+   "aliases": [
+    "ECLSS"
+   ]
+  },
+  {
+   "name": "Mars Program CHP System Management",
+   "aliases": []
+  },
+  {
+   "name": "CHP Systems Engineering Team",
+   "aliases": []
+  },
+  {
+   "name": "Exploration Program CHP System Management",
+   "aliases": [
+    "CHP System Management"
+   ]
+  },
+  {
+   "name": "Exploration Program Management",
+   "aliases": []
+  },
+  {
+   "name": "automated external defibrillator",
+   "aliases": [
+    "AED"
+   ]
+  },
+  {
+   "name": "Mars Program Management",
+   "aliases": []
+  },
+  {
+   "name": "Physician Astronaut",
+   "aliases": []
+  },
+  {
+   "name": "Lunar Program Management",
+   "aliases": []
+  },
+  {
+   "name": "Lunar Program Medical System Management",
+   "aliases": []
+  },
+  {
+   "name": "Crew Medical Officer",
+   "aliases": [
+    "CMO"
+   ]
+  },
+  {
+   "name": "vehicle",
+   "aliases": []
+  },
+  {
+   "name": "medical system",
+   "aliases": []
+  },
+  {
+   "name": "probability of loss of crew life",
+   "aliases": [
+    "LOCL"
+   ]
+  },
+  {
+   "name": "Probability of removal to definitive care",
+   "aliases": [
+    "RTDC"
+   ]
+  },
+  {
+   "name": "Crew health index",
+   "aliases": [
+    "CHI"
+   ]
+  },
+  {
+   "name": "Quality time lost",
+   "aliases": [
+    "QTL"
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0105"
+   ],
+   "chunk_tokens": 4527,
+   "memory_tokens": 0,
+   "prompt_tokens": 5614,
+   "input": 9958,
+   "output": 11498,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

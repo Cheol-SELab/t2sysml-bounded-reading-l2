@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Paramedic Crew provides \"material changes in patient condition\" to the consultation (an information or material flow).\n\nSource sentences:\nS092: Radio Coordinator communicates dispatch instructions and priority changes over Regional Radio Network.\nS093: Paramedic Crew reports material changes in patient condition so that the incident can be reassessed promptly.\nS149: The Hospital Liaison Desk coordinates destination consultation when a patient’s condition or the operating status of a facility may affect the assignment.\nS150: The consultation uses the patient’s reported condition, transport estimate, and current facility acceptance information available to the Regional Dispatch Center.\n\nAnswer \"supported\" only if the sentences state that Paramedic Crew produces or sends this item AND that the consultation receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"The Paramedic Crew reports material changes in the patient’s condition, and the consultation uses the patient’s reported condition.\"}",
+ "usage": {
+  "input_tokens": 298,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 219,
+  "output_tokens_details": {
+   "reasoning_tokens": 176
+  },
+  "total_tokens": 517
+ },
+ "attempts": 1,
+ "wall_s": 3.703,
+ "created": "2026-10-13T23:47:23"
+}

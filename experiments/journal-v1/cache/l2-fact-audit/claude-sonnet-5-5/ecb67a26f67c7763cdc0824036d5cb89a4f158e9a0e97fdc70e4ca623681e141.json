@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Chief Operator, label=establishes the starting coagulant dose from recent turbidity, color, alkalinity, pH, temperature, and bench-scale treatment observations)\n\nSource sentences (the last one is where the fact was extracted):\nS051: Return to normal service occurs after river level, screen differential, raw-water quality, and pump cycling have stabilized for a period accepted by the Chief Operator.\nS052: After a storm event, the Maintenance Planner reviews intake equipment condition and schedules cleaning or inspection work needed to restore reliable operation.\nS053: Following a storm-related recovery, control of coagulation and filtration returns to normal only after raw-water quality trends support stable chemical feed and predictable filter loading.\nS054: The Chief Operator establishes the starting coagulant dose from recent turbidity, color, alkalinity, pH, temperature, and bench-scale treatment observations.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S054 states that the Chief Operator establishes the starting coagulant dose from exactly the listed inputs (turbidity, color, alkalinity, pH, temperature, bench-scale treatment observations), matching performer and label.\"}",
+ "usage": {
+  "input_tokens": 757,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 90,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.073,
+ "created": "2026-10-14T12:51:42"
+}

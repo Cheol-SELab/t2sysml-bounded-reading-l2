@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Charge Nurse, payload=Cabinet Downtime Notice)\n\nSource sentences (the last one is where the fact was extracted):\nS061: The IT Operations Specialist checks console connectivity, interface health, and relevant system logs when a fault may be software related.\nS062: Dispatch resumes only after the affected route has passed its required checks and operations has authorized its return to use.\nS063: Cabinet downtime is coordinated as a controlled service interruption so ward staff can use an approved alternative without losing medication accountability.\nS064: The Charge Nurse sends a Cabinet Downtime Notice when a cabinet must be taken out of service or cannot support normal dispensing.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S064 states that the Charge Nurse sends a Cabinet Downtime Notice, so the source and payload both match; the receiver is not part of the fact.\"}",
+ "usage": {
+  "input_tokens": 681,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 67,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.459,
+ "created": "2026-10-14T12:52:27"
+}

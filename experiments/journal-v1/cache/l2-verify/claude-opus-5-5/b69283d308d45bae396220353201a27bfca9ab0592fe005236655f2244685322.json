@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Use of emergency access provides \"prominent audit events\" to incident record (an information or material flow).\n\nSource sentences:\nS784: Emergency access may be granted to the Emergency Response Coordinator, Airport Duty Manager, or System Support Engineer when life safety, airport continuity, or critical system recovery requires immediate action.\nS785: Use of emergency access shall generate prominent audit events and shall require post-event review by the Data Governance Steward and the responsible operational authority.\nS923: The System Support Engineer shall maintain an incident record that captures the initial symptom, affected components, operational state, timeline, mitigation actions, data corrections, and supervisor decisions.\nS924: Incident records shall reference the Audit Event Ledger where user actions, configuration changes, interface events, or automated decisions are relevant to the investigation.\n\nAnswer \"supported\" only if the sentences state that Use of emergency access produces or sends this item AND that incident record receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S785 says emergency access use generates prominent audit events, but S924 only says incident records reference the Audit Event Ledger when relevant, so a direct flow of those specific events to the incident record is implied rather than stated.\"}",
+ "usage": {
+  "input_tokens": 722,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 304,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 216
+  }
+ },
+ "attempts": 1,
+ "wall_s": 6.725,
+ "created": "2026-10-14T12:47:56"
+}

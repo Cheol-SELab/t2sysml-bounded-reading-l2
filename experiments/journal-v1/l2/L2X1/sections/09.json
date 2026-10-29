@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "This section defines how apron movement management is executed after the Airport Duty Manager handover has identified active surface constraints.",
+   "tags": []
+  },
+  {
+   "text": "In ramp operations, Ramp Control Lead is also called Quartzline during voice and chat coordination.",
+   "tags": [
+    "ALIAS:E_RAMP_CONTROL_LEAD"
+   ]
+  },
+  {
+   "text": "The Ramp Control Lead maintains the operational sequence for pushbacks, stand exits, stand entries, and towing movements within the controlled apron area.",
+   "tags": []
+  },
+  {
+   "text": "Pushback sequencing is based on safety separation, published stand constraints, crew readiness, ground handling completion, and the relationship between Target Off Block Time and Calculated Takeoff Time.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead shall not release a pushback until the Tower Supervisor has confirmed that the movement can be integrated with the active ground route and runway plan.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board is the primary working view for planned apron movements, active conflicts, towing tasks, and occupied stand intervals.",
+   "tags": []
+  },
+  {
+   "text": "Surface Surveillance Adapter inputs support the Ramp Control Lead by confirming aircraft position, stand occupancy, and blocking conditions on critical apron lanes.",
+   "tags": []
+  },
+  {
+   "text": "East Apron Sensor and West Apron Sensor indications are used as supporting evidence, but the Ramp Control Lead remains responsible for reconciling sensor data with visual and operational reports.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead assigns priority to towing movements that remove a blocking aircraft, protect a confirmed departure sequence, or create capacity for an inbound aircraft with no equivalent stand option.",
+   "tags": []
+  },
+  {
+   "text": "Routine maintenance tows are normally sequenced behind live departure and arrival movements unless an operational safety issue requires earlier action.",
+   "tags": []
+  },
+  {
+   "text": "Ramp Control Lead sends the Stand Tow Request Form when a parked aircraft must be repositioned to release a stand, remove an apron blockage, or support a confirmed operating plan.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "Apron occupancy is managed as a time-based resource, with each stand treated as unavailable from the start of servicing until the aircraft and equipment are clear of the marked safety area.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector alerts the Ramp Control Lead when a planned arrival, departure, or tow would create an overlapping occupancy condition at a stand or adjacent service lane.",
+   "tags": []
+  },
+  {
+   "text": "When a conflict is detected, the Ramp Control Lead coordinates with the Ground Handling Dispatcher to confirm whether servicing progress, equipment availability, or staffing constraints can change the sequence.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner provides the shared planning basis for baggage, catering, cleaning, boarding support, and towing resources that affect apron readiness.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead reviews Handling Resource Planner constraints before committing to a pushback sequence that depends on rapid equipment removal or immediate stand reuse.",
+   "tags": []
+  },
+  {
+   "text": "Airline Operations Coordinator participation is required when a resequence would materially affect passenger boarding, connection protection, or aircraft rotation plans.",
+   "tags": []
+  },
+  {
+   "text": "The Aircraft Operator Representative remains accountable for operator acceptance of any revised off-block expectation that results from ramp resequencing.",
+   "tags": []
+  },
+  {
+   "text": "Marlinstone shall refresh stand demand forecasts when the Ramp Movement Board records a material change in planned off-block timing.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "text": "The Tower Sequence Manager receives the current ramp intent through system synchronization so that apron releases and runway metering remain consistent.",
+   "tags": []
+  },
+  {
+   "text": "If apron congestion begins to affect runway delivery, the Ramp Control Lead escalates the condition to the Tower Supervisor and Airport Duty Manager for a coordinated mitigation decision.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, the Ramp Control Lead increases spacing between pushbacks and towing movements to account for slower ground servicing and reduced driver visibility.",
+   "tags": []
+  },
+  {
+   "text": "During Capacity Reduction State, apron movements are prioritized to prevent stand saturation and to preserve access for emergency routes and critical service lanes.",
+   "tags": []
+  },
+  {
+   "text": "All material resequencing decisions are recorded in the Collaborative Decision Log with the reason, affected aircraft, coordinating parties, and time of approval.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger retains movement updates from the Ramp Movement Board so that post-event review can compare planned sequencing with actual apron performance.",
+   "tags": []
+  }
+ ]
+}

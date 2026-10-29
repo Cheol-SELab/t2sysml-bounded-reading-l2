@@ -1,0 +1,1712 @@
+{
+  "doc_id": "20200001712",
+  "title": "IMPACT Concept of Operations",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "1 INTRODUCTION PURPOSE NASA’s future exploration missions mandate a significant paradigm change for mission planning, spacecraft design, human systems integration, and in-flight medical care due to constraints on mass, volume, power, resupply missions, and medical evacuation capabilities."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "These constraints require further development of the human health and performance system, which includes the medical, task performance, wellness, data, human and other systems necessary to keep the crew healthy and functioning optimally [1, 2, 3]."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "The human health and performance system will be tightly integrated with mission and habitat design to provide a sufficient human health and performance infrastructure to enable mission success."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "A suite of systems engineering tools will aid in the decision making process for the development of such a human health and performance system."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "This Concept of Operations provides a vision for a tool suite to conduct evaluations of human health and performance system options, inform research prioritization, and provide trade study support, based on evidence, risks, and systems engineering principles."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "The integrated tool suite under development is IMPACT."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "SCOPE This Concept of Operations will be used to guide the development of IMPACT."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "It also provides an overview of the stakeholder need and system goals of IMPACT, as well as examples of the types of activities for which the system can be used during the development of these missions."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "The document outlines the functions and data that are needed for IMPACT."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "CHANGE AUTHORITY This version of the Concept of Operations will be controlled by the Exploration Medical Capability (ExMC) Control Board."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "If programs outside of ExMC choose to utilize and change the content in this document, any changes must be communicated to ExMC leadership, and the changes must be processed through the respective control boards."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "APPLICABLE DOCUMENTS Table 1-1 below includes documents that contain provisions or other pertinent requirements directly related to and necessary for the performance of the activities specified by this Concept of Operations."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "They also contain supplemental information and provide guidance in the application of the Concept of Operations document."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "These documents may or may not be specifically cited within the text of this document."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "Document Number Title N/A Systems Engineering Management Plan (SEMP) Table 1-1: Applicable Documents 2 STAKEHOLDER NEED & SYSTEM GOALS IMPACT is being developed for ExMC to address the medical system, but the tool suite concept can be extended to suit the needs of other Human Research Program Elements."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "Other potential stakeholders of IMPACT include, but are not limited to: • Human Research Program (HRP) o HRP Management o ExMC Leadership o Other HRP Element Leadership • Medical Operations (MedOps) • Program Management o Program Systems Engineering Team o Crew Health and Performance (CHP) System Management o Medical System Management • The Office of the Chief Health and Medical Officer (OCHMO) • Human System Risk Board (HSRB) • Health and Medical Technical Authority (HMTA) STAKEHOLDER NEED The need for IMPACT is to provide a data-driven means to inform human health and performance risk mitigation interests during resource-constrained exploration mission development."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "GOALS 2.2.1 Enable systematic trade study evaluations IMPACT will provide trade study evaluations to aid stakeholders in making informed decisions."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "These trade studies are systematic evaluations of data needed to create candidate system options and include the assessment of requirements satisfaction, resource figures of merit (i.e., mass, volume, technology readiness level (TRLs)), and risk metrics (i.e., probability of loss of crew life). 2.2.2 Inform Research Prioritization IMPACT will provide the quantification of the effect of proposed research on risk reduction, allowing stakeholders to prioritize funding."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "For example, IMPACT can be used to determine the benefit of funding development of a new piece of technology."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "OBJECTIVES The following objectives support the execution of the goals: • Characterize candidate system options using quantitative analyses • Determine the effect of modifying input parameter risk metrics • Identify the technologies and capabilities that have the most effect on risk metrics and resource figures of merit that can be leveraged to meet multiple requirements • Automate data exchange among the tools in the suite to minimize the time needed and the introduction of errors that may occur in manual data exchange ASSUMPTIONS AND CONSTRAINTS • Automation will be completed as technology and project personnel allow • The quality, maintenance, and validation of the data external to the tool suite used for execution of the tool suite runs will be the responsibility of the requesting entity (i.e., medical conditions and associated resources would be provided by ExMC Clinicians for an ExMC deliverable) • The quality, maintenance, and validation of the data internal to the tool suite and models will be the responsibility of the tool suite (i.e., based on the medical conditions and resources provided, IMPACT identifies that a certain percentage of the resources are associated with all conditions and provides this new data to ExMC). 3 IMPACT DESCRIPTION IMPACT provides a means for the human health and performance community’s interests to be represented during deep space mission development."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "It allows the stakeholders to quantify the impacts that a potential human health and performance capability could have on crew health outcomes."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "This assessment is done in the context of specific human health and performance mission architectures."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "IMPACT will follow the framework shown in Figure 1."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "In brief, stakeholders will pose a query to the tool suite point of contact (POC), who will then collect and/or generate the information necessary for inputs into the tool suite."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "The results generated by the tool suite will be presented to subject matter experts (SMEs), who will then analyze and validate the output and provide an interpretation of the results to the POC."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "The POC will then provide a set of data or recommendations to the relevant stakeholders."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "Iterations on system options, inputs, and outputs may be required."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "Figure 1: IMPACT Information Flow TOOL FUNCTIONS Within the diagram shown above in Figure 1, the Tool Suite box is comprised of seven functions that IMPACT must perform to meet the system goals: 1."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "Store the stakeholder query 2."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "Characterize and store system options 3."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "Perform quantitative risk assessment on system options 4."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "Analyze data in the context of the stakeholder query 5."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "Produce query results to enhance stakeholder decision making 6."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "Integrate the tool suite 7."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "Store analyses Although these functions are generalized for the human health and performance system, examples of how they apply to ExMC will be illustrated as needed in the medical system context to provide specific implementation examples."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "ExMC will be using IMPACT to characterize the exploration medical system architecture trade space to facilitate trade evaluations for medical capability to inform mission and vehicle development and research planning. 3.1.1 Store Stakeholder query The stakeholder query must be identified, stored, and understood to ensure that the appropriate system inputs are acquired prior to performing the analysis."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "An example of a query for ExMC’s use is that a stakeholder wants to understand how a 10% reduction of the mass and volume allocation of a potential medical system could affect the on-board capability to performing medical imaging. 3.1.2 Characterize and store system options System options must be identified, characterized, and stored to perform trade studies and research prioritization."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "System options include the following information: • System requirements, including the relationships between the requirements and resources • System architecture, including the relationships between subsystems."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "For ExMC, a medical system architecture that encompasses the functions that a medical system will need to provide will be produced. • System resources such as the hardware, software, and consumables potentially available for exploration spaceflight missions and their characterization based on figures of merit, including: o Mass o Volume o Necessity of vehicle resources (i.e., power, refrigeration, vacuum, communication bandwidth) o Interoperability o TRLs Example medical resources that ExMC may identify include an ultrasound device, bandages, and medications. • Design reference mission (DRM) context, including: o Duration of mission o Number and schedule of extravehicular activities (EVAs) o Number of crew members • Subject matter content containing data needed for IMPACT to work queries to produce meaningful information for the stakeholder."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "For ExMC, additional data specific to the medical subject matter that will be needed include: o Primary and alternative medical interventions (e.g., prevention, diagnosis, treatment, and long-term management) o Crewmember pre-existing conditions o Incidence of medical condition occurrence 3.1.3 Perform quantitative risk assessment on system options The purpose of the quantitative risk assessment function is to predict human health and performance risks during spaceflight and identify risk-optimized solutions."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "For ExMC, the medical risk is of focus and is characterized by the following medical risk metrics: • Probability of loss of crew life (LOCL) • Probability of removal to definitive care (RTDC) • Crew health index (CHI) • Quality time lost (QTL) • Probability of loss of mission (currently not quantified or in use by ExMC) The capabilities of the quantitative risk assessment function in the context of the medical risk include the following: • Model discrete medical events, using historical medical evidence from both human spaceflight and terrestrial studies, in a dynamic, probabilistic simulation, accounting for the effects of cascading, unplanned events involving the crew, the vehicle, and supporting equipment. • Account for the effects of interventions for specific medical conditions. • Run simulations on a given set of input conditions to determine risk metrics associated with resource utilization, condition occurrence, intervention histories, crewmember medical histories, and trial histories. • Perform optimization algorithms to determine the best set of medical resources, drawn from an available resource list, which will minimize medical risk while meeting constraints on the overall medical system footprint. 3.1.4 Analyze data in the context of the stakeholder query The data analysis to be conducted will be dependent on the stakeholder query and relevant outputs."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "The data will need to be obtained, formatted, transferred, and transformed (e.g., performance of statistical calculations) as needed to facilitate the analysis. 3.1.5 Produce query results to enhance stakeholder decision making The purpose of this function is to develop visual output of the data generated from IMPACT."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "Visual output generation may involve compiling various output files and enabling translation of voluminous/complex results from IMPACT to be understandable and interpretable."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "Examples of ExMC’s medical system outputs will provide the user with the candidate medical system options, impacts to medical system requirements, characteristic discriminators, mission success criteria discriminators, clinician review summaries, risks to system options (technical or programmatic risks), preliminary impact assessments (impact to system or organization), and research prioritization information and recommendations. 3.1.6 Integrate the tool suite The aim of this function is to seamlessly coordinate all aspects of IMPACT as one working unit."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "It includes the following capabilities: • Define inter-tool interfaces • Provide an operator interface for tool suite POC • Automate data exchange • Auto-generate reports 3.1.7 Store analyses The purpose of this function is to provide a relational searchable catalog of full results from IMPACT, including the query, what version of data was used, assumptions that were made, inputs, etc."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "This information could be used to: • Characterize the full trade space over time • Archive the data for future reference TOOL IMPLEMENTATION Figure 2: IMPACT functions and mapping to example ExMC tools Additional information on each of these tools and how IMPACT is tailored for ExMC will be documented in subsequent ExMC Systems Engineering IMPACT project system architecture description and tool implementation documents."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "IMPACT queries may use all or a subset of the tools. 4 EXAMPLE SCENARIOS The following scenarios describe the vision for how IMPACT could be used by various stakeholders and during various project life cycle phases in the context of human health and performance."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "Not all of the capabilities portrayed are current capabilities of ExMC, and some will need to be further developed to fully realize the vision documented here."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "The referenced project life cycle phases are defined by NASA Systems Engineering Handbook (Table 2.2-1) [4]; ExMC SE has tailored Phase E (in brackets), and the tailored figure from the handbook is shown below. [and additional system analysis during operations] Figure 3: Project life cycle phases tailored to ExMC SCENARIO 1: CONDITION LIKELIHOODS WITH LEVEL OF CARE DEFINITION Stakeholders: OCHMO and MedOps Life Cycle Phase: Pre-Phase A OCHMO asks MedOps to inform them of which medical conditions may occur most frequently for certain DRMs so they have an understanding of the conditions of interest for the different medical levels of care defined for each type of DRM."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "MedOps uses the probabilistic risk assessment functionality of IMPACT to help determine the conditions, which helps them to create an Accepted Medical Condition List (AMCL) for each DRM."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "For each condition, they then determine the medical capabilities that are needed as interventions (e.g., prevention, diagnosis, treatment, and long-term management) for the conditions."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "MedOps passes this information to OCHMO."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "OCHMO uses this information to help clarify the level of care definitions and overall capabilities for the DRMs that they had previously defined."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "SCENARIO 2: MASS AND VOLUME ALLOCATION Stakeholders: Exploration Program Systems Engineering Team Life Cycle Phase: Pre-Phase A A DRM for an upcoming exploration mission has just been defined."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "To aid in mission planning, the Exploration Program Systems Engineering Team wants to understand the medical risks associated with the mass and volume allocations for the mission’s medical system."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "One of the Program Systems Engineers asks the IMPACT POC to run several analyses with various mass and volume targets and create curves plotting mass and volume against specific risk metrics, including LOCL, QTL, and RTDC."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "This information helps them determine how raising or lowering the mass/volume allocation affects crew health risks."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "SCENARIO 3: RESEARCH PRIORITIZATION Stakeholders: ExMC Leadership Life Cycle Phase: Pre-Phase A ExMC Leadership has limited funding to invest in research and technology development for future long- duration deep space missions."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "ExMC has received three proposals: 1) a new countermeasure that reduces the occurrence of Spaceflight Associated Neuro-ocular Syndrome by 50%, 2) a new intervention that promises to reduce the likelihood of LOCL due to sepsis by 50%, or 3) a new ultrasound that occupies 25% of the footprint of the existing ultrasound machine."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "ExMC has prioritized the LOCL and QTL factors equally but is less interested in reducing RTDC likelihood."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "ExMC Leadership delivers this information to the IMPACT POC and requests a risk assessment report that shows what happens if the promised reductions in the research proposals fall short of their stated goals."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "The IMPACT POC retrieves the proposed set of available medical capabilities and resources from the medical resource tool and the corresponding medical evidence from the medical evidence tool."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "Using a guided user interface, the IMPACT POC creates new evidence and resource files with the stated reduction goals from the research proposals, as well as additional points at one-third and two-thirds of the stated reduction goals."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "The IMPACT POC runs the scenarios through IMPACT and delivers visualizations of risk reduction for each of the scenarios at each level of goal accomplishment."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "The IMPACT POC also delivers an assessment of figures of merit, such as the operating and storage environmental requirements, shelf lives, and additional vehicle interfaces required."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "This report is delivered to ExMC Leadership, who then prioritizes the three proposals based on the quantitative results."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "SCENARIO 4: RISK ASSESSMENTS Stakeholders: HRP Elements Life Cycle Phase: Pre-Phase A The standards for CO2 levels are being updated for an upcoming long-duration deep space mission."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "There is a debate among the SMEs in various areas of expertise regarding the maximum acceptable level of CO2 exposure for the crew."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "The factors being debated are a risk of higher occurrence of medical conditions, the ability of the crew to properly exercise, the impact on cognitive function and behavior, and the impact on the sensorimotor functioning of the crew."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "An IMPACT POC is asked to provide a risk assessment of elevated CO2 levels from a medical, crew health, behavioral/cognitive, and sensorimotor perspective."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "Each of these correspond to HRP elements, whose SMEs will need to supply the following to the IMPACT POC: 1) an evidence base that details occurrence of certain undesirable states that affect crew health or performance, as well as how variations in CO2 level affect this evidence, 2) a set of risk metrics that quantify effects on crew health, performance or mission success, 3) a list of resources that prevent or mitigate these undesirable states, 4) evidence that ties the availability of these resources to the duration, intensity, time course and/or consequence of these undesirable states, and 5) a tailored version of the probabilistic risk assessment tool that supports the desired output metrics (not necessarily unique to each Element)."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "The IMPACT POC is also asked to consider proposed research that modifies the Environmental Control and Life Support System (ECLSS)."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "This research may have an effect on the individual resource allocations to preserve overall mission allocation and acceptable risk targets."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "The IMPACT POC prepares a comprehensive report that documents all identified risk metrics and how they are affected by CO2 levels, specific mass/volume allocations, and the specific choice of configuration of the ECLSS, with and without the new technology."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "Using this information, the HRP Elements provide their input for updating the CO2 exposure standards."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "SCENARIO 5: SCENARIO REQUIREMENTS DEVELOPMENT Stakeholders: Mars Program CHP System Management Life Cycle Phase: Phase A Mars Program CHP System Management needs to identify the most appropriate medical system requirements for an upcoming mission to Mars."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "The CHP Systems Engineering Team uses IMPACT to help define these requirements by analyzing a Mars Medical System Concept of Operations and the appropriate Mars-based AMCL, an IMPACT-based product, with associated medical capabilities."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Once formulated, the CHP Systems Engineering Team uses IMPACT’s medical system modeling tool to capture and analyze the medical requirements."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "The requirements are then sent to Mars Program CHP System Management for approval."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "SCENARIO 6: TRADE ANALYSIS TO IDENTIFY SYSTEM RESOURCES Stakeholders: Exploration Program CHP System Management, Exploration Program Management Life Cycle Phase: Phase B/C The Exploration Program CHP System Management is starting to develop requirements, designs, and hardware for a new exploration vehicle’s medical system, and they want to use IMPACT to determine what resources they should include in the medical system."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "The CHP System Management contacts the IMPACT POC, and they perform a trade study on the mission constraints that the CHP System Management proposes."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "IMPACT provides a candidate medical system that meets the mass and volume constraints, but the CHP System Management is not satisfied because the proposed medical system is below the mass constraint by 1 kg."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "The CHP System Management wants to run IMPACT again to see what the medical risk would be if that 1 kg was filled with medications or an automated external defibrillator (AED) capability."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "The IMPACT POC runs these two different scenarios and provides the results to the CHP System Management."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "With the inclusion of an AED, IMPACT removes some of the other medical capabilities."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "With the inclusion of just medications, the AED capability is missing."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "The CHP System Management analyzes these runs and decides to add the AED to the originally proposed medical system."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "This makes the total mass and volume larger than the original constraints set by the Exploration Program Management."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "The CHP System Management provides the Exploration Program Management with rationale documented as to why they wish to include the AED even though it makes the system more massive than originally intended."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "The Exploration Program Management and the CHP System Management then negotiate on mass, volume, and risk to identify the final system that will be designated for the exploration vehicle’s medical system."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "SCENARIO 7: UPDATED RISK IMPACT JUST PRIOR TO MISSION Stakeholders: Mars Program Management, MedOps Life Cycle Phase: Phase D The Physician Astronaut on a mission to Mars gets sick just prior to launch."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "The backup crew is initiated and the crew launch on time to maintain the narrow launch window."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "The Mars Program Management wants to understand how this change impacts the risk for LOCL and QTL during the transit phase of the mission, since the primary Physician Astronaut was trained in emergency medicine and the backup crewmember was trained as a primary care physician."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "MedOps wants to understand how the execution of planned and unplanned medical activities will be affected."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "They use IMPACT to determine how the difference in knowledge, ability, and skills between the primary and backup crew will affect medical risk."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "The output they receive indicates that, while there are no sufficient changes to LOCL if certain conditions were to occur during their 3-year mission, there are significant changes to QTL."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "IMPACT indicates that the gap in the risk can be reduced by up-linking knowledge augmentation references, certain just-in-time training modules, and a couple specific procedures so that the newly initiated Physician Astronaut can be able to implement the necessary medical intervention if needed during the mission."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "With these provisions in place, IMPACT shows that the risk for QTL can successfully be reduced to an acceptable level by the time the crew reaches the transit phase of the mission."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "SCENARIO 8: UPDATED RISK IMPACT IF A NEW CONDITION IS DETERMINED, USING REAL-TIME INVENTORY Stakeholders: MedOps, OCHMO, Lunar Program Management, Lunar Program Medical System Management Life Cycle Phase: Phase E Midway during a lunar mission, MedOps is alerted by the Crew Medical Officer (CMO) onboard the vehicle that they have diagnosed a condition in a fellow crewmember that they had not been advised would be a possibility for occurrence during this 45-day mission."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "MedOps discusses the matter with the Lunar Program Medical System Management."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "They confirm that the medical system was not designed to be prepared to deal with a crewmember with this condition."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "MedOps is uncertain if the medical system contains sufficient resources, knowledge, ability, and skills on the vehicle to treat the condition."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "OCHMO is interested in how this new condition affects the medical risks, such as LOCL, RTDC, and CHI."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "The Lunar Program Management wants to understand if evacuation is warranted."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "MedOps obtains the latest resource inventory data from the vehicle and uses IMPACT to determine changes in these risks."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        0,
+        289
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        290,
+        537
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        538,
+        731
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        732,
+        875
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        876,
+        1135
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1136,
+        1190
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1191,
+        1272
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1273,
+        1475
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1476,
+        1548
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1549,
+        1686
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1687,
+        1899
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1900,
+        2124
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        2125,
+        2246
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        2247,
+        2333
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "normalized_body_span": [
+        2334,
+        2637
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        2638,
+        3313
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        3314,
+        3461
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        3462,
+        3932
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        3933,
+        4042
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        7,
+        8,
+        9
+      ],
+      "normalized_body_span": [
+        4043,
+        5453
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        5454,
+        5597
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        5598,
+        5700
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        5701,
+        5752
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        5753,
+        5931
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        5932,
+        6126
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6127,
+        6215
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6216,
+        6282
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6283,
+        6480
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6481,
+        6511
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6512,
+        6552
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6553,
+        6610
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6611,
+        6666
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6667,
+        6730
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6731,
+        6758
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        6759,
+        6999
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "normalized_body_span": [
+        7000,
+        7404
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        7405,
+        7794
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        7795,
+        8005
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        8006,
+        8859
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        8860,
+        9374
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "normalized_body_span": [
+        9375,
+        10762
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10763,
+        11082
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        11083,
+        11257
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        11258,
+        11818
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        11819,
+        12207
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "normalized_body_span": [
+        12208,
+        12631
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "normalized_body_span": [
+        12632,
+        12894
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12895,
+        13054
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "normalized_body_span": [
+        13055,
+        13729
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13730,
+        13916
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13917,
+        14101
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14102,
+        14142
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14143,
+        14288
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14289,
+        14481
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14482,
+        14678
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14679,
+        14901
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14902,
+        15017
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15018,
+        15245
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15246,
+        15573
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15574,
+        15679
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15680,
+        15888
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15889,
+        16080
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16081,
+        16315
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "normalized_body_span": [
+        16316,
+        16474
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16475,
+        16657
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16658,
+        16778
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16779,
+        16961
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16962,
+        17093
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17094,
+        17327
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17328,
+        17483
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17484,
+        18230
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18231,
+        18362
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18363,
+        18502
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18503,
+        18759
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18760,
+        18861
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18862,
+        19117
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19118,
+        19353
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19354,
+        19495
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19496,
+        19578
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19579,
+        20002
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20003,
+        20152
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20153,
+        20360
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20361,
+        20548
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20549,
+        20653
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20654,
+        20738
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20739,
+        20809
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20810,
+        20925
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20926,
+        21042
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21043,
+        21248
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21249,
+        21453
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21454,
+        21656
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21657,
+        21751
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21752,
+        22029
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        22030,
+        22136
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        22137,
+        22280
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        22281,
+        22469
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        22470,
+        22785
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        22786,
+        22966
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        22967,
+        23439
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23440,
+        23517
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23518,
+        23633
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23634,
+        23776
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23777,
+        23878
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23879,
+        23955
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23956,
+        24075
+      ]
+    }
+  ],
+  "removed_blocks": [
+    {
+      "page": 6,
+      "block": 13,
+      "text": "6",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 7,
+      "block": 15,
+      "text": "7",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 5,
+      "text": "8",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 10,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 11,
+      "text": "9",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 13,
+      "text": "10",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 13,
+      "text": "11",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 7,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 8,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 9,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 10,
+      "text": "12",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 7,
+      "text": "13",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 13,
+      "text": "14",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 9,
+      "text": "15",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 9,
+      "text": "16",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 6,
+      "text": "17",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 3,
+      "text": "18",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 14,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 15,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 16,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 17,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 18,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 19,
+      "text": "19",
+      "reason": "numeric_or_repeated_header"
+    }
+  ],
+  "source_only": true
+}

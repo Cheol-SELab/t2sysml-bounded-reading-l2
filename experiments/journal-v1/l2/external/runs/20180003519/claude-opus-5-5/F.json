@@ -1,0 +1,805 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "use severe weather avoidance plans, or Playbook routes, to safely divert traffic around weather-impacted regions"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "constraint",
+   "subject": "Severe Weather Avoidance Plans",
+   "expression": "devised two or more hours in advance of departure"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "NASA",
+   "label": "conducted a survey in 2015 of stakeholders"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "performer": "NASA",
+   "label": "is assembling a suite of integrated ground and aircraft-based technologies and decision-making aids"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "requirement",
+   "subject": "Airspace Technology Demonstrations 3",
+   "text": "These route efficiency enhancements are targeted at en route airspace and will enable continued use of en route and arrival metering in the presence of weather."
+  },
+  {
+   "unit_id": "U0015",
+   "type": "composition",
+   "whole": "Airspace Technology Demonstrations 3",
+   "parts": [
+    "Dynamic Weather Routes"
+   ]
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "leverages existing air traffic weather, airspace, and traffic data"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "builds upon existing ATM automation"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "identify those areas as Flow Constrained Area (FCA)"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "implement Severe Weather Avoidance Plans (SWAP)"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "Playbook routes are identified"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "constraint",
+   "subject": "Severe Weather Avoidance Plans",
+   "expression": "identified 2 to 8 hours prior to the time the constraint is predicted to develop"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "Air traffic controllers",
+   "label": "manually identify and request or amend these conservative routes"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "requirement",
+   "subject": "Airline flight dispatchers",
+   "text": "Airline flight dispatchers must file flight plans at least 45 min before push-back from the gate using their best available weather forecasts"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "Airline flight dispatchers",
+   "label": "file flight plans"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "constraint",
+   "subject": "Airline flight dispatchers",
+   "expression": "at least 45 min before push-back from the gate"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "constraint",
+   "subject": "Airline flight dispatchers",
+   "expression": "typically filed 1-2 hours before take-off"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "Airline flight dispatchers",
+   "label": "determine which SWAP routes are applicable to a flight's planned route of flight"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "Airline flight dispatchers",
+   "label": "file a revised route accordingly"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "action",
+   "performer": "Collaborative Trajectory Options Program",
+   "label": "allows operators to file multiple routes on a single flight plan"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "performer": "flight crews",
+   "label": "identify more efficient trajectories using flight management systems and weather radar"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "subject": "flight crews",
+   "text": "They often must consult either the controller or airline dispatch about alternate trajectories that will avoid large areas of adverse weather and flow restrictions"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "subject": "flight crews",
+   "text": "must coordinate with the controller to ensure an alternate trajectory will not conflict with another aircraft"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "NASA",
+   "label": "has developed and tested a ground-based concept called Dynamic Weather Routes (DWR)"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "automatically identify opportunities for more efficient trajectories around convective constraints"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "continuously and automatically analyzes in-flight aircraft within en route airspace"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "alerts the user to proposed route corrections"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "allows them to view and modify the route"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "flow",
+   "source": "Dynamic Weather Routes",
+   "target": "user",
+   "payload": "proposed route corrections"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "succession",
+   "before": "continuously and automatically analyzes in-flight aircraft within en route airspace",
+   "after": "alerts the user to proposed route corrections"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "performer": "DWR user interface",
+   "label": "provides strong warnings"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "flow",
+   "source": "DWR user interface",
+   "target": "user",
+   "payload": "strong warnings"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "composition",
+   "whole": "Dynamic Weather Routes",
+   "parts": [
+    "Direct-To tool"
+   ]
+  },
+  {
+   "unit_id": "U0047",
+   "type": "requirement",
+   "subject": "Dynamic Weather Routes",
+   "text": "Any Direct-To route that meets the minimum wind-corrected, time-savings criteria (user-definable) will appear as a DWR route correction advisory regardless of the presence of convective weather."
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "continuously and automatically analyzing in-flight aircraft operating within en route airspace above 10,000 ft"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "constraint",
+   "subject": "Dynamic Weather Routes",
+   "expression": "above 10,000 ft"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "analyzes and updates trajectories"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "target": "Dynamic Weather Routes",
+   "payload": "radar track and flight plan data"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "identifies flights that could save a user-defined minimum amount of time"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "constraint",
+   "subject": "Dynamic Weather Routes",
+   "expression": "default of five minutes"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "label": "are continuously and automatically analyzed"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "constraint",
+   "subject": "Dynamic Weather Routes",
+   "expression": "at or above 10,000 ft"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "attribute",
+   "owner": "Maneuver Start Point",
+   "name": "default position",
+   "value": "5",
+   "unit": "min downstream of present position"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "constraint",
+   "subject": "reference direct route",
+   "expression": "can save 5 min or more"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "action",
+   "label": "probed for weather and traffic conflicts"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "succession",
+   "before": "are continuously and automatically analyzed",
+   "after": "probed for weather and traffic conflicts"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "inserts one or two auxiliary waypoints"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "label": "further adjusted automatically"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "label": "a DWR route advisory is posted to an alert list on the user display"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "flow",
+   "source": "Dynamic Weather Routes",
+   "target": "DWR flight list",
+   "payload": "DWR route advisory"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "constraint",
+   "subject": "Dynamic Weather Routes",
+   "expression": "5 min default"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "snap-to named fix option",
+   "label": "automatically replaces any auxiliary waypoints with nearby named fixes"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "label": "posted to the DWR alert list"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "label": "analyzed for conflict with congested airspace sectors and with Special Use Airspace (SUA)"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "incorporated into the user interface display"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "performer": "user",
+   "label": "activates an automated interactive trial planning function"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "constraint",
+   "subject": "Dynamic Weather Routes",
+   "expression": "update rapidly (within 1 sec)"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "limit function",
+   "label": "determines the default RCF"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "employs a limit rectangle"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "constraint",
+   "subject": "limit rectangle",
+   "expression": "extends roughly 200 nmi beyond the ZFW boundary"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "composition",
+   "whole": "Future ATM Concept Evaluation Tool",
+   "parts": [
+    "National Airspace System Constraint Evaluation and Notification Tool"
+   ]
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "user",
+   "label": "identified the need for an MSP"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "attribute",
+   "owner": "Maneuver Start Point",
+   "name": "default value",
+   "value": "5",
+   "unit": "minutes"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "user",
+   "label": "adjust the MSP using click and drag inputs"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "user",
+   "label": "assess the effect on status parameters"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "constraint",
+   "subject": "Maneuver Start Point",
+   "expression": "within 10 nmi of a flight plan fix"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "performer": "Maneuver Start Point",
+   "label": "snaps to the flight plan fix"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "flow",
+   "source": "Dynamic Weather Routes",
+   "target": "FAA traffic managers",
+   "payload": "flight list"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "flow",
+   "source": "Dynamic Weather Routes",
+   "target": "airline ATC coordinator",
+   "payload": "flight list"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "user",
+   "label": "select and modify the new route"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "label": "posted to a DWR flight list"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "action",
+   "label": "prominently displayed on the user's traffic display"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "composition",
+   "whole": "DWR flight list",
+   "parts": [
+    "flight ID",
+    "estimated flight-time savings"
+   ]
+  },
+  {
+   "unit_id": "U0097",
+   "type": "composition",
+   "whole": "DWR flight list",
+   "parts": [
+    "traffic (TR) conflict status indicator",
+    "sector load (SC) conflict status indicator",
+    "weather (WX) conflict status indicator"
+   ]
+  },
+  {
+   "unit_id": "U0106",
+   "type": "composition",
+   "whole": "Plan-view Graphical User Interface",
+   "parts": [
+    "DWR flight list"
+   ]
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "performer": "user",
+   "label": "visualize proposed routes and modify them"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "performer": "user",
+   "label": "adjust the RCF, the number and position of auxiliary waypoints, and the MSP"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "label": "update dynamically"
+  },
+  {
+   "unit_id": "U0115",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "dismiss a potential reroute (trial plan)"
+  },
+  {
+   "unit_id": "U0115",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "keep searching for another"
+  },
+  {
+   "unit_id": "U0117",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "utilizes convective weather forecast data"
+  },
+  {
+   "unit_id": "U0117",
+   "type": "flow",
+   "source": "Corridor Integrated Weather System",
+   "target": "Dynamic Weather Routes",
+   "payload": "convective weather forecast data"
+  },
+  {
+   "unit_id": "U0117",
+   "type": "flow",
+   "source": "Convective Weather Avoidance Model",
+   "target": "Dynamic Weather Routes",
+   "payload": "convective weather forecast data"
+  },
+  {
+   "unit_id": "U0118",
+   "type": "action",
+   "performer": "Corridor Integrated Weather System",
+   "label": "forecasts the growth, decay, and movement of convective weather"
+  },
+  {
+   "unit_id": "U0118",
+   "type": "constraint",
+   "subject": "Corridor Integrated Weather System",
+   "expression": "updates every 5 minutes"
+  },
+  {
+   "unit_id": "U0118",
+   "type": "constraint",
+   "subject": "Corridor Integrated Weather System",
+   "expression": "2-hour look-ahead time in 5-minute increments"
+  },
+  {
+   "unit_id": "U0119",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "identify alternative routes"
+  },
+  {
+   "unit_id": "U0120",
+   "type": "action",
+   "performer": "Convective Weather Avoidance Model",
+   "label": "identifies boundaries around convective cells"
+  },
+  {
+   "unit_id": "U0124",
+   "type": "constraint",
+   "subject": "Weather Avoidance Field",
+   "expression": "every 5-minute CWIS forecast interval out to 2 hours"
+  },
+  {
+   "unit_id": "U0124",
+   "type": "constraint",
+   "subject": "Weather Avoidance Field",
+   "expression": "FL250 to FL450 in 1,000' increments"
+  },
+  {
+   "unit_id": "U0125",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "utilizes 70% WAF polygons when generating route advisories"
+  },
+  {
+   "unit_id": "U0125",
+   "type": "attribute",
+   "owner": "Dynamic Weather Routes",
+   "name": "default WAF parameter",
+   "value": "70",
+   "unit": "%"
+  },
+  {
+   "unit_id": "U0125",
+   "type": "composition",
+   "whole": "Dynamic Weather Routes",
+   "parts": [
+    "gap detection and rejection logic"
+   ]
+  },
+  {
+   "unit_id": "U0126",
+   "type": "requirement",
+   "subject": "gap detection and rejection logic",
+   "text": "This function includes a distance buffer that will reject a route amendment if it will go through a gap that is narrower than 50nm laterally either side of route and 75nm longitudinally to the predicted cells"
+  },
+  {
+   "unit_id": "U0126",
+   "type": "action",
+   "performer": "gap detection and rejection logic",
+   "label": "reject a route amendment"
+  },
+  {
+   "unit_id": "U0126",
+   "type": "constraint",
+   "subject": "gap detection and rejection logic",
+   "expression": "narrower than 50nm laterally"
+  },
+  {
+   "unit_id": "U0126",
+   "type": "constraint",
+   "subject": "gap detection and rejection logic",
+   "expression": "75nm longitudinally"
+  }
+ ],
+ "entities": [
+  {
+   "name": "National Airspace System",
+   "aliases": [
+    "NAS"
+   ]
+  },
+  {
+   "name": "FAA",
+   "aliases": []
+  },
+  {
+   "name": "NextGen program",
+   "aliases": []
+  },
+  {
+   "name": "FAA traffic managers",
+   "aliases": [
+    "traffic managers"
+   ]
+  },
+  {
+   "name": "NASA",
+   "aliases": []
+  },
+  {
+   "name": "Airspace Technology Demonstrations 3",
+   "aliases": [
+    "ATD-3"
+   ]
+  },
+  {
+   "name": "Dynamic Weather Routes",
+   "aliases": [
+    "DWR"
+   ]
+  },
+  {
+   "name": "Traffic Management Initiatives",
+   "aliases": [
+    "TMIs"
+   ]
+  },
+  {
+   "name": "Flow Constrained Area",
+   "aliases": [
+    "FCA"
+   ]
+  },
+  {
+   "name": "Severe Weather Avoidance Plans",
+   "aliases": [
+    "SWAP",
+    "Playbook routes"
+   ]
+  },
+  {
+   "name": "Collaborative Trajectory Options Program",
+   "aliases": [
+    "CTOP"
+   ]
+  },
+  {
+   "name": "Airline flight dispatchers",
+   "aliases": [
+    "dispatchers"
+   ]
+  },
+  {
+   "name": "Air traffic controllers",
+   "aliases": [
+    "controllers"
+   ]
+  },
+  {
+   "name": "flight crews",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": [
+    "users"
+   ]
+  },
+  {
+   "name": "DWR user interface",
+   "aliases": []
+  },
+  {
+   "name": "Direct-To tool",
+   "aliases": []
+  },
+  {
+   "name": "Maneuver Start Point",
+   "aliases": [
+    "MSP"
+   ]
+  },
+  {
+   "name": "Return Capture Fix",
+   "aliases": [
+    "RCF"
+   ]
+  },
+  {
+   "name": "reference direct route",
+   "aliases": []
+  },
+  {
+   "name": "auxiliary waypoints",
+   "aliases": []
+  },
+  {
+   "name": "snap-to named fix option",
+   "aliases": []
+  },
+  {
+   "name": "Special Use Airspace",
+   "aliases": [
+    "SUA"
+   ]
+  },
+  {
+   "name": "limit function",
+   "aliases": []
+  },
+  {
+   "name": "limit rectangle",
+   "aliases": []
+  },
+  {
+   "name": "limit polygon",
+   "aliases": []
+  },
+  {
+   "name": "Future ATM Concept Evaluation Tool",
+   "aliases": [
+    "FACET"
+   ]
+  },
+  {
+   "name": "National Airspace System Constraint Evaluation and Notification Tool",
+   "aliases": [
+    "NASCENT"
+   ]
+  },
+  {
+   "name": "DWR flight list",
+   "aliases": [
+    "DWR alert list",
+    "DWR list"
+   ]
+  },
+  {
+   "name": "airline ATC coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Plan-view Graphical User Interface",
+   "aliases": []
+  },
+  {
+   "name": "Corridor Integrated Weather System",
+   "aliases": [
+    "CIWS"
+   ]
+  },
+  {
+   "name": "Convective Weather Avoidance Model",
+   "aliases": [
+    "CWAM"
+   ]
+  },
+  {
+   "name": "Weather Avoidance Field",
+   "aliases": [
+    "WAF"
+   ]
+  },
+  {
+   "name": "gap detection and rejection logic",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0127"
+   ],
+   "chunk_tokens": 4487,
+   "memory_tokens": 0,
+   "prompt_tokens": 5656,
+   "input": 9803,
+   "output": 11279,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

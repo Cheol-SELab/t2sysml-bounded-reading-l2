@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Autonomous Forklift Fleet, label=reports any remaining equipment restrictions)\n\nSource sentences (the last one is where the fact was extracted):\nS230: Morrowglass closes the commissioning action register only after unresolved findings have named owners and due dates.\nS231: Cinderbay records governance approval and confirms that the accepted operating configuration is under change control.\nS232: Brasshaven verifies that conveyor zones are clear and records the completion of its assigned closing checks.\nS233: Larkspur parks its vehicles in approved locations and reports any remaining equipment restrictions for the next shift.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S233 says Larkspur reports remaining equipment restrictions, so the action is right. The fact names the performer as Autonomous Forklift Fleet, and nothing in the excerpt shows that Larkspur is an alias for it; Larkspur may be a person or organization that parks vehicles. The performer slot is therefore unsupported.\"}",
+ "usage": {
+  "input_tokens": 657,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 129,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.482,
+ "created": "2026-10-14T12:52:15"
+}

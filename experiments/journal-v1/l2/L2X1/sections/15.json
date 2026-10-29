@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Departure metering extends the restriction handling process by deciding where delay is best absorbed before aircraft begin taxi.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service, known operationally as Emberline, is the system function that converts runway demand into controlled stand delay before aircraft enter the taxi stream.",
+   "tags": [
+    "ALIAS:E_DEPARTURE_METERING_SERVICE"
+   ]
+  },
+  {
+   "text": "The metering process starts when the Regional Flow Platform normalizes each Flight Intent Message against the current Airport Capacity Plan.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service estimates the departure demand profile by stand, apron area, runway, and departure fix.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module compares that demand with the active Airport Acceptance Rate, runway configuration, taxiway constraints, and sector limits.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service then derives a feasible Target Off Block Time that protects the Calculated Takeoff Time without overloading the surface movement area.",
+   "tags": []
+  },
+  {
+   "text": "Stand absorption is preferred when the aircraft can remain connected to normal operator processes and when holding at the gate will not create a gate conflict.",
+   "tags": []
+  },
+  {
+   "text": "Pushback windows are coordinated as narrow time bands that give the flight crew, ramp team, and tower sequence a common expectation without treating the window as a clearance to move.",
+   "tags": []
+  },
+  {
+   "text": "Blueharbor shall adjust allocated departure times when metering rules require additional stand absorption to preserve the planned runway sequence.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "text": "Halcyon records the agreed pushback window rationale in the coordination notes before the plan is released to operational users.",
+   "tags": [
+    "A13:link"
+   ]
+  },
+  {
+   "text": "The Ramp Control Lead reviews the proposed windows against apron congestion, towing activity, and aircraft readiness before accepting them for local execution.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor monitors whether the planned release rate remains compatible with departure spacing and runway crossing demand.",
+   "tags": []
+  },
+  {
+   "text": "The North Runway Meter and South Runway Meter maintain independent queue counts so that one runway cannot mask an excess queue on the other runway.",
+   "tags": []
+  },
+  {
+   "text": "Surface surveillance inputs from the Surface Surveillance Adapter are used to confirm the actual number of aircraft waiting at runway holding points.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board produces the Fuel Truck Hold Advice when metering decisions require servicing activity to remain clear of an aircraft that is being held at stand.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "text": "The Airline Operations Coordinator confirms whether each affected aircraft can absorb the assigned delay at stand without compromising crew, passenger, or turnaround constraints.",
+   "tags": []
+  },
+  {
+   "text": "If an operator cannot accept the proposed stand delay, the Aircraft Operator Representative requests reconsideration through the Airport CDM Portal.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector warns when continued stand holding would block an inbound allocation or create a conflict with a planned equipment move.",
+   "tags": []
+  },
+  {
+   "text": "Business Rules Registry parameters define the maximum planned runway queue, the warning threshold, and the intervention threshold for each runway configuration.",
+   "tags": []
+  },
+  {
+   "text": "When a predicted queue exceeds the warning threshold, the Alert Distribution Hub highlights the affected runway queue on the Common Situation Display.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, the Regional Flow Manager may increase stand absorption to prevent unstable taxi queues from forming under reduced visibility or wet surface conditions.",
+   "tags": []
+  },
+  {
+   "text": "In a Capacity Reduction State, the Airport Duty Manager and Tower Supervisor agree whether the metering horizon should be extended so that delay is absorbed before pushback rather than near the runway.",
+   "tags": []
+  },
+  {
+   "text": "All changes to Target Off Block Time values, Calculated Takeoff Time values, and threshold overrides are written to the Collaborative Decision Log and Audit Event Ledger.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse later compares planned stand absorption, actual off block performance, and runway queue length to verify that the agreed thresholds were not exceeded.",
+   "tags": []
+  }
+ ]
+}

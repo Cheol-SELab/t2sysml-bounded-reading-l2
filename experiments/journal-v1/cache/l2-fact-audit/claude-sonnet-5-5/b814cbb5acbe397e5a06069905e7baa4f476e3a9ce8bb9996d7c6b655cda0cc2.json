@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: succession(before=reviewed emergency changes, after=normal operation resumes)\n\nSource sentences (the last one is where the fact was extracted):\nS236: The Safety Zone Controller is verified against the approved access boundaries and stop-response behavior.\nS237: The Inbound Inspection Desk and Outbound Dispatch Sorter confirm that their operating interfaces are available and that exceptions can be held safely.\nS238: Changes to software, equipment settings, or operating procedures require an impact review, approval, and a controlled implementation record.\nS239: Emergency changes are documented promptly and reviewed by the Warehouse Operations Supervisor before normal operation resumes.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S239 states that emergency changes are reviewed by the Warehouse Operations Supervisor before normal operation resumes, so review precedes resumption of normal operation.\"}",
+ "usage": {
+  "input_tokens": 674,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 70,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.423,
+ "created": "2026-10-14T12:52:25"
+}

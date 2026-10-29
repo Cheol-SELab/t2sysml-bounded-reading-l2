@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ground Handling Dispatcher provides \"the Towbar Shortage Report\" to Ramp Control Lead (an information or material flow).\n\nSource sentences:\nS522: The Handling Resource Planner assigns a severity level to the handler exception and suppresses duplicate updates while the accountable party is still working the same recovery action.\nS523: The Ground Handling Dispatcher sends the Towbar Shortage Report when towbar availability cannot support the agreed pushback sequence.\nS555: The Regional Flow Manager considers repeated remote stand transfer delays as an input to tactical capacity assessment during peak arrival and departure banks.\nS556: Ramp Control Lead uses the Towbar Shortage Report to determine whether remote stand aircraft can be repositioned without creating secondary apron congestion.\n\nAnswer \"supported\" only if the sentences state that Ground Handling Dispatcher produces or sends this item AND that Ramp Control Lead receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S523 states that Ground Handling Dispatcher sends the Towbar Shortage Report, and S556 states that Ramp Control Lead uses that same report.\"}",
+ "usage": {
+  "input_tokens": 319,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 364
+ },
+ "attempts": 1,
+ "wall_s": 2.618,
+ "created": "2026-10-14T12:46:39"
+}

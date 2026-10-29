@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Cybersecurity Desk provides \"a Security Exception Ticket\" to Network Control System (an information or material flow).\n\nSource sentences:\nS073: Cybersecurity monitoring is applied at each site through network sensors, endpoint telemetry, privileged-access logging, and configuration compliance checks that are reviewed during every operational shift.\nS074: The Cybersecurity Desk sends a Security Exception Ticket when a monitored event requires temporary deviation from the approved security baseline.\nS169: Held products remain reproducible in staging storage, but they are not promoted for user delivery until the blocking condition has been cleared.\nS170: The Network Control System uses the Security Exception Ticket to restrict affected transfer paths until approved containment actions are complete.\n\nAnswer \"supported\" only if the sentences state that Cybersecurity Desk produces or sends this item AND that Network Control System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S074 states that the Cybersecurity Desk sends a Security Exception Ticket, and S170 states that the Network Control System uses the same ticket.\"}",
+ "usage": {
+  "input_tokens": 314,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 359
+ },
+ "attempts": 1,
+ "wall_s": 4.297,
+ "created": "2026-10-14T12:41:50"
+}

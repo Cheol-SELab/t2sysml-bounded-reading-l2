@@ -1,0 +1,3705 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "warehouse operating boundary",
+   "label": "begins at the designated receiving interface"
+  },
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "warehouse operating boundary",
+   "label": "ends when a completed outbound load is released from the shipping interface"
+  },
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "label": "is released from the shipping interface"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "remain within this boundary"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "label": "are inspected"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "label": "identified"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "label": "buffered"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "label": "stored"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "label": "retrieved"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "label": "prepared for dispatch"
+  },
+  {
+   "unit_id": "S003",
+   "type": "constraint",
+   "subject": "Pallets",
+   "expression": "Inbound acceptance is conditional on a valid receipt instruction and a pallet that can be safely handled within the facility."
+  },
+  {
+   "unit_id": "S003",
+   "type": "action",
+   "label": "can be safely handled within the facility"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "records inspection outcomes"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "enter storage operations"
+  },
+  {
+   "unit_id": "S004",
+   "type": "succession",
+   "before": "records inspection outcomes",
+   "after": "enter storage operations"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Pallet Dimension Scanner",
+   "label": "captures dimensions used to determine handling and storage eligibility"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "label": "determine handling and storage eligibility"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Inbound Pallet Buffer",
+   "label": "holds accepted pallets temporarily"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "label": "cannot proceed immediately"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "label": "are assigned to support safe handling, efficient retrieval, and the required inventory controls"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "performs assigned storage and retrieval work in its designated aisle"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "South Aisle Stacker Crane",
+   "label": "performs assigned storage and retrieval work in its designated aisle"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "carries pallets along its designated transfer route"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "West Transfer Conveyor",
+   "label": "carries pallets along its designated transfer route"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "coordinates conveyor movement within its assigned operating scope"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "moves pallets only within approved travel areas and under authorized tasking"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "controls vehicle access at the facility perimeter"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "organizes eligible pallets for their assigned dispatch sequence"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Outbound Checkweigh Scale",
+   "label": "verifies pallet weight before shipment completion"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Shipping Documentation Desk",
+   "label": "prepares the records required for outbound loads"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "oversees exceptions, operational priorities, and recovery decisions"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "maintains the authoritative status, location, and handling eligibility of each controlled pallet"
+  },
+  {
+   "unit_id": "S021",
+   "type": "requirement",
+   "subject": "equipment",
+   "text": "No equipment may begin inventory-moving work without an authorized release from the Warehouse Management System."
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "equipment",
+   "label": "begin inventory-moving work"
+  },
+  {
+   "unit_id": "S021",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "target": "equipment",
+   "payload": "authorized release"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "label": "are reconciled so that recorded locations remain dependable throughout operations"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "label": "process accepted pallets accurately"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "label": "meet committed dispatch times without bypassing safety or inventory controls"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "enforces movement restrictions in designated protected areas"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "provides facility alarm status for operational response"
+  },
+  {
+   "unit_id": "S025",
+   "type": "flow",
+   "source": "Fire Alarm Panel",
+   "payload": "facility alarm status"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "Maintenance Release Terminal",
+   "label": "records equipment availability for operational planning"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "label": "are checked against the scheduled delivery window"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "label": "a door assignment is made"
+  },
+  {
+   "unit_id": "S027",
+   "type": "succession",
+   "before": "are checked against the scheduled delivery window",
+   "after": "a door assignment is made"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "records vehicle identity, carrier, trailer number, and arrival time"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "Drivers",
+   "label": "follow the gate instructions to the designated staging lane"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "label": "a receiving door is prepared"
+  },
+  {
+   "unit_id": "S030",
+   "type": "flow",
+   "source": "Yard Gate Controller",
+   "target": "Drivers",
+   "payload": "gate instructions"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "gate process",
+   "label": "flags unscheduled arrivals for review"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "unscheduled arrivals",
+   "label": "enter the receiving area"
+  },
+  {
+   "unit_id": "S031",
+   "type": "succession",
+   "before": "flags unscheduled arrivals for review",
+   "after": "enter the receiving area"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "checks delivery paperwork against the expected shipment"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "confirms the trailer is presented for inspection"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "label": "is presented for inspection"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "Staff",
+   "label": "verify trailer identification"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "Staff",
+   "label": "inspect accessible seals"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "label": "unloading is authorized"
+  },
+  {
+   "unit_id": "S034",
+   "type": "succession",
+   "before": "verify trailer identification",
+   "after": "unloading is authorized"
+  },
+  {
+   "unit_id": "S034",
+   "type": "succession",
+   "before": "inspect accessible seals",
+   "after": "unloading is authorized"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "label": "are recorded with the affected shipment details"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "sends the Trailer Seal Exception Note"
+  },
+  {
+   "unit_id": "S036",
+   "type": "flow",
+   "source": "Inbound Inspection Desk",
+   "payload": "Trailer Seal Exception Note"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "label": "is assigned only when the door, staging lane, and unloading crew are available"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "label": "are coordinated with the current yard position"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "trailer",
+   "label": "do not obstruct active traffic routes"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "directs each cleared trailer from staging to its assigned receiving door"
+  },
+  {
+   "unit_id": "S039",
+   "type": "flow",
+   "source": "Yard Gate Controller",
+   "target": "trailer",
+   "payload": "door assignment"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "trailer",
+   "label": "remains in a safe holding position"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "label": "a revised assignment is confirmed"
+  },
+  {
+   "unit_id": "S040",
+   "type": "state",
+   "owner": "receiving door",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "maintains the expected inbound shipment data used during receiving checks"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "sends the Dispatch Wave Amendment"
+  },
+  {
+   "unit_id": "S042",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "target": "Outbound Dispatch Sorter",
+   "payload": "Dispatch Wave Amendment"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "Receiving staff",
+   "label": "compare the physical pallet count with the shipment paperwork"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "label": "unloading is completed"
+  },
+  {
+   "unit_id": "S043",
+   "type": "succession",
+   "before": "compare the physical pallet count with the shipment paperwork",
+   "after": "unloading is completed"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "label": "are kept separate from acceptable stock"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "label": "the discrepancy is assessed"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "records inspection results promptly"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "label": "are monitored throughout unloading"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "label": "prevent conflicting vehicle movements"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "Yard personnel",
+   "label": "notify receiving staff when a trailer is ready to leave the door and return to the yard route"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "trailer",
+   "label": "leave the door"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "trailer",
+   "label": "return to the yard route"
+  },
+  {
+   "unit_id": "S047",
+   "type": "flow",
+   "source": "Yard personnel",
+   "target": "Receiving staff",
+   "payload": "a trailer is ready to leave the door and return to the yard route"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "label": "is paused"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "label": "is discovered"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "resolves receiving issues that exceed the desk's routine authority"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "label": "the shipment count, inspection status, and door release are recorded"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "label": "closes"
+  },
+  {
+   "unit_id": "S050",
+   "type": "succession",
+   "before": "the shipment count, inspection status, and door release are recorded",
+   "after": "closes"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "Storage allocation",
+   "label": "begins"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "label": "the shipment count, inspection status, and door release have been recorded"
+  },
+  {
+   "unit_id": "S051",
+   "type": "succession",
+   "before": "the shipment count, inspection status, and door release have been recorded",
+   "after": "begins"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "evaluates available positions against pallet dimensions, mass, storage compatibility, and expected retrieval demand"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "label": "is generally assigned to positions that support short travel paths to its next handling step"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "label": "are assigned only to positions approved for those conditions"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "allocation logic",
+   "label": "preserves clearances for the pallet and the equipment needed to access it"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "equipment",
+   "label": "access it"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "label": "is excluded"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "produces the Slot Reservation Receipt"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "label": "remains subject to confirmation that the selected position and its access path are available for operation"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "reservation record",
+   "label": "identifies the selected position and the conditions used to validate its suitability"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "label": "validate its suitability"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "label": "are divided into aisle zones"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "label": "limit conflicting equipment movement"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "stacker crane",
+   "label": "normally retrieves"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "stacker crane",
+   "label": "stores pallets within its assigned aisle boundaries"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "serves storage positions in the north aisle"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "follows the aisle's configured travel limits"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "South Aisle Stacker Crane",
+   "label": "serves its assigned storage positions under equivalent travel and access controls"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "label": "is controlled"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "label": "does not extend beyond authorized operating zones"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "label": "are issued only when the target position and the required aisle conditions are valid"
+  },
+  {
+   "unit_id": "S066",
+   "type": "flow",
+   "payload": "Crane commands"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Pallet Dimension Scanner",
+   "label": "measures pallet height, width, and length"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "label": "storage suitability is finalized"
+  },
+  {
+   "unit_id": "S068",
+   "type": "succession",
+   "before": "measures pallet height, width, and length",
+   "after": "storage suitability is finalized"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "label": "is checked against configured dimensional limits and the declared pallet profile"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Pallet Dimension Scanner",
+   "label": "produces the Oversize Load Advisory"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Oversize Load Advisory",
+   "label": "identifies a measured profile that exceeds an applicable storage or handling limit"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Oversize Load Advisory",
+   "label": "does not by itself authorize placement in a position that fails the storage rules"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "can retain the measured dimensions with the pallet's inventory record for later allocation decisions"
+  },
+  {
+   "unit_id": "S073",
+   "type": "flow",
+   "source": "Pallet Dimension Scanner",
+   "target": "Warehouse Management System",
+   "payload": "dimensions"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "can review unresolved allocation conditions through established operational procedures"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "enter the conveyor area"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "label": "inspection"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "label": "identification"
+  },
+  {
+   "unit_id": "S075",
+   "type": "succession",
+   "before": "inspection",
+   "after": "enter the conveyor area"
+  },
+  {
+   "unit_id": "S075",
+   "type": "succession",
+   "before": "identification",
+   "after": "enter the conveyor area"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "carries pallets along the eastern approach to the transfer area"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "West Transfer Conveyor",
+   "label": "carries pallets along the western approach to the transfer area"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "sequences pallet movement across the available conveyor sections"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "uses conveyor status and transfer-point signals to determine when a pallet can advance"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "determine when a pallet can advance"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "can advance"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "maintains a separate sequence for each active conveyor path"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "interlocks",
+   "label": "prevent movement into a section that is occupied or unavailable"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Presence sensors",
+   "label": "confirm that a pallet has reached the expected position"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "has reached the expected position"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "label": "a transfer is initiated"
+  },
+  {
+   "unit_id": "S083",
+   "type": "succession",
+   "before": "confirm that a pallet has reached the expected position",
+   "after": "a transfer is initiated"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "transfer point",
+   "label": "holds the affected pallet upstream"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "label": "may continue operating"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "Accumulation zones",
+   "label": "provide controlled spacing between pallets"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "label": "pauses"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "label": "Release from an accumulation zone occurs"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "conveyor sections",
+   "label": "reports ready"
+  },
+  {
+   "unit_id": "S086",
+   "type": "flow",
+   "source": "conveyor sections",
+   "payload": "ready"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "grants passage to one approaching pallet at a time"
+  },
+  {
+   "unit_id": "S087",
+   "type": "constraint",
+   "subject": "Conveyor Line Controller",
+   "expression": "one approaching pallet at a time"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "produces the Transfer Induction Ticket for each accepted induction"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "output record",
+   "label": "carries the identifiers and routing details needed to associate the induction with its pallet"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "label": "associate the induction with its pallet"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "checks that required induction fields are present"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "releasing the pallet from the transfer point"
+  },
+  {
+   "unit_id": "S090",
+   "type": "succession",
+   "before": "checks that required induction fields are present",
+   "after": "releasing the pallet from the transfer point"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "are held for resolution rather than treated as new pallet movements"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "sends the Aisle Occupancy Snapshot"
+  },
+  {
+   "unit_id": "S092",
+   "type": "flow",
+   "source": "North Aisle Stacker Crane",
+   "target": "Warehouse Management System",
+   "payload": "Aisle Occupancy Snapshot"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Aisle Occupancy Snapshot",
+   "label": "reflects the crane's current view of occupied and available storage positions"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "label": "support safer decisions about whether an induction can proceed"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "label": "can proceed"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "updates its reported condition as its operating state changes"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "remains held until current status is available"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "can review persistent holds through established operational procedures"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "label": "a fault is cleared"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "verifies transfer-point readiness"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "resuming the held sequence"
+  },
+  {
+   "unit_id": "S098",
+   "type": "succession",
+   "before": "a fault is cleared",
+   "after": "verifies transfer-point readiness"
+  },
+  {
+   "unit_id": "S098",
+   "type": "succession",
+   "before": "verifies transfer-point readiness",
+   "after": "resuming the held sequence"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "label": "resumes without changing the order of pallets already committed to a transfer path"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "label": "resumes without changing the order of pallets already committed to a transfer path"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "label": "starts"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "establishes the intended shipment window and loading priorities"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Wave planning",
+   "label": "accounts for pallet identity, destination, due time, and the available staging positions"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "checks that planned pallet moves remain consistent with outbound capacity and current inventory records"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "issues a Dispatch Wave Amendment"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "label": "wave preparation has begun"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "label": "changes after wave preparation has begun"
+  },
+  {
+   "unit_id": "S105",
+   "type": "succession",
+   "before": "wave preparation has begun",
+   "after": "changes after wave preparation has begun"
+  },
+  {
+   "unit_id": "S105",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "target": "Outbound Dispatch Sorter",
+   "payload": "Dispatch Wave Amendment"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "receives the Dispatch Wave Amendment"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "applies its authorized changes to outbound staging"
+  },
+  {
+   "unit_id": "S106",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "target": "Outbound Dispatch Sorter",
+   "payload": "Dispatch Wave Amendment"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "preserves committed pallet order"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Dispatch Wave Amendment",
+   "label": "explicitly authorizes a change"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "accepts work only when its vehicle status, assigned operating area, and required travel path are valid"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "vehicle",
+   "label": "selects an available task according to dispatch priority, battery condition, and proximity to the pickup point"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "label": "accounts for aisle access, transfer-point readiness, pedestrian controls, and temporary operating restrictions"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "vehicle",
+   "label": "confirm pallet identity and pickup location"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "vehicle",
+   "label": "lifting a load"
+  },
+  {
+   "unit_id": "S112",
+   "type": "succession",
+   "before": "confirm pallet identity and pickup location",
+   "after": "lifting a load"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "limits speed and turning rates"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "protect pallet stability"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "maintain safe clearance from warehouse structures"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "assembles the data needed to document each completed transfer and its receiving position"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "document each completed transfer and its receiving position"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "produces the Forklift Handoff Confirmation"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "the transfer is complete"
+  },
+  {
+   "unit_id": "S115",
+   "type": "succession",
+   "before": "the transfer is complete",
+   "after": "produces the Forklift Handoff Confirmation"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "Handoff reporting",
+   "label": "records the vehicle identifier, pallet identifier, transfer time, and any incomplete or deferred movement"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "produces the Sprinkler Zone Inhibit Notice"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "label": "the applicable fire-protection condition is detected"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "vehicle",
+   "label": "stop"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "vehicle",
+   "label": "reroute"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "prevent entry to an assigned travel area"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "provide designated interfaces for moving pallets between vehicle travel and outbound staging"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "West Transfer Conveyor",
+   "label": "provide designated interfaces for moving pallets between vehicle travel and outbound staging"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "label": "moving pallets between vehicle travel and outbound staging"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "dimensions",
+   "label": "support route and handling decisions for loads that exceed standard pallet envelopes"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "verifies that staging positions match the current outbound plan"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "label": "loading begins"
+  },
+  {
+   "unit_id": "S121",
+   "type": "succession",
+   "before": "verifies that staging positions match the current outbound plan",
+   "after": "loading begins"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "Shipping Documentation Desk",
+   "label": "prepares shipment records from the confirmed pallet and destination data"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "releasing the next outbound wave"
+  },
+  {
+   "unit_id": "S123",
+   "type": "succession",
+   "before": "reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints",
+   "after": "releasing the next outbound wave"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "maintains the authoritative task state for pallet movements, inventory status, and operating priorities"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "label": "act on current work without duplicating assignments"
+  },
+  {
+   "unit_id": "S126",
+   "type": "requirement",
+   "subject": "Work requests",
+   "text": "Work requests should include a unique task reference, a destination, and any operating constraints needed for safe execution."
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Work requests",
+   "label": "should include a unique task reference, a destination, and any operating constraints needed for safe execution"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "validates arriving vehicle information against the active receiving plan"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "directing a vehicle onward"
+  },
+  {
+   "unit_id": "S127",
+   "type": "succession",
+   "before": "validates arriving vehicle information against the active receiving plan",
+   "after": "directing a vehicle onward"
+  },
+  {
+   "unit_id": "S127",
+   "type": "flow",
+   "source": "Yard Gate Controller",
+   "target": "vehicle",
+   "payload": "gate instructions"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "records unresolved discrepancies for review"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "prevents an affected vehicle from proceeding"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "uses the exception note to manage a receiving discrepancy at the gate"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "manage a receiving discrepancy at the gate"
+  },
+  {
+   "unit_id": "S129",
+   "type": "flow",
+   "source": "Inbound Inspection Desk",
+   "target": "Yard Gate Controller",
+   "payload": "Trailer Seal Exception Note"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "receiving exception",
+   "label": "remains visible to the Warehouse Operations Supervisor"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "label": "the discrepancy has been assessed"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "label": "resolved"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "records inspection outcomes"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "enter routine warehouse handling"
+  },
+  {
+   "unit_id": "S131",
+   "type": "succession",
+   "before": "records inspection outcomes",
+   "after": "enter routine warehouse handling"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Inbound Pallet Buffer",
+   "label": "provides a controlled staging point"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "Pallet Dimension Scanner",
+   "label": "supplies measurements used to identify pallets that require a different handling path"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "identify pallets that require a different handling path"
+  },
+  {
+   "unit_id": "S133",
+   "type": "flow",
+   "source": "Pallet Dimension Scanner",
+   "payload": "dimensions"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "coordinates conveyor movement"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "stops affected equipment"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "provide separate routes for moving pallets between operating areas"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "West Transfer Conveyor",
+   "label": "provide separate routes for moving pallets between operating areas"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "label": "moving pallets between operating areas"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "receives work only when a route and destination are available for the assigned vehicle"
+  },
+  {
+   "unit_id": "S136",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "target": "Autonomous Forklift Fleet",
+   "payload": "Work requests"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "report operating availability"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "South Aisle Stacker Crane",
+   "label": "report operating availability"
+  },
+  {
+   "unit_id": "S137",
+   "type": "flow",
+   "source": "North Aisle Stacker Crane",
+   "payload": "equipment availability"
+  },
+  {
+   "unit_id": "S137",
+   "type": "flow",
+   "source": "South Aisle Stacker Crane",
+   "payload": "equipment availability"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "can defer work"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Maintenance Release Terminal",
+   "label": "produces the Crane Service Release Card"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "label": "required maintenance checks have been completed"
+  },
+  {
+   "unit_id": "S140",
+   "type": "succession",
+   "before": "required maintenance checks have been completed",
+   "after": "produces the Crane Service Release Card"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "label": "is recorded"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "label": "affected equipment is returned to operational service"
+  },
+  {
+   "unit_id": "S141",
+   "type": "succession",
+   "before": "is recorded",
+   "after": "affected equipment is returned to operational service"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "reconciles work across operating areas"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "preserves a consistent view of task status and outstanding constraints"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "organizes completed pallets according to the current shipping plan"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Outbound Checkweigh Scale",
+   "label": "verifies shipment weight"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "label": "the shipping record is finalized"
+  },
+  {
+   "unit_id": "S144",
+   "type": "succession",
+   "before": "verifies shipment weight",
+   "after": "the shipping record is finalized"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Shipping Documentation Desk",
+   "label": "prepares shipment records from confirmed pallet and destination data"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "provide safety status that can require movement to stop or be restricted"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "provide safety status that can require movement to stop or be restricted"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "label": "stop"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "label": "be restricted"
+  },
+  {
+   "unit_id": "S146",
+   "type": "flow",
+   "source": "Fire Alarm Panel",
+   "payload": "safety status"
+  },
+  {
+   "unit_id": "S146",
+   "type": "flow",
+   "source": "Safety Zone Controller",
+   "payload": "safety status"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "releasing the next outbound wave"
+  },
+  {
+   "unit_id": "S147",
+   "type": "succession",
+   "before": "reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints",
+   "after": "releasing the next outbound wave"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Exception handling",
+   "label": "preserves a traceable hold state"
+  },
+  {
+   "unit_id": "S148",
+   "type": "state",
+   "owner": "Pallets",
+   "label": "hold state"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "label": "the source of a discrepancy is understood"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "label": "can be safely routed"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "label": "prevents automatic allocation"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "label": "directs the load to controlled review"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "operating record",
+   "label": "retains the scan result, location, and time of detection"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "label": "can be reconstructed"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "consumes its inspection-stage advisory"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "records whether the pallet can proceed, requires rework, or must remain held"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "can proceed"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "requires rework"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "must remain held"
+  },
+  {
+   "unit_id": "S151",
+   "type": "requirement",
+   "subject": "Pallets",
+   "text": "Cinderbay consumes its inspection-stage advisory and records whether the pallet can proceed, requires rework, or must remain held."
+  },
+  {
+   "unit_id": "S151",
+   "type": "flow",
+   "source": "Pallet Dimension Scanner",
+   "target": "Inbound Inspection Desk",
+   "payload": "Oversize Load Advisory"
+  },
+  {
+   "unit_id": "S151",
+   "type": "state",
+   "owner": "Pallets",
+   "label": "held"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Pallets",
+   "label": "remains separated from available stock"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "label": "the review outcome is entered"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "label": "validated"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Inbound Pallet Buffer",
+   "label": "provides temporary staging without implying that a held load has been accepted into inventory"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "label": "has been accepted into inventory"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "uses the Slot Reservation Receipt to confirm that its assigned destination remains reserved"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "confirm that its assigned destination remains reserved"
+  },
+  {
+   "unit_id": "S154",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "target": "North Aisle Stacker Crane",
+   "payload": "Slot Reservation Receipt"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "checks its current task state"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "stops"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "consumes the load advisory to apply the required handling constraints to affected work"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "apply the required handling constraints to affected work"
+  },
+  {
+   "unit_id": "S156",
+   "type": "flow",
+   "source": "Pallet Dimension Scanner",
+   "target": "Warehouse Management System",
+   "payload": "Oversize Load Advisory"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "prevents an incompatible allocation from being released"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "label": "being released"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "label": "is blocked"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "control record",
+   "label": "identifies the hold reason"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "control record",
+   "label": "retains the pallet's last confirmed location"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "reviews unresolved holds"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "assigns an escalation"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "operating team",
+   "label": "cannot clear them locally"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "also confirms that a delayed task will not compromise a later outbound wave or an aisle access limit"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "label": "will not compromise a later outbound wave or an aisle access limit"
+  },
+  {
+   "unit_id": "S160",
+   "type": "requirement",
+   "text": "The supervisor also confirms that a delayed task will not compromise a later outbound wave or an aisle access limit."
+  },
+  {
+   "unit_id": "S161",
+   "type": "state",
+   "owner": "equipment",
+   "label": "fault state"
+  },
+  {
+   "unit_id": "S161",
+   "type": "requirement",
+   "subject": "equipment",
+   "text": "Service readiness requires a recorded fault state, a controlled work area, and a clear separation between maintenance activity and live movement."
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "reports a fault that could affect positioning, load retention, braking, or travel"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "label": "the equipment is returned to service"
+  },
+  {
+   "unit_id": "S162",
+   "type": "succession",
+   "before": "reports a fault that could affect positioning, load retention, braking, or travel",
+   "after": "the equipment is returned to service"
+  },
+  {
+   "unit_id": "S162",
+   "type": "flow",
+   "source": "North Aisle Stacker Crane",
+   "payload": "fault"
+  },
+  {
+   "unit_id": "S163",
+   "type": "state",
+   "owner": "North Aisle Stacker Crane",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "remains unavailable"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "personnel",
+   "label": "inspect the fault"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "personnel",
+   "label": "verify that adjacent equipment can continue safely"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "equipment",
+   "label": "can continue safely"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Maintenance Release Terminal",
+   "label": "records the inspection outcome and the identity of the person authorizing a return to operation"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "label": "authorizing a return to operation"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "label": "keeps the equipment inhibited"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "label": "returns the fault to the maintenance queue for further diagnosis"
+  },
+  {
+   "unit_id": "S165",
+   "type": "state",
+   "owner": "equipment",
+   "label": "inhibited"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "label": "does not by itself release the crane"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "label": "required interlocks and operating limits have been checked"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "Outbound Checkweigh Scale",
+   "label": "produces the Gross Weight Variance Slip"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "label": "remains unresolved"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "label": "the pallet is reweighed"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "label": "establishes a safe disposition"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "holds affected transfers"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "retain authority to stop or restrict movement"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "retain authority to stop or restrict movement"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "stop"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "stop"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "restrict movement"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "restrict movement"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "releases normal work"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "label": "outstanding exceptions, maintenance holds, and access constraints have been reconciled"
+  },
+  {
+   "unit_id": "S171",
+   "type": "succession",
+   "before": "outstanding exceptions, maintenance holds, and access constraints have been reconciled",
+   "after": "releases normal work"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "recovery response",
+   "label": "begins"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "retain authority to stop or restrict movement"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "retain authority to stop or restrict movement"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "stop"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "stop"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Fire Alarm Panel",
+   "label": "restrict movement"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "restrict movement"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "establishes a controlled boundary around the affected aisle"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "prevents new equipment from entering it"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "verifies that personnel are clear of the boundary"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "authorizing recovery work"
+  },
+  {
+   "unit_id": "S175",
+   "type": "succession",
+   "before": "verifies that personnel are clear of the boundary",
+   "after": "authorizing recovery work"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "holds transfers that could feed material into the isolated area"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "receives the occupancy snapshot for recovery planning"
+  },
+  {
+   "unit_id": "S177",
+   "type": "flow",
+   "source": "North Aisle Stacker Crane",
+   "target": "Warehouse Management System",
+   "payload": "Aisle Occupancy Snapshot"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "reconciles its location records with available sensor data"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "presents a recovery plan"
+  },
+  {
+   "unit_id": "S178",
+   "type": "succession",
+   "before": "reconciles its location records with available sensor data",
+   "after": "presents a recovery plan"
+  },
+  {
+   "unit_id": "S178",
+   "type": "flow",
+   "source": "Warehouse Management System",
+   "payload": "recovery plan"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "applies the yard exception by holding affected vehicle movements outside the recovery boundary"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Yard Gate Controller",
+   "label": "holding affected vehicle movements outside the recovery boundary"
+  },
+  {
+   "unit_id": "S179",
+   "type": "flow",
+   "source": "Inbound Inspection Desk",
+   "target": "Yard Gate Controller",
+   "payload": "Trailer Seal Exception Note"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Yard traffic",
+   "label": "remains under controlled access"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "label": "the aisle is confirmed safe for normal operations"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "recovery plan",
+   "label": "identifies the permitted travel envelope, the expected stopping point, and the conditions that require an immediate stop"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "South Aisle Stacker Crane",
+   "label": "performs a controlled recovery maneuver at reduced speed within the isolated aisle"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "controlled recovery maneuver",
+   "label": "uses only the travel needed to reach a stable position or clear the obstruction under review"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "South Aisle Stacker Crane",
+   "label": "reach a stable position"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "South Aisle Stacker Crane",
+   "label": "clear the obstruction under review"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "personnel",
+   "label": "remain outside the crane travel envelope throughout the maneuver"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "spotter",
+   "label": "may observe from a protected location"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "spotter",
+   "label": "does not enter the isolated aisle"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "label": "motion is enabled"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "label": "causes an immediate stop and reassessment"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "maintains the boundary"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "label": "the cause of the stop has been understood"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "label": "the recovery plan has been checked again"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Inbound Pallet Buffer",
+   "label": "remains unavailable to new receipts"
+  },
+  {
+   "unit_id": "S188",
+   "type": "state",
+   "owner": "Inbound Pallet Buffer",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "remain stopped"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "West Transfer Conveyor",
+   "label": "remain stopped"
+  },
+  {
+   "unit_id": "S189",
+   "type": "state",
+   "owner": "East Transfer Conveyor",
+   "label": "stopped"
+  },
+  {
+   "unit_id": "S189",
+   "type": "state",
+   "owner": "West Transfer Conveyor",
+   "label": "stopped"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "receives a hold instruction for routes that approach the recovery area"
+  },
+  {
+   "unit_id": "S190",
+   "type": "flow",
+   "target": "Autonomous Forklift Fleet",
+   "payload": "hold instruction"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Maintenance Release Terminal",
+   "label": "records the inspection outcome and any repair work required"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "equipment",
+   "label": "can return to service"
+  },
+  {
+   "unit_id": "S191",
+   "type": "succession",
+   "before": "records the inspection outcome and any repair work required",
+   "after": "can return to service"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "reconciles outstanding exceptions, maintenance holds, and access constraints"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "releasing normal work"
+  },
+  {
+   "unit_id": "S192",
+   "type": "succession",
+   "before": "reconciles outstanding exceptions, maintenance holds, and access constraints",
+   "after": "releasing normal work"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "controlled test",
+   "label": "confirms that the equipment responds correctly to stop commands and that its reported position is stable"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "equipment",
+   "label": "responds correctly to stop commands"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "label": "is removed"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "controlled test",
+   "label": "passes"
+  },
+  {
+   "unit_id": "S194",
+   "type": "succession",
+   "before": "passes",
+   "after": "is removed"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "label": "resume in stages"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "label": "observed for unexpected interference or renewed alarms"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "is assessed against transfer throughput, task completion time, equipment availability, and the rate of safely resolved exceptions"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "records transaction times"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "reconciles completed movements against the active shift plan"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "reviews open alarms, equipment status, and the previous shift's unresolved work"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "confirms that operators understand current speed limits, exclusion boundaries, and stop-work criteria"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "operators",
+   "label": "understand current speed limits, exclusion boundaries, and stop-work criteria"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "receives the Transfer Induction Ticket"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "validates its destination against the assigned route"
+  },
+  {
+   "unit_id": "S200",
+   "type": "flow",
+   "source": "Conveyor Line Controller",
+   "target": "Autonomous Forklift Fleet",
+   "payload": "Transfer Induction Ticket"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "label": "is measured as the proportion of scheduled operating time during which vehicles are ready for service"
+  },
+  {
+   "unit_id": "S201",
+   "type": "state",
+   "owner": "vehicle",
+   "label": "ready for service"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "label": "is reviewed using completed tasks, travel time, and the number of blocked or delayed movements"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Safety checks",
+   "label": "verify that personnel detection, audible warnings, and emergency stops respond"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "label": "respond"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "label": "production movement begins"
+  },
+  {
+   "unit_id": "S203",
+   "type": "succession",
+   "before": "verify that personnel detection, audible warnings, and emergency stops respond",
+   "after": "production movement begins"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "applies the Sprinkler Zone Inhibit Notice by maintaining the specified exclusion boundary"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Safety Zone Controller",
+   "label": "maintaining the specified exclusion boundary"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "label": "release criteria are met"
+  },
+  {
+   "unit_id": "S204",
+   "type": "flow",
+   "source": "Fire Alarm Panel",
+   "target": "Safety Zone Controller",
+   "payload": "Sprinkler Zone Inhibit Notice"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "shift check",
+   "label": "confirms that the active boundary is visible to operators and enforced by the applicable control logic"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "label": "enforced by the applicable control logic"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "verifies aisle clearance"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "resuming a stored-pallet movement"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "stops"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "label": "an obstruction is detected"
+  },
+  {
+   "unit_id": "S206",
+   "type": "succession",
+   "before": "verifies aisle clearance",
+   "after": "resuming a stored-pallet movement"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Pallet Dimension Scanner",
+   "label": "checks each pallet profile against configured dimensional limits"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Pallet Dimension Scanner",
+   "label": "flags measurements outside tolerance"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "label": "are held for review rather than passed forward on an assumed measurement"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "label": "is checked with a known reference load at the start of the shift and after maintenance"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "demonstrates a controlled restart by running empty at reduced speed for one complete cycle"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "running empty at reduced speed for one complete cycle"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "East Transfer Conveyor",
+   "label": "accepting a pallet"
+  },
+  {
+   "unit_id": "S210",
+   "type": "constraint",
+   "subject": "East Transfer Conveyor",
+   "expression": "for one complete cycle"
+  },
+  {
+   "unit_id": "S210",
+   "type": "succession",
+   "before": "running empty at reduced speed for one complete cycle",
+   "after": "accepting a pallet"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "restart record",
+   "label": "includes the initiating authorization, observed speed, cycle result, and any alarm response"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "inhibits feed"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "protective device",
+   "label": "changes state"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "label": "Maintenance Release Terminal status is checked"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "label": "equipment is returned to automatic service"
+  },
+  {
+   "unit_id": "S213",
+   "type": "succession",
+   "before": "Maintenance Release Terminal status is checked",
+   "after": "equipment is returned to automatic service"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "compares reported downtime with control-system event records at each shift review"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "label": "is investigated"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "label": "the affected performance measure is accepted"
+  },
+  {
+   "unit_id": "S215",
+   "type": "succession",
+   "before": "is investigated",
+   "after": "the affected performance measure is accepted"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "label": "are reviewed for corrective action and accountable ownership"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "outgoing shift",
+   "label": "records equipment restrictions, pending checks, and unresolved safety concerns"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "acknowledges those conditions"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "authorizing routine movements"
+  },
+  {
+   "unit_id": "S218",
+   "type": "succession",
+   "before": "acknowledges those conditions",
+   "after": "authorizing routine movements"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "is conducted against an approved test plan"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "routine warehouse operation begins"
+  },
+  {
+   "unit_id": "S219",
+   "type": "succession",
+   "before": "is conducted against an approved test plan",
+   "after": "routine warehouse operation begins"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "approved test plan",
+   "label": "defines expected behavior, safety limits, evidence requirements, and criteria for blocking release"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "label": "is exercised under representative loads, including recovery from interrupted transactions and controlled equipment stops"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "confirms that acceptance evidence is complete and that any remaining limitations are documented"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "label": "any remaining limitations are documented"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "label": "is checked for inventory accuracy, transaction integrity, and correct handling of unavailable storage locations"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "is withheld"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "uses the handoff confirmation to close the applicable movement record"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "close the applicable movement record"
+  },
+  {
+   "unit_id": "S225",
+   "type": "flow",
+   "source": "Autonomous Forklift Fleet",
+   "target": "Warehouse Management System",
+   "payload": "Forklift Handoff Confirmation"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Shipping Documentation Desk",
+   "label": "receives"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Shipping Documentation Desk",
+   "label": "reconciles the Gross Weight Variance Slip against the applicable shipment record"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Shipping Documentation Desk",
+   "label": "completing its paperwork"
+  },
+  {
+   "unit_id": "S226",
+   "type": "flow",
+   "source": "Outbound Checkweigh Scale",
+   "target": "Shipping Documentation Desk",
+   "payload": "Gross Weight Variance Slip"
+  },
+  {
+   "unit_id": "S226",
+   "type": "succession",
+   "before": "receives",
+   "after": "completing its paperwork"
+  },
+  {
+   "unit_id": "S226",
+   "type": "succession",
+   "before": "reconciles the Gross Weight Variance Slip against the applicable shipment record",
+   "after": "completing its paperwork"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "is investigated"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "resolved"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "the affected shipment is released"
+  },
+  {
+   "unit_id": "S227",
+   "type": "succession",
+   "before": "is investigated",
+   "after": "the affected shipment is released"
+  },
+  {
+   "unit_id": "S227",
+   "type": "succession",
+   "before": "resolved",
+   "after": "the affected shipment is released"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "accepts the release card as authorization to return to service"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "North Aisle Stacker Crane",
+   "label": "return to service"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "label": "its checks are complete"
+  },
+  {
+   "unit_id": "S228",
+   "type": "succession",
+   "before": "its checks are complete",
+   "after": "accepts the release card as authorization to return to service"
+  },
+  {
+   "unit_id": "S228",
+   "type": "flow",
+   "source": "Maintenance Release Terminal",
+   "target": "North Aisle Stacker Crane",
+   "payload": "Crane Service Release Card"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "stacker crane",
+   "label": "remains unavailable for automated assignments"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "label": "its functional checks and required safety checks have passed"
+  },
+  {
+   "unit_id": "S229",
+   "type": "state",
+   "owner": "stacker crane",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Warehouse Management System",
+   "label": "closes the commissioning action register"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "records governance approval"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "confirms that the accepted operating configuration is under change control"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "verifies that conveyor zones are clear"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "Conveyor Line Controller",
+   "label": "records the completion of its assigned closing checks"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "parks its vehicles in approved locations"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Autonomous Forklift Fleet",
+   "label": "reports any remaining equipment restrictions for the next shift"
+  },
+  {
+   "unit_id": "S233",
+   "type": "flow",
+   "source": "Autonomous Forklift Fleet",
+   "payload": "remaining equipment restrictions"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Maintenance Release Terminal",
+   "label": "records completed service work"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Maintenance Release Terminal",
+   "label": "confirms that equipment restrictions remain visible until formally cleared"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "label": "formally cleared"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "label": "is checked for active faults, bypasses, and indications requiring escalation"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "label": "the facility is released"
+  },
+  {
+   "unit_id": "S235",
+   "type": "succession",
+   "before": "is checked for active faults, bypasses, and indications requiring escalation",
+   "after": "the facility is released"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "is verified against the approved access boundaries and stop-response behavior"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Inbound Inspection Desk",
+   "label": "confirm that their operating interfaces are available and that exceptions can be held safely"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Outbound Dispatch Sorter",
+   "label": "confirm that their operating interfaces are available and that exceptions can be held safely"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "label": "can be held safely"
+  },
+  {
+   "unit_id": "S238",
+   "type": "requirement",
+   "subject": "Changes to software, equipment settings, or operating procedures",
+   "text": "Changes to software, equipment settings, or operating procedures require an impact review, approval, and a controlled implementation record."
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "label": "are documented promptly"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "Warehouse Operations Supervisor",
+   "label": "reviewed by the Warehouse Operations Supervisor"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "label": "normal operation resumes"
+  },
+  {
+   "unit_id": "S239",
+   "type": "succession",
+   "before": "are documented promptly",
+   "after": "normal operation resumes"
+  },
+  {
+   "unit_id": "S239",
+   "type": "succession",
+   "before": "reviewed by the Warehouse Operations Supervisor",
+   "after": "normal operation resumes"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "label": "are reviewed at a defined cadence using retained acceptance and maintenance records"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "label": "assigns corrective actions with accountable owners, target dates, and evidence of closure"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "label": "is updated"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "outgoing shift",
+   "label": "records remaining restrictions and unresolved concerns"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "acknowledges them"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "authorizing routine movements"
+  },
+  {
+   "unit_id": "S243",
+   "type": "succession",
+   "before": "acknowledges them",
+   "after": "authorizing routine movements"
+  }
+ ],
+ "entities": [
+  {
+   "name": "warehouse operating boundary",
+   "aliases": []
+  },
+  {
+   "name": "designated receiving interface",
+   "aliases": []
+  },
+  {
+   "name": "completed outbound load",
+   "aliases": []
+  },
+  {
+   "name": "shipping interface",
+   "aliases": []
+  },
+  {
+   "name": "Pallets",
+   "aliases": []
+  },
+  {
+   "name": "valid receipt instruction",
+   "aliases": []
+  },
+  {
+   "name": "facility",
+   "aliases": []
+  },
+  {
+   "name": "Inbound Inspection Desk",
+   "aliases": [
+    "Cinderbay"
+   ]
+  },
+  {
+   "name": "inspection outcomes",
+   "aliases": []
+  },
+  {
+   "name": "storage operations",
+   "aliases": []
+  },
+  {
+   "name": "Pallet Dimension Scanner",
+   "aliases": [
+    "Moonquarry"
+   ]
+  },
+  {
+   "name": "dimensions",
+   "aliases": []
+  },
+  {
+   "name": "Inbound Pallet Buffer",
+   "aliases": []
+  },
+  {
+   "name": "Storage locations",
+   "aliases": []
+  },
+  {
+   "name": "North Aisle Stacker Crane",
+   "aliases": [
+    "Juniperwake"
+   ]
+  },
+  {
+   "name": "South Aisle Stacker Crane",
+   "aliases": []
+  },
+  {
+   "name": "East Transfer Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "West Transfer Conveyor",
+   "aliases": []
+  },
+  {
+   "name": "Conveyor Line Controller",
+   "aliases": [
+    "Brasshaven"
+   ]
+  },
+  {
+   "name": "Autonomous Forklift Fleet",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Yard Gate Controller",
+   "aliases": [
+    "Velvetrook"
+   ]
+  },
+  {
+   "name": "Outbound Dispatch Sorter",
+   "aliases": []
+  },
+  {
+   "name": "Outbound Checkweigh Scale",
+   "aliases": []
+  },
+  {
+   "name": "Shipping Documentation Desk",
+   "aliases": []
+  },
+  {
+   "name": "Warehouse Operations Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "Warehouse Management System",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "inventory records",
+   "aliases": []
+  },
+  {
+   "name": "equipment",
+   "aliases": []
+  },
+  {
+   "name": "authorized release",
+   "aliases": []
+  },
+  {
+   "name": "Safety Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "Fire Alarm Panel",
+   "aliases": []
+  },
+  {
+   "name": "facility alarm status",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Release Terminal",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "equipment availability",
+   "aliases": []
+  },
+  {
+   "name": "Inbound arrivals",
+   "aliases": []
+  },
+  {
+   "name": "scheduled delivery window",
+   "aliases": []
+  },
+  {
+   "name": "door assignment",
+   "aliases": []
+  },
+  {
+   "name": "vehicle identity",
+   "aliases": []
+  },
+  {
+   "name": "carrier",
+   "aliases": []
+  },
+  {
+   "name": "trailer number",
+   "aliases": []
+  },
+  {
+   "name": "arrival time",
+   "aliases": []
+  },
+  {
+   "name": "Drivers",
+   "aliases": []
+  },
+  {
+   "name": "gate instructions",
+   "aliases": []
+  },
+  {
+   "name": "designated staging lane",
+   "aliases": []
+  },
+  {
+   "name": "receiving door",
+   "aliases": []
+  },
+  {
+   "name": "gate process",
+   "aliases": []
+  },
+  {
+   "name": "unscheduled arrivals",
+   "aliases": []
+  },
+  {
+   "name": "receiving area",
+   "aliases": []
+  },
+  {
+   "name": "delivery paperwork",
+   "aliases": []
+  },
+  {
+   "name": "expected shipment",
+   "aliases": []
+  },
+  {
+   "name": "trailer",
+   "aliases": []
+  },
+  {
+   "name": "Staff",
+   "aliases": []
+  },
+  {
+   "name": "trailer identification",
+   "aliases": []
+  },
+  {
+   "name": "accessible seals",
+   "aliases": []
+  },
+  {
+   "name": "shipment details",
+   "aliases": []
+  },
+  {
+   "name": "Trailer Seal Exception Note",
+   "aliases": []
+  },
+  {
+   "name": "unloading crew",
+   "aliases": []
+  },
+  {
+   "name": "current yard position",
+   "aliases": []
+  },
+  {
+   "name": "active traffic routes",
+   "aliases": []
+  },
+  {
+   "name": "safe holding position",
+   "aliases": []
+  },
+  {
+   "name": "revised assignment",
+   "aliases": []
+  },
+  {
+   "name": "expected inbound shipment data",
+   "aliases": []
+  },
+  {
+   "name": "Dispatch Wave Amendment",
+   "aliases": []
+  },
+  {
+   "name": "Receiving staff",
+   "aliases": []
+  },
+  {
+   "name": "physical pallet count",
+   "aliases": []
+  },
+  {
+   "name": "shipment paperwork",
+   "aliases": []
+  },
+  {
+   "name": "acceptable stock",
+   "aliases": []
+  },
+  {
+   "name": "received goods",
+   "aliases": []
+  },
+  {
+   "name": "Door occupancy",
+   "aliases": []
+  },
+  {
+   "name": "clearance",
+   "aliases": []
+  },
+  {
+   "name": "Yard personnel",
+   "aliases": []
+  },
+  {
+   "name": "yard route",
+   "aliases": []
+  },
+  {
+   "name": "shipment count",
+   "aliases": []
+  },
+  {
+   "name": "inspection status",
+   "aliases": []
+  },
+  {
+   "name": "door release",
+   "aliases": []
+  },
+  {
+   "name": "Storage allocation",
+   "aliases": []
+  },
+  {
+   "name": "allocation logic",
+   "aliases": []
+  },
+  {
+   "name": "pallet profile",
+   "aliases": []
+  },
+  {
+   "name": "Slot Reservation Receipt",
+   "aliases": []
+  },
+  {
+   "name": "reservation record",
+   "aliases": []
+  },
+  {
+   "name": "aisle zones",
+   "aliases": []
+  },
+  {
+   "name": "stacker crane",
+   "aliases": []
+  },
+  {
+   "name": "north aisle",
+   "aliases": []
+  },
+  {
+   "name": "Crane commands",
+   "aliases": []
+  },
+  {
+   "name": "pallet height",
+   "aliases": []
+  },
+  {
+   "name": "width",
+   "aliases": []
+  },
+  {
+   "name": "length",
+   "aliases": []
+  },
+  {
+   "name": "measured profile",
+   "aliases": []
+  },
+  {
+   "name": "declared pallet profile",
+   "aliases": []
+  },
+  {
+   "name": "Oversize Load Advisory",
+   "aliases": []
+  },
+  {
+   "name": "conveyor area",
+   "aliases": []
+  },
+  {
+   "name": "transfer area",
+   "aliases": []
+  },
+  {
+   "name": "conveyor sections",
+   "aliases": []
+  },
+  {
+   "name": "conveyor status",
+   "aliases": []
+  },
+  {
+   "name": "transfer-point signals",
+   "aliases": []
+  },
+  {
+   "name": "interlocks",
+   "aliases": []
+  },
+  {
+   "name": "Presence sensors",
+   "aliases": []
+  },
+  {
+   "name": "transfer point",
+   "aliases": []
+  },
+  {
+   "name": "Accumulation zones",
+   "aliases": []
+  },
+  {
+   "name": "output record",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Induction Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Duplicate induction requests",
+   "aliases": []
+  },
+  {
+   "name": "Aisle Occupancy Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "intended shipment window",
+   "aliases": []
+  },
+  {
+   "name": "loading priorities",
+   "aliases": []
+  },
+  {
+   "name": "Wave planning",
+   "aliases": []
+  },
+  {
+   "name": "staging positions",
+   "aliases": []
+  },
+  {
+   "name": "vehicle",
+   "aliases": []
+  },
+  {
+   "name": "assigned route",
+   "aliases": []
+  },
+  {
+   "name": "Forklift Handoff Confirmation",
+   "aliases": []
+  },
+  {
+   "name": "Handoff reporting",
+   "aliases": []
+  },
+  {
+   "name": "vehicle identifier",
+   "aliases": []
+  },
+  {
+   "name": "pallet identifier",
+   "aliases": []
+  },
+  {
+   "name": "transfer time",
+   "aliases": []
+  },
+  {
+   "name": "Sprinkler Zone Inhibit Notice",
+   "aliases": []
+  },
+  {
+   "name": "shipment records",
+   "aliases": []
+  },
+  {
+   "name": "confirmed pallet and destination data",
+   "aliases": []
+  },
+  {
+   "name": "Work requests",
+   "aliases": []
+  },
+  {
+   "name": "unique task reference",
+   "aliases": []
+  },
+  {
+   "name": "active receiving plan",
+   "aliases": []
+  },
+  {
+   "name": "receiving exception",
+   "aliases": []
+  },
+  {
+   "name": "Crane Service Release Card",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance authorization",
+   "aliases": []
+  },
+  {
+   "name": "Exception handling",
+   "aliases": []
+  },
+  {
+   "name": "operating record",
+   "aliases": []
+  },
+  {
+   "name": "scan result",
+   "aliases": []
+  },
+  {
+   "name": "time of detection",
+   "aliases": []
+  },
+  {
+   "name": "control record",
+   "aliases": []
+  },
+  {
+   "name": "hold reason",
+   "aliases": []
+  },
+  {
+   "name": "operating team",
+   "aliases": []
+  },
+  {
+   "name": "personnel",
+   "aliases": []
+  },
+  {
+   "name": "inspection outcome",
+   "aliases": []
+  },
+  {
+   "name": "maintenance queue",
+   "aliases": []
+  },
+  {
+   "name": "Gross Weight Variance Slip",
+   "aliases": []
+  },
+  {
+   "name": "recovery response",
+   "aliases": []
+  },
+  {
+   "name": "controlled boundary",
+   "aliases": []
+  },
+  {
+   "name": "location records",
+   "aliases": []
+  },
+  {
+   "name": "sensor data",
+   "aliases": []
+  },
+  {
+   "name": "recovery plan",
+   "aliases": []
+  },
+  {
+   "name": "Yard traffic",
+   "aliases": []
+  },
+  {
+   "name": "permitted travel envelope",
+   "aliases": []
+  },
+  {
+   "name": "expected stopping point",
+   "aliases": []
+  },
+  {
+   "name": "controlled recovery maneuver",
+   "aliases": []
+  },
+  {
+   "name": "spotter",
+   "aliases": []
+  },
+  {
+   "name": "hold instruction",
+   "aliases": []
+  },
+  {
+   "name": "controlled test",
+   "aliases": []
+  },
+  {
+   "name": "stop commands",
+   "aliases": []
+  },
+  {
+   "name": "active shift plan",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "Safety checks",
+   "aliases": []
+  },
+  {
+   "name": "shift check",
+   "aliases": []
+  },
+  {
+   "name": "known reference load",
+   "aliases": []
+  },
+  {
+   "name": "restart record",
+   "aliases": []
+  },
+  {
+   "name": "protective device",
+   "aliases": []
+  },
+  {
+   "name": "control-system event records",
+   "aliases": []
+  },
+  {
+   "name": "outgoing shift",
+   "aliases": []
+  },
+  {
+   "name": "incoming shift",
+   "aliases": []
+  },
+  {
+   "name": "approved test plan",
+   "aliases": []
+  },
+  {
+   "name": "subsystem",
+   "aliases": []
+  },
+  {
+   "name": "acceptance evidence",
+   "aliases": []
+  },
+  {
+   "name": "movement record",
+   "aliases": []
+  },
+  {
+   "name": "commissioning action register",
+   "aliases": []
+  },
+  {
+   "name": "governance approval",
+   "aliases": []
+  },
+  {
+   "name": "accepted operating configuration",
+   "aliases": []
+  },
+  {
+   "name": "Changes to software, equipment settings, or operating procedures",
+   "aliases": []
+  },
+  {
+   "name": "impact review",
+   "aliases": []
+  },
+  {
+   "name": "controlled implementation record",
+   "aliases": []
+  },
+  {
+   "name": "Emergency changes",
+   "aliases": []
+  },
+  {
+   "name": "Training",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S243"
+   ],
+   "chunk_tokens": 4383,
+   "memory_tokens": 0,
+   "prompt_tokens": 5769,
+   "input": 5975,
+   "output": 21595,
+   "reasoning": 413,
+   "cached": false
+  }
+ ],
+ "wall_s": 273.6
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Breaker Control Unit, target=Bay Automation Controller, payload=circuit-health indications)\n\nSource sentences (the last one is where the fact was extracted):\nS174: Station Supervisory Control System presents available controls and indications to authorized operating personnel.\nS175: Control Room Operator issues state-changing requests only through approved operating procedures and the configured supervisory interface.\nS176: Bay Automation Controller validates each received request against local mode, interlocks, command authority, and equipment availability before issuing bay-level outputs.\nS177: Breaker Control Unit applies accepted output commands at the breaker interface and returns the resulting position and circuit-health indications.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S177 says the Breaker Control Unit returns position and circuit-health indications, but it does not name the recipient. The Bay Automation Controller is a plausible recipient given S176, though it is not stated. The payload also omits the position indications, so the fact is only partly covered.\"}",
+ "usage": {
+  "input_tokens": 677,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 107,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.766,
+ "created": "2026-10-14T12:51:59"
+}

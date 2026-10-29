@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Maintenance Diagnostic Server provides \"station interface faults, rejected commands, and inconsistent indications\" to local station staff (an information or material flow).\n\nSource sentences:\nS132: North District Zone Controller suppresses platform departure authority when the associated berth reports an unsafe door interface state.\nS133: Station status indications presented to local station staff are derived from validated CBTC states rather than from unverified field contacts alone.\nS147: Safety Data Communication Network carries safety-relevant station interface messages separately from nonvital passenger information messages.\nS148: Maintenance Diagnostic Server records station interface faults, rejected commands, and inconsistent indications for later investigation by the Signal Maintenance Engineer.\n\nAnswer \"supported\" only if the sentences state that Maintenance Diagnostic Server produces or sends this item AND that local station staff receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S148 says the server records these items for later investigation by the Signal Maintenance Engineer, not that it provides them to local station staff, and S133 describes station status indications derived from validated CBTC states, a different item.\"}",
+ "usage": {
+  "input_tokens": 694,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 85,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.013,
+ "created": "2026-10-14T12:34:06"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Pharmacy Fulfillment Robot, label=is held from supplying medication to a cabinet)\n\nSource sentences (the last one is where the fact was extracted):\nS227: The Medication Order Gateway retains pending requests for review rather than treating an interrupted transaction as completed.\nS228: The IT Operations Specialist checks whether any transaction was interrupted before the cabinet became unavailable.\nS229: The Pharmacy Verification Station is used to confirm that pending medication orders remain valid before they are re-presented.\nS230: The Pharmacy Fulfillment Robot is held from supplying medication to a cabinet that has not passed its recovery checks.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S230 states that the Pharmacy Fulfillment Robot is held from supplying medication to a cabinet that has not passed recovery checks, which matches the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 676,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 74,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.309,
+ "created": "2026-10-14T12:52:27"
+}

@@ -1,0 +1,116 @@
+{
+ "sentences": [
+  {
+   "text": "Mission planning begins when observation requests arrive through the User Services Portal or from internal operations channels at the Mission Control Center.",
+   "tags": []
+  },
+  {
+   "text": "The Mission Planning System, also called Cedar in this section, is the authoritative tool for assembling candidate observation timelines and associated ground contact activities.",
+   "tags": [
+    "ALIAS:E_MISSION_PLANNING_SYSTEM"
+   ]
+  },
+  {
+   "text": "Each request is checked for requester authority, target definition, time sensitivity, acquisition mode, expected data volume, and any handling restrictions before it is admitted to the planning pool.",
+   "tags": []
+  },
+  {
+   "text": "The User Services Portal records the request state so that external users can distinguish accepted requests from those still awaiting technical review.",
+   "tags": []
+  },
+  {
+   "text": "The Spacecraft Operations Team reviews late operational requests when they affect spacecraft attitude, thermal margin, stored command capacity, or contact preparation.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Facility provides orbit predictions and visibility assumptions that the planning cycle uses to determine feasible imaging windows and ground contacts.",
+   "tags": []
+  },
+  {
+   "text": "The Mission Planning System combines request priority, instrument availability, contact opportunities, onboard storage margin, and downlink capacity into a draft activity schedule.",
+   "tags": []
+  },
+  {
+   "text": "The draft schedule covers payload imaging, recorder management, housekeeping activities, and expected support from the North S-Band Antenna and South S-Band Antenna.",
+   "tags": []
+  },
+  {
+   "text": "For high-volume acquisitions, the schedule also accounts for downlink opportunities through the Kiruna X-Band Antenna and Svalbard X-Band Antenna.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Processing Facility receives planning metadata needed to prepare downstream processing expectations without treating the planning schedule as a commitment to deliver products.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Processing Cluster and Backup Processing Cluster are considered during planning only to verify that expected acquisition loads remain compatible with routine processing capacity.",
+   "tags": []
+  },
+  {
+   "text": "Juniper confirms that planned station use is compatible with network maintenance windows before the schedule is released for command preparation.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "text": "The Spacecraft Operations Team uses the Antenna Deicing Notice to assess whether planned support can proceed without adding contingency contact margin.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "The Mission Planning System flags conflicts when two activities compete for the same spacecraft resource, ground station resource, or operational staffing interval.",
+   "tags": []
+  },
+  {
+   "text": "Constraint checking includes slew time, sun-angle limits, power balance, thermal recovery time, recorder capacity, command load size, and required separation between incompatible activities.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team reviews cases where orbital uncertainty or contact geometry could reduce the execution margin for a planned acquisition or downlink.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Calibration Team reviews planned calibration activities when they share resources with revenue observations or affect instrument configuration states.",
+   "tags": []
+  },
+  {
+   "text": "After schedule convergence, the Mission Planning System exports a command preparation package to the command engineering workflow at the Mission Control Center.",
+   "tags": []
+  },
+  {
+   "text": "The Command Validation Gateway, also called Osprey in this section, performs independent validation of command stacks before they are eligible for operational approval.",
+   "tags": [
+    "ALIAS:E_COMMAND_VALIDATION_GATEWAY"
+   ]
+  },
+  {
+   "text": "Command stack validation checks syntax, timing, parameter ranges, sequencing rules, spacecraft mode compatibility, and consistency with the approved schedule baseline.",
+   "tags": []
+  },
+  {
+   "text": "The Command Validation Gateway rejects command stacks that contain unapproved manual edits, missing provenance, expired configuration references, or activities outside the planning authority window.",
+   "tags": []
+  },
+  {
+   "text": "The Telemetry Ingest Service is consulted for the latest spacecraft state needed to confirm that the command assumptions still match actual configuration and health.",
+   "tags": []
+  },
+  {
+   "text": "The Orbit Determination Engine provides the current orbital solution used to confirm time-tagged events, contact visibility, and any attitude-dependent observation geometry.",
+   "tags": []
+  },
+  {
+   "text": "The Product Quality Service may add planning feedback when previous acquisitions indicate that a requested geometry or instrument mode is unlikely to meet quality objectives.",
+   "tags": []
+  },
+  {
+   "text": "The Cybersecurity Desk reviews command preparation exceptions when unusual access, emergency procedure use, or nonstandard transfer paths are requested before uplink.",
+   "tags": []
+  },
+  {
+   "text": "Final approval requires concurrence from the Mission Control Center and the Spacecraft Operations Team before any command stack is placed in the queue for the next authorized uplink opportunity.",
+   "tags": []
+  }
+ ]
+}

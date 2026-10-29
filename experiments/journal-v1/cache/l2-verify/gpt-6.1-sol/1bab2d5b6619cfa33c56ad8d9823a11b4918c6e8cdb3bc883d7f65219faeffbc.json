@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Sector Load Monitor provides \"the operational view of expected demand against the reduced sector capacity\" to Slot Allocation Engine (an information or material flow).\n\nSource sentences:\nS328: The Capacity Assessment Module treats a restriction as a time-bounded reduction in route, sector, or airport throughput, depending on the geometry and operational impact of the area.\nS329: The Sector Load Monitor provides the operational view of expected demand against the reduced sector capacity and highlights intervals where overload is likely.\nS699: If the event reduces departure throughput, the Departure Metering Service updates metering rates and provides revised inputs to the Slot Allocation Engine.\nS700: The Slot Allocation Engine uses the reduced capacity value to protect fairness while avoiding schedules that exceed the declared infrastructure capability.\n\nAnswer \"supported\" only if the sentences state that Sector Load Monitor produces or sends this item AND that Slot Allocation Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Sector Load Monitor provides an operational demand-versus-capacity view, whereas the Slot Allocation Engine uses a reduced capacity value, not that view.\"}",
+ "usage": {
+  "input_tokens": 327,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 82,
+  "output_tokens_details": {
+   "reasoning_tokens": 34
+  },
+  "total_tokens": 409
+ },
+ "attempts": 1,
+ "wall_s": 5.066,
+ "created": "2026-10-14T12:46:56"
+}

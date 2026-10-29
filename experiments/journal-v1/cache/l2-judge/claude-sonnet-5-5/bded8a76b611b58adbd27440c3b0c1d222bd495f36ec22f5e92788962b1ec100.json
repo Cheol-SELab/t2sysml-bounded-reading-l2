@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Alert Distribution Hub provides \"the Regional Flow Manager Tower Supervisor\" to Tower Supervisor (an information or material flow).\n\nSource sentences:\nS120: Low-confidence weather forecasts remain visible to users, but the Capacity Assessment Module flags the associated capacity values as provisional.\nS121: When confidence decreases below the configured threshold, the Alert Distribution Hub notifies the Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator that the capacity picture may change.\nS527: The Airport CDM Portal keeps detailed handler notes available to authorized users while the Common Situation Display shows only the flight impact, severity, and expected recovery window.\nS528: This separation prevents local troubleshooting details from crowding the regional view used by the Regional Flow Manager, Tower Supervisor, and Slot Coordinator.\n\nAnswer \"supported\" only if the sentences state that Alert Distribution Hub produces or sends this item AND that Tower Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S121 lists Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator as three separate recipients of a notification from the Alert Distribution Hub, so \\\"the Regional Flow Manager Tower Supervisor\\\" is not an item the hub provides; it is a misparsed list of roles (S528 uses the same list for a different purpose).\"}",
+ "usage": {
+  "input_tokens": 755,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 140,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.783,
+ "created": "2026-10-14T12:45:24"
+}

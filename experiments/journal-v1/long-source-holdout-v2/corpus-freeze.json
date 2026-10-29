@@ -1,0 +1,167 @@
+{
+  "policy": {
+    "document_ids": [
+      "20180007516",
+      "20180003519",
+      "20180004053",
+      "20190031939",
+      "20200001712",
+      "20190027540",
+      "20230016622",
+      "20110015961"
+    ],
+    "start_pages": {
+      "20180007516": 12,
+      "20180003519": 9,
+      "20180004053": 8,
+      "20190031939": 6,
+      "20200001712": 6,
+      "20190027540": 7,
+      "20230016622": 13,
+      "20110015961": 9
+    },
+    "source_token_target": 5000,
+    "selection": "continuous body from chosen introduction page; stop at whole unit before 5000 tokens",
+    "cleaning": "Join consecutive PDF blocks/pages before sentence splitting; collapse whitespace; omit numeric/repeated short headers",
+    "model_output_read": false,
+    "synthetic_prose": false,
+    "test_output_tuning": false,
+    "previously_evaluated_in_this_project": false,
+    "model_training_unseen_asserted": false,
+    "independent_human_reference_available": false,
+    "validation_scope": "eight new real-source excerpts, one sample per condition, partial source constraints",
+    "method": {
+      "schema_mode": "object",
+      "effort": "medium",
+      "samples": 1,
+      "witness_caps": [
+        0,
+        160
+      ]
+    }
+  },
+  "documents": [
+    {
+      "doc_id": "20180007516",
+      "title": "Concept of Operations for Management by Trajectory",
+      "url": "https://ntrs.nasa.gov/citations/20180007516",
+      "source_tokens": 4990,
+      "unit_count": 113,
+      "chunks": 11,
+      "first_page": 12,
+      "last_page": 19,
+      "pdf_sha256": "fb0264f0085dd5d9c7ac32fa62afd8827e4c7364ea81534096f055c7cfdb1f6d",
+      "units_sha256": "d0251c010c75a3f7514a834ec28bb1292698f48da725d548171bcce8187a516b"
+    },
+    {
+      "doc_id": "20180003519",
+      "title": "Air Traffic Management Technology Demonstration - 3 (ATD-3) Dynamic Weather Routes Domestic En Route Concept of Operations Synopsis Version 1.0",
+      "url": "https://ntrs.nasa.gov/citations/20180003519",
+      "source_tokens": 4991,
+      "unit_count": 127,
+      "chunks": 11,
+      "first_page": 9,
+      "last_page": 19,
+      "pdf_sha256": "726a9de023fe3071f4a211710c700d56c558009ad38057b9f8ba1645850165d0",
+      "units_sha256": "25093bea7aae33eba78dd09e811d6e4ed4b96e4f9c1aac6954a8e17fc64044e6"
+    },
+    {
+      "doc_id": "20180004053",
+      "title": "Air Traffic Management Technology Demonstration - 3 (ATD-3) Multi-Flight Common Route (MFCR) Concept of Operations Version 1.0",
+      "url": "https://ntrs.nasa.gov/citations/20180004053",
+      "source_tokens": 4939,
+      "unit_count": 123,
+      "chunks": 11,
+      "first_page": 8,
+      "last_page": 20,
+      "pdf_sha256": "213c0b720efa1b36636ef391381c596242a24f1de43de1d615b4fdbbd35b1cec",
+      "units_sha256": "3cc821862cb8805d844c5f4fff190ee8dfe078374f9c95d752b1ef0f899d478e"
+    },
+    {
+      "doc_id": "20190031939",
+      "title": "ATD-3 Dynamic Routes for Arrivals in Weather (DRAW) Operational Concept, V2.0",
+      "url": "https://ntrs.nasa.gov/citations/20190031939",
+      "source_tokens": 4981,
+      "unit_count": 116,
+      "chunks": 11,
+      "first_page": 6,
+      "last_page": 18,
+      "pdf_sha256": "f98320dc62eb404430f13371ccad689179f70da2fe40aebfed1709be0de39357",
+      "units_sha256": "a1cf139a6bf2cfdfb89c7d62240a986f721ac3550be2701952818d72dcaa83f2"
+    },
+    {
+      "doc_id": "20200001712",
+      "title": "IMPACT Concept of Operations",
+      "url": "https://ntrs.nasa.gov/citations/20200001712",
+      "source_tokens": 4949,
+      "unit_count": 105,
+      "chunks": 11,
+      "first_page": 6,
+      "last_page": 17,
+      "pdf_sha256": "0383496ee8e3cc214f19f6da39106101ed2b656a91816cee5ef3adb46d8f65cb",
+      "units_sha256": "0f1b9da9c9938ca663c7ace28a7eb44410f7cf60ae0c0817416b9fe982a290a1"
+    },
+    {
+      "doc_id": "20190027540",
+      "title": "Development of an Accepted Medical Condition List for Exploration Medical Capability Scoping",
+      "url": "https://ntrs.nasa.gov/citations/20190027540",
+      "source_tokens": 4988,
+      "unit_count": 116,
+      "chunks": 11,
+      "first_page": 7,
+      "last_page": 18,
+      "pdf_sha256": "939ca6884e677911fa2024e2ef8ae116e61863f1ade3f3f758b1cc77f6a00364",
+      "units_sha256": "dc59e1c04b329fb6d937fbbbde4c5d791c1a81975149dcf49212b05b024beb54"
+    },
+    {
+      "doc_id": "20230016622",
+      "title": "Joint Augmented Reality Visual Informatics System: Concept of Operations",
+      "url": "https://ntrs.nasa.gov/citations/20230016622",
+      "source_tokens": 4992,
+      "unit_count": 111,
+      "chunks": 11,
+      "first_page": 13,
+      "last_page": 25,
+      "pdf_sha256": "de4313d9a51bf727feac17673a40093f3ae64110ee8a84455231580f9b95aebb",
+      "units_sha256": "e8461415b9859e1a7787bcdbf24a14d8bd5d467c4fdee7b14df8ea2eb2faadb9"
+    },
+    {
+      "doc_id": "20110015961",
+      "title": "Transformational Spaceport and Range Concept of Operations: A Vision to Transform Ground and Launch Operations",
+      "url": "https://ntrs.nasa.gov/citations/20110015961",
+      "source_tokens": 5000,
+      "unit_count": 144,
+      "chunks": 11,
+      "first_page": 9,
+      "last_page": 19,
+      "pdf_sha256": "de9b972f478ce9a40e014d091b38eb2e2af3aca9ba32dead6f27aef484488fe1",
+      "units_sha256": "08cb7c3bda262cbc648d8c27c48e89cd2b1edffad4d929d920700f779b9f0bca"
+    }
+  ],
+  "method_dependencies_sha256": {
+    "scripts/journal/build_public_long_source_dev_v2.py": "35041592594515ed420dfb8b5ed4d28902ba9f4e6c290c9d6b77a6170ff35532",
+    "scripts/journal/run_source_witness_sequential_dev.py": "c2e207263a1f5da6650098377402e0b77a2d06fd6351883d5435f7b5f539687e",
+    "scripts/journal/typed_object_extractor_dev_v2.py": "59146a2a211787a4baba25e4f7639f0cf26040cc76634b75a3ad1a0c2b38987c",
+    "scripts/journal/probe_typed_slot_schema_dev.py": "b60a3ac8be126df39250dc74606308cfb0c854d005cef021d29af8aff5181bcb",
+    "scripts/journal/run_typed_bounded_memory_dev.py": "5186b751490be1a5b137d4213334639ef8212f08ea28bd1e0c403d686d331d2c",
+    "src/t2m_eval/source_alias_memory.py": "690c408a1f27a1f0733fb9d86baa86d039c305a7b98c955ef17c58ad8f92fbdc",
+    "scripts/journal/run_sequential_memory_dev.py": "0d76aafaabd5e72746dcd22173ed7011171514be1d4afbffef0e74ec42773371",
+    "experiments/journal-v1/l1/L1DEV3/units.json": "39cb8d0505569e9989441c53d3ca01c4ee061b5181664fce38b620086c3241d4",
+    "experiments/journal-v1/models.json": "10a4af3cc2769567d8a8e63ac47baf4154ad4a396196dfa7fd649f9c0f202527",
+    "src/t2m_eval/sequential_memory_experiment.py": "80f10a64667c702372dbc60f8f07a958f8654d552eb80696d823d884b4648915",
+    "src/t2m_eval/typed_frontier_memory.py": "064e100375189b84fd0373263771b2e158d83528c26d8ae93ee893ee878897a3",
+    "src/t2m_eval/typed_frontier_role_memory.py": "45d806598151de13db752af6462dbece74f5cf0031a6c8c2ebe51eb86a23a5fa",
+    "src/t2m_eval/conflict_capsule_memory.py": "c6a55a6a897ced48c97046cd45bac6e9fcc5e90bc8404a4a15dd7ea219a09ad6",
+    "src/t2m_eval/long_memory.py": "8f88fb48d9c7976e209ad516f81514c499dac1cbbf0b4ed473a251e55b4cb5a9",
+    "src/t2m_eval/long_doc.py": "6c0b007ac1b0038240a35fa2341a17beecba26268fc7c3774fe91187d2d677d9",
+    "src/t2m_eval/adapters.py": "284c0c73470a10aa6621df6191056440785a9d7cf31e109649f2f656a2b01a8f",
+    "src/t2m_eval/dc_gt.py": "618df0392a292e29e32a91cb3e2b8b5f4c1ec5e2971e8bcc2bdf605dbc7cb0ec",
+    "src/t2m_eval/normalize.py": "6580687968d6e853df5d81d0330172dbc91c23859d62e8d718788bd3347550c6",
+    "src/t2m_eval/stats.py": "d338caeeb731d4b94643abb6f0c57acf561f6f621f188fb80457c3231a6c6ca4",
+    "src/t2m_eval/provider_usage.py": "5d2f05bc01ac98d1c934eb28c836ce4da75cadc80ba7b11c70571ae170f1cbbe",
+    "src/t2m_eval/provider_usage_v2.py": "43397167427975d06d6d076e8340e9b7fee13593b2fd78bc1874c491c0afca24",
+    "src/t2m_pipeline/observed_json.py": "ac0ad306718398bccbdfed640f00842f9a52f4d80c436edf8e7fc120abccdc9e",
+    "src/t2m_pipeline/llm_clients.py": "64cc68484492197d4b23a65d33c16e4046bbbfb5b58d2d5bbb9c8fc1f9bcc15e",
+    "src/t2m_pipeline/openai_client.py": "fce4a5a1468a14e944c9bebd04a4556f979e730543dd2c5f4c8af2137477e2ee"
+  }
+}

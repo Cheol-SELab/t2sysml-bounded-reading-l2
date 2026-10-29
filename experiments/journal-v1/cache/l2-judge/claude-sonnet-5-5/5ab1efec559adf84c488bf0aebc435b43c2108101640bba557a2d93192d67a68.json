@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: authorized clinical systems provides \"medication orders\" to Clinical Pharmacist (an information or material flow).\n\nSource sentences:\nS028: The Pharmacy Technician is called Copperfield in this concept.\nS029: The Medication Order Gateway accepts medication orders from authorized clinical systems and records their arrival times.\nS231: The IT Operations Specialist coordinates technical troubleshooting with the Biomedical Engineer when equipment inspection or repair is required.\nS232: The Clinical Pharmacist reviews medication orders affected by the outage when clinical validation is needed.\n\nAnswer \"supported\" only if the sentences state that authorized clinical systems produces or sends this item AND that Clinical Pharmacist receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S029 says authorized clinical systems send medication orders to the Medication Order Gateway, not to the Clinical Pharmacist; S232 only says the pharmacist reviews orders affected by an outage, without naming the clinical systems as the source, so no direct flow to the pharmacist is stated.\"}",
+ "usage": {
+  "input_tokens": 652,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 115,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.342,
+ "created": "2026-10-14T12:34:29"
+}

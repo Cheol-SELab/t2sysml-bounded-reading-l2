@@ -1,0 +1,100 @@
+{
+ "sentences": [
+  {
+   "text": "Operational service management for the Regional Flow Platform shall begin when a deployed airport is accepted into steady state support after the regional stabilization period.",
+   "tags": []
+  },
+  {
+   "text": "The service model shall distinguish continuous operational support from planned engineering support so that safety related traffic flow functions remain protected at all times.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer shall provide round the clock on call coverage for production incidents affecting the Regional Flow Platform, Airport CDM Portal, Slot Allocation Engine, Departure Metering Service, Arrival Regulation Console, and Alert Distribution Hub.",
+   "tags": []
+  },
+  {
+   "text": "Standard service desk coverage for access requests, reporting questions, configuration inquiries, and minor usability issues shall be available during normal regional administrative hours on business days.",
+   "tags": []
+  },
+  {
+   "text": "During published peak traffic periods, Adverse Weather Mode, Capacity Reduction State, and Recovery Phase, the on call support posture shall be raised so that the System Support Engineer can join the Digital Briefing Room without delay.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager, Tower Supervisor, Ramp Control Lead, Airport Duty Manager, and Network Operations Liaison shall retain operational command authority during support activity.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer shall advise operational supervisors on technical status, known workarounds, data integrity concerns, and recovery options, but shall not issue traffic management instructions.",
+   "tags": []
+  },
+  {
+   "text": "Incidents shall be classified by operational effect, with the highest priority assigned to loss of common situational awareness, loss of slot computation, corruption of operational timing data, or failure of alert distribution during active traffic management.",
+   "tags": []
+  },
+  {
+   "text": "A critical incident shall be acknowledged within fifteen minutes and shall have continuous technical ownership until service is restored or an agreed operational workaround is in place.",
+   "tags": []
+  },
+  {
+   "text": "A high priority incident that degrades a major function without stopping tactical coordination shall be acknowledged within thirty minutes and shall be reviewed with the affected operational supervisor at least hourly.",
+   "tags": []
+  },
+  {
+   "text": "Medium and low priority incidents shall be handled through the service queue, with target updates provided at intervals appropriate to their operational impact and planned resolution path.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer shall maintain an incident record that captures the initial symptom, affected components, operational state, timeline, mitigation actions, data corrections, and supervisor decisions.",
+   "tags": []
+  },
+  {
+   "text": "Incident records shall reference the Audit Event Ledger where user actions, configuration changes, interface events, or automated decisions are relevant to the investigation.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log shall be used to preserve the operational context of major incidents when traffic management decisions are made while a technical degradation is present.",
+   "tags": []
+  },
+  {
+   "text": "If the Regional Flow Platform cannot support safe collaborative operation, the Regional Flow Manager may direct transition to Contingency Fallback State using approved local procedures.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer shall verify that fallback tools, exported operational data, and restoration checkpoints are available before advising that normal technical service can resume.",
+   "tags": []
+  },
+  {
+   "text": "Post incident review shall be required for critical incidents, repeated high priority incidents, security related events, and failures that occur during capacity constrained operations.",
+   "tags": []
+  },
+  {
+   "text": "The review shall identify technical root cause, operational contributing factors, effectiveness of workarounds, user communication quality, and corrective actions assigned to named owners.",
+   "tags": []
+  },
+  {
+   "text": "Planned change windows shall normally be scheduled during low demand night periods and shall be coordinated with the Regional Flow Manager, Airport Duty Manager, Tower Supervisor, and affected Aircraft Operator Representative groups before approval.",
+   "tags": []
+  },
+  {
+   "text": "Changes that modify the Business Rules Registry, Identity Access Service, Time Synchronization Service, Flight Data Exchange, or operational metering behavior shall require additional validation in a representative test environment before production release.",
+   "tags": []
+  },
+  {
+   "text": "Emergency changes may be applied outside the standard window when needed to restore service, protect cyber security, or prevent material operational harm, but they shall be documented and retrospectively approved.",
+   "tags": []
+  },
+  {
+   "text": "Service level targets shall include monthly availability for critical production functions, incident response time, restoration time, data feed timeliness, and successful completion of scheduled operational reports.",
+   "tags": []
+  },
+  {
+   "text": "Availability targets shall exclude approved maintenance windows, customer network outages outside the managed boundary, and periods when operational supervisors have directed use of contingency procedures for nontechnical reasons.",
+   "tags": []
+  },
+  {
+   "text": "Performance against service targets shall be reviewed with the Regional Flow Manager and Data Governance Steward so that service quality, operational benefit, data quality, and user confidence are managed as a single operating obligation.",
+   "tags": []
+  }
+ ]
+}

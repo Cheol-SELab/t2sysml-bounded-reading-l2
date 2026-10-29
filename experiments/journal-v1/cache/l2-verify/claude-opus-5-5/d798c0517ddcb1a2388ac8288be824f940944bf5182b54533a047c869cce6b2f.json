@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pallet Dimension Scanner provides \"the Oversize Load Advisory\" to Warehouse Management System (an information or material flow).\n\nSource sentences:\nS069: The measured profile is checked against configured dimensional limits and the declared pallet profile.\nS070: The Pallet Dimension Scanner produces the Oversize Load Advisory.\nS155: Before movement, the crane checks its current task state and stops if the destination or access path is no longer valid.\nS156: Morrowglass, the Warehouse Management System, consumes the load advisory to apply the required handling constraints to affected work.\n\nAnswer \"supported\" only if the sentences state that Pallet Dimension Scanner produces or sends this item AND that Warehouse Management System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S070 states the Pallet Dimension Scanner produces the Oversize Load Advisory, and S156 states the Warehouse Management System (Morrowglass) consumes the load advisory, which is the same item named more briefly.\"}",
+ "usage": {
+  "input_tokens": 652,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 90,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.897,
+ "created": "2026-10-14T01:39:12"
+}

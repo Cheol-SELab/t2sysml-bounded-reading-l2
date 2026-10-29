@@ -1,0 +1,44 @@
+{
+ "created": "2026-10-29T14:30:03",
+ "note": "Revision-2 extension record. Lists files that produced tables but were outside the pre-registered freeze: the 20K inputs (built after the freeze), the post-hoc and revision scripts (including the post-hoc C1S arm under experiments/journal-v1/l2-posthoc-c1-512), the language-server client and binary. Nothing here is retroactively pre-registered; freeze.json is unchanged and referenced by hash.",
+ "references": {
+  "experiments/journal-v1/l2/freeze.json": "36528db0568898fde5161ece1c972624feaf154e17c76194ef6aafa12adfcaf4",
+  "freeze_created": "2026-10-14T00:10:04",
+  "amendments": 1
+ },
+ "gaps": {
+  "G1_pre_amendment_run_l2_py": "The pre-amendment run_l2.py (sha256 bd5adc199b5cfb4d...) and models-l2.json are not retained on disk or in version control; the amendment's statement that only the judge line changed rests on the authors' record and cannot be verified by diff."
+ },
+ "language_server": {
+  "path": "G:\\SW\\SW-SELab\\selab-ex-system-modeler\\packages\\selab-rust-lsp\\target\\release\\sysml-lsp.exe",
+  "sha256": "5a00d10f977964db1a2d866d7712c6aa682d9ab7c6197d24fb94231df3485088"
+ },
+ "files": {
+  "experiments/journal-v1/l2/L2X1/units.json": "57821a9205438ca4fc6057bbd444044d9b4eb73c3ddf039baafe9627acfb1e21",
+  "experiments/journal-v1/l2/L2X1/probes.gt.json": "3464957b77f7b91cc880eb8f7d8532bbcea4ac66ae3598a5dd65f35f93e5fa95",
+  "experiments/journal-v1/l2/L2X1/blueprint.json": "b578b847f469a5c855750572d308c3625be16cf86447760a9e886d0c973b7959",
+  "experiments/journal-v1/l2/L2X1/probes.check.json": "1b7f87d4c21a2ba241936bd36bde6122b1d09140437ae1605bafed455d137f30",
+  "experiments/journal-v1/l2/L2X2/units.json": "0a2942c5634635d2c52b887064fd46ef71a5ea3144fe645354b1e938eef1581a",
+  "experiments/journal-v1/l2/L2X2/probes.gt.json": "97a8a64b69fe2d1981895308266484477d10024bd346d9d9ce3472bd47ea5648",
+  "experiments/journal-v1/l2/L2X2/blueprint.json": "80bfad00ecd82092d806aeca4a2780cccc1e6af7729429830fbf78f025d57b78",
+  "experiments/journal-v1/l2/L2X2/probes.check.json": "b944a327706f42f8d98f40d470be5dd5ffcf9994b253f9f76e0323b760ca225f",
+  "scripts/journal/build_l2x_corpus.py": "3573320e56c1864de76ad63fd7adc04c649afb8db1f12bec1977e74b1a0fb403",
+  "scripts/journal/run_l2_external.py": "1e9f1d3a18f1ba4db81f38b552afc2be2295fa621dc01b5830a95c01bca99238",
+  "scripts/journal/fact_audit_l2.py": "853861cdf0c2af02d3239f0c3f2c6d9c93702044c1b4fa708151c96fd28aa182",
+  "scripts/journal/coverage_l2.py": "c7e4d3a9dda1e65901af1d5ae750ed3f65766e20aa5295ccac873d397ae33355",
+  "scripts/journal/build_l2_paper.py": "e45548de77434d3f2188773edda959166704550a35c07d94f7e5780843133f65",
+  "scripts/journal/build_l2_paper_rev2.py": "7087c20b46d7a5e605d549259430fe77ec85f1a2c82c81f329e87ba778a17e5e",
+  "scripts/journal/build_l2_ieee_body.py": "8ba3cebfa0835f478711baced93c061efd590ad94f1d5e4c4f57d8527b6ba324",
+  "scripts/journal/build_l2_ieee_appendix.py": "818883aac9261c5124f721456967272bd81862c38179db111833e3e3584d91b7",
+  "scripts/journal/freeze_l2.py": "a0015fc59235c2c4ef0b04b9c8f80559d8416feecccac8c5e30b8a5bd206d9c4",
+  "scripts/journal/score_l2_rendered.py": "e282a7c24a82e1a0c76a63323ec79ce8e3cd50cdc6b587742f8d12ac0f6d5c59",
+  "scripts/journal/judge_l2_docaware.py": "ecba24a7c938cdce7486328210b7c58ca4eb535aa717dabed3e0507f272921c7",
+  "scripts/journal/analyze_l2_doclevel.py": "a48d7ddc8aeda955ce03ba11df29be5da53d52331ca1b81c05464462cc928983",
+  "scripts/journal/build_l2_archive.py": "7daf93b0438a24f4d212907b08c2ad8dca6dc1024e03dec3e244140b1aaa5e7d",
+  "scripts/journal/run_l2_c1_512.py": "868f7b92167ae1c1f0e11220238866cef54f4e006bc3243911a42066f408c333",
+  "scripts/journal/analyze_l2_c1_512.py": "81873ecacfb65e9f070b2bc1381fdc0858df2ba91933f2658f2e86b5e6124699",
+  "src/t2m_eval/sysml_graph.py": "da81e7124ac9e4114debc1d373876229459a393786d433c71521eca5626308f4"
+ },
+ "evidence_bundle_sha256": "321342de47f4ddd1e48135196c3c929fe43c03a3df2cd79c3d8491db92c15c34",
+ "archive_location": "G:\\SW\\SW-SELab\\SELab-Researches\\t2sysml-bounded-reading-l2"
+}

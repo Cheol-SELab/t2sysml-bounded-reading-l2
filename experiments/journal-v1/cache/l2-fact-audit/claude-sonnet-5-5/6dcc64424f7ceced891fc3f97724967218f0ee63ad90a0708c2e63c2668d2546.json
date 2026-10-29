@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=can be verified)\n\nSource sentences (the last one is where the fact was extracted):\nS219: The Airline Ramp Coordinator uses the Bag Match Query to review unresolved bag-to-flight mismatches before loading authorization is granted.\nS220: The East Make-Up Conveyor moves reconciled bags toward the correct flight position without bypassing required identity checks.\nS221: The West Make-Up Conveyor remains subject to the same controlled access and reconciliation rules as other make-up equipment.\nS222: The Transfer Bag Feeder accepts transfer bags only when their identity and intended onward flight can be verified.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S222 says identity and intended onward flight 'can be verified' as a condition for accepting transfer bags, so the verification condition is stated. However, 'can be verified' is only a condition phrase, not a distinct action, and the fact names no performing element, so it is a weak, over-literal action extraction.\"}",
+ "usage": {
+  "input_tokens": 664,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 115,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.174,
+ "created": "2026-10-14T12:51:43"
+}

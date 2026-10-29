@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Morrowglass validates each medication order for patient, product, dose, route, and timing fields before making it available for downstream processing.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "Copperfield confirms that the reconciliation queue has no unresolved discrepancy before authorizing routine cabinet replenishment.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "text": "Pharmacy Fulfillment Robot uses the Order Reconciliation Snapshot to compare requested quantities with completed dispense events and current cabinet balances.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "text": "Reconciliation compares the active order record with dispensing and cabinet records using a stable order identifier.",
+   "tags": []
+  },
+  {
+   "text": "The comparison preserves the order context needed to distinguish a new request from a correction or a repeat submission.",
+   "tags": []
+  },
+  {
+   "text": "Pharmacy Fulfillment Robot retains the patient, medication, dose, route, and timing details associated with each order while preparing a dispense transaction.",
+   "tags": []
+  },
+  {
+   "text": "It also checks whether the order is active and whether its authorization remains valid at the time of processing.",
+   "tags": []
+  },
+  {
+   "text": "A cancelled order is excluded from routine preparation even when a matching dispense request remains in a local queue.",
+   "tags": []
+  },
+  {
+   "text": "A corrected order is treated as a new authoritative version, and superseded values are not carried forward.",
+   "tags": []
+  },
+  {
+   "text": "Duplicate submissions are flagged for review rather than converted into additional cabinet quantity.",
+   "tags": []
+  },
+  {
+   "text": "Partial dispensing is reconciled against the quantity already recorded so that remaining quantity is calculated conservatively.",
+   "tags": []
+  },
+  {
+   "text": "Time stamps and transaction identifiers are retained to support comparison across records that arrive at different times.",
+   "tags": []
+  },
+  {
+   "text": "When the records disagree on patient, medication, or quantity, the affected transaction remains on hold until the discrepancy is resolved.",
+   "tags": []
+  },
+  {
+   "text": "The reconciliation outcome records the matched values, unresolved differences, and disposition for subsequent audit.",
+   "tags": []
+  },
+  {
+   "text": "North Ward Cabinet Controller applies the North Ward medication access rules when evaluating a cabinet transaction.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "text": "Its ward-specific configuration defines permitted medication locations, access roles, and transaction limits for each cabinet.",
+   "tags": []
+  },
+  {
+   "text": "The configuration associates each medication location with the product identifiers and quantity thresholds used by the ward.",
+   "tags": []
+  },
+  {
+   "text": "Cabinet availability is calculated from the last confirmed inventory count and subsequent recorded movements.",
+   "tags": []
+  },
+  {
+   "text": "Configured maximum and minimum quantities guide replenishment decisions without overriding an active clinical restriction.",
+   "tags": []
+  },
+  {
+   "text": "Access rules require an authenticated user role appropriate to the requested medication and transaction type.",
+   "tags": []
+  },
+  {
+   "text": "High-risk medication locations can require an additional confirmation before a removal is accepted.",
+   "tags": []
+  },
+  {
+   "text": "The controller rejects a transaction when its location mapping does not match the reconciled medication identity.",
+   "tags": []
+  },
+  {
+   "text": "Configuration changes are versioned, reviewed, and recorded with the effective time and approving authority.",
+   "tags": []
+  },
+  {
+   "text": "If the controller has not received a current approved configuration, it prevents routine dispensing and reports the condition for investigation.",
+   "tags": []
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: East Retardant Loading Pump provides \"Retardant Batch Slip\" to Tanker Base Manager (an information or material flow).\n\nSource sentences:\nS072: Crewline Mobile Tablet users receive only the confirmed incident context that has been released for field distribution by the command workflow.\nS073: East Retardant Loading Pump sends the Retardant Batch Slip after a load cycle is metered and sealed.\nS140: The Talon Air Tanker Dispatch Console produces the Runway Release Note after the planned departure sequence has been validated against runway constraints.\nS141: The Tanker Base Manager uses the batch slip to confirm that the loading record matches the aircraft assignment and planned retardant quantity.\n\nAnswer \"supported\" only if the sentences state that East Retardant Loading Pump produces or sends this item AND that Tanker Base Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S073 states that East Retardant Loading Pump sends the Retardant Batch Slip, and S141 states that Tanker Base Manager uses the same item, referred to as the batch slip.\"}",
+ "usage": {
+  "input_tokens": 321,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 56,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 377
+ },
+ "attempts": 1,
+ "wall_s": 10.95,
+ "created": "2026-10-14T12:37:40"
+}

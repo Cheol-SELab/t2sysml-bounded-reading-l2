@@ -1,0 +1,102 @@
+{
+ "sentences": [
+  {
+   "text": "Crew legality is represented in the Regional Flow Platform as operational constraints rather than as detailed employment records.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Interface Adapter accepts legality indicators that describe whether a proposed departure, arrival, or aircraft swap remains feasible within declared crew duty limits.",
+   "tags": []
+  },
+  {
+   "text": "The model uses time thresholds, qualification flags, and pairing feasibility status, but it does not require names, pay rules, hotel arrangements, or internal crew roster details.",
+   "tags": []
+  },
+  {
+   "text": "Aircraft Operator Representative sends the Crew Duty Extension Log when an approved company process extends duty availability for a specific rotation.",
+   "tags": [
+    "F17:intro"
+   ]
+  },
+  {
+   "text": "The Regional Flow Platform treats the received legality status as an operator assertion and does not independently calculate labor agreement compliance.",
+   "tags": []
+  },
+  {
+   "text": "Aircraft Operator Representative remains responsible for the correctness of crew legality inputs supplied through Airline Interface Adapter or Airport CDM Portal.",
+   "tags": []
+  },
+  {
+   "text": "Airline Operations Coordinator may mark a flight as non-recoverable by delay after a specified time, which prevents automated suggestions that would create an infeasible rotation.",
+   "tags": []
+  },
+  {
+   "text": "The same representation supports aircraft and crew combinations that are valid only if a Target Off Block Time is achieved within a limited tolerance.",
+   "tags": []
+  },
+  {
+   "text": "Slot Allocation Engine uses these constraints when evaluating whether a Calculated Takeoff Time should be offered, retained, exchanged, or released.",
+   "tags": []
+  },
+  {
+   "text": "Departure Metering Service receives only the feasibility result and timing boundary needed for sequencing decisions.",
+   "tags": []
+  },
+  {
+   "text": "Common Situation Display shows crew legality impacts as coded operational states, such as feasible, time critical, infeasible, or operator review required.",
+   "tags": []
+  },
+  {
+   "text": "These states are visible to authorized users without exposing the commercial reasoning behind an operator decision.",
+   "tags": []
+  },
+  {
+   "text": "Operator recovery choices are represented as ranked options that may include delay acceptance, aircraft substitution, flight cancellation, flight consolidation, repositioning, or slot exchange.",
+   "tags": []
+  },
+  {
+   "text": "The ranking is provided by Aircraft Operator Representative or Airline Operations Coordinator and is stored as a preference profile for the affected flight or rotation.",
+   "tags": []
+  },
+  {
+   "text": "Business Rules Registry defines which preference fields are mandatory, optional, or hidden from other participants.",
+   "tags": []
+  },
+  {
+   "text": "For example, an operator may disclose that a flight can accept a later Calculated Takeoff Time but withhold the passenger revenue, maintenance cost, or network protection reason.",
+   "tags": []
+  },
+  {
+   "text": "Slot Coordinator can evaluate the operational acceptability of a requested change without receiving unnecessary commercial information.",
+   "tags": []
+  },
+  {
+   "text": "Regional Flow Manager can see aggregate recovery pressure across operators, but individual preference details remain limited by role and purpose.",
+   "tags": []
+  },
+  {
+   "text": "Identity Access Service enforces these visibility rules for Airport CDM Portal, Digital Briefing Room, and application programming interfaces.",
+   "tags": []
+  },
+  {
+   "text": "Audit Event Ledger records who entered or changed a recovery choice, the effective time, the affected flight reference, and the reason category selected by the operator.",
+   "tags": []
+  },
+  {
+   "text": "Collaborative Decision Log records any agreed operational outcome, including whether the decision was constrained by crew legality or by an operator preference.",
+   "tags": []
+  },
+  {
+   "text": "Flight Data Exchange distributes only the approved operational result to downstream services that need to update schedules, metering, or airport resource plans.",
+   "tags": []
+  },
+  {
+   "text": "Performance Analytics Warehouse may analyze anonymized patterns of legality constraints and recovery selections to improve disruption playbooks.",
+   "tags": []
+  },
+  {
+   "text": "The design allows coordinated recovery during Normal Operations, Adverse Weather Mode, Capacity Reduction State, and Recovery Phase while preserving the operator's commercially sensitive decision logic.",
+   "tags": []
+  }
+ ]
+}

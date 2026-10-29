@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Exception handling preserves a traceable hold state until the source of a discrepancy is understood and the affected pallet can be safely routed.",
+   "tags": []
+  },
+  {
+   "text": "A mismatch between expected and observed pallet attributes prevents automatic allocation and directs the load to controlled review.",
+   "tags": []
+  },
+  {
+   "text": "The operating record retains the scan result, location, and time of detection so that the review can be reconstructed.",
+   "tags": []
+  },
+  {
+   "text": "Cinderbay consumes its inspection-stage advisory and records whether the pallet can proceed, requires rework, or must remain held.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "text": "A held pallet remains separated from available stock until the review outcome is entered and validated.",
+   "tags": []
+  },
+  {
+   "text": "Inbound Pallet Buffer provides temporary staging without implying that a held load has been accepted into inventory.",
+   "tags": []
+  },
+  {
+   "text": "North Aisle Stacker Crane uses the Slot Reservation Receipt to confirm that its assigned destination remains reserved.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "text": "Before movement, the crane checks its current task state and stops if the destination or access path is no longer valid.",
+   "tags": []
+  },
+  {
+   "text": "Morrowglass, the Warehouse Management System, consumes the load advisory to apply the required handling constraints to affected work.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "text": "The system prevents an incompatible allocation from being released while the advisory remains applicable.",
+   "tags": []
+  },
+  {
+   "text": "If a task is blocked, the control record identifies the hold reason and retains the pallet's last confirmed location.",
+   "tags": []
+  },
+  {
+   "text": "Warehouse Operations Supervisor reviews unresolved holds and assigns an escalation when the operating team cannot clear them locally.",
+   "tags": []
+  },
+  {
+   "text": "The supervisor also confirms that a delayed task will not compromise a later outbound wave or an aisle access limit.",
+   "tags": []
+  },
+  {
+   "text": "Service readiness requires a recorded fault state, a controlled work area, and a clear separation between maintenance activity and live movement.",
+   "tags": []
+  },
+  {
+   "text": "North Aisle Stacker Crane reports a fault that could affect positioning, load retention, braking, or travel before the equipment is returned to service.",
+   "tags": []
+  },
+  {
+   "text": "The affected crane remains unavailable while personnel inspect the fault and verify that adjacent equipment can continue safely.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Release Terminal records the inspection outcome and the identity of the person authorizing a return to operation.",
+   "tags": []
+  },
+  {
+   "text": "A failed test keeps the equipment inhibited and returns the fault to the maintenance queue for further diagnosis.",
+   "tags": []
+  },
+  {
+   "text": "A successful test does not by itself release the crane until required interlocks and operating limits have been checked.",
+   "tags": []
+  },
+  {
+   "text": "Outbound Checkweigh Scale produces the Gross Weight Variance Slip when a measured pallet weight falls outside the configured tolerance.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "text": "The variance remains unresolved until the pallet is reweighed or the documented review establishes a safe disposition.",
+   "tags": []
+  },
+  {
+   "text": "Conveyor Line Controller holds affected transfers when an exception would make the next movement uncertain.",
+   "tags": []
+  },
+  {
+   "text": "Fire Alarm Panel and Safety Zone Controller retain authority to stop or restrict movement whenever their safety status requires it.",
+   "tags": []
+  },
+  {
+   "text": "Warehouse Operations Supervisor releases normal work only after outstanding exceptions, maintenance holds, and access constraints have been reconciled.",
+   "tags": []
+  }
+ ]
+}

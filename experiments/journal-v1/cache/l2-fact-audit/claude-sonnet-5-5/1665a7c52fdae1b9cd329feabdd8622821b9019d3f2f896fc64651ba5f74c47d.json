@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=reviewed with operations)\n\nSource sentences (the last one is where the fact was extracted):\nS237: The Laboratory Technician shall be trained on sample timing, result entry, data review responsibilities, and communication of unusual water quality findings.\nS238: The Maintenance Planner shall review commissioning defects, recurring nuisance alarms, calibration drift, and equipment access problems before preventive maintenance intervals are finalized.\nS239: The Maintenance Planner shall use the clip to compare observed pump condition with planned inspection intervals and corrective work priorities.\nS240: Feedback from maintenance work orders shall be reviewed with operations so that control changes do not mask equipment degradation or create avoidable field effort.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S240 states that feedback from maintenance work orders shall be reviewed with operations, so an action labeled 'reviewed with operations' is directly stated.\"}",
+ "usage": {
+  "input_tokens": 694,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.845,
+ "created": "2026-10-14T12:52:29"
+}

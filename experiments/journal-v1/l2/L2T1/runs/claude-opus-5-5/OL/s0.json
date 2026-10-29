@@ -1,0 +1,4851 @@
+{
+ "facts": [
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "Communications-Based Train Control system",
+   "label": "supervising train separation, movement authority, and service regulation"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "monitoring service performance"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "authorizing planned operational changes"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "coordinating incident response"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "directing recovery actions"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "compliance with instructions issued through approved operational channels"
+  },
+  {
+   "unit_id": "S009",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "control room",
+   "payload": "consolidated train positions"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "provides the control room with consolidated train positions, service regulation functions, alarms, and operator command interfaces"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "calculate safe movement authority limits"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "calculate safe movement authority limits"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "maintain vital control of points and signals"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "West Junction Interlocking",
+   "label": "maintain vital control of points and signals"
+  },
+  {
+   "unit_id": "S011",
+   "type": "constraint",
+   "subject": "East Junction Interlocking",
+   "expression": "only accept commands that satisfy their configured safety rules"
+  },
+  {
+   "unit_id": "S011",
+   "type": "constraint",
+   "subject": "West Junction Interlocking",
+   "expression": "only accept commands that satisfy their configured safety rules"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "supervises automatic train protection functions"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "maintain a validated estimate of train position and speed"
+  },
+  {
+   "unit_id": "S012",
+   "type": "flow",
+   "source": "Dual Channel Odometer",
+   "target": "Atlas Onboard Controller",
+   "payload": "data"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "connects each train to the Wayside Radio Access Network"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Wayside Radio Access Network",
+   "label": "provides the radio bearer for train-to-wayside control communications"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "carries safety-related messages between approved control components"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Service Timetable Server",
+   "label": "supplies planned service data"
+  },
+  {
+   "unit_id": "S015",
+   "type": "flow",
+   "source": "Service Timetable Server",
+   "payload": "planned service data"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "distributes approved service messages to customer information systems"
+  },
+  {
+   "unit_id": "S015",
+   "type": "flow",
+   "source": "Passenger Information Gateway",
+   "target": "customer information systems",
+   "payload": "approved service messages"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Voice Dispatch Console",
+   "label": "provides the fallback voice coordination path"
+  },
+  {
+   "unit_id": "S017",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "target": "train control environment",
+   "payload": "platform interface indications"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "exchanges platform interface indications with the train control environment"
+  },
+  {
+   "unit_id": "S018",
+   "type": "state",
+   "owner": "system",
+   "label": "normal operation"
+  },
+  {
+   "unit_id": "S018",
+   "type": "requirement",
+   "subject": "automatic supervision",
+   "text": "automatic supervision is expected to regulate headways, enforce safe separation, and present the Line Traffic Controller with exceptions rather than routine control steps"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "automatic supervision",
+   "label": "regulate headways"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "automatic supervision",
+   "label": "enforce safe separation"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "automatic supervision",
+   "label": "present the Line Traffic Controller with exceptions"
+  },
+  {
+   "unit_id": "S018",
+   "type": "flow",
+   "source": "automatic supervision",
+   "target": "Line Traffic Controller",
+   "payload": "exceptions"
+  },
+  {
+   "unit_id": "S019",
+   "type": "state",
+   "owner": "system",
+   "label": "degraded operation"
+  },
+  {
+   "unit_id": "S019",
+   "type": "state",
+   "owner": "system",
+   "label": "safe state"
+  },
+  {
+   "unit_id": "S019",
+   "type": "transition",
+   "from": "degraded operation",
+   "to": "safe state"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "label": "operated to a defined safe state"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "label": "protective restriction of movement"
+  },
+  {
+   "unit_id": "S020",
+   "type": "transition",
+   "to": "protective restriction of movement",
+   "trigger": "Loss of train location confidence, loss of communications, or disagreement between vital functions"
+  },
+  {
+   "unit_id": "S020",
+   "type": "state",
+   "owner": "system",
+   "label": "protective restriction of movement"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "review equipment health"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "correlate alarms"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "support restoration without bypassing required operational authority"
+  },
+  {
+   "unit_id": "S022",
+   "type": "allocation",
+   "action": "review equipment health",
+   "to": "Maintenance Diagnostic Server"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "oversees access controls"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "oversees key-management processes"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "oversees the response to security events"
+  },
+  {
+   "unit_id": "S023",
+   "type": "allocation",
+   "action": "oversees key-management processes",
+   "to": "Cryptographic Key Management Appliance"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "sends the Crew Login Token Bundle"
+  },
+  {
+   "unit_id": "S024",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "payload": "Crew Login Token Bundle"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "assumes the active train control role"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "label": "successful operator authentication"
+  },
+  {
+   "unit_id": "S025",
+   "type": "succession",
+   "before": "successful operator authentication",
+   "after": "assumes the active train control role"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "supervises movement authority processing"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "supervises onboard speed enforcement"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "supervises door enable logic"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "supervises train interface commands"
+  },
+  {
+   "unit_id": "S027",
+   "type": "requirement",
+   "subject": "Atlas Onboard Controller",
+   "text": "train interface commands required for CBTC operation"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "maintains a safety-critical state machine"
+  },
+  {
+   "unit_id": "S028",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "initialization"
+  },
+  {
+   "unit_id": "S028",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "protected manual operation"
+  },
+  {
+   "unit_id": "S028",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "automatic train operation"
+  },
+  {
+   "unit_id": "S028",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "fallback operation"
+  },
+  {
+   "unit_id": "S028",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "cutout"
+  },
+  {
+   "unit_id": "S029",
+   "type": "flow",
+   "source": "North District Zone Controller",
+   "target": "Atlas Onboard Controller",
+   "payload": "movement authority data"
+  },
+  {
+   "unit_id": "S029",
+   "type": "flow",
+   "source": "South District Zone Controller",
+   "target": "Atlas Onboard Controller",
+   "payload": "movement authority data"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "label": "checked for sequence, applicability, and consistency"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "label": "applied onboard"
+  },
+  {
+   "unit_id": "S029",
+   "type": "succession",
+   "before": "checked for sequence, applicability, and consistency",
+   "after": "applied onboard"
+  },
+  {
+   "unit_id": "S030",
+   "type": "flow",
+   "source": "East Junction Interlocking",
+   "payload": "interlocking indications"
+  },
+  {
+   "unit_id": "S030",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "payload": "interlocking indications"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "Dual Channel Odometer",
+   "label": "provides independent speed and distance measurements"
+  },
+  {
+   "unit_id": "S031",
+   "type": "flow",
+   "source": "Dual Channel Odometer",
+   "target": "Atlas Onboard Controller",
+   "payload": "speed and distance measurements"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "compares the two odometry channels continuously"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "degrades the operating mode"
+  },
+  {
+   "unit_id": "S032",
+   "type": "transition",
+   "to": "fallback operation",
+   "trigger": "measured divergence exceeds the permitted threshold"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "increase position uncertainty"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "request operating actions that preserve separation from other trains"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "label": "converts safety commands into vehicle-compatible requests"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "label": "verify service and emergency brake availability"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "label": "monitoring brake feedback, pneumatic pressure indications, and commanded deceleration response"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "recalculates the braking demand needed to keep the train within the authorized movement limits"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "validating the active enforcement data set"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "produces the Brake Curve Checksum Log"
+  },
+  {
+   "unit_id": "S037",
+   "type": "succession",
+   "before": "validating the active enforcement data set",
+   "after": "produces the Brake Curve Checksum Log"
+  },
+  {
+   "unit_id": "S037",
+   "type": "flow",
+   "source": "Atlas Onboard Controller",
+   "payload": "Brake Curve Checksum Log"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "provides the onboard data radio function"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "maintains CBTC sessions over Wayside Radio Access Network coverage areas"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "reports link quality, registration state, and session continuity information"
+  },
+  {
+   "unit_id": "S039",
+   "type": "flow",
+   "source": "Train Radio Modem",
+   "target": "Atlas Onboard Controller",
+   "payload": "link quality, registration state, and session continuity information"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "provides the protected communications transport"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "sends the Clock Drift Sample Report"
+  },
+  {
+   "unit_id": "S041",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "payload": "Clock Drift Sample Report"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "supports the security material used by onboard communications"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "label": "presents movement authority limits, permitted speed, train location confidence, radio condition, and required operator actions"
+  },
+  {
+   "unit_id": "S043",
+   "type": "flow",
+   "target": "Revenue Train Operator",
+   "payload": "movement authority limits, permitted speed, train location confidence, radio condition, and required operator actions"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "Acknowledgements entered"
+  },
+  {
+   "unit_id": "S044",
+   "type": "flow",
+   "source": "Revenue Train Operator",
+   "target": "Atlas Onboard Controller",
+   "payload": "Acknowledgements"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "label": "rejects stale or inconsistent commands"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Voice Dispatch Console",
+   "label": "provides a means for voice coordination during degraded service"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "exchanges door enable and closed-and-locked indications with the train interface"
+  },
+  {
+   "unit_id": "S046",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "payload": "door enable and closed-and-locked indications"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "receives non-vital train position and service state data"
+  },
+  {
+   "unit_id": "S047",
+   "type": "flow",
+   "target": "Passenger Information Gateway",
+   "payload": "non-vital train position and service state data"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Service Timetable Server",
+   "label": "provides schedule context"
+  },
+  {
+   "unit_id": "S048",
+   "type": "flow",
+   "source": "Service Timetable Server",
+   "target": "Metro Operations Control System",
+   "payload": "schedule context"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "collects non-vital health indications from trainborne equipment"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "review faults"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "label": "carries vital movement authority traffic"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Wayside Radio Access Network",
+   "label": "provides overlapping cell coverage through stations, tunnels, crossovers, and depot approach tracks"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "maintain a stable session during normal operation"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "label": "engineered with sector overlap at station throats and interlocking approaches"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "maintains the active bearer used by the Atlas Onboard Controller"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "reports radio quality changes"
+  },
+  {
+   "unit_id": "S055",
+   "type": "flow",
+   "source": "Train Radio Modem",
+   "payload": "radio quality changes"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "label": "old radio path retained until the new path has accepted the session and passed basic message checks"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "label": "falls back to the last validated movement authority rules"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "carries vital messages between zone controllers, interlockings, and approved interfaces"
+  },
+  {
+   "unit_id": "S058",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "payload": "vital messages"
+  },
+  {
+   "unit_id": "S059",
+   "type": "attribute",
+   "owner": "Safety Data Communication Network",
+   "name": "separation",
+   "value": "physically and logically separated from maintenance and passenger information traffic"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "supports the authentication framework used on the safety data paths"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "authorized technical staff",
+   "label": "managed under controlled access"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "supervises the northern main line, the northern turnback, and the approach to East Junction Interlocking"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "supervises the southern main line, the southern turnback, and the approach to West Junction Interlocking"
+  },
+  {
+   "unit_id": "S065",
+   "type": "requirement",
+   "text": "a train authority must be reissued by the receiving zone"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "label": "reissued by the receiving zone"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "confirms train position from the Dual Channel Odometer"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "accepting the next authority source"
+  },
+  {
+   "unit_id": "S066",
+   "type": "succession",
+   "before": "confirms train position from the Dual Channel Odometer",
+   "after": "accepting the next authority source"
+  },
+  {
+   "unit_id": "S066",
+   "type": "flow",
+   "source": "Dual Channel Odometer",
+   "target": "Atlas Onboard Controller",
+   "payload": "train position"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "null",
+   "label": "validates route state, train identity, and the expected boundary track section"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "null",
+   "label": "extending authority beyond the transfer point"
+  },
+  {
+   "unit_id": "S067",
+   "type": "succession",
+   "before": "validates route state, train identity, and the expected boundary track section",
+   "after": "extending authority beyond the transfer point"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "report switch state, track occupancy, and route locking status"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "West Junction Interlocking",
+   "label": "report switch state, track occupancy, and route locking status"
+  },
+  {
+   "unit_id": "S068",
+   "type": "flow",
+   "source": "East Junction Interlocking",
+   "target": "null",
+   "payload": "switch state, track occupancy, and route locking status"
+  },
+  {
+   "unit_id": "S068",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "target": "null",
+   "payload": "switch state, track occupancy, and route locking status"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "null",
+   "label": "compares interlocking indications, train position reports, and radio session state"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "null",
+   "label": "detect inconsistent conditions"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "null",
+   "label": "detects a mismatch"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "null",
+   "label": "affected authority is withheld or shortened"
+  },
+  {
+   "unit_id": "S070",
+   "type": "succession",
+   "before": "detects a mismatch",
+   "after": "affected authority is withheld or shortened"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "displays zone status, radio coverage alarms, and train supervision states"
+  },
+  {
+   "unit_id": "S071",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "Line Traffic Controller",
+   "payload": "zone status, radio coverage alarms, and train supervision states"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "manage service"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "receives non-vital summaries of radio and network health"
+  },
+  {
+   "unit_id": "S072",
+   "type": "flow",
+   "source": "null",
+   "target": "Maintenance Diagnostic Server",
+   "payload": "non-vital summaries of radio and network health"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "investigate degraded coverage trends"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "Wayside Radio Access Network",
+   "label": "sends the Radio Handover Audit File"
+  },
+  {
+   "unit_id": "S073",
+   "type": "flow",
+   "source": "Wayside Radio Access Network",
+   "target": "null",
+   "payload": "Radio Handover Audit File"
+  },
+  {
+   "unit_id": "S073",
+   "type": "constraint",
+   "subject": "Wayside Radio Access Network",
+   "expression": "after each configured reporting interval"
+  },
+  {
+   "unit_id": "S074",
+   "type": "state",
+   "owner": "Voice Dispatch Console",
+   "label": "available"
+  },
+  {
+   "unit_id": "S074",
+   "type": "constraint",
+   "subject": "Voice Dispatch Console",
+   "expression": "not used as a substitute for safety data messages or zone controller validation"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "exchanges only the permitted interface indications"
+  },
+  {
+   "unit_id": "S075",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "target": "null",
+   "payload": "platform interface indications"
+  },
+  {
+   "unit_id": "S075",
+   "type": "constraint",
+   "subject": "Platform Screen Door Controller",
+   "expression": "its state is not allowed to override movement authority logic"
+  },
+  {
+   "unit_id": "S076",
+   "type": "flow",
+   "source": "null",
+   "target": "Passenger Information Gateway",
+   "payload": "selected service information"
+  },
+  {
+   "unit_id": "S076",
+   "type": "flow",
+   "source": "null",
+   "target": "Service Timetable Server",
+   "payload": "selected service information"
+  },
+  {
+   "unit_id": "S076",
+   "type": "constraint",
+   "subject": "Passenger Information Gateway",
+   "expression": "non-vital outputs are isolated from the command paths used for train protection"
+  },
+  {
+   "unit_id": "S078",
+   "type": "attribute",
+   "owner": "East Junction Interlocking",
+   "name": "local name",
+   "value": "Falcon"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "requests routes through East Junction Interlocking"
+  },
+  {
+   "unit_id": "S079",
+   "type": "flow",
+   "source": "North District Zone Controller",
+   "target": "East Junction Interlocking",
+   "payload": "route requests"
+  },
+  {
+   "unit_id": "S079",
+   "type": "constraint",
+   "subject": "North District Zone Controller",
+   "expression": "only when the requested path is consistent with the current movement authority and the train approach profile"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "applies the same route protection principles for interfaces with West Junction Interlocking"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "null",
+   "label": "retains final vital authority for point movement, point locking, route locking, and release of protected sections"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "null",
+   "label": "reports points detected, locked, and proved in the required position"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "null",
+   "label": "treats a route as available"
+  },
+  {
+   "unit_id": "S082",
+   "type": "succession",
+   "before": "reports points detected, locked, and proved in the required position",
+   "after": "treats a route as available"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "label": "incorporated into a movement authority"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "label": "confirmed as protected"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "label": "reports loss of point correspondence"
+  },
+  {
+   "unit_id": "S084",
+   "type": "flow",
+   "payload": "loss of point correspondence"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "label": "shortened or withdrawn the affected movement authority"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "label": "used as independent wayside evidence for route availability"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "CBTC system",
+   "label": "estimated the train location"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "label": "applied the more restrictive state"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "sends the Axle Counter Reset Request"
+  },
+  {
+   "unit_id": "S087",
+   "type": "flow",
+   "source": "East Junction Interlocking",
+   "payload": "Axle Counter Reset Request"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "label": "Reset processing is inhibited"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "verifies local track clearance evidence"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "records the result"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "authorising restoration of normal route setting"
+  },
+  {
+   "unit_id": "S089",
+   "type": "succession",
+   "before": "records the result",
+   "after": "authorising restoration of normal route setting"
+  },
+  {
+   "unit_id": "S089",
+   "type": "succession",
+   "before": "verifies local track clearance evidence",
+   "after": "authorising restoration of normal route setting"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "West Junction Interlocking",
+   "label": "sends the Route Release Exception List"
+  },
+  {
+   "unit_id": "S090",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "payload": "Route Release Exception List"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "treats any release exception as a retained hazard"
+  },
+  {
+   "unit_id": "S091",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "target": "North District Zone Controller",
+   "payload": "Route Release Exception List"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "label": "Platform approach protection is enforced"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "provides door closed and locked indications"
+  },
+  {
+   "unit_id": "S093",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "target": "supervising wayside systems",
+   "payload": "door closed and locked indications"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "label": "held outside the platform stopping window"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "uses the token bundle"
+  },
+  {
+   "unit_id": "S095",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "Atlas Onboard Controller",
+   "payload": "Crew Login Token Bundle"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "validate that onboard operating context is current"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "accepting supervised route-related data"
+  },
+  {
+   "unit_id": "S095",
+   "type": "succession",
+   "before": "validate that onboard operating context is current",
+   "after": "accepting supervised route-related data"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "exchanged Train Radio Modem messages carrying route status"
+  },
+  {
+   "unit_id": "S096",
+   "type": "flow",
+   "source": "Train Radio Modem",
+   "target": "Wayside Radio Access Network",
+   "payload": "messages carrying route status"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "configured for deterministic delivery of vital state changes and command acknowledgements"
+  },
+  {
+   "unit_id": "S097",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "payload": "vital state changes and command acknowledgements"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "displays the commanded route, locked route, point state, and track occupancy state"
+  },
+  {
+   "unit_id": "S098",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "control staff",
+   "payload": "commanded route, locked route, point state, and track occupancy state"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "control staff",
+   "label": "identify mismatches"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "request a regulating action"
+  },
+  {
+   "unit_id": "S099",
+   "type": "flow",
+   "source": "Line Traffic Controller",
+   "payload": "regulating action request"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "label": "the request is executed"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "records route command outcomes, point operation timing, and detection transitions"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "maintaining a live view of train positions, route status, alarms, and service performance"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "presents regulating options"
+  },
+  {
+   "unit_id": "S102",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "payload": "regulating options"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "selects holding, skip-stop, turnback, or run-through measures"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "checking that passenger impact and downstream recovery have been assessed"
+  },
+  {
+   "unit_id": "S103",
+   "type": "succession",
+   "before": "checking that passenger impact and downstream recovery have been assessed",
+   "after": "selects holding, skip-stop, turnback, or run-through measures"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "displays the proposed regulating action, affected train identities, and predicted recovery time"
+  },
+  {
+   "unit_id": "S104",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "Line Traffic Controller",
+   "payload": "proposed regulating action, affected train identities, and predicted recovery time"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "confirms the command"
+  },
+  {
+   "unit_id": "S104",
+   "type": "succession",
+   "before": "displays the proposed regulating action, affected train identities, and predicted recovery time",
+   "after": "confirms the command"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "applies movement authority constraints"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "reports any conflict or unavailable route condition"
+  },
+  {
+   "unit_id": "S105",
+   "type": "flow",
+   "source": "North District Zone Controller",
+   "target": "Line Traffic Controller",
+   "payload": "conflict or unavailable route condition"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "applies the same operating principles for the southern section"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "preserving separation margins and route locking conditions"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "holds the route locked"
+  },
+  {
+   "unit_id": "S107",
+   "type": "state",
+   "owner": "East Junction Interlocking",
+   "label": "route locked"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "West Junction Interlocking",
+   "label": "provides route state indications"
+  },
+  {
+   "unit_id": "S108",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "target": "Operations Control Centre",
+   "payload": "route state indications"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "Operations Control Centre",
+   "label": "distinguish an operational delay from a signalling equipment fault"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "produces the Temporary Speed Restriction Notice"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "confirming the limits, speed value, start time, and expected removal condition"
+  },
+  {
+   "unit_id": "S109",
+   "type": "succession",
+   "before": "confirming the limits, speed value, start time, and expected removal condition",
+   "after": "produces the Temporary Speed Restriction Notice"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "monitors actual train performance against the expected delay allowance"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "adjusts regulation plans"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "enforces the active movement profile on each equipped train"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "presents any onboard rejection or degraded mode indication"
+  },
+  {
+   "unit_id": "S111",
+   "type": "flow",
+   "source": "Atlas Onboard Controller",
+   "payload": "onboard rejection or degraded mode indication"
+  },
+  {
+   "unit_id": "S111",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "degraded mode"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "Dual Channel Odometer",
+   "label": "providing independent distance measurement inputs"
+  },
+  {
+   "unit_id": "S112",
+   "type": "flow",
+   "source": "Dual Channel Odometer",
+   "payload": "independent distance measurement inputs"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "supports continuous operational messaging"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "label": "holding trains before constrained areas"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "label": "is monitored for coverage alarms, handover irregularities, and capacity conditions"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "is monitored as a safety-related bearer"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "persistent communication faults are escalated"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "additional regulating actions are attempted"
+  },
+  {
+   "unit_id": "S115",
+   "type": "succession",
+   "before": "persistent communication faults are escalated",
+   "after": "additional regulating actions are attempted"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "records the initial event time, train identifier, location, passenger impact, and the first safe operating instruction issued"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Voice Dispatch Console",
+   "label": "is used when direct verbal instruction is required"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "repeated back the instruction"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "label": "treated as accepted"
+  },
+  {
+   "unit_id": "S117",
+   "type": "succession",
+   "before": "repeated back the instruction",
+   "after": "treated as accepted"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "reports train condition, cab indications, passenger issues, and any local hazard"
+  },
+  {
+   "unit_id": "S118",
+   "type": "flow",
+   "source": "Revenue Train Operator",
+   "payload": "train condition, cab indications, passenger issues, and any local hazard"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "provides non-vital trend data"
+  },
+  {
+   "unit_id": "S119",
+   "type": "flow",
+   "source": "Maintenance Diagnostic Server",
+   "target": "Signal Maintenance Engineer",
+   "payload": "non-vital trend data"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "determine whether an incident has an equipment cause or an operational cause"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "advises the Line Traffic Controller on equipment recovery options"
+  },
+  {
+   "unit_id": "S120",
+   "type": "flow",
+   "source": "Signal Maintenance Engineer",
+   "target": "Line Traffic Controller",
+   "payload": "equipment recovery options"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "remains responsible for service regulation decisions"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Service Timetable Server",
+   "label": "is updated only through an approved timetable change workflow"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "verifies that the revised plan is visible"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "relying on it for regulation"
+  },
+  {
+   "unit_id": "S121",
+   "type": "succession",
+   "before": "verifies that the revised plan is visible",
+   "after": "relying on it for regulation"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "receives the operational service state"
+  },
+  {
+   "unit_id": "S122",
+   "type": "flow",
+   "target": "Passenger Information Gateway",
+   "payload": "operational service state"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "align platform messages and train destination information with the current regulating plan"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "uses the sample report to verify that certificate validity windows and controller clocks remain within the permitted tolerance"
+  },
+  {
+   "unit_id": "S123",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "target": "Cryptographic Key Management Appliance",
+   "payload": "Clock Drift Sample Report"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "produces the Encryption Certificate Renewal Pack"
+  },
+  {
+   "unit_id": "S124",
+   "type": "flow",
+   "source": "Cryptographic Key Management Appliance",
+   "payload": "Encryption Certificate Renewal Pack"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "records the change reference"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "reviews certificate change records, access events, and unusual authentication failures"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "authorising normal operational reliance on the renewed security configuration"
+  },
+  {
+   "unit_id": "S125",
+   "type": "succession",
+   "before": "reviews certificate change records, access events, and unusual authentication failures",
+   "after": "authorising normal operational reliance on the renewed security configuration"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "label": "Authority review is performed"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "label": "confirm that each commanded movement remained consistent with interlocking state, controller intent, and recorded train response"
+  },
+  {
+   "unit_id": "S127",
+   "type": "composition",
+   "whole": "Greenvale Metro",
+   "parts": [
+    "Communications-Based Train Control system"
+   ]
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "produces the Platform Door Status Snapshot"
+  },
+  {
+   "unit_id": "S129",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "target": "Communications-Based Train Control system",
+   "payload": "Platform Door Status Snapshot"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "reports closed, locked, bypassed, inhibited, and faulted conditions"
+  },
+  {
+   "unit_id": "S130",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "payload": "closed, locked, bypassed, inhibited, and faulted conditions"
+  },
+  {
+   "unit_id": "S130",
+   "type": "state",
+   "owner": "Platform Screen Door Controller",
+   "label": "closed"
+  },
+  {
+   "unit_id": "S130",
+   "type": "state",
+   "owner": "Platform Screen Door Controller",
+   "label": "locked"
+  },
+  {
+   "unit_id": "S130",
+   "type": "state",
+   "owner": "Platform Screen Door Controller",
+   "label": "bypassed"
+  },
+  {
+   "unit_id": "S130",
+   "type": "state",
+   "owner": "Platform Screen Door Controller",
+   "label": "inhibited"
+  },
+  {
+   "unit_id": "S130",
+   "type": "state",
+   "owner": "Platform Screen Door Controller",
+   "label": "faulted"
+  },
+  {
+   "unit_id": "S131",
+   "type": "constraint",
+   "subject": "Revenue Train Operator",
+   "expression": "departure command is not considered available until the relevant platform door state is compatible with the requested direction of travel"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "suppresses platform departure authority"
+  },
+  {
+   "unit_id": "S132",
+   "type": "flow",
+   "target": "North District Zone Controller",
+   "payload": "unsafe door interface state"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "presented station status indications to local station staff"
+  },
+  {
+   "unit_id": "S133",
+   "type": "flow",
+   "target": "local station staff",
+   "payload": "station status indications"
+  },
+  {
+   "unit_id": "S134",
+   "type": "state",
+   "label": "normal service"
+  },
+  {
+   "unit_id": "S134",
+   "type": "state",
+   "label": "held train"
+  },
+  {
+   "unit_id": "S134",
+   "type": "state",
+   "label": "door interlock fault"
+  },
+  {
+   "unit_id": "S134",
+   "type": "state",
+   "label": "radio degraded"
+  },
+  {
+   "unit_id": "S134",
+   "type": "state",
+   "label": "emergency stop active"
+  },
+  {
+   "unit_id": "S134",
+   "type": "state",
+   "label": "evacuation support"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "displays station and platform states"
+  },
+  {
+   "unit_id": "S135",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "payload": "station and platform states"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "CBTC system",
+   "label": "reconciled them with the active timetable"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "receives train prediction data, stopping pattern changes, and platform allocation updates"
+  },
+  {
+   "unit_id": "S136",
+   "type": "flow",
+   "source": "CBTC system",
+   "target": "Passenger Information Gateway",
+   "payload": "train prediction data, stopping pattern changes, and platform allocation updates"
+  },
+  {
+   "unit_id": "S136",
+   "type": "succession",
+   "before": "reconciled them with the active timetable",
+   "after": "receives train prediction data, stopping pattern changes, and platform allocation updates"
+  },
+  {
+   "unit_id": "S137",
+   "type": "requirement",
+   "subject": "Passenger Information Gateway",
+   "text": "The Passenger Information Gateway shall not publish a revised destination or skip-stop message until the underlying train identity and route have been confirmed by the CBTC system."
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "publish a revised destination or skip-stop message"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "CBTC system",
+   "label": "confirmed the underlying train identity and route"
+  },
+  {
+   "unit_id": "S137",
+   "type": "succession",
+   "before": "confirmed the underlying train identity and route",
+   "after": "publish a revised destination or skip-stop message"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "label": "platform is taken out of service"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "marks the affected train movements as unavailable for boarding"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "retaining their operational tracking in the control center"
+  },
+  {
+   "unit_id": "S138",
+   "type": "succession",
+   "before": "platform is taken out of service",
+   "after": "marks the affected train movements as unavailable for boarding"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Service Timetable Server",
+   "label": "provides planned service context"
+  },
+  {
+   "unit_id": "S139",
+   "type": "flow",
+   "source": "Service Timetable Server",
+   "payload": "planned service context"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "label": "compare predicted arrivals against scheduled platform usage"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "coordinates timetable deviation, platform closure, and station crowding information"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "label": "released to passenger-facing systems"
+  },
+  {
+   "unit_id": "S140",
+   "type": "succession",
+   "before": "coordinates timetable deviation, platform closure, and station crowding information",
+   "after": "released to passenger-facing systems"
+  },
+  {
+   "unit_id": "S140",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "payload": "timetable deviation, platform closure, and station crowding information"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Voice Dispatch Console",
+   "label": "displays train calling identity, current platform association, and the latest operational hold reason"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Voice Dispatch Console",
+   "payload": "train calling identity, current platform association, and the latest operational hold reason"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "apply a station hold through dispatch controls"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "CBTC system",
+   "label": "hold is reflected in CBTC departure logic"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "label": "use positive confirmation and cancellation states"
+  },
+  {
+   "unit_id": "S143",
+   "type": "state",
+   "label": "positive confirmation"
+  },
+  {
+   "unit_id": "S143",
+   "type": "state",
+   "label": "cancellation"
+  },
+  {
+   "unit_id": "S144",
+   "type": "requirement",
+   "subject": "Atlas Onboard Controller",
+   "text": "Kestrel shall report train door enable side, berth identity, and departure readiness to support platform interface checks during dwell and dispatch."
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "report train door enable side, berth identity, and departure readiness"
+  },
+  {
+   "unit_id": "S144",
+   "type": "flow",
+   "source": "Atlas Onboard Controller",
+   "payload": "train door enable side, berth identity, and departure readiness"
+  },
+  {
+   "unit_id": "S145",
+   "type": "requirement",
+   "subject": "Wayside Radio Access Network",
+   "text": "Saffron shall maintain message delivery paths for station interface traffic during normal radio coverage transitions and degraded coverage recovery."
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Wayside Radio Access Network",
+   "label": "maintain message delivery paths for station interface traffic"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "uses the Encryption Certificate Renewal Pack"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "accepting renewed secure sessions"
+  },
+  {
+   "unit_id": "S146",
+   "type": "succession",
+   "before": "uses the Encryption Certificate Renewal Pack",
+   "after": "accepting renewed secure sessions"
+  },
+  {
+   "unit_id": "S146",
+   "type": "flow",
+   "source": "Cryptographic Key Management Appliance",
+   "target": "Train Radio Modem",
+   "payload": "Encryption Certificate Renewal Pack"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "carries safety-relevant station interface messages"
+  },
+  {
+   "unit_id": "S147",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "payload": "safety-relevant station interface messages"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "records station interface faults, rejected commands, and inconsistent indications"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "later investigation"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "reviews access rights for passenger information and dispatch integration workstations"
+  },
+  {
+   "unit_id": "S150",
+   "type": "state",
+   "owner": "Communications-Based Train Control system",
+   "label": "degraded operation"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Communications-Based Train Control system",
+   "label": "favours restrictive platform states"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Communications-Based Train Control system",
+   "label": "requires explicit controller action before restoring automatic departure support"
+  },
+  {
+   "unit_id": "S150",
+   "type": "succession",
+   "before": "explicit controller action",
+   "after": "restoring automatic departure support"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "null",
+   "label": "records time-stamped events for state changes, command acceptance, rejected commands, communication loss, and local protective actions"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "receives event streams from fixed and onboard equipment"
+  },
+  {
+   "unit_id": "S153",
+   "type": "flow",
+   "source": "null",
+   "target": "Maintenance Diagnostic Server",
+   "payload": "event streams"
+  },
+  {
+   "unit_id": "S153",
+   "type": "constraint",
+   "subject": "Maintenance Diagnostic Server",
+   "expression": "monitored interfaces that do not allow maintenance traffic to alter train movement authority"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "compare stored braking data identifiers against the expected maintenance baseline"
+  },
+  {
+   "unit_id": "S154",
+   "type": "flow",
+   "source": "Atlas Onboard Controller",
+   "target": "Maintenance Diagnostic Server",
+   "payload": "Brake Curve Checksum Log"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "initiates remote diagnostic sessions"
+  },
+  {
+   "unit_id": "S155",
+   "type": "constraint",
+   "subject": "Remote diagnostic sessions",
+   "expression": "limited to read-only observation unless an approved maintenance window authorises a specific intervention"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "reviews privileged diagnostic access logs"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "confirms that remote connections use current credentials and approved encryption settings"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "receives the Route Release Exception List"
+  },
+  {
+   "unit_id": "S157",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "target": "Line Traffic Controller",
+   "payload": "Route Release Exception List"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "check whether a release anomaly could affect service recovery decisions"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "records controller health, interface state, and fallback mode transitions"
+  },
+  {
+   "unit_id": "S158",
+   "type": "state",
+   "owner": "North District Zone Controller",
+   "label": "fallback mode"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "maintains comparable diagnostic coverage"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "report route command histories, point detection changes, and protective lock status"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "West Junction Interlocking",
+   "label": "report route command histories, point detection changes, and protective lock status"
+  },
+  {
+   "unit_id": "S160",
+   "type": "flow",
+   "source": "East Junction Interlocking",
+   "target": "null",
+   "payload": "route command histories, point detection changes, and protective lock status"
+  },
+  {
+   "unit_id": "S160",
+   "type": "flow",
+   "source": "West Junction Interlocking",
+   "target": "null",
+   "payload": "route command histories, point detection changes, and protective lock status"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "stores onboard fault codes, movement authority acceptance records, propulsion cutback requests, and train interface exceptions"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Dual Channel Odometer",
+   "label": "provides distance and speed plausibility information"
+  },
+  {
+   "unit_id": "S162",
+   "type": "flow",
+   "source": "Dual Channel Odometer",
+   "target": "null",
+   "payload": "distance and speed plausibility information"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "records bearer loss, reconnection timing, signal quality indicators, and message retry counts"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Wayside Radio Access Network",
+   "label": "provide communication performance records"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Safety Data Communication Network",
+   "label": "provide communication performance records"
+  },
+  {
+   "unit_id": "S164",
+   "type": "flow",
+   "source": "Wayside Radio Access Network",
+   "target": "null",
+   "payload": "communication performance records"
+  },
+  {
+   "unit_id": "S164",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "target": "null",
+   "payload": "communication performance records"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "null",
+   "label": "compared with controller logs"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "displays selected fault summaries"
+  },
+  {
+   "unit_id": "S165",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "Line Traffic Controller",
+   "payload": "selected fault summaries"
+  },
+  {
+   "unit_id": "S165",
+   "type": "constraint",
+   "subject": "Metro Operations Control System",
+   "expression": "does not expose detailed maintenance commands at the traffic control workstation"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "reports observed cab indications, train handling effects, and passenger service impacts"
+  },
+  {
+   "unit_id": "S166",
+   "type": "flow",
+   "source": "Revenue Train Operator",
+   "target": "null",
+   "payload": "observed cab indications, train handling effects, and passenger service impacts"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "label": "establishes whether the condition is safety critical, service affecting, cyber security related, or a maintenance-only defect"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "confirms the operating restriction"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "confirms the engineering status"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "preserves raw events, normalised event records, diagnostic session notes, and file integrity values"
+  },
+  {
+   "unit_id": "S170",
+   "type": "composition",
+   "whole": "Configuration records",
+   "parts": [
+    "software build identifiers",
+    "parameter set identifiers",
+    "radio configuration versions",
+    "interlocking data versions",
+    "approved change references"
+   ]
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "maintains certificate and key status records"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Service Timetable Server",
+   "label": "are checked"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "are checked"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Voice Dispatch Console",
+   "label": "is included in the evidence scope"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "label": "retained evidence is frozen under maintenance control"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "label": "copied to a protected repository"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "label": "released only through the agreed engineering investigation process"
+  },
+  {
+   "unit_id": "S174",
+   "type": "succession",
+   "before": "retained evidence is frozen under maintenance control",
+   "after": "copied to a protected repository"
+  },
+  {
+   "unit_id": "S175",
+   "type": "state",
+   "owner": "Greenvale Metro",
+   "label": "degraded operation"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Greenvale Metro",
+   "label": "keeps trains stationary or moving at controlled speed"
+  },
+  {
+   "unit_id": "S176",
+   "type": "state",
+   "owner": "Greenvale Metro",
+   "label": "degraded mode"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "declared a degraded mode"
+  },
+  {
+   "unit_id": "S176",
+   "type": "transition",
+   "to": "degraded mode",
+   "trigger": "automatic movement authority, train localization, point detection, platform interface, or radio continuity cannot be trusted"
+  },
+  {
+   "unit_id": "S177",
+   "type": "requirement",
+   "subject": "Metro Operations Control System",
+   "text": "The Metro Operations Control System shall present the affected limits, the selected fallback mode, and any pending operator actions without obscuring safety alarms."
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "present the affected limits, the selected fallback mode, and any pending operator actions"
+  },
+  {
+   "unit_id": "S177",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "payload": "affected limits, selected fallback mode, and pending operator actions"
+  },
+  {
+   "unit_id": "S178",
+   "type": "state",
+   "owner": "Atlas Onboard Controller",
+   "label": "restricted manual operation"
+  },
+  {
+   "unit_id": "S178",
+   "type": "transition",
+   "to": "restricted manual operation",
+   "trigger": "valid movement authority is unavailable or onboard location confidence falls below the configured threshold"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "remains responsible for speed control, stopping accuracy, door release discipline, and compliance with verbal movement limits"
+  },
+  {
+   "unit_id": "S180",
+   "type": "requirement",
+   "subject": "Dual Channel Odometer",
+   "text": "The Dual Channel Odometer shall cause the train location to be treated as uncertain when its channels disagree beyond the permitted tolerance."
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Dual Channel Odometer",
+   "label": "cause the train location to be treated as uncertain"
+  },
+  {
+   "unit_id": "S181",
+   "type": "requirement",
+   "subject": "Train Radio Modem",
+   "text": "The Train Radio Modem shall report loss of safe data connectivity to the Atlas Onboard Controller and shall not mask intermittent communication failures from the cab display."
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "report loss of safe data connectivity"
+  },
+  {
+   "unit_id": "S181",
+   "type": "flow",
+   "source": "Train Radio Modem",
+   "target": "Atlas Onboard Controller",
+   "payload": "loss of safe data connectivity"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Train Radio Modem",
+   "label": "not mask intermittent communication failures from the cab display"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "label": "reducing train throughput"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "label": "extension of manual working is considered"
+  },
+  {
+   "unit_id": "S182",
+   "type": "succession",
+   "before": "reducing train throughput",
+   "after": "extension of manual working is considered"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "validating the affected track limits against its degraded-mode map"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "applies the Temporary Speed Restriction Notice"
+  },
+  {
+   "unit_id": "S183",
+   "type": "succession",
+   "before": "validating the affected track limits against its degraded-mode map",
+   "after": "applies the Temporary Speed Restriction Notice"
+  },
+  {
+   "unit_id": "S184",
+   "type": "requirement",
+   "subject": "South District Zone Controller",
+   "text": "Orchid shall inhibit automatic route setting within any block whose occupancy state is under manual confirmation."
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "South District Zone Controller",
+   "label": "inhibit automatic route setting within any block whose occupancy state is under manual confirmation"
+  },
+  {
+   "unit_id": "S185",
+   "type": "requirement",
+   "subject": "East Junction Interlocking",
+   "text": "The East Junction Interlocking shall hold commanded points locked until field confirmation or a verified diagnostic indication supports a safe release."
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "hold commanded points locked"
+  },
+  {
+   "unit_id": "S186",
+   "type": "requirement",
+   "subject": "West Junction Interlocking",
+   "text": "The West Junction Interlocking shall reject a route command that conflicts with a manually protected train movement."
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "West Junction Interlocking",
+   "label": "reject a route command that conflicts with a manually protected train movement"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "confirms train positions through independent indications and direct verbal reports"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "label": "Manual route recovery begins"
+  },
+  {
+   "unit_id": "S187",
+   "type": "succession",
+   "before": "confirms train positions through independent indications and direct verbal reports",
+   "after": "Manual route recovery begins"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "verifies point condition, track vacancy, and local protection using approved field procedures"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "label": "a manual route is issued"
+  },
+  {
+   "unit_id": "S188",
+   "type": "succession",
+   "before": "verifies point condition, track vacancy, and local protection using approved field procedures",
+   "after": "a manual route is issued"
+  },
+  {
+   "unit_id": "S189",
+   "type": "flow",
+   "source": "East Junction Interlocking",
+   "target": "Signal Maintenance Engineer",
+   "payload": "Axle Counter Reset Request"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "uses the Axle Counter Reset Request as the controlling authority for restoring a failed section"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "label": "local occupancy checks are complete"
+  },
+  {
+   "unit_id": "S189",
+   "type": "succession",
+   "before": "local occupancy checks are complete",
+   "after": "uses the Axle Counter Reset Request as the controlling authority for restoring a failed section"
+  },
+  {
+   "unit_id": "S190",
+   "type": "requirement",
+   "subject": "Voice Dispatch Console",
+   "text": "Restricted manual movements shall be authorized through the Voice Dispatch Console unless the contingency communications procedure has been formally invoked."
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "label": "Restricted manual movements shall be authorized through the Voice Dispatch Console"
+  },
+  {
+   "unit_id": "S191",
+   "type": "requirement",
+   "subject": "Revenue Train Operator",
+   "text": "The Revenue Train Operator shall repeat back the movement limit, maximum permitted speed, stopping point, and any instruction to remain clear of a platform interface."
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "repeat back the movement limit, maximum permitted speed, stopping point, and any instruction to remain clear of a platform interface"
+  },
+  {
+   "unit_id": "S192",
+   "type": "state",
+   "owner": "Platform Screen Door Controller",
+   "label": "protected local state"
+  },
+  {
+   "unit_id": "S192",
+   "type": "transition",
+   "to": "protected local state",
+   "trigger": "train stopping accuracy cannot be verified by the normal automatic interface"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "label": "Reset authorizations require concurrence between the Line Traffic Controller and the Signal Maintenance Engineer"
+  },
+  {
+   "unit_id": "S194",
+   "type": "requirement",
+   "subject": "Quarry",
+   "text": "Quarry shall mark each degraded-mode diagnostic session with the incident identifier before any component restart is attempted."
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Quarry",
+   "label": "mark each degraded-mode diagnostic session with the incident identifier"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "label": "component restart is attempted"
+  },
+  {
+   "unit_id": "S194",
+   "type": "succession",
+   "before": "mark each degraded-mode diagnostic session with the incident identifier",
+   "after": "component restart is attempted"
+  },
+  {
+   "unit_id": "S195",
+   "type": "requirement",
+   "subject": "Cyber Security Officer",
+   "text": "The Cyber Security Officer shall review any degraded condition that involves authentication failure, unexpected lockout, or abnormal network access behavior."
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "review any degraded condition that involves authentication failure, unexpected lockout, or abnormal network access behavior"
+  },
+  {
+   "unit_id": "S196",
+   "type": "requirement",
+   "subject": "Cryptographic Key Management Appliance",
+   "text": "The Cryptographic Key Management Appliance shall not be bypassed to accelerate service recovery unless the approved emergency security procedure is active."
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "bypassed to accelerate service recovery"
+  },
+  {
+   "unit_id": "S197",
+   "type": "flow",
+   "source": "Revenue Train Operator",
+   "payload": "Test Train Clearance Memo"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "sends the Test Train Clearance Memo"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "completing the prescribed proving run under restricted manual control"
+  },
+  {
+   "unit_id": "S197",
+   "type": "succession",
+   "before": "completing the prescribed proving run under restricted manual control",
+   "after": "sends the Test Train Clearance Memo"
+  },
+  {
+   "unit_id": "S198",
+   "type": "requirement",
+   "subject": "Passenger Information Gateway",
+   "text": "The Passenger Information Gateway shall issue disruption messages that are consistent with the operating limits accepted by the Line Traffic Controller."
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Passenger Information Gateway",
+   "label": "issue disruption messages that are consistent with the operating limits accepted by the Line Traffic Controller"
+  },
+  {
+   "unit_id": "S198",
+   "type": "flow",
+   "source": "Passenger Information Gateway",
+   "payload": "disruption messages"
+  },
+  {
+   "unit_id": "S199",
+   "type": "state",
+   "owner": "Communications-Based Train Control system",
+   "label": "automatic operation"
+  },
+  {
+   "unit_id": "S199",
+   "type": "transition",
+   "to": "automatic operation",
+   "trigger": "stable communications, verified route state, confirmed train position, and a recorded handback from maintenance control to operations control"
+  },
+  {
+   "unit_id": "S200",
+   "type": "requirement",
+   "subject": "Communications-Based Train Control system",
+   "text": "Cybersecurity controls for the Greenvale Metro Communications-Based Train Control System shall be treated as operating prerequisites for safe automatic train movement after any maintenance handback."
+  },
+  {
+   "unit_id": "S201",
+   "type": "requirement",
+   "text": "The operating response shall reflect that assumption that loss of trust in communications can be as significant as loss of communications."
+  },
+  {
+   "unit_id": "S202",
+   "type": "requirement",
+   "subject": "Cyber Security Officer",
+   "text": "The Cyber Security Officer shall maintain continuous monitoring of security events from the Safety Data Communication Network, the Wayside Radio Access Network, and the Metro Operations Control System."
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "maintain continuous monitoring of security events"
+  },
+  {
+   "unit_id": "S202",
+   "type": "flow",
+   "source": "Safety Data Communication Network",
+   "target": "Cyber Security Officer",
+   "payload": "security events"
+  },
+  {
+   "unit_id": "S202",
+   "type": "flow",
+   "source": "Wayside Radio Access Network",
+   "target": "Cyber Security Officer",
+   "payload": "security events"
+  },
+  {
+   "unit_id": "S202",
+   "type": "flow",
+   "source": "Metro Operations Control System",
+   "target": "Cyber Security Officer",
+   "payload": "security events"
+  },
+  {
+   "unit_id": "S203",
+   "type": "requirement",
+   "text": "Security monitoring shall correlate authentication failures, session resets, rejected messages, configuration changes, and abnormal timing patterns without altering any safety command path."
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "label": "correlate authentication failures, session resets, rejected messages, configuration changes, and abnormal timing patterns"
+  },
+  {
+   "unit_id": "S204",
+   "type": "requirement",
+   "text": "Alerts affecting train control availability shall be classified using operational impact, affected territory, and whether the event could change train movement authority."
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "label": "classified alerts affecting train control availability"
+  },
+  {
+   "unit_id": "S205",
+   "type": "requirement",
+   "subject": "Line Traffic Controller",
+   "text": "The Line Traffic Controller shall be notified when a cybersecurity event requires a restriction on automatic operation or a change in communications mode."
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "label": "notified the Line Traffic Controller"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "investigate radio session continuity"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "confirm that security monitoring records are complete"
+  },
+  {
+   "unit_id": "S206",
+   "type": "flow",
+   "source": "Wayside Radio Access Network",
+   "target": "Cyber Security Officer",
+   "payload": "Radio Handover Audit File"
+  },
+  {
+   "unit_id": "S207",
+   "type": "requirement",
+   "subject": "Cryptographic Key Management Appliance",
+   "text": "The Cryptographic Key Management Appliance shall be the controlled source for operational certificates used by trainborne, wayside, control center, and maintenance components."
+  },
+  {
+   "unit_id": "S207",
+   "type": "flow",
+   "source": "Cryptographic Key Management Appliance",
+   "payload": "operational certificates"
+  },
+  {
+   "unit_id": "S208",
+   "type": "requirement",
+   "text": "Certificate issuance shall require approved asset identity, recorded software baseline, assigned operating domain, and confirmation that the requesting component is authorized for service."
+  },
+  {
+   "unit_id": "S209",
+   "type": "requirement",
+   "text": "Certificate renewal shall be planned before expiry so that the Atlas Onboard Controller, Train Radio Modem, North District Zone Controller, South District Zone Controller, and West Junction Interlocking do not enter service with degraded trust."
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "label": "planned certificate renewal before expiry"
+  },
+  {
+   "unit_id": "S210",
+   "type": "requirement",
+   "subject": "East Junction Interlocking",
+   "text": "Falcon shall reject any control message with an invalid signature, an expired certificate, or a sequence value outside the accepted window."
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "East Junction Interlocking",
+   "label": "reject any control message with an invalid signature, an expired certificate, or a sequence value outside the accepted window"
+  },
+  {
+   "unit_id": "S211",
+   "type": "requirement",
+   "text": "Revocation shall be available for a compromised device, a retired device, or a device whose maintenance history can no longer be reconciled with approved configuration records."
+  },
+  {
+   "unit_id": "S212",
+   "type": "requirement",
+   "subject": "Maintenance Diagnostic Server",
+   "text": "The Maintenance Diagnostic Server shall not be used to bypass certificate checks or to create alternate trust paths into safety-related communications."
+  },
+  {
+   "unit_id": "S213",
+   "type": "requirement",
+   "subject": "Cryptographic Key Management Appliance",
+   "text": "Administrative access to the Cryptographic Key Management Appliance shall require named accounts, multifactor authentication, separation of duties, and recorded approval for privileged changes."
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "request access needed for fault isolation"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "approve security-sensitive permissions"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "label": "enabled security-sensitive permissions"
+  },
+  {
+   "unit_id": "S214",
+   "type": "requirement",
+   "subject": "Cyber Security Officer",
+   "text": "the Cyber Security Officer shall approve security-sensitive permissions before they are enabled."
+  },
+  {
+   "unit_id": "S214",
+   "type": "succession",
+   "before": "approve security-sensitive permissions",
+   "after": "enabled security-sensitive permissions"
+  },
+  {
+   "unit_id": "S215",
+   "type": "requirement",
+   "subject": "Revenue Train Operator",
+   "text": "The Revenue Train Operator shall not be assigned cybersecurity administration duties during passenger service, although security warnings presented in the cab shall remain part of normal operating awareness."
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "label": "security warnings presented in the cab"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "accepting security exceptions for non-revenue movement in protected territory"
+  },
+  {
+   "unit_id": "S216",
+   "type": "flow",
+   "source": "Revenue Train Operator",
+   "target": "Metro Operations Control System",
+   "payload": "Test Train Clearance Memo"
+  },
+  {
+   "unit_id": "S217",
+   "type": "requirement",
+   "text": "Audit evidence shall include time-synchronized event records, access approvals, certificate actions, configuration changes, alarm acknowledgements, and operator instructions related to communications security."
+  },
+  {
+   "unit_id": "S218",
+   "type": "requirement",
+   "subject": "Audit records",
+   "text": "Audit records shall be protected from local alteration by the component that generates them and shall be retained for the period defined by Greenvale Metro governance."
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "label": "protected from local alteration"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "label": "generates them"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "label": "retained for the period defined by Greenvale Metro governance"
+  },
+  {
+   "unit_id": "S219",
+   "type": "requirement",
+   "subject": "Service Timetable Server",
+   "text": "The Service Timetable Server and Passenger Information Gateway shall be monitored for compromise because incorrect operational context can influence control room decisions even when safety commands remain valid."
+  },
+  {
+   "unit_id": "S219",
+   "type": "requirement",
+   "subject": "Passenger Information Gateway",
+   "text": "The Service Timetable Server and Passenger Information Gateway shall be monitored for compromise because incorrect operational context can influence control room decisions even when safety commands remain valid."
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "monitored for compromise"
+  },
+  {
+   "unit_id": "S220",
+   "type": "requirement",
+   "subject": "Voice Dispatch Console",
+   "text": "The Voice Dispatch Console shall be included in security incident procedures when a cyber event changes the normal method for issuing operational instructions."
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "label": "included in security incident procedures"
+  },
+  {
+   "unit_id": "S221",
+   "type": "requirement",
+   "subject": "Platform Screen Door Controller",
+   "text": "The Platform Screen Door Controller shall accept only authenticated interfaces approved for passenger service coordination and maintenance testing."
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "Platform Screen Door Controller",
+   "label": "accept only authenticated interfaces"
+  },
+  {
+   "unit_id": "S222",
+   "type": "requirement",
+   "subject": "Dual Channel Odometer",
+   "text": "The Dual Channel Odometer and Atlas Onboard Controller shall report security-relevant diagnostic conditions in a manner that supports investigation without exposing cryptographic material."
+  },
+  {
+   "unit_id": "S222",
+   "type": "requirement",
+   "subject": "Atlas Onboard Controller",
+   "text": "The Dual Channel Odometer and Atlas Onboard Controller shall report security-relevant diagnostic conditions in a manner that supports investigation without exposing cryptographic material."
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Dual Channel Odometer",
+   "label": "report security-relevant diagnostic conditions"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "report security-relevant diagnostic conditions"
+  },
+  {
+   "unit_id": "S222",
+   "type": "flow",
+   "source": "Dual Channel Odometer",
+   "payload": "security-relevant diagnostic conditions"
+  },
+  {
+   "unit_id": "S222",
+   "type": "flow",
+   "source": "Atlas Onboard Controller",
+   "payload": "security-relevant diagnostic conditions"
+  },
+  {
+   "unit_id": "S223",
+   "type": "requirement",
+   "text": "Security responsibilities shall be reviewed after major timetable changes, radio coverage modifications, control center upgrades, or any incident that questions the integrity of safety-related communications."
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "label": "reviewed security responsibilities"
+  },
+  {
+   "unit_id": "S224",
+   "type": "requirement",
+   "text": "Commissioning shall begin only after the installed equipment baseline for the Atlas Onboard Controller, Dual Channel Odometer, Train Radio Modem, and wayside control equipment has been configuration checked against the approved release record."
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "configuration checked installed equipment baseline against the approved release record"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "begin commissioning"
+  },
+  {
+   "unit_id": "S224",
+   "type": "succession",
+   "before": "configuration checked installed equipment baseline against the approved release record",
+   "after": "begin commissioning"
+  },
+  {
+   "unit_id": "S225",
+   "type": "requirement",
+   "text": "The test-train phase shall use non-passenger movements to prove train localization, movement authority processing, braking response, radio continuity, and operator displays under controlled operating conditions."
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "label": "use non-passenger movements to prove train localization, movement authority processing, braking response, radio continuity, and operator displays"
+  },
+  {
+   "unit_id": "S226",
+   "type": "requirement",
+   "subject": "test train",
+   "text": "Each test train shall be crewed by a Revenue Train Operator qualified for commissioning duties and supported by a Line Traffic Controller with authority to stop the trial when observed conditions depart from the approved script."
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "crewed test train"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "stop the trial"
+  },
+  {
+   "unit_id": "S227",
+   "type": "requirement",
+   "text": "Initial movements shall be conducted at restricted commissioning speeds and shall progress to representative service speeds only after the Atlas Onboard Controller and North District Zone Controller demonstrate stable supervision."
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "conducted at restricted commissioning speeds"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "progress to representative service speeds"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Atlas Onboard Controller",
+   "label": "demonstrate stable supervision"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "North District Zone Controller",
+   "label": "demonstrate stable supervision"
+  },
+  {
+   "unit_id": "S227",
+   "type": "succession",
+   "before": "demonstrate stable supervision",
+   "after": "progress to representative service speeds"
+  },
+  {
+   "unit_id": "S228",
+   "type": "requirement",
+   "subject": "South District Zone Controller",
+   "text": "The South District Zone Controller shall be commissioned under the same test regime so that boundary behavior is verified before whole-line operation is attempted."
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "label": "commissioned under the same test regime"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "label": "boundary behavior is verified"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "label": "whole-line operation is attempted"
+  },
+  {
+   "unit_id": "S228",
+   "type": "succession",
+   "before": "boundary behavior is verified",
+   "after": "whole-line operation is attempted"
+  },
+  {
+   "unit_id": "S229",
+   "type": "requirement",
+   "subject": "East Junction Interlocking",
+   "text": "East Junction Interlocking and West Junction Interlocking shall remain under enhanced monitoring during migration because route setting, point detection, and authority release behavior are critical to mixed-mode operation."
+  },
+  {
+   "unit_id": "S229",
+   "type": "requirement",
+   "subject": "West Junction Interlocking",
+   "text": "East Junction Interlocking and West Junction Interlocking shall remain under enhanced monitoring during migration because route setting, point detection, and authority release behavior are critical to mixed-mode operation."
+  },
+  {
+   "unit_id": "S229",
+   "type": "state",
+   "owner": "East Junction Interlocking",
+   "label": "enhanced monitoring"
+  },
+  {
+   "unit_id": "S229",
+   "type": "state",
+   "owner": "West Junction Interlocking",
+   "label": "enhanced monitoring"
+  },
+  {
+   "unit_id": "S229",
+   "type": "state",
+   "label": "mixed-mode operation"
+  },
+  {
+   "unit_id": "S230",
+   "type": "requirement",
+   "text": "The staged migration from legacy signalling shall divide the railway into controlled areas that can be commissioned, operated, and, if necessary, returned to legacy control without affecting uncommissioned areas."
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "label": "divide the railway into controlled areas"
+  },
+  {
+   "unit_id": "S230",
+   "type": "state",
+   "label": "legacy control"
+  },
+  {
+   "unit_id": "S230",
+   "type": "transition",
+   "to": "legacy control"
+  },
+  {
+   "unit_id": "S231",
+   "type": "requirement",
+   "text": "Cutover planning shall define the exact control boundaries, permissible train movements, staffing levels, and rollback conditions for each migration stage."
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "label": "define the exact control boundaries, permissible train movements, staffing levels, and rollback conditions"
+  },
+  {
+   "unit_id": "S232",
+   "type": "requirement",
+   "subject": "Safety Data Communication Network",
+   "text": "Before any cutover stage, the Safety Data Communication Network and Wayside Radio Access Network shall be verified for coverage, latency, redundancy, and alarm presentation at the control center."
+  },
+  {
+   "unit_id": "S232",
+   "type": "requirement",
+   "subject": "Wayside Radio Access Network",
+   "text": "Before any cutover stage, the Safety Data Communication Network and Wayside Radio Access Network shall be verified for coverage, latency, redundancy, and alarm presentation at the control center."
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "label": "verified for coverage, latency, redundancy, and alarm presentation"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "label": "cutover stage"
+  },
+  {
+   "unit_id": "S232",
+   "type": "succession",
+   "before": "verified for coverage, latency, redundancy, and alarm presentation",
+   "after": "cutover stage"
+  },
+  {
+   "unit_id": "S233",
+   "type": "flow",
+   "source": "Platform Screen Door Controller",
+   "target": "Metro Operations Control System",
+   "payload": "Platform Door Status Snapshot"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "uses the status snapshot"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "confirm that platform interface conditions are suitable"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Metro Operations Control System",
+   "label": "authorizing the associated commissioning scenario"
+  },
+  {
+   "unit_id": "S233",
+   "type": "succession",
+   "before": "confirm that platform interface conditions are suitable",
+   "after": "authorizing the associated commissioning scenario"
+  },
+  {
+   "unit_id": "S234",
+   "type": "requirement",
+   "subject": "Platform Screen Door Controller",
+   "text": "The Platform Screen Door Controller shall be included in end-to-end tests that confirm safe coordination between platform equipment, train stopping position, and supervised door enablement."
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "label": "be included in end-to-end tests"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "label": "confirm safe coordination between platform equipment, train stopping position, and supervised door enablement"
+  },
+  {
+   "unit_id": "S235",
+   "type": "requirement",
+   "subject": "Service Timetable Server",
+   "text": "The Service Timetable Server shall provide trial schedules that exercise normal headways, recovery margins, terminal reversals, and junction conflicts without carrying passengers."
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Service Timetable Server",
+   "label": "provide trial schedules"
+  },
+  {
+   "unit_id": "S235",
+   "type": "flow",
+   "source": "Service Timetable Server",
+   "payload": "trial schedules"
+  },
+  {
+   "unit_id": "S236",
+   "type": "requirement",
+   "subject": "Passenger Information Gateway",
+   "text": "The Passenger Information Gateway shall be observed during operational rehearsal to confirm that public-facing messages remain consistent with the planned commissioning condition."
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "be observed during operational rehearsal"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "confirm that public-facing messages remain consistent with the planned commissioning condition"
+  },
+  {
+   "unit_id": "S237",
+   "type": "requirement",
+   "subject": "Voice Dispatch Console",
+   "text": "Voice Dispatch Console procedures shall be rehearsed for test-train dispatch, abnormal stop instructions, evacuation coordination, and return to depot instructions."
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "label": "be rehearsed for test-train dispatch, abnormal stop instructions, evacuation coordination, and return to depot instructions"
+  },
+  {
+   "unit_id": "S238",
+   "type": "requirement",
+   "subject": "Maintenance Diagnostic Server",
+   "text": "The Maintenance Diagnostic Server shall collect commissioning diagnostics so that intermittent radio, odometry, controller, and interlocking events can be reviewed before acceptance."
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "Maintenance Diagnostic Server",
+   "label": "collect commissioning diagnostics"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "label": "reviewed before acceptance"
+  },
+  {
+   "unit_id": "S239",
+   "type": "requirement",
+   "subject": "Cryptographic Key Management Appliance",
+   "text": "The Cryptographic Key Management Appliance shall be confirmed as available, synchronized with the approved security baseline, and capable of supporting commissioning operations without manual workarounds."
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "label": "be confirmed as available"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "Cryptographic Key Management Appliance",
+   "label": "supporting commissioning operations without manual workarounds"
+  },
+  {
+   "unit_id": "S240",
+   "type": "requirement",
+   "text": "Readiness reviews shall be held at the completion of each stage and shall include representatives from operations, signalling maintenance, rolling stock, communications, safety assurance, and cyber security."
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "label": "be held at the completion of each stage"
+  },
+  {
+   "unit_id": "S241",
+   "type": "requirement",
+   "subject": "Signal Maintenance Engineer",
+   "text": "A Signal Maintenance Engineer shall verify that field defects raised during test running have been closed, deferred with approved controls, or assigned to a post-commissioning monitoring plan."
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Signal Maintenance Engineer",
+   "label": "verify that field defects raised during test running have been closed, deferred with approved controls, or assigned to a post-commissioning monitoring plan"
+  },
+  {
+   "unit_id": "S242",
+   "type": "requirement",
+   "subject": "Cyber Security Officer",
+   "text": "A Cyber Security Officer shall confirm that access controls, event monitoring, operator accounts, and security incident escalation paths are effective before revenue operation is recommended."
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Cyber Security Officer",
+   "label": "confirm that access controls, event monitoring, operator accounts, and security incident escalation paths are effective"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "label": "revenue operation is recommended"
+  },
+  {
+   "unit_id": "S242",
+   "type": "succession",
+   "before": "confirm that access controls, event monitoring, operator accounts, and security incident escalation paths are effective",
+   "after": "revenue operation is recommended"
+  },
+  {
+   "unit_id": "S243",
+   "type": "requirement",
+   "text": "Operational rehearsal shall use realistic degraded scenarios including radio coverage loss, failed train initialization, controller switchover, interlocking unavailability, and control center workstation failure."
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "label": "use realistic degraded scenarios"
+  },
+  {
+   "unit_id": "S244",
+   "type": "requirement",
+   "subject": "Line Traffic Controller",
+   "text": "The rehearsal shall demonstrate that the Line Traffic Controller can maintain safe service regulation while the Revenue Train Operator follows onboard indications and rulebook instructions."
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "label": "demonstrate that the Line Traffic Controller can maintain safe service regulation"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "Line Traffic Controller",
+   "label": "maintain safe service regulation"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "Revenue Train Operator",
+   "label": "follows onboard indications and rulebook instructions"
+  },
+  {
+   "unit_id": "S245",
+   "type": "requirement",
+   "text": "Acceptance for revenue service shall require completion of planned test cases, closure of safety-critical defects, successful rollback demonstration, and approval of the operations readiness record."
+  },
+  {
+   "unit_id": "S246",
+   "type": "requirement",
+   "subject": "readiness review authority",
+   "text": "No open defect shall be accepted for revenue service unless its operational restriction, maintenance response, and passenger impact have been assessed and approved by the readiness review authority."
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "label": "be accepted for revenue service"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "readiness review authority",
+   "label": "assessed and approved operational restriction, maintenance response, and passenger impact"
+  },
+  {
+   "unit_id": "S247",
+   "type": "requirement",
+   "text": "Final entry into revenue service shall occur only after management confirms that training, documentation, staffing, spare equipment, monitoring arrangements, and emergency procedures are in place for sustained operation."
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "management",
+   "label": "confirms that training, documentation, staffing, spare equipment, monitoring arrangements, and emergency procedures are in place for sustained operation"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "label": "Final entry into revenue service shall occur"
+  },
+  {
+   "unit_id": "S247",
+   "type": "succession",
+   "before": "confirms that training, documentation, staffing, spare equipment, monitoring arrangements, and emergency procedures are in place for sustained operation",
+   "after": "Final entry into revenue service shall occur"
+  }
+ ],
+ "entities": [
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Communications-Based Train Control system",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": []
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": []
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "control room",
+   "aliases": []
+  },
+  {
+   "name": "field staff",
+   "aliases": []
+  },
+  {
+   "name": "customer information systems",
+   "aliases": []
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": []
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Crew Login Token Bundle",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "movement authority data",
+   "aliases": []
+  },
+  {
+   "name": "interlocking indications",
+   "aliases": []
+  },
+  {
+   "name": "platform interface indications",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": []
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Brake Curve Checksum Log",
+   "aliases": []
+  },
+  {
+   "name": "Clock Drift Sample Report",
+   "aliases": []
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "authorized technical staff",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Radio Handover Audit File",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "interlocking indications",
+   "aliases": []
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": []
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "CBTC system",
+   "aliases": []
+  },
+  {
+   "name": "Axle Counter Reset Request",
+   "aliases": []
+  },
+  {
+   "name": "Route Release Exception List",
+   "aliases": []
+  },
+  {
+   "name": "Crew Login Token Bundle",
+   "aliases": []
+  },
+  {
+   "name": "supervising wayside systems",
+   "aliases": []
+  },
+  {
+   "name": "control staff",
+   "aliases": []
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Operations Control Centre",
+   "aliases": []
+  },
+  {
+   "name": "Temporary Speed Restriction Notice",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "Encryption Certificate Renewal Pack",
+   "aliases": []
+  },
+  {
+   "name": "Clock Drift Sample Report",
+   "aliases": []
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Communications-Based Train Control system",
+   "aliases": [
+    "CBTC system"
+   ]
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Platform Door Status Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "control room",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "CBTC system",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Encryption Certificate Renewal Pack",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "local station staff",
+   "aliases": []
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Communications-Based Train Control system",
+   "aliases": [
+    "CBTC system"
+   ]
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": []
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": []
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Route Release Exception List",
+   "aliases": []
+  },
+  {
+   "name": "Brake Curve Checksum Log",
+   "aliases": [
+    "checksum log"
+   ]
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Temporary Speed Restriction Notice",
+   "aliases": []
+  },
+  {
+   "name": "Configuration records",
+   "aliases": []
+  },
+  {
+   "name": "cab display",
+   "aliases": []
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Axle Counter Reset Request",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Quarry",
+   "aliases": []
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Test Train Clearance Memo",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Communications-Based Train Control system",
+   "aliases": []
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "Radio Handover Audit File",
+   "aliases": []
+  },
+  {
+   "name": "Test Train Clearance Memo",
+   "aliases": []
+  },
+  {
+   "name": "Configuration records",
+   "aliases": []
+  },
+  {
+   "name": "operational certificates",
+   "aliases": []
+  },
+  {
+   "name": "security events",
+   "aliases": []
+  },
+  {
+   "name": "Greenvale Metro",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "North District Zone Controller",
+   "aliases": [
+    "Marble"
+   ]
+  },
+  {
+   "name": "South District Zone Controller",
+   "aliases": [
+    "Orchid"
+   ]
+  },
+  {
+   "name": "East Junction Interlocking",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "name": "West Junction Interlocking",
+   "aliases": []
+  },
+  {
+   "name": "Atlas Onboard Controller",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Dual Channel Odometer",
+   "aliases": []
+  },
+  {
+   "name": "Train Radio Modem",
+   "aliases": []
+  },
+  {
+   "name": "Wayside Radio Access Network",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Safety Data Communication Network",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "control room",
+   "aliases": []
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Audit records",
+   "aliases": []
+  },
+  {
+   "name": "test train",
+   "aliases": []
+  },
+  {
+   "name": "Metro Operations Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Platform Screen Door Controller",
+   "aliases": []
+  },
+  {
+   "name": "Platform Door Status Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "Service Timetable Server",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Information Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Voice Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Maintenance Diagnostic Server",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "name": "Cryptographic Key Management Appliance",
+   "aliases": []
+  },
+  {
+   "name": "Signal Maintenance Engineer",
+   "aliases": [
+    "Maple"
+   ]
+  },
+  {
+   "name": "Cyber Security Officer",
+   "aliases": []
+  },
+  {
+   "name": "Line Traffic Controller",
+   "aliases": []
+  },
+  {
+   "name": "Revenue Train Operator",
+   "aliases": []
+  },
+  {
+   "name": "readiness review authority",
+   "aliases": []
+  },
+  {
+   "name": "management",
+   "aliases": []
+  },
+  {
+   "name": "trial schedules",
+   "aliases": []
+  },
+  {
+   "name": "commissioning diagnostics",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S016"
+   ],
+   "chunk_tokens": 441,
+   "memory_tokens": 0,
+   "prompt_tokens": 1154,
+   "input": 2632,
+   "output": 2274,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S017",
+    "S032"
+   ],
+   "chunk_tokens": 438,
+   "memory_tokens": 464,
+   "prompt_tokens": 1647,
+   "input": 3383,
+   "output": 3847,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S033",
+    "S050"
+   ],
+   "chunk_tokens": 450,
+   "memory_tokens": 505,
+   "prompt_tokens": 1707,
+   "input": 3578,
+   "output": 2702,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S051",
+    "S065"
+   ],
+   "chunk_tokens": 453,
+   "memory_tokens": 498,
+   "prompt_tokens": 1693,
+   "input": 3435,
+   "output": 2681,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S066",
+    "S082"
+   ],
+   "chunk_tokens": 458,
+   "memory_tokens": 511,
+   "prompt_tokens": 1717,
+   "input": 3514,
+   "output": 3582,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S083",
+    "S100"
+   ],
+   "chunk_tokens": 458,
+   "memory_tokens": 487,
+   "prompt_tokens": 1695,
+   "input": 3489,
+   "output": 4208,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S101",
+    "S116"
+   ],
+   "chunk_tokens": 462,
+   "memory_tokens": 505,
+   "prompt_tokens": 1711,
+   "input": 3507,
+   "output": 3151,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S117",
+    "S132"
+   ],
+   "chunk_tokens": 452,
+   "memory_tokens": 496,
+   "prompt_tokens": 1693,
+   "input": 3514,
+   "output": 3556,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S133",
+    "S149"
+   ],
+   "chunk_tokens": 435,
+   "memory_tokens": 492,
+   "prompt_tokens": 1675,
+   "input": 3521,
+   "output": 3829,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S150",
+    "S166"
+   ],
+   "chunk_tokens": 462,
+   "memory_tokens": 511,
+   "prompt_tokens": 1719,
+   "input": 3551,
+   "output": 3467,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S167",
+    "S183"
+   ],
+   "chunk_tokens": 455,
+   "memory_tokens": 500,
+   "prompt_tokens": 1703,
+   "input": 3541,
+   "output": 3143,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S184",
+    "S201"
+   ],
+   "chunk_tokens": 430,
+   "memory_tokens": 508,
+   "prompt_tokens": 1686,
+   "input": 3512,
+   "output": 5013,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S202",
+    "S217"
+   ],
+   "chunk_tokens": 454,
+   "memory_tokens": 496,
+   "prompt_tokens": 1694,
+   "input": 3567,
+   "output": 4189,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S218",
+    "S232"
+   ],
+   "chunk_tokens": 464,
+   "memory_tokens": 507,
+   "prompt_tokens": 1713,
+   "input": 3536,
+   "output": 4551,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S233",
+    "S247"
+   ],
+   "chunk_tokens": 445,
+   "memory_tokens": 498,
+   "prompt_tokens": 1685,
+   "input": 3570,
+   "output": 4731,
+   "reasoning": null,
+   "cached": false
+  }
+ ],
+ "wall_s": 399.8
+}

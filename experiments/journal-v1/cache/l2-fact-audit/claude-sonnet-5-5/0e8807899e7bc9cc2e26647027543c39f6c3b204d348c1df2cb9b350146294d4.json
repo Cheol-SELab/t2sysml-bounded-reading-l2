@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: transition(to=Airspace Restricted State)\n\nSource sentences (the last one is where the fact was extracted):\nS164: Lantern issues a crew exposure refresh only after the current reconnaissance confidence and weather timing fields are both valid.\nS165: Hazards shown to crews include unstable snags, limited access, steep slope exposure, utility conflicts, and escape route degradation.\nS166: The MesoWest Weather Fusion Node provides weather-derived exposure flags that support staging decisions near ridgelines and drainages.\nS167: When the system enters the Airspace Restricted State, helitack assignments show the restriction boundary and require confirmation before aircraft-dependent movement is planned.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S167 mentions the system entering the Airspace Restricted State, which supports it being a transition target, but the source state and trigger are not stated, so the fact is only weakly grounded.\"}",
+ "usage": {
+  "input_tokens": 683,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 77,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.19,
+ "created": "2026-10-14T12:52:04"
+}

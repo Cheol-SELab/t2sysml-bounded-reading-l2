@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metocean Buoy provides \"local sea conditions\" to Vessel Master (an information or material flow).\n\nSource sentences:\nS084: The Weather Analyst reviews available forecasts and advises the Marine Coordinator on conditions that may affect marine operations.\nS085: The Vessel Master evaluates local conditions before departure and continues to reassess them during the voyage.\nS230: The Weather Service provides forecast information for marine planning.\nS231: Copper Finch reports local sea conditions for use in access planning.\n\nAnswer \"supported\" only if the sentences state that Metocean Buoy produces or sends this item AND that Vessel Master receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"Copper Finch, not Metocean Buoy, reports local sea conditions, and no sentence states that Vessel Master receives or uses that report.\"}",
+ "usage": {
+  "input_tokens": 275,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 73,
+  "output_tokens_details": {
+   "reasoning_tokens": 26
+  },
+  "total_tokens": 348
+ },
+ "attempts": 1,
+ "wall_s": 7.093,
+ "created": "2026-10-14T12:50:26"
+}

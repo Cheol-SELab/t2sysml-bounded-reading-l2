@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: constraint(subject=medication order, expression=Unresolved discrepancies keep an order from advancing to preparation)\n\nSource sentences (the last one is where the fact was extracted):\nS033: The Pharmacy Verification Station displays queued orders and their validation results for review.\nS034: The Clinical Pharmacist evaluates clinical appropriateness, dose limits, allergies, and relevant interactions before approving an order.\nS035: The Pharmacy Technician investigates administrative discrepancies and requests clarification through approved clinical channels.\nS036: Unresolved discrepancies keep an order from advancing to preparation.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S036 states that unresolved discrepancies keep an order from advancing to preparation, and the subject 'medication order' is the order referred to in the surrounding pharmacy verification context.\"}",
+ "usage": {
+  "input_tokens": 657,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 75,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.529,
+ "created": "2026-10-14T12:52:21"
+}

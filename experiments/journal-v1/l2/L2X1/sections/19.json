@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Surface constraints are treated as tactical capacity inputs because they can change the feasible order, timing, and routing of aircraft after demand has already been balanced against airspace capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform correlates surface equipment conditions with flight intent, stand assignment, and runway plan data before recommending any change to the active tactical plan.",
+   "tags": []
+  },
+  {
+   "text": "The Surface Surveillance Adapter provides current movement area occupancy and equipment status indicators to the Ramp Movement Board and the Tower Sequence Manager.",
+   "tags": []
+  },
+  {
+   "text": "When a gate bridge, ground power unit, fuel hydrant point, or marked taxilane is unavailable, the Ramp Control Lead verifies whether the condition blocks a single movement, a stand group, or a wider apron route.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager records the operational significance of the condition in the Airport CDM Portal so that all planning components use the same constraint description.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module converts persistent surface constraints into reduced stand throughput, extended turn buffers, or modified taxi-out assumptions.",
+   "tags": []
+  },
+  {
+   "text": "Fuel vehicle holds affect the tactical plan by delaying off-block readiness even when crew, passengers, and aircraft serviceability are otherwise complete.",
+   "tags": []
+  },
+  {
+   "text": "Tower Sequence Manager uses the hold advice to prevent a departure from being sequenced ahead of a fueling constraint that is still active.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "text": "The Airline Operations Coordinator remains responsible for confirming whether the affected flight should keep its Target Off Block Time, request a new value, or accept a later Calculated Takeoff Time.",
+   "tags": []
+  },
+  {
+   "text": "Airline Interface Adapter produces the Late Baggage Tag List when baggage reconciliation data indicates that departure readiness may be overstated.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "text": "Runway metering advisories are applied when the departure queue, runway crossing demand, or runway occupancy trend indicates that uncontrolled pushback would create an unstable surface queue.",
+   "tags": []
+  },
+  {
+   "text": "North Runway Meter reduces the departure release rate when surface surveillance shows that runway-entry queues are approaching the metering threshold.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "text": "The South Runway Meter applies the same planning principle to its assigned runway stream while preserving separation from arrival regulation actions.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service translates runway metering limits into candidate pushback spacing for the Slot Allocation Engine.",
+   "tags": []
+  },
+  {
+   "text": "If the metering action affects a regulated flight, the Slot Coordinator reviews the relationship between the Calculated Takeoff Time and the proposed surface release time before accepting the change.",
+   "tags": []
+  },
+  {
+   "text": "Apron congestion advisories are generated when the Ramp Movement Board shows conflicting pushbacks, blocked lead-in lines, saturated holding points, or insufficient room for safe wingtip clearance.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector checks whether the congestion can be relieved by resequencing adjacent stands before the system proposes a broader departure delay.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner evaluates whether additional ground handling resources can remove the constraint faster than a flow management measure would absorb it.",
+   "tags": []
+  },
+  {
+   "text": "Lantern must distribute surface equipment and apron congestion advisories to subscribed operational roles within the latency target defined in the Business Rules Registry.",
+   "tags": [
+    "A15:link"
+   ]
+  },
+  {
+   "text": "The Common Situation Display highlights active surface advisories with the affected stands, taxi segments, runway meters, and flight identifiers visible to authorized users.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager uses these advisories to decide whether the tactical plan should retain normal sequencing, shift to local metering, or support a Tactical Regulation Proposal.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, the same surface advisories carry higher planning weight because reduced visibility and wet pavement increase the cost of taxiway conflicts and blocked stands.",
+   "tags": []
+  },
+  {
+   "text": "During the Recovery Phase, the system prioritizes removal of surface holds that constrain multiple rotations before optimizing isolated punctuality impacts.",
+   "tags": []
+  },
+  {
+   "text": "Every accepted surface equipment, fuel hold, runway metering, or apron congestion adjustment is written to the Collaborative Decision Log and the Audit Event Ledger with the actor, timestamp, affected flight, and planning rationale.",
+   "tags": []
+  }
+ ]
+}

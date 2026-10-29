@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Platform Screen Door Controller provides \"the Platform Door Status Snapshot\" to Metro Operations Control System (an information or material flow).\n\nSource sentences:\nS128: Platform equipment is treated as part of the movement-authority environment when its state can prevent a train from arriving, dwelling, or departing safely.\nS129: Platform Screen Door Controller produces the Platform Door Status Snapshot at each monitored platform face for operational use by the CBTC system.\nS232: Before any cutover stage, the Safety Data Communication Network and Wayside Radio Access Network shall be verified for coverage, latency, redundancy, and alarm presentation at the control center.\nS233: Metro Operations Control System uses the status snapshot to confirm that platform interface conditions are suitable before authorizing the associated commissioning scenario.\n\nAnswer \"supported\" only if the sentences state that Platform Screen Door Controller produces or sends this item AND that Metro Operations Control System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S129 states that Platform Screen Door Controller produces the Platform Door Status Snapshot, and S233 states that Metro Operations Control System uses the status snapshot.\"}",
+ "usage": {
+  "input_tokens": 331,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 46,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 377
+ },
+ "attempts": 1,
+ "wall_s": 3.447,
+ "created": "2026-10-14T12:34:42"
+}

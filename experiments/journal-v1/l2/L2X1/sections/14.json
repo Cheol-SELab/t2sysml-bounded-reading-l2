@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Airspace restrictions are managed as tactical constraints that affect sector capacity, arrival acceptance, departure release timing, and the sequencing assumptions used by the Meridian regional operation.",
+   "tags": []
+  },
+  {
+   "text": "Military coordination is led through scheduled planning calls and short-notice coordination channels so that civil traffic managers receive usable timing, altitude, and boundary information before a constraint becomes active.",
+   "tags": []
+  },
+  {
+   "text": "The Military Airspace Liaison sends the Temporary Restriction Notice after confirming the activation window, affected volume, controlling authority, and any published contingency conditions.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "The Airspace Sector Planner converts confirmed restricted area information into sector availability assumptions and checks whether existing flight plans require rerouting, metering, or ground delay action.",
+   "tags": []
+  },
+  {
+   "text": "When a temporary restricted area reduces usable route options, the Regional Flow Manager assesses whether the effect is localized to one stream or requires a broader Ground Delay Program.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module treats a restriction as a time-bounded reduction in route, sector, or airport throughput, depending on the geometry and operational impact of the area.",
+   "tags": []
+  },
+  {
+   "text": "The Sector Load Monitor provides the operational view of expected demand against the reduced sector capacity and highlights intervals where overload is likely.",
+   "tags": []
+  },
+  {
+   "text": "For operational brevity, the Alert Distribution Hub is also known as Lantern within the Meridian control room.",
+   "tags": [
+    "ALIAS:E_ALERT_DISTRIBUTION_HUB"
+   ]
+  },
+  {
+   "text": "Alert routing is based on the affected domain, with airspace alerts directed to flow management, sector planning, tower coordination, and operator coordination roles that have an operational need to act.",
+   "tags": []
+  },
+  {
+   "text": "The Alert Distribution Hub applies subscription rules from the Business Rules Registry so that each alert reaches the correct operational positions without requiring manual redistribution.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform records each airspace alert, acknowledgement, and downstream decision in the Audit Event Ledger for traceability and later review.",
+   "tags": []
+  },
+  {
+   "text": "Ironleaf must refresh affected departure sequence advisories when a restriction changes the usable departure routes or expected release spacing.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "The Departure Metering Service uses the current capacity assumptions to adjust departure release guidance while preserving previously coordinated Calculated Takeoff Time values where feasible.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console applies airspace capacity reductions to inbound flows when the restricted area affects feeder sectors or arrival metering fixes.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal displays the active restriction status, expected operational effect, and any related coordination notes on the Common Situation Display.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator uses the shared display to identify flights that may need rerouting, delayed pushback planning, or revised operator intent.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison coordinates with external network positions when a local airspace restriction has consequences beyond the Meridian region.",
+   "tags": []
+  },
+  {
+   "text": "Late airspace capacity changes are treated as high-priority operational updates because they can invalidate demand forecasts, slot allocations, and airport acceptance assumptions already in use.",
+   "tags": []
+  },
+  {
+   "text": "When a late reduction occurs, the Capacity Assessment Module recalculates the effective Airport Acceptance Rate and passes the revised assumption into the operational planning cycle.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine may revise slot outcomes only within the authority defined for the current operating state and the applicable fairness rules.",
+   "tags": []
+  },
+  {
+   "text": "If the change occurs close to departure time, the Regional Flow Manager decides whether to absorb the impact through metering, targeted delay, reroute coordination, or a wider regulation.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode or Capacity Reduction State, airspace alerts are assigned elevated severity when the restriction compounds an existing runway, sector, or surface constraint.",
+   "tags": []
+  },
+  {
+   "text": "The Digital Briefing Room provides a common venue for the Regional Flow Manager, Airspace Sector Planner, Military Airspace Liaison, Tower Supervisor, and Airport Duty Manager to confirm the active interpretation of the restriction.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse later compares planned capacity, issued alerts, operator acknowledgements, and realized delay to determine whether the restriction handling process supported timely and consistent decisions.",
+   "tags": []
+  }
+ ]
+}

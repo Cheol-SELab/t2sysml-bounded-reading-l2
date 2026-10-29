@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Grid export is coordinated against the dispatch instructions, equipment capability, and the agreed operating limits for the connection.",
+   "tags": []
+  },
+  {
+   "text": "Grid Dispatcher issues active-power targets and ramp instructions through the established dispatch channel.",
+   "tags": []
+  },
+  {
+   "text": "Control Engineer reviews each instruction for consistency with current plant status before applying it.",
+   "tags": []
+  },
+  {
+   "text": "SCADA Gateway provides the operational measurements used to track delivered power and instruction response.",
+   "tags": []
+  },
+  {
+   "text": "Fleet Dispatch Console compares the requested output with available turbine capability and known operating restrictions.",
+   "tags": []
+  },
+  {
+   "text": "The Shore Control Room maintains the current dispatch target, ramp rate, and next review time in the shift record.",
+   "tags": []
+  },
+  {
+   "text": "Grid Interface Relay produces an Export Limit Advisory when available export capability falls below the active dispatch target.",
+   "tags": [
+    "F14:intro"
+   ]
+  },
+  {
+   "text": "Wildmere applies the accepted export ceiling to control outputs and records its effective time for audit.",
+   "tags": [
+    "A16:link"
+   ]
+  },
+  {
+   "text": "Shore Control Room uses the tap snapshot to check the recorded transformer position during export reviews.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "text": "Control Engineer confirms that the control response follows the instruction and remains within the permitted ramp rate.",
+   "tags": []
+  },
+  {
+   "text": "When a Grid Constraint is active, the operator records its scope, start time, and expected review point.",
+   "tags": []
+  },
+  {
+   "text": "Turbine Controller adjusts output in accordance with validated plant commands and local equipment protections.",
+   "tags": []
+  },
+  {
+   "text": "Converter Cabinet status is reviewed for alarms or restrictions that could affect export capability.",
+   "tags": []
+  },
+  {
+   "text": "Offshore Substation operating status is included in the assessment of the available export path.",
+   "tags": []
+  },
+  {
+   "text": "Main Transformer loading is monitored against its approved continuous and short-term limits.",
+   "tags": []
+  },
+  {
+   "text": "Export Cable Monitor indications are checked for conditions that require a reduced transfer level.",
+   "tags": []
+  },
+  {
+   "text": "Substation Operator coordinates switching activity that could alter the available export configuration.",
+   "tags": []
+  },
+  {
+   "text": "Grid Dispatcher is notified when measured delivery differs materially from the instructed target or when an operating limit is approached.",
+   "tags": []
+  },
+  {
+   "text": "Control Engineer records the reason for any temporary deviation from the requested output and the action taken.",
+   "tags": []
+  },
+  {
+   "text": "Fleet Dispatch Console retains the instruction history and the corresponding plant response for later review.",
+   "tags": []
+  },
+  {
+   "text": "If communications with the grid are interrupted, the Shore Control Room maintains the last validated operating limit while seeking clarification through the approved channel.",
+   "tags": []
+  },
+  {
+   "text": "Emergency Generator operation is not treated as a means of maintaining export unless the approved electrical configuration explicitly supports it.",
+   "tags": []
+  },
+  {
+   "text": "Duty Planner considers active dispatch constraints when scheduling work that would reduce generation or access to export equipment.",
+   "tags": []
+  },
+  {
+   "text": "Shift records capture dispatch instructions, constraint decisions, measured response, and unresolved follow-up actions.",
+   "tags": []
+  }
+ ]
+}

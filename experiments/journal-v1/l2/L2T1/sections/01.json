@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Greenvale Metro is operated as a high-frequency urban railway with mixed peak, off-peak, and engineering-hour traffic patterns across underground and surface sections.",
+   "tags": []
+  },
+  {
+   "text": "The Communications-Based Train Control system is the primary means of supervising train separation, movement authority, and service regulation on the controlled portions of the railway.",
+   "tags": []
+  },
+  {
+   "text": "The operating environment assumes continuous interaction between onboard equipment, wayside control equipment, station interfaces, and the central control room.",
+   "tags": []
+  },
+  {
+   "text": "The principal service objective is to maintain safe train movements while achieving the advertised headway, predictable dwell performance, and rapid recovery from routine disturbances.",
+   "tags": []
+  },
+  {
+   "text": "The control philosophy assigns strategic regulation to the control room and tactical protection to safety-related train and wayside functions.",
+   "tags": []
+  },
+  {
+   "text": "The Line Traffic Controller is responsible for monitoring service performance, authorizing planned operational changes, coordinating incident response, and directing recovery actions when automatic regulation is insufficient.",
+   "tags": []
+  },
+  {
+   "text": "The Revenue Train Operator remains responsible for train readiness, cab procedures, passenger-facing actions, and compliance with instructions issued through approved operational channels.",
+   "tags": []
+  },
+  {
+   "text": "Metro Operations Control System is assigned the alias Lantern for operator shorthand in this document.",
+   "tags": [
+    "ALIAS:E_OPERATIONS_CONTROL_SYSTEM"
+   ]
+  },
+  {
+   "text": "Metro Operations Control System provides the control room with consolidated train positions, service regulation functions, alarms, and operator command interfaces.",
+   "tags": []
+  },
+  {
+   "text": "North District Zone Controller and South District Zone Controller calculate safe movement authority limits using train location reports, track occupancy data, and the state of controlled field equipment.",
+   "tags": []
+  },
+  {
+   "text": "East Junction Interlocking and West Junction Interlocking maintain vital control of points and signals at the principal junction areas and only accept commands that satisfy their configured safety rules.",
+   "tags": []
+  },
+  {
+   "text": "Atlas Onboard Controller supervises automatic train protection functions on each equipped train and uses data from Dual Channel Odometer to maintain a validated estimate of train position and speed.",
+   "tags": []
+  },
+  {
+   "text": "Train Radio Modem connects each train to the Wayside Radio Access Network, which provides the radio bearer for train-to-wayside control communications along the alignment.",
+   "tags": []
+  },
+  {
+   "text": "Safety Data Communication Network carries safety-related messages between approved control components and is engineered for deterministic performance, segregation, and monitored availability.",
+   "tags": []
+  },
+  {
+   "text": "Service Timetable Server supplies planned service data used by central regulation functions, while Passenger Information Gateway distributes approved service messages to customer information systems.",
+   "tags": []
+  },
+  {
+   "text": "Voice Dispatch Console provides the fallback voice coordination path used by the Line Traffic Controller, Revenue Train Operator, and field staff when procedural confirmation is required.",
+   "tags": []
+  },
+  {
+   "text": "Platform Screen Door Controller exchanges platform interface indications with the train control environment so that train movement and door operation remain coordinated at fitted stations.",
+   "tags": []
+  },
+  {
+   "text": "During normal operation, automatic supervision is expected to regulate headways, enforce safe separation, and present the Line Traffic Controller with exceptions rather than routine control steps.",
+   "tags": []
+  },
+  {
+   "text": "During degraded operation, the system is operated to a defined safe state, with reduced automation, additional human confirmation, and conservative movement arrangements applied according to the operating rulebook.",
+   "tags": []
+  },
+  {
+   "text": "Loss of train location confidence, loss of communications, or disagreement between vital functions results in protective restriction of movement until the condition is resolved or an approved degraded procedure is invoked.",
+   "tags": []
+  },
+  {
+   "text": "Signal Maintenance Engineer is assigned the alias Maple for maintenance shorthand in this document.",
+   "tags": [
+    "ALIAS:E_SIGNAL_MAINTENANCE_ENGINEER"
+   ]
+  },
+  {
+   "text": "Signal Maintenance Engineer uses Maintenance Diagnostic Server to review equipment health, correlate alarms, and support restoration without bypassing required operational authority.",
+   "tags": []
+  },
+  {
+   "text": "Cyber Security Officer oversees access controls, key-management processes supported by Cryptographic Key Management Appliance, and the response to security events that could affect train control availability or integrity.",
+   "tags": []
+  },
+  {
+   "text": "Metro Operations Control System sends the Crew Login Token Bundle as part of the controlled start-of-duty process.",
+   "tags": [
+    "F6:intro"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: requirement(subject=instructor, text=Initial qualification shall include supervised console practice, scenario walkthroughs, and a documented check by an instructor who is authorized by the operations lead.)\n\nSource sentences (the last one is where the fact was extracted):\nS210: The County Emergency Liaison shall be trained to interpret public-safety information from the Caldera Incident Command Portal and to coordinate notifications with county procedures.\nS211: All operational users shall receive communications training that includes VHF Radio Gateway Repeater failure modes, alternate contact paths, call signs, message brevity, and confirmation readbacks.\nS212: Weather training shall explain how the MesoWest Weather Fusion Node supports situational awareness and how operators should treat weather inputs when local observations conflict with displayed values.\nS213: Initial qualification shall include supervised console practice, scenario walkthroughs, and a documented check by an instructor who is authorized by the operations lead.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"The requirement text matches S213 verbatim, but the subject 'instructor' is wrong or over-specific: the sentence imposes the requirement on initial qualification, and the instructor appears only as the person performing the documented check.\"}",
+ "usage": {
+  "input_tokens": 768,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.359,
+ "created": "2026-10-14T12:52:22"
+}

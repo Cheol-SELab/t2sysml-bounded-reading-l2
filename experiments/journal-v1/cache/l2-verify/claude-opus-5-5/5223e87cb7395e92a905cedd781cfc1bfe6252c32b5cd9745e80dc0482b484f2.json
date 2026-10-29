@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Safety Data Communication Network provides \"the Clock Drift Sample Report\" to Cryptographic Key Management Appliance (an information or material flow).\n\nSource sentences:\nS040: Safety Data Communication Network provides the protected communications transport used by train control messages that require integrity, authentication, and bounded latency.\nS041: Safety Data Communication Network sends the Clock Drift Sample Report at defined synchronization intervals.\nS122: The Passenger Information Gateway receives the operational service state needed to align platform messages and train destination information with the current regulating plan.\nS123: The Cryptographic Key Management Appliance uses the sample report to verify that certificate validity windows and controller clocks remain within the permitted tolerance before operational use.\n\nAnswer \"supported\" only if the sentences state that Safety Data Communication Network produces or sends this item AND that Cryptographic Key Management Appliance receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S041 states that the Safety Data Communication Network sends the Clock Drift Sample Report, and S123 states that the Cryptographic Key Management Appliance uses 'the sample report', a shortened reference to the same item, for clock tolerance checks.\"}",
+ "usage": {
+  "input_tokens": 707,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 99,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.491,
+ "created": "2026-10-14T01:35:23"
+}

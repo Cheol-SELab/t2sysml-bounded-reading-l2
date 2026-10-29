@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: transition(to=delivery hold, trigger=mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review)\n\nSource sentences (the last one is where the fact was extracted):\nS164: If a calibration change alters radiometric scale, geometric alignment, or saturation behavior, affected product specifications are updated before general release resumes.\nS165: The Product Quality Service assigns quality flags for missing source packets, timing discontinuity, saturation, cloud screening uncertainty, geolocation residuals, and processing fallback.\nS166: Quality flags are encoded in product metadata and summary records so that automated consumers can reject, warn, or accept data consistently.\nS167: A product is placed in a delivery hold state when mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S167 states a product is placed in delivery hold when mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review, matching the target state and the trigger conditions.\"}",
+ "usage": {
+  "input_tokens": 726,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 78,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.21,
+ "created": "2026-10-14T12:52:29"
+}

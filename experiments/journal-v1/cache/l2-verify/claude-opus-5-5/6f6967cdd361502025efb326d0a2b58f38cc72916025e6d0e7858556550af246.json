@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: South District Zone Controller provides \"movement authority data\" to North District Zone Controller (an information or material flow).\n\nSource sentences:\nS028: The controller maintains a safety-critical state machine that separates initialization, protected manual operation, automatic train operation, fallback operation, and cutout conditions.\nS029: Movement authority data received from North District Zone Controller and South District Zone Controller is checked for sequence, applicability, and consistency before it is applied onboard.\nS104: Lantern displays the proposed regulating action, affected train identities, and predicted recovery time before the Line Traffic Controller confirms the command.\nS105: The North District Zone Controller applies movement authority constraints according to the confirmed operating state and reports any conflict or unavailable route condition for controller review.\n\nAnswer \"supported\" only if the sentences state that South District Zone Controller produces or sends this item AND that North District Zone Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S029 says both the North and South District Zone Controllers send movement authority data to the onboard controller, and S105 has North applying its own constraints, so nothing shows South sending this data to North.\"}",
+ "usage": {
+  "input_tokens": 707,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 159,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 81
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.25,
+ "created": "2026-10-14T01:35:26"
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Capacity Assessment Module provides \"Airport Acceptance Rate\" to Arrival Regulation Console (an information or material flow).\n\nSource sentences:\nS065: The Handling Resource Planner compares the demand curve with available ground resources and flags time bands where aircraft turn performance is likely to reduce stand availability.\nS066: The Capacity Assessment Module combines the runway declaration, weather outlook, airspace constraints, stand readiness, and ground resource assumptions into a proposed Airport Acceptance Rate by period.\nS697: The Capacity Assessment Module calculates the operational effect by comparing the affected resource with the current Airport Capacity Plan and the active weather state.\nS698: If the event reduces arrival throughput, the Arrival Regulation Console applies the revised Airport Acceptance Rate after confirmation by the Regional Flow Manager.\n\nAnswer \"supported\" only if the sentences state that Capacity Assessment Module produces or sends this item AND that Arrival Regulation Console receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The Capacity Assessment Module produces a proposed Airport Acceptance Rate, but the text does not establish that it also produces the revised rate applied by the Arrival Regulation Console.\"}",
+ "usage": {
+  "input_tokens": 323,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 104
+  },
+  "total_tokens": 478
+ },
+ "attempts": 1,
+ "wall_s": 5.225,
+ "created": "2026-10-14T12:46:46"
+}

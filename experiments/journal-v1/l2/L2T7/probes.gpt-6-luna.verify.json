@@ -1,0 +1,104 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "The Orbit Determination Engine produces the Doppler Residual Report, and the Flight Dynamics Team uses the uniquely corresponding residual report."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "The Telemetry Ingest Service produces the Pass Replay Packet, which the Spacecraft Operations Team uses for anomaly reconstruction."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "The Payload Calibration Team sends the Calibration Patch Bundle, and the Product Quality Service uses the patch bundle to update its checks."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "The Ground Network Manager issues the Antenna Deicing Notice, and the Spacecraft Operations Team uses it to assess planned support."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "The Flight Dynamics Facility sends the Star Tracker Mask File, and the Command Validation Gateway accepts the corresponding mask file subject to its checks."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "The Product Quality Service produces the Product Hold List, and the User Services Portal uses it to prevent release of affected products."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "The Flight Dynamics Team produces the Ephemeris Delta Note, and the Mission Planning System applies the corresponding delta note during schedule validation."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "The Cybersecurity Desk sends the Security Exception Ticket, and the Network Control System uses it to restrict affected transfer paths."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "The Orbit Determination Engine produces the Laser Retroreflector Window, and the Mission Planning System treats the corresponding window as a constrained planning input."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "The Long Term Archive sends the Storage Watermark Snapshot, which the Backup Processing Cluster uses to verify recovery capacity."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "The document introduces Bluebell as an alias for the Mission Control Center and uses it for that entity in the link sentence."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "The document identifies Mistral as another name for the Flight Dynamics Facility, and the link sentence uses it in that role."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "The document identifies Forgehouse as the Payload Processing Facility, and the link sentence uses it for that facility."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "The document identifies Lantern as the Network Control System, and the link sentence uses it for that system."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "The document identifies Cedar as another name for the Mission Planning System, and the link sentence uses it for that system."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "The document identifies Osprey as another name for the Command Validation Gateway, and the link sentence uses it for that gateway."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "The document identifies Granite as another name for the Long Term Archive, and the link sentence uses it for that archive."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "The document identifies Juniper as another name for the Ground Network Manager, and the link sentence uses it for that manager."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "The link sentence explicitly names the North S-Band Antenna, rather than the South S-Band Antenna."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "The link sentence explicitly names the Primary Processing Cluster, rather than the Backup Processing Cluster."
+  }
+ ]
+}

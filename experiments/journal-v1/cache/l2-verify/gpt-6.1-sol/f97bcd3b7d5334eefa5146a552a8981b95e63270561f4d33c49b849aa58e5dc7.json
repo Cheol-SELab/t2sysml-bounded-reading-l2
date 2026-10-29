@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: North Lookout Camera Mast provides \"the Thermal Spot Snippet\" to Duty Detection Officer (an information or material flow).\n\nSource sentences:\nS029: The camera mast video paths are backhauled through licensed wireless links to the operations network, with cellular service available as a degraded-mode path where coverage permits.\nS030: North Lookout Camera Mast sends the Thermal Spot Snippet after local sensor processing identifies a candidate heat signature.\nS105: The Smoke Classifier Module assigns each observation a smoke likelihood, growth trend, and obscuration flag before the result is made available for analyst review.\nS106: The Duty Detection Officer uses the spot snippet to compare the automated classification with visible flame, smoke color, and terrain context before accepting the observation into the assessment queue.\n\nAnswer \"supported\" only if the sentences state that North Lookout Camera Mast produces or sends this item AND that Duty Detection Officer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S030 states that North Lookout Camera Mast sends the Thermal Spot Snippet, and S106 states that the Duty Detection Officer uses the spot snippet, referring to the same item.\"}",
+ "usage": {
+  "input_tokens": 333,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 53,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 386
+ },
+ "attempts": 1,
+ "wall_s": 6.93,
+ "created": "2026-10-14T12:37:10"
+}

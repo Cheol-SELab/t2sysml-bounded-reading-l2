@@ -1,0 +1,3445 @@
+{
+ "facts": [
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "provides the controlled entry point for medication orders"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "communicates order status to authorized hospital systems"
+  },
+  {
+   "unit_id": "S008",
+   "type": "flow",
+   "source": "Medication Order Gateway",
+   "target": "authorized hospital systems",
+   "payload": "order status"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "reviews clinical appropriateness"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "resolves medication questions that require professional judgment"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "performs routine preparation tasks within approved procedures"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "escalates discrepancies to the Clinical Pharmacist"
+  },
+  {
+   "unit_id": "S010",
+   "type": "flow",
+   "source": "Pharmacy Technician",
+   "target": "Clinical Pharmacist",
+   "payload": "discrepancies"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "produces the Priority Refill Tote Tag for eligible refill work"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "produces the Dose Exception Review Slip"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "prepares eligible medication against the active order"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "records its handling actions"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "supports a final verification step"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "label": "medication is released for delivery or ward access"
+  },
+  {
+   "unit_id": "S014",
+   "type": "succession",
+   "before": "supports a final verification step",
+   "after": "medication is released for delivery or ward access"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "maintains monitored storage conditions for medication that requires temperature control"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "provide controlled interfaces for routing authorized pharmacy deliveries"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "West Tube Dispatch Console",
+   "label": "provide controlled interfaces for routing authorized pharmacy deliveries"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Pneumatic Tube Network",
+   "label": "carries compatible deliveries between designated hospital locations"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "coordinates ward readiness"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "communicates operational constraints"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "supports escalation when dispensing service is disrupted"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Medication Return Kiosk",
+   "label": "recording medication returns"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Medication Return Kiosk",
+   "label": "capturing return details"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Medication Return Kiosk",
+   "label": "produces the Return Bin Audit Label for a recorded return transaction"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "label": "disposition has been assessed under hospital procedure"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "supports authorized movement of medication and returns"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "maintains supported equipment"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "monitors system connectivity and service availability"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "oversees safety concerns"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "reviews relevant trends"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "supports updates to medication handling procedures"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "accepts medication orders from authorized clinical systems"
+  },
+  {
+   "unit_id": "S029",
+   "type": "flow",
+   "source": "authorized clinical systems",
+   "target": "Medication Order Gateway",
+   "payload": "medication order"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "records their arrival times"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "checks required order fields, patient identifiers, medication codes, quantities, and destination details"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "routing an order for pharmacy review"
+  },
+  {
+   "unit_id": "S030",
+   "type": "succession",
+   "before": "checks required order fields, patient identifiers, medication codes, quantities, and destination details",
+   "after": "routing an order for pharmacy review"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "flags missing data, duplicate submissions, and changes that conflict with the active order record"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "produces the Order Reconciliation Snapshot"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "displays queued orders and their validation results for review"
+  },
+  {
+   "unit_id": "S033",
+   "type": "flow",
+   "source": "Pharmacy Verification Station",
+   "payload": "queued orders and their validation results"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "evaluates clinical appropriateness, dose limits, allergies, and relevant interactions"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "approving an order"
+  },
+  {
+   "unit_id": "S034",
+   "type": "succession",
+   "before": "evaluates clinical appropriateness, dose limits, allergies, and relevant interactions",
+   "after": "approving an order"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "investigates administrative discrepancies"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "requests clarification through approved clinical channels"
+  },
+  {
+   "unit_id": "S036",
+   "type": "constraint",
+   "subject": "medication order",
+   "expression": "Unresolved discrepancies keep an order from advancing to preparation"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "prepares only orders that have passed the required review and authorization checks"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "maintains refrigerated medications within the facility's approved temperature range"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Continuous sensors",
+   "label": "record temperature readings"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Continuous sensors",
+   "label": "report excursions or loss of monitoring connectivity"
+  },
+  {
+   "unit_id": "S039",
+   "type": "flow",
+   "source": "Continuous sensors",
+   "payload": "excursions or loss of monitoring connectivity"
+  },
+  {
+   "unit_id": "S039",
+   "type": "composition",
+   "whole": "Sensor-monitored Medication Cooler",
+   "parts": [
+    "Continuous sensors"
+   ]
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "checks the cooler's status"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "confirms that refrigerated stock remains within handling limits before use"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "produces the Cold Chain Handoff Card"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "label": "affected stock is segregated pending assessment and disposition"
+  },
+  {
+   "unit_id": "S042",
+   "type": "state",
+   "owner": "affected stock",
+   "label": "segregated"
+  },
+  {
+   "unit_id": "S042",
+   "type": "transition",
+   "to": "segregated",
+   "trigger": "excursion occurs"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "label": "Temperature records are retained with timestamps"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "determines whether affected medication remains suitable for dispensing"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "checks packaging, product identity, lot details, and expiry information"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "reviews patterns of discrepancies and handling events"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "produces the Diversion Review Packet"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "preserves review decisions and order status changes in an auditable record"
+  },
+  {
+   "unit_id": "S049",
+   "type": "state",
+   "owner": "medication order",
+   "label": "unavailable for dispensing"
+  },
+  {
+   "unit_id": "S049",
+   "type": "constraint",
+   "subject": "medication order",
+   "expression": "Orders remain unavailable for dispensing until required checks are complete and their status is authorized"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "supports technical recovery for dispensing and transport equipment"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "monitors capsule movement"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "records route, timing, and equipment status for each dispatch"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "sends a Tube Route Exception Ticket"
+  },
+  {
+   "unit_id": "S052",
+   "type": "flow",
+   "source": "East Tube Dispatch Console",
+   "payload": "Tube Route Exception Ticket"
+  },
+  {
+   "unit_id": "S052",
+   "type": "constraint",
+   "subject": "East Tube Dispatch Console",
+   "expression": "complete delivery within the configured interval"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "hold affected capsules"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "prevent additional traffic from entering a route with an unresolved fault"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Operations staff",
+   "label": "review queue status"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Operations staff",
+   "label": "coordinate any approved alternate route with the affected wards"
+  },
+  {
+   "unit_id": "S055",
+   "type": "state",
+   "owner": "Pneumatic Tube Network",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "label": "testing confirms that it is safe for service"
+  },
+  {
+   "unit_id": "S055",
+   "type": "transition",
+   "from": "unavailable",
+   "to": "null",
+   "trigger": "testing confirms that it is safe for service"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "verifies capsule contents and order identifiers"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "label": "delayed medication is released for another delivery attempt"
+  },
+  {
+   "unit_id": "S056",
+   "type": "succession",
+   "before": "verifies capsule contents and order identifiers",
+   "after": "delayed medication is released for another delivery attempt"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "reviews any medication whose storage conditions or delivery timing may affect its suitability for use"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "confirms whether the ward still requires the medication"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "follows the approved contingency process"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "keeps ward staff informed about expected delivery delays and any approved local workaround"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "inspects tube hardware, switches, and sensors"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "checks console connectivity, interface health, and relevant system logs"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "label": "Dispatch resumes"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "label": "affected route has passed its required checks"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "Operations staff",
+   "label": "authorized its return to use"
+  },
+  {
+   "unit_id": "S062",
+   "type": "succession",
+   "before": "affected route has passed its required checks",
+   "after": "Dispatch resumes"
+  },
+  {
+   "unit_id": "S062",
+   "type": "succession",
+   "before": "authorized its return to use",
+   "after": "Dispatch resumes"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "label": "Cabinet downtime is coordinated as a controlled service interruption"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "sends a Cabinet Downtime Notice"
+  },
+  {
+   "unit_id": "S064",
+   "type": "flow",
+   "source": "Charge Nurse",
+   "payload": "Cabinet Downtime Notice"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "ward",
+   "label": "follows its approved contingency procedure"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "ward",
+   "label": "confirms access to an authorized dispensing location"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "reports cabinet availability"
+  },
+  {
+   "unit_id": "S066",
+   "type": "flow",
+   "source": "North Ward Cabinet Controller",
+   "payload": "cabinet availability"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "prevents dispensing"
+  },
+  {
+   "unit_id": "S066",
+   "type": "state",
+   "owner": "North Ward Cabinet Controller",
+   "label": "Out of Service"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "applies the same availability controls for its assigned ward"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "evaluates cabinet hardware"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "verifies safe operation"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "checks controller communications and application health"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "confirms that clinical staff have been notified"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "label": "normal cabinet use is restored"
+  },
+  {
+   "unit_id": "S070",
+   "type": "succession",
+   "before": "confirms that clinical staff have been notified",
+   "after": "normal cabinet use is restored"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "responsible technical staff",
+   "label": "document the fault, corrective action, and verification results in the applicable service record"
+  },
+  {
+   "unit_id": "S072",
+   "type": "state",
+   "owner": "cabinet",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S072",
+   "type": "state",
+   "label": "Ready for Dispense"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "label": "reports Ready for Dispense"
+  },
+  {
+   "unit_id": "S072",
+   "type": "flow",
+   "payload": "Ready for Dispense"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "label": "required operational checks are complete"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "Operations staff",
+   "label": "closes the interruption"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "confirm that dispensing and delivery workflows are functioning as intended"
+  },
+  {
+   "unit_id": "S073",
+   "type": "succession",
+   "before": "confirm that dispensing and delivery workflows are functioning as intended",
+   "after": "closes the interruption"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "label": "Final pharmacy release occurs"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "label": "checked against the approved dispensing instructions"
+  },
+  {
+   "unit_id": "S074",
+   "type": "succession",
+   "before": "checked against the approved dispensing instructions",
+   "after": "Final pharmacy release occurs"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "reviews clinical and labeling exceptions that require professional judgment"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "authorizing release"
+  },
+  {
+   "unit_id": "S075",
+   "type": "succession",
+   "before": "reviews clinical and labeling exceptions that require professional judgment",
+   "after": "authorizing release"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "confirms that the package contents and patient identifiers match the verified order"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "presents the completed package at the Pharmacy Verification Station"
+  },
+  {
+   "unit_id": "S077",
+   "type": "flow",
+   "source": "Pharmacy Fulfillment Robot",
+   "target": "Pharmacy Verification Station",
+   "payload": "completed package"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "records the verification outcome"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "prevents release while required checks remain incomplete"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "produces the Batch Release Note"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "label": "final release checks are recorded"
+  },
+  {
+   "unit_id": "S079",
+   "type": "succession",
+   "before": "final release checks are recorded",
+   "after": "produces the Batch Release Note"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "label": "release decision is associated with the order identifier, package identifier, verification time, and responsible staff credentials"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "provides the current order status"
+  },
+  {
+   "unit_id": "S081",
+   "type": "flow",
+   "source": "Medication Order Gateway",
+   "payload": "current order status"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "label": "confirm that the request remains valid"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "label": "is held for resolution"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "documents the disposition of any clinical concern"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "label": "package can proceed"
+  },
+  {
+   "unit_id": "S083",
+   "type": "succession",
+   "before": "documents the disposition of any clinical concern",
+   "after": "package can proceed"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "label": "Supporting records are prepared"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "label": "load enters the delivery network"
+  },
+  {
+   "unit_id": "S084",
+   "type": "succession",
+   "before": "Supporting records are prepared",
+   "after": "load enters the delivery network"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "load manifest",
+   "label": "identifies each package, its intended destination, handling requirements, and the time it was assembled"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "label": "Package identifiers are checked against the manifest"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "label": "detect omissions, substitutions, or duplicate entries"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "label": "remain under controlled conditions"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "label": "custody is formally transferred"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "records temperature conditions"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "checks package count, packaging integrity, destination information, and any special handling instructions"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "records the time and identity associated with acceptance"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "produces the Pneumatic Capsule Seal Record"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "capsule is sealed for transfer"
+  },
+  {
+   "unit_id": "S091",
+   "type": "succession",
+   "before": "capsule is sealed for transfer",
+   "after": "produces the Pneumatic Capsule Seal Record"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "verifies that the capsule is closed securely and that its contents are not exposed during handling"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Pneumatic Tube Network",
+   "label": "accepts only loads that meet the applicable packaging and routing requirements"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "checks the requested route"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "reports whether the route is available for dispatch"
+  },
+  {
+   "unit_id": "S094",
+   "type": "flow",
+   "source": "East Tube Dispatch Console",
+   "payload": "route availability"
+  },
+  {
+   "unit_id": "S094",
+   "type": "state",
+   "owner": "route",
+   "label": "Available"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "label": "reconciled package identifiers and destination with the prepared load information"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "label": "capsule is admitted"
+  },
+  {
+   "unit_id": "S095",
+   "type": "succession",
+   "before": "reconciled package identifiers and destination with the prepared load information",
+   "after": "capsule is admitted"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "places the load on hold"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "staff",
+   "label": "resolve the condition"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "staff",
+   "label": "document the outcome"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "staff",
+   "label": "retain custody"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "staff",
+   "label": "use an approved alternate delivery procedure"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "receiving department",
+   "label": "confirms arrival"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "receiving department",
+   "label": "reports any discrepancy through the established operational process"
+  },
+  {
+   "unit_id": "S098",
+   "type": "flow",
+   "source": "receiving department",
+   "payload": "discrepancy"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "ward staff",
+   "label": "perform a receipt check on each arriving load"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "ward staff",
+   "label": "placing medication in a cabinet or transferring custody"
+  },
+  {
+   "unit_id": "S099",
+   "type": "succession",
+   "before": "perform a receipt check on each arriving load",
+   "after": "placing medication in a cabinet or transferring custody"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "verifies that the load is intended for the ward"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "records the arrival time and the destination cabinet"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "records the arrival time and the destination cabinet"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "uses the Priority Refill Tote Tag to confirm the intended ward"
+  },
+  {
+   "unit_id": "S103",
+   "type": "flow",
+   "source": "Pharmacy Fulfillment Robot",
+   "target": "North Ward Cabinet Controller",
+   "payload": "Priority Refill Tote Tag"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "staff",
+   "label": "accept a tote"
+  },
+  {
+   "unit_id": "S103",
+   "type": "succession",
+   "before": "uses the Priority Refill Tote Tag to confirm the intended ward",
+   "after": "accept a tote"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "staff",
+   "label": "inspect the outer packaging for damage, moisture, tampering, or other signs"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "ward staff",
+   "label": "compare package identifiers with the cabinet task list"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "ward staff",
+   "label": "confirm that the identifiers are legible"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "cabinet staff",
+   "label": "verify the quantity and medication descriptions against the expected receipt record"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "checks that the load remained within the required handling conditions"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "displays the current temperature and any recorded excursion"
+  },
+  {
+   "unit_id": "S108",
+   "type": "flow",
+   "source": "Sensor-monitored Medication Cooler",
+   "target": "staff",
+   "payload": "current temperature and recorded excursion"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "staff",
+   "label": "isolate a load"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "staff",
+   "label": "do not place an unresolved load into active cabinet stock"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "label": "staged in the designated receiving area"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "label": "cabinet placement is authorized"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "ward",
+   "label": "records receipt completion and any discrepancy through the established operational process"
+  },
+  {
+   "unit_id": "S112",
+   "type": "flow",
+   "source": "ward",
+   "payload": "receipt completion and discrepancy"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "ward staff",
+   "label": "check return bins before use"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "confirms that the contents are eligible for return"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "staff",
+   "label": "check that each return bin closes securely"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "Medication Return Kiosk",
+   "label": "guides ward staff through return-bin checks"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "Medication Return Kiosk",
+   "label": "records each check outcome for follow-up"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "uses the audit label to identify a return bin"
+  },
+  {
+   "unit_id": "S117",
+   "type": "flow",
+   "source": "Medication Return Kiosk",
+   "target": "Pharmacy Technician",
+   "payload": "Return Bin Audit Label"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "Staff",
+   "label": "reconcile the bin contents with the return entry"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "bin is closed"
+  },
+  {
+   "unit_id": "S118",
+   "type": "succession",
+   "before": "reconcile the bin contents with the return entry",
+   "after": "bin is closed"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "label": "is segregated"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "label": "referred for review"
+  },
+  {
+   "unit_id": "S120",
+   "type": "state",
+   "owner": "return bin",
+   "label": "secured"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "collects only bins that are closed and recorded as ready for collection"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "ensures that unresolved receipt or return discrepancies remain assigned for follow-up"
+  },
+  {
+   "unit_id": "S124",
+   "type": "state",
+   "owner": "transaction",
+   "label": "on hold"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "label": "documents a disposition"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "stops the affected pick sequence"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "keeps the package in a controlled hold location"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "preserves the scanned product and quantity data"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "compares the active order with the scanned product, strength, and measured quantity"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "blocks verification"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "record the exception category, evidence checked, disposition, and reviewer identity"
+  },
+  {
+   "unit_id": "S128",
+   "type": "flow",
+   "source": "Clinical Pharmacist",
+   "target": "Pharmacy Verification Station",
+   "payload": "Dose Exception Review Slip"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "assesses dose, route, timing, and patient-specific clinical concerns"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "approving a correction or rejecting the order"
+  },
+  {
+   "unit_id": "S129",
+   "type": "succession",
+   "before": "assesses dose, route, timing, and patient-specific clinical concerns",
+   "after": "approving a correction or rejecting the order"
+  },
+  {
+   "unit_id": "S130",
+   "type": "requirement",
+   "text": "A correction requires a valid authorized order and must not be inferred from prior dispensing history."
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "keeps the cabinet transaction locked"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "confirms that the medication has not been administered"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "escalates an urgent patient-care concern"
+  },
+  {
+   "unit_id": "S132",
+   "type": "flow",
+   "source": "Registered Nurse",
+   "target": "Clinical Pharmacist",
+   "payload": "urgent patient-care concern"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "follows the hospital's clinical response procedure"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "assigns unresolved exceptions to a named role"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Charge Nurse",
+   "label": "confirms that ownership is maintained"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "gather package and transaction evidence"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "rejects incomplete or internally inconsistent order updates"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "retains the rejection reason"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "prevents access to a held transaction"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "reports a failed lock or an unrecognized access attempt"
+  },
+  {
+   "unit_id": "S138",
+   "type": "flow",
+   "source": "South Ward Cabinet Controller",
+   "payload": "failed lock or unrecognized access attempt"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "reports excursions"
+  },
+  {
+   "unit_id": "S139",
+   "type": "flow",
+   "source": "Sensor-monitored Medication Cooler",
+   "payload": "excursions"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Medication Safety Officer",
+   "target": "IT Operations Specialist",
+   "payload": "Diversion Review Packet"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "receives the Diversion Review Packet"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "checks access, transaction, and device logs"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "evaluates a suspected mechanical or sensor fault"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "advises whether the affected equipment can safely return to service"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "investigates software or connectivity faults"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "records the technical findings for the responsible operational team"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "observing staff member",
+   "label": "is escalated immediately"
+  },
+  {
+   "unit_id": "S145",
+   "type": "state",
+   "owner": "transaction",
+   "label": "on hold"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "seeks a higher-level clinical decision"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "final disposition",
+   "label": "records who reviewed the exception, what evidence supported the decision, and whether the medication was released, corrected, or withheld"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "validates each medication order for patient, product, dose, route, and timing fields"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "making it available for downstream processing"
+  },
+  {
+   "unit_id": "S147",
+   "type": "succession",
+   "before": "validates each medication order for patient, product, dose, route, and timing fields",
+   "after": "making it available for downstream processing"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "confirms that the reconciliation queue has no unresolved discrepancy"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "authorizing routine cabinet replenishment"
+  },
+  {
+   "unit_id": "S148",
+   "type": "succession",
+   "before": "confirms that the reconciliation queue has no unresolved discrepancy",
+   "after": "authorizing routine cabinet replenishment"
+  },
+  {
+   "unit_id": "S149",
+   "type": "flow",
+   "source": "Medication Order Gateway",
+   "target": "Pharmacy Fulfillment Robot",
+   "payload": "Order Reconciliation Snapshot"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "compare requested quantities with completed dispense events and current cabinet balances"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "label": "compares the active order record with dispensing and cabinet records using a stable order identifier"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "label": "preserves the order context"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "retains the patient, medication, dose, route, and timing details associated with each order"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "preparing a dispense transaction"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "checks whether the order is active and whether its authorization remains valid"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "label": "is excluded from routine preparation"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "label": "is treated as a new authoritative version"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "label": "are flagged for review"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "label": "is reconciled against the quantity already recorded"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "label": "are retained to support comparison across records"
+  },
+  {
+   "unit_id": "S159",
+   "type": "state",
+   "owner": "transaction",
+   "label": "on hold"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "label": "remains on hold until the discrepancy is resolved"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "reconciliation outcome",
+   "label": "records the matched values, unresolved differences, and disposition"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "applies the North Ward medication access rules"
+  },
+  {
+   "unit_id": "S162",
+   "type": "composition",
+   "whole": "North Ward Cabinet Controller",
+   "parts": [
+    "ward-specific configuration"
+   ]
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "ward-specific configuration",
+   "label": "defines permitted medication locations, access roles, and transaction limits for each cabinet"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "ward-specific configuration",
+   "label": "associates each medication location with the product identifiers and quantity thresholds"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "label": "Cabinet availability is calculated from the last confirmed inventory count and subsequent recorded movements"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "label": "guide replenishment decisions without overriding an active clinical restriction"
+  },
+  {
+   "unit_id": "S166",
+   "type": "requirement",
+   "subject": "North Ward Cabinet Controller",
+   "text": "Access rules require an authenticated user role appropriate to the requested medication and transaction type."
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "label": "require an additional confirmation before a removal is accepted"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "rejects a transaction"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "label": "Configuration changes are versioned, reviewed, and recorded with the effective time and approving authority"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "prevents routine dispensing"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "North Ward Cabinet Controller",
+   "label": "reports the condition for investigation"
+  },
+  {
+   "unit_id": "S170",
+   "type": "flow",
+   "source": "North Ward Cabinet Controller",
+   "payload": "condition"
+  },
+  {
+   "unit_id": "S171",
+   "type": "composition",
+   "whole": "Sensor-monitored Medication Cooler",
+   "parts": [
+    "refrigerated medication compartment"
+   ]
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "maintains a time-stamped temperature history"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "raises an alarm"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "applies approved upper and lower temperature limits to each monitored compartment"
+  },
+  {
+   "unit_id": "S173",
+   "type": "composition",
+   "whole": "Sensor-monitored Medication Cooler",
+   "parts": [
+    "Calibrated probes"
+   ]
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Calibrated probes",
+   "label": "report readings at configured intervals"
+  },
+  {
+   "unit_id": "S173",
+   "type": "flow",
+   "source": "Calibrated probes",
+   "target": "Sensor-monitored Medication Cooler",
+   "payload": "readings"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "records probe identity and calibration status with each reading"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "label": "Refrigerated stock is identified by medication, lot, and expiration date"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "label": "affected stock is marked ineligible for routine dispensing"
+  },
+  {
+   "unit_id": "S175",
+   "type": "state",
+   "owner": "Refrigerated stock",
+   "label": "ineligible for routine dispensing"
+  },
+  {
+   "unit_id": "S175",
+   "type": "transition",
+   "to": "ineligible for routine dispensing",
+   "trigger": "readings exceed a limit or a probe becomes unavailable"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "preserves the affected stock in its current controlled environment"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "uses the handoff card to compare a transfer's recorded custody time with its temperature history"
+  },
+  {
+   "unit_id": "S177",
+   "type": "flow",
+   "source": "Pharmacy Technician",
+   "target": "Sensor-monitored Medication Cooler",
+   "payload": "Cold Chain Handoff Card"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "reviews excursion details"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "determines whether affected stock may be released, quarantined, or discarded"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "retains the disposition status against the affected lot"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Sensor-monitored Medication Cooler",
+   "label": "prevents stock marked ineligible from being selected for routine dispensing"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "label": "Authorized access to refrigerated compartments is recorded"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "label": "Door-open duration is monitored"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "label": "Temperature alarms remain active during loss of network connectivity"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "label": "local records are retained until communication is restored"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "maintains the approved route map and the current availability status of supported pneumatic segments"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "checks the selected route against the destination cabinet, current network availability, and approved routing configuration"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "releasing a capsule"
+  },
+  {
+   "unit_id": "S184",
+   "type": "succession",
+   "before": "checks the selected route against the destination cabinet, current network availability, and approved routing configuration",
+   "after": "releasing a capsule"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "confirms that the destination is reachable and that the route does not include a segment reported unavailable"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "label": "uses the destination identifier and the latest approved configuration version"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "checks for conflicting capsule movements"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "confirms that required interlocks are satisfied"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "dispatch"
+  },
+  {
+   "unit_id": "S187",
+   "type": "succession",
+   "before": "checks for conflicting capsule movements",
+   "after": "dispatch"
+  },
+  {
+   "unit_id": "S187",
+   "type": "succession",
+   "before": "confirms that required interlocks are satisfied",
+   "after": "dispatch"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Pneumatic Tube Network",
+   "label": "reports segment status, transfer progress, and delivery confirmation to the dispatch console"
+  },
+  {
+   "unit_id": "S188",
+   "type": "flow",
+   "source": "Pneumatic Tube Network",
+   "target": "East Tube Dispatch Console",
+   "payload": "segment status"
+  },
+  {
+   "unit_id": "S188",
+   "type": "flow",
+   "source": "Pneumatic Tube Network",
+   "target": "East Tube Dispatch Console",
+   "payload": "transfer progress"
+  },
+  {
+   "unit_id": "S188",
+   "type": "flow",
+   "source": "Pneumatic Tube Network",
+   "target": "East Tube Dispatch Console",
+   "payload": "delivery confirmation"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "holds the capsule"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "displays the condition for operator review"
+  },
+  {
+   "unit_id": "S189",
+   "type": "flow",
+   "source": "East Tube Dispatch Console",
+   "payload": "condition"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "label": "prevents the console from treating the affected segment as available"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "label": "recorded with the capsule identifier, last confirmed location, and time of the interruption"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "alerts a Pharmacy Technician"
+  },
+  {
+   "unit_id": "S192",
+   "type": "flow",
+   "source": "East Tube Dispatch Console",
+   "target": "Pharmacy Technician",
+   "payload": "alert"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "East Tube Dispatch Console",
+   "label": "requires refreshed segment status and an approved route decision"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "label": "dispatch resumes"
+  },
+  {
+   "unit_id": "S193",
+   "type": "succession",
+   "before": "requires refreshed segment status and an approved route decision",
+   "after": "dispatch resumes"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "label": "retain timestamps and equipment identifiers"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "serves as the final controlled checkpoint"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "label": "made available for dispensing"
+  },
+  {
+   "unit_id": "S195",
+   "type": "succession",
+   "before": "serves as the final controlled checkpoint",
+   "after": "made available for dispensing"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "compares the active medication order with the product, strength, dosage form, dose, route, and scheduled time"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "confirms that the patient identifiers and pharmacy label agree with the authorized order"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "checks package integrity, lot identification, and expiry"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Pharmacy Technician",
+   "label": "presenting the medication for verification"
+  },
+  {
+   "unit_id": "S198",
+   "type": "succession",
+   "before": "checks package integrity, lot identification, and expiry",
+   "after": "presenting the medication for verification"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "label": "independent second check is completed and recorded"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "label": "authorization"
+  },
+  {
+   "unit_id": "S199",
+   "type": "succession",
+   "before": "independent second check is completed and recorded",
+   "after": "authorization"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "label": "places the medication on hold"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "label": "discrepancy is resolved by an authorized pharmacy professional"
+  },
+  {
+   "unit_id": "S200",
+   "type": "state",
+   "owner": "medication",
+   "label": "hold"
+  },
+  {
+   "unit_id": "S200",
+   "type": "transition",
+   "to": "hold",
+   "trigger": "mismatch"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "label": "captures the approving staff identity, time, and medication identifiers"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "remains inhibited from completing a dispense"
+  },
+  {
+   "unit_id": "S202",
+   "type": "state",
+   "owner": "Pharmacy Fulfillment Robot",
+   "label": "inhibited"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "resolves unclear or conflicting order details through the Medication Order Gateway"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "authorizing release"
+  },
+  {
+   "unit_id": "S203",
+   "type": "succession",
+   "before": "resolves unclear or conflicting order details through the Medication Order Gateway",
+   "after": "authorizing release"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "receives the release note"
+  },
+  {
+   "unit_id": "S204",
+   "type": "flow",
+   "source": "Pharmacy Verification Station",
+   "target": "South Ward Cabinet Controller",
+   "payload": "Batch Release Note"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "applies its own approved cabinet configuration"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "enabling any compartment"
+  },
+  {
+   "unit_id": "S204",
+   "type": "succession",
+   "before": "applies its own approved cabinet configuration",
+   "after": "enabling any compartment"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "checks its local compartment mapping, access rules, and supported medication classes against that configuration"
+  },
+  {
+   "unit_id": "S206",
+   "type": "state",
+   "owner": "South Ward Cabinet Controller",
+   "label": "Ready for Dispense"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "reports Ready for Dispense"
+  },
+  {
+   "unit_id": "S206",
+   "type": "flow",
+   "source": "South Ward Cabinet Controller",
+   "payload": "Ready for Dispense"
+  },
+  {
+   "unit_id": "S206",
+   "type": "transition",
+   "to": "Ready for Dispense",
+   "trigger": "configuration checks and required device self-tests pass"
+  },
+  {
+   "unit_id": "S206",
+   "type": "succession",
+   "before": "checks its local compartment mapping, access rules, and supported medication classes against that configuration",
+   "after": "reports Ready for Dispense"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "authenticates at the cabinet"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "selects the medication associated with the active patient order"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "checks the requested selection against its local authorization rules"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "unlocking a compartment"
+  },
+  {
+   "unit_id": "S208",
+   "type": "succession",
+   "before": "checks the requested selection against its local authorization rules",
+   "after": "unlocking a compartment"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "South Ward Cabinet Controller",
+   "label": "records the user, order reference, compartment access, and transaction time for audit review"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "reviews the received operational record"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "correlates its equipment identifiers and timestamps with local telemetry"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "records an engineering disposition"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "uses the exception ticket to identify the affected path"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "compare reported symptoms with equipment telemetry"
+  },
+  {
+   "unit_id": "S211",
+   "type": "flow",
+   "source": "East Tube Dispatch Console",
+   "target": "Biomedical Engineer",
+   "payload": "Tube Route Exception Ticket"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "checks whether the reported condition is isolated to one device or indicates a broader service risk"
+  },
+  {
+   "unit_id": "S213",
+   "type": "state",
+   "label": "Out of Service"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "label": "placed in Out of Service status"
+  },
+  {
+   "unit_id": "S213",
+   "type": "transition",
+   "to": "Out of Service",
+   "trigger": "hardware or control fault is suspected"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "isolates the affected subsystem"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "performs only the diagnostic steps approved for that equipment"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "investigates authentication, interface, and time-synchronization faults"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Medication Safety Officer",
+   "label": "reviews any discrepancy that could change medication identity, access control, or patient risk"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "keeps affected medication unavailable"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "records the corrective action, test evidence, and approvals required to return the equipment to operation"
+  },
+  {
+   "unit_id": "S219",
+   "type": "transition",
+   "from": "Out of Service",
+   "trigger": "required functional checks pass and the responsible staff approve its return"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "approve its return"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "label": "retain timestamps, equipment identifiers, and disposition details"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "label": "treated as a service incident"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "uses the Cabinet Downtime Notice to open a controlled incident record"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "identify the affected cabinet"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "checks controller status, network connectivity, and recent event logs"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "attempting recovery"
+  },
+  {
+   "unit_id": "S223",
+   "type": "succession",
+   "before": "checks controller status, network connectivity, and recent event logs",
+   "after": "attempting recovery"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "records the time the fault was detected and the affected equipment identifier"
+  },
+  {
+   "unit_id": "S225",
+   "type": "state",
+   "owner": "North Ward Cabinet Controller",
+   "label": "Out of Service"
+  },
+  {
+   "unit_id": "S225",
+   "type": "state",
+   "owner": "South Ward Cabinet Controller",
+   "label": "Out of Service"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "isolates the fault where necessary"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Medication Order Gateway",
+   "label": "retains pending requests for review"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "checks whether any transaction was interrupted before the cabinet became unavailable"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Pharmacy Verification Station",
+   "label": "confirm that pending medication orders remain valid"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Pharmacy Fulfillment Robot",
+   "label": "is held from supplying medication to a cabinet that has not passed its recovery checks"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "coordinates technical troubleshooting with the Biomedical Engineer"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "Clinical Pharmacist",
+   "label": "reviews medication orders affected by the outage"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Registered Nurse",
+   "label": "uses the established clinical process for urgent medication needs"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Biomedical Engineer",
+   "label": "reports completed repairs and any equipment limitations"
+  },
+  {
+   "unit_id": "S234",
+   "type": "flow",
+   "source": "Biomedical Engineer",
+   "target": "IT Operations Specialist",
+   "payload": "completed repairs and equipment limitations"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "verifies communications, status reporting, and cabinet transaction behavior"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "confirm that no unresolved transaction could cause a duplicate or missed dispense"
+  },
+  {
+   "unit_id": "S237",
+   "type": "state",
+   "label": "Out of Service"
+  },
+  {
+   "unit_id": "S237",
+   "type": "state",
+   "label": "Ready for Dispense"
+  },
+  {
+   "unit_id": "S237",
+   "type": "transition",
+   "from": "Out of Service",
+   "to": "Ready for Dispense",
+   "trigger": "required functional checks pass and the responsible staff approve its return"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "label": "approve its return to Ready for Dispense"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "West Tube Dispatch Console",
+   "label": "uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "West Tube Dispatch Console",
+   "label": "closing its dispatch-side handoff checks"
+  },
+  {
+   "unit_id": "S238",
+   "type": "succession",
+   "before": "uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status",
+   "after": "closing its dispatch-side handoff checks"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "West Tube Dispatch Console",
+   "label": "records completion of its handoff checks"
+  },
+  {
+   "unit_id": "S240",
+   "type": "state",
+   "owner": "Pneumatic Tube Network",
+   "label": "under monitoring"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Hospital Courier",
+   "label": "confirms physical receipt"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "West Tube Dispatch Console",
+   "label": "retains the handoff completion status"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "IT Operations Specialist",
+   "label": "monitors cabinet and tube service status for recurrence"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "Audit records",
+   "label": "retain timestamps, equipment identifiers, recovery checks, and disposition details"
+  }
+ ],
+ "entities": [
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Pharmacy Verification Station",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Medication Return Kiosk",
+   "aliases": [
+    "Tallowmere"
+   ]
+  },
+  {
+   "name": "Registered Nurse",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": []
+  },
+  {
+   "name": "Priority Refill Tote Tag",
+   "aliases": []
+  },
+  {
+   "name": "Dose Exception Review Slip",
+   "aliases": []
+  },
+  {
+   "name": "Sensor-monitored Medication Cooler",
+   "aliases": []
+  },
+  {
+   "name": "East Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "West Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Tube Network",
+   "aliases": []
+  },
+  {
+   "name": "Charge Nurse",
+   "aliases": []
+  },
+  {
+   "name": "Return Bin Audit Label",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Courier",
+   "aliases": []
+  },
+  {
+   "name": "Biomedical Engineer",
+   "aliases": []
+  },
+  {
+   "name": "IT Operations Specialist",
+   "aliases": []
+  },
+  {
+   "name": "medication order",
+   "aliases": []
+  },
+  {
+   "name": "order status",
+   "aliases": []
+  },
+  {
+   "name": "Medication Safety Officer",
+   "aliases": []
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "Sensor-monitored Medication Cooler",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Pharmacy Verification Station",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Order Reconciliation Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "Cold Chain Handoff Card",
+   "aliases": []
+  },
+  {
+   "name": "Diversion Review Packet",
+   "aliases": []
+  },
+  {
+   "name": "Continuous sensors",
+   "aliases": []
+  },
+  {
+   "name": "medication order",
+   "aliases": []
+  },
+  {
+   "name": "authorized clinical systems",
+   "aliases": []
+  },
+  {
+   "name": "Temperature records",
+   "aliases": []
+  },
+  {
+   "name": "Biomedical Engineer",
+   "aliases": [
+    "Stonewake"
+   ]
+  },
+  {
+   "name": "East Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "West Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Tube Route Exception Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Dispatch personnel",
+   "aliases": []
+  },
+  {
+   "name": "Operations staff",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Tube Network",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Registered Nurse",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Charge Nurse",
+   "aliases": []
+  },
+  {
+   "name": "IT Operations Specialist",
+   "aliases": []
+  },
+  {
+   "name": "Cabinet Downtime Notice",
+   "aliases": []
+  },
+  {
+   "name": "North Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "South Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "ward",
+   "aliases": []
+  },
+  {
+   "name": "responsible technical staff",
+   "aliases": []
+  },
+  {
+   "name": "Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "Operations staff",
+   "aliases": []
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Pharmacy Verification Station",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Batch Release Note",
+   "aliases": []
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "load manifest",
+   "aliases": []
+  },
+  {
+   "name": "Sensor-monitored Medication Cooler",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "name": "Hospital Courier",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Capsule Seal Record",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Tube Network",
+   "aliases": []
+  },
+  {
+   "name": "East Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "current order status",
+   "aliases": []
+  },
+  {
+   "name": "completed package",
+   "aliases": []
+  },
+  {
+   "name": "Registered Nurse",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "North Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "South Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "Priority Refill Tote Tag",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Sensor-monitored Medication Cooler",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "name": "Medication Return Kiosk",
+   "aliases": [
+    "Tallowmere"
+   ]
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Return Bin Audit Label",
+   "aliases": []
+  },
+  {
+   "name": "staff",
+   "aliases": []
+  },
+  {
+   "name": "ward staff",
+   "aliases": []
+  },
+  {
+   "name": "cabinet staff",
+   "aliases": []
+  },
+  {
+   "name": "receiving department",
+   "aliases": []
+  },
+  {
+   "name": "ward",
+   "aliases": []
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Pharmacy Verification Station",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Sensor-monitored Medication Cooler",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "name": "Medication Return Kiosk",
+   "aliases": [
+    "Tallowmere"
+   ]
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Registered Nurse",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Hospital Courier",
+   "aliases": []
+  },
+  {
+   "name": "Charge Nurse",
+   "aliases": []
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "North Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "South Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "Dose Exception Review Slip",
+   "aliases": []
+  },
+  {
+   "name": "Staff",
+   "aliases": []
+  },
+  {
+   "name": "Medication Safety Officer",
+   "aliases": []
+  },
+  {
+   "name": "IT Operations Specialist",
+   "aliases": []
+  },
+  {
+   "name": "Diversion Review Packet",
+   "aliases": []
+  },
+  {
+   "name": "Biomedical Engineer",
+   "aliases": [
+    "Stonewake"
+   ]
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Order Reconciliation Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "North Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "Sensor-monitored Medication Cooler",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Cold Chain Handoff Card",
+   "aliases": []
+  },
+  {
+   "name": "ward-specific configuration",
+   "aliases": []
+  },
+  {
+   "name": "Calibrated probes",
+   "aliases": []
+  },
+  {
+   "name": "refrigerated medication compartment",
+   "aliases": []
+  },
+  {
+   "name": "Refrigerated stock",
+   "aliases": []
+  },
+  {
+   "name": "East Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Tube Network",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Technician",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "Pharmacy Verification Station",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "South Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "Batch Release Note",
+   "aliases": []
+  },
+  {
+   "name": "capsule",
+   "aliases": []
+  },
+  {
+   "name": "route sensor",
+   "aliases": []
+  },
+  {
+   "name": "medication",
+   "aliases": []
+  },
+  {
+   "name": "South Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "North Ward Cabinet Controller",
+   "aliases": []
+  },
+  {
+   "name": "Registered Nurse",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Biomedical Engineer",
+   "aliases": [
+    "Stonewake"
+   ]
+  },
+  {
+   "name": "IT Operations Specialist",
+   "aliases": []
+  },
+  {
+   "name": "Medication Safety Officer",
+   "aliases": []
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Tube Route Exception Ticket",
+   "aliases": []
+  },
+  {
+   "name": "East Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Cabinet Downtime Notice",
+   "aliases": []
+  },
+  {
+   "name": "Medication Order Gateway",
+   "aliases": [
+    "Morrowglass"
+   ]
+  },
+  {
+   "name": "IT Operations Specialist",
+   "aliases": []
+  },
+  {
+   "name": "Pharmacy Verification Station",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Pharmacy Fulfillment Robot",
+   "aliases": [
+    "Cinderwake"
+   ]
+  },
+  {
+   "name": "Biomedical Engineer",
+   "aliases": [
+    "Stonewake"
+   ]
+  },
+  {
+   "name": "Clinical Pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "Registered Nurse",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "West Tube Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Capsule Seal Record",
+   "aliases": []
+  },
+  {
+   "name": "Pneumatic Tube Network",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Courier",
+   "aliases": []
+  },
+  {
+   "name": "Audit records",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S024"
+   ],
+   "chunk_tokens": 433,
+   "memory_tokens": 0,
+   "prompt_tokens": 1170,
+   "input": 2729,
+   "output": 2581,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 373,
+   "summary_tokens": 373,
+   "input": 1340,
+   "output": 820,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S025",
+    "S049"
+   ],
+   "chunk_tokens": 422,
+   "memory_tokens": 373,
+   "prompt_tokens": 1566,
+   "input": 3534,
+   "output": 3179,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 481,
+   "summary_tokens": 481,
+   "input": 2096,
+   "output": 1029,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S050",
+    "S071"
+   ],
+   "chunk_tokens": 436,
+   "memory_tokens": 481,
+   "prompt_tokens": 1678,
+   "input": 3727,
+   "output": 3384,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 510,
+   "summary_tokens": 510,
+   "input": 2289,
+   "output": 1093,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S072",
+    "S094"
+   ],
+   "chunk_tokens": 430,
+   "memory_tokens": 510,
+   "prompt_tokens": 1705,
+   "input": 3750,
+   "output": 5022,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 592,
+   "summary_tokens": 512,
+   "input": 2312,
+   "output": 1221,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S095",
+    "S117"
+   ],
+   "chunk_tokens": 431,
+   "memory_tokens": 512,
+   "prompt_tokens": 1708,
+   "input": 3690,
+   "output": 4301,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 541,
+   "summary_tokens": 512,
+   "input": 2252,
+   "output": 1093,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S118",
+    "S139"
+   ],
+   "chunk_tokens": 436,
+   "memory_tokens": 512,
+   "prompt_tokens": 1710,
+   "input": 3727,
+   "output": 2870,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 532,
+   "summary_tokens": 505,
+   "input": 2289,
+   "output": 1086,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S140",
+    "S160"
+   ],
+   "chunk_tokens": 449,
+   "memory_tokens": 505,
+   "prompt_tokens": 1712,
+   "input": 3740,
+   "output": 2543,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 512,
+   "summary_tokens": 512,
+   "input": 2302,
+   "output": 1053,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S161",
+    "S182"
+   ],
+   "chunk_tokens": 438,
+   "memory_tokens": 512,
+   "prompt_tokens": 1711,
+   "input": 3739,
+   "output": 4083,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 612,
+   "summary_tokens": 512,
+   "input": 2301,
+   "output": 1236,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S183",
+    "S204"
+   ],
+   "chunk_tokens": 436,
+   "memory_tokens": 512,
+   "prompt_tokens": 1710,
+   "input": 3724,
+   "output": 5191,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 550,
+   "summary_tokens": 512,
+   "input": 2286,
+   "output": 1123,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S205",
+    "S226"
+   ],
+   "chunk_tokens": 442,
+   "memory_tokens": 512,
+   "prompt_tokens": 1717,
+   "input": 3755,
+   "output": 4444,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 550,
+   "summary_tokens": 509,
+   "input": 2317,
+   "output": 1090,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S227",
+    "S244"
+   ],
+   "chunk_tokens": 336,
+   "memory_tokens": 509,
+   "prompt_tokens": 1596,
+   "input": 3549,
+   "output": 3125,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "summary",
+   "summary_tokens_raw": 523,
+   "summary_tokens": 512,
+   "input": 2111,
+   "output": 1054,
+   "reasoning": null,
+   "cached": false
+  }
+ ],
+ "wall_s": 397.6
+}

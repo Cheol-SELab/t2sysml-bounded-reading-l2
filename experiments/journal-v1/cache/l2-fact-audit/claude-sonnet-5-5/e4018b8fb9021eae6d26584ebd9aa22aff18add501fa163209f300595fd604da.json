@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Metro Operations Control System, payload=station and platform states)\n\nSource sentences (the last one is where the fact was extracted):\nS132: North District Zone Controller suppresses platform departure authority when the associated berth reports an unsafe door interface state.\nS133: Station status indications presented to local station staff are derived from validated CBTC states rather than from unverified field contacts alone.\nS134: These indications distinguish normal service, held train, door interlock fault, radio degraded, emergency stop active, and evacuation support conditions.\nS135: The Metro Operations Control System displays station and platform states with the same identifiers used in controller workstations to reduce interpretation errors during incidents.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S135 says the Metro Operations Control System displays station and platform states, which fits the payload, but a display is not a flow to a stated destination, and the fact's flow has no target, so the main relation is only loosely supported.\"}",
+ "usage": {
+  "input_tokens": 676,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 88,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.988,
+ "created": "2026-10-14T12:52:09"
+}

@@ -1,0 +1,114 @@
+{
+ "sentences": [
+  {
+   "text": "During degraded operation, Greenvale Metro keeps trains stationary or moving at controlled speed until separation assurance is restored.",
+   "tags": []
+  },
+  {
+   "text": "A degraded mode is declared by the Line Traffic Controller when automatic movement authority, train localization, point detection, platform interface, or radio continuity cannot be trusted.",
+   "tags": []
+  },
+  {
+   "text": "The Metro Operations Control System shall present the affected limits, the selected fallback mode, and any pending operator actions without obscuring safety alarms.",
+   "tags": []
+  },
+  {
+   "text": "The Atlas Onboard Controller transitions to restricted manual operation when valid movement authority is unavailable or when onboard location confidence falls below the configured threshold.",
+   "tags": []
+  },
+  {
+   "text": "The Revenue Train Operator remains responsible for speed control, stopping accuracy, door release discipline, and compliance with verbal movement limits during restricted manual operation.",
+   "tags": []
+  },
+  {
+   "text": "The Dual Channel Odometer shall cause the train location to be treated as uncertain when its channels disagree beyond the permitted tolerance.",
+   "tags": []
+  },
+  {
+   "text": "The Train Radio Modem shall report loss of safe data connectivity to the Atlas Onboard Controller and shall not mask intermittent communication failures from the cab display.",
+   "tags": []
+  },
+  {
+   "text": "A failure in the Wayside Radio Access Network is handled by reducing train throughput before any extension of manual working is considered.",
+   "tags": []
+  },
+  {
+   "text": "The North District Zone Controller applies the Temporary Speed Restriction Notice only after validating the affected track limits against its degraded-mode map.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "text": "Orchid shall inhibit automatic route setting within any block whose occupancy state is under manual confirmation.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "text": "The East Junction Interlocking shall hold commanded points locked until field confirmation or a verified diagnostic indication supports a safe release.",
+   "tags": []
+  },
+  {
+   "text": "The West Junction Interlocking shall reject a route command that conflicts with a manually protected train movement.",
+   "tags": []
+  },
+  {
+   "text": "Manual route recovery begins when the Line Traffic Controller confirms train positions through independent indications and direct verbal reports.",
+   "tags": []
+  },
+  {
+   "text": "Before a manual route is issued, the Signal Maintenance Engineer verifies point condition, track vacancy, and local protection using approved field procedures.",
+   "tags": []
+  },
+  {
+   "text": "The Signal Maintenance Engineer uses the Axle Counter Reset Request as the controlling authority for restoring a failed section after local occupancy checks are complete.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "Restricted manual movements shall be authorized through the Voice Dispatch Console unless the contingency communications procedure has been formally invoked.",
+   "tags": []
+  },
+  {
+   "text": "The Revenue Train Operator shall repeat back the movement limit, maximum permitted speed, stopping point, and any instruction to remain clear of a platform interface.",
+   "tags": []
+  },
+  {
+   "text": "The Platform Screen Door Controller remains in a protected local state when train stopping accuracy cannot be verified by the normal automatic interface.",
+   "tags": []
+  },
+  {
+   "text": "Reset authorizations require concurrence between the Line Traffic Controller and the Signal Maintenance Engineer when the reset can change route availability or occupancy status.",
+   "tags": []
+  },
+  {
+   "text": "Quarry shall mark each degraded-mode diagnostic session with the incident identifier before any component restart is attempted.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "The Cyber Security Officer shall review any degraded condition that involves authentication failure, unexpected lockout, or abnormal network access behavior.",
+   "tags": []
+  },
+  {
+   "text": "The Cryptographic Key Management Appliance shall not be bypassed to accelerate service recovery unless the approved emergency security procedure is active.",
+   "tags": []
+  },
+  {
+   "text": "The Revenue Train Operator sends the Test Train Clearance Memo after completing the prescribed proving run under restricted manual control.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "text": "The Passenger Information Gateway shall issue disruption messages that are consistent with the operating limits accepted by the Line Traffic Controller.",
+   "tags": []
+  },
+  {
+   "text": "Return to automatic operation requires stable communications, verified route state, confirmed train position, and a recorded handback from maintenance control to operations control.",
+   "tags": []
+  }
+ ]
+}

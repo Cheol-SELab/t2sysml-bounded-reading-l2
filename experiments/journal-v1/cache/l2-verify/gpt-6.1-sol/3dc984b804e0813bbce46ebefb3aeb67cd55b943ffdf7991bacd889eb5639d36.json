@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Multi-Flight Common Route automation provides \"reroute recommendations\" to FAA traffic managers (an information or material flow).\n\nSource sentences:\nU0036: Although capable of identifying individual reroute opportunities, MFCR’s primary function is to identify common routes that can be flown by a group of flights operating in the same vicinity.\nU0037: Grouping flights on a common reroute makes more efficient use of constrained airspace, such as gaps in convective weather, and reduces the number of reroute recommendations that need to be evaluated and coordinated by a traffic manager.\nU0040: The better the constraint information provided to MFCR, the better the MFCR reroute recommendations and the lower the traffic manager effort needed to implement those recommendations. 4.1 CAPABILITY DESCRIPTION MFCR processes flights in all 20 Centers across the NAS.\nU0041: It begins to monitor and analyze trajectories once flights climb to 15,000 feet, and it will recommend time-saving weather-avoidance reroutes for groups of flights operating above FL250 within the same Center.\nU0113: CWAM polygons are updated with the CIWS forecast.\nU0114: MFCR currently uses 70% CWAM polygons for weather avoidance when generating reroute recommendations, but it can be adapted to use polygon-based convective weather model outputs from other sources, if desired.\n\nAnswer \"supported\" only if the sentences state that Multi-Flight Common Route automation produces or sends this item AND that FAA traffic managers receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"MFCR generates reroute recommendations (U0114), and traffic managers evaluate, coordinate, and implement those recommendations (U0037 and U0040).\"}",
+ "usage": {
+  "input_tokens": 455,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 48,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 503
+ },
+ "attempts": 1,
+ "wall_s": 2.647,
+ "created": "2026-10-14T00:27:45"
+}

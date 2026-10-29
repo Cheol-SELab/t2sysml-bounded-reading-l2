@@ -1,0 +1,194 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "S061 states that the Turbine Controller produces the Pitch Deviation Notice, and S159 says the SCADA Gateway uses the deviation notice, with no competing deviation notice indicated."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "S083 identifies the Weather Service as producing the Squall Window Bulletin, and S213 states that the Maintenance Planning Engine uses that bulletin."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "S105 says the Vessel AIS Receiver produces a Position Quality Flag, and S225 says the Fleet Dispatch Console uses the quality flag, with no other quality flag suggested."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "S126 says the Duty Planner prepares the Transfer Manifest Addendum, and S278 says the Vessel Master receives the Transfer Manifest Addendum before departure."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "S163 states that the Warehouse System produces a Backorder Exception Slip, and S262 says the Storekeeper uses the exception slip, with no alternate exception slip indicated."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "S194 says the Metocean Buoy produces the Wave Burst Record, and S323 states that the Weather Analyst uses the Wave Burst Record."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "S212 identifies the SCADA Gateway as producing the Session Revocation Receipt, and S357 says the Cybersecurity Gateway uses the revocation receipt."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "S237 says the HSE Officer produces the Harness Audit Card, and S312 says the Crew Transfer Vessel uses the Harness Audit Card before personnel transfer."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "S267 states that the Offshore Substation sends a Transformer Tap Snapshot, and S374 says the Shore Control Room uses the tap snapshot."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "S285 says the Maintenance Planning Engine produces the Deferred Task Rationale, and S430 says the Field Supervisor uses the same named item."
+  },
+  {
+   "probe_id": "F11",
+   "supported": true,
+   "reason": "S313 identifies the Blade Inspection Drone as producing the Leading Edge Tile Image, and S445 says the Blade Specialist reviews the tile image."
+  },
+  {
+   "probe_id": "F12",
+   "supported": true,
+   "reason": "S324 says the Port Agent issues the Berth Slot Confirmation, and S473 states that the Marine Coordinator uses the Berth Slot Confirmation."
+  },
+  {
+   "probe_id": "F13",
+   "supported": true,
+   "reason": "S353 says the Emergency Generator produces the Start Test Trace, and S532 says the Substation Operator uses the test trace, with no other test trace identified."
+  },
+  {
+   "probe_id": "F14",
+   "supported": true,
+   "reason": "S372 states that the Grid Interface Relay produces an Export Limit Advisory, and S541 says the Grid Dispatcher receives and uses it."
+  },
+  {
+   "probe_id": "F15",
+   "supported": true,
+   "reason": "S390 says the Vessel Master produces the Crew Count Correction, and S573 says the Personnel Tracking Console uses the count correction."
+  },
+  {
+   "probe_id": "F16",
+   "supported": true,
+   "reason": "S428 identifies the Cybersecurity Analyst as producing the Firmware Hash Attestation, and S593 says the SCADA Engineer uses it."
+  },
+  {
+   "probe_id": "F17",
+   "supported": true,
+   "reason": "S461 says the Service Operations Vessel prepares the Recovery Basket Load Sheet, and S646 says the Rescue Coordinator uses the load sheet."
+  },
+  {
+   "probe_id": "F18",
+   "supported": true,
+   "reason": "S472 states that the Weather Analyst produces the Visibility Confidence Note, and S669 says the Duty Planner uses it."
+  },
+  {
+   "probe_id": "F19",
+   "supported": true,
+   "reason": "S492 says the Work Permit Portal produces the Isolation Boundary Sketch, and S716 says the Electrical Technician uses the boundary sketch."
+  },
+  {
+   "probe_id": "F20",
+   "supported": true,
+   "reason": "S531 says the Shore Control Room sends the Switching Window Acknowledgment, and S752 says the Offshore Substation uses the Switching Window Acknowledgment."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "S030 establishes Glassfin as the alias for Turbine Controller, and S127 uses Glassfin in that operational role."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "S031 establishes Morrowick as the alias for Offshore Substation, and S189 uses Morrowick for a substation-related function."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "S032 establishes Pale Lantern as the alias for Weather Service, and S128 uses Pale Lantern to issue forecast updates."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "S053 designates Juniper Vale as the operational alias for SCADA Gateway, and S171 uses Juniper Vale for operational-status provision."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "S055 designates Thistle Crown as the alias for Maintenance Planning Engine, and S195 uses Thistle Crown for maintenance scheduling."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "S057 designates Amber Quay as the alias for Shore Control Room, and S214 uses Amber Quay for control-room coordination."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "S078 identifies Kestrel Bay as the alias for Crew Transfer Vessel, and S215 uses Kestrel Bay for vessel approach and departure reporting."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "S080 identifies Sable Orchard as the alias for Fleet Dispatch Console, and S260 uses Sable Orchard for assigning vessel and crew resources."
+  },
+  {
+   "probe_id": "A9",
+   "supported": true,
+   "reason": "S090 identifies Mosslight as the alias for Warehouse System, and S241 uses Mosslight for stock movement records."
+  },
+  {
+   "probe_id": "A10",
+   "supported": true,
+   "reason": "S101 designates Copper Finch as the alias for Metocean Buoy, and S231 uses Copper Finch for reporting local sea conditions."
+  },
+  {
+   "probe_id": "A11",
+   "supported": true,
+   "reason": "S110 designates Quiet Harbor as the alias for Cybersecurity Gateway, and S287 uses Quiet Harbor for an authorization-related security action."
+  },
+  {
+   "probe_id": "A12",
+   "supported": true,
+   "reason": "S124 designates Blue Granite as the alias for Vessel AIS Receiver, and S288 uses Blue Granite for vessel position information."
+  },
+  {
+   "probe_id": "A13",
+   "supported": true,
+   "reason": "S125 designates Larkspur as the alias for Blade Inspection Drone, and S314 uses Larkspur for a close-range inspection pass."
+  },
+  {
+   "probe_id": "A14",
+   "supported": true,
+   "reason": "S150 states that Work Permit Portal is referred to as Redoubt, and S321 uses Redoubt for blocking permit release."
+  },
+  {
+   "probe_id": "A15",
+   "supported": true,
+   "reason": "S176 assigns Foxglove as the operational alias for Emergency Generator, and S355 uses Foxglove for exercising the generator."
+  },
+  {
+   "probe_id": "A16",
+   "supported": true,
+   "reason": "S198 states that Grid Interface Relay is known as Wildmere, and S373 uses Wildmere for applying the accepted export ceiling."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "S810 explicitly names North Access Scanner, not South Access Scanner, as the scanner validating credentials at that point."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "S859 explicitly names East Service Lift, not West Service Lift, as running the door-interlock and overload check."
+  }
+ ]
+}

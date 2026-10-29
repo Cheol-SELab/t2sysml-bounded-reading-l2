@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Tower Supervisor provides \"conditions that may affect runway, taxiway, stand, or apron availability\" to Capacity Assessment Module (an information or material flow).\n\nSource sentences:\nS174: Tower and airport duty coordination establishes the working link between live control positions, the airport duty desk, surface surveillance feeds, and operational safety checks.\nS175: The Tower Supervisor remains accountable for control tower coordination and keeps the Airport Duty Manager informed of conditions that may affect runway, taxiway, stand, or apron availability.\nS493: The Demand Prediction Service compares amended Flight Intent Message data with the Airport Capacity Plan and the current Airport Acceptance Rate to show whether a diversion can be absorbed without creating unsafe demand peaks.\nS494: The Capacity Assessment Module evaluates runway availability, stand availability, sector load, handling capacity, and service constraints before a diversion recommendation is displayed.\n\nAnswer \"supported\" only if the sentences state that Tower Supervisor produces or sends this item AND that Capacity Assessment Module receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S175 says the Tower Supervisor keeps the Airport Duty Manager (not the Capacity Assessment Module) informed of these conditions, and S494 only says the module evaluates runway and stand availability without naming the Tower Supervisor as its source.\"}",
+ "usage": {
+  "input_tokens": 776,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 102,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 6.131,
+ "created": "2026-10-14T12:44:28"
+}

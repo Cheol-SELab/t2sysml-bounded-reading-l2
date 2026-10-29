@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Field crews provides \"notification\" to Duty Engineer (an information or material flow).\n\nSource sentences:\nS191: If communication to a distribution station is lost, the control room assumes the last confirmed operating mode remains in effect until field verification or telemetry restoration proves otherwise.\nS192: Field crews notify the control room before opening or closing major distribution valves so that pressure changes can be distinguished from pump or instrumentation problems.\nS216: Uninterruptible power supplies shall be sized to bridge transfer events and allow orderly shutdown of servers, network switches, control processors, and communication equipment.\nS217: Loss of both normal and standby power to a critical service shall be treated as an emergency operating condition requiring immediate notification of the Chief Operator and Duty Engineer.\n\nAnswer \"supported\" only if the sentences state that Field crews produces or sends this item AND that Duty Engineer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"Field crews notify the control room about valve operations, while the Duty Engineer receives notification of critical power loss, with no stated link to Field crews.\"}",
+ "usage": {
+  "input_tokens": 323,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 72,
+  "output_tokens_details": {
+   "reasoning_tokens": 24
+  },
+  "total_tokens": 395
+ },
+ "attempts": 1,
+ "wall_s": 4.223,
+ "created": "2026-10-14T12:39:53"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Warehouse Management System provides \"the Slot Reservation Receipt\" to North Aisle Stacker Crane (an information or material flow).\n\nSource sentences:\nS056: A position is excluded when its capacity, status, or operating restrictions conflict with the pallet profile.\nS057: The Warehouse Management System produces the Slot Reservation Receipt.\nS153: Inbound Pallet Buffer provides temporary staging without implying that a held load has been accepted into inventory.\nS154: North Aisle Stacker Crane uses the Slot Reservation Receipt to confirm that its assigned destination remains reserved.\n\nAnswer \"supported\" only if the sentences state that Warehouse Management System produces or sends this item AND that North Aisle Stacker Crane receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S057 states that the Warehouse Management System produces the Slot Reservation Receipt, and S154 states that the North Aisle Stacker Crane uses that same receipt to confirm its destination reservation.\"}",
+ "usage": {
+  "input_tokens": 663,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 83,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.087,
+ "created": "2026-10-14T12:42:56"
+}

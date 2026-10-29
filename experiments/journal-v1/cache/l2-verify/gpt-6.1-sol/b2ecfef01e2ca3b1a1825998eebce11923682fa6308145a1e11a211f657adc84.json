@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Alert Distribution Hub provides \"surface equipment\" to Audit Event Ledger (an information or material flow).\n\nSource sentences:\nS460: The Handling Resource Planner evaluates whether additional ground handling resources can remove the constraint faster than a flow management measure would absorb it.\nS461: Lantern must distribute surface equipment and apron congestion advisories to subscribed operational roles within the latency target defined in the Business Rules Registry.\nS465: During the Recovery Phase, the system prioritizes removal of surface holds that constrain multiple rotations before optimizing isolated punctuality impacts.\nS466: Every accepted surface equipment, fuel hold, runway metering, or apron congestion adjustment is written to the Collaborative Decision Log and the Audit Event Ledger with the actor, timestamp, affected flight, and planning rationale.\n\nAnswer \"supported\" only if the sentences state that Alert Distribution Hub produces or sends this item AND that Audit Event Ledger receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The text says Lantern distributes surface equipment advisories to operational roles and accepted adjustments are written to the Audit Event Ledger, not that Alert Distribution Hub sends surface equipment to the ledger.\"}",
+ "usage": {
+  "input_tokens": 327,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 98,
+  "output_tokens_details": {
+   "reasoning_tokens": 44
+  },
+  "total_tokens": 425
+ },
+ "attempts": 1,
+ "wall_s": 4.979,
+ "created": "2026-10-14T12:46:51"
+}

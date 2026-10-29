@@ -1,0 +1,104 @@
+{
+ "sentences": [
+  {
+   "text": "Remote stands are used as controlled capacity buffers when contact gates are unavailable, when tow-in sequencing is more efficient than gate holding, or when an aircraft must wait clear of the terminal pier.",
+   "tags": []
+  },
+  {
+   "text": "The operational concept treats each remote stand as an airside resource with a landside service dependency, not as an isolated parking position.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager publishes the planned remote stand operating posture in the Airport CDM Portal before the first affected arrival bank.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead confirms that each planned remote stand has an assigned aircraft route, safe passenger transfer path, and defined contingency for blocked apron movement.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator uses remote stands to protect connection banks only when the resulting passenger transfer time is compatible with the planned departure sequence.",
+   "tags": []
+  },
+  {
+   "text": "Handling Resource Planner produces the Remote Stand Shuttle Count at regular operating intervals to represent available passenger transfer capacity for remote stand activity.",
+   "tags": [
+    "F14:intro"
+   ]
+  },
+  {
+   "text": "Shuttle availability is modeled as a finite resource that includes vehicles, drivers, loading positions, terminal curb space, and accessible boarding support.",
+   "tags": []
+  },
+  {
+   "text": "Passenger bus constraints include maximum load, door cycle time, stand access routing, security segregation, mobility assistance requirements, and the time needed to clear passengers from the aircraft vicinity.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher verifies that bus assignments do not conflict with baggage, catering, fueling, or crew transport movements on the same apron corridor.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board displays remote stand occupancy, expected towing actions, and bus service readiness in a shared view for airside coordination.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager does not advance an aircraft toward an active departure sequence unless the remote stand release time supports the expected taxi plan.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service incorporates remote stand constraints when estimating whether a Target Off Block Time remains achievable.",
+   "tags": []
+  },
+  {
+   "text": "If a bus shortage or terminal loading delay is detected, the Airline Operations Coordinator may request revision of the Target Off Block Time before the delay propagates to runway demand.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager considers repeated remote stand transfer delays as an input to tactical capacity assessment during peak arrival and departure banks.",
+   "tags": []
+  },
+  {
+   "text": "Ramp Control Lead uses the Towbar Shortage Report to determine whether remote stand aircraft can be repositioned without creating secondary apron congestion.",
+   "tags": [
+    "F13:link"
+   ]
+  },
+  {
+   "text": "The Capacity Assessment Module reflects persistent remote stand service limits as a reduction in practical gate throughput rather than only as a ramp movement issue.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector identifies cases where an aircraft assigned to a contact gate would cause less overall delay than a nominally available remote stand with inadequate passenger transfer capacity.",
+   "tags": []
+  },
+  {
+   "text": "When remote stand use increases, the Airport CDM Portal records the operational reason, affected flights, expected passenger transfer duration, and responsible control position.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display presents remote stand status in time order so that airline, ramp, tower, and airport roles share the same expectation for aircraft readiness.",
+   "tags": []
+  },
+  {
+   "text": "Landside service limits are linked to airside timing through estimated boarding completion, bus return availability, crew access, and terminal processing constraints.",
+   "tags": []
+  },
+  {
+   "text": "A remote stand departure is not considered ready for push or tow until passengers, bags, crew, and required ground services are aligned with the planned aircraft movement.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, the Airport Duty Manager may reduce planned remote stand use because bus loading, walking routes, and accessible transfer times become less predictable.",
+   "tags": []
+  },
+  {
+   "text": "During Recovery Phase, remote stands may be used to absorb late arrivals while preserving contact gates for flights with tight turnarounds or high connection sensitivity.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse retains remote stand timing measures so that planners can compare scheduled assumptions with actual passenger transfer and apron release performance.",
+   "tags": []
+  }
+ ]
+}

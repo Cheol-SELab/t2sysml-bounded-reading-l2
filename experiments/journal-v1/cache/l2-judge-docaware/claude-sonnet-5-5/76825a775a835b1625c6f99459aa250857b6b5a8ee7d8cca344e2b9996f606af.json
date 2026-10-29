@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: South Lookout Camera Mast provides \"the Camera Cleaning Log\" to Smoke Classifier Module (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS094: The North Lookout Camera Mast and the South Lookout Camera Mast provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility.\nS095: The South Lookout Camera Mast produces the Camera Cleaning Log as part of its maintenance reporting.\nS162: The Sentinel Fireline Analytics Engine applies the Ridge Shadow Mask when estimating crew-visible fire edge confidence in steep terrain.\nS163: The Smoke Classifier Module uses the Camera Cleaning Log to suppress confidence changes caused by lens contamination and service timing.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\n(none found)\n\nAnswer \"supported\" only if the document states that South Lookout Camera Mast produces or sends this item AND that Smoke Classifier Module receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Smoke Classifier Module uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S095 states the South Lookout Camera Mast produces the Camera Cleaning Log and S163 states the Smoke Classifier Module uses the same-named log, with no other producer or similarly named item mentioned.\"}",
+ "usage": {
+  "input_tokens": 846,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 86,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.715,
+ "created": "2026-10-19T19:03:18"
+}

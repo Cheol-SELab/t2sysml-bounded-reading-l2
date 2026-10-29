@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ramp Movement Board provides \"the Fuel Truck Hold Advice\" to Tower Sequence Manager (an information or material flow).\n\nSource sentences:\nS360: Surface surveillance inputs from the Surface Surveillance Adapter are used to confirm the actual number of aircraft waiting at runway holding points.\nS361: The Ramp Movement Board produces the Fuel Truck Hold Advice when metering decisions require servicing activity to remain clear of an aircraft that is being held at stand.\nS449: Fuel vehicle holds affect the tactical plan by delaying off-block readiness even when crew, passengers, and aircraft serviceability are otherwise complete.\nS450: Tower Sequence Manager uses the hold advice to prevent a departure from being sequenced ahead of a fueling constraint that is still active.\n\nAnswer \"supported\" only if the sentences state that Ramp Movement Board produces or sends this item AND that Tower Sequence Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S361 says the Ramp Movement Board produces the Fuel Truck Hold Advice, and S450 says Tower Sequence Manager uses 'the hold advice' (a shorter name for the same item) to avoid sequencing a departure ahead of an active fueling constraint.\"}",
+ "usage": {
+  "input_tokens": 734,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 108,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.305,
+ "created": "2026-10-14T12:45:10"
+}

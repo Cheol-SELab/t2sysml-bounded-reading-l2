@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "The CBTC supervision boundary at junctions is defined by the commanded route state, detected point position, and confirmed track vacancy rather than by geographic chainage alone.",
+   "tags": []
+  },
+  {
+   "text": "East Junction Interlocking is also known locally as Falcon for maintenance callouts and legacy panel references.",
+   "tags": [
+    "ALIAS:E_EAST_JUNCTION_INTERLOCKING"
+   ]
+  },
+  {
+   "text": "North District Zone Controller requests routes through East Junction Interlocking only when the requested path is consistent with the current movement authority and the train approach profile.",
+   "tags": []
+  },
+  {
+   "text": "South District Zone Controller applies the same route protection principles for interfaces with West Junction Interlocking, including checks on flank protection and conflicting movement locking.",
+   "tags": []
+  },
+  {
+   "text": "The interlocking retains final vital authority for point movement, point locking, route locking, and release of protected sections.",
+   "tags": []
+  },
+  {
+   "text": "CBTC supervision treats a route as available only after the relevant interlocking reports points detected, locked, and proved in the required position.",
+   "tags": []
+  },
+  {
+   "text": "A requested route is not incorporated into a movement authority until the associated overlap and flank conditions are confirmed as protected.",
+   "tags": []
+  },
+  {
+   "text": "If the interlocking reports loss of point correspondence after a route has been granted, the affected movement authority is shortened or withdrawn according to the safe braking envelope.",
+   "tags": []
+  },
+  {
+   "text": "Axle counter clear and occupied indications are used as independent wayside evidence for route availability and for the continued integrity of route locking.",
+   "tags": []
+  },
+  {
+   "text": "Where axle counter occupation conflicts with the train location estimated by the CBTC system, the more restrictive state is applied until the discrepancy is resolved.",
+   "tags": []
+  },
+  {
+   "text": "East Junction Interlocking sends the Axle Counter Reset Request under the configured degraded-mode reset procedure.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "Reset processing is inhibited while any associated route remains locked or while a train is approaching the affected detection section.",
+   "tags": []
+  },
+  {
+   "text": "Maple verifies local track clearance evidence and records the result before authorising restoration of normal route setting after a detection anomaly.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "text": "West Junction Interlocking sends the Route Release Exception List when normal sectional release cannot be completed within the configured timing rules.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "The zone controller treats any release exception as a retained hazard until the affected path is excluded from new movement authorities.",
+   "tags": []
+  },
+  {
+   "text": "Platform approach protection is enforced by combining the active route state with train stopping accuracy supervision near the platform berth.",
+   "tags": []
+  },
+  {
+   "text": "The Platform Screen Door Controller provides door closed and locked indications to the supervising wayside systems, but those indications do not replace interlocking route proof.",
+   "tags": []
+  },
+  {
+   "text": "If platform door readiness is absent, the approaching train may be held outside the platform stopping window even when the junction route is otherwise proved.",
+   "tags": []
+  },
+  {
+   "text": "The Atlas Onboard Controller uses the token bundle to validate that onboard operating context is current before accepting supervised route-related data.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "text": "Train Radio Modem messages carrying route status are exchanged through Wayside Radio Access Network paths with sequence monitoring and timeout handling.",
+   "tags": []
+  },
+  {
+   "text": "Safety Data Communication Network paths between the zone controllers and the interlockings are configured for deterministic delivery of vital state changes and command acknowledgements.",
+   "tags": []
+  },
+  {
+   "text": "Metro Operations Control System displays the commanded route, locked route, point state, and track occupancy state as separate indications so that control staff can identify mismatches.",
+   "tags": []
+  },
+  {
+   "text": "A Line Traffic Controller may request a regulating action, but the request is executed only if the interlocking and CBTC protection rules agree that the route remains safe.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Diagnostic Server records route command outcomes, point operation timing, and detection transitions for later engineering review without participating in vital decisions.",
+   "tags": []
+  }
+ ]
+}

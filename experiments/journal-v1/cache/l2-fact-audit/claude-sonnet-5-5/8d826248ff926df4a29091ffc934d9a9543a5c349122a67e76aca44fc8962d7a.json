@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: state(owner=Atlas Onboard Controller, label=automatic train operation)\n\nSource sentences (the last one is where the fact was extracted):\nS025: After successful operator authentication, Atlas Onboard Controller assumes the active train control role when the train is energized and train integrity indications are valid.\nS026: The Atlas Onboard Controller is referred to in some installation drawings as Kestrel, but this document uses Atlas Onboard Controller as the canonical name.\nS027: Atlas Onboard Controller supervises movement authority processing, onboard speed enforcement, door enable logic, and train interface commands required for CBTC operation.\nS028: The controller maintains a safety-critical state machine that separates initialization, protected manual operation, automatic train operation, fallback operation, and cutout conditions.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S028 says the controller (Atlas Onboard Controller, also called Kestrel in S026) maintains a state machine that includes automatic train operation as one of its states, which matches the owner and label.\"}",
+ "usage": {
+  "input_tokens": 715,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 79,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.667,
+ "created": "2026-10-14T12:52:21"
+}

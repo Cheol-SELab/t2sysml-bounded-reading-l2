@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pier 4 Bag-Drop Unit provides \"an Oversize Exception Ticket\" to Image Resolution Desk (an information or material flow).\n\nSource sentences:\nS034: Staff check bag dimensions and weight against the configured limits for standard conveyor handling.\nS035: The Pier 4 Bag-Drop Unit sends an Oversize Exception Ticket when a checked bag exceeds the configured size envelope.\nS140: South Gate Scanner provides the corresponding verification for bags processed in its coverage area.\nS141: Image Resolution Desk uses the exception ticket to confirm an authorized make-up position for an oversize bag.\n\nAnswer \"supported\" only if the sentences state that Pier 4 Bag-Drop Unit produces or sends this item AND that Image Resolution Desk receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S035 states that Pier 4 Bag-Drop Unit sends an Oversize Exception Ticket, and S141 states that Image Resolution Desk uses the exception ticket for an oversize bag.\"}",
+ "usage": {
+  "input_tokens": 298,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 53,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 351
+ },
+ "attempts": 1,
+ "wall_s": 4.807,
+ "created": "2026-10-14T12:40:21"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Security Duty Manager, label=resolves release holds that require a security decision)\n\nSource sentences (the last one is where the fact was extracted):\nS149: Airline Ramp Coordinator confirms staffing, equipment availability, and the planned loading sequence before accepting a build for loading.\nS150: Outbound Load Control Desk reconciles the completed build against the permitted flight load before departure closeout.\nS151: Bag Tag Printer produces replacement identification only when authorized personnel have confirmed the required bag details.\nS152: Security Duty Manager resolves release holds that require a security decision before bags can enter a departure build.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S152 states directly that the Security Duty Manager resolves release holds that require a security decision, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 662,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 57,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.222,
+ "created": "2026-10-14T12:52:25"
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: crews provides \"critical location and destination details\" to Computer Aided Dispatch Console (an information or material flow).\n\nSource sentences:\nS062: Call Taker Mara produces the Caller Location Correction Slip when the caller's address needs documented clarification.\nS063: The Computer Aided Dispatch Console checks entered location details against available address and map data.\nS200: Radio Coordinator directs crews to approved fallback channels when the primary channel is unusable.\nS201: Crews acknowledge each fallback assignment and repeat critical location and destination details before moving.\n\nAnswer \"supported\" only if the sentences state that crews produces or sends this item AND that Computer Aided Dispatch Console receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"Crews repeat critical location and destination details during fallback assignments, while the Computer Aided Dispatch Console checks entered location details, with no statement that it receives or uses the details repeated by crews.\"}",
+ "usage": {
+  "input_tokens": 284,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 96,
+  "output_tokens_details": {
+   "reasoning_tokens": 39
+  },
+  "total_tokens": 380
+ },
+ "attempts": 1,
+ "wall_s": 4.372,
+ "created": "2026-10-14T00:05:50"
+}

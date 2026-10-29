@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Field crews provides \"notification\" to Distribution Dispatcher (an information or material flow).\n\nSource sentences:\nS171: The High Service Pump Header is operated to maintain stable delivery while avoiding unnecessary pressure swings during recovery from a major wash or storm response action.\nS172: The Distribution Dispatcher is notified when treatment changes could affect operating reserves at the North Distribution Pressure Station or South Distribution Pressure Station.\nS191: If communication to a distribution station is lost, the control room assumes the last confirmed operating mode remains in effect until field verification or telemetry restoration proves otherwise.\nS192: Field crews notify the control room before opening or closing major distribution valves so that pressure changes can be distinguished from pump or instrumentation problems.\n\nAnswer \"supported\" only if the sentences state that Field crews produces or sends this item AND that Distribution Dispatcher receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S192 says field crews notify the control room, not the Distribution Dispatcher, and S172 describes a notification to the Dispatcher about treatment changes without naming field crews as the sender, so the two sentences do not describe the same flow from Field crews to the Dispatcher.\"}",
+ "usage": {
+  "input_tokens": 710,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 107,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.953,
+ "created": "2026-10-29T01:01:06"
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Computer Aided Dispatch Console provides \"estimated travel times, unit availability, and relevant access constraints\" to Emergency Department (an information or material flow).\n\nSource sentences:\nS102: The Ambulance Coordination Platform presents units whose reported status and capabilities match the incident requirements.\nS103: The Computer Aided Dispatch Console displays estimated travel times, unit availability, and relevant access constraints.\nS154: Larkspur confirms the incident identifier and intended receiving facility before the destination request is transmitted.\nS155: The Emergency Department advises the Hospital Liaison Desk of relevant capacity limits, access constraints, or changes to its receiving status.\n\nAnswer \"supported\" only if the sentences state that Computer Aided Dispatch Console produces or sends this item AND that Emergency Department receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The console displays the listed information, but the Emergency Department sends access constraints to the Hospital Liaison Desk rather than receiving or using that same information.\"}",
+ "usage": {
+  "input_tokens": 302,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 86,
+  "output_tokens_details": {
+   "reasoning_tokens": 38
+  },
+  "total_tokens": 388
+ },
+ "attempts": 1,
+ "wall_s": 1.703,
+ "created": "2026-10-13T23:47:29"
+}

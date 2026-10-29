@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "Inbound pallets enter the conveyor area only after the preceding inspection and identification steps are complete.",
+   "tags": []
+  },
+  {
+   "text": "The East Transfer Conveyor carries pallets along the eastern approach to the transfer area.",
+   "tags": []
+  },
+  {
+   "text": "The West Transfer Conveyor carries pallets along the western approach to the transfer area.",
+   "tags": []
+  },
+  {
+   "text": "The Conveyor Line Controller sequences pallet movement across the available conveyor sections.",
+   "tags": []
+  },
+  {
+   "text": "It uses conveyor status and transfer-point signals to determine when a pallet can advance.",
+   "tags": []
+  },
+  {
+   "text": "The Conveyor Line Controller maintains a separate sequence for each active conveyor path.",
+   "tags": []
+  },
+  {
+   "text": "Conveyor Line Controller is also known as Brasshaven in local operating terminology.",
+   "tags": [
+    "ALIAS:E_CONVEYOR_CONTROLLER"
+   ]
+  },
+  {
+   "text": "At each transfer point, interlocks prevent movement into a section that is occupied or unavailable.",
+   "tags": []
+  },
+  {
+   "text": "Presence sensors confirm that a pallet has reached the expected position before a transfer is initiated.",
+   "tags": []
+  },
+  {
+   "text": "A blocked transfer point holds the affected pallet upstream while other clear paths may continue operating.",
+   "tags": []
+  },
+  {
+   "text": "Accumulation zones provide controlled spacing between pallets when downstream movement pauses.",
+   "tags": []
+  },
+  {
+   "text": "Release from an accumulation zone occurs only when the next conveyor section reports ready.",
+   "tags": []
+  },
+  {
+   "text": "At a merge, the controller grants passage to one approaching pallet at a time.",
+   "tags": []
+  },
+  {
+   "text": "The Conveyor Line Controller produces the Transfer Induction Ticket for each accepted induction.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "Each output record carries the identifiers and routing details needed to associate the induction with its pallet.",
+   "tags": []
+  },
+  {
+   "text": "The controller checks that required induction fields are present before releasing the pallet from the transfer point.",
+   "tags": []
+  },
+  {
+   "text": "Duplicate induction requests are held for resolution rather than treated as new pallet movements.",
+   "tags": []
+  },
+  {
+   "text": "The North Aisle Stacker Crane sends the Aisle Occupancy Snapshot.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "The reported aisle condition reflects the crane's current view of occupied and available storage positions.",
+   "tags": []
+  },
+  {
+   "text": "Changes in reported conditions support safer decisions about whether an induction can proceed.",
+   "tags": []
+  },
+  {
+   "text": "The North Aisle Stacker Crane updates its reported condition as its operating state changes.",
+   "tags": []
+  },
+  {
+   "text": "If reporting becomes stale, the affected induction path remains held until current status is available.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Operations Supervisor can review persistent holds through established operational procedures.",
+   "tags": []
+  },
+  {
+   "text": "After a fault is cleared, the controller verifies transfer-point readiness before resuming the held sequence.",
+   "tags": []
+  },
+  {
+   "text": "Normal sequencing resumes without changing the order of pallets already committed to a transfer path.",
+   "tags": []
+  }
+ ]
+}

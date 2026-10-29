@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Hospital Courier, label=records the time and identity associated with acceptance)\n\nSource sentences (the last one is where the fact was extracted):\nS087: Temperature-sensitive packages remain under controlled conditions until their custody is formally transferred.\nS088: The Sensor-monitored Medication Cooler records temperature conditions while medication awaits transfer.\nS089: At the physical handoff, the Hospital Courier checks package count, packaging integrity, destination information, and any special handling instructions.\nS090: The courier records the time and identity associated with acceptance so the custody history remains traceable.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S090 says 'The courier records the time and identity associated with acceptance', and S089 identifies the courier as the Hospital Courier, so both performer and action label match the text.\"}",
+ "usage": {
+  "input_tokens": 650,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.576,
+ "created": "2026-10-14T12:51:45"
+}

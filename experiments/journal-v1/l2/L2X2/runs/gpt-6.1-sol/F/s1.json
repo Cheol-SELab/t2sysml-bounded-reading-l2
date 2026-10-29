@@ -1,0 +1,7043 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "label": "operating and maintaining the offshore wind farm"
+  },
+  {
+   "unit_id": "S002",
+   "type": "composition",
+   "whole": "offshore wind farm",
+   "parts": [
+    "wind farm assets",
+    "offshore support facilities",
+    "control functions",
+    "maintenance activities"
+   ]
+  },
+  {
+   "unit_id": "S003",
+   "type": "composition",
+   "whole": "offshore wind farm",
+   "parts": [
+    "turbine structures",
+    "turbines",
+    "Offshore Substation"
+   ]
+  },
+  {
+   "unit_id": "S005",
+   "type": "composition",
+   "whole": "offshore wind farm",
+   "parts": [
+    "Turbine Controller",
+    "Pitch System",
+    "Converter Cabinet",
+    "Nacelle Condition Monitor",
+    "Rotor Brake Unit",
+    "Turbine Sensor Bus"
+   ]
+  },
+  {
+   "unit_id": "S006",
+   "type": "composition",
+   "whole": "offshore wind farm",
+   "parts": [
+    "Main Transformer",
+    "Export Cable Monitor",
+    "SCADA Gateway"
+   ]
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "label": "generate electricity reliably"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "label": "maintaining personnel safety and asset integrity"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "label": "be authorized"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "label": "be controlled"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "label": "be accounted for throughout each operation"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "label": "preventing pollution"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "label": "minimizing disturbance to the marine environment"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "label": "responding promptly to environmental incidents"
+  },
+  {
+   "unit_id": "S013",
+   "type": "allocation",
+   "action": "continuous monitoring",
+   "to": "Shore Control Room"
+  },
+  {
+   "unit_id": "S013",
+   "type": "allocation",
+   "action": "dispatch coordination",
+   "to": "Shore Control Room"
+  },
+  {
+   "unit_id": "S015",
+   "type": "state",
+   "label": "construction control"
+  },
+  {
+   "unit_id": "S015",
+   "type": "state",
+   "label": "operations control"
+  },
+  {
+   "unit_id": "S015",
+   "type": "transition",
+   "from": "construction control",
+   "to": "operations control",
+   "trigger": "documented handover and verification"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "label": "be scheduled around equipment condition, resource availability, access constraints, and production requirements"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "label": "use prioritized fault assessment and controlled mobilization appropriate to the severity of the failure"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "offshore wind farm",
+   "label": "operates in a variable marine environment"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "label": "used for turbine blade assessment"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Offshore Substation",
+   "label": "provides the farm's offshore electrical collection and switching environment"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "provides a shore-based operating location for authorized personnel"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "supports the coordination of operational resources across the farm"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "supports the preparation and sequencing of maintenance activities"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Crew Transfer Vessel",
+   "label": "may support offshore work"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Daughter Craft",
+   "label": "may support offshore work"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "may support offshore work"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "provides a controlled boundary for supervisory data exchange between offshore assets and shore-based operations"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "supports work preparation"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "organizing maintenance needs, resource considerations, and planning constraints"
+  },
+  {
+   "unit_id": "S058",
+   "type": "composition",
+   "whole": "offshore wind farm operations and maintenance system",
+   "parts": [
+    "SCADA Gateway",
+    "Maintenance Planning Engine",
+    "Shore Control Room"
+   ]
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "mediates supervisory exchanges"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "supports consistent access to operational information"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "performs local turbine control functions within the offshore equipment environment"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "produces the Pitch Deviation Notice for operational handling"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "maintains the configuration and technical integrity of supervisory interfaces"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "uses the shore-based operational picture"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "assess equipment status"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "coordinate response"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "provides a shared operational context for personnel responsible for offshore assets"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "uses the Maintenance Planning Engine"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "prepare and review maintenance activities"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "supports planning decisions without replacing the judgment of the Duty Planner"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "contributes environmental information to operational planning and coordination"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "considers offshore conditions and vessel availability"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "coordinating access to work sites"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "provides a fleet-level view of dispatch activity for operational coordination"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "supports authorization processes that govern work under controlled conditions"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Cybersecurity Gateway",
+   "label": "provides a security boundary for connected operational services"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "develops daily work priorities with input from the Field Supervisor and the Maintenance Planning Engine"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "aligns vessel availability with crew readiness, port access, and the planned work locations"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "retains authority for navigation, vessel safety, and decisions about whether a transfer can proceed"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "gives the Marine Coordinator a shared view of vessel assignments, planned movements, and dispatch status"
+  },
+  {
+   "unit_id": "S081",
+   "type": "flow",
+   "source": "Fleet Dispatch Console",
+   "target": "Marine Coordinator",
+   "payload": "shared view of vessel assignments, planned movements, and dispatch status"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "uses that view to coordinate the Crew Transfer Vessel, the Service Operations Vessel, and the Daughter Craft as conditions require"
+  },
+  {
+   "unit_id": "S082",
+   "type": "flow",
+   "source": "Fleet Dispatch Console",
+   "target": "Marine Coordinator",
+   "payload": "shared view of vessel assignments, planned movements, and dispatch status"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "produces the Squall Window Bulletin for operational awareness"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "reviews available forecasts"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "advises the Marine Coordinator on conditions that may affect marine operations"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "evaluates local conditions before departure"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "continues to reassess them during the voyage"
+  },
+  {
+   "unit_id": "S086",
+   "type": "state",
+   "label": "Weather Hold"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "Weather Hold",
+   "label": "pauses affected marine activity"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "Crew Transfer Vessel",
+   "label": "transports authorized personnel and routine tools between shore and offshore work locations"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Daughter Craft",
+   "label": "can support short-range transfers when the operating plan and conditions permit its use"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "provides a platform for work that needs longer offshore presence or broader onboard support"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "records stock status"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "supports preparation of equipment and consumables for scheduled work"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "checks requested materials against available stock"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "coordinates replenishment with the Spares Hub"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Port Agent",
+   "label": "supports shore-side arrangements for vessel calls, crew access, and staged cargo"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "helps the organization maintain an accurate view of personnel assigned to offshore activities"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "verifies that work arrangements account for applicable safety controls and personnel responsibilities"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "coordinates task execution offshore"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "keeps the Duty Planner informed of changes to work progress"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains operational oversight and provides a point of coordination for shore-based personnel"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "operating organization",
+   "label": "uses defined handoffs so that dispatch, marine judgment, work supervision, and stores control remain accountable functions"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains operational oversight and provides a point of coordination for shore-based personnel"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "measures wind speed and direction, wave height and period, current, air temperature, and barometric pressure"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "label": "are selected and mounted to limit exposure to spray, icing, vibration, and corrosion"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "onboard logger",
+   "label": "timestamps observations and retains a local history during intermittent communications"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Vessel AIS Receiver",
+   "label": "produces a Position Quality Flag when position integrity checks fail or confidence falls below its configured threshold"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "uses validated environmental observations in forecast products for offshore planning"
+  },
+  {
+   "unit_id": "S106",
+   "type": "flow",
+   "source": "Metocean Buoy",
+   "target": "Weather Service",
+   "payload": "validated environmental observations"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "reviews forecast limitations and identifies conditions that may affect vessel access or turbine work"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "label": "are configured to support both trend analysis and timely operational decisions"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "label": "are checked as part of routine monitoring"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Cybersecurity Gateway",
+   "label": "establishes a controlled boundary between authorized shore-side services and offshore operational networks"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "label": "is denied by default and enabled only for documented operational needs"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "label": "are time limited, logged, and reviewed against approved maintenance activity"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "monitors gateway events for unusual access patterns and configuration changes"
+  },
+  {
+   "unit_id": "S118",
+   "type": "state",
+   "label": "restricted state"
+  },
+  {
+   "unit_id": "S118",
+   "type": "transition",
+   "to": "restricted state",
+   "trigger": "Loss of the security boundary"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "label": "are retained in protected logs for investigation and audit"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "label": "are tested after configuration changes to confirm that permitted functions remain available and prohibited paths remain blocked"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "prepares the Transfer Manifest Addendum to capture approved vessel deployment changes"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "adjusts turbine output within approved operating limits"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "blocks commands that conflict with active protection conditions"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "issues forecast updates that support timing decisions for remote observation and field work"
+  },
+  {
+   "unit_id": "S128",
+   "type": "flow",
+   "source": "Weather Service",
+   "payload": "forecast updates"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "executes authorized control actions"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "reports its operating state through established control interfaces"
+  },
+  {
+   "unit_id": "S129",
+   "type": "flow",
+   "source": "Turbine Controller",
+   "payload": "operating state"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Pitch System",
+   "label": "changes blade angle in response to turbine control commands and local protection logic"
+  },
+  {
+   "unit_id": "S130",
+   "type": "flow",
+   "source": "Turbine Controller",
+   "target": "Pitch System",
+   "payload": "turbine control commands"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Converter Cabinet",
+   "label": "manages electrical conversion while observing equipment limits and protective interlocks"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Nacelle Condition Monitor",
+   "label": "provides equipment measurements for ongoing assessment of turbine health"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "presents turbine status and control availability to authorized shore personnel"
+  },
+  {
+   "unit_id": "S133",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "authorized shore personnel",
+   "payload": "turbine status and control availability"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "provides a staffed location for supervisory control and operational review"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews alarms and operating conditions"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "issuing a remote command"
+  },
+  {
+   "unit_id": "S135",
+   "type": "succession",
+   "before": "reviews alarms and operating conditions",
+   "after": "issuing a remote command"
+  },
+  {
+   "unit_id": "S135",
+   "type": "flow",
+   "source": "Control Engineer",
+   "payload": "remote command"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "label": "are recorded for later operational review"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "label": "is checked before remote operation begins and after relevant configuration changes"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Vessel AIS Receiver",
+   "label": "collects vessel position broadcasts to support marine traffic awareness"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Vessel AIS Receiver",
+   "label": "maintains a time-stamped view of nearby vessel movements when broadcast coverage is available"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "uses the available traffic picture to support coordination of offshore movements"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Vessel AIS Receiver",
+   "target": "Marine Coordinator",
+   "payload": "available traffic picture"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Blade Inspection Drone",
+   "label": "captures close-range visual observations of accessible blade surfaces"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "plans inspection passes to provide consistent coverage of areas selected for examination"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "label": "is reviewed for visible surface changes and potential maintenance concerns"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "considers remote observations alongside site conditions"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "recommending follow-up work"
+  },
+  {
+   "unit_id": "S145",
+   "type": "succession",
+   "before": "considers remote observations alongside site conditions",
+   "after": "recommending follow-up work"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "label": "is suspended when weather, visibility, or equipment status makes flight unsafe"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "can use reviewed condition information when prioritizing future maintenance activities"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "label": "is entered with its location, scope, planned duration, and responsible team"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "requester",
+   "label": "identifies the equipment affected and describes the intended work in terms that can be checked against operating constraints"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "reviews the request for completeness and assigns it to the appropriate planning queue"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "can use reviewed condition information when prioritizing future maintenance activities"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "maintains the request record and its revision history throughout review and execution"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews the proposed controls when the task presents a material personnel or environmental risk"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "Technical reviewers",
+   "label": "confirm that the work scope is compatible with equipment condition and the planned maintenance method"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "uses the deviation notice to flag work packages that may require technical review"
+  },
+  {
+   "unit_id": "S159",
+   "type": "flow",
+   "source": "Turbine Controller",
+   "target": "SCADA Gateway",
+   "payload": "Pitch Deviation Notice"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "checks that the planned access method and timing are practical for the work location"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms that the vessel plan can support the approved personnel and equipment transfer"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "records review decisions"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "returns incomplete requests to the requester with the required corrections identified"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "produces a Backorder Exception Slip when a requested component cannot be supplied by the planned issue date"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "label": "cannot be supplied by the planned issue date"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "resolves outstanding supply and scheduling issues"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "submitting the request for authorization"
+  },
+  {
+   "unit_id": "S164",
+   "type": "succession",
+   "before": "resolves outstanding supply and scheduling issues",
+   "after": "submitting the request for authorization"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "designated authorizing role",
+   "label": "grants permission"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "label": "are recorded in the portal"
+  },
+  {
+   "unit_id": "S165",
+   "type": "succession",
+   "before": "are recorded in the portal",
+   "after": "grants permission"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "verifies that the approved conditions remain valid"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "crew",
+   "label": "starts work"
+  },
+  {
+   "unit_id": "S167",
+   "type": "succession",
+   "before": "verifies that the approved conditions remain valid",
+   "after": "starts work"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "records the start, pause, resumption, and completion of authorized work against the permit record"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "responsible team",
+   "label": "reports completion status and outstanding issues"
+  },
+  {
+   "unit_id": "S170",
+   "type": "flow",
+   "source": "responsible team",
+   "payload": "completion status and outstanding issues"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "label": "is closed"
+  },
+  {
+   "unit_id": "S170",
+   "type": "succession",
+   "before": "reports completion status and outstanding issues",
+   "after": "is closed"
+  },
+  {
+   "unit_id": "S171",
+   "type": "requirement",
+   "subject": "SCADA Gateway",
+   "text": "Juniper Vale shall provide current operational status to permit reviewers when requested as part of the authorization check."
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "provide current operational status to permit reviewers when requested as part of the authorization check"
+  },
+  {
+   "unit_id": "S171",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "permit reviewers",
+   "payload": "current operational status"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "station service transformers",
+   "label": "supply the facility's auxiliary electrical loads from the medium-voltage collection system"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "label": "are separated from nonessential loads"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "automatic controls",
+   "label": "initiate the Emergency Generator start sequence"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "label": "Transfer to the emergency bus occurs only after voltage and frequency are within the configured acceptance limits"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Emergency Generator",
+   "label": "supplies the designated emergency distribution bus"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "label": "are prioritized according to their contribution to personnel safety, equipment protection, and controlled shutdown"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "label": "are shed automatically when generator capacity is insufficient or the measured load exceeds its operating limit"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "offshore wind farm operations and maintenance system",
+   "label": "raises an alarm"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "offshore wind farm operations and maintenance system",
+   "label": "maintains any available uninterruptible control power"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Operators",
+   "label": "use the approved recovery procedure"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Operators",
+   "label": "assess the fault, preserve essential services, and restore the normal supply when it is safe to do so"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "verifies protective device settings and transfer interlocks during planned maintenance"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Emergency Generator",
+   "label": "can start, accept its expected load, and operate for the required test duration"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "label": "are checked as part of the generator readiness program"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "schedules inspections and corrective work using equipment condition and operating history"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Offshore Substation",
+   "label": "maintains the designated emergency distribution bus within its approved operating limits"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "provides status indications that support assessment of the normal supply and its protective state"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "enters its configured safe operating mode when required auxiliary services are unavailable"
+  },
+  {
+   "unit_id": "S191",
+   "type": "state",
+   "owner": "Turbine Controller",
+   "label": "configured safe operating mode"
+  },
+  {
+   "unit_id": "S191",
+   "type": "transition",
+   "to": "configured safe operating mode",
+   "trigger": "required auxiliary services are unavailable"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "presents supply alarms and generator status to the Shore Control Room for remote awareness"
+  },
+  {
+   "unit_id": "S192",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "Shore Control Room",
+   "payload": "supply alarms and generator status"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews persistent alarms and coordinates electrical support with the Substation Operator"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "produces the Wave Burst Record at the configured sampling interval"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "schedules periodic reviews of standby electrical maintenance requirements and outstanding corrective work"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "normal supply is restored"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "stable conditions are confirmed"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "the emergency source can be unloaded safely"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "offshore wind farm",
+   "label": "exports electrical power through the Offshore Substation, Main Transformer, and export cable to the designated grid connection point"
+  },
+  {
+   "unit_id": "S199",
+   "type": "flow",
+   "source": "offshore wind farm",
+   "target": "grid connection point",
+   "payload": "electrical power"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Export Cable Monitor",
+   "label": "provides measurements that support assessment of the export path"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "exchanges authorized operating signals with the transmission system at the agreed interface"
+  },
+  {
+   "unit_id": "S201",
+   "type": "flow",
+   "source": "Grid Interface Relay",
+   "target": "transmission system",
+   "payload": "authorized operating signals"
+  },
+  {
+   "unit_id": "S201",
+   "type": "flow",
+   "source": "transmission system",
+   "target": "Grid Interface Relay",
+   "payload": "authorized operating signals"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Grid Dispatcher",
+   "label": "sets external dispatch requirements within the applicable connection agreement"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "allocates requested farm output among available generating units"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "offshore wind farm",
+   "label": "reports measured active power at the grid boundary for operational monitoring and settlement processes"
+  },
+  {
+   "unit_id": "S205",
+   "type": "flow",
+   "source": "offshore wind farm",
+   "payload": "measured active power"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "label": "is managed in accordance with the connection agreement and current equipment conditions"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "label": "are enabled only when the relevant operating mode is authorized and available"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "provides relay status and interface measurements to the farm monitoring environment"
+  },
+  {
+   "unit_id": "S211",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "farm monitoring environment",
+   "payload": "relay status and interface measurements"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "produces the Session Revocation Receipt when an authenticated control session is terminated"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "label": "is terminated"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "uses the Squall Window Bulletin when reviewing the timing of planned work"
+  },
+  {
+   "unit_id": "S213",
+   "type": "flow",
+   "source": "Weather Service",
+   "target": "Maintenance Planning Engine",
+   "payload": "Squall Window Bulletin"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "coordinates operational notices and control-room decisions affecting the farm interface"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "Crew Transfer Vessel",
+   "label": "reports its approach and departure status in accordance with the approved marine coordination procedure"
+  },
+  {
+   "unit_id": "S215",
+   "type": "flow",
+   "source": "Crew Transfer Vessel",
+   "payload": "approach and departure status"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "confirms that switching actions affecting the export path are within the authorized work scope"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "verifies that dispatch changes are reflected in the applicable control settings before implementation"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "label": "are prioritized according to their effect on safety, equipment protection, and continuity of export"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "are coordinated to avoid conflicting with dispatch obligations or active maintenance work"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "maintains the farm's dispatch boundary while allowing local systems to manage turbine-level operation"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "maintains the daily marine plan and resolves conflicts between planned activities"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "updates work priorities when access conditions or resource availability change"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "uses the quality flag to support movement planning"
+  },
+  {
+   "unit_id": "S225",
+   "type": "flow",
+   "source": "Vessel AIS Receiver",
+   "target": "Fleet Dispatch Console",
+   "payload": "Position Quality Flag"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms departure readiness"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "reports any change that could affect the passage"
+  },
+  {
+   "unit_id": "S226",
+   "type": "flow",
+   "source": "Vessel Master",
+   "payload": "change that could affect the passage"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "is assigned to transfers that meet the approved operating limits"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "provides a stable offshore base when the work plan requires extended support"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "label": "is used only when its task, route, and operating conditions have been reviewed"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provides forecast information for marine planning"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "reports local sea conditions for use in access planning"
+  },
+  {
+   "unit_id": "S231",
+   "type": "flow",
+   "source": "Metocean Buoy",
+   "payload": "local sea conditions"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "reviews forecast changes and advises the Marine Coordinator when conditions may affect the plan"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "label": "is applied when environmental limits make a planned movement or transfer unsafe"
+  },
+  {
+   "unit_id": "S233",
+   "type": "transition",
+   "to": "Weather Hold",
+   "trigger": "environmental limits make a planned movement or transfer unsafe"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "maintains the offshore personnel roster and expected return times"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "records authorized entry at the north access point"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "records authorized entry at the south access point"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "produces the Harness Audit Card before the applicable transfer activity"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains an overview of active marine operations and operational restrictions"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "Operations Radio Console",
+   "label": "supports routine communications and escalation during offshore activity"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "performer": "Port Agent",
+   "label": "coordinates port services and confirms that planned departures can be supported"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "records stock movements and makes current inventory information available for logistics planning"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "prepares requested equipment for dispatch in accordance with the approved work plan"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "label": "is checked before personnel are released to perform controlled work offshore"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "Rescue Coordinator",
+   "label": "maintains the response arrangements for incidents involving vessels or personnel"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "records changes to the movement plan and ensures that affected teams receive the update"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "ranks planned and corrective work using asset condition, safety exposure, production impact, access feasibility, and resource availability"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "reviews the ranked queue and confirms that urgent work has a clear technical basis and a feasible execution path"
+  },
+  {
+   "unit_id": "S249",
+   "type": "action",
+   "label": "is advanced when its due date, condition evidence, and operational value justify the required outage or vessel time"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "performer": "Nacelle Condition Monitor",
+   "label": "provides condition data that helps distinguish developing degradation from transient alarms"
+  },
+  {
+   "unit_id": "S251",
+   "type": "action",
+   "performer": "Turbine Sensor Bus",
+   "label": "provides operating measurements for work that depends on recent machine behavior"
+  },
+  {
+   "unit_id": "S252",
+   "type": "action",
+   "performer": "Export Cable Monitor",
+   "label": "helps planners assess whether cable condition warrants inspection or corrective intervention"
+  },
+  {
+   "unit_id": "S253",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "checks reported faults against available evidence and identifies work that requires an offshore visit"
+  },
+  {
+   "unit_id": "S254",
+   "type": "action",
+   "performer": "Blade Inspection Drone",
+   "label": "can support inspection planning when blade access from a vessel or by rope team is not justified"
+  },
+  {
+   "unit_id": "S255",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "supplies forecast information for evaluating marine and aviation access options"
+  },
+  {
+   "unit_id": "S256",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "reviews forecast confidence and highlights conditions that could invalidate a planned access period"
+  },
+  {
+   "unit_id": "S257",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "compares expected access conditions with vessel capability, transit time, and worksite limits"
+  },
+  {
+   "unit_id": "S258",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "considers Crew Transfer Vessel, Daughter Craft, Service Operations Vessel, and Helideck access when selecting a mobilization method"
+  },
+  {
+   "unit_id": "S259",
+   "type": "action",
+   "performer": "Weather Hold",
+   "label": "prevents mobilization when forecast or observed conditions exceed the approved operating limits"
+  },
+  {
+   "unit_id": "S260",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "assigns vessel and crew resources to approved work packages"
+  },
+  {
+   "unit_id": "S260",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "confirms the operating priority"
+  },
+  {
+   "unit_id": "S260",
+   "type": "succession",
+   "before": "confirms the operating priority",
+   "after": "assigns vessel and crew resources to approved work packages"
+  },
+  {
+   "unit_id": "S261",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "coordinates resource changes with the Vessel Master and affected work teams"
+  },
+  {
+   "unit_id": "S262",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "uses the exception slip to validate an unavailable part"
+  },
+  {
+   "unit_id": "S262",
+   "type": "flow",
+   "source": "Warehouse System",
+   "target": "Storekeeper",
+   "payload": "Backorder Exception Slip"
+  },
+  {
+   "unit_id": "S262",
+   "type": "action",
+   "label": "is rescheduled"
+  },
+  {
+   "unit_id": "S262",
+   "type": "succession",
+   "before": "uses the exception slip to validate an unavailable part",
+   "after": "is rescheduled"
+  },
+  {
+   "unit_id": "S263",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "accounts for part availability, technician competence, and estimated task duration"
+  },
+  {
+   "unit_id": "S263",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "committing a work window"
+  },
+  {
+   "unit_id": "S263",
+   "type": "succession",
+   "before": "accounts for part availability, technician competence, and estimated task duration",
+   "after": "committing a work window"
+  },
+  {
+   "unit_id": "S264",
+   "type": "action",
+   "label": "are scheduled early enough to avoid avoidable vessel standby and repeat mobilization"
+  },
+  {
+   "unit_id": "S265",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "supports readiness checks for work requiring controlled access or electrical isolation"
+  },
+  {
+   "unit_id": "S266",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews hazards and confirms that proposed controls match the task scope and site conditions"
+  },
+  {
+   "unit_id": "S267",
+   "type": "action",
+   "performer": "Offshore Substation",
+   "label": "sends a Transformer Tap Snapshot when a transformer condition review is requested"
+  },
+  {
+   "unit_id": "S267",
+   "type": "flow",
+   "source": "Offshore Substation",
+   "payload": "Transformer Tap Snapshot"
+  },
+  {
+   "unit_id": "S268",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "confirms local operating constraints"
+  },
+  {
+   "unit_id": "S268",
+   "type": "action",
+   "label": "is placed in the executable plan"
+  },
+  {
+   "unit_id": "S268",
+   "type": "succession",
+   "before": "confirms local operating constraints",
+   "after": "is placed in the executable plan"
+  },
+  {
+   "unit_id": "S269",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "revises priorities when asset condition, access forecasts, or resource availability changes"
+  },
+  {
+   "unit_id": "S269",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "communicates the resulting plan to affected teams"
+  },
+  {
+   "unit_id": "S269",
+   "type": "flow",
+   "source": "Duty Planner",
+   "target": "affected teams",
+   "payload": "resulting plan"
+  },
+  {
+   "unit_id": "S270",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provides forecast conditions and confidence information for planned work areas and vessel routes"
+  },
+  {
+   "unit_id": "S272",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "compares forecast data with recent observations"
+  },
+  {
+   "unit_id": "S272",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "advising on the reliability of a work window"
+  },
+  {
+   "unit_id": "S272",
+   "type": "succession",
+   "before": "compares forecast data with recent observations",
+   "after": "advising on the reliability of a work window"
+  },
+  {
+   "unit_id": "S274",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "checks that the expected conditions remain within the limits for the task, transfer method, and vessel"
+  },
+  {
+   "unit_id": "S276",
+   "type": "transition",
+   "to": "Weather Hold",
+   "trigger": "conditions are outside the approved limits or the available evidence is insufficient to support safe work"
+  },
+  {
+   "unit_id": "S277",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reviews access options and vessel availability when a work window narrows"
+  },
+  {
+   "unit_id": "S278",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "receives the Transfer Manifest Addendum before departure"
+  },
+  {
+   "unit_id": "S278",
+   "type": "flow",
+   "source": "Duty Planner",
+   "target": "Vessel Master",
+   "payload": "Transfer Manifest Addendum"
+  },
+  {
+   "unit_id": "S279",
+   "type": "action",
+   "performer": "Crew Transfer Vessel",
+   "label": "proceeds only when the Vessel Master considers the approach and transfer conditions acceptable"
+  },
+  {
+   "unit_id": "S280",
+   "type": "action",
+   "performer": "team",
+   "label": "checks current observations and the task-specific limits"
+  },
+  {
+   "unit_id": "S281",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "may provide a more stable work platform"
+  },
+  {
+   "unit_id": "S282",
+   "type": "state",
+   "label": "Vessel Standby"
+  },
+  {
+   "unit_id": "S282",
+   "type": "transition",
+   "to": "Vessel Standby",
+   "trigger": "transit or station keeping remains possible but personnel transfer or task execution is not justified"
+  },
+  {
+   "unit_id": "S283",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reassesses the route when wind direction, wave conditions, or visibility changes materially"
+  },
+  {
+   "unit_id": "S284",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "can pause or abort an approach when observed conditions differ from the forecast or deteriorate during transit"
+  },
+  {
+   "unit_id": "S285",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "produces the Deferred Task Rationale when weather prevents a planned task from proceeding"
+  },
+  {
+   "unit_id": "S287",
+   "type": "action",
+   "performer": "Cybersecurity Gateway",
+   "label": "blocks a route change when the required authorization is incomplete"
+  },
+  {
+   "unit_id": "S288",
+   "type": "action",
+   "performer": "Vessel AIS Receiver",
+   "label": "provides vessel position information for review against the planned route and operating area"
+  },
+  {
+   "unit_id": "S289",
+   "type": "action",
+   "performer": "team",
+   "label": "considers forecast uncertainty when deciding whether to commit crews, fuel, and vessel time to a remote work site"
+  },
+  {
+   "unit_id": "S290",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "seeks an updated forecast"
+  },
+  {
+   "unit_id": "S290",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "confirming a departure or transfer plan"
+  },
+  {
+   "unit_id": "S290",
+   "type": "succession",
+   "before": "seeks an updated forecast",
+   "after": "confirming a departure or transfer plan"
+  },
+  {
+   "unit_id": "S291",
+   "type": "action",
+   "label": "is reassessed if measured conditions approach a limit"
+  },
+  {
+   "unit_id": "S291",
+   "type": "action",
+   "label": "are withdrawn when the safe margin is no longer adequate"
+  },
+  {
+   "unit_id": "S292",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "adjusts the executable plan when a delay, cancellation, or alternative access method changes resource demand"
+  },
+  {
+   "unit_id": "S294",
+   "type": "action",
+   "performer": "Turbine Sensor Bus",
+   "label": "collects operating measurements from the Turbine Controller, Pitch System, Converter Cabinet, and Nacelle Condition Monitor"
+  },
+  {
+   "unit_id": "S294",
+   "type": "flow",
+   "source": "Turbine Controller",
+   "target": "Turbine Sensor Bus",
+   "payload": "operating measurements"
+  },
+  {
+   "unit_id": "S294",
+   "type": "flow",
+   "source": "Pitch System",
+   "target": "Turbine Sensor Bus",
+   "payload": "operating measurements"
+  },
+  {
+   "unit_id": "S294",
+   "type": "flow",
+   "source": "Converter Cabinet",
+   "target": "Turbine Sensor Bus",
+   "payload": "operating measurements"
+  },
+  {
+   "unit_id": "S294",
+   "type": "flow",
+   "source": "Nacelle Condition Monitor",
+   "target": "Turbine Sensor Bus",
+   "payload": "operating measurements"
+  },
+  {
+   "unit_id": "S295",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "forwards time-stamped observations to the Shore Control Room for review against configured operating limits"
+  },
+  {
+   "unit_id": "S295",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "Shore Control Room",
+   "payload": "time-stamped observations"
+  },
+  {
+   "unit_id": "S296",
+   "type": "action",
+   "performer": "monitoring process",
+   "label": "retains the source, timestamp, and turbine identifier for each observation so that abnormal readings can be traced to their origin"
+  },
+  {
+   "unit_id": "S297",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews alarms alongside recent operating trends rather than treating an isolated threshold crossing as a confirmed fault"
+  },
+  {
+   "unit_id": "S299",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "compares disputed readings with independent signals from the Turbine Controller and Nacelle Condition Monitor where available"
+  },
+  {
+   "unit_id": "S300",
+   "type": "state",
+   "label": "unverified"
+  },
+  {
+   "unit_id": "S300",
+   "type": "action",
+   "label": "is marked as unverified and is not used alone to justify an intrusive maintenance task"
+  },
+  {
+   "unit_id": "S301",
+   "type": "action",
+   "label": "are assessed for severity, persistence, and potential impact on safe turbine operation"
+  },
+  {
+   "unit_id": "S302",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "records the evidence considered and the basis for accepting, rejecting, or continuing to monitor an alert"
+  },
+  {
+   "unit_id": "S303",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "escalates an alert when its severity exceeds the operating threshold or when the evidence indicates a developing hazard"
+  },
+  {
+   "unit_id": "S304",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "reviews accepted alerts for immediate response needs and for effects on the executable maintenance plan"
+  },
+  {
+   "unit_id": "S305",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "follows the approved operating procedure and confirms the resulting state through available indications"
+  },
+  {
+   "unit_id": "S307",
+   "type": "action",
+   "label": "is consulted when the event may affect electrical operation or require coordination beyond the turbine"
+  },
+  {
+   "unit_id": "S308",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "receives validated condition information for prioritization and scheduling of follow-up work"
+  },
+  {
+   "unit_id": "S309",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provide contextual conditions that help reviewers distinguish environmental effects from equipment deterioration"
+  },
+  {
+   "unit_id": "S309",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "provide contextual conditions that help reviewers distinguish environmental effects from equipment deterioration"
+  },
+  {
+   "unit_id": "S310",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "requests an on-site inspection when remote evidence cannot resolve a material uncertainty"
+  },
+  {
+   "unit_id": "S311",
+   "type": "action",
+   "label": "are compared with the original observations"
+  },
+  {
+   "unit_id": "S311",
+   "type": "action",
+   "label": "is closed or converted into corrective work"
+  },
+  {
+   "unit_id": "S311",
+   "type": "succession",
+   "before": "are compared with the original observations",
+   "after": "is closed or converted into corrective work"
+  },
+  {
+   "unit_id": "S312",
+   "type": "action",
+   "performer": "Crew Transfer Vessel",
+   "label": "uses the Harness Audit Card to verify the applicable equipment checks before personnel transfer"
+  },
+  {
+   "unit_id": "S312",
+   "type": "flow",
+   "source": "HSE Officer",
+   "target": "Crew Transfer Vessel",
+   "payload": "Harness Audit Card"
+  },
+  {
+   "unit_id": "S313",
+   "type": "action",
+   "performer": "Blade Inspection Drone",
+   "label": "produces the Leading Edge Tile Image during a close-range survey of the blade surface"
+  },
+  {
+   "unit_id": "S314",
+   "type": "requirement",
+   "subject": "Blade Inspection Drone",
+   "text": "Larkspur shall repeat a close-range pass when image coverage is insufficient to assess the suspected surface condition."
+  },
+  {
+   "unit_id": "S314",
+   "type": "action",
+   "performer": "Blade Inspection Drone",
+   "label": "repeat a close-range pass when image coverage is insufficient to assess the suspected surface condition"
+  },
+  {
+   "unit_id": "S315",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "reviews available inspection evidence"
+  },
+  {
+   "unit_id": "S315",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "reports whether further examination is warranted"
+  },
+  {
+   "unit_id": "S315",
+   "type": "flow",
+   "source": "Blade Specialist",
+   "payload": "whether further examination is warranted"
+  },
+  {
+   "unit_id": "S316",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reassesses the alert after field findings or corrected sensor data become available"
+  },
+  {
+   "unit_id": "S317",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "retains the decision record, supporting observations, and response outcome for operational review"
+  },
+  {
+   "unit_id": "S319",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "submits a defined task scope, work location, crew, and requested operating window for review"
+  },
+  {
+   "unit_id": "S320",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that the proposed method, access arrangements, and work party are suitable for the task"
+  },
+  {
+   "unit_id": "S321",
+   "type": "requirement",
+   "subject": "Work Permit Portal",
+   "text": "Redoubt shall block permit release until required risk reviews and isolation references are complete."
+  },
+  {
+   "unit_id": "S321",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "block permit release until required risk reviews and isolation references are complete"
+  },
+  {
+   "unit_id": "S322",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews task hazards and confirms that required controls are assigned"
+  },
+  {
+   "unit_id": "S322",
+   "type": "action",
+   "label": "is authorized"
+  },
+  {
+   "unit_id": "S322",
+   "type": "succession",
+   "before": "reviews task hazards and confirms that required controls are assigned",
+   "after": "is authorized"
+  },
+  {
+   "unit_id": "S323",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "uses the Wave Burst Record to assess whether the planned access period remains suitable"
+  },
+  {
+   "unit_id": "S323",
+   "type": "flow",
+   "source": "Metocean Buoy",
+   "target": "Weather Analyst",
+   "payload": "Wave Burst Record"
+  },
+  {
+   "unit_id": "S324",
+   "type": "action",
+   "performer": "Port Agent",
+   "label": "issues the Berth Slot Confirmation for the planned work period"
+  },
+  {
+   "unit_id": "S324",
+   "type": "flow",
+   "source": "Port Agent",
+   "payload": "Berth Slot Confirmation"
+  },
+  {
+   "unit_id": "S325",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "identifies the electrical sources, isolation points, and verification steps required by the approved scope"
+  },
+  {
+   "unit_id": "S326",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "applies authorized switching actions and records the resulting equipment state"
+  },
+  {
+   "unit_id": "S327",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "verifies the relevant local isolation and secures the equipment against unintended energization"
+  },
+  {
+   "unit_id": "S328",
+   "type": "state",
+   "label": "Turbine Lockout"
+  },
+  {
+   "unit_id": "S328",
+   "type": "action",
+   "label": "is maintained while personnel are exposed to the identified hazards"
+  },
+  {
+   "unit_id": "S329",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that the permit is active and the required isolations have been independently verified"
+  },
+  {
+   "unit_id": "S329",
+   "type": "action",
+   "label": "Work begins"
+  },
+  {
+   "unit_id": "S329",
+   "type": "succession",
+   "before": "confirms that the permit is active and the required isolations have been independently verified",
+   "after": "Work begins"
+  },
+  {
+   "unit_id": "S330",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "briefs the crew on the permit limits, isolation boundaries, communications, and conditions requiring work to stop"
+  },
+  {
+   "unit_id": "S331",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "proves the test instrument, tests for absence of voltage, and proves the instrument again where the procedure requires it"
+  },
+  {
+   "unit_id": "S332",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "supports confirmation that personnel assigned to the task are accounted for at the work location"
+  },
+  {
+   "unit_id": "S333",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "pause work and reassess the authorization"
+  },
+  {
+   "unit_id": "S334",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "coordinates any revised work window with the relevant operational roles"
+  },
+  {
+   "unit_id": "S334",
+   "type": "action",
+   "label": "is amended"
+  },
+  {
+   "unit_id": "S334",
+   "type": "succession",
+   "before": "coordinates any revised work window with the relevant operational roles",
+   "after": "is amended"
+  },
+  {
+   "unit_id": "S335",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that tools, temporary connections, and personnel are clear"
+  },
+  {
+   "unit_id": "S335",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "requesting isolation removal"
+  },
+  {
+   "unit_id": "S335",
+   "type": "succession",
+   "before": "confirms that tools, temporary connections, and personnel are clear",
+   "after": "requesting isolation removal"
+  },
+  {
+   "unit_id": "S336",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "checks that the work area is ready for restoration"
+  },
+  {
+   "unit_id": "S336",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "reports any outstanding defects or restrictions"
+  },
+  {
+   "unit_id": "S336",
+   "type": "flow",
+   "source": "Electrical Technician",
+   "payload": "outstanding defects or restrictions"
+  },
+  {
+   "unit_id": "S337",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "removes isolations only under the approved switching process and records each restoration action"
+  },
+  {
+   "unit_id": "S338",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews the restored equipment state and confirms that required operational checks are complete"
+  },
+  {
+   "unit_id": "S339",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "retains the permit status, isolation history, test results, and restoration decision for operational review"
+  },
+  {
+   "unit_id": "S340",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "closes the work authorization"
+  },
+  {
+   "unit_id": "S340",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms completion or formally records any remaining work"
+  },
+  {
+   "unit_id": "S340",
+   "type": "succession",
+   "before": "confirms completion or formally records any remaining work",
+   "after": "closes the work authorization"
+  },
+  {
+   "unit_id": "S342",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "maintains the Offshore Substation within approved operating limits and follows current switching instructions"
+  },
+  {
+   "unit_id": "S343",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "reviews alarms, active restrictions, equipment status, and handover notes"
+  },
+  {
+   "unit_id": "S345",
+   "type": "action",
+   "label": "checks Main Transformer temperatures, cooling equipment, oil indications, and abnormal noise against established limits"
+  },
+  {
+   "unit_id": "S346",
+   "type": "action",
+   "label": "is reviewed for trends or alarms that require escalation to the Control Engineer"
+  },
+  {
+   "unit_id": "S347",
+   "type": "action",
+   "label": "is checked for healthy indications and consistency with the approved grid operating state"
+  },
+  {
+   "unit_id": "S348",
+   "type": "action",
+   "label": "are compared with local indications when equipment status is uncertain"
+  },
+  {
+   "unit_id": "S349",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "investigates unexplained discrepancies"
+  },
+  {
+   "unit_id": "S349",
+   "type": "action",
+   "performer": "operational personnel",
+   "label": "rely on remote indications"
+  },
+  {
+   "unit_id": "S349",
+   "type": "succession",
+   "before": "investigates unexplained discrepancies",
+   "after": "rely on remote indications"
+  },
+  {
+   "unit_id": "S350",
+   "type": "action",
+   "label": "is checked to confirm that active work authorizations and isolation boundaries remain current"
+  },
+  {
+   "unit_id": "S351",
+   "type": "action",
+   "label": "verifies that personnel access records are consistent with the planned work and current site occupancy"
+  },
+  {
+   "unit_id": "S352",
+   "type": "action",
+   "label": "is checked for healthy status, active faults, and unobstructed access to response equipment"
+  },
+  {
+   "unit_id": "S353",
+   "type": "action",
+   "performer": "Emergency Generator",
+   "label": "produces the Start Test Trace during its scheduled functional test"
+  },
+  {
+   "unit_id": "S354",
+   "type": "action",
+   "performer": "Emergency Generator",
+   "label": "confirms fuel level, starting battery condition, ventilation, and readiness of the Emergency Generator for loss of normal supply"
+  },
+  {
+   "unit_id": "S355",
+   "type": "action",
+   "label": "is exercised under the approved test procedure to confirm reliable backup starting and stable output"
+  },
+  {
+   "unit_id": "S356",
+   "type": "action",
+   "label": "records test results and raises a defect promptly if the Emergency Generator fails to start or sustain its required load"
+  },
+  {
+   "unit_id": "S357",
+   "type": "action",
+   "performer": "Cybersecurity Gateway",
+   "label": "uses the revocation receipt to support access control during routine account and session reviews"
+  },
+  {
+   "unit_id": "S357",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "Cybersecurity Gateway",
+   "payload": "Session Revocation Receipt"
+  },
+  {
+   "unit_id": "S358",
+   "type": "action",
+   "label": "is performed only by authorized personnel using approved instructions and positive confirmation of equipment identity"
+  },
+  {
+   "unit_id": "S359",
+   "type": "action",
+   "label": "verifies the required clearances and confirms that affected parties are informed"
+  },
+  {
+   "unit_id": "S360",
+   "type": "action",
+   "label": "limits further switching and escalates the condition"
+  },
+  {
+   "unit_id": "S361",
+   "type": "state",
+   "owner": "Offshore Substation",
+   "label": "Substation Degraded"
+  },
+  {
+   "unit_id": "S361",
+   "type": "transition",
+   "to": "Substation Degraded",
+   "trigger": "required by operating procedures"
+  },
+  {
+   "unit_id": "S361",
+   "type": "action",
+   "label": "places the Offshore Substation in Substation Degraded when required by operating procedures and communicates the resulting restrictions"
+  },
+  {
+   "unit_id": "S362",
+   "type": "action",
+   "label": "is notified when a condition could affect export capability or compliance with grid instructions"
+  },
+  {
+   "unit_id": "S363",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "supports fault diagnosis and maintenance under the applicable work authorization and isolation controls"
+  },
+  {
+   "unit_id": "S364",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "receives concise status updates, including operating limitations and the expected time of the next review"
+  },
+  {
+   "unit_id": "S365",
+   "type": "action",
+   "performer": "Shift records",
+   "label": "capture inspections, alarms, tests, switching actions, defects, and handover items so that decisions remain traceable"
+  },
+  {
+   "unit_id": "S366",
+   "type": "action",
+   "label": "is coordinated against the dispatch instructions, equipment capability, and the agreed operating limits for the connection"
+  },
+  {
+   "unit_id": "S367",
+   "type": "action",
+   "performer": "Grid Dispatcher",
+   "label": "issues active-power targets and ramp instructions through the established dispatch channel"
+  },
+  {
+   "unit_id": "S367",
+   "type": "flow",
+   "source": "Grid Dispatcher",
+   "payload": "active-power targets and ramp instructions"
+  },
+  {
+   "unit_id": "S368",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews each instruction for consistency with current plant status"
+  },
+  {
+   "unit_id": "S368",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "applying it"
+  },
+  {
+   "unit_id": "S368",
+   "type": "succession",
+   "before": "reviews each instruction for consistency with current plant status",
+   "after": "applying it"
+  },
+  {
+   "unit_id": "S369",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "provides the operational measurements used to track delivered power and instruction response"
+  },
+  {
+   "unit_id": "S370",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "compares the requested output with available turbine capability and known operating restrictions"
+  },
+  {
+   "unit_id": "S371",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains the current dispatch target, ramp rate, and next review time in the shift record"
+  },
+  {
+   "unit_id": "S372",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "produces an Export Limit Advisory when available export capability falls below the active dispatch target"
+  },
+  {
+   "unit_id": "S373",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "applies the accepted export ceiling to control outputs and records its effective time for audit"
+  },
+  {
+   "unit_id": "S374",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "uses the tap snapshot to check the recorded transformer position during export reviews"
+  },
+  {
+   "unit_id": "S374",
+   "type": "flow",
+   "source": "Offshore Substation",
+   "target": "Shore Control Room",
+   "payload": "Transformer Tap Snapshot"
+  },
+  {
+   "unit_id": "S375",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "confirms that the control response follows the instruction and remains within the permitted ramp rate"
+  },
+  {
+   "unit_id": "S376",
+   "type": "state",
+   "label": "Grid Constraint"
+  },
+  {
+   "unit_id": "S376",
+   "type": "action",
+   "label": "records its scope, start time, and expected review point"
+  },
+  {
+   "unit_id": "S377",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "adjusts output in accordance with validated plant commands and local equipment protections"
+  },
+  {
+   "unit_id": "S378",
+   "type": "action",
+   "label": "is reviewed for alarms or restrictions that could affect export capability"
+  },
+  {
+   "unit_id": "S379",
+   "type": "action",
+   "label": "is included in the assessment of the available export path"
+  },
+  {
+   "unit_id": "S380",
+   "type": "action",
+   "label": "is monitored against its approved continuous and short-term limits"
+  },
+  {
+   "unit_id": "S381",
+   "type": "action",
+   "label": "are checked for conditions that require a reduced transfer level"
+  },
+  {
+   "unit_id": "S382",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "coordinates switching activity that could alter the available export configuration"
+  },
+  {
+   "unit_id": "S383",
+   "type": "action",
+   "label": "is notified when measured delivery differs materially from the instructed target or when an operating limit is approached"
+  },
+  {
+   "unit_id": "S384",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "records the reason for any temporary deviation from the requested output and the action taken"
+  },
+  {
+   "unit_id": "S385",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "retains the instruction history and the corresponding plant response for later review"
+  },
+  {
+   "unit_id": "S386",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains the last validated operating limit while seeking clarification through the approved channel"
+  },
+  {
+   "unit_id": "S388",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "considers active dispatch constraints when scheduling work that would reduce generation or access to export equipment"
+  },
+  {
+   "unit_id": "S389",
+   "type": "action",
+   "performer": "Shift records",
+   "label": "capture dispatch instructions, constraint decisions, measured response, and unresolved follow-up actions"
+  },
+  {
+   "unit_id": "S390",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "produces the Crew Count Correction when a verified headcount differs from the departure record"
+  },
+  {
+   "unit_id": "S392",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "maintains the current accountability status for personnel assigned to offshore work"
+  },
+  {
+   "unit_id": "S393",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "confirm their identity"
+  },
+  {
+   "unit_id": "S393",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "entering controlled shore access areas"
+  },
+  {
+   "unit_id": "S393",
+   "type": "succession",
+   "before": "confirm their identity",
+   "after": "entering controlled shore access areas"
+  },
+  {
+   "unit_id": "S394",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "records identity checks at the north shore access point"
+  },
+  {
+   "unit_id": "S395",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "records identity checks at the south shore access point"
+  },
+  {
+   "unit_id": "S396",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "verifies that planned crew assignments match the approved work schedule before mobilization"
+  },
+  {
+   "unit_id": "S397",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reviews the intended crew movement against vessel capacity and operating conditions"
+  },
+  {
+   "unit_id": "S398",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms the departure roster before the vessel leaves port"
+  },
+  {
+   "unit_id": "S399",
+   "type": "action",
+   "label": "is reconciled against the crew manifest before the vessel gets underway"
+  },
+  {
+   "unit_id": "S400",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "monitors reported vessel movements during transit to offshore locations"
+  },
+  {
+   "unit_id": "S401",
+   "type": "action",
+   "performer": "Vessel AIS Receiver",
+   "label": "provides vessel position information for movement monitoring"
+  },
+  {
+   "unit_id": "S402",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "report any change in destination or transfer plan to the Vessel Master as soon as practicable"
+  },
+  {
+   "unit_id": "S402",
+   "type": "flow",
+   "source": "Personnel",
+   "target": "Vessel Master",
+   "payload": "change in destination or transfer plan"
+  },
+  {
+   "unit_id": "S403",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "records crew changes that occur during transit or between offshore locations"
+  },
+  {
+   "unit_id": "S404",
+   "type": "action",
+   "label": "are accounted for before a transfer from a vessel to an offshore structure begins"
+  },
+  {
+   "unit_id": "S405",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms the work party is complete before personnel enter the work area"
+  },
+  {
+   "unit_id": "S406",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "report their arrival and departure at each active work location using the approved site process"
+  },
+  {
+   "unit_id": "S406",
+   "type": "flow",
+   "source": "Personnel",
+   "payload": "arrival and departure at each active work location"
+  },
+  {
+   "unit_id": "S408",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "verifies that personnel expected at the work site are accounted for during scheduled checks"
+  },
+  {
+   "unit_id": "S409",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "maintains an onboard count while personnel are aboard the vessel"
+  },
+  {
+   "unit_id": "S410",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reviews return movements so that shore personnel can anticipate vessel arrivals"
+  },
+  {
+   "unit_id": "S411",
+   "type": "action",
+   "label": "are reconciled against the return roster when they disembark at shore"
+  },
+  {
+   "unit_id": "S412",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "escalates any unexplained absence or overdue check-in to Marine Coordinator without delay"
+  },
+  {
+   "unit_id": "S413",
+   "type": "action",
+   "performer": "responsible supervisor",
+   "label": "keeps a local record"
+  },
+  {
+   "unit_id": "S413",
+   "type": "action",
+   "performer": "responsible supervisor",
+   "label": "reports it when service is restored"
+  },
+  {
+   "unit_id": "S413",
+   "type": "flow",
+   "source": "responsible supervisor",
+   "payload": "local record"
+  },
+  {
+   "unit_id": "S414",
+   "type": "action",
+   "performer": "Accountability records",
+   "label": "retain the time, location, responsible role, and disposition of each material movement"
+  },
+  {
+   "unit_id": "S416",
+   "type": "action",
+   "performer": "Cybersecurity Gateway",
+   "label": "monitors traffic between operational networks and approved external connections"
+  },
+  {
+   "unit_id": "S417",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "records security-relevant access and control events for review"
+  },
+  {
+   "unit_id": "S419",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "reviews alerts, assesses their operational significance, and escalates urgent concerns to the on-duty operations lead"
+  },
+  {
+   "unit_id": "S420",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains an operational view of affected systems and coordinates immediate protective actions"
+  },
+  {
+   "unit_id": "S422",
+   "type": "action",
+   "label": "is granted according to role, task need, and the current authorization of the individual or service account"
+  },
+  {
+   "unit_id": "S423",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "use individually assigned accounts rather than shared credentials for interactive work"
+  },
+  {
+   "unit_id": "S423",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "use individually assigned accounts rather than shared credentials for interactive work"
+  },
+  {
+   "unit_id": "S424",
+   "type": "action",
+   "label": "is recorded for subsequent review"
+  },
+  {
+   "unit_id": "S425",
+   "type": "action",
+   "label": "are reviewed at defined intervals and when a person changes duties or leaves the operation"
+  },
+  {
+   "unit_id": "S426",
+   "type": "action",
+   "label": "is approved for a stated purpose and removed when the work is complete"
+  },
+  {
+   "unit_id": "S428",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "produces the Firmware Hash Attestation for controlled software releases"
+  },
+  {
+   "unit_id": "S429",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "checks that cybersecurity requirements are included in the work briefing before technicians begin affected tasks"
+  },
+  {
+   "unit_id": "S430",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "uses the Deferred Task Rationale when a cybersecurity-related work item must be postponed"
+  },
+  {
+   "unit_id": "S430",
+   "type": "requirement",
+   "subject": "cybersecurity-related work item",
+   "text": "Field Supervisor uses the Deferred Task Rationale when a cybersecurity-related work item must be postponed."
+  },
+  {
+   "unit_id": "S430",
+   "type": "flow",
+   "source": "Maintenance Planning Engine",
+   "target": "Field Supervisor",
+   "payload": "Deferred Task Rationale"
+  },
+  {
+   "unit_id": "S431",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "report suspected compromise, lost credentials, and unexplained equipment behavior promptly through the established operations channel"
+  },
+  {
+   "unit_id": "S431",
+   "type": "flow",
+   "source": "Personnel",
+   "payload": "suspected compromise, lost credentials, and unexplained equipment behavior"
+  },
+  {
+   "unit_id": "S432",
+   "type": "action",
+   "performer": "incident lead",
+   "label": "classifies each report, assigns an owner, and records its time, scope, and current status"
+  },
+  {
+   "unit_id": "S433",
+   "type": "action",
+   "performer": "technical teams",
+   "label": "isolate only the affected connection or service where this can be done without creating an unsafe operating condition"
+  },
+  {
+   "unit_id": "S434",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "coordinate any operational changes with the relevant duty role before implementation"
+  },
+  {
+   "unit_id": "S434",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "coordinate any operational changes with the relevant duty role before implementation"
+  },
+  {
+   "unit_id": "S435",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "preserves relevant logs and technical evidence while limiting access to personnel assigned to the investigation"
+  },
+  {
+   "unit_id": "S436",
+   "type": "action",
+   "performer": "incident lead",
+   "label": "confirms that the threat is contained and the affected system is suitable for return to service"
+  },
+  {
+   "unit_id": "S436",
+   "type": "action",
+   "label": "Recovery begins"
+  },
+  {
+   "unit_id": "S436",
+   "type": "succession",
+   "before": "confirms that the threat is contained and the affected system is suitable for return to service",
+   "after": "Recovery begins"
+  },
+  {
+   "unit_id": "S437",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "validates restored configurations and communications before normal monitoring responsibilities resume"
+  },
+  {
+   "unit_id": "S438",
+   "type": "action",
+   "label": "are documented with the time, location, responsible role, and disposition"
+  },
+  {
+   "unit_id": "S439",
+   "type": "action",
+   "performer": "technical teams",
+   "label": "review causes, response effectiveness, and corrective actions with operations management"
+  },
+  {
+   "unit_id": "S440",
+   "type": "action",
+   "label": "is initiated when scheduled surveillance, turbine alarms, or operational reports indicate that blade condition requires review"
+  },
+  {
+   "unit_id": "S441",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "combines inspection intervals, prior defect history, and turbine availability to propose survey dates"
+  },
+  {
+   "unit_id": "S442",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "confirms the inspection priority and coordinates access with the Marine Coordinator or the Field Supervisor"
+  },
+  {
+   "unit_id": "S443",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provide forecasts and measured conditions for assessing whether remote or close-access work is safe"
+  },
+  {
+   "unit_id": "S443",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "provide forecasts and measured conditions for assessing whether remote or close-access work is safe"
+  },
+  {
+   "unit_id": "S444",
+   "type": "action",
+   "performer": "Blade Inspection Drone",
+   "label": "capture repeatable views of blade surfaces while the turbine is in an approved operating state"
+  },
+  {
+   "unit_id": "S445",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "reviews the tile image to classify visible damage and identify areas requiring closer assessment"
+  },
+  {
+   "unit_id": "S445",
+   "type": "flow",
+   "source": "Blade Inspection Drone",
+   "target": "Blade Specialist",
+   "payload": "Leading Edge Tile Image"
+  },
+  {
+   "unit_id": "S446",
+   "type": "action",
+   "label": "are linked to the turbine, blade, inspection date, viewing angle, and relevant operating conditions"
+  },
+  {
+   "unit_id": "S447",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "provides operating data that helps distinguish persistent defects from transient changes in blade appearance"
+  },
+  {
+   "unit_id": "S448",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "monitors turbine status and records any operating restrictions required during the remote survey"
+  },
+  {
+   "unit_id": "S449",
+   "type": "action",
+   "label": "is referred for close-access inspection"
+  },
+  {
+   "unit_id": "S450",
+   "type": "action",
+   "performer": "responsible team",
+   "label": "verifies turbine isolation, rotor restraint, access arrangements, and rescue provisions"
+  },
+  {
+   "unit_id": "S450",
+   "type": "action",
+   "label": "is planned"
+  },
+  {
+   "unit_id": "S450",
+   "type": "succession",
+   "before": "verifies turbine isolation, rotor restraint, access arrangements, and rescue provisions",
+   "after": "is planned"
+  },
+  {
+   "unit_id": "S451",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews the work method, exposure controls, and emergency arrangements before personnel approach the rotor"
+  },
+  {
+   "unit_id": "S452",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "examines the affected surface using suitable lighting, measurement tools, and nondestructive inspection methods"
+  },
+  {
+   "unit_id": "S454",
+   "type": "action",
+   "label": "are assessed against approved engineering criteria"
+  },
+  {
+   "unit_id": "S455",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "distinguishes cosmetic damage from conditions that could affect structural integrity or safe turbine operation"
+  },
+  {
+   "unit_id": "S457",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that close-access findings are documented before personnel leave the work area"
+  },
+  {
+   "unit_id": "S458",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "uses the assessed severity, defect growth rate, weather exposure, and production impact to support repair prioritization"
+  },
+  {
+   "unit_id": "S459",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "assigns a target repair window and coordinates required personnel, equipment, and vessel capacity"
+  },
+  {
+   "unit_id": "S460",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "checks repair materials and tooling against the approved repair method before mobilization"
+  },
+  {
+   "unit_id": "S461",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "prepares the Recovery Basket Load Sheet for the planned work activity"
+  },
+  {
+   "unit_id": "S463",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "records the completed work and verifies that the repaired area meets the applicable acceptance criteria"
+  },
+  {
+   "unit_id": "S464",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "updates the maintenance record and schedules follow-up inspection when residual uncertainty or defect history warrants it"
+  },
+  {
+   "unit_id": "S466",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "maintains a rolling view of berth occupancy, planned arrivals, departure estimates, and vessel service requirements"
+  },
+  {
+   "unit_id": "S467",
+   "type": "action",
+   "label": "is assessed against usable quay length, water depth, access routes, lifting arrangements, and local safety clearances"
+  },
+  {
+   "unit_id": "S469",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "compares task readiness with the expected departure window"
+  },
+  {
+   "unit_id": "S469",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "committing crews and equipment to a marine campaign"
+  },
+  {
+   "unit_id": "S469",
+   "type": "succession",
+   "before": "compares task readiness with the expected departure window",
+   "after": "committing crews and equipment to a marine campaign"
+  },
+  {
+   "unit_id": "S470",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "supports this review by presenting task duration, resource demand, and dependency status"
+  },
+  {
+   "unit_id": "S471",
+   "type": "action",
+   "label": "are considered alongside berth availability because port conditions can delay loading or restrict vessel movement"
+  },
+  {
+   "unit_id": "S472",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "produces the Visibility Confidence Note to summarize confidence in visibility conditions for near-term port and offshore planning"
+  },
+  {
+   "unit_id": "S473",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "uses the Berth Slot Confirmation to align an approved vessel arrival with the assigned berth window"
+  },
+  {
+   "unit_id": "S473",
+   "type": "flow",
+   "source": "Port Agent",
+   "target": "Marine Coordinator",
+   "payload": "Berth Slot Confirmation"
+  },
+  {
+   "unit_id": "S474",
+   "type": "action",
+   "label": "are coordinated to avoid conflicts at passenger access points and shared loading areas"
+  },
+  {
+   "unit_id": "S475",
+   "type": "action",
+   "label": "are planned with regard to draft, mooring requirements, and the time needed to prepare offshore stores"
+  },
+  {
+   "unit_id": "S476",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms practical arrival and departure estimates against the vessel's operating limits"
+  },
+  {
+   "unit_id": "S477",
+   "type": "requirement",
+   "subject": "equipment",
+   "text": "Port staging areas are reserved for equipment that must be inspected, secured, or transferred before sailing."
+  },
+  {
+   "unit_id": "S477",
+   "type": "action",
+   "label": "are reserved for equipment that must be inspected, secured, or transferred before sailing"
+  },
+  {
+   "unit_id": "S477",
+   "type": "action",
+   "label": "be inspected, secured, or transferred before sailing"
+  },
+  {
+   "unit_id": "S478",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "supports cargo preparation so that planned loads can be assembled before the vessel occupies the berth"
+  },
+  {
+   "unit_id": "S479",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "checks that critical spares are available and that packaging is suitable for marine transport"
+  },
+  {
+   "unit_id": "S480",
+   "type": "action",
+   "label": "is reviewed before departure so that required authorizations are not left unresolved at the port"
+  },
+  {
+   "unit_id": "S481",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "checks that access controls, emergency arrangements, and handling precautions are suitable for the planned activity"
+  },
+  {
+   "unit_id": "S482",
+   "type": "action",
+   "label": "are reconciled with the approved crew list before personnel board a vessel"
+  },
+  {
+   "unit_id": "S483",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "resolves competing berth requests by considering task urgency, vessel compatibility, and the consequences of delay"
+  },
+  {
+   "unit_id": "S484",
+   "type": "action",
+   "label": "may be resequenced while preserving safe rest periods and required inspections"
+  },
+  {
+   "unit_id": "S485",
+   "type": "action",
+   "label": "are updated to reflect confirmed changes to vessel availability and offshore task timing"
+  },
+  {
+   "unit_id": "S487",
+   "type": "action",
+   "label": "are recorded to improve future capacity estimates"
+  },
+  {
+   "unit_id": "S488",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reviews safe alternatives such as a later slot, a different suitable berth, or vessel standby"
+  },
+  {
+   "unit_id": "S489",
+   "type": "action",
+   "label": "are retained for operational review and the next planning cycle"
+  },
+  {
+   "unit_id": "S490",
+   "type": "action",
+   "label": "have been confirmed for the shift"
+  },
+  {
+   "unit_id": "S490",
+   "type": "action",
+   "label": "Maintenance begins"
+  },
+  {
+   "unit_id": "S490",
+   "type": "succession",
+   "before": "have been confirmed for the shift",
+   "after": "Maintenance begins"
+  },
+  {
+   "unit_id": "S491",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "checks that the planned task matches the approved work authorization and that required personnel and equipment are available"
+  },
+  {
+   "unit_id": "S492",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "produces the Isolation Boundary Sketch"
+  },
+  {
+   "unit_id": "S493",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "reviews the worksite limits with the crew before anyone enters the controlled area"
+  },
+  {
+   "unit_id": "S494",
+   "type": "action",
+   "label": "are marked so that the work area and any adjacent operating equipment are clearly distinguishable"
+  },
+  {
+   "unit_id": "S495",
+   "type": "action",
+   "performer": "crew",
+   "label": "confirms that the marked limits match the current isolation points and the approved maintenance scope"
+  },
+  {
+   "unit_id": "S496",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "verifies electrical isolation at the work location before work on electrical equipment begins"
+  },
+  {
+   "unit_id": "S497",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "confirms that switching conditions affecting the worksite are understood by the relevant personnel"
+  },
+  {
+   "unit_id": "S498",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms that the vessel is safely positioned and that transfer conditions remain acceptable"
+  },
+  {
+   "unit_id": "S499",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "suspends access when sea or weather conditions make transfer unsafe"
+  },
+  {
+   "unit_id": "S500",
+   "type": "action",
+   "label": "confirms that conditions permit work to proceed"
+  },
+  {
+   "unit_id": "S501",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "use the North Access Scanner or South Access Scanner at the designated entry point"
+  },
+  {
+   "unit_id": "S502",
+   "type": "action",
+   "label": "is checked to confirm that people entering and leaving the site are accounted for"
+  },
+  {
+   "unit_id": "S503",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "verifies each worker's authorization, competence, and fitness for the assigned task"
+  },
+  {
+   "unit_id": "S504",
+   "type": "action",
+   "performer": "crew",
+   "label": "inspects personal protective equipment, communications equipment, and rescue equipment for serviceability"
+  },
+  {
+   "unit_id": "S505",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "checks that emergency routes, muster points, and rescue arrangements are understood by everyone at the worksite"
+  },
+  {
+   "unit_id": "S506",
+   "type": "action",
+   "performer": "crew",
+   "label": "tests the required radio channel with the Operations Radio Console"
+  },
+  {
+   "unit_id": "S506",
+   "type": "action",
+   "performer": "crew",
+   "label": "separating into work teams"
+  },
+  {
+   "unit_id": "S506",
+   "type": "succession",
+   "before": "tests the required radio channel with the Operations Radio Console",
+   "after": "separating into work teams"
+  },
+  {
+   "unit_id": "S507",
+   "type": "action",
+   "label": "are secured against dropped-object hazards and movement caused by vessel motion"
+  },
+  {
+   "unit_id": "S508",
+   "type": "action",
+   "label": "is restricted to personnel listed for the task"
+  },
+  {
+   "unit_id": "S509",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "pauses the job if actual conditions differ from the approved method or the marked worksite boundaries"
+  },
+  {
+   "unit_id": "S511",
+   "type": "action",
+   "performer": "crew",
+   "label": "maintains clear access to fire equipment, escape routes, and lifting areas throughout the task"
+  },
+  {
+   "unit_id": "S512",
+   "type": "action",
+   "performer": "outgoing supervisor",
+   "label": "briefs the incoming supervisor on site conditions, access status, and outstanding hazards"
+  },
+  {
+   "unit_id": "S513",
+   "type": "action",
+   "label": "is closed out only after personnel are accounted for, equipment is removed or secured, and the worksite is left in a safe condition"
+  },
+  {
+   "unit_id": "S515",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "develops the proposed sequence with the Control Engineer and identifies affected equipment and operating limits"
+  },
+  {
+   "unit_id": "S516",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "checks the current network configuration and confirms that the proposed sequence supports the approved work"
+  },
+  {
+   "unit_id": "S517",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "verifies equipment status and switching points at the Offshore Substation"
+  },
+  {
+   "unit_id": "S518",
+   "type": "action",
+   "performer": "Grid Dispatcher",
+   "label": "confirms applicable grid requirements and any restrictions on changing the connection state"
+  },
+  {
+   "unit_id": "S519",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "reassess the sequence and obtain revised authorization"
+  },
+  {
+   "unit_id": "S519",
+   "type": "action",
+   "label": "work proceeds"
+  },
+  {
+   "unit_id": "S519",
+   "type": "succession",
+   "before": "reassess the sequence and obtain revised authorization",
+   "after": "work proceeds"
+  },
+  {
+   "unit_id": "S520",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "provides the planned work period and identifies dependencies with other scheduled tasks"
+  },
+  {
+   "unit_id": "S521",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "supplies forecast conditions relevant to access and safe execution"
+  },
+  {
+   "unit_id": "S522",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "reviews the forecast and advises the Duty Planner if conditions could affect the planned sequence"
+  },
+  {
+   "unit_id": "S523",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "aligns vessel movements with the approved access plan and operational constraints"
+  },
+  {
+   "unit_id": "S524",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms that the vessel can meet the agreed timing and maintain safe operating margins"
+  },
+  {
+   "unit_id": "S525",
+   "type": "action",
+   "label": "are checked to confirm that assigned personnel and permits are ready"
+  },
+  {
+   "unit_id": "S526",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews task hazards and confirms that required controls are in place before switching is authorized"
+  },
+  {
+   "unit_id": "S527",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "records the proposed sequence, required approvals, execution roles, and planned communications in the operating record"
+  },
+  {
+   "unit_id": "S528",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "prepares clear switching instructions with one action per step and an explicit hold point where needed"
+  },
+  {
+   "unit_id": "S529",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "verifies equipment labels and confirms the intended switching points before execution"
+  },
+  {
+   "unit_id": "S530",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "checking the equipment state and confirming authorization with the Control Engineer"
+  },
+  {
+   "unit_id": "S530",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "accepts the instructions"
+  },
+  {
+   "unit_id": "S530",
+   "type": "succession",
+   "before": "checking the equipment state and confirming authorization with the Control Engineer",
+   "after": "accepts the instructions"
+  },
+  {
+   "unit_id": "S531",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "sends the Switching Window Acknowledgment"
+  },
+  {
+   "unit_id": "S531",
+   "type": "action",
+   "label": "is entered in the operating log"
+  },
+  {
+   "unit_id": "S531",
+   "type": "succession",
+   "before": "is entered in the operating log",
+   "after": "sends the Switching Window Acknowledgment"
+  },
+  {
+   "unit_id": "S531",
+   "type": "flow",
+   "source": "Shore Control Room",
+   "payload": "Switching Window Acknowledgment"
+  },
+  {
+   "unit_id": "S532",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "uses the test trace to verify that the planned restoration checks have completed"
+  },
+  {
+   "unit_id": "S532",
+   "type": "flow",
+   "source": "Emergency Generator",
+   "target": "Substation Operator",
+   "payload": "Start Test Trace"
+  },
+  {
+   "unit_id": "S532",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "requesting the next switching step"
+  },
+  {
+   "unit_id": "S532",
+   "type": "succession",
+   "before": "uses the test trace to verify that the planned restoration checks have completed",
+   "after": "requesting the next switching step"
+  },
+  {
+   "unit_id": "S533",
+   "type": "action",
+   "performer": "switching operator",
+   "label": "performs each authorized action"
+  },
+  {
+   "unit_id": "S533",
+   "type": "action",
+   "performer": "switching operator",
+   "label": "reports completion"
+  },
+  {
+   "unit_id": "S533",
+   "type": "flow",
+   "source": "switching operator",
+   "payload": "completion"
+  },
+  {
+   "unit_id": "S533",
+   "type": "action",
+   "label": "is issued"
+  },
+  {
+   "unit_id": "S533",
+   "type": "succession",
+   "before": "reports completion",
+   "after": "is issued"
+  },
+  {
+   "unit_id": "S534",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "monitors available indications and confirms that each reported state change matches the approved sequence"
+  },
+  {
+   "unit_id": "S535",
+   "type": "action",
+   "label": "is paused"
+  },
+  {
+   "unit_id": "S535",
+   "type": "action",
+   "label": "is left in a safe state"
+  },
+  {
+   "unit_id": "S536",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms personnel are clear of affected equipment"
+  },
+  {
+   "unit_id": "S536",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "authorizes restoration or release of the work area"
+  },
+  {
+   "unit_id": "S536",
+   "type": "succession",
+   "before": "confirms personnel are clear of affected equipment",
+   "after": "authorizes restoration or release of the work area"
+  },
+  {
+   "unit_id": "S537",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "records the final equipment state, approvals, deviations, and handover information for the incoming shift"
+  },
+  {
+   "unit_id": "S539",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "treats a confirmed restriction as a Grid Constraint until the applicable limit is clarified or withdrawn"
+  },
+  {
+   "unit_id": "S540",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "presents current generation, export, and equipment status to the operations team"
+  },
+  {
+   "unit_id": "S540",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "operations team",
+   "payload": "current generation, export, and equipment status"
+  },
+  {
+   "unit_id": "S541",
+   "type": "action",
+   "performer": "Grid Dispatcher",
+   "label": "receives the Export Limit Advisory and uses it to set the permitted export level"
+  },
+  {
+   "unit_id": "S541",
+   "type": "flow",
+   "source": "Grid Interface Relay",
+   "target": "Grid Dispatcher",
+   "payload": "Export Limit Advisory"
+  },
+  {
+   "unit_id": "S542",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "verifies the permitted level, its effective time, and any required ramp rate"
+  },
+  {
+   "unit_id": "S542",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "changing operating targets"
+  },
+  {
+   "unit_id": "S542",
+   "type": "succession",
+   "before": "verifies the permitted level, its effective time, and any required ramp rate",
+   "after": "changing operating targets"
+  },
+  {
+   "unit_id": "S543",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "supports coordinated adjustment of turbine output across the affected operating area"
+  },
+  {
+   "unit_id": "S544",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reduces active power in controlled steps and checks that measured export follows the revised target"
+  },
+  {
+   "unit_id": "S545",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "applies the accepted output target while retaining its protective control functions"
+  },
+  {
+   "unit_id": "S546",
+   "type": "action",
+   "performer": "Pitch System",
+   "label": "adjusts blade angle within its operating envelope and does not override local protection limits"
+  },
+  {
+   "unit_id": "S547",
+   "type": "action",
+   "performer": "Converter Cabinet",
+   "label": "remains within its electrical and thermal ratings throughout the reduction"
+  },
+  {
+   "unit_id": "S548",
+   "type": "action",
+   "label": "is checked for temperature, loading, and alarm status during the response"
+  },
+  {
+   "unit_id": "S549",
+   "type": "action",
+   "performer": "Offshore Substation operator",
+   "label": "confirms that export equipment remains within its approved operating range"
+  },
+  {
+   "unit_id": "S550",
+   "type": "action",
+   "label": "is monitored for loading and temperature"
+  },
+  {
+   "unit_id": "S550",
+   "type": "action",
+   "label": "is escalated without delay"
+  },
+  {
+   "unit_id": "S551",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "retains its protection settings unless an authorized switching plan requires a controlled change"
+  },
+  {
+   "unit_id": "S552",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "compares actual export with the permitted level and investigates any persistent mismatch"
+  },
+  {
+   "unit_id": "S553",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "records the revised operating basis and coordinates updated targets"
+  },
+  {
+   "unit_id": "S554",
+   "type": "action",
+   "label": "is used to review whether the constraint affects planned work or equipment availability"
+  },
+  {
+   "unit_id": "S555",
+   "type": "action",
+   "label": "are not repeatedly ramped to chase short-lived fluctuations that fall within the agreed control tolerance"
+  },
+  {
+   "unit_id": "S556",
+   "type": "action",
+   "label": "are reviewed for signs that curtailment or ramping is stressing equipment"
+  },
+  {
+   "unit_id": "S557",
+   "type": "action",
+   "label": "is considered when weather conditions may affect operating margins or access decisions"
+  },
+  {
+   "unit_id": "S558",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "investigates telemetry gaps or inconsistent measurements before the team relies on them for control decisions"
+  },
+  {
+   "unit_id": "S559",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "reports any substation limitation that could require a lower export target or local equipment action"
+  },
+  {
+   "unit_id": "S559",
+   "type": "flow",
+   "source": "Substation Operator",
+   "payload": "substation limitation that could require a lower export target or local equipment action"
+  },
+  {
+   "unit_id": "S560",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "escalates any condition that threatens equipment limits, protection coordination, or safe operation"
+  },
+  {
+   "unit_id": "S561",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "maintains a clear record of the restriction, response actions, approvals, and outstanding checks for shift handover"
+  },
+  {
+   "unit_id": "S562",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "confirms authorization and restores output gradually while monitoring equipment response"
+  },
+  {
+   "unit_id": "S565",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "establishes the expected personnel count and destination for each movement before transfer begins"
+  },
+  {
+   "unit_id": "S566",
+   "type": "action",
+   "label": "are maintained separately for each vessel and each work location to avoid combining unrelated movements"
+  },
+  {
+   "unit_id": "S567",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "verifies the number of people physically aboard before departure"
+  },
+  {
+   "unit_id": "S568",
+   "type": "action",
+   "label": "are accounted for independently when they operate in the same transfer sequence"
+  },
+  {
+   "unit_id": "S569",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "records personnel access events at the north access point"
+  },
+  {
+   "unit_id": "S570",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "records personnel access events at the south access point"
+  },
+  {
+   "unit_id": "S571",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "maintains the operational count for active marine movements"
+  },
+  {
+   "unit_id": "S572",
+   "type": "action",
+   "label": "are checked against the expected count at departure, arrival, and any intermediate transfer point"
+  },
+  {
+   "unit_id": "S573",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "update a verified personnel total"
+  },
+  {
+   "unit_id": "S573",
+   "type": "action",
+   "label": "is used by the Personnel Tracking Console to update a verified personnel total"
+  },
+  {
+   "unit_id": "S573",
+   "type": "flow",
+   "source": "Vessel Master",
+   "target": "Personnel Tracking Console",
+   "payload": "Crew Count Correction"
+  },
+  {
+   "unit_id": "S574",
+   "type": "action",
+   "label": "has been established and recorded"
+  },
+  {
+   "unit_id": "S574",
+   "type": "action",
+   "label": "is accepted"
+  },
+  {
+   "unit_id": "S574",
+   "type": "succession",
+   "before": "has been established and recorded",
+   "after": "is accepted"
+  },
+  {
+   "unit_id": "S576",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "pauses further personnel transfers when a discrepancy is identified"
+  },
+  {
+   "unit_id": "S577",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "maintains a safe operating position while the discrepancy is investigated"
+  },
+  {
+   "unit_id": "S578",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "informs the Shore Control Room of the discrepancy and the immediate control actions"
+  },
+  {
+   "unit_id": "S578",
+   "type": "flow",
+   "source": "Marine Coordinator",
+   "target": "Shore Control Room",
+   "payload": "discrepancy and the immediate control actions"
+  },
+  {
+   "unit_id": "S579",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "assesses any safety implications and advises whether the affected activity can continue"
+  },
+  {
+   "unit_id": "S580",
+   "type": "action",
+   "label": "is notified without delay"
+  },
+  {
+   "unit_id": "S581",
+   "type": "action",
+   "label": "is checked against the arrival count before work proceeds"
+  },
+  {
+   "unit_id": "S582",
+   "type": "action",
+   "label": "is checked before the vessel departs the work location"
+  },
+  {
+   "unit_id": "S583",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "escalates any unresolved discrepancy to the Duty Planner and records the time of escalation"
+  },
+  {
+   "unit_id": "S585",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "confirms that the count is reconciled or an authorized response is in place"
+  },
+  {
+   "unit_id": "S586",
+   "type": "action",
+   "label": "are included in the shift handover"
+  },
+  {
+   "unit_id": "S587",
+   "type": "action",
+   "label": "are managed through a controlled lifecycle that protects the integrity and availability of operational systems"
+  },
+  {
+   "unit_id": "S589",
+   "type": "action",
+   "label": "records software versions, configuration parameters, dependencies, and applicable hardware revisions"
+  },
+  {
+   "unit_id": "S590",
+   "type": "action",
+   "label": "are held in access-controlled repositories with revision history enabled"
+  },
+  {
+   "unit_id": "S591",
+   "type": "action",
+   "label": "are developed and reviewed outside the live operational environment"
+  },
+  {
+   "unit_id": "S592",
+   "type": "action",
+   "label": "are built from approved source and checked for completeness, integrity, and compatibility"
+  },
+  {
+   "unit_id": "S593",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "uses the Firmware Hash Attestation to verify the approved image"
+  },
+  {
+   "unit_id": "S593",
+   "type": "flow",
+   "source": "Cybersecurity Analyst",
+   "target": "SCADA Engineer",
+   "payload": "Firmware Hash Attestation"
+  },
+  {
+   "unit_id": "S593",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "loading a release"
+  },
+  {
+   "unit_id": "S593",
+   "type": "succession",
+   "before": "uses the Firmware Hash Attestation to verify the approved image",
+   "after": "loading a release"
+  },
+  {
+   "unit_id": "S594",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "confirms that proposed changes have a clear operational purpose and defined scope"
+  },
+  {
+   "unit_id": "S595",
+   "type": "action",
+   "label": "is recorded before a change is scheduled for deployment to an operational system"
+  },
+  {
+   "unit_id": "S596",
+   "type": "action",
+   "performer": "Reviewers",
+   "label": "assess safety effects, cybersecurity risks, interfaces, and the impact on ongoing maintenance activities"
+  },
+  {
+   "unit_id": "S598",
+   "type": "action",
+   "label": "is performed in a representative test environment before operational acceptance is considered"
+  },
+  {
+   "unit_id": "S599",
+   "type": "action",
+   "label": "is checked for compatibility with the approved software and configuration baseline"
+  },
+  {
+   "unit_id": "S600",
+   "type": "action",
+   "label": "is tested against defined operating limits and expected fault responses"
+  },
+  {
+   "unit_id": "S601",
+   "type": "action",
+   "label": "is verified to retain its approved control behavior after an applicable software change"
+  },
+  {
+   "unit_id": "S602",
+   "type": "action",
+   "label": "is checked for expected communication and protection behavior during regression testing"
+  },
+  {
+   "unit_id": "S603",
+   "type": "action",
+   "label": "are reviewed for consequences to the safe operation of connected equipment"
+  },
+  {
+   "unit_id": "S605",
+   "type": "action",
+   "label": "is assessed for continued compliance with access controls and security requirements"
+  },
+  {
+   "unit_id": "S606",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "confirms that monitoring and operator procedures remain suitable for the revised configuration"
+  },
+  {
+   "unit_id": "S607",
+   "type": "action",
+   "label": "is scheduled for an approved maintenance window with qualified personnel available to supervise the work"
+  },
+  {
+   "unit_id": "S608",
+   "type": "action",
+   "label": "is documented and checked before deployment begins"
+  },
+  {
+   "unit_id": "S609",
+   "type": "action",
+   "label": "is stopped"
+  },
+  {
+   "unit_id": "S609",
+   "type": "action",
+   "label": "is returned to its last approved baseline where practicable"
+  },
+  {
+   "unit_id": "S610",
+   "type": "action",
+   "label": "are updated after successful deployment, including the approval evidence, test results, and installed version"
+  },
+  {
+   "unit_id": "S613",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains the incident log and provides a single operational point of contact for offshore teams"
+  },
+  {
+   "unit_id": "S614",
+   "type": "action",
+   "performer": "Rescue Coordinator",
+   "label": "leads rescue planning and coordinates requests for external assistance"
+  },
+  {
+   "unit_id": "S615",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "directs personnel at the affected work site until control is formally transferred"
+  },
+  {
+   "unit_id": "S616",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "retains authority over vessel safety, navigation, and decisions to approach or withdraw from a casualty"
+  },
+  {
+   "unit_id": "S617",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "advises on personnel hazards, rescue procedures, and the use of emergency equipment"
+  },
+  {
+   "unit_id": "S618",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "maintains awareness of vessel locations, access constraints, and available marine support"
+  },
+  {
+   "unit_id": "S619",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "supports personnel accounting"
+  },
+  {
+   "unit_id": "S619",
+   "type": "action",
+   "performer": "incident lead",
+   "label": "verifies headcounts with the teams involved"
+  },
+  {
+   "unit_id": "S620",
+   "type": "action",
+   "label": "are suspended when sea conditions, visibility, or transfer arrangements exceed approved limits"
+  },
+  {
+   "unit_id": "S621",
+   "type": "action",
+   "performer": "Daughter Craft",
+   "label": "may support a local response only when its crew, equipment, and launch conditions are suitable"
+  },
+  {
+   "unit_id": "S622",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "may provide accommodation, medical support, and a stable platform when its position and capability permit"
+  },
+  {
+   "unit_id": "S623",
+   "type": "action",
+   "label": "is used for evacuation only when aviation conditions, deck readiness, and receiving arrangements are acceptable"
+  },
+  {
+   "unit_id": "S624",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provides forecast information for planning"
+  },
+  {
+   "unit_id": "S625",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "provides site measurements that help assess whether a planned response remains feasible"
+  },
+  {
+   "unit_id": "S626",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "interprets forecast uncertainty and communicates material changes to the Rescue Coordinator"
+  },
+  {
+   "unit_id": "S626",
+   "type": "flow",
+   "source": "Weather Analyst",
+   "target": "Rescue Coordinator",
+   "payload": "material changes"
+  },
+  {
+   "unit_id": "S627",
+   "type": "action",
+   "performer": "Operations Radio Console",
+   "label": "supports communications between the Shore Control Room, vessels, and offshore work teams"
+  },
+  {
+   "unit_id": "S628",
+   "type": "action",
+   "label": "is checked as part of site emergency preparedness and restoration planning"
+  },
+  {
+   "unit_id": "S629",
+   "type": "action",
+   "performer": "Fire Detection Panel",
+   "label": "provides alarm indications that responders use alongside direct reports from personnel on site"
+  },
+  {
+   "unit_id": "S630",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "supports remote shutdown actions when communications and equipment status allow safe intervention"
+  },
+  {
+   "unit_id": "S632",
+   "type": "action",
+   "label": "may be delayed by vessel motion, limited access, lifting capacity, or deteriorating conditions"
+  },
+  {
+   "unit_id": "S634",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "may withdraw"
+  },
+  {
+   "unit_id": "S634",
+   "type": "action",
+   "performer": "Rescue Coordinator",
+   "label": "revises the response plan"
+  },
+  {
+   "unit_id": "S635",
+   "type": "action",
+   "label": "are accounted for"
+  },
+  {
+   "unit_id": "S635",
+   "type": "action",
+   "label": "are reassessed"
+  },
+  {
+   "unit_id": "S635",
+   "type": "action",
+   "label": "is assigned"
+  },
+  {
+   "unit_id": "S637",
+   "type": "action",
+   "performer": "Rescue Coordinator",
+   "label": "establishes the recovery objective and confirms who has authority to suspend the operation"
+  },
+  {
+   "unit_id": "S638",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "assigns suitable vessels and maintains a common plan for their approach and departure"
+  },
+  {
+   "unit_id": "S639",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "confirms that the recovery task does not conflict with other offshore work"
+  },
+  {
+   "unit_id": "S640",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provides current forecasts for the recovery area and the planned transit route"
+  },
+  {
+   "unit_id": "S641",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "interprets forecast uncertainty and identifies conditions that could affect safe vessel handling"
+  },
+  {
+   "unit_id": "S642",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "retains authority over vessel movements and may decline a task that cannot be completed safely"
+  },
+  {
+   "unit_id": "S643",
+   "type": "action",
+   "performer": "Crew Transfer Vessel",
+   "label": "transports personnel and small equipment only when sea conditions and transfer arrangements are acceptable"
+  },
+  {
+   "unit_id": "S644",
+   "type": "action",
+   "label": "may be assigned close-in support when its operating limits and communications coverage are adequate"
+  },
+  {
+   "unit_id": "S645",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "provides a stable working platform when the response requires additional deck space or lifting capability"
+  },
+  {
+   "unit_id": "S646",
+   "type": "action",
+   "performer": "Rescue Coordinator",
+   "label": "uses the load sheet to confirm that recovery baskets are secured and their contents are accounted for before transfer"
+  },
+  {
+   "unit_id": "S646",
+   "type": "flow",
+   "source": "Service Operations Vessel",
+   "target": "Rescue Coordinator",
+   "payload": "Recovery Basket Load Sheet"
+  },
+  {
+   "unit_id": "S647",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews the handling method, lifting points, and exclusion zones before loads are moved"
+  },
+  {
+   "unit_id": "S648",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "supports confirmation that all assigned personnel have returned to a safe location"
+  },
+  {
+   "unit_id": "S649",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "maintains control of the work area and stops handling if personnel enter a restricted zone"
+  },
+  {
+   "unit_id": "S650",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "isolates and protects recovered electrical equipment before it is placed in temporary storage"
+  },
+  {
+   "unit_id": "S651",
+   "type": "action",
+   "performer": "Blade Specialist",
+   "label": "identifies fragile blade components and specifies padding or restraints to prevent handling damage"
+  },
+  {
+   "unit_id": "S652",
+   "type": "action",
+   "label": "is kept separated from loose debris and is secured against sliding, impact, and spray exposure"
+  },
+  {
+   "unit_id": "S653",
+   "type": "action",
+   "label": "are contained so that they cannot create hazards for personnel or other cargo"
+  },
+  {
+   "unit_id": "S654",
+   "type": "action",
+   "label": "is inspected before use"
+  },
+  {
+   "unit_id": "S654",
+   "type": "action",
+   "label": "is conducted within the rated capacity of the equipment"
+  },
+  {
+   "unit_id": "S655",
+   "type": "action",
+   "label": "is used to arrange receiving space and preserve traceability for equipment returned ashore"
+  },
+  {
+   "unit_id": "S656",
+   "type": "action",
+   "label": "is consulted when recovered components may be needed to support repair planning"
+  },
+  {
+   "unit_id": "S658",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "provides technical guidance when recovery handling could affect turbine systems or restart readiness"
+  },
+  {
+   "unit_id": "S659",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "pauses the recovery and agrees a safe holding position with the Vessel Master"
+  },
+  {
+   "unit_id": "S660",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "reports remaining hazards"
+  },
+  {
+   "unit_id": "S660",
+   "type": "flow",
+   "source": "Field Supervisor",
+   "payload": "remaining hazards"
+  },
+  {
+   "unit_id": "S660",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that temporary securing arrangements are adequate for transit"
+  },
+  {
+   "unit_id": "S664",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provides context for expected changes"
+  },
+  {
+   "unit_id": "S665",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "provides a local reference that can help identify differences between forecast conditions and conditions at sea"
+  },
+  {
+   "unit_id": "S667",
+   "type": "action",
+   "label": "records both the estimated visibility and the confidence that the estimate represents conditions at the intended work location"
+  },
+  {
+   "unit_id": "S668",
+   "type": "action",
+   "label": "is treated as an operational constraint even when the reported visibility appears adequate"
+  },
+  {
+   "unit_id": "S669",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "uses the Visibility Confidence Note when considering task readiness and the conditions that would require a decision to pause or defer work"
+  },
+  {
+   "unit_id": "S669",
+   "type": "flow",
+   "source": "Weather Analyst",
+   "target": "Duty Planner",
+   "payload": "Visibility Confidence Note"
+  },
+  {
+   "unit_id": "S670",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "can help identify tasks that may be rescheduled when visibility is uncertain"
+  },
+  {
+   "unit_id": "S672",
+   "type": "action",
+   "label": "is given a more conservative assessment"
+  },
+  {
+   "unit_id": "S673",
+   "type": "action",
+   "label": "is deferred when uncertain visibility could prevent reliable control or interpretation of inspection imagery"
+  },
+  {
+   "unit_id": "S676",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reviews how uncertainty affects the planned transit, transfer location, and available alternatives"
+  },
+  {
+   "unit_id": "S677",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "retains authority to proceed, slow, alter course, or hold position based on actual conditions and vessel limits"
+  },
+  {
+   "unit_id": "S678",
+   "type": "action",
+   "label": "may be directed to remain clear of a transfer location until the crew and vessel can maintain adequate visual awareness"
+  },
+  {
+   "unit_id": "S680",
+   "type": "action",
+   "performer": "Service Operations Vessel",
+   "label": "may maintain a safe stand-off while the visibility assessment is clarified"
+  },
+  {
+   "unit_id": "S682",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reassess the route and the suitability of continuing toward the work site"
+  },
+  {
+   "unit_id": "S682",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "reassess the route and the suitability of continuing toward the work site"
+  },
+  {
+   "unit_id": "S683",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "maintains awareness of the decision and the operational restrictions associated with the assessment"
+  },
+  {
+   "unit_id": "S685",
+   "type": "action",
+   "label": "are reassessed before work resumes"
+  },
+  {
+   "unit_id": "S687",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "maintains the authoritative item catalogue, stock balances, and storage locations"
+  },
+  {
+   "unit_id": "S689",
+   "type": "action",
+   "performer": "Spares Hub",
+   "label": "provides a separate view of stock held for regional replenishment and emergency support"
+  },
+  {
+   "unit_id": "S690",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "reconciles physical counts with recorded balances and records adjustments with a reason and timestamp"
+  },
+  {
+   "unit_id": "S691",
+   "type": "action",
+   "label": "is identified by a controlled part number, description, unit of measure, and approved substitute status"
+  },
+  {
+   "unit_id": "S692",
+   "type": "action",
+   "label": "retain traceability from receipt through installation, repair, return, or disposal"
+  },
+  {
+   "unit_id": "S694",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "uses planned work demand and part criticality to support replenishment forecasts"
+  },
+  {
+   "unit_id": "S695",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "reviews forecast demand against current stock"
+  },
+  {
+   "unit_id": "S695",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "confirming work readiness"
+  },
+  {
+   "unit_id": "S695",
+   "type": "succession",
+   "before": "reviews forecast demand against current stock",
+   "after": "confirming work readiness"
+  },
+  {
+   "unit_id": "S698",
+   "type": "action",
+   "label": "are replenished according to agreed minimum and maximum stock levels"
+  },
+  {
+   "unit_id": "S700",
+   "type": "action",
+   "label": "are reviewed against recent delivery performance rather than relying solely on catalogue estimates"
+  },
+  {
+   "unit_id": "S701",
+   "type": "action",
+   "label": "identify items approaching their reorder point and show open purchase commitments"
+  },
+  {
+   "unit_id": "S702",
+   "type": "action",
+   "label": "is escalated to the Duty Planner for a priority decision"
+  },
+  {
+   "unit_id": "S703",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "records unavailable quantities and the expected date of the next supply without presenting them as available stock"
+  },
+  {
+   "unit_id": "S705",
+   "type": "action",
+   "label": "are segregated from usable stock until their status is resolved"
+  },
+  {
+   "unit_id": "S706",
+   "type": "action",
+   "label": "is investigated against receipts, issues, reservations, and recent movements"
+  },
+  {
+   "unit_id": "S706",
+   "type": "action",
+   "label": "is corrected"
+  },
+  {
+   "unit_id": "S706",
+   "type": "succession",
+   "before": "is investigated against receipts, issues, reservations, and recent movements",
+   "after": "is corrected"
+  },
+  {
+   "unit_id": "S709",
+   "type": "action",
+   "label": "are inspected"
+  },
+  {
+   "unit_id": "S709",
+   "type": "action",
+   "label": "is recorded"
+  },
+  {
+   "unit_id": "S709",
+   "type": "action",
+   "label": "are restored to available stock"
+  },
+  {
+   "unit_id": "S709",
+   "type": "succession",
+   "before": "are inspected",
+   "after": "are restored to available stock"
+  },
+  {
+   "unit_id": "S709",
+   "type": "succession",
+   "before": "is recorded",
+   "after": "are restored to available stock"
+  },
+  {
+   "unit_id": "S710",
+   "type": "action",
+   "label": "are reviewed to adjust reorder levels and supplier priorities"
+  },
+  {
+   "unit_id": "S711",
+   "type": "requirement",
+   "text": "An isolation boundary defines the equipment and energy sources that must be made safe before field work begins."
+  },
+  {
+   "unit_id": "S711",
+   "type": "action",
+   "label": "be made safe before field work begins"
+  },
+  {
+   "unit_id": "S712",
+   "type": "action",
+   "label": "is approved against the task scope, current equipment configuration, and applicable operating constraints"
+  },
+  {
+   "unit_id": "S713",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "makes the approved boundary available to the work party and the control team"
+  },
+  {
+   "unit_id": "S715",
+   "type": "requirement",
+   "subject": "adjacent equipment",
+   "text": "It also records any adjacent equipment that must remain energized or available for service."
+  },
+  {
+   "unit_id": "S716",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "uses the boundary sketch to identify the approved isolation points"
+  },
+  {
+   "unit_id": "S716",
+   "type": "flow",
+   "source": "Work Permit Portal",
+   "target": "Electrical Technician",
+   "payload": "Isolation Boundary Sketch"
+  },
+  {
+   "unit_id": "S716",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "starting the work"
+  },
+  {
+   "unit_id": "S716",
+   "type": "succession",
+   "before": "uses the boundary sketch to identify the approved isolation points",
+   "after": "starting the work"
+  },
+  {
+   "unit_id": "S717",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "briefs the crew on the boundary, access restrictions, and conditions that require work to stop"
+  },
+  {
+   "unit_id": "S718",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "checks that remote indications agree with the approved switching state"
+  },
+  {
+   "unit_id": "S718",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "authorizing access"
+  },
+  {
+   "unit_id": "S718",
+   "type": "succession",
+   "before": "checks that remote indications agree with the approved switching state",
+   "after": "authorizing access"
+  },
+  {
+   "unit_id": "S719",
+   "type": "action",
+   "performer": "qualified technician",
+   "label": "checks the device at the point of isolation"
+  },
+  {
+   "unit_id": "S720",
+   "type": "action",
+   "performer": "work party",
+   "label": "confirms equipment identity using permanent labels and the current site designation"
+  },
+  {
+   "unit_id": "S722",
+   "type": "action",
+   "label": "is secured against unintended operation using the site-approved locking and tagging method"
+  },
+  {
+   "unit_id": "S723",
+   "type": "action",
+   "label": "is applied in accordance with the permit and local electrical safety rules"
+  },
+  {
+   "unit_id": "S724",
+   "type": "action",
+   "label": "are performed at the work location using suitable, tested equipment"
+  },
+  {
+   "unit_id": "S725",
+   "type": "action",
+   "label": "are assessed before hands-on work begins"
+  },
+  {
+   "unit_id": "S726",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that every crew member understands the limits of the approved work area"
+  },
+  {
+   "unit_id": "S728",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "retains the current approval and makes superseded versions unavailable for active work"
+  },
+  {
+   "unit_id": "S729",
+   "type": "action",
+   "performer": "Control room staff",
+   "label": "use the same revision when confirming isolation status"
+  },
+  {
+   "unit_id": "S729",
+   "type": "action",
+   "performer": "field team",
+   "label": "use the same revision when confirming isolation status"
+  },
+  {
+   "unit_id": "S730",
+   "type": "action",
+   "label": "records outstanding isolations, affected equipment, and any restrictions that remain in force"
+  },
+  {
+   "unit_id": "S731",
+   "type": "action",
+   "performer": "incoming team",
+   "label": "independently checks the boundary status"
+  },
+  {
+   "unit_id": "S731",
+   "type": "action",
+   "performer": "incoming team",
+   "label": "accepting responsibility for ongoing work"
+  },
+  {
+   "unit_id": "S731",
+   "type": "succession",
+   "before": "independently checks the boundary status",
+   "after": "accepting responsibility for ongoing work"
+  },
+  {
+   "unit_id": "S733",
+   "type": "action",
+   "label": "confirms that the associated work party is clear of the hazard area"
+  },
+  {
+   "unit_id": "S734",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "verifies the restoration state and communicates any remaining operational limitation to affected personnel"
+  },
+  {
+   "unit_id": "S734",
+   "type": "flow",
+   "source": "Control Engineer",
+   "target": "affected personnel",
+   "payload": "remaining operational limitation"
+  },
+  {
+   "unit_id": "S735",
+   "type": "action",
+   "label": "are closed only after the equipment state has been confirmed and the permit has been updated"
+  },
+  {
+   "unit_id": "S736",
+   "type": "action",
+   "label": "are coordinated with planned maintenance so that equipment is available only when the required operating conditions can be maintained"
+  },
+  {
+   "unit_id": "S737",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "consolidates proposed work periods and identifies tasks that require a change to substation configuration"
+  },
+  {
+   "unit_id": "S738",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "checks task durations, dependencies, and resource assumptions before a window is proposed"
+  },
+  {
+   "unit_id": "S739",
+   "type": "action",
+   "performer": "Grid Dispatcher",
+   "label": "confirms that the requested period is compatible with export requirements and network operating limits"
+  },
+  {
+   "unit_id": "S741",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "reviews the switching sequence and confirms that each step can be performed within the available interval"
+  },
+  {
+   "unit_id": "S742",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "checks that turbine operations can be managed safely while the substation work is in progress"
+  },
+  {
+   "unit_id": "S744",
+   "type": "action",
+   "label": "is scheduled only after its expected loading and required isolation duration have been reviewed"
+  },
+  {
+   "unit_id": "S745",
+   "type": "action",
+   "label": "is assessed before any planned outage that could restrict power transfer"
+  },
+  {
+   "unit_id": "S748",
+   "type": "action",
+   "label": "are considered when marine access or external work affects the achievable start time"
+  },
+  {
+   "unit_id": "S749",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "checks vessel movements and crew transfer timing against the proposed period"
+  },
+  {
+   "unit_id": "S750",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "confirms that the work scope and test requirements fit the approved duration"
+  },
+  {
+   "unit_id": "S751",
+   "type": "action",
+   "label": "is updated to reflect the agreed timing and work boundaries before the activity begins"
+  },
+  {
+   "unit_id": "S752",
+   "type": "action",
+   "performer": "Offshore Substation",
+   "label": "uses the Switching Window Acknowledgment to confirm that the approved switching window is available for the planned work"
+  },
+  {
+   "unit_id": "S752",
+   "type": "flow",
+   "source": "Shore Control Room",
+   "target": "Offshore Substation",
+   "payload": "Switching Window Acknowledgment"
+  },
+  {
+   "unit_id": "S753",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "does not begin switching until the window is active and operational authority has been confirmed"
+  },
+  {
+   "unit_id": "S754",
+   "type": "action",
+   "label": "is raised promptly for review by the responsible operations staff"
+  },
+  {
+   "unit_id": "S755",
+   "type": "action",
+   "label": "is paused if actual conditions make the planned sequence unsafe or incompatible with grid requirements"
+  },
+  {
+   "unit_id": "S756",
+   "type": "action",
+   "label": "is agreed before deferred switching or additional maintenance is attempted"
+  },
+  {
+   "unit_id": "S757",
+   "type": "action",
+   "label": "is restored in the authorized sequence"
+  },
+  {
+   "unit_id": "S757",
+   "type": "action",
+   "label": "is checked"
+  },
+  {
+   "unit_id": "S758",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "records actual start and finish times to improve future estimates and coordination"
+  },
+  {
+   "unit_id": "S759",
+   "type": "action",
+   "label": "is returned to the operating plan only after restoration checks are complete and any remaining limitations are understood"
+  },
+  {
+   "unit_id": "S762",
+   "type": "action",
+   "performer": "Operations Radio Console",
+   "label": "supports voice communication with the Crew Transfer Vessel, Service Operations Vessel, and Daughter Craft when they are within radio coverage"
+  },
+  {
+   "unit_id": "S763",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirms safety-critical instructions using the agreed read-back procedure before the vessel acts on them"
+  },
+  {
+   "unit_id": "S764",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "shares relevant marine and weather information with vessel personnel and the Duty Planner"
+  },
+  {
+   "unit_id": "S764",
+   "type": "flow",
+   "source": "Marine Coordinator",
+   "target": "Duty Planner",
+   "payload": "relevant marine and weather information"
+  },
+  {
+   "unit_id": "S764",
+   "type": "flow",
+   "source": "Marine Coordinator",
+   "target": "vessel personnel",
+   "payload": "relevant marine and weather information"
+  },
+  {
+   "unit_id": "S765",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "assesses forecast uncertainty and communicates conditions that could affect access, lifting, or work at height"
+  },
+  {
+   "unit_id": "S765",
+   "type": "flow",
+   "source": "Weather Analyst",
+   "payload": "conditions that could affect access, lifting, or work at height"
+  },
+  {
+   "unit_id": "S766",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "provide inputs that are reviewed alongside direct observations from offshore personnel"
+  },
+  {
+   "unit_id": "S766",
+   "type": "action",
+   "performer": "Metocean Buoy",
+   "label": "provide inputs that are reviewed alongside direct observations from offshore personnel"
+  },
+  {
+   "unit_id": "S767",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "carries operational data to the Shore Control Room and preserves source timestamps where available"
+  },
+  {
+   "unit_id": "S767",
+   "type": "flow",
+   "source": "SCADA Gateway",
+   "target": "Shore Control Room",
+   "payload": "operational data"
+  },
+  {
+   "unit_id": "S768",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews alarms and operating trends with the SCADA Engineer when an abnormal condition may require intervention"
+  },
+  {
+   "unit_id": "S769",
+   "type": "action",
+   "performer": "Grid Dispatcher",
+   "label": "communicates external operating requirements to the Grid Interface Relay and the responsible control personnel"
+  },
+  {
+   "unit_id": "S769",
+   "type": "flow",
+   "source": "Grid Dispatcher",
+   "target": "Grid Interface Relay",
+   "payload": "external operating requirements"
+  },
+  {
+   "unit_id": "S769",
+   "type": "flow",
+   "source": "Grid Dispatcher",
+   "target": "responsible control personnel",
+   "payload": "external operating requirements"
+  },
+  {
+   "unit_id": "S770",
+   "type": "action",
+   "label": "are communicated through authorized channels and confirmed by the responsible Substation Operator or Electrical Technician"
+  },
+  {
+   "unit_id": "S771",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "use the approved fallback method"
+  },
+  {
+   "unit_id": "S771",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "report the outage as soon as practicable"
+  },
+  {
+   "unit_id": "S771",
+   "type": "flow",
+   "source": "Personnel",
+   "payload": "outage"
+  },
+  {
+   "unit_id": "S773",
+   "type": "action",
+   "performer": "receiver",
+   "label": "repeats critical details"
+  },
+  {
+   "unit_id": "S773",
+   "type": "action",
+   "performer": "sender",
+   "label": "confirms that the read-back is accurate"
+  },
+  {
+   "unit_id": "S773",
+   "type": "action",
+   "label": "is treated as understood"
+  },
+  {
+   "unit_id": "S773",
+   "type": "succession",
+   "before": "confirms that the read-back is accurate",
+   "after": "is treated as understood"
+  },
+  {
+   "unit_id": "S776",
+   "type": "action",
+   "label": "use synchronized time sources where available"
+  },
+  {
+   "unit_id": "S776",
+   "type": "action",
+   "label": "is noted for later reconciliation"
+  },
+  {
+   "unit_id": "S778",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "ensures that field observations and work outcomes are entered promptly while the details remain verifiable"
+  },
+  {
+   "unit_id": "S779",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "links relevant communications and work records to the applicable work package and operating plan"
+  },
+  {
+   "unit_id": "S780",
+   "type": "action",
+   "performer": "Work Permit Portal",
+   "label": "retains permit decisions and associated approvals in a form that can be retrieved for review"
+  },
+  {
+   "unit_id": "S781",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "protects access logs and communication records against unauthorized alteration or disclosure"
+  },
+  {
+   "unit_id": "S782",
+   "type": "action",
+   "performer": "organization",
+   "label": "retains voice recordings, system logs, and work records according to the approved retention schedule and applicable legal obligations"
+  },
+  {
+   "unit_id": "S783",
+   "type": "action",
+   "label": "are preserved from routine deletion until the authorized release of the hold"
+  },
+  {
+   "unit_id": "S784",
+   "type": "action",
+   "performer": "responsible manager",
+   "label": "reviews record completeness after significant events and assigns correction or follow-up actions where evidence is missing"
+  },
+  {
+   "unit_id": "S786",
+   "type": "action",
+   "performer": "Fire Detection Panel",
+   "label": "supervises detection circuits"
+  },
+  {
+   "unit_id": "S786",
+   "type": "action",
+   "performer": "Fire Detection Panel",
+   "label": "annunciates alarms with location and fault information"
+  },
+  {
+   "unit_id": "S786",
+   "type": "flow",
+   "source": "Fire Detection Panel",
+   "payload": "alarms with location and fault information"
+  },
+  {
+   "unit_id": "S788",
+   "type": "action",
+   "performer": "Turbine Sensor Bus",
+   "label": "carries equipment status used by protective functions and operational monitoring"
+  },
+  {
+   "unit_id": "S789",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "initiates the configured shutdown response when a confirmed fire condition requires turbine protection"
+  },
+  {
+   "unit_id": "S790",
+   "type": "action",
+   "performer": "Pitch System",
+   "label": "moves the blades to the defined safe position when commanded during an emergency shutdown"
+  },
+  {
+   "unit_id": "S790",
+   "type": "action",
+   "label": "commanded during an emergency shutdown"
+  },
+  {
+   "unit_id": "S791",
+   "type": "action",
+   "performer": "Rotor Brake Unit",
+   "label": "applies braking only in accordance with the turbine protection sequence and operating limits"
+  },
+  {
+   "unit_id": "S792",
+   "type": "action",
+   "label": "is isolated when fire or overheating threatens electrical equipment or personnel"
+  },
+  {
+   "unit_id": "S793",
+   "type": "action",
+   "performer": "Nacelle Condition Monitor",
+   "label": "provides condition information that can help distinguish a developing equipment fault from a confirmed fire alarm"
+  },
+  {
+   "unit_id": "S794",
+   "type": "action",
+   "label": "are coordinated with electrical isolation procedures"
+  },
+  {
+   "unit_id": "S795",
+   "type": "action",
+   "label": "is protected by site-specific detection and trip settings that account for its design and operating conditions"
+  },
+  {
+   "unit_id": "S797",
+   "type": "action",
+   "label": "is not cleared solely because a detector signal has returned to normal"
+  },
+  {
+   "unit_id": "S798",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "assesses incoming alarms, confirms the affected asset, and initiates the response appropriate to the reported severity"
+  },
+  {
+   "unit_id": "S799",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "verifies the equipment state and checks that protection actions have completed"
+  },
+  {
+   "unit_id": "S799",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "authorizing any further operational action"
+  },
+  {
+   "unit_id": "S799",
+   "type": "succession",
+   "before": "verifies the equipment state and checks that protection actions have completed",
+   "after": "authorizing any further operational action"
+  },
+  {
+   "unit_id": "S800",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "supports alarm visibility at the shore operating position without replacing local emergency controls"
+  },
+  {
+   "unit_id": "S801",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "performs local inspection only after the area has been assessed as safe and the required electrical isolations are in place"
+  },
+  {
+   "unit_id": "S802",
+   "type": "action",
+   "performer": "Turbine Lockout",
+   "label": "prevents remote restart while personnel investigate a fire alarm or complete post-event checks"
+  },
+  {
+   "unit_id": "S803",
+   "type": "action",
+   "performer": "Emergency Generator",
+   "label": "supports essential functions when normal electrical supplies are unavailable, subject to its designated load priorities"
+  },
+  {
+   "unit_id": "S804",
+   "type": "action",
+   "performer": "Offshore personnel",
+   "label": "follow posted escape routes and muster at the designated assembly point when evacuation is ordered"
+  },
+  {
+   "unit_id": "S805",
+   "type": "action",
+   "performer": "Personnel Tracking Console",
+   "label": "supports accountability checks for personnel assigned to the affected work area"
+  },
+  {
+   "unit_id": "S806",
+   "type": "action",
+   "performer": "Operations Radio Console",
+   "label": "provides a coordinated communications channel for response instructions and status reports"
+  },
+  {
+   "unit_id": "S807",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "maintains a safe position and readiness to support personnel recovery when directed by the response lead"
+  },
+  {
+   "unit_id": "S808",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "advises on exposure, evacuation, and re-entry criteria in coordination with the incident response team"
+  },
+  {
+   "unit_id": "S809",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms work party status"
+  },
+  {
+   "unit_id": "S809",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "reports unresolved personnel or access concerns to the Shore Control Room"
+  },
+  {
+   "unit_id": "S809",
+   "type": "flow",
+   "source": "Field Supervisor",
+   "target": "Shore Control Room",
+   "payload": "unresolved personnel or access concerns"
+  },
+  {
+   "unit_id": "S810",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "validates each presented credential against current access authorization"
+  },
+  {
+   "unit_id": "S810",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "enabling controlled entry"
+  },
+  {
+   "unit_id": "S810",
+   "type": "succession",
+   "before": "validates each presented credential against current access authorization",
+   "after": "enabling controlled entry"
+  },
+  {
+   "unit_id": "S811",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "accepts only credentials that can be read reliably and associated with an identifiable person"
+  },
+  {
+   "unit_id": "S812",
+   "type": "action",
+   "performer": "person",
+   "label": "presents the credential at the controlled entry point and waits for the scanner response"
+  },
+  {
+   "unit_id": "S813",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "checks that the authorization is active for the scheduled work period"
+  },
+  {
+   "unit_id": "S814",
+   "type": "action",
+   "label": "checks that the requested access area is within the person's approved scope"
+  },
+  {
+   "unit_id": "S815",
+   "type": "state",
+   "label": "denied entry decision"
+  },
+  {
+   "unit_id": "S815",
+   "type": "transition",
+   "to": "denied entry decision",
+   "trigger": "authorization that is expired, suspended, or incomplete"
+  },
+  {
+   "unit_id": "S816",
+   "type": "state",
+   "owner": "gate",
+   "label": "secured"
+  },
+  {
+   "unit_id": "S817",
+   "type": "action",
+   "performer": "person",
+   "label": "contact the Field Supervisor or the HSE Officer for review"
+  },
+  {
+   "unit_id": "S819",
+   "type": "action",
+   "label": "is granted only after all configured identity and authorization checks pass"
+  },
+  {
+   "unit_id": "S820",
+   "type": "action",
+   "label": "receives a unique transaction identifier for later reference"
+  },
+  {
+   "unit_id": "S821",
+   "type": "action",
+   "performer": "transaction",
+   "label": "records the credential identifier, decision time, access point, and decision outcome"
+  },
+  {
+   "unit_id": "S822",
+   "type": "action",
+   "performer": "transaction",
+   "label": "records the authorization version and the rule that determined the outcome"
+  },
+  {
+   "unit_id": "S823",
+   "type": "action",
+   "performer": "audit record",
+   "label": "distinguishes a rejected credential from an authorization that lacks the required scope"
+  },
+  {
+   "unit_id": "S824",
+   "type": "action",
+   "performer": "offshore wind farm operations and maintenance system",
+   "label": "retains successful and unsuccessful attempts under the site's access record retention policy"
+  },
+  {
+   "unit_id": "S825",
+   "type": "action",
+   "label": "are protected against unauthorized alteration"
+  },
+  {
+   "unit_id": "S826",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "reviews unusual denial patterns and unresolved access exceptions during the work shift"
+  },
+  {
+   "unit_id": "S827",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "can use the recorded entry history to support personnel accountability during an incident"
+  },
+  {
+   "unit_id": "S828",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "follow the approved contingency process rather than bypassing the gate"
+  },
+  {
+   "unit_id": "S830",
+   "type": "action",
+   "label": "are reconciled against the normal access record when scanner service is restored"
+  },
+  {
+   "unit_id": "S831",
+   "type": "action",
+   "performer": "North Access Scanner",
+   "label": "displays a clear outcome without exposing unnecessary personal information to people nearby"
+  },
+  {
+   "unit_id": "S831",
+   "type": "flow",
+   "source": "North Access Scanner",
+   "payload": "clear outcome"
+  },
+  {
+   "unit_id": "S832",
+   "type": "action",
+   "performer": "Operators",
+   "label": "verify the scanner clock and connectivity during routine readiness checks"
+  },
+  {
+   "unit_id": "S833",
+   "type": "action",
+   "label": "are controlled and reviewed before they become effective at the entry point"
+  },
+  {
+   "unit_id": "S835",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "serves the designated southern entry route to the offshore wind farm"
+  },
+  {
+   "unit_id": "S838",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "applies the same identity verification standard used at other controlled entry points"
+  },
+  {
+   "unit_id": "S839",
+   "type": "action",
+   "performer": "entrant",
+   "label": "presents an individually assigned credential for validation"
+  },
+  {
+   "unit_id": "S840",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "checks that the credential is active and belongs to the person presenting it"
+  },
+  {
+   "unit_id": "S841",
+   "type": "action",
+   "label": "is granted only when the person has current authorization for the requested area and time"
+  },
+  {
+   "unit_id": "S843",
+   "type": "action",
+   "performer": "South Access Scanner",
+   "label": "records each successful entry and each denied attempt with a time reference"
+  },
+  {
+   "unit_id": "S845",
+   "type": "action",
+   "performer": "local visual indicator",
+   "label": "communicates whether entry is permitted or denied"
+  },
+  {
+   "unit_id": "S845",
+   "type": "flow",
+   "source": "local visual indicator",
+   "payload": "whether entry is permitted or denied"
+  },
+  {
+   "unit_id": "S846",
+   "type": "state",
+   "owner": "entry barrier",
+   "label": "closed"
+  },
+  {
+   "unit_id": "S847",
+   "type": "requirement",
+   "subject": "Personnel",
+   "text": "Personnel must not hold the barrier open for another entrant."
+  },
+  {
+   "unit_id": "S847",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "not hold the barrier open for another entrant"
+  },
+  {
+   "unit_id": "S848",
+   "type": "action",
+   "label": "are applied at the southern entry point"
+  },
+  {
+   "unit_id": "S849",
+   "type": "action",
+   "performer": "Visitors",
+   "label": "follow the same identity checks as other entrants"
+  },
+  {
+   "unit_id": "S849",
+   "type": "action",
+   "performer": "temporary personnel",
+   "label": "follow the same identity checks as other entrants"
+  },
+  {
+   "unit_id": "S850",
+   "type": "action",
+   "label": "is verified before access is granted"
+  },
+  {
+   "unit_id": "S851",
+   "type": "action",
+   "label": "is kept physically separated from areas that are not authorized for general access"
+  },
+  {
+   "unit_id": "S853",
+   "type": "action",
+   "performer": "installation team",
+   "label": "verifies the scanner, barrier, and communications before the route is placed in service"
+  },
+  {
+   "unit_id": "S855",
+   "type": "action",
+   "label": "are reported promptly"
+  },
+  {
+   "unit_id": "S855",
+   "type": "flow",
+   "payload": "Faults"
+  },
+  {
+   "unit_id": "S855",
+   "type": "action",
+   "label": "is placed out of service if secure operation cannot be assured"
+  },
+  {
+   "unit_id": "S856",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "use an approved alternative entry process rather than an uncontrolled bypass"
+  },
+  {
+   "unit_id": "S858",
+   "type": "action",
+   "label": "are reviewed under the same change-control process as other access rules"
+  },
+  {
+   "unit_id": "S859",
+   "type": "action",
+   "performer": "East Service Lift",
+   "label": "runs a door-interlock and overload check"
+  },
+  {
+   "unit_id": "S859",
+   "type": "action",
+   "performer": "East Service Lift",
+   "label": "accepting a movement request"
+  },
+  {
+   "unit_id": "S859",
+   "type": "succession",
+   "before": "runs a door-interlock and overload check",
+   "after": "accepting a movement request"
+  },
+  {
+   "unit_id": "S860",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "coordinates the inspection before the first planned movement of each operating shift"
+  },
+  {
+   "unit_id": "S862",
+   "type": "action",
+   "performer": "inspector",
+   "label": "confirms that the car floor and landing thresholds are clear of loose material and standing water"
+  },
+  {
+   "unit_id": "S863",
+   "type": "action",
+   "label": "are tested at each served landing to confirm that the car cannot move while a door is open"
+  },
+  {
+   "unit_id": "S864",
+   "type": "action",
+   "label": "are tested using the approved functional test procedure"
+  },
+  {
+   "unit_id": "S865",
+   "type": "action",
+   "performer": "inspector",
+   "label": "checks the operating controls for damage, legibility, and secure mounting"
+  },
+  {
+   "unit_id": "S866",
+   "type": "action",
+   "label": "are examined for wear, corrosion, or abnormal movement"
+  },
+  {
+   "unit_id": "S867",
+   "type": "action",
+   "performer": "Electrical Technician",
+   "label": "verifies that the lift supply and protective devices show no active fault indication"
+  },
+  {
+   "unit_id": "S868",
+   "type": "action",
+   "performer": "inspector",
+   "label": "confirms that the rated capacity and operating instructions remain legible at the car entrance"
+  },
+  {
+   "unit_id": "S869",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "records the inspection result and any observed defects in the maintenance system"
+  },
+  {
+   "unit_id": "S871",
+   "type": "action",
+   "label": "is checked for active restrictions that could conflict with lift operation"
+  },
+  {
+   "unit_id": "S872",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "confirms that the planned work can proceed within the lift capacity and operating limits"
+  },
+  {
+   "unit_id": "S873",
+   "type": "action",
+   "label": "are briefed on the permitted landings, maximum occupancy, and emergency actions before boarding"
+  },
+  {
+   "unit_id": "S874",
+   "type": "action",
+   "label": "is used to maintain an accurate record of personnel entering and leaving the route"
+  },
+  {
+   "unit_id": "S875",
+   "type": "action",
+   "label": "is inspected for dimensions, mass, and secure packaging before it is accepted for transport"
+  },
+  {
+   "unit_id": "S876",
+   "type": "action",
+   "performer": "Storekeeper",
+   "label": "confirms that equipment intended for the lift is ready and properly identified for the work party"
+  },
+  {
+   "unit_id": "S877",
+   "type": "action",
+   "label": "are not carried unless an approved handling arrangement keeps the load contained within the car"
+  },
+  {
+   "unit_id": "S878",
+   "type": "action",
+   "label": "positions each load to avoid obstructing doors, controls, and emergency access"
+  },
+  {
+   "unit_id": "S879",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that no person is exposed to a suspended or shifting load during movement"
+  },
+  {
+   "unit_id": "S881",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "communicates the release status to the work party and records the time that service is authorized"
+  },
+  {
+   "unit_id": "S881",
+   "type": "flow",
+   "source": "Field Supervisor",
+   "target": "work party",
+   "payload": "release status"
+  },
+  {
+   "unit_id": "S882",
+   "type": "action",
+   "performer": "users",
+   "label": "report unusual noise, vibration, door behavior, or control response immediately"
+  },
+  {
+   "unit_id": "S882",
+   "type": "flow",
+   "source": "users",
+   "payload": "unusual noise, vibration, door behavior, or control response"
+  },
+  {
+   "unit_id": "S883",
+   "type": "action",
+   "label": "is removed from service if a new condition could compromise safe movement, pending assessment and corrective action"
+  },
+  {
+   "unit_id": "S884",
+   "type": "action",
+   "performer": "West Service Lift",
+   "label": "provides vertical access along the west route between the designated service landings"
+  },
+  {
+   "unit_id": "S886",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that the work authorization covers the intended landing and task"
+  },
+  {
+   "unit_id": "S887",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "verifies that the landing is accessible and that the route is clear of obstructions"
+  },
+  {
+   "unit_id": "S888",
+   "type": "action",
+   "label": "checks the lift identification, rated capacity, and current service status before each operating period"
+  },
+  {
+   "unit_id": "S889",
+   "type": "action",
+   "label": "are inspected for damage, secure closure, and unobstructed movement"
+  },
+  {
+   "unit_id": "S890",
+   "type": "action",
+   "label": "confirms that the car floor is level with the boarding landing before permitting entry or exit"
+  },
+  {
+   "unit_id": "S891",
+   "type": "requirement",
+   "subject": "Lighting",
+   "text": "Lighting inside the car and at each landing must be adequate for safe movement and inspection."
+  },
+  {
+   "unit_id": "S892",
+   "type": "action",
+   "label": "checks that the controls respond correctly and that the emergency stop is accessible"
+  },
+  {
+   "unit_id": "S893",
+   "type": "requirement",
+   "subject": "Door interlocks",
+   "text": "Door interlocks and other protective devices must be functional before the lift is placed in service."
+  },
+  {
+   "unit_id": "S893",
+   "type": "action",
+   "label": "is placed in service"
+  },
+  {
+   "unit_id": "S894",
+   "type": "requirement",
+   "subject": "Protective devices",
+   "text": "Protective devices must not be bypassed to maintain access or avoid delay."
+  },
+  {
+   "unit_id": "S894",
+   "type": "action",
+   "label": "not be bypassed to maintain access or avoid delay"
+  },
+  {
+   "unit_id": "S895",
+   "type": "action",
+   "label": "confirms that the expected load, including tools and carried equipment, remains within the rated capacity"
+  },
+  {
+   "unit_id": "S896",
+   "type": "action",
+   "performer": "Passengers",
+   "label": "distribute themselves and their equipment to avoid obstructing the doors or control panel"
+  },
+  {
+   "unit_id": "S897",
+   "type": "action",
+   "label": "are secured against movement during travel"
+  },
+  {
+   "unit_id": "S898",
+   "type": "action",
+   "label": "confirms that all occupants are ready and that the doors are fully closed"
+  },
+  {
+   "unit_id": "S898",
+   "type": "action",
+   "label": "starting movement"
+  },
+  {
+   "unit_id": "S898",
+   "type": "succession",
+   "before": "confirms that all occupants are ready and that the doors are fully closed",
+   "after": "starting movement"
+  },
+  {
+   "unit_id": "S899",
+   "type": "action",
+   "performer": "occupants",
+   "label": "remain inside the car and avoid interfering with the controls or doors"
+  },
+  {
+   "unit_id": "S900",
+   "type": "action",
+   "label": "monitors lift movement for unusual noise, vibration, hesitation, or irregular stopping"
+  },
+  {
+   "unit_id": "S901",
+   "type": "action",
+   "label": "stop the lift at the nearest safe landing when practicable"
+  },
+  {
+   "unit_id": "S902",
+   "type": "action",
+   "performer": "occupants",
+   "label": "use the designated alarm or communication method and remain inside the car"
+  },
+  {
+   "unit_id": "S903",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "do not attempt to open doors or climb out of a stopped car without direction from the response team"
+  },
+  {
+   "unit_id": "S904",
+   "type": "action",
+   "label": "confirms that the car is level and stationary"
+  },
+  {
+   "unit_id": "S904",
+   "type": "action",
+   "label": "opening the doors"
+  },
+  {
+   "unit_id": "S904",
+   "type": "succession",
+   "before": "confirms that the car is level and stationary",
+   "after": "opening the doors"
+  },
+  {
+   "unit_id": "S905",
+   "type": "action",
+   "performer": "occupants",
+   "label": "exit without crowding"
+  },
+  {
+   "unit_id": "S905",
+   "type": "action",
+   "label": "checks that tools and equipment have been removed from the car"
+  },
+  {
+   "unit_id": "S906",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "ensures that the lift is left secure and that any irregularity is reported through the established site process"
+  },
+  {
+   "unit_id": "S906",
+   "type": "flow",
+   "payload": "irregularity"
+  },
+  {
+   "unit_id": "S907",
+   "type": "action",
+   "label": "is removed from service if a condition could compromise safe movement, pending assessment and corrective action"
+  },
+  {
+   "unit_id": "S908",
+   "type": "action",
+   "performer": "offshore wind farm operations and maintenance system",
+   "label": "measures operational performance against approved service objectives and documented fleet baselines"
+  },
+  {
+   "unit_id": "S909",
+   "type": "action",
+   "label": "is reported for each turbine and for the fleet, with planned maintenance and forced outages classified separately"
+  },
+  {
+   "unit_id": "S909",
+   "type": "flow",
+   "payload": "Availability"
+  },
+  {
+   "unit_id": "S911",
+   "type": "action",
+   "label": "is assessed through work completion time, repeat work, overdue tasks, and the proportion of work completed as planned"
+  },
+  {
+   "unit_id": "S914",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "provides operational records used to assess turbine availability and production trends"
+  },
+  {
+   "unit_id": "S915",
+   "type": "action",
+   "performer": "Nacelle Condition Monitor",
+   "label": "supports assessment of equipment condition and emerging degradation"
+  },
+  {
+   "unit_id": "S916",
+   "type": "action",
+   "label": "is reviewed for operational availability and the frequency and duration of equipment interruptions"
+  },
+  {
+   "unit_id": "S917",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "provides a fleet-level view of operating status and response to emerging constraints"
+  },
+  {
+   "unit_id": "S918",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "supports review of planned work, resource demand, and maintenance completion performance"
+  },
+  {
+   "unit_id": "S919",
+   "type": "action",
+   "label": "are reviewed at regular operational meetings and escalated when approved thresholds are exceeded"
+  },
+  {
+   "unit_id": "S920",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "examines significant operational deviations and records the technical findings for review"
+  },
+  {
+   "unit_id": "S922",
+   "type": "action",
+   "performer": "Review teams",
+   "label": "distinguish equipment faults from external causes such as access limitations, weather conditions, and grid restrictions"
+  },
+  {
+   "unit_id": "S924",
+   "type": "action",
+   "label": "are assigned an owner, due date, and verification method"
+  },
+  {
+   "unit_id": "S924",
+   "type": "action",
+   "label": "are tracked to closure"
+  },
+  {
+   "unit_id": "S924",
+   "type": "succession",
+   "before": "are assigned an owner, due date, and verification method",
+   "after": "are tracked to closure"
+  },
+  {
+   "unit_id": "S925",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "uses reliability findings to adjust work priorities and planned maintenance intervals when justified"
+  },
+  {
+   "unit_id": "S926",
+   "type": "action",
+   "label": "are captured in a form that can be applied across the fleet"
+  },
+  {
+   "unit_id": "S927",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "provides feedback on whether revised procedures and controls are practical during offshore work"
+  },
+  {
+   "unit_id": "S928",
+   "type": "action",
+   "performer": "Warehouse System",
+   "label": "uses recurring failure and repair information to inform review of critical spares and replenishment assumptions"
+  },
+  {
+   "unit_id": "S929",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "reviews performance records for evidence that cybersecurity controls affect operational availability or recovery"
+  },
+  {
+   "unit_id": "S930",
+   "type": "action",
+   "label": "are controlled so that trends remain comparable over time"
+  },
+  {
+   "unit_id": "S931",
+   "type": "action",
+   "label": "are assessed for safety, technical feasibility, resource needs, and expected operational benefit"
+  },
+  {
+   "unit_id": "S932",
+   "type": "action",
+   "label": "are monitored after implementation to confirm that they deliver the intended result and do not introduce adverse effects"
+  },
+  {
+   "unit_id": "S933",
+   "type": "action",
+   "label": "is reviewed periodically so that performance measures and lessons learned continue to reflect actual operating experience"
+  },
+  {
+   "unit_id": "S934",
+   "type": "state",
+   "label": "degraded mode"
+  },
+  {
+   "unit_id": "S934",
+   "type": "transition",
+   "to": "degraded mode",
+   "trigger": "a fault, communication loss, environmental limit, or external restriction prevents normal service without requiring immediate full-site shutdown"
+  },
+  {
+   "unit_id": "S934",
+   "type": "action",
+   "label": "is entered when a fault, communication loss, environmental limit, or external restriction prevents normal service without requiring immediate full-site shutdown"
+  },
+  {
+   "unit_id": "S935",
+   "type": "action",
+   "performer": "offshore wind farm operations and maintenance system",
+   "label": "records the affected function, the detected condition, and the time of transition so that operators can assess the scope and duration of the impairment"
+  },
+  {
+   "unit_id": "S937",
+   "type": "action",
+   "performer": "Turbine Controller",
+   "label": "retains protective control locally when the supervisory connection is unavailable"
+  },
+  {
+   "unit_id": "S937",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "monitors the loss of visibility"
+  },
+  {
+   "unit_id": "S938",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "suspends those commands and uses approved local procedures until reliable control is restored"
+  },
+  {
+   "unit_id": "S939",
+   "type": "action",
+   "performer": "Weather Service",
+   "label": "support entry into Weather Hold when forecast or observed conditions exceed approved operating limits"
+  },
+  {
+   "unit_id": "S939",
+   "type": "action",
+   "performer": "Weather Analyst",
+   "label": "support entry into Weather Hold when forecast or observed conditions exceed approved operating limits"
+  },
+  {
+   "unit_id": "S939",
+   "type": "transition",
+   "to": "Weather Hold",
+   "trigger": "forecast or observed conditions exceed approved operating limits"
+  },
+  {
+   "unit_id": "S940",
+   "type": "action",
+   "label": "is placed in Turbine Lockout until the fault is assessed and the required work is authorized"
+  },
+  {
+   "unit_id": "S940",
+   "type": "transition",
+   "to": "Turbine Lockout",
+   "trigger": "safety-critical fault"
+  },
+  {
+   "unit_id": "S941",
+   "type": "action",
+   "performer": "Offshore Substation",
+   "label": "enters Substation Degraded when a protection, auxiliary supply, or monitoring impairment limits safe switching or export capability"
+  },
+  {
+   "unit_id": "S941",
+   "type": "transition",
+   "to": "Substation Degraded",
+   "trigger": "a protection, auxiliary supply, or monitoring impairment limits safe switching or export capability"
+  },
+  {
+   "unit_id": "S942",
+   "type": "action",
+   "performer": "Grid Interface Relay",
+   "label": "applies the configured response to a Grid Constraint"
+  },
+  {
+   "unit_id": "S942",
+   "type": "action",
+   "label": "is advised when generation capability changes"
+  },
+  {
+   "unit_id": "S943",
+   "type": "action",
+   "label": "is reduced or suspended in Vessel Standby when weather, visibility, communications, or vessel capability is insufficient for safe transfer"
+  },
+  {
+   "unit_id": "S943",
+   "type": "transition",
+   "to": "Vessel Standby",
+   "trigger": "weather, visibility, communications, or vessel capability is insufficient for safe transfer"
+  },
+  {
+   "unit_id": "S944",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "confirm that personnel and vessels can remain safely accounted for during an extended interruption"
+  },
+  {
+   "unit_id": "S944",
+   "type": "action",
+   "performer": "Vessel Master",
+   "label": "confirm that personnel and vessels can remain safely accounted for during an extended interruption"
+  },
+  {
+   "unit_id": "S945",
+   "type": "action",
+   "label": "are not bypassed to recover production"
+  },
+  {
+   "unit_id": "S946",
+   "type": "action",
+   "performer": "SCADA Gateway",
+   "label": "preserves available status and alarm information"
+  },
+  {
+   "unit_id": "S946",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "investigates missing or inconsistent indications"
+  },
+  {
+   "unit_id": "S947",
+   "type": "action",
+   "performer": "Fleet Dispatch Console",
+   "label": "presents operational restrictions"
+  },
+  {
+   "unit_id": "S947",
+   "type": "flow",
+   "source": "Fleet Dispatch Console",
+   "payload": "operational restrictions"
+  },
+  {
+   "unit_id": "S947",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "can prioritize urgent safety work and maintainable generation capacity"
+  },
+  {
+   "unit_id": "S948",
+   "type": "action",
+   "performer": "Maintenance Planning Engine",
+   "label": "separates safety-critical work from tasks that can safely wait until normal access and support are available"
+  },
+  {
+   "unit_id": "S949",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "reviews any proposed workaround that changes established access, isolation, or personnel-control arrangements"
+  },
+  {
+   "unit_id": "S950",
+   "type": "action",
+   "label": "is escalated when its duration, uncertainty, or effect on adjacent equipment increases beyond the approved operating envelope"
+  },
+  {
+   "unit_id": "S951",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "coordinates technical recovery with the relevant field and shore roles"
+  },
+  {
+   "unit_id": "S951",
+   "type": "action",
+   "label": "is removed"
+  },
+  {
+   "unit_id": "S951",
+   "type": "succession",
+   "before": "coordinates technical recovery with the relevant field and shore roles",
+   "after": "is removed"
+  },
+  {
+   "unit_id": "S952",
+   "type": "action",
+   "label": "has been corrected or bounded"
+  },
+  {
+   "unit_id": "S952",
+   "type": "action",
+   "label": "has confirmed that the equipment is stable"
+  },
+  {
+   "unit_id": "S952",
+   "type": "action",
+   "label": "Recovery begins"
+  },
+  {
+   "unit_id": "S952",
+   "type": "succession",
+   "before": "has been corrected or bounded",
+   "after": "Recovery begins"
+  },
+  {
+   "unit_id": "S952",
+   "type": "succession",
+   "before": "has confirmed that the equipment is stable",
+   "after": "Recovery begins"
+  },
+  {
+   "unit_id": "S953",
+   "type": "action",
+   "label": "are completed"
+  },
+  {
+   "unit_id": "S953",
+   "type": "action",
+   "label": "is returned to automatic control or normal duty"
+  },
+  {
+   "unit_id": "S953",
+   "type": "succession",
+   "before": "are completed",
+   "after": "is returned to automatic control or normal duty"
+  },
+  {
+   "unit_id": "S954",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "verifies that status, alarms, and command feedback are consistent across the available control views"
+  },
+  {
+   "unit_id": "S955",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "updates operating priorities and deferred work"
+  },
+  {
+   "unit_id": "S955",
+   "type": "action",
+   "label": "is confirmed"
+  },
+  {
+   "unit_id": "S955",
+   "type": "succession",
+   "before": "is confirmed",
+   "after": "updates operating priorities and deferred work"
+  },
+  {
+   "unit_id": "S956",
+   "type": "action",
+   "label": "is restored in stages so that a successful response at one level does not conceal a remaining restriction elsewhere"
+  },
+  {
+   "unit_id": "S957",
+   "type": "action",
+   "performer": "offshore wind farm operations and maintenance system",
+   "label": "retains the event record and recovery decisions for review, trend analysis, and improvement of operating procedures"
+  },
+  {
+   "unit_id": "S958",
+   "type": "action",
+   "label": "is governed as a controlled baseline for safe, reliable, and compliant offshore wind farm operations"
+  },
+  {
+   "unit_id": "S959",
+   "type": "action",
+   "performer": "asset operator",
+   "label": "assigns an accountable owner to maintain the document and coordinate its approval"
+  },
+  {
+   "unit_id": "S961",
+   "type": "action",
+   "label": "considers effects on personnel safety, marine coordination, electrical safety, availability, cybersecurity, and regulatory obligations"
+  },
+  {
+   "unit_id": "S963",
+   "type": "action",
+   "performer": "Shore Control Room",
+   "label": "applies the approved operating concept during routine operations and abnormal conditions"
+  },
+  {
+   "unit_id": "S964",
+   "type": "action",
+   "performer": "Control Engineer",
+   "label": "reviews control-room practices and confirms that operational procedures remain consistent with the concept"
+  },
+  {
+   "unit_id": "S965",
+   "type": "action",
+   "performer": "Duty Planner",
+   "label": "checks that maintenance priorities, resource plans, and operational constraints are reflected in planned work"
+  },
+  {
+   "unit_id": "S966",
+   "type": "action",
+   "performer": "Marine Coordinator",
+   "label": "reviews vessel coordination arrangements and verifies that marine responsibilities are understood"
+  },
+  {
+   "unit_id": "S967",
+   "type": "action",
+   "performer": "HSE Officer",
+   "label": "evaluates safety controls, emergency arrangements, and lessons from reported events"
+  },
+  {
+   "unit_id": "S968",
+   "type": "action",
+   "performer": "SCADA Engineer",
+   "label": "reviews monitoring and control assumptions that affect operational decisions"
+  },
+  {
+   "unit_id": "S969",
+   "type": "action",
+   "performer": "Cybersecurity Analyst",
+   "label": "assesses changes that could affect access, communications, or the integrity of operational records"
+  },
+  {
+   "unit_id": "S970",
+   "type": "action",
+   "performer": "Field Supervisor",
+   "label": "confirms that field execution practices and escalation routes are workable for offshore personnel"
+  },
+  {
+   "unit_id": "S971",
+   "type": "action",
+   "performer": "Substation Operator",
+   "label": "reviews responsibilities and coordination arrangements for substation activities"
+  },
+  {
+   "unit_id": "S973",
+   "type": "action",
+   "label": "is retained in controlled repositories with access permissions, revision history, and defined retention periods"
+  },
+  {
+   "unit_id": "S975",
+   "type": "action",
+   "label": "are assigned to an accountable owner with a due date and closure evidence"
+  },
+  {
+   "unit_id": "S976",
+   "type": "action",
+   "performer": "document owner",
+   "label": "schedules periodic review and initiates an additional review after material operational, technical, or regulatory change"
+  },
+  {
+   "unit_id": "S977",
+   "type": "action",
+   "label": "are assessed for their effect on existing procedures, training, interfaces, and resource requirements"
+  },
+  {
+   "unit_id": "S978",
+   "type": "action",
+   "label": "are checked by affected operational and technical representatives before submission to the designated approver"
+  },
+  {
+   "unit_id": "S979",
+   "type": "action",
+   "performer": "approver",
+   "label": "confirms that comments are resolved or explicitly accepted"
+  },
+  {
+   "unit_id": "S979",
+   "type": "action",
+   "label": "is released"
+  },
+  {
+   "unit_id": "S979",
+   "type": "succession",
+   "before": "confirms that comments are resolved or explicitly accepted",
+   "after": "is released"
+  },
+  {
+   "unit_id": "S981",
+   "type": "action",
+   "performer": "Personnel",
+   "label": "receive appropriate communication or training before the change takes effect"
+  },
+  {
+   "unit_id": "S982",
+   "type": "action",
+   "label": "are not treated as changes to the operating concept and are escalated through established governance channels"
+  },
+  {
+   "unit_id": "S983",
+   "type": "action",
+   "label": "periodically evaluates whether assurance arrangements provide sufficient evidence that the concept remains effective"
+  }
+ ],
+ "entities": [
+  {
+   "name": "offshore wind farm",
+   "aliases": []
+  },
+  {
+   "name": "offshore wind farm operations and maintenance system",
+   "aliases": []
+  },
+  {
+   "name": "turbine structures",
+   "aliases": []
+  },
+  {
+   "name": "turbines",
+   "aliases": []
+  },
+  {
+   "name": "Offshore Substation",
+   "aliases": [
+    "Morrowick"
+   ]
+  },
+  {
+   "name": "Grid Interface Relay",
+   "aliases": [
+    "Wildmere"
+   ]
+  },
+  {
+   "name": "external grid",
+   "aliases": []
+  },
+  {
+   "name": "Turbine Controller",
+   "aliases": [
+    "Glassfin"
+   ]
+  },
+  {
+   "name": "Pitch System",
+   "aliases": []
+  },
+  {
+   "name": "Converter Cabinet",
+   "aliases": []
+  },
+  {
+   "name": "Nacelle Condition Monitor",
+   "aliases": []
+  },
+  {
+   "name": "Rotor Brake Unit",
+   "aliases": []
+  },
+  {
+   "name": "Turbine Sensor Bus",
+   "aliases": []
+  },
+  {
+   "name": "Main Transformer",
+   "aliases": []
+  },
+  {
+   "name": "Export Cable Monitor",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Gateway",
+   "aliases": [
+    "Juniper Vale"
+   ]
+  },
+  {
+   "name": "Shore Control Room",
+   "aliases": [
+    "Amber Quay"
+   ]
+  },
+  {
+   "name": "Fleet Dispatch Console",
+   "aliases": [
+    "Sable Orchard"
+   ]
+  },
+  {
+   "name": "Maintenance Planning Engine",
+   "aliases": [
+    "Thistle Crown"
+   ]
+  },
+  {
+   "name": "Crew Transfer Vessel",
+   "aliases": [
+    "Kestrel Bay"
+   ]
+  },
+  {
+   "name": "Daughter Craft",
+   "aliases": []
+  },
+  {
+   "name": "Service Operations Vessel",
+   "aliases": []
+  },
+  {
+   "name": "Helideck",
+   "aliases": []
+  },
+  {
+   "name": "North Access Scanner",
+   "aliases": []
+  },
+  {
+   "name": "South Access Scanner",
+   "aliases": []
+  },
+  {
+   "name": "Personnel Tracking Console",
+   "aliases": []
+  },
+  {
+   "name": "Warehouse System",
+   "aliases": [
+    "Mosslight"
+   ]
+  },
+  {
+   "name": "Spares Hub",
+   "aliases": []
+  },
+  {
+   "name": "Weather Service",
+   "aliases": [
+    "Pale Lantern"
+   ]
+  },
+  {
+   "name": "Blade Inspection Drone",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Metocean Buoy",
+   "aliases": [
+    "Copper Finch"
+   ]
+  },
+  {
+   "name": "Work Permit Portal",
+   "aliases": [
+    "Redoubt"
+   ]
+  },
+  {
+   "name": "Cybersecurity Gateway",
+   "aliases": [
+    "Quiet Harbor"
+   ]
+  },
+  {
+   "name": "Pitch Deviation Notice",
+   "aliases": []
+  },
+  {
+   "name": "SCADA Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Control Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Duty Planner",
+   "aliases": []
+  },
+  {
+   "name": "Marine Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Field Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "Vessel Master",
+   "aliases": []
+  },
+  {
+   "name": "Squall Window Bulletin",
+   "aliases": []
+  },
+  {
+   "name": "Weather Analyst",
+   "aliases": []
+  },
+  {
+   "name": "Weather Hold",
+   "aliases": []
+  },
+  {
+   "name": "Storekeeper",
+   "aliases": []
+  },
+  {
+   "name": "Port Agent",
+   "aliases": []
+  },
+  {
+   "name": "HSE Officer",
+   "aliases": []
+  },
+  {
+   "name": "operating organization",
+   "aliases": []
+  },
+  {
+   "name": "Sensors",
+   "aliases": []
+  },
+  {
+   "name": "onboard logger",
+   "aliases": []
+  },
+  {
+   "name": "Vessel AIS Receiver",
+   "aliases": [
+    "Blue Granite"
+   ]
+  },
+  {
+   "name": "Position Quality Flag",
+   "aliases": []
+  },
+  {
+   "name": "Cybersecurity Analyst",
+   "aliases": []
+  },
+  {
+   "name": "Transfer Manifest Addendum",
+   "aliases": []
+  },
+  {
+   "name": "Blade Specialist",
+   "aliases": []
+  },
+  {
+   "name": "requester",
+   "aliases": []
+  },
+  {
+   "name": "Technical reviewers",
+   "aliases": []
+  },
+  {
+   "name": "Backorder Exception Slip",
+   "aliases": []
+  },
+  {
+   "name": "designated authorizing role",
+   "aliases": []
+  },
+  {
+   "name": "responsible team",
+   "aliases": []
+  },
+  {
+   "name": "permit reviewers",
+   "aliases": []
+  },
+  {
+   "name": "station service transformers",
+   "aliases": []
+  },
+  {
+   "name": "medium-voltage collection system",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Generator",
+   "aliases": [
+    "Foxglove"
+   ]
+  },
+  {
+   "name": "automatic controls",
+   "aliases": []
+  },
+  {
+   "name": "emergency bus",
+   "aliases": []
+  },
+  {
+   "name": "emergency distribution bus",
+   "aliases": []
+  },
+  {
+   "name": "Operators",
+   "aliases": []
+  },
+  {
+   "name": "Electrical Technician",
+   "aliases": []
+  },
+  {
+   "name": "Substation Operator",
+   "aliases": []
+  },
+  {
+   "name": "Wave Burst Record",
+   "aliases": []
+  },
+  {
+   "name": "external transmission system",
+   "aliases": []
+  },
+  {
+   "name": "export cable",
+   "aliases": []
+  },
+  {
+   "name": "grid connection point",
+   "aliases": []
+  },
+  {
+   "name": "transmission system",
+   "aliases": []
+  },
+  {
+   "name": "Grid Dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "Grid Constraint",
+   "aliases": []
+  },
+  {
+   "name": "Session Revocation Receipt",
+   "aliases": []
+  },
+  {
+   "name": "Harness Audit Card",
+   "aliases": []
+  },
+  {
+   "name": "Operations Radio Console",
+   "aliases": []
+  },
+  {
+   "name": "Rescue Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Transformer Tap Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "team",
+   "aliases": []
+  },
+  {
+   "name": "Vessel Standby",
+   "aliases": []
+  },
+  {
+   "name": "Deferred Task Rationale",
+   "aliases": []
+  },
+  {
+   "name": "monitoring process",
+   "aliases": []
+  },
+  {
+   "name": "Leading Edge Tile Image",
+   "aliases": []
+  },
+  {
+   "name": "Berth Slot Confirmation",
+   "aliases": []
+  },
+  {
+   "name": "Turbine Lockout",
+   "aliases": []
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "Fire Detection Panel",
+   "aliases": []
+  },
+  {
+   "name": "Start Test Trace",
+   "aliases": []
+  },
+  {
+   "name": "Substation Degraded",
+   "aliases": []
+  },
+  {
+   "name": "Shift records",
+   "aliases": []
+  },
+  {
+   "name": "Export Limit Advisory",
+   "aliases": []
+  },
+  {
+   "name": "Crew Count Correction",
+   "aliases": []
+  },
+  {
+   "name": "Personnel",
+   "aliases": []
+  },
+  {
+   "name": "responsible supervisor",
+   "aliases": []
+  },
+  {
+   "name": "Accountability records",
+   "aliases": []
+  },
+  {
+   "name": "on-duty operations lead",
+   "aliases": []
+  },
+  {
+   "name": "Firmware Hash Attestation",
+   "aliases": []
+  },
+  {
+   "name": "incident lead",
+   "aliases": []
+  },
+  {
+   "name": "technical teams",
+   "aliases": []
+  },
+  {
+   "name": "operations management",
+   "aliases": []
+  },
+  {
+   "name": "Recovery Basket Load Sheet",
+   "aliases": []
+  },
+  {
+   "name": "Visibility Confidence Note",
+   "aliases": []
+  },
+  {
+   "name": "Isolation Boundary Sketch",
+   "aliases": []
+  },
+  {
+   "name": "outgoing supervisor",
+   "aliases": []
+  },
+  {
+   "name": "incoming supervisor",
+   "aliases": []
+  },
+  {
+   "name": "Switching Window Acknowledgment",
+   "aliases": []
+  },
+  {
+   "name": "switching operator",
+   "aliases": []
+  },
+  {
+   "name": "operations team",
+   "aliases": []
+  },
+  {
+   "name": "operational software component",
+   "aliases": []
+  },
+  {
+   "name": "Reviewers",
+   "aliases": []
+  },
+  {
+   "name": "recovery baskets",
+   "aliases": []
+  },
+  {
+   "name": "work party",
+   "aliases": []
+  },
+  {
+   "name": "control team",
+   "aliases": []
+  },
+  {
+   "name": "qualified technician",
+   "aliases": []
+  },
+  {
+   "name": "Control room staff",
+   "aliases": []
+  },
+  {
+   "name": "field team",
+   "aliases": []
+  },
+  {
+   "name": "incoming team",
+   "aliases": []
+  },
+  {
+   "name": "receiver",
+   "aliases": []
+  },
+  {
+   "name": "sender",
+   "aliases": []
+  },
+  {
+   "name": "organization",
+   "aliases": []
+  },
+  {
+   "name": "responsible manager",
+   "aliases": []
+  },
+  {
+   "name": "Offshore personnel",
+   "aliases": []
+  },
+  {
+   "name": "response lead",
+   "aliases": []
+  },
+  {
+   "name": "incident response team",
+   "aliases": []
+  },
+  {
+   "name": "credential",
+   "aliases": []
+  },
+  {
+   "name": "person",
+   "aliases": []
+  },
+  {
+   "name": "gate",
+   "aliases": []
+  },
+  {
+   "name": "transaction",
+   "aliases": []
+  },
+  {
+   "name": "audit record",
+   "aliases": []
+  },
+  {
+   "name": "contingency process",
+   "aliases": []
+  },
+  {
+   "name": "entrant",
+   "aliases": []
+  },
+  {
+   "name": "local visual indicator",
+   "aliases": []
+  },
+  {
+   "name": "entry barrier",
+   "aliases": []
+  },
+  {
+   "name": "Visitors",
+   "aliases": []
+  },
+  {
+   "name": "temporary personnel",
+   "aliases": []
+  },
+  {
+   "name": "installation team",
+   "aliases": []
+  },
+  {
+   "name": "East Service Lift",
+   "aliases": []
+  },
+  {
+   "name": "inspector",
+   "aliases": []
+  },
+  {
+   "name": "Door interlocks",
+   "aliases": []
+  },
+  {
+   "name": "emergency stop",
+   "aliases": []
+  },
+  {
+   "name": "alarm",
+   "aliases": []
+  },
+  {
+   "name": "hoist",
+   "aliases": []
+  },
+  {
+   "name": "suspension points",
+   "aliases": []
+  },
+  {
+   "name": "cable sections",
+   "aliases": []
+  },
+  {
+   "name": "maintenance system",
+   "aliases": []
+  },
+  {
+   "name": "users",
+   "aliases": []
+  },
+  {
+   "name": "West Service Lift",
+   "aliases": []
+  },
+  {
+   "name": "Lighting",
+   "aliases": []
+  },
+  {
+   "name": "Protective devices",
+   "aliases": []
+  },
+  {
+   "name": "Passengers",
+   "aliases": []
+  },
+  {
+   "name": "occupants",
+   "aliases": []
+  },
+  {
+   "name": "response team",
+   "aliases": []
+  },
+  {
+   "name": "Review teams",
+   "aliases": []
+  },
+  {
+   "name": "asset operator",
+   "aliases": []
+  },
+  {
+   "name": "document owner",
+   "aliases": []
+  },
+  {
+   "name": "approver",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S983"
+   ],
+   "chunk_tokens": 18264,
+   "memory_tokens": 0,
+   "prompt_tokens": 21849,
+   "input": 22055,
+   "output": 47385,
+   "reasoning": 516,
+   "cached": false
+  }
+ ],
+ "wall_s": 553.8
+}

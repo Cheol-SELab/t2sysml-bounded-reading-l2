@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ramp Control Lead provides \"the Apron Sweep Completion Note\" to Airport Duty Manager (an information or material flow).\n\nSource sentences:\nS646: The Ramp Movement Board displays stand readiness status using time-stamped states that distinguish unchecked, under inspection, cleaned, blocked, and ready conditions.\nS647: Ramp Control Lead sends the Apron Sweep Completion Note after the responsible sweep team confirms that the assigned apron area is clean, safe, and free of observed foreign object debris.\nS677: The Ramp Control Lead confirms that the revised sequence remains compatible with stand occupancy, pushback spacing, and tug availability shown on the Ramp Movement Board.\nS678: Airport Duty Manager uses the Apron Sweep Completion Note to confirm that apron availability constraints do not invalidate an approved substitution.\n\nAnswer \"supported\" only if the sentences state that Ramp Control Lead produces or sends this item AND that Airport Duty Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S647 states that Ramp Control Lead sends the Apron Sweep Completion Note, and S678 states that Airport Duty Manager uses the same note.\"}",
+ "usage": {
+  "input_tokens": 331,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 376
+ },
+ "attempts": 1,
+ "wall_s": 2.983,
+ "created": "2026-10-14T12:46:54"
+}

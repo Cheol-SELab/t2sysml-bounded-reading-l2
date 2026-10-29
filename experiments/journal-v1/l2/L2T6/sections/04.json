@@ -1,0 +1,116 @@
+{
+ "sentences": [
+  {
+   "text": "The Baggage Control System loads the approved sort plan and applies its effective time window before bags enter sortation.",
+   "tags": []
+  },
+  {
+   "text": "Lantern is the operational alias used for the Flight Data Gateway in sortation coordination.",
+   "tags": [
+    "ALIAS:E_FLIGHT_DATA_GATEWAY"
+   ]
+  },
+  {
+   "text": "The Baggage Control System checks the plan against current flight and handling records before assigning a route.",
+   "tags": []
+  },
+  {
+   "text": "The Concourse Zone Controller coordinates local conveyor availability with the active sort plan.",
+   "tags": []
+  },
+  {
+   "text": "The Induction Tray Conveyor presents bags at controlled spacing so each bag can be identified before route selection.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Crossbelt Sorter applies the assigned destination and screening status to each identified bag.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Crossbelt Sorter sends a Chute Occupancy Note when a destination lane approaches its configured limit.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "Route selection favors the approved path with adequate capacity and sufficient time for the planned handling.",
+   "tags": []
+  },
+  {
+   "text": "The North Gate Scanner and South Gate Scanner verify bag identity at their respective route decision points.",
+   "tags": []
+  },
+  {
+   "text": "A scan mismatch prevents the bag from continuing on a route that depends on the unresolved identity.",
+   "tags": []
+  },
+  {
+   "text": "Congestion awareness uses current lane availability, conveyor stops, and the observed rate of incoming bags.",
+   "tags": []
+  },
+  {
+   "text": "The Baggage Operations Supervisor sets local congestion thresholds and confirms the authorized response to sustained overload.",
+   "tags": []
+  },
+  {
+   "text": "Tern is the operational alias used for the Baggage Operations Supervisor in sortation coordination.",
+   "tags": [
+    "ALIAS:E_OPERATIONS_SUPERVISOR"
+   ]
+  },
+  {
+   "text": "When a planned lane is unavailable, the Baggage Control System selects an approved alternate route only if screening status and flight timing remain valid.",
+   "tags": []
+  },
+  {
+   "text": "Bags with an unresolved destination or a route outside their handling limits are diverted to the Secondary Inspection Chute.",
+   "tags": []
+  },
+  {
+   "text": "The Image Resolution Desk resolves image-related holds before affected bags are returned to normal sortation.",
+   "tags": []
+  },
+  {
+   "text": "The Explosives Response Team manages security holds under the applicable response procedures.",
+   "tags": []
+  },
+  {
+   "text": "A bag returns to normal handling only after its identity, examination outcome, and routing authorization agree.",
+   "tags": []
+  },
+  {
+   "text": "The East Make-Up Conveyor and West Make-Up Conveyor are selected according to the active plan and available capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Carousel 7 Make-Up Unit operates within its assigned flight window and reports when its usable capacity is constrained.",
+   "tags": []
+  },
+  {
+   "text": "The Transfer Bag Feeder continues to hold transfer bags until screening status and intended onward handling are confirmed.",
+   "tags": []
+  },
+  {
+   "text": "The Bag Reconciliation Station compares bag identity with the active handling record and flags unresolved discrepancies.",
+   "tags": []
+  },
+  {
+   "text": "The Bag Reconciliation Station sends a Bag Match Query when bag identity cannot be reconciled with the active handling record.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "text": "Bags found on a stopped or misdirected path are held from onward movement until their location and identity are established.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Technician isolates a failed conveyor section and confirms that the route is safe before service resumes.",
+   "tags": []
+  },
+  {
+   "text": "The Baggage Operations Supervisor authorizes recovery to the approved sort plan after the cause of the abnormal path has been addressed.",
+   "tags": []
+  }
+ ]
+}

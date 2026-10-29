@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport CDM Portal provides \"resource-driven feasibility status\" to model (an information or material flow).\n\nSource sentences:\nS311: The Ramp Movement Board shows occupied stands, blocked service roads, and pending pushback areas so that handling constraints can be compared with the aircraft sequence before a revised time is published.\nS312: The Airport CDM Portal presents the resource-driven feasibility status to the Airline Operations Coordinator and the Aircraft Operator Representative to support early negotiation rather than last-minute rejection.\nS618: The Airline Interface Adapter accepts legality indicators that describe whether a proposed departure, arrival, or aircraft swap remains feasible within declared crew duty limits.\nS619: The model uses time thresholds, qualification flags, and pairing feasibility status, but it does not require names, pay rules, hotel arrangements, or internal crew roster details.\n\nAnswer \"supported\" only if the sentences state that Airport CDM Portal produces or sends this item AND that model receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S312 says the portal presents the resource-driven feasibility status to the Airline Operations Coordinator and Aircraft Operator Representative, who are people rather than the model, and S619 mentions only pairing feasibility status as a model input, which is a different item.\"}",
+ "usage": {
+  "input_tokens": 746,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 101,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.675,
+ "created": "2026-10-14T12:45:29"
+}

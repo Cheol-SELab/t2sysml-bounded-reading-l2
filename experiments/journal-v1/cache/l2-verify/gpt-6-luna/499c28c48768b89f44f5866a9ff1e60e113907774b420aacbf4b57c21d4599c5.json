@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: dispatch staff provides \"contact\" to Radio Coordinator (an information or material flow).\n\nSource sentences:\nS116: The dispatcher corrects any discrepancy through a fresh transmission rather than relying on an unclear acknowledgment.\nS117: If the assigned unit does not acknowledge promptly, the Radio Coordinator attempts contact again and alerts the dispatch supervisor.\nS210: Triage Supervisor identifies calls whose clinical priority requires immediate radio access and communicates that priority to dispatch staff.\nS211: Call Taker Mara keeps the caller connected when feasible while dispatch staff attempt to reach the assigned crew through an approved alternate channel.\n\nAnswer \"supported\" only if the sentences state that dispatch staff produces or sends this item AND that Radio Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"Dispatch staff attempt to reach the assigned crew, while the Radio Coordinator attempts contact again; the text does not say dispatch staff provides contact to the Radio Coordinator.\"}",
+ "usage": {
+  "input_tokens": 292,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 151,
+  "output_tokens_details": {
+   "reasoning_tokens": 101
+  },
+  "total_tokens": 443
+ },
+ "attempts": 1,
+ "wall_s": 2.335,
+ "created": "2026-10-13T23:47:08"
+}

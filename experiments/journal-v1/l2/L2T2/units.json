@@ -1,0 +1,1547 @@
+{
+ "doc_id": "L2T2",
+ "title": "Operational Concept for Automated Medication Dispensing and Delivery",
+ "writer": "gpt-6-luna",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "This section defines the mission, scope, and operating roles for automated medication dispensing and medication returns in the hospital.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The workflow is intended to support timely fulfillment while preserving pharmacist oversight, medication traceability, and clinical control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "The concept covers order intake, pharmacy preparation and verification, ward access, and the initial handling of returned medication.",
+   "tags": []
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "In this concept, the Pharmacy Fulfillment Robot is called Cinderwake.",
+   "tags": [
+    "ALIAS:E_PHARMACY_ROBOT"
+   ]
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "In this concept, the Pharmacy Verification Station is called Juniper.",
+   "tags": [
+    "ALIAS:E_VERIFICATION_STATION"
+   ]
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "In this concept, the Medication Return Kiosk is called Tallowmere.",
+   "tags": [
+    "ALIAS:E_RETURN_KIOSK"
+   ]
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "In this concept, the Registered Nurse is called Larkspur.",
+   "tags": [
+    "ALIAS:E_REGISTERED_NURSE"
+   ]
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "The Medication Order Gateway provides the controlled entry point for medication orders and communicates order status to authorized hospital systems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The Clinical Pharmacist reviews clinical appropriateness and resolves medication questions that require professional judgment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "The Pharmacy Technician performs routine preparation tasks within approved procedures and escalates discrepancies to the Clinical Pharmacist.",
+   "tags": []
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag for eligible refill work.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The Clinical Pharmacist produces the Dose Exception Review Slip when an order requires a documented exception review.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The Pharmacy Fulfillment Robot prepares eligible medication against the active order and records its handling actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The Pharmacy Verification Station supports a final verification step before medication is released for delivery or ward access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "The Sensor-monitored Medication Cooler maintains monitored storage conditions for medication that requires temperature control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The East Tube Dispatch Console and West Tube Dispatch Console provide controlled interfaces for routing authorized pharmacy deliveries.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "The Pneumatic Tube Network carries compatible deliveries between designated hospital locations under established routing procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "Ward medication access remains subject to local authorization, patient-care requirements, and applicable cabinet controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The Charge Nurse coordinates ward readiness, communicates operational constraints, and supports escalation when dispensing service is disrupted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The Medication Return Kiosk provides a controlled point for recording medication returns and capturing return details.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "The Medication Return Kiosk produces the Return Bin Audit Label for a recorded return transaction.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "Returned medication remains segregated from usable stock until its disposition has been assessed under hospital procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "The Hospital Courier supports authorized movement of medication and returns when automated routes are unavailable or unsuitable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "The Biomedical Engineer maintains supported equipment, while the IT Operations Specialist monitors system connectivity and service availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 1,
+   "text": "The Medication Safety Officer oversees safety concerns, reviews relevant trends, and supports updates to medication handling procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 2,
+   "text": "The Medication Order Gateway is called Morrowglass in this concept.",
+   "tags": [
+    "ALIAS:E_ORDER_GATEWAY"
+   ]
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "The Sensor-monitored Medication Cooler is called Bluejay in this concept.",
+   "tags": [
+    "ALIAS:E_MEDICATION_COOLER"
+   ]
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "The Pharmacy Technician is called Copperfield in this concept.",
+   "tags": [
+    "ALIAS:E_PHARMACY_TECHNICIAN"
+   ]
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "The Medication Order Gateway accepts medication orders from authorized clinical systems and records their arrival times.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "It checks required order fields, patient identifiers, medication codes, quantities, and destination details before routing an order for pharmacy review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "The gateway flags missing data, duplicate submissions, and changes that conflict with the active order record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "The Medication Order Gateway produces the Order Reconciliation Snapshot for documenting detected order discrepancies.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "The Pharmacy Verification Station displays queued orders and their validation results for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "The Clinical Pharmacist evaluates clinical appropriateness, dose limits, allergies, and relevant interactions before approving an order.",
+   "tags": []
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "The Pharmacy Technician investigates administrative discrepancies and requests clarification through approved clinical channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "Unresolved discrepancies keep an order from advancing to preparation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "The Pharmacy Fulfillment Robot prepares only orders that have passed the required review and authorization checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "The Sensor-monitored Medication Cooler maintains refrigerated medications within the facility's approved temperature range.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "Continuous sensors record temperature readings and report excursions or loss of monitoring connectivity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "The Pharmacy Technician checks the cooler's status and confirms that refrigerated stock remains within handling limits before use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "The Pharmacy Technician produces the Cold Chain Handoff Card to document custody and handling conditions.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "When an excursion occurs, affected stock is segregated pending assessment and disposition by authorized pharmacy staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "Temperature records are retained with timestamps so reviewers can establish the duration and extent of an excursion.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "The Clinical Pharmacist determines whether affected medication remains suitable for dispensing under approved procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "The Pharmacy Technician checks packaging, product identity, lot details, and expiry information during routine stock handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "The Medication Safety Officer reviews patterns of discrepancies and handling events for potential safety concerns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "The Medication Safety Officer produces the Diversion Review Packet when a diversion concern requires documented review.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "The Pharmacy Verification Station preserves review decisions and order status changes in an auditable record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "Orders remain unavailable for dispensing until required checks are complete and their status is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 3,
+   "text": "The Biomedical Engineer, known locally as Stonewake, supports technical recovery for dispensing and transport equipment.",
+   "tags": [
+    "ALIAS:E_BIOMED_ENGINEER"
+   ]
+  },
+  {
+   "unit_id": "S051",
+   "section": 3,
+   "text": "The East Tube Dispatch Console monitors capsule movement and records route, timing, and equipment status for each dispatch.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 3,
+   "text": "The East Tube Dispatch Console sends a Tube Route Exception Ticket when a dispatch cannot follow its assigned route or complete delivery within the configured interval.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "Dispatch personnel hold affected capsules and prevent additional traffic from entering a route with an unresolved fault.",
+   "tags": []
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "Operations staff review queue status and coordinate any approved alternate route with the affected wards.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "The Pneumatic Tube Network remains unavailable on a segment until testing confirms that it is safe for service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "A Pharmacy Technician verifies capsule contents and order identifiers before a delayed medication is released for another delivery attempt.",
+   "tags": []
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "The Clinical Pharmacist reviews any medication whose storage conditions or delivery timing may affect its suitability for use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "The Registered Nurse confirms whether the ward still requires the medication and follows the approved contingency process if delivery is delayed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "The Charge Nurse keeps ward staff informed about expected delivery delays and any approved local workaround.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "The Biomedical Engineer inspects tube hardware, switches, and sensors when a route fault indicates a physical problem.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "The IT Operations Specialist checks console connectivity, interface health, and relevant system logs when a fault may be software related.",
+   "tags": []
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "Dispatch resumes only after the affected route has passed its required checks and operations has authorized its return to use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "Cabinet downtime is coordinated as a controlled service interruption so ward staff can use an approved alternative without losing medication accountability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "The Charge Nurse sends a Cabinet Downtime Notice when a cabinet must be taken out of service or cannot support normal dispensing.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "The affected ward follows its approved contingency procedure and confirms access to an authorized dispensing location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The North Ward Cabinet Controller reports cabinet availability and prevents dispensing when its recorded state is Out of Service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "The South Ward Cabinet Controller applies the same availability controls for its assigned ward.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "The Biomedical Engineer evaluates cabinet hardware and verifies safe operation after repair or component replacement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "The IT Operations Specialist checks controller communications and application health when cabinet access or status reporting is impaired.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "The Charge Nurse confirms that clinical staff have been notified before normal cabinet use is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "The responsible technical staff document the fault, corrective action, and verification results in the applicable service record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "A cabinet remains unavailable until its controller reports Ready for Dispense and required operational checks are complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "Operations closes the interruption only after staff confirm that dispensing and delivery workflows are functioning as intended.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 4,
+   "text": "Final pharmacy release occurs only after the order, prepared medication, and intended destination have been checked against the approved dispensing instructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S075",
+   "section": 4,
+   "text": "The Clinical Pharmacist reviews clinical and labeling exceptions that require professional judgment before authorizing release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 4,
+   "text": "The Pharmacy Technician confirms that the package contents and patient identifiers match the verified order.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "The Pharmacy Fulfillment Robot presents the completed package at the Pharmacy Verification Station for the final check.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "The Pharmacy Verification Station records the verification outcome and prevents release while required checks remain incomplete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The Pharmacy Verification Station produces the Batch Release Note after the final release checks are recorded.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "The release decision is associated with the order identifier, package identifier, verification time, and responsible staff credentials.",
+   "tags": []
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "The Medication Order Gateway provides the current order status used to confirm that the request remains valid.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "A canceled, duplicated, or superseded request is held for resolution rather than placed into a delivery load.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "The Clinical Pharmacist documents the disposition of any clinical concern before the package can proceed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "Supporting records are prepared before a load enters the delivery network so staff can establish what was released and under which conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "The load manifest identifies each package, its intended destination, handling requirements, and the time it was assembled.",
+   "tags": []
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "Package identifiers are checked against the manifest to detect omissions, substitutions, or duplicate entries.",
+   "tags": []
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "Temperature-sensitive packages remain under controlled conditions until their custody is formally transferred.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "The Sensor-monitored Medication Cooler records temperature conditions while medication awaits transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "At the physical handoff, the Hospital Courier checks package count, packaging integrity, destination information, and any special handling instructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "The courier records the time and identity associated with acceptance so the custody history remains traceable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "The Hospital Courier produces the Pneumatic Capsule Seal Record when the capsule is sealed for transfer.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "The courier verifies that the capsule is closed securely and that its contents are not exposed during handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "The Pneumatic Tube Network accepts only loads that meet the applicable packaging and routing requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "The East Tube Dispatch Console checks the requested route and reports whether the route is available for dispatch.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "Before a capsule is admitted, its package identifiers and destination are reconciled with the prepared load information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "A route or packaging problem places the load on hold until staff resolve the condition and document the outcome.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "If automated transfer is unavailable, staff retain custody and use an approved alternate delivery procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "The receiving department confirms arrival and reports any discrepancy through the established operational process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 5,
+   "text": "Ward staff perform a receipt check on each arriving load before placing medication in a cabinet or transferring custody.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 5,
+   "text": "A Registered Nurse or other authorized ward staff member verifies that the load is intended for the ward.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "North Ward Cabinet Controller records the arrival time and the destination cabinet for loads assigned to the north ward.",
+   "tags": []
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "South Ward Cabinet Controller records the arrival time and the destination cabinet for loads assigned to the south ward.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "North Ward Cabinet Controller uses the Priority Refill Tote Tag to confirm the intended ward before staff accept a tote.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "Staff inspect the outer packaging for damage, moisture, tampering, or other signs that the load may be unsafe to handle.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "Ward staff compare package identifiers with the cabinet task list and confirm that the identifiers are legible.",
+   "tags": []
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "Cabinet staff verify the quantity and medication descriptions against the expected receipt record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "For refrigerated medication, a Registered Nurse checks that the load remained within the required handling conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "Sensor-monitored Medication Cooler displays the current temperature and any recorded excursion for staff review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "Staff isolate a load when its identity, quantity, packaging, or temperature condition does not match the expected receipt.",
+   "tags": []
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "Staff do not place an unresolved load into active cabinet stock.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "Accepted medication is staged in the designated receiving area until cabinet placement is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "The ward records receipt completion and any discrepancy through the established operational process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "Ward staff check return bins before use to confirm that each bin is intact, clean, and assigned to the correct return stream.",
+   "tags": []
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "A Registered Nurse confirms that the contents are eligible for return and are separated from waste and non-medication items.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "Staff check that each return bin closes securely and that its contents do not obstruct the closure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "Tallowmere guides ward staff through return-bin checks and records each check outcome for follow-up.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "The Pharmacy Technician uses the audit label to identify a return bin for the scheduled collection.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "Staff reconcile the bin contents with the return entry before the bin is closed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "Questionable or damaged returned medication is segregated and referred for review rather than combined with accepted returns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "A checked return bin remains secured in its designated holding location until collection is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "The Hospital Courier collects only bins that are closed and recorded as ready for collection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "The Charge Nurse ensures that unresolved receipt or return discrepancies remain assigned for follow-up at shift handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 6,
+   "text": "A dose exception is any mismatch, omission, duplicate request, or clinically implausible value detected before a medication is released for use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S124",
+   "section": 6,
+   "text": "The affected transaction remains on hold until an authorized reviewer documents a disposition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S125",
+   "section": 6,
+   "text": "The Pharmacy Fulfillment Robot stops the affected pick sequence and keeps the package in a controlled hold location pending review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 6,
+   "text": "Cinderwake preserves the scanned product and quantity data associated with the exception.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "Juniper compares the active order with the scanned product, strength, and measured quantity, and blocks verification when a field differs.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "Pharmacy Verification Station uses the review slip to record the exception category, evidence checked, disposition, and reviewer identity.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "The Clinical Pharmacist assesses dose, route, timing, and patient-specific clinical concerns before approving a correction or rejecting the order.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "A correction requires a valid authorized order and must not be inferred from prior dispensing history.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "Larkspur keeps the cabinet transaction locked and confirms that the medication has not been administered while review is pending.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "The Registered Nurse escalates an urgent patient-care concern to the Clinical Pharmacist and follows the hospital's clinical response procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "The Registered Nurse does not bypass a hold or substitute a product to clear an exception.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "The Charge Nurse assigns unresolved exceptions to a named role and confirms that ownership is maintained at shift handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "The Pharmacy Technician may gather package and transaction evidence but may not make a clinical dose decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "The Medication Order Gateway rejects incomplete or internally inconsistent order updates and retains the rejection reason for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "The North Ward Cabinet Controller prevents access to a held transaction until an authorized disposition is recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "The South Ward Cabinet Controller reports a failed lock or an unrecognized access attempt for immediate operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "The Sensor-monitored Medication Cooler reports excursions that could affect medication suitability, and affected stock remains unavailable pending assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "The Medication Safety Officer reviews suspected diversion, repeated high-risk exceptions, and events with potential for patient harm.",
+   "tags": []
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "IT Operations Specialist receives the Diversion Review Packet and checks access, transaction, and device logs without changing the clinical disposition.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "The Biomedical Engineer evaluates a suspected mechanical or sensor fault and advises whether the affected equipment can safely return to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "The IT Operations Specialist investigates software or connectivity faults and records the technical findings for the responsible operational team.",
+   "tags": []
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "A serious or time-critical exception is escalated immediately by the observing staff member rather than held for routine review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "If the clinical review remains inconclusive, the transaction stays on hold and the Clinical Pharmacist seeks a higher-level clinical decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "The final disposition records who reviewed the exception, what evidence supported the decision, and whether the medication was released, corrected, or withheld.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 7,
+   "text": "Morrowglass validates each medication order for patient, product, dose, route, and timing fields before making it available for downstream processing.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S148",
+   "section": 7,
+   "text": "Copperfield confirms that the reconciliation queue has no unresolved discrepancy before authorizing routine cabinet replenishment.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S149",
+   "section": 7,
+   "text": "Pharmacy Fulfillment Robot uses the Order Reconciliation Snapshot to compare requested quantities with completed dispense events and current cabinet balances.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S150",
+   "section": 7,
+   "text": "Reconciliation compares the active order record with dispensing and cabinet records using a stable order identifier.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 7,
+   "text": "The comparison preserves the order context needed to distinguish a new request from a correction or a repeat submission.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "Pharmacy Fulfillment Robot retains the patient, medication, dose, route, and timing details associated with each order while preparing a dispense transaction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "It also checks whether the order is active and whether its authorization remains valid at the time of processing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "A cancelled order is excluded from routine preparation even when a matching dispense request remains in a local queue.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "A corrected order is treated as a new authoritative version, and superseded values are not carried forward.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "Duplicate submissions are flagged for review rather than converted into additional cabinet quantity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "Partial dispensing is reconciled against the quantity already recorded so that remaining quantity is calculated conservatively.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "Time stamps and transaction identifiers are retained to support comparison across records that arrive at different times.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "When the records disagree on patient, medication, or quantity, the affected transaction remains on hold until the discrepancy is resolved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "The reconciliation outcome records the matched values, unresolved differences, and disposition for subsequent audit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "North Ward Cabinet Controller applies the North Ward medication access rules when evaluating a cabinet transaction.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "Its ward-specific configuration defines permitted medication locations, access roles, and transaction limits for each cabinet.",
+   "tags": []
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "The configuration associates each medication location with the product identifiers and quantity thresholds used by the ward.",
+   "tags": []
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "Cabinet availability is calculated from the last confirmed inventory count and subsequent recorded movements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "Configured maximum and minimum quantities guide replenishment decisions without overriding an active clinical restriction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "Access rules require an authenticated user role appropriate to the requested medication and transaction type.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "High-risk medication locations can require an additional confirmation before a removal is accepted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "The controller rejects a transaction when its location mapping does not match the reconciled medication identity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "Configuration changes are versioned, reviewed, and recorded with the effective time and approving authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "If the controller has not received a current approved configuration, it prevents routine dispensing and reports the condition for investigation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 8,
+   "text": "Bluejay maintains a time-stamped temperature history for each refrigerated medication compartment and raises an alarm when a configured limit is exceeded.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S172",
+   "section": 8,
+   "text": "Sensor-monitored Medication Cooler applies approved upper and lower temperature limits to each monitored compartment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 8,
+   "text": "Calibrated probes report readings at configured intervals, and the cooler records probe identity and calibration status with each reading.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 8,
+   "text": "Refrigerated stock is identified by medication, lot, and expiration date so that each unit remains traceable to its storage history.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 8,
+   "text": "When readings exceed a limit or a probe becomes unavailable, the affected stock is marked ineligible for routine dispensing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 8,
+   "text": "The cooler preserves the affected stock in its current controlled environment while the condition is assessed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "Sensor-monitored Medication Cooler uses the handoff card to compare a transfer’s recorded custody time with its temperature history.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "A Clinical Pharmacist reviews excursion details and determines whether affected stock may be released, quarantined, or discarded under pharmacy policy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "The cooler retains the disposition status against the affected lot and prevents stock marked ineligible from being selected for routine dispensing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "Authorized access to refrigerated compartments is recorded with the user identity, access time, and affected stock identifiers.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "Door-open duration is monitored so that an access event that threatens temperature control can be distinguished from a brief inspection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "Temperature alarms remain active during loss of network connectivity, and local records are retained until communication is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "East Tube Dispatch Console maintains the approved route map and the current availability status of supported pneumatic segments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "East Tube Dispatch Console checks the selected route against the destination cabinet, current network availability, and approved routing configuration before releasing a capsule.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "The console confirms that the destination is reachable and that the route does not include a segment reported unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Route selection uses the destination identifier and the latest approved configuration version rather than an operator-entered sequence of segments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "Before dispatch, the console checks for conflicting capsule movements and confirms that required interlocks are satisfied.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "The Pneumatic Tube Network reports segment status, transfer progress, and delivery confirmation to the dispatch console.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "If route status is stale or incomplete, the console holds the capsule and displays the condition for operator review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "A loss of communication with a route sensor prevents the console from treating the affected segment as available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "An interruption during transit is recorded with the capsule identifier, last confirmed location, and time of the interruption.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "The console alerts a Pharmacy Technician when a transfer stops progressing or cannot be confirmed at its destination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "After recovery, the console requires refreshed segment status and an approved route decision before dispatch resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "Route and temperature records retain timestamps and equipment identifiers to support operational review and investigation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S195",
+   "section": 9,
+   "text": "The Pharmacy Verification Station serves as the final controlled checkpoint before a medication is made available for dispensing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S196",
+   "section": 9,
+   "text": "The Clinical Pharmacist compares the active medication order with the product, strength, dosage form, dose, route, and scheduled time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 9,
+   "text": "The Clinical Pharmacist also confirms that the patient identifiers and pharmacy label agree with the authorized order.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 9,
+   "text": "The Pharmacy Technician checks package integrity, lot identification, and expiry before presenting the medication for verification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S199",
+   "section": 9,
+   "text": "For designated high-risk medications, an independent second check is completed and recorded before authorization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 9,
+   "text": "Any mismatch places the medication on hold until the discrepancy is resolved by an authorized pharmacy professional.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 9,
+   "text": "The verification record captures the approving staff identity, time, and medication identifiers for later review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "The Pharmacy Fulfillment Robot remains inhibited from completing a dispense until the required pharmacy authorization is present.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "The Clinical Pharmacist resolves unclear or conflicting order details through the Medication Order Gateway before authorizing release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "The South Ward Cabinet Controller receives the release note and applies its own approved cabinet configuration before enabling any compartment.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "The South Ward Cabinet Controller checks its local compartment mapping, access rules, and supported medication classes against that configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "The cabinet reports Ready for Dispense only after its configuration checks and required device self-tests pass.",
+   "tags": []
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "The Registered Nurse authenticates at the cabinet and selects the medication associated with the active patient order.",
+   "tags": []
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "The South Ward Cabinet Controller checks the requested selection against its local authorization rules before unlocking a compartment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "The cabinet records the user, order reference, compartment access, and transaction time for audit review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "Stonewake reviews the received operational record, correlates its equipment identifiers and timestamps with local telemetry, and records an engineering disposition.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "The Biomedical Engineer uses the exception ticket to identify the affected path and compare reported symptoms with equipment telemetry.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "The Biomedical Engineer checks whether the reported condition is isolated to one device or indicates a broader service risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "When a hardware or control fault is suspected, the affected equipment is placed in Out of Service status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "The Biomedical Engineer isolates the affected subsystem and performs only the diagnostic steps approved for that equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "The IT Operations Specialist investigates authentication, interface, and time-synchronization faults that could affect transaction records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "The Medication Safety Officer reviews any discrepancy that could change medication identity, access control, or patient risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "The Clinical Pharmacist keeps affected medication unavailable until the relevant order and product checks are repeated successfully.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "The Biomedical Engineer records the corrective action, test evidence, and approvals required to return the equipment to operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "Equipment remains Out of Service until required functional checks pass and the responsible staff approve its return.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "Audit records retain timestamps, equipment identifiers, and disposition details to support operational review and investigation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 10,
+   "text": "A cabinet outage is treated as a service incident when the cabinet stops responding, reports a fault, or fails a dispensing check.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 10,
+   "text": "The IT Operations Specialist uses the Cabinet Downtime Notice to open a controlled incident record and identify the affected cabinet.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S223",
+   "section": 10,
+   "text": "The IT Operations Specialist checks controller status, network connectivity, and recent event logs before attempting recovery.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 10,
+   "text": "The IT Operations Specialist records the time the fault was detected and the affected equipment identifier.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 10,
+   "text": "The affected North Ward Cabinet Controller or South Ward Cabinet Controller remains Out of Service while the cause is assessed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 10,
+   "text": "The IT Operations Specialist isolates the fault where necessary to prevent repeated dispense requests from reaching an unavailable cabinet.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "The Medication Order Gateway retains pending requests for review rather than treating an interrupted transaction as completed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "The IT Operations Specialist checks whether any transaction was interrupted before the cabinet became unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "The Pharmacy Verification Station is used to confirm that pending medication orders remain valid before they are re-presented.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Pharmacy Fulfillment Robot is held from supplying medication to a cabinet that has not passed its recovery checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The IT Operations Specialist coordinates technical troubleshooting with the Biomedical Engineer when equipment inspection or repair is required.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "The Clinical Pharmacist reviews medication orders affected by the outage when clinical validation is needed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "The Registered Nurse uses the established clinical process for urgent medication needs while the cabinet is unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "The Biomedical Engineer reports completed repairs and any equipment limitations to the IT Operations Specialist.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "After repair, the IT Operations Specialist verifies communications, status reporting, and cabinet transaction behavior under controlled conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "The responsible staff confirm that no unresolved transaction could cause a duplicate or missed dispense.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "The cabinet remains Out of Service until required functional checks pass and the responsible staff approve its return to Ready for Dispense.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "The West Tube Dispatch Console uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status before closing its dispatch-side handoff checks.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The West Tube Dispatch Console records completion of its handoff checks only after the required dispatch data are consistent.",
+   "tags": []
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "The Pneumatic Tube Network remains under monitoring while dispatch service is being restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "The Hospital Courier confirms physical receipt through the established delivery process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "The West Tube Dispatch Console retains the handoff completion status for operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "The IT Operations Specialist monitors cabinet and tube service status for recurrence during the recovery period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "Audit records retain timestamps, equipment identifiers, recovery checks, and disposition details to support operational review and investigation.",
+   "tags": []
+  }
+ ]
+}

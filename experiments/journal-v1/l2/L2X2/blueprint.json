@@ -1,0 +1,967 @@
+{
+ "title": "Offshore Wind Farm Operations and Maintenance System Operational Concept",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Purpose and Operational Scope",
+   "topic": "Defines the farm boundary, operational objectives, lifecycle assumptions, and interfaces covered by the concept."
+  },
+  {
+   "index": 2,
+   "heading": "Operating Context and Naming",
+   "topic": "Introduces the Turbine Controller as Glassfin, the Offshore Substation as Morrowick, and the Weather Service as Pale Lantern while establishing the operating context."
+  },
+  {
+   "index": 3,
+   "heading": "System Architecture",
+   "topic": "Introduces the SCADA Gateway as Juniper Vale, the Maintenance Planning Engine as Thistle Crown, and the Shore Control Room as Amber Quay within the system architecture."
+  },
+  {
+   "index": 4,
+   "heading": "People, Fleet, and Logistics",
+   "topic": "Introduces the Crew Transfer Vessel as Kestrel Bay, Fleet Dispatch Console as Sable Orchard, and Warehouse System as Mosslight while describing the operational organization."
+  },
+  {
+   "index": 5,
+   "heading": "Offshore Sensing and Cyber Boundaries",
+   "topic": "Introduces the Metocean Buoy as Copper Finch and Cybersecurity Gateway as Quiet Harbor while outlining environmental sensing and security boundaries."
+  },
+  {
+   "index": 6,
+   "heading": "Turbine Control and Field Observation",
+   "topic": "Introduces the Vessel AIS Receiver as Blue Granite and Blade Inspection Drone as Larkspur, and describes turbine control and remote observation."
+  },
+  {
+   "index": 7,
+   "heading": "Work Authorization",
+   "topic": "Introduces the Work Permit Portal as Redoubt and establishes the work authorization lifecycle."
+  },
+  {
+   "index": 8,
+   "heading": "Electrical Supply and Backup",
+   "topic": "Introduces the Emergency Generator as Foxglove and describes normal and standby electrical supply."
+  },
+  {
+   "index": 9,
+   "heading": "Grid Interface",
+   "topic": "Introduces the Grid Interface Relay as Wildmere and explains the farm’s grid connection and dispatch boundary."
+  },
+  {
+   "index": 10,
+   "heading": "Marine Coordination",
+   "topic": "Explains marine coordination across vessel movements, personnel transfers, and shore-side support."
+  },
+  {
+   "index": 11,
+   "heading": "Maintenance Planning",
+   "topic": "Describes how planned and corrective work is prioritized against asset condition, access, and resource availability."
+  },
+  {
+   "index": 12,
+   "heading": "Weather-Led Decisions",
+   "topic": "Sets out how forecast confidence, operational limits, and changing conditions shape work and vessel decisions."
+  },
+  {
+   "index": 13,
+   "heading": "Turbine Condition Monitoring",
+   "topic": "Explains how turbine observations are reviewed, validated, and escalated into operational responses."
+  },
+  {
+   "index": 14,
+   "heading": "Permit and Isolation Controls",
+   "topic": "Describes the relationship between work authorization, electrical isolation, field execution, and return to service."
+  },
+  {
+   "index": 15,
+   "heading": "Substation Operations",
+   "topic": "Covers safe substation operation, routine checks, backup readiness, and operator responsibilities."
+  },
+  {
+   "index": 16,
+   "heading": "Grid Dispatch and Export",
+   "topic": "Explains export coordination, grid instructions, and the management of operational constraints."
+  },
+  {
+   "index": 17,
+   "heading": "Crew Accountability",
+   "topic": "Establishes how personnel movements and accountability are managed across shore and offshore locations."
+  },
+  {
+   "index": 18,
+   "heading": "Cybersecurity Operations",
+   "topic": "Defines security monitoring, incident handling, access governance, and the operational responsibilities of technical teams."
+  },
+  {
+   "index": 19,
+   "heading": "Blade Inspection and Repair",
+   "topic": "Covers remote and close-access blade inspection, defect assessment, and repair planning."
+  },
+  {
+   "index": 20,
+   "heading": "Port and Berth Coordination",
+   "topic": "Describes port coordination and the handling of berth capacity alongside offshore task readiness."
+  },
+  {
+   "index": 21,
+   "heading": "Access and Worksite Safety",
+   "topic": "Explains access control, worksite boundaries, and field safety checks before maintenance begins."
+  },
+  {
+   "index": 22,
+   "heading": "Switching Coordination",
+   "topic": "Sets out the coordination needed to schedule, approve, and confirm operational switching."
+  },
+  {
+   "index": 23,
+   "heading": "Export Constraint Response",
+   "topic": "Describes how operational teams respond to limits on energy export while preserving equipment protection."
+  },
+  {
+   "index": 24,
+   "heading": "Marine Personnel Reconciliation",
+   "topic": "Defines the reconciliation of personnel counts and the escalation of discrepancies during marine operations."
+  },
+  {
+   "index": 25,
+   "heading": "Software and Configuration Assurance",
+   "topic": "Covers software integrity, configuration control, and technical approval before changes reach operational systems."
+  },
+  {
+   "index": 26,
+   "heading": "Emergency and Recovery Readiness",
+   "topic": "Establishes emergency roles, rescue readiness, and the practical limits of offshore recovery operations."
+  },
+  {
+   "index": 27,
+   "heading": "Vessel Recovery Support",
+   "topic": "Describes coordination of recovery resources and safe handling of equipment during offshore response."
+  },
+  {
+   "index": 28,
+   "heading": "Visibility and Operational Confidence",
+   "topic": "Explains how uncertainty in visibility assessments affects task selection, vessel movements, and go or no-go decisions."
+  },
+  {
+   "index": 29,
+   "heading": "Inventory and Spare Parts",
+   "topic": "Describes stock visibility, replenishment priorities, and the handling of supply exceptions."
+  },
+  {
+   "index": 30,
+   "heading": "Isolation Boundary Management",
+   "topic": "Explains how approved isolation boundaries are communicated, checked, and maintained during field work."
+  },
+  {
+   "index": 31,
+   "heading": "Substation Switching Windows",
+   "topic": "Covers the alignment of substation availability with agreed switching and maintenance windows."
+  },
+  {
+   "index": 32,
+   "heading": "Communications and Operating Records",
+   "topic": "Defines operational communications, record quality, and the retention of evidence needed for safe decisions."
+  },
+  {
+   "index": 33,
+   "heading": "Asset Protection and Fire Response",
+   "topic": "Describes fire detection, equipment protection, alarm response, and coordination with offshore personnel."
+  },
+  {
+   "index": 34,
+   "heading": "North Access Control",
+   "topic": "Explains how the North Access Scanner validates controlled entry and supports traceable access decisions."
+  },
+  {
+   "index": 35,
+   "heading": "South Access Control",
+   "topic": "Explains how the South Access Scanner supports its distinct access route without weakening common security controls."
+  },
+  {
+   "index": 36,
+   "heading": "Vertical Movement: East Route",
+   "topic": "Describes how the East Service Lift is inspected and released for personnel and equipment movement."
+  },
+  {
+   "index": 37,
+   "heading": "Vertical Movement: West Route",
+   "topic": "Describes how the West Service Lift is operated under route-specific checks and common safety requirements."
+  },
+  {
+   "index": 38,
+   "heading": "Performance and Reliability",
+   "topic": "Defines operational performance measures, reliability review, and the use of lessons learned to improve the system."
+  },
+  {
+   "index": 39,
+   "heading": "Degraded Modes and Recovery",
+   "topic": "Explains degraded operating modes, prioritization of essential functions, and controlled recovery to normal service."
+  },
+  {
+   "index": 40,
+   "heading": "Governance and Operational Assurance",
+   "topic": "Summarizes governance, assurance evidence, review responsibilities, and the controlled evolution of the operating concept."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_TURBINE_CONTROLLER",
+   "canonical": "Turbine Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PITCH_SYSTEM",
+   "canonical": "Pitch System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CONVERTER_CABINET",
+   "canonical": "Converter Cabinet",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NACELLE_CONDITION_MONITOR",
+   "canonical": "Nacelle Condition Monitor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ROTOR_BRAKE_UNIT",
+   "canonical": "Rotor Brake Unit",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BLADE_INSPECTION_DRONE",
+   "canonical": "Blade Inspection Drone",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_OFFSHORE_SUBSTATION",
+   "canonical": "Offshore Substation",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MAIN_TRANSFORMER",
+   "canonical": "Main Transformer",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EXPORT_CABLE_MONITOR",
+   "canonical": "Export Cable Monitor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SCADA_GATEWAY",
+   "canonical": "SCADA Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SHORE_CONTROL_ROOM",
+   "canonical": "Shore Control Room",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FLEET_DISPATCH_CONSOLE",
+   "canonical": "Fleet Dispatch Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MAINTENANCE_PLANNING_ENGINE",
+   "canonical": "Maintenance Planning Engine",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEATHER_SERVICE",
+   "canonical": "Weather Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_METOCEAN_BUOY",
+   "canonical": "Metocean Buoy",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CREW_TRANSFER_VESSEL",
+   "canonical": "Crew Transfer Vessel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DAUGHTER_CRAFT",
+   "canonical": "Daughter Craft",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SERVICE_OPERATIONS_VESSEL",
+   "canonical": "Service Operations Vessel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_HELIDECK",
+   "canonical": "Helideck",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PERSONNEL_TRACKING_CONSOLE",
+   "canonical": "Personnel Tracking Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WAREHOUSE_SYSTEM",
+   "canonical": "Warehouse System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SPARES_HUB",
+   "canonical": "Spares Hub",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WORK_PERMIT_PORTAL",
+   "canonical": "Work Permit Portal",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_GATEWAY",
+   "canonical": "Cybersecurity Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_GRID_INTERFACE_RELAY",
+   "canonical": "Grid Interface Relay",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FIRE_DETECTION_PANEL",
+   "canonical": "Fire Detection Panel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EMERGENCY_GENERATOR",
+   "canonical": "Emergency Generator",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_ACCESS_SCANNER",
+   "canonical": "North Access Scanner",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_ACCESS_SCANNER",
+   "canonical": "South Access Scanner",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TURBINE_SENSOR_BUS",
+   "canonical": "Turbine Sensor Bus",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_VESSEL_AIS_RECEIVER",
+   "canonical": "Vessel AIS Receiver",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_OPERATIONS_RADIO_CONSOLE",
+   "canonical": "Operations Radio Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EAST_SERVICE_LIFT",
+   "canonical": "East Service Lift",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_SERVICE_LIFT",
+   "canonical": "West Service Lift",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CONTROL_ENGINEER",
+   "canonical": "Control Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DUTY_PLANNER",
+   "canonical": "Duty Planner",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_MARINE_COORDINATOR",
+   "canonical": "Marine Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_VESSEL_MASTER",
+   "canonical": "Vessel Master",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_ELECTRICAL_TECHNICIAN",
+   "canonical": "Electrical Technician",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_BLADE_SPECIALIST",
+   "canonical": "Blade Specialist",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_HSE_OFFICER",
+   "canonical": "HSE Officer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SUBSTATION_OPERATOR",
+   "canonical": "Substation Operator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_WEATHER_ANALYST",
+   "canonical": "Weather Analyst",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SCADA_ENGINEER",
+   "canonical": "SCADA Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_STOREKEEPER",
+   "canonical": "Storekeeper",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_GRID_DISPATCHER",
+   "canonical": "Grid Dispatcher",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_ANALYST",
+   "canonical": "Cybersecurity Analyst",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_FIELD_SUPERVISOR",
+   "canonical": "Field Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PORT_AGENT",
+   "canonical": "Port Agent",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_RESCUE_COORDINATOR",
+   "canonical": "Rescue Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PITCH_DEVIATION_NOTICE",
+   "canonical": "Pitch Deviation Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SQUALL_WINDOW_BULLETIN",
+   "canonical": "Squall Window Bulletin",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_POSITION_QUALITY_FLAG",
+   "canonical": "Position Quality Flag",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TRANSFER_MANIFEST_ADDENDUM",
+   "canonical": "Transfer Manifest Addendum",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BACKORDER_EXCEPTION_SLIP",
+   "canonical": "Backorder Exception Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_WAVE_BURST_RECORD",
+   "canonical": "Wave Burst Record",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SESSION_REVOCATION_RECEIPT",
+   "canonical": "Session Revocation Receipt",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_HARNESS_AUDIT_CARD",
+   "canonical": "Harness Audit Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TRANSFORMER_TAP_SNAPSHOT",
+   "canonical": "Transformer Tap Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DEFERRED_TASK_RATIONALE",
+   "canonical": "Deferred Task Rationale",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_LEADING_EDGE_TILE_IMAGE",
+   "canonical": "Leading Edge Tile Image",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BERTH_SLOT_CONFIRMATION",
+   "canonical": "Berth Slot Confirmation",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_START_TEST_TRACE",
+   "canonical": "Start Test Trace",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_EXPORT_LIMIT_ADVISORY",
+   "canonical": "Export Limit Advisory",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CREW_COUNT_CORRECTION",
+   "canonical": "Crew Count Correction",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_FIRMWARE_HASH_ATTESTATION",
+   "canonical": "Firmware Hash Attestation",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RECOVERY_BASKET_LOAD_SHEET",
+   "canonical": "Recovery Basket Load Sheet",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_VISIBILITY_CONFIDENCE_NOTE",
+   "canonical": "Visibility Confidence Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ISOLATION_BOUNDARY_SKETCH",
+   "canonical": "Isolation Boundary Sketch",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SWITCHING_WINDOW_ACKNOWLEDGMENT",
+   "canonical": "Switching Window Acknowledgment",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_WEATHER_HOLD",
+   "canonical": "Weather Hold",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_TURBINE_LOCKOUT",
+   "canonical": "Turbine Lockout",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_SUBSTATION_DEGRADED",
+   "canonical": "Substation Degraded",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_VESSEL_STANDBY",
+   "canonical": "Vessel Standby",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_GRID_CONSTRAINT",
+   "canonical": "Grid Constraint",
+   "kind": "state"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_TURBINE_CONTROLLER",
+   "alias": "Glassfin",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_OFFSHORE_SUBSTATION",
+   "alias": "Morrowick",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_WEATHER_SERVICE",
+   "alias": "Pale Lantern",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_SCADA_GATEWAY",
+   "alias": "Juniper Vale",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_MAINTENANCE_PLANNING_ENGINE",
+   "alias": "Thistle Crown",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_SHORE_CONTROL_ROOM",
+   "alias": "Amber Quay",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_CREW_TRANSFER_VESSEL",
+   "alias": "Kestrel Bay",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_FLEET_DISPATCH_CONSOLE",
+   "alias": "Sable Orchard",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_WAREHOUSE_SYSTEM",
+   "alias": "Mosslight",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_METOCEAN_BUOY",
+   "alias": "Copper Finch",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_CYBERSECURITY_GATEWAY",
+   "alias": "Quiet Harbor",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_VESSEL_AIS_RECEIVER",
+   "alias": "Blue Granite",
+   "intro_section": 6
+  },
+  {
+   "entity_id": "E_BLADE_INSPECTION_DRONE",
+   "alias": "Larkspur",
+   "intro_section": 6
+  },
+  {
+   "entity_id": "E_WORK_PERMIT_PORTAL",
+   "alias": "Redoubt",
+   "intro_section": 7
+  },
+  {
+   "entity_id": "E_EMERGENCY_GENERATOR",
+   "alias": "Foxglove",
+   "intro_section": 8
+  },
+  {
+   "entity_id": "E_GRID_INTERFACE_RELAY",
+   "alias": "Wildmere",
+   "intro_section": 9
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_TURBINE_CONTROLLER",
+   "item": "E_PITCH_DEVIATION_NOTICE",
+   "consumer": "E_SCADA_GATEWAY",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the deviation notice"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_WEATHER_SERVICE",
+   "item": "E_SQUALL_WINDOW_BULLETIN",
+   "consumer": "E_MAINTENANCE_PLANNING_ENGINE",
+   "intro_section": 4,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_VESSEL_AIS_RECEIVER",
+   "item": "E_POSITION_QUALITY_FLAG",
+   "consumer": "E_FLEET_DISPATCH_CONSOLE",
+   "intro_section": 5,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the quality flag"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_DUTY_PLANNER",
+   "item": "E_TRANSFER_MANIFEST_ADDENDUM",
+   "consumer": "E_VESSEL_MASTER",
+   "intro_section": 6,
+   "link_section": 12,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_WAREHOUSE_SYSTEM",
+   "item": "E_BACKORDER_EXCEPTION_SLIP",
+   "consumer": "E_STOREKEEPER",
+   "intro_section": 7,
+   "link_section": 11,
+   "link_ref": "short",
+   "short_ref": "the exception slip"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_METOCEAN_BUOY",
+   "item": "E_WAVE_BURST_RECORD",
+   "consumer": "E_WEATHER_ANALYST",
+   "intro_section": 8,
+   "link_section": 14,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_SCADA_GATEWAY",
+   "item": "E_SESSION_REVOCATION_RECEIPT",
+   "consumer": "E_CYBERSECURITY_GATEWAY",
+   "intro_section": 9,
+   "link_section": 15,
+   "link_ref": "short",
+   "short_ref": "the revocation receipt"
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_HSE_OFFICER",
+   "item": "E_HARNESS_AUDIT_CARD",
+   "consumer": "E_CREW_TRANSFER_VESSEL",
+   "intro_section": 10,
+   "link_section": 13,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_OFFSHORE_SUBSTATION",
+   "item": "E_TRANSFORMER_TAP_SNAPSHOT",
+   "consumer": "E_SHORE_CONTROL_ROOM",
+   "intro_section": 11,
+   "link_section": 16,
+   "link_ref": "short",
+   "short_ref": "the tap snapshot"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_MAINTENANCE_PLANNING_ENGINE",
+   "item": "E_DEFERRED_TASK_RATIONALE",
+   "consumer": "E_FIELD_SUPERVISOR",
+   "intro_section": 12,
+   "link_section": 18,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F11",
+   "producer": "E_BLADE_INSPECTION_DRONE",
+   "item": "E_LEADING_EDGE_TILE_IMAGE",
+   "consumer": "E_BLADE_SPECIALIST",
+   "intro_section": 13,
+   "link_section": 19,
+   "link_ref": "short",
+   "short_ref": "the tile image"
+  },
+  {
+   "probe_id": "F12",
+   "producer": "E_PORT_AGENT",
+   "item": "E_BERTH_SLOT_CONFIRMATION",
+   "consumer": "E_MARINE_COORDINATOR",
+   "intro_section": 14,
+   "link_section": 20,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F13",
+   "producer": "E_EMERGENCY_GENERATOR",
+   "item": "E_START_TEST_TRACE",
+   "consumer": "E_SUBSTATION_OPERATOR",
+   "intro_section": 15,
+   "link_section": 22,
+   "link_ref": "short",
+   "short_ref": "the test trace"
+  },
+  {
+   "probe_id": "F14",
+   "producer": "E_GRID_INTERFACE_RELAY",
+   "item": "E_EXPORT_LIMIT_ADVISORY",
+   "consumer": "E_GRID_DISPATCHER",
+   "intro_section": 16,
+   "link_section": 23,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F15",
+   "producer": "E_VESSEL_MASTER",
+   "item": "E_CREW_COUNT_CORRECTION",
+   "consumer": "E_PERSONNEL_TRACKING_CONSOLE",
+   "intro_section": 17,
+   "link_section": 24,
+   "link_ref": "short",
+   "short_ref": "the count correction"
+  },
+  {
+   "probe_id": "F16",
+   "producer": "E_CYBERSECURITY_ANALYST",
+   "item": "E_FIRMWARE_HASH_ATTESTATION",
+   "consumer": "E_SCADA_ENGINEER",
+   "intro_section": 18,
+   "link_section": 25,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F17",
+   "producer": "E_SERVICE_OPERATIONS_VESSEL",
+   "item": "E_RECOVERY_BASKET_LOAD_SHEET",
+   "consumer": "E_RESCUE_COORDINATOR",
+   "intro_section": 19,
+   "link_section": 27,
+   "link_ref": "short",
+   "short_ref": "the load sheet"
+  },
+  {
+   "probe_id": "F18",
+   "producer": "E_WEATHER_ANALYST",
+   "item": "E_VISIBILITY_CONFIDENCE_NOTE",
+   "consumer": "E_DUTY_PLANNER",
+   "intro_section": 20,
+   "link_section": 28,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F19",
+   "producer": "E_WORK_PERMIT_PORTAL",
+   "item": "E_ISOLATION_BOUNDARY_SKETCH",
+   "consumer": "E_ELECTRICAL_TECHNICIAN",
+   "intro_section": 21,
+   "link_section": 30,
+   "link_ref": "short",
+   "short_ref": "the boundary sketch"
+  },
+  {
+   "probe_id": "F20",
+   "producer": "E_SHORE_CONTROL_ROOM",
+   "item": "E_SWITCHING_WINDOW_ACKNOWLEDGMENT",
+   "consumer": "E_OFFSHORE_SUBSTATION",
+   "intro_section": 22,
+   "link_section": 31,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_TURBINE_CONTROLLER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_OFFSHORE_SUBSTATION",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_WEATHER_SERVICE",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_SCADA_GATEWAY",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_MAINTENANCE_PLANNING_ENGINE",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_SHORE_CONTROL_ROOM",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_CREW_TRANSFER_VESSEL",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_FLEET_DISPATCH_CONSOLE",
+   "link_section": 11
+  },
+  {
+   "probe_id": "A9",
+   "entity_id": "E_WAREHOUSE_SYSTEM",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A10",
+   "entity_id": "E_METOCEAN_BUOY",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A11",
+   "entity_id": "E_CYBERSECURITY_GATEWAY",
+   "link_section": 12
+  },
+  {
+   "probe_id": "A12",
+   "entity_id": "E_VESSEL_AIS_RECEIVER",
+   "link_section": 12
+  },
+  {
+   "probe_id": "A13",
+   "entity_id": "E_BLADE_INSPECTION_DRONE",
+   "link_section": 13
+  },
+  {
+   "probe_id": "A14",
+   "entity_id": "E_WORK_PERMIT_PORTAL",
+   "link_section": 14
+  },
+  {
+   "probe_id": "A15",
+   "entity_id": "E_EMERGENCY_GENERATOR",
+   "link_section": 15
+  },
+  {
+   "probe_id": "A16",
+   "entity_id": "E_GRID_INTERFACE_RELAY",
+   "link_section": 16
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_ACCESS_SCANNER",
+   "confusable_entity_id": "E_SOUTH_ACCESS_SCANNER",
+   "shared_head": "Access Scanner",
+   "link_section": 34
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_SERVICE_LIFT",
+   "confusable_entity_id": "E_WEST_SERVICE_LIFT",
+   "shared_head": "Service Lift",
+   "link_section": 36
+  }
+ ],
+ "writer": "gpt-6-luna",
+ "plan_sample": 3,
+ "domain": "an offshore wind farm operation and maintenance system (turbine controllers, substation, SCADA, crew transfer vessels, maintenance planning, weather service)"
+}

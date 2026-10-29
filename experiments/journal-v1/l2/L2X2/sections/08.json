@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "During normal operation, station service transformers at the Offshore Substation supply the facility's auxiliary electrical loads from the medium-voltage collection system.",
+   "tags": []
+  },
+  {
+   "text": "The normal supply serves control systems, lighting, ventilation, communications, and equipment required for safe switching and maintenance.",
+   "tags": []
+  },
+  {
+   "text": "Essential loads are separated from nonessential loads so that backup capacity can be reserved for safety and control functions.",
+   "tags": []
+  },
+  {
+   "text": "The Emergency Generator is assigned the operational alias Foxglove for maintenance and alarm references.",
+   "tags": [
+    "ALIAS:E_EMERGENCY_GENERATOR"
+   ]
+  },
+  {
+   "text": "On loss of the normal auxiliary supply, automatic controls initiate the Emergency Generator start sequence.",
+   "tags": []
+  },
+  {
+   "text": "Transfer to the emergency bus occurs only after voltage and frequency are within the configured acceptance limits.",
+   "tags": []
+  },
+  {
+   "text": "The transfer arrangement prevents the normal and emergency sources from being connected in parallel unless an approved synchronizing function is provided.",
+   "tags": []
+  },
+  {
+   "text": "The Emergency Generator supplies the designated emergency distribution bus and is not intended to support turbine export production.",
+   "tags": []
+  },
+  {
+   "text": "Loads connected to the emergency distribution bus are prioritized according to their contribution to personnel safety, equipment protection, and controlled shutdown.",
+   "tags": []
+  },
+  {
+   "text": "Nonessential loads are shed automatically when generator capacity is insufficient or the measured load exceeds its operating limit.",
+   "tags": []
+  },
+  {
+   "text": "If the Emergency Generator does not start or stabilize, the system raises an alarm and maintains any available uninterruptible control power.",
+   "tags": []
+  },
+  {
+   "text": "Operators use the approved recovery procedure to assess the fault, preserve essential services, and restore the normal supply when it is safe to do so.",
+   "tags": []
+  },
+  {
+   "text": "The Electrical Technician verifies protective device settings and transfer interlocks during planned maintenance.",
+   "tags": []
+  },
+  {
+   "text": "Scheduled exercising confirms that the Emergency Generator can start, accept its expected load, and operate for the required test duration.",
+   "tags": []
+  },
+  {
+   "text": "Fuel condition, cooling, lubrication, battery readiness, and exhaust ventilation are checked as part of the generator readiness program.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Planning Engine schedules inspections and corrective work using equipment condition and operating history.",
+   "tags": []
+  },
+  {
+   "text": "Morrowick maintains the designated emergency distribution bus within its approved operating limits.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "text": "The Grid Interface Relay provides status indications that support assessment of the normal supply and its protective state.",
+   "tags": []
+  },
+  {
+   "text": "The Turbine Controller enters its configured safe operating mode when required auxiliary services are unavailable.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Gateway presents supply alarms and generator status to the Shore Control Room for remote awareness.",
+   "tags": []
+  },
+  {
+   "text": "The Control Engineer reviews persistent alarms and coordinates electrical support with the Substation Operator.",
+   "tags": []
+  },
+  {
+   "text": "Metocean Buoy produces the Wave Burst Record at the configured sampling interval.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "text": "Thistle Crown schedules periodic reviews of standby electrical maintenance requirements and outstanding corrective work.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "After normal supply is restored, transfer back is permitted only after stable conditions are confirmed and the emergency source can be unloaded safely.",
+   "tags": []
+  }
+ ]
+}

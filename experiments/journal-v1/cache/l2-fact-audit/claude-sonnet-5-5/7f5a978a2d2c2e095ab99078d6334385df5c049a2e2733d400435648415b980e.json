@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=personnel, label=service plant equipment)\n\nSource sentences (the last one is where the fact was extracted):\nS104: The Maintenance Planner verifies that each work order identifies affected equipment, required isolations, parts staging, and the evidence needed to close the work.\nS105: The Maintenance Planner uses the snapshot to compare planned rake work against recent mechanical loading before releasing the task package.\nS106: The Duty Engineer checks proposed work against current operating constraints and may defer nonessential activity when treatment margin is limited.\nS107: Lockout planning identifies electrical, hydraulic, pneumatic, chemical, and stored-energy hazards before personnel enter or service plant equipment.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S107 says personnel enter or service plant equipment, so personnel performing the action 'service plant equipment' is stated directly.\"}",
+ "usage": {
+  "input_tokens": 688,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 57,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.35,
+ "created": "2026-10-14T12:51:53"
+}

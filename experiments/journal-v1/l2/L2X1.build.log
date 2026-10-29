@@ -1,0 +1,51 @@
+plan sample 0: ['F10 short_ref inside another entity name']
+plan sample 1: ok
+section 1: 24 sentences
+section 2: 24 sentences
+section 3: 26 sentences
+section 4: 25 sentences
+section 5: 24 sentences
+section 6: 26 sentences
+section 7: 24 sentences
+section 8: 24 sentences
+section 9: 25 sentences
+section 10: 26 sentences
+section 11: 26 sentences
+section 12: 24 sentences
+section 13: 24 sentences
+section 14: 24 sentences
+section 15: 24 sentences
+section 16: 24 sentences
+section 17: 24 sentences
+section 18: 24 sentences
+section 19: 24 sentences
+section 20: 24 sentences
+section 21: 25 sentences
+section 22: 26 sentences
+section 23: 24 sentences
+section 24: 25 sentences
+section 25: 26 sentences
+section 26: 24 sentences
+section 27: 25 sentences
+section 28: 24 sentences
+section 29: 24 sentences
+section 30: 24 sentences
+section 31: 24 sentences
+section 32: 26 sentences
+section 33: 24 sentences
+section 34: 26 sentences
+section 35: 25 sentences
+section 36: 25 sentences
+section 37: 24 sentences
+section 38: 24 sentences
+section 39: 24 sentences
+section 40: 24 sentences
+983 units, 27796 tokens
+kept 37, rejected 1; doc 27822 tokens, 983 units; far share 0.94
+  rejected F11 ["item mentioned elsewhere ['S307']"]
+round 0: rewrote 1 of 1 sentences
+kept 38, rejected 0; doc 27820 tokens, 983 units; far share 0.94
+round 1: nothing to repair
+  dropped A11 The alias is expressly defined for this section only, while the link sentence using Brindle appears in a later section.
+probe GT: 37 probes {'split_flow': 20, 'alias_ref': 15, 'homonym': 2}, short-ref flows 10, far share 0.94
+exit 0

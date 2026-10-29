@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "This section describes how helitack and ground crews receive assignments, staging information, hazards, and updated intelligence from the support system during active wildfire operations.",
+   "tags": []
+  },
+  {
+   "text": "When a held recommendation is cleared, the Air Attack Supervisor selects the operational intent in the Caldera Incident Command Portal.",
+   "tags": []
+  },
+  {
+   "text": "The Caldera Incident Command Portal records each assignment package with an objective, time validity, confirmation status, and required acknowledgments.",
+   "tags": []
+  },
+  {
+   "text": "The Crewline Mobile Tablet displays the current division assignment, route guidance, rally location, and assigned communications channel for the logged-in crew.",
+   "tags": []
+  },
+  {
+   "text": "The Helitack Crew Leader receives the same operational package with aviation constraints and landing zone notes after Air Attack Supervisor approval.",
+   "tags": []
+  },
+  {
+   "text": "Ground crew assignments are formatted for field execution and avoid analytic scores that are not needed for tactical movement.",
+   "tags": []
+  },
+  {
+   "text": "Staging information is maintained as georeferenced areas and route descriptions so that crews can confirm location without relying on informal landmarks.",
+   "tags": []
+  },
+  {
+   "text": "The Crewline Mobile Tablet caches the latest accepted staging information and marks any expired package as unavailable for execution.",
+   "tags": []
+  },
+  {
+   "text": "If the Confirmed Ignition State changes the perimeter or priority area, the Caldera Incident Command Portal marks affected crew assignments for review before release.",
+   "tags": []
+  },
+  {
+   "text": "The Sentinel Fireline Analytics Engine updates hazard summaries when fire spread estimates, access constraints, or field observations change.",
+   "tags": []
+  },
+  {
+   "text": "The Sentinel Fireline Analytics Engine applies the Ridge Shadow Mask when estimating crew-visible fire edge confidence in steep terrain.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "text": "The Smoke Classifier Module uses the Camera Cleaning Log to suppress confidence changes caused by lens contamination and service timing.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "text": "Lantern issues a crew exposure refresh only after the current reconnaissance confidence and weather timing fields are both valid.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "text": "Hazards shown to crews include unstable snags, limited access, steep slope exposure, utility conflicts, and escape route degradation.",
+   "tags": []
+  },
+  {
+   "text": "The MesoWest Weather Fusion Node provides weather-derived exposure flags that support staging decisions near ridgelines and drainages.",
+   "tags": []
+  },
+  {
+   "text": "When the system enters the Airspace Restricted State, helitack assignments show the restriction boundary and require confirmation before aircraft-dependent movement is planned.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Tasking Service maintains reconnaissance task status so that ground teams can see whether requested intelligence is pending, active, or complete.",
+   "tags": []
+  },
+  {
+   "text": "Horizon Ridge Drone Dock status is shown as an availability input only and does not by itself authorize crew movement into a new area.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Pilot Operator confirms launch readiness separately from crew assignment acceptance to keep reconnaissance execution independent from ground deployment.",
+   "tags": []
+  },
+  {
+   "text": "The VHF Radio Gateway Repeater mirrors priority assignment summaries for crews that cannot maintain a data session in canyon or timbered terrain.",
+   "tags": []
+  },
+  {
+   "text": "If the data link is degraded, the Crewline Mobile Tablet presents the last verified assignment package and clearly identifies the time of last update.",
+   "tags": []
+  },
+  {
+   "text": "The Helitack Crew Leader acknowledges assignment receipt, reports readiness, and records any exception that prevents safe execution.",
+   "tags": []
+  },
+  {
+   "text": "The County Emergency Liaison can view staging posture and public safety implications without gaining authority to alter crew assignments or hazard records.",
+   "tags": []
+  },
+  {
+   "text": "All assignment and staging changes preserve an audit trail so that later reviews can reconstruct what information was available to each crew at the time of action.",
+   "tags": []
+  }
+ ]
+}

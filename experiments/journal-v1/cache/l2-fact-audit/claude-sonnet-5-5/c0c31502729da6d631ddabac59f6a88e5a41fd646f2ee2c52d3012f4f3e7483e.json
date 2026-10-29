@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Coagulant Dosing Skid, label=supports chemical feed control)\n\nSource sentences (the last one is where the fact was extracted):\nS006: The Raw Water Screen Channel is treated as part of the controlled intake process because debris loading, screen condition, and inlet restrictions directly affect downstream stability.\nS007: Storm Intake Mode is an expected operating state used when river conditions require more conservative intake operation, closer operator review, or modified treatment readiness.\nS008: The treatment scope includes the Coagulant Dosing Skid, North Filter Gallery, South Filter Gallery, Chlorine Contact Basin, Clearwell Level Controller, Backwash Recovery Tank, and related instrumentation needed for routine control decisions.\nS009: The Coagulant Dosing Skid supports chemical feed control based on approved setpoints, observed raw-water conditions, and operator direction.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S009 states that the Coagulant Dosing Skid supports chemical feed control, which matches both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 758,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 56,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.464,
+ "created": "2026-10-14T12:52:12"
+}

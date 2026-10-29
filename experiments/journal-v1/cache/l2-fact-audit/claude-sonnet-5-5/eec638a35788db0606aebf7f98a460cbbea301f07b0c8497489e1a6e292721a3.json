@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: requirement(text=Alerts affecting train control availability shall be classified using operational impact, affected territory, and whether the event could change train movement authority.)\n\nSource sentences (the last one is where the fact was extracted):\nS201: The safety case assumes that loss of trust in communications can be as significant as loss of communications, and the operating response shall reflect that assumption.\nS202: The Cyber Security Officer shall maintain continuous monitoring of security events from the Safety Data Communication Network, the Wayside Radio Access Network, and the Metro Operations Control System.\nS203: Security monitoring shall correlate authentication failures, session resets, rejected messages, configuration changes, and abnormal timing patterns without altering any safety command path.\nS204: Alerts affecting train control availability shall be classified using operational impact, affected territory, and whether the event could change train movement authority.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S204 states this requirement almost verbatim: alerts affecting train control availability shall be classified using operational impact, affected territory, and whether the event could change train movement authority.\"}",
+ "usage": {
+  "input_tokens": 734,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 71,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.846,
+ "created": "2026-10-14T12:52:26"
+}

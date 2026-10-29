@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Transfer Bag Feeder provides \"a Late Transfer Bag Card\" to Bag Reconciliation Station (an information or material flow).\n\nSource sentences:\nS037: The Transfer Bag Feeder identifies each inbound transfer bag and records its arrival into the local handling process.\nS038: The Transfer Bag Feeder sends a Late Transfer Bag Card when a bag enters from an inbound transfer stream.\nS142: Secondary Inspection Chute retains bags requiring further examination until the applicable disposition is recorded.\nS143: Bag Reconciliation Station uses the Late Transfer Bag Card to reconcile a transfer bag against its intended flight.\n\nAnswer \"supported\" only if the sentences state that Transfer Bag Feeder produces or sends this item AND that Bag Reconciliation Station receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S038 states that Transfer Bag Feeder sends a Late Transfer Bag Card, and S143 states that Bag Reconciliation Station uses that same item.\"}",
+ "usage": {
+  "input_tokens": 297,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 46,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 343
+ },
+ "attempts": 1,
+ "wall_s": 3.702,
+ "created": "2026-10-14T12:40:23"
+}

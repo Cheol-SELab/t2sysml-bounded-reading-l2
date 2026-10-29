@@ -1,0 +1,412 @@
+{
+ "title": "Operational Concept for the Greenvale Metro Communications-Based Train Control System",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Operational Context and Control Philosophy",
+   "topic": "Defines the Greenvale Metro operating environment, service objectives, control-room responsibilities, and the high-level communications-based train control philosophy for normal and degraded operation."
+  },
+  {
+   "index": 2,
+   "heading": "Onboard CBTC Functions and Train Interfaces",
+   "topic": "Describes the onboard controller, odometry, train radio, operator interfaces, brake assurance functions, and the expected interaction with trainborne subsystems."
+  },
+  {
+   "index": 3,
+   "heading": "Wayside Communications and Zone Supervision",
+   "topic": "Explains the radio access network, safety data network, zone controller boundaries, handover behavior, and wayside supervision principles."
+  },
+  {
+   "index": 4,
+   "heading": "Interlocking Integration and Route Protection",
+   "topic": "Covers the interface between CBTC supervision and junction interlockings, including route setting, point locking, axle counter indications, and platform approach protection."
+  },
+  {
+   "index": 5,
+   "heading": "Operations Control Centre Workflows",
+   "topic": "Details the workflows used by traffic controllers for service regulation, temporary restrictions, incident management, timetable updates, and authority review."
+  },
+  {
+   "index": 6,
+   "heading": "Station, Platform, and Passenger-Facing Interfaces",
+   "topic": "Specifies how platform screen doors, station status indications, passenger information gateways, and dispatch-related controls exchange operational data with the CBTC system."
+  },
+  {
+   "index": 7,
+   "heading": "Diagnostics, Maintenance, and Asset Monitoring",
+   "topic": "Describes event collection, remote diagnostics, maintenance roles, failure triage, configuration records, and evidence retained for post-incident analysis."
+  },
+  {
+   "index": 8,
+   "heading": "Degraded Modes and Manual Recovery",
+   "topic": "Explains fallback operating modes, manual route recovery, restricted manual movements, reset authorizations, and the responsibilities of operators and maintainers during disruption."
+  },
+  {
+   "index": 9,
+   "heading": "Cybersecurity, Key Management, and Audit Obligations",
+   "topic": "Defines cybersecurity monitoring, certificate lifecycle controls, audit evidence, access governance, and security responsibilities for safety-related communications."
+  },
+  {
+   "index": 10,
+   "heading": "Commissioning, Migration, and Readiness for Revenue Service",
+   "topic": "Outlines test-train operation, staged migration from legacy signalling, readiness reviews, operational rehearsal, and acceptance criteria for revenue service."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_ONBOARD_CONTROLLER",
+   "canonical": "Atlas Onboard Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DUAL_CHANNEL_ODOMETER",
+   "canonical": "Dual Channel Odometer",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TRAIN_RADIO_MODEM",
+   "canonical": "Train Radio Modem",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_DISTRICT_ZONE_CONTROLLER",
+   "canonical": "North District Zone Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_DISTRICT_ZONE_CONTROLLER",
+   "canonical": "South District Zone Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EAST_JUNCTION_INTERLOCKING",
+   "canonical": "East Junction Interlocking",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_JUNCTION_INTERLOCKING",
+   "canonical": "West Junction Interlocking",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_OPERATIONS_CONTROL_SYSTEM",
+   "canonical": "Metro Operations Control System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RADIO_ACCESS_NETWORK",
+   "canonical": "Wayside Radio Access Network",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DATA_COMMUNICATION_NETWORK",
+   "canonical": "Safety Data Communication Network",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PLATFORM_SCREEN_DOOR_CONTROLLER",
+   "canonical": "Platform Screen Door Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MAINTENANCE_DIAGNOSTIC_SERVER",
+   "canonical": "Maintenance Diagnostic Server",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SERVICE_TIMETABLE_SERVER",
+   "canonical": "Service Timetable Server",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_KEY_MANAGEMENT_APPLIANCE",
+   "canonical": "Cryptographic Key Management Appliance",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PASSENGER_INFORMATION_GATEWAY",
+   "canonical": "Passenger Information Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_VOICE_DISPATCH_CONSOLE",
+   "canonical": "Voice Dispatch Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TRAIN_OPERATOR",
+   "canonical": "Revenue Train Operator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_TRAFFIC_CONTROLLER",
+   "canonical": "Line Traffic Controller",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SIGNAL_MAINTENANCE_ENGINEER",
+   "canonical": "Signal Maintenance Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CYBER_SECURITY_OFFICER",
+   "canonical": "Cyber Security Officer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_BRAKE_CURVE_CHECKSUM_LOG",
+   "canonical": "Brake Curve Checksum Log",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TEMPORARY_SPEED_NOTICE",
+   "canonical": "Temporary Speed Restriction Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RADIO_HANDOVER_AUDIT_FILE",
+   "canonical": "Radio Handover Audit File",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_AXLE_COUNTER_RESET_REQUEST",
+   "canonical": "Axle Counter Reset Request",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PLATFORM_DOOR_STATUS_SNAPSHOT",
+   "canonical": "Platform Door Status Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CREW_LOGIN_TOKEN_BUNDLE",
+   "canonical": "Crew Login Token Bundle",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ROUTE_RELEASE_EXCEPTION_LIST",
+   "canonical": "Route Release Exception List",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CLOCK_DRIFT_SAMPLE_REPORT",
+   "canonical": "Clock Drift Sample Report",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ENCRYPTION_CERTIFICATE_RENEWAL_PACK",
+   "canonical": "Encryption Certificate Renewal Pack",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TEST_TRAIN_CLEARANCE_MEMO",
+   "canonical": "Test Train Clearance Memo",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_OPERATIONS_CONTROL_SYSTEM",
+   "alias": "Lantern",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_SIGNAL_MAINTENANCE_ENGINEER",
+   "alias": "Maple",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_ONBOARD_CONTROLLER",
+   "alias": "Kestrel",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_MAINTENANCE_DIAGNOSTIC_SERVER",
+   "alias": "Quarry",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_NORTH_DISTRICT_ZONE_CONTROLLER",
+   "alias": "Marble",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_SOUTH_DISTRICT_ZONE_CONTROLLER",
+   "alias": "Orchid",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_RADIO_ACCESS_NETWORK",
+   "alias": "Saffron",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_EAST_JUNCTION_INTERLOCKING",
+   "alias": "Falcon",
+   "intro_section": 4
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_ONBOARD_CONTROLLER",
+   "item": "E_BRAKE_CURVE_CHECKSUM_LOG",
+   "consumer": "E_MAINTENANCE_DIAGNOSTIC_SERVER",
+   "intro_section": 2,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the checksum log"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_TRAFFIC_CONTROLLER",
+   "item": "E_TEMPORARY_SPEED_NOTICE",
+   "consumer": "E_NORTH_DISTRICT_ZONE_CONTROLLER",
+   "intro_section": 5,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_RADIO_ACCESS_NETWORK",
+   "item": "E_RADIO_HANDOVER_AUDIT_FILE",
+   "consumer": "E_CYBER_SECURITY_OFFICER",
+   "intro_section": 3,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the audit file"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_EAST_JUNCTION_INTERLOCKING",
+   "item": "E_AXLE_COUNTER_RESET_REQUEST",
+   "consumer": "E_SIGNAL_MAINTENANCE_ENGINEER",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_PLATFORM_SCREEN_DOOR_CONTROLLER",
+   "item": "E_PLATFORM_DOOR_STATUS_SNAPSHOT",
+   "consumer": "E_OPERATIONS_CONTROL_SYSTEM",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the status snapshot"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_OPERATIONS_CONTROL_SYSTEM",
+   "item": "E_CREW_LOGIN_TOKEN_BUNDLE",
+   "consumer": "E_ONBOARD_CONTROLLER",
+   "intro_section": 1,
+   "link_section": 4,
+   "link_ref": "short",
+   "short_ref": "the token bundle"
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_WEST_JUNCTION_INTERLOCKING",
+   "item": "E_ROUTE_RELEASE_EXCEPTION_LIST",
+   "consumer": "E_TRAFFIC_CONTROLLER",
+   "intro_section": 4,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_DATA_COMMUNICATION_NETWORK",
+   "item": "E_CLOCK_DRIFT_SAMPLE_REPORT",
+   "consumer": "E_KEY_MANAGEMENT_APPLIANCE",
+   "intro_section": 2,
+   "link_section": 5,
+   "link_ref": "short",
+   "short_ref": "the sample report"
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_KEY_MANAGEMENT_APPLIANCE",
+   "item": "E_ENCRYPTION_CERTIFICATE_RENEWAL_PACK",
+   "consumer": "E_TRAIN_RADIO_MODEM",
+   "intro_section": 5,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_TRAIN_OPERATOR",
+   "item": "E_TEST_TRAIN_CLEARANCE_MEMO",
+   "consumer": "E_OPERATIONS_CONTROL_SYSTEM",
+   "intro_section": 8,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_OPERATIONS_CONTROL_SYSTEM",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_SIGNAL_MAINTENANCE_ENGINEER",
+   "link_section": 4
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_ONBOARD_CONTROLLER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_MAINTENANCE_DIAGNOSTIC_SERVER",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_NORTH_DISTRICT_ZONE_CONTROLLER",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_SOUTH_DISTRICT_ZONE_CONTROLLER",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_RADIO_ACCESS_NETWORK",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_EAST_JUNCTION_INTERLOCKING",
+   "link_section": 9
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_DISTRICT_ZONE_CONTROLLER",
+   "confusable_entity_id": "E_SOUTH_DISTRICT_ZONE_CONTROLLER",
+   "shared_head": "District Zone Controller",
+   "link_section": 6
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_JUNCTION_INTERLOCKING",
+   "confusable_entity_id": "E_WEST_JUNCTION_INTERLOCKING",
+   "shared_head": "Junction Interlocking",
+   "link_section": 5
+  }
+ ],
+ "writer": "gpt-5.5",
+ "plan_sample": 0,
+ "domain": "a metro railway communications-based train control system (onboard units, zone controllers, interlocking, operations control centre)"
+}

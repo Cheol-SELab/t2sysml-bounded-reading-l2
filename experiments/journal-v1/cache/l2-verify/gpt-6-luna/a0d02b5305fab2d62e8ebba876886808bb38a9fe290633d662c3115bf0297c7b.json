@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Emergency Department provides \"capacity limits, access constraints, or changes to receiving status\" to Regional Dispatch Center (an information or material flow).\n\nSource sentences:\nS154: Larkspur confirms the incident identifier and intended receiving facility before the destination request is transmitted.\nS155: The Emergency Department advises the Hospital Liaison Desk of relevant capacity limits, access constraints, or changes to its receiving status.\nS169: The Data Quality Officer reviews incomplete arrival or handover fields during routine record-quality checks.\nS170: The Regional Dispatch Center updates the incident status after receiving confirmation that the patient has been transferred to facility care.\n\nAnswer \"supported\" only if the sentences state that Emergency Department produces or sends this item AND that Regional Dispatch Center receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Emergency Department sends the capacity and receiving-status information to the Hospital Liaison Desk, while the Regional Dispatch Center is described as updating incident status after transfer confirmation.\"}",
+ "usage": {
+  "input_tokens": 300,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 105,
+  "output_tokens_details": {
+   "reasoning_tokens": 54
+  },
+  "total_tokens": 405
+ },
+ "attempts": 1,
+ "wall_s": 2.126,
+ "created": "2026-10-13T23:47:12"
+}

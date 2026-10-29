@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "The mission of the Cedar Falls Municipal Drinking Water Treatment Plant control system is to support continuous production of potable water that meets regulatory requirements, utility operating targets, and customer demand.",
+   "tags": []
+  },
+  {
+   "text": "The control system is intended to give operators timely visibility, dependable automatic control, and clear manual intervention points for the intake, treatment, laboratory, and distribution functions.",
+   "tags": []
+  },
+  {
+   "text": "The operational boundary begins at the River Intake Pump Station and Raw Water Screen Channel and extends through treatment, disinfection, finished-water storage control, and discharge to the High Service Pump Header.",
+   "tags": []
+  },
+  {
+   "text": "The River Intake Pump Station is known locally as Ironwood, but this document uses River Intake Pump Station as the canonical name.",
+   "tags": [
+    "ALIAS:E_RIVER_INTAKE_PUMP_STATION"
+   ]
+  },
+  {
+   "text": "The River Intake Pump Station provides the first controlled pumping function and is operated to maintain reliable raw-water availability within approved withdrawal limits.",
+   "tags": []
+  },
+  {
+   "text": "The Raw Water Screen Channel is treated as part of the controlled intake process because debris loading, screen condition, and inlet restrictions directly affect downstream stability.",
+   "tags": []
+  },
+  {
+   "text": "Storm Intake Mode is an expected operating state used when river conditions require more conservative intake operation, closer operator review, or modified treatment readiness.",
+   "tags": []
+  },
+  {
+   "text": "The treatment scope includes the Coagulant Dosing Skid, North Filter Gallery, South Filter Gallery, Chlorine Contact Basin, Clearwell Level Controller, Backwash Recovery Tank, and related instrumentation needed for routine control decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Coagulant Dosing Skid supports chemical feed control based on approved setpoints, observed raw-water conditions, and operator direction.",
+   "tags": []
+  },
+  {
+   "text": "The North Filter Gallery and South Filter Gallery are operated as parallel treatment assets with local equipment status, headloss indication, turbidity monitoring, and backwash control presented to plant staff.",
+   "tags": []
+  },
+  {
+   "text": "The Chlorine Contact Basin and Clearwell Level Controller provide the principal control points for disinfection contact management and finished-water storage coordination.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Historian Server is known locally as Lantern, but this document uses SCADA Historian Server as the canonical name.",
+   "tags": [
+    "ALIAS:E_SCADA_HISTORIAN_SERVER"
+   ]
+  },
+  {
+   "text": "The SCADA Historian Server stores operating data needed for trend review, compliance support, incident reconstruction, and performance evaluation.",
+   "tags": []
+  },
+  {
+   "text": "The control architecture assumes that programmable controllers, local panels, operator workstations, analytical instruments, and the SCADA Historian Server remain synchronized to plant time standards.",
+   "tags": []
+  },
+  {
+   "text": "Major external interfaces include electric power service, chemical delivery coordination, laboratory information handling, residuals removal scheduling, and distribution system communications.",
+   "tags": []
+  },
+  {
+   "text": "The Chemical Supplier Driver interacts with the plant through controlled delivery procedures that allow chemical inventory changes to be checked before operating setpoints are affected.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Sample Receiving Bench is the normal receiving point for process and compliance samples that support treatment decisions and regulatory documentation.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Technician provides analytical confirmation, communicates unusual results to operations, and helps determine whether process adjustments require additional verification.",
+   "tags": []
+  },
+  {
+   "text": "The Chief Operator has overall operating authority for plant mode selection, production targets, treatment response, and coordination of abnormal condition response.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Engineer supports configuration control, evaluates control-system problems, and approves engineering changes that affect operating behavior or documented boundaries.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Planner converts equipment condition information into planned work while coordinating with operations to avoid unnecessary treatment or distribution risk.",
+   "tags": []
+  },
+  {
+   "text": "The Distribution Dispatcher coordinates finished-water delivery expectations with the plant and communicates demand changes that may affect pumping and storage strategy.",
+   "tags": []
+  },
+  {
+   "text": "The North Distribution Pressure Station and South Distribution Pressure Station are treated as distribution interfaces because their operating needs influence finished-water pumping decisions without placing the entire distribution network inside the plant control-system scope.",
+   "tags": []
+  },
+  {
+   "text": "The Residuals Hauler is considered an operational interface for removal activities associated with treatment residuals and backwash recovery operations.",
+   "tags": []
+  },
+  {
+   "text": "A Chlorine Residual Alarm is treated as a high-priority condition because it may indicate a public-health risk, an analyzer fault, or a process condition requiring immediate operator assessment.",
+   "tags": []
+  },
+  {
+   "text": "Routine operation assumes trained staff are available to supervise automatic control, place equipment in safe manual operation when needed, and document deviations through approved plant procedures.",
+   "tags": []
+  }
+ ]
+}

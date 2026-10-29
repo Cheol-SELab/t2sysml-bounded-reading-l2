@@ -1,0 +1,104 @@
+{
+ "sentences": [
+  {
+   "text": "The Airport CDM Portal provides the shared operational workspace where airport participants maintain a common view of departure readiness, arrival constraints, surface conditions, and slot impacts.",
+   "tags": []
+  },
+  {
+   "text": "For local voice coordination, the Airport CDM Portal is also known as Foxglove.",
+   "tags": [
+    "ALIAS:E_AIRPORT_CDM_PORTAL"
+   ]
+  },
+  {
+   "text": "Access to the Airport CDM Portal is controlled by the Identity Access Service so that each user sees only the workspaces, aircraft, stands, and decision records appropriate to the assigned role.",
+   "tags": []
+  },
+  {
+   "text": "The primary workspace presents the Common Situation Display with synchronized clocks, active operating state, airport demand, runway configuration, stand occupancy, and milestone status for each managed movement.",
+   "tags": []
+  },
+  {
+   "text": "The departure workspace is centered on Target Off Block Time, Calculated Takeoff Time, boarding readiness, aircraft servicing progress, and pushback coordination status.",
+   "tags": []
+  },
+  {
+   "text": "The arrival workspace shows expected landing demand, stand allocation risk, inbound regulation effects, and handling readiness indicators needed to protect the Airport Acceptance Rate.",
+   "tags": []
+  },
+  {
+   "text": "A dedicated milestone view records the planned, target, estimated, actual, and manually confirmed times for each turnaround event that affects a regulated departure or constrained arrival.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator is responsible for keeping the Flight Intent Message status, Target Off Block Time, passenger readiness indicator, and aircraft operational constraint notes current for each represented flight.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher is responsible for updating servicing completion, baggage readiness, staffing limitation, and equipment availability milestones as soon as the handling status changes.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead is responsible for maintaining stand release readiness, apron movement conflicts, tug availability, and local pushback sequencing inputs in the portal.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor is responsible for reviewing runway configuration assumptions, departure sequence feasibility, and tactical tower constraints before those values are used for metering decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator is responsible for checking Calculated Takeoff Time feasibility and recording accepted slot adjustments, rejected slot adjustments, and unresolved slot conflicts in the Collaborative Decision Log.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager is responsible for maintaining the Airport Capacity Plan, declaring local operating impacts, and confirming transitions between Normal Operations, Adverse Weather Mode, Capacity Reduction State, and Recovery Phase.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer uses the portal workspace to attach weather interpretation, forecast confidence, and expected timing of operational impacts without replacing the authoritative weather source.",
+   "tags": []
+  },
+  {
+   "text": "Cedarbell shall expose the current regional demand and constraint context to the shared workspace at each publication cycle without requiring manual re-entry.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "text": "The Common Situation Display distinguishes values supplied by connected services, values confirmed by users, and values that have exceeded the configured freshness threshold.",
+   "tags": []
+  },
+  {
+   "text": "When a milestone becomes stale, the Airport CDM Portal shall highlight the affected flight and notify the role accountable for the next update through the Alert Distribution Hub.",
+   "tags": []
+  },
+  {
+   "text": "Each airport participant shall update a material change within two minutes of becoming aware of it during Normal Operations and within one minute during Adverse Weather Mode or Capacity Reduction State.",
+   "tags": []
+  },
+  {
+   "text": "If the exact value is not yet known, the accountable participant shall enter a provisional value with an uncertainty flag rather than leaving the milestone unchanged.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log records who changed a value, when the change was made, whether the change was provisional or confirmed, and what operational decision relied on it.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward defines the mandatory fields, permissible status values, retention rules, and data quality thresholds used by the Airport CDM Portal.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer monitors portal availability, interface latency, user session faults, and synchronization status against the Time Synchronization Service.",
+   "tags": []
+  },
+  {
+   "text": "During Contingency Fallback State, the Airport CDM Portal shall preserve the last synchronized milestone set and clearly mark any updates entered under degraded operating procedures.",
+   "tags": []
+  },
+  {
+   "text": "After operations, the Performance Analytics Warehouse uses the recorded milestones and decision history to compare planned outcomes with actual off-block, takeoff, landing, and stand events.",
+   "tags": []
+  }
+ ]
+}

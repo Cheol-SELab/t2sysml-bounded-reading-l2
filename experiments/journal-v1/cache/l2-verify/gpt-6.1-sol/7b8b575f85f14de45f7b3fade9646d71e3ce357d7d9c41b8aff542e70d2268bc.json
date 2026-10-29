@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Alert Distribution Hub provides \"the Regional Flow Manager Tower Supervisor\" to Airport Duty Manager (an information or material flow).\n\nSource sentences:\nS120: Low-confidence weather forecasts remain visible to users, but the Capacity Assessment Module flags the associated capacity values as provisional.\nS121: When confidence decreases below the configured threshold, the Alert Distribution Hub notifies the Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator that the capacity picture may change.\nS715: A degraded operation is declared when data latency, service unavailability, or inconsistent operational outputs prevent users from relying on the normal decision support path without additional verification.\nS716: The Airport Duty Manager is accountable for declaring the Contingency Fallback State after consultation with the Regional Flow Manager, Tower Supervisor, and System Support Engineer.\n\nAnswer \"supported\" only if the sentences state that Alert Distribution Hub produces or sends this item AND that Airport Duty Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Alert Distribution Hub notifies the Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator, while the Airport Duty Manager only consults named personnel and is not stated to receive the Hub’s notification.\"}",
+ "usage": {
+  "input_tokens": 334,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 91,
+  "output_tokens_details": {
+   "reasoning_tokens": 32
+  },
+  "total_tokens": 425
+ },
+ "attempts": 1,
+ "wall_s": 5.309,
+ "created": "2026-10-14T12:47:02"
+}

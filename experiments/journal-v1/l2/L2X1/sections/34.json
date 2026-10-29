@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Data governance for the Regional Flow Platform shall assign accountable owners to each operational data domain and shall make those assignments visible in the Airport CDM Portal.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward shall maintain the data ownership register and shall coordinate updates through the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager shall own flow management policy data, including Ground Delay Program parameters and Tactical Regulation Proposal status values.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator shall own slot allocation reference data, including Calculated Takeoff Time tolerances and Slot Compliance State definitions.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager shall own airport capacity declarations, including Airport Capacity Plan records and Airport Acceptance Rate values.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor shall own tower sequence status data maintained for the Tower Sequence Manager.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead shall own ramp movement status data maintained for the Ramp Movement Board.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer shall own operational weather classification inputs accepted by the Weather Ingest Gateway.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator shall be accountable for airline-supplied schedule intent, readiness status, and Target Off Block Time updates submitted through approved interfaces.",
+   "tags": []
+  },
+  {
+   "text": "Each owned data element shall have a defined business meaning, allowed value range, update authority, retention class, and escalation contact.",
+   "tags": []
+  },
+  {
+   "text": "Freshness indicators shall be displayed on the Common Situation Display wherever stale data could affect sequencing, metering, regulation, or resource allocation decisions.",
+   "tags": []
+  },
+  {
+   "text": "The freshness indicator shall include the time of last accepted update, the maximum permitted age, and a visual state that distinguishes current, aging, stale, and unavailable data.",
+   "tags": []
+  },
+  {
+   "text": "The Time Synchronization Service shall provide the common time basis used for freshness calculations across the Regional Flow Platform.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service, Capacity Assessment Module, Slot Allocation Engine, and Departure Metering Service shall reject data that lacks a trusted timestamp.",
+   "tags": []
+  },
+  {
+   "text": "Validation rules shall include schema checks, mandatory field checks, code set checks, temporal sequence checks, and operational plausibility checks.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Data Exchange shall validate Flight Intent Message content before the data is made available for operational use.",
+   "tags": []
+  },
+  {
+   "text": "The Surface Surveillance Adapter shall apply position quality checks and shall mark uncertain observations before they are used by surface decision functions.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Interface Adapter shall apply carrier-specific format checks while preserving the common operational meaning required by the Regional Flow Platform.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner shall validate resource quantities, task timing, and allocation identifiers against active operational reference data.",
+   "tags": []
+  },
+  {
+   "text": "The Business Rules Registry shall hold the current validation thresholds, allowable reason codes, and exception rules approved for Normal Operations, Adverse Weather Mode, Capacity Reduction State, Recovery Phase, and Contingency Fallback State.",
+   "tags": []
+  },
+  {
+   "text": "When a discrepancy is detected, the affected component shall mark the data as disputed and shall preserve the prior accepted value until an authorized correction is available.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward shall coordinate discrepancy resolution with the responsible operational owner and shall record the disposition in the Audit Event Ledger.",
+   "tags": []
+  },
+  {
+   "text": "Urgent discrepancies that could change a metering, arrival regulation, or slot allocation decision shall be raised through the Alert Distribution Hub and reviewed in the Digital Briefing Room.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer shall investigate technical causes of missing, delayed, duplicated, or transformed records and shall provide evidence needed for stewardship decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse shall retain data quality measures, including validation failure rates, freshness breaches, manual corrections, and recurring ownership conflicts.",
+   "tags": []
+  },
+  {
+   "text": "Stewardship reviews shall use those measures to update training, adjust validation rules, and improve the reliability of information used in operational decision making.",
+   "tags": []
+  }
+ ]
+}

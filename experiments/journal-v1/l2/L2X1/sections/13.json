@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Ground handling capacity is treated as a hard operational constraint because an aircraft cannot meet a feasible off-block time unless the required people, vehicles, and stand equipment are available at the stand before boarding closure.",
+   "tags": []
+  },
+  {
+   "text": "The feasible Target Off Block Time is therefore derived from both airside capacity and the ground service path needed to close doors, remove equipment, and start pushback without creating a conflict on the apron.",
+   "tags": []
+  },
+  {
+   "text": "Handler dispatch affects feasibility when the assigned team is still servicing another aircraft, crossing a congested apron, or waiting for security access to a remote stand.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher updates the Handling Resource Planner with expected service completion times so that the Regional Flow Platform can distinguish an air traffic delay from a local handling delay.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner maintains the operational view of dispatch teams, tow teams, ramp buses, belt loaders, high loaders, stairs, ground power units, air start units, and potable water equipment.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner uses the Stand Tow Request Form to reserve towing capacity and to test whether the requested movement can be completed before the proposed Target Off Block Time.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "If no tow team is available, the aircraft may remain blocked on stand even when the runway sequence and the Calculated Takeoff Time would otherwise support departure.",
+   "tags": []
+  },
+  {
+   "text": "Ramp buses influence feasibility for remote stands because passenger boarding cannot close until the last bus has arrived, unloaded, and cleared the stand area.",
+   "tags": []
+  },
+  {
+   "text": "Loader availability is critical for aircraft with late baggage, unit load device changes, or cargo offload requirements because the aircraft cannot be released until the hold is closed and the load sheet assumptions remain valid.",
+   "tags": []
+  },
+  {
+   "text": "Stand equipment shortages can create hidden delay because crews may be ready and boarding may be complete while a missing tug, headset, chocks, stairs, or ground power connection prevents the off-block event.",
+   "tags": []
+  },
+  {
+   "text": "Shortages are often localized by apron sector, so the same nominal fleet of equipment can support one stand cluster while leaving another cluster unable to dispatch departures at the planned rate.",
+   "tags": []
+  },
+  {
+   "text": "For local operations displays, the Ramp Movement Board is also known as Skylark when referenced in controller training material.",
+   "tags": [
+    "ALIAS:E_RAMP_MOVEMENT_BOARD"
+   ]
+  },
+  {
+   "text": "The Ramp Movement Board shows occupied stands, blocked service roads, and pending pushback areas so that handling constraints can be compared with the aircraft sequence before a revised time is published.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal presents the resource-driven feasibility status to the Airline Operations Coordinator and the Aircraft Operator Representative to support early negotiation rather than last-minute rejection.",
+   "tags": []
+  },
+  {
+   "text": "Brindle must confirm that any revised off-block sequence remains compatible with the Departure Metering Service before the change is released to the airport community.",
+   "tags": [
+    "A11:link"
+   ]
+  },
+  {
+   "text": "The Regional Flow Platform marks a proposed Target Off Block Time as conditional when the required handling resources are forecast to arrive after the aircraft ready time.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service can absorb a small ground handling variation, but repeated slips from multiple stands reduce confidence in the planned departure stream.",
+   "tags": []
+  },
+  {
+   "text": "The Aircraft Operator Representative is expected to declare whether the operator can accept a later off-block time without causing crew, connection, or aircraft rotation impacts.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator uses the same information to decide whether a swap between company flights is operationally meaningful or merely transfers a handling bottleneck to another stand.",
+   "tags": []
+  },
+  {
+   "text": "In Normal Operations, the system assumes that typical service durations remain valid unless the Handling Resource Planner reports a constraint or the stand status stops advancing.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode, bus turn times, loader movements, and tow availability are padded because apron driving speeds fall and personnel may be redeployed to safety duties.",
+   "tags": []
+  },
+  {
+   "text": "In the Recovery Phase, the system does not release every aircraft as soon as it becomes ready because a surge of simultaneous pushbacks can exceed tow team availability and block service roads.",
+   "tags": []
+  },
+  {
+   "text": "Each resource-driven revision is recorded in the Collaborative Decision Log with the reason code, revised Target Off Block Time, and affected flight identifier.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse later compares predicted and actual handling constraints to improve standard service times and to identify chronic equipment shortages by stand group.",
+   "tags": []
+  }
+ ]
+}

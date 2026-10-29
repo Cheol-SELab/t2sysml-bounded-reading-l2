@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ground Network Manager provides \"the Antenna Deicing Notice\" to Spacecraft Operations Team (an information or material flow).\n\nSource sentences:\nS043: Station operators notify the Mission Control Center when local constraints could affect an approved contact, including equipment warm-up limits, access restrictions, or unexpected maintenance activity.\nS044: Ground Network Manager issues the Antenna Deicing Notice when forecast icing or measured buildup threatens tracking performance.\nS112: Juniper confirms that planned station use is compatible with network maintenance windows before the schedule is released for command preparation.\nS113: The Spacecraft Operations Team uses the Antenna Deicing Notice to assess whether planned support can proceed without adding contingency contact margin.\n\nAnswer \"supported\" only if the sentences state that Ground Network Manager produces or sends this item AND that Spacecraft Operations Team receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S044 says Ground Network Manager issues the Antenna Deicing Notice, and S113 says the Spacecraft Operations Team uses the same notice to assess whether planned support can proceed.\"}",
+ "usage": {
+  "input_tokens": 712,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.307,
+ "created": "2026-10-14T12:40:47"
+}

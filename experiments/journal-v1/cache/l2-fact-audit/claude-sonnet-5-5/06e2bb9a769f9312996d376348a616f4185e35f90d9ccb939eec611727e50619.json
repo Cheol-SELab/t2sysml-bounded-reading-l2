@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=North Gate Scanner, label=record screening outcomes for inducted bags)\n\nSource sentences (the last one is where the fact was extracted):\nS114: Baggage Control System compares remaining processing time with route-specific handling estimates.\nS115: Bags with confirmed screening clearance may proceed to flight-specific sort destinations when capacity is available.\nS116: Bags awaiting screening are held from final flight induction even when their scheduled departure is near.\nS117: North Gate Scanner and South Gate Scanner record screening outcomes for inducted bags.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S117 states that North Gate Scanner (together with South Gate Scanner) records screening outcomes for inducted bags, so the performer and the action label are both stated.\"}",
+ "usage": {
+  "input_tokens": 640,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 69,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.075,
+ "created": "2026-10-14T12:52:24"
+}

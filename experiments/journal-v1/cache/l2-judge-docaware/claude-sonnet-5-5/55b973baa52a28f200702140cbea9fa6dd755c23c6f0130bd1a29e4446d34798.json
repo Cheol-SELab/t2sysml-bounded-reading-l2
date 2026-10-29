@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Surface Surveillance Adapter provides \"the Runway Lighting Outage Card\" to Tower Supervisor (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS605: The Tower Supervisor uses the same result to understand whether a runway queue is being held for surface capacity, runway capacity, or downstream airspace capacity.\nS606: The Surface Surveillance Adapter produces the Runway Lighting Outage Card when monitored runway lighting status affects a declared operating configuration.\nS692: The Airport Duty Manager is responsible for ensuring that declared service reductions are entered promptly and that the operational description is consistent with local aerodrome control procedures.\nS693: The Tower Supervisor uses the Runway Lighting Outage Card to confirm which runway lighting elements are unavailable before approving the operational status shown in the Tower Sequence Manager.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS294: The Deicing Coordinator sends the Deicing Pad Queue Card when pad demand, treatment progress, or release timing changes.\nS378: Ramp Control Lead uses the queue card to verify pad entry order before authorizing a movement from the staging area.\n\nAnswer \"supported\" only if the document states that Surface Surveillance Adapter produces or sends this item AND that Tower Supervisor receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Tower Supervisor uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S606 states the Surface Surveillance Adapter produces the Runway Lighting Outage Card, S693 states the Tower Supervisor uses that same card, and no other sentence names a different producer or a similarly named item.\"}",
+ "usage": {
+  "input_tokens": 946,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 88,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.037,
+ "created": "2026-10-19T18:56:25"
+}

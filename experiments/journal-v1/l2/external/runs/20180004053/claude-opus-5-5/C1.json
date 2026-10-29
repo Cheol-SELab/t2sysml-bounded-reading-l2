@@ -1,0 +1,1724 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0001",
+   "type": "composition",
+   "whole": "Federal Aviation Administration",
+   "parts": [
+    "NextGen program"
+   ]
+  },
+  {
+   "unit_id": "U0005",
+   "type": "constraint",
+   "subject": "National Airspace System",
+   "expression": "roughly 70% of the delays in U.S. operations"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "constraint",
+   "subject": "National Airspace System",
+   "expression": "32,000 minutes of average delay in the NAS during the summer of 2014"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "use playbook routes"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "safely divert traffic around weather-impacted regions"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "constraint",
+   "subject": "severe weather avoidance plans",
+   "expression": "devised two or more hours in advance of departure"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "severe weather avoidance plans",
+   "label": "provide predictability"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "severe weather avoidance plans",
+   "label": "introduce large deviations from nominal routes"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "reroute limited numbers of these flights using manual procedures"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "developing automation"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "Multi-Flight Common Route automation",
+   "label": "identify flights in need of rerouting"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "Multi-Flight Common Route automation",
+   "label": "suggest more efficient routes"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "Multi-Flight Common Route automation",
+   "label": "simplify coordination with airspace users and downstream air traffic facilities"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "constraint",
+   "subject": "FAA traffic managers",
+   "expression": "difficult to predict more than one hour in advance"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "composition",
+   "whole": "Airspace Technology Demonstration - 3 Project",
+   "parts": [
+    "suite of integrated ground-based technologies and decision-making aids"
+   ]
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "performer": "suite of integrated ground-based technologies and decision-making aids",
+   "label": "continuously search for more efficient weather-avoidance routes"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "performer": "suite of integrated ground-based technologies and decision-making aids",
+   "label": "help traffic managers, controllers, and airspace users to respond rapidly to weather changes and associated traffic management initiatives"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "requirement",
+   "subject": "suite of integrated ground-based technologies and decision-making aids",
+   "text": "These route-efficiency enhancements, targeted at en route airspace, will enable continued use of en route and arrival metering in the presence of weather."
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "suite of integrated ground-based technologies and decision-making aids",
+   "label": "enable continued use of en route and arrival metering"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "composition",
+   "whole": "suite of integrated ground-based technologies and decision-making aids",
+   "parts": [
+    "Multi-Flight Common Route automation"
+   ]
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "Multi-Flight Common Route automation",
+   "label": "focusing primarily on delay recovery in the en route phase of flight"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "label": "periodically revising weather-avoidance routing"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "composition",
+   "whole": "Air Route Traffic Control Centers",
+   "parts": [
+    "Traffic Management Coordinators"
+   ]
+  },
+  {
+   "unit_id": "U0017",
+   "type": "composition",
+   "whole": "Air Traffic Control System Command Center",
+   "parts": [
+    "traffic management specialists"
+   ]
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "Multi-Flight Common Route automation",
+   "label": "leverages existing weather, airspace, and traffic data"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "Multi-Flight Common Route automation",
+   "label": "build on existing ATM automation"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "flow",
+   "source": "National Aeronautics and Space Administration",
+   "target": "Federal Aviation Administration",
+   "payload": "Multi-Flight Common Route automation"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "Traffic Management Initiatives",
+   "label": "ensure that aircraft safely avoid areas of adverse weather"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "Traffic Management Initiatives",
+   "label": "meter traffic"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "identify those areas as Flow Constrained Areas"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "implement a Severe Weather Avoidance Plan"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "FAA traffic managers",
+   "label": "safely divert traffic around those weather-impacted regions"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "action",
+   "label": "playbook routes are identified"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "constraint",
+   "subject": "playbook routes",
+   "expression": "two to six hours prior to the time the constraint is predicted to develop"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "manually identify and request more efficient routes"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "performer": "airspace users",
+   "label": "manually identify and request more efficient routes"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "Collaborative Trajectory Options Program",
+   "label": "allows operators to file multiple routes"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "aircraft operators",
+   "label": "file multiple routes"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "automation tools",
+   "label": "continuously monitor weather development and movement"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "automation tools",
+   "label": "determine the efficacy of associated flow constraints"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "automation tools",
+   "label": "dynamically identify workable opportunities for time- and fuel-saving corrections to weather-avoidance routes"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "NASA",
+   "label": "developed and tested a ground-based automation application called Multi-Flight Common Route"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "assist traffic flow managers in efficiently rerouting airborne traffic"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "NASA",
+   "label": "developed and tested Direct-To tool"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "constraint",
+   "subject": "Direct-To tool",
+   "expression": "from 1998 through 2001"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "Dynamic Weather Routes",
+   "label": "identifies dynamic time-saving reroutes for individual flights within a Center"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "simultaneously monitoring and evaluating flight trajectories in all 20 Centers"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "identify common reroutes that provide the greatest overall time savings for multiple flights on similar routes"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "constraint",
+   "subject": "Multi-Flight Common Route",
+   "expression": "all 20 Centers"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "identify common routes that can be flown by a group of flights operating in the same vicinity"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "evaluated and coordinated reroute recommendations"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "avoids convective weather, active Special Use Airspaces, and Temporary Flight Restrictions"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "flow",
+   "target": "Multi-Flight Common Route",
+   "payload": "constraint information"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "processes flights in all 20 Centers across the NAS"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "constraint",
+   "subject": "Multi-Flight Common Route",
+   "expression": "all 20 Centers across the NAS"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "monitor and analyze trajectories"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "constraint",
+   "subject": "Multi-Flight Common Route",
+   "expression": "once flights climb to 15,000 feet"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "requirement",
+   "subject": "Multi-Flight Common Route",
+   "text": "it will recommend time-saving weather-avoidance reroutes for groups of flights operating above FL250 within the same Center"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "performer": "Multi-Flight Common Route",
+   "label": "recommend time-saving weather-avoidance reroutes"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "flow",
+   "source": "Multi-Flight Common Route",
+   "payload": "reroute recommendations"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "constraint",
+   "subject": "Multi-Flight Common Route",
+   "expression": "above FL250"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "attribute",
+   "owner": "Multi-Flight Common Route",
+   "name": "default minimum savings threshold",
+   "value": "10",
+   "unit": "minutes"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "constraint",
+   "subject": "Multi-Flight Common Route",
+   "expression": "default minimum savings threshold for a group of flights is 10 minutes"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "constraint",
+   "subject": "Multi-Flight Common Route",
+   "expression": "each individual flight saving at least 3 minutes"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "user",
+   "label": "adjusted parameters"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "composition",
+   "whole": "MFCR solution",
+   "parts": [
+    "Maneuver Start Point",
+    "Merge Point",
+    "Return Capture Fix"
+   ]
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "label": "auxiliary waypoints for weather avoidance may be added"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "constraint",
+   "subject": "auxiliary waypoints",
+   "expression": "Up to two auxiliary waypoints"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "constraint",
+   "subject": "Maneuver Start Point",
+   "expression": "five minutes (user adjustable) downstream of the flight’s current position"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "attribute",
+   "owner": "Maneuver Start Point",
+   "name": "downstream offset",
+   "value": "5",
+   "unit": "minutes"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "evaluate, modify, and coordinate the reroute"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "controllers",
+   "label": "issue clearances and deconflict flights"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "selects an RCF waypoint"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "action",
+   "performer": "flights",
+   "label": "return to their original flight plan route"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "reroute",
+   "label": "avoid convective weather, SUAs, and TFRs"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "does not avoid all operational constraints"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "provides the user with constraint information and a user-friendly trial planning function"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "flow",
+   "source": "MFCR",
+   "target": "user",
+   "payload": "constraint information"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "user",
+   "label": "tailor reroutes to fit the operational scenario"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "label": "Named fixes are used for all waypoints"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "label": "waypoints are defined by fix, radial, and distance"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "snap-to named fix capability",
+   "label": "automatically replaces any auxiliary waypoints with nearby named fixes"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "opt to use a FRD fix"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "analyzed for sector loading and conflicts with active SUAs or TFRs"
+  },
+  {
+   "unit_id": "U0057",
+   "type": "action",
+   "label": "conflicts are displayed on the user interface"
+  },
+  {
+   "unit_id": "U0057",
+   "type": "flow",
+   "target": "user interface",
+   "payload": "conflicts"
+  },
+  {
+   "unit_id": "U0057",
+   "type": "flow",
+   "source": "user interface",
+   "target": "user",
+   "payload": "immediate feedback"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "action",
+   "label": "updated every minute with traffic updates"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "constraint",
+   "subject": "reroute",
+   "expression": "updated every minute"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "action",
+   "label": "used to create limit polygons for each Center"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "constraint",
+   "subject": "limit polygons",
+   "expression": "previous one-year period"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "requirement",
+   "subject": "MFCR",
+   "text": "MFCR will select a waypoint, common to all the flight plan routes within the group, which is on or close to the downstream boundary of the limit polygon of the Center in which the flights are currently located."
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "select a waypoint"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "label": "indirectly accounts for Center preferences and routine constraints"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "checks downstream Time-Based Flow Management arrival metering constraints for each flight"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "including it in the recommended reroute"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "succession",
+   "before": "checks downstream Time-Based Flow Management arrival metering constraints for each flight",
+   "after": "including it in the recommended reroute"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "MFCR research prototype",
+   "label": "uses a simple proxy for this check"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "requirement",
+   "subject": "flights",
+   "text": "As long as a flight is outside its destination's TBFM planning horizon, it will be considered for inclusion in time-saving reroutes."
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "considered for inclusion in time-saving reroutes"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "label": "excluded from MFCR reroutes"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "label": "MFCR reroute recommendations are presented to the appropriate TMC"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "flow",
+   "source": "MFCR",
+   "target": "TMC",
+   "payload": "MFCR reroute recommendations"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "TMC",
+   "label": "evaluates and modifies it as needed"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "display",
+   "label": "lists recommended group reroutes"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "flow",
+   "source": "display",
+   "payload": "recommended group reroutes"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "performer": "user",
+   "label": "Selecting a group in this pane"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "performer": "display",
+   "label": "highlights the line in yellow"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "performer": "display",
+   "label": "brings up a list of flights for that group"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "flow",
+   "source": "display",
+   "payload": "list of flights"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "label": "omitted from the group by checking the remove box"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "composition",
+   "whole": "Graphical User Interface",
+   "parts": [
+    "trial planner interface",
+    "active flight plan sector loading map",
+    "trial-plan sector loading map"
+   ]
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "trial plan modifications are made"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "information related to the reroute is updated"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "state",
+   "owner": "sector",
+   "label": "Yellow"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "state",
+   "owner": "sector",
+   "label": "Red"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "presents sector congestion information in the GUI"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "flow",
+   "source": "MFCR",
+   "target": "Graphical User Interface",
+   "payload": "sector congestion information"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "performer": "traffic manager",
+   "label": "evaluate and modify the routing"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "traffic manager",
+   "label": "find a recommendation to be operationally suitable"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "traffic manager",
+   "label": "coordinate with Area Supervisors"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "succession",
+   "before": "find a recommendation to be operationally suitable",
+   "after": "coordinate with Area Supervisors"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "Coordination with the Air Traffic Control System Command Center"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "action",
+   "performer": "traffic manager",
+   "label": "accepts the MFCR recommendation via the GUI"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "action",
+   "performer": "AirBorne ReRoute capability",
+   "label": "flight plan amendments are sent to the air traffic displays"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "flow",
+   "source": "AirBorne ReRoute capability",
+   "target": "air traffic displays",
+   "payload": "flight plan amendments"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "succession",
+   "before": "accepts the MFCR recommendation via the GUI",
+   "after": "flight plan amendments are sent to the air traffic displays"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "performer": "sector controllers",
+   "label": "offer the reroute to the pilots"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "flow",
+   "source": "sector controllers",
+   "target": "pilots",
+   "payload": "reroute"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "succession",
+   "before": "flight plan amendments are sent to the air traffic displays",
+   "after": "offer the reroute to the pilots"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "performer": "flight crews",
+   "label": "coordinate their proposed reroutes with their dispatchers"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "performer": "flight crews",
+   "label": "accept the new routes"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "performer": "sector controllers",
+   "label": "implement the corresponding flight plan amendment in the automation system"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "succession",
+   "before": "accept the new routes",
+   "after": "implement the corresponding flight plan amendment in the automation system"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "merge westbound traffic at Three Rivers, TX"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "send the traffic via intermediate waypoints to El Paso, TX"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "presents an opportunity for MFCR reroute recommendations"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "performer": "MFCR recommendation",
+   "label": "identifies nine flights in Houston Center"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "label": "merged at fix LEJON"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "label": "sent direct to ELP"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "succession",
+   "before": "merged at fix LEJON",
+   "after": "sent direct to ELP"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "constraint",
+   "subject": "nine flights",
+   "expression": "total time savings of 53 minutes"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "constraint",
+   "subject": "nine flights",
+   "expression": "average of about 6 min per flight"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "action",
+   "label": "organized into a new flow along the common route segment from LEJON to ELP"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "performer": "traffic manager",
+   "label": "access the MFCR savings decay feature"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "performer": "MFCR savings decay feature",
+   "label": "shows how the overall savings of a recommended reroute group would decline"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "performer": "MFCR savings decay feature",
+   "label": "provides TMCs with a decision aid"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "flow",
+   "source": "MFCR savings decay feature",
+   "target": "traffic manager",
+   "payload": "decision aid"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "identifies these flights by highlighting them in red"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "provides the TMC with the means to identify estimated time savings for each flight"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "flow",
+   "source": "MFCR",
+   "target": "Traffic Management Coordinator",
+   "payload": "estimated time savings"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "add more flights in the reroute group"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "performer": "Traffic Management Coordinator",
+   "label": "decide when to start coordinating the reroute recommendation"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "flow",
+   "source": "Corridor Integrated Weather System",
+   "target": "MFCR",
+   "payload": "outputs"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "flow",
+   "source": "Convective Weather Avoidance Model",
+   "target": "MFCR",
+   "payload": "outputs"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "identify routes that will avoid convective cells"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "performer": "Corridor Integrated Weather System",
+   "label": "forecasts the growth, decay, and movement of convective weather"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "Forecasts are updated"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "constraint",
+   "subject": "Corridor Integrated Weather System",
+   "expression": "updated every five minutes"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "constraint",
+   "subject": "Corridor Integrated Weather System",
+   "expression": "two-hour look-ahead time in five-minute increments"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "identify alternative routes that remain clear of predicted weather"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "performer": "Convective Weather Avoidance Model",
+   "label": "provides polygons around convective cells"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "flow",
+   "source": "Convective Weather Avoidance Model",
+   "payload": "polygons"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "constraint",
+   "subject": "Convective Weather Avoidance Model",
+   "expression": "from FL250 to FL450 in 1,000 foot increments"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "attribute",
+   "owner": "CWAM polygon",
+   "name": "percentage of pilots who would deviate"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "constraint",
+   "subject": "CWAM polygon",
+   "expression": "a 70% CWAM polygon represents a region that 70% of pilots would avoid"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "constraint",
+   "subject": "CWAM polygon",
+   "expression": "A 70% CWAM polygon will be smaller (or sometimes the same) than a 60% CWAM polygon"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "label": "CWAM polygons are updated with the CIWS forecast"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "flow",
+   "source": "Corridor Integrated Weather System",
+   "target": "Convective Weather Avoidance Model",
+   "payload": "CIWS forecast"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "uses 70% CWAM polygons for weather avoidance"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "generating reroute recommendations"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "constraint",
+   "subject": "MFCR",
+   "expression": "uses 70% CWAM polygons"
+  },
+  {
+   "unit_id": "U0115",
+   "type": "composition",
+   "whole": "MFCR",
+   "parts": [
+    "gap detection and rejection logic"
+   ]
+  },
+  {
+   "unit_id": "U0115",
+   "type": "action",
+   "performer": "gap detection and rejection logic",
+   "label": "ensure that a gap between CWAM polygons is large enough to safely route aircraft"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "action",
+   "performer": "gap detection and rejection logic",
+   "label": "reject a route amendment"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "requirement",
+   "subject": "gap detection and rejection logic",
+   "text": "This function includes a distance buffer that will reject a route amendment if it will go through a gap that is narrower than 50 nautical miles laterally on either side of the route to the predicted cells"
+  },
+  {
+   "unit_id": "U0116",
+   "type": "constraint",
+   "subject": "gap detection and rejection logic",
+   "expression": "narrower than 50 nautical miles laterally on either side of the route"
+  },
+  {
+   "unit_id": "U0117",
+   "type": "attribute",
+   "owner": "gap detection and rejection logic",
+   "name": "gap-width parameter",
+   "value": "user adjustable"
+  },
+  {
+   "unit_id": "U0119",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "avoids narrow gaps"
+  },
+  {
+   "unit_id": "U0119",
+   "type": "constraint",
+   "subject": "MFCR",
+   "expression": "within 50 nautical miles along-track distance of one another"
+  },
+  {
+   "unit_id": "U0121",
+   "type": "composition",
+   "whole": "TMU",
+   "parts": [
+    "MFCR display and interface"
+   ]
+  },
+  {
+   "unit_id": "U0121",
+   "type": "action",
+   "performer": "MFCR display and interface",
+   "label": "continually runs in the background"
+  },
+  {
+   "unit_id": "U0122",
+   "type": "action",
+   "performer": "user",
+   "label": "set the adjustable parameters"
+  },
+  {
+   "unit_id": "U0122",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "identifies reroutes that could save more time than the minimum savings threshold"
+  },
+  {
+   "unit_id": "U0122",
+   "type": "action",
+   "performer": "MFCR",
+   "label": "posts a list of each flight grouping and a list of those flights"
+  },
+  {
+   "unit_id": "U0122",
+   "type": "flow",
+   "source": "MFCR",
+   "payload": "list of each flight grouping"
+  },
+  {
+   "unit_id": "U0122",
+   "type": "succession",
+   "before": "identifies reroutes that could save more time than the minimum savings threshold",
+   "after": "posts a list of each flight grouping and a list of those flights"
+  },
+  {
+   "unit_id": "U0123",
+   "type": "action",
+   "label": "triggers an audible alert"
+  },
+  {
+   "unit_id": "U0123",
+   "type": "action",
+   "performer": "traffic managers on duty",
+   "label": "hear the alert"
+  },
+  {
+   "unit_id": "U0123",
+   "type": "action",
+   "performer": "traffic managers on duty",
+   "label": "review and modify the proposed MFCR route(s)"
+  }
+ ],
+ "entities": [
+  {
+   "name": "National Airspace System",
+   "aliases": [
+    "NAS"
+   ]
+  },
+  {
+   "name": "Federal Aviation Administration",
+   "aliases": [
+    "FAA"
+   ]
+  },
+  {
+   "name": "NextGen program",
+   "aliases": []
+  },
+  {
+   "name": "FAA traffic managers",
+   "aliases": [
+    "traffic managers"
+   ]
+  },
+  {
+   "name": "playbook routes",
+   "aliases": []
+  },
+  {
+   "name": "severe weather avoidance plans",
+   "aliases": []
+  },
+  {
+   "name": "National Aeronautics and Space Administration",
+   "aliases": [
+    "NASA"
+   ]
+  },
+  {
+   "name": "Airspace Technology Demonstration - 3 Project",
+   "aliases": [
+    "ATD-3"
+   ]
+  },
+  {
+   "name": "suite of integrated ground-based technologies and decision-making aids",
+   "aliases": []
+  },
+  {
+   "name": "Multi-Flight Common Route automation",
+   "aliases": [
+    "MFCR"
+   ]
+  },
+  {
+   "name": "Traffic Management Coordinators",
+   "aliases": [
+    "TMCs"
+   ]
+  },
+  {
+   "name": "Air Route Traffic Control Centers",
+   "aliases": [
+    "ARTCCs",
+    "Centers"
+   ]
+  },
+  {
+   "name": "traffic management specialists",
+   "aliases": [
+    "TMSs"
+   ]
+  },
+  {
+   "name": "Air Traffic Control System Command Center",
+   "aliases": [
+    "ATCSCC"
+   ]
+  },
+  {
+   "name": "Traffic Management Initiatives",
+   "aliases": [
+    "TMIs"
+   ]
+  },
+  {
+   "name": "Flow Constrained Areas",
+   "aliases": [
+    "FCAs"
+   ]
+  },
+  {
+   "name": "Severe Weather Avoidance Plan",
+   "aliases": [
+    "SWAP"
+   ]
+  },
+  {
+   "name": "airspace users",
+   "aliases": []
+  },
+  {
+   "name": "downstream air traffic facilities",
+   "aliases": []
+  },
+  {
+   "name": "traffic managers",
+   "aliases": [
+    "traffic manager"
+   ]
+  },
+  {
+   "name": "aircraft operators",
+   "aliases": [
+    "operators"
+   ]
+  },
+  {
+   "name": "playbook routes",
+   "aliases": []
+  },
+  {
+   "name": "airspace users",
+   "aliases": []
+  },
+  {
+   "name": "Collaborative Trajectory Options Program",
+   "aliases": [
+    "CTOP"
+   ]
+  },
+  {
+   "name": "automation tools",
+   "aliases": []
+  },
+  {
+   "name": "controllers",
+   "aliases": []
+  },
+  {
+   "name": "NASA",
+   "aliases": []
+  },
+  {
+   "name": "Multi-Flight Common Route",
+   "aliases": [
+    "MFCR"
+   ]
+  },
+  {
+   "name": "traffic flow managers",
+   "aliases": []
+  },
+  {
+   "name": "Dynamic Weather Routes",
+   "aliases": [
+    "DWR"
+   ]
+  },
+  {
+   "name": "Direct-To tool",
+   "aliases": []
+  },
+  {
+   "name": "Special Use Airspaces",
+   "aliases": [
+    "SUAs"
+   ]
+  },
+  {
+   "name": "Temporary Flight Restrictions",
+   "aliases": [
+    "TFRs"
+   ]
+  },
+  {
+   "name": "MFCR solution",
+   "aliases": []
+  },
+  {
+   "name": "Maneuver Start Point",
+   "aliases": [
+    "MSP"
+   ]
+  },
+  {
+   "name": "Merge Point",
+   "aliases": [
+    "MP"
+   ]
+  },
+  {
+   "name": "Return Capture Fix",
+   "aliases": [
+    "RCF"
+   ]
+  },
+  {
+   "name": "auxiliary waypoints",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": []
+  },
+  {
+   "name": "constraint information",
+   "aliases": []
+  },
+  {
+   "name": "reroute recommendations",
+   "aliases": []
+  },
+  {
+   "name": "MFCR",
+   "aliases": [
+    "MFCR algorithm"
+   ]
+  },
+  {
+   "name": "traffic managers",
+   "aliases": []
+  },
+  {
+   "name": "controllers",
+   "aliases": []
+  },
+  {
+   "name": "RCF waypoint",
+   "aliases": [
+    "RCF"
+   ]
+  },
+  {
+   "name": "flights",
+   "aliases": []
+  },
+  {
+   "name": "reroute",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": []
+  },
+  {
+   "name": "trial planning function",
+   "aliases": []
+  },
+  {
+   "name": "snap-to named fix capability",
+   "aliases": []
+  },
+  {
+   "name": "fix, radial, and distance",
+   "aliases": [
+    "FRD"
+   ]
+  },
+  {
+   "name": "user interface",
+   "aliases": []
+  },
+  {
+   "name": "limit polygons",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Flow Management",
+   "aliases": [
+    "TFM"
+   ]
+  },
+  {
+   "name": "Air Traffic Control",
+   "aliases": [
+    "ATC"
+   ]
+  },
+  {
+   "name": "Time-Based Flow Management",
+   "aliases": [
+    "TBFM"
+   ]
+  },
+  {
+   "name": "MFCR research prototype",
+   "aliases": []
+  },
+  {
+   "name": "scheduled time of arrival",
+   "aliases": [
+    "STA"
+   ]
+  },
+  {
+   "name": "TMC",
+   "aliases": []
+  },
+  {
+   "name": "display",
+   "aliases": []
+  },
+  {
+   "name": "constraint information",
+   "aliases": []
+  },
+  {
+   "name": "MFCR reroute recommendations",
+   "aliases": []
+  },
+  {
+   "name": "Graphical User Interface",
+   "aliases": [
+    "GUI"
+   ]
+  },
+  {
+   "name": "MFCR",
+   "aliases": []
+  },
+  {
+   "name": "trial planner interface",
+   "aliases": []
+  },
+  {
+   "name": "traffic manager",
+   "aliases": [
+    "traffic managers",
+    "TMCs"
+   ]
+  },
+  {
+   "name": "Area Supervisors",
+   "aliases": []
+  },
+  {
+   "name": "Air Traffic Control System Command Center",
+   "aliases": [
+    "ATCSCC"
+   ]
+  },
+  {
+   "name": "Advanced Flight-Specific Trajectories",
+   "aliases": [
+    "AFST",
+    "Strategic Traffic Flow Management Application",
+    "SFMA"
+   ]
+  },
+  {
+   "name": "AirBorne ReRoute capability",
+   "aliases": [
+    "ABRR"
+   ]
+  },
+  {
+   "name": "sector controllers",
+   "aliases": [
+    "sector controller(s)"
+   ]
+  },
+  {
+   "name": "pilots",
+   "aliases": []
+  },
+  {
+   "name": "flight crews",
+   "aliases": []
+  },
+  {
+   "name": "dispatchers",
+   "aliases": []
+  },
+  {
+   "name": "automation system",
+   "aliases": []
+  },
+  {
+   "name": "Data Comm",
+   "aliases": []
+  },
+  {
+   "name": "flight plan amendments",
+   "aliases": []
+  },
+  {
+   "name": "air traffic displays",
+   "aliases": []
+  },
+  {
+   "name": "Three Rivers, TX",
+   "aliases": [
+    "THX"
+   ]
+  },
+  {
+   "name": "El Paso, TX",
+   "aliases": [
+    "ELP",
+    "Return Capture Fix"
+   ]
+  },
+  {
+   "name": "LEJON",
+   "aliases": [
+    "Merge Point"
+   ]
+  },
+  {
+   "name": "Houston Center",
+   "aliases": []
+  },
+  {
+   "name": "MFCR savings decay feature",
+   "aliases": [
+    "savings decay graph"
+   ]
+  },
+  {
+   "name": "sector congestion information",
+   "aliases": []
+  },
+  {
+   "name": "MFCR recommendation",
+   "aliases": []
+  },
+  {
+   "name": "MFCR",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Management Coordinator",
+   "aliases": [
+    "TMC",
+    "TMCs"
+   ]
+  },
+  {
+   "name": "Corridor Integrated Weather System",
+   "aliases": [
+    "CIWS"
+   ]
+  },
+  {
+   "name": "Convective Weather Avoidance Model",
+   "aliases": [
+    "CWAM"
+   ]
+  },
+  {
+   "name": "FAA",
+   "aliases": []
+  },
+  {
+   "name": "CWAM polygon",
+   "aliases": []
+  },
+  {
+   "name": "TMU",
+   "aliases": []
+  },
+  {
+   "name": "MFCR display and interface",
+   "aliases": []
+  },
+  {
+   "name": "user",
+   "aliases": []
+  },
+  {
+   "name": "traffic managers on duty",
+   "aliases": []
+  },
+  {
+   "name": "reroute group",
+   "aliases": []
+  },
+  {
+   "name": "savings-decay graph",
+   "aliases": []
+  },
+  {
+   "name": "gap detection and rejection logic",
+   "aliases": []
+  },
+  {
+   "name": "audible alert",
+   "aliases": []
+  },
+  {
+   "name": "reroute recommendation",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0022"
+   ],
+   "chunk_tokens": 902,
+   "memory_tokens": 0,
+   "prompt_tokens": 1656,
+   "input": 3436,
+   "output": 4091,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0023",
+    "U0046"
+   ],
+   "chunk_tokens": 904,
+   "memory_tokens": 0,
+   "prompt_tokens": 1666,
+   "input": 3431,
+   "output": 4650,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0047",
+    "U0073"
+   ],
+   "chunk_tokens": 904,
+   "memory_tokens": 0,
+   "prompt_tokens": 1677,
+   "input": 3372,
+   "output": 4224,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0074",
+    "U0100"
+   ],
+   "chunk_tokens": 889,
+   "memory_tokens": 0,
+   "prompt_tokens": 1661,
+   "input": 3339,
+   "output": 3142,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0101",
+    "U0123"
+   ],
+   "chunk_tokens": 847,
+   "memory_tokens": 0,
+   "prompt_tokens": 1604,
+   "input": 3229,
+   "output": 3442,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

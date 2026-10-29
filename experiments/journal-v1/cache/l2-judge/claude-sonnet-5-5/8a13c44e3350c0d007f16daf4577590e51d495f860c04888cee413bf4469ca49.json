@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: SCADA Gateway provides \"the Session Revocation Receipt\" to Cybersecurity Gateway (an information or material flow).\n\nSource sentences:\nS211: SCADA Gateway provides relay status and interface measurements to the farm monitoring environment.\nS212: SCADA Gateway produces the Session Revocation Receipt when an authenticated control session is terminated.\nS356: The operator records test results and raises a defect promptly if the Emergency Generator fails to start or sustain its required load.\nS357: The Cybersecurity Gateway uses the revocation receipt to support access control during routine account and session reviews.\n\nAnswer \"supported\" only if the sentences state that SCADA Gateway produces or sends this item AND that Cybersecurity Gateway receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S212 says SCADA Gateway produces the Session Revocation Receipt, and S357 says the Cybersecurity Gateway uses the revocation receipt (a shorter name for the same item), so the flow from SCADA Gateway to Cybersecurity Gateway is supported.\"}",
+ "usage": {
+  "input_tokens": 660,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 109,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.508,
+ "created": "2026-10-14T12:51:03"
+}

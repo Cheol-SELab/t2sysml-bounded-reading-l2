@@ -1,0 +1,114 @@
+{
+ "sentences": [
+  {
+   "text": "The Pharmacy Verification Station serves as the final controlled checkpoint before a medication is made available for dispensing.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist compares the active medication order with the product, strength, dosage form, dose, route, and scheduled time.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist also confirms that the patient identifiers and pharmacy label agree with the authorized order.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician checks package integrity, lot identification, and expiry before presenting the medication for verification.",
+   "tags": []
+  },
+  {
+   "text": "For designated high-risk medications, an independent second check is completed and recorded before authorization.",
+   "tags": []
+  },
+  {
+   "text": "Any mismatch places the medication on hold until the discrepancy is resolved by an authorized pharmacy professional.",
+   "tags": []
+  },
+  {
+   "text": "The verification record captures the approving staff identity, time, and medication identifiers for later review.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Fulfillment Robot remains inhibited from completing a dispense until the required pharmacy authorization is present.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist resolves unclear or conflicting order details through the Medication Order Gateway before authorizing release.",
+   "tags": []
+  },
+  {
+   "text": "The South Ward Cabinet Controller receives the release note and applies its own approved cabinet configuration before enabling any compartment.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "text": "The South Ward Cabinet Controller checks its local compartment mapping, access rules, and supported medication classes against that configuration.",
+   "tags": []
+  },
+  {
+   "text": "The cabinet reports Ready for Dispense only after its configuration checks and required device self-tests pass.",
+   "tags": []
+  },
+  {
+   "text": "The Registered Nurse authenticates at the cabinet and selects the medication associated with the active patient order.",
+   "tags": []
+  },
+  {
+   "text": "The South Ward Cabinet Controller checks the requested selection against its local authorization rules before unlocking a compartment.",
+   "tags": []
+  },
+  {
+   "text": "The cabinet records the user, order reference, compartment access, and transaction time for audit review.",
+   "tags": []
+  },
+  {
+   "text": "Stonewake reviews the received operational record, correlates its equipment identifiers and timestamps with local telemetry, and records an engineering disposition.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "text": "The Biomedical Engineer uses the exception ticket to identify the affected path and compare reported symptoms with equipment telemetry.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "text": "The Biomedical Engineer checks whether the reported condition is isolated to one device or indicates a broader service risk.",
+   "tags": []
+  },
+  {
+   "text": "When a hardware or control fault is suspected, the affected equipment is placed in Out of Service status.",
+   "tags": []
+  },
+  {
+   "text": "The Biomedical Engineer isolates the affected subsystem and performs only the diagnostic steps approved for that equipment.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist investigates authentication, interface, and time-synchronization faults that could affect transaction records.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Safety Officer reviews any discrepancy that could change medication identity, access control, or patient risk.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist keeps affected medication unavailable until the relevant order and product checks are repeated successfully.",
+   "tags": []
+  },
+  {
+   "text": "The Biomedical Engineer records the corrective action, test evidence, and approvals required to return the equipment to operation.",
+   "tags": []
+  },
+  {
+   "text": "Equipment remains Out of Service until required functional checks pass and the responsible staff approve its return.",
+   "tags": []
+  },
+  {
+   "text": "Audit records retain timestamps, equipment identifiers, and disposition details to support operational review and investigation.",
+   "tags": []
+  }
+ ]
+}

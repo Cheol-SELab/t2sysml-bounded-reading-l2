@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: requirement(subject=Security responsibilities, text=Security responsibilities shall be reviewed after major timetable changes, radio coverage modifications, control center upgrades, or any incident that questions the integrity of safety-related communications.)\n\nSource sentences (the last one is where the fact was extracted):\nS220: The Voice Dispatch Console shall be included in security incident procedures when a cyber event changes the normal method for issuing operational instructions.\nS221: The Platform Screen Door Controller shall accept only authenticated interfaces approved for passenger service coordination and maintenance testing.\nS222: The Dual Channel Odometer and Atlas Onboard Controller shall report security-relevant diagnostic conditions in a manner that supports investigation without exposing cryptographic material.\nS223: Security responsibilities shall be reviewed after major timetable changes, radio coverage modifications, control center upgrades, or any incident that questions the integrity of safety-related communications.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S223 states verbatim that security responsibilities shall be reviewed after major timetable changes, radio coverage modifications, control center upgrades, or any incident questioning the integrity of safety-related communications, matching the fact's subject and text.\"}",
+ "usage": {
+  "input_tokens": 768,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.223,
+ "created": "2026-10-14T12:51:41"
+}

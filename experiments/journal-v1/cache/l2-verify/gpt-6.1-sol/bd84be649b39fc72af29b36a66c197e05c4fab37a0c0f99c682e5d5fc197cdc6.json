@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Tower Supervisor provides \"conditions that may affect runway, taxiway, stand, or apron availability\" to Capacity Assessment Module (an information or material flow).\n\nSource sentences:\nS174: Tower and airport duty coordination establishes the working link between live control positions, the airport duty desk, surface surveillance feeds, and operational safety checks.\nS175: The Tower Supervisor remains accountable for control tower coordination and keeps the Airport Duty Manager informed of conditions that may affect runway, taxiway, stand, or apron availability.\nS493: The Demand Prediction Service compares amended Flight Intent Message data with the Airport Capacity Plan and the current Airport Acceptance Rate to show whether a diversion can be absorbed without creating unsafe demand peaks.\nS494: The Capacity Assessment Module evaluates runway availability, stand availability, sector load, handling capacity, and service constraints before a diversion recommendation is displayed.\n\nAnswer \"supported\" only if the sentences state that Tower Supervisor produces or sends this item AND that Capacity Assessment Module receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Tower Supervisor sends availability-affecting conditions to the Airport Duty Manager, while the Capacity Assessment Module evaluates availability and constraints without being stated to receive or use those conditions.\"}",
+ "usage": {
+  "input_tokens": 345,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 94,
+  "output_tokens_details": {
+   "reasoning_tokens": 41
+  },
+  "total_tokens": 439
+ },
+ "attempts": 1,
+ "wall_s": 3.978,
+ "created": "2026-10-14T12:45:36"
+}

@@ -1,0 +1,917 @@
+{
+ "doc_id": "L2X1",
+ "writer": "gpt-5.5",
+ "verifier": "gpt-6-luna",
+ "budget": 1024,
+ "doc_tokens": 27820,
+ "far_share": 0.9428571428571428,
+ "entities": [
+  {
+   "entity_id": "E_REGIONAL_FLOW_MANAGER",
+   "canonical": "Regional Flow Manager",
+   "kind": "actor",
+   "aliases": [
+    "Copperfin"
+   ]
+  },
+  {
+   "entity_id": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "canonical": "Airline Operations Coordinator",
+   "kind": "actor",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "entity_id": "E_TOWER_SUPERVISOR",
+   "canonical": "Tower Supervisor",
+   "kind": "actor",
+   "aliases": [
+    "Brindle"
+   ]
+  },
+  {
+   "entity_id": "E_RAMP_CONTROL_LEAD",
+   "canonical": "Ramp Control Lead",
+   "kind": "actor",
+   "aliases": [
+    "Quartzline"
+   ]
+  },
+  {
+   "entity_id": "E_SLOT_COORDINATOR",
+   "canonical": "Slot Coordinator",
+   "kind": "actor",
+   "aliases": [
+    "Halcyon"
+   ]
+  },
+  {
+   "entity_id": "E_NETWORK_OPERATIONS_LIAISON",
+   "canonical": "Network Operations Liaison",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRPORT_DUTY_MANAGER",
+   "canonical": "Airport Duty Manager",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_METEOROLOGY_BRIEFING_OFFICER",
+   "canonical": "Meteorology Briefing Officer",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRSPACE_SECTOR_PLANNER",
+   "canonical": "Airspace Sector Planner",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GROUND_HANDLING_DISPATCHER",
+   "canonical": "Ground Handling Dispatcher",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRCRAFT_OPERATOR_REPRESENTATIVE",
+   "canonical": "Aircraft Operator Representative",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EMERGENCY_RESPONSE_COORDINATOR",
+   "canonical": "Emergency Response Coordinator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MILITARY_AIRSPACE_LIAISON",
+   "canonical": "Military Airspace Liaison",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DEICING_COORDINATOR",
+   "canonical": "Deicing Coordinator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DATA_GOVERNANCE_STEWARD",
+   "canonical": "Data Governance Steward",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SYSTEM_SUPPORT_ENGINEER",
+   "canonical": "System Support Engineer",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_REGIONAL_FLOW_PLATFORM",
+   "canonical": "Regional Flow Platform",
+   "kind": "part",
+   "aliases": [
+    "Cedarbell"
+   ]
+  },
+  {
+   "entity_id": "E_DEMAND_PREDICTION_SERVICE",
+   "canonical": "Demand Prediction Service",
+   "kind": "part",
+   "aliases": [
+    "Marlinstone"
+   ]
+  },
+  {
+   "entity_id": "E_CAPACITY_ASSESSMENT_MODULE",
+   "canonical": "Capacity Assessment Module",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SLOT_ALLOCATION_ENGINE",
+   "canonical": "Slot Allocation Engine",
+   "kind": "part",
+   "aliases": [
+    "Blueharbor"
+   ]
+  },
+  {
+   "entity_id": "E_AIRPORT_CDM_PORTAL",
+   "canonical": "Airport CDM Portal",
+   "kind": "part",
+   "aliases": [
+    "Foxglove"
+   ]
+  },
+  {
+   "entity_id": "E_TOWER_SEQUENCE_MANAGER",
+   "canonical": "Tower Sequence Manager",
+   "kind": "part",
+   "aliases": [
+    "Ironleaf"
+   ]
+  },
+  {
+   "entity_id": "E_RAMP_MOVEMENT_BOARD",
+   "canonical": "Ramp Movement Board",
+   "kind": "part",
+   "aliases": [
+    "Skylark"
+   ]
+  },
+  {
+   "entity_id": "E_DEPARTURE_METERING_SERVICE",
+   "canonical": "Departure Metering Service",
+   "kind": "part",
+   "aliases": [
+    "Emberline"
+   ]
+  },
+  {
+   "entity_id": "E_ARRIVAL_REGULATION_CONSOLE",
+   "canonical": "Arrival Regulation Console",
+   "kind": "part",
+   "aliases": [
+    "Nightjar"
+   ]
+  },
+  {
+   "entity_id": "E_WEATHER_INGEST_GATEWAY",
+   "canonical": "Weather Ingest Gateway",
+   "kind": "part",
+   "aliases": [
+    "Orchard"
+   ]
+  },
+  {
+   "entity_id": "E_FLIGHT_DATA_EXCHANGE",
+   "canonical": "Flight Data Exchange",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SURFACE_SURVEILLANCE_ADAPTER",
+   "canonical": "Surface Surveillance Adapter",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRLINE_INTERFACE_ADAPTER",
+   "canonical": "Airline Interface Adapter",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HANDLING_RESOURCE_PLANNER",
+   "canonical": "Handling Resource Planner",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ALERT_DISTRIBUTION_HUB",
+   "canonical": "Alert Distribution Hub",
+   "kind": "part",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "entity_id": "E_PERFORMANCE_ANALYTICS_WAREHOUSE",
+   "canonical": "Performance Analytics Warehouse",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AUDIT_EVENT_LEDGER",
+   "canonical": "Audit Event Ledger",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_IDENTITY_ACCESS_SERVICE",
+   "canonical": "Identity Access Service",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CONTINGENCY_OPERATIONS_CONSOLE",
+   "canonical": "Contingency Operations Console",
+   "kind": "part",
+   "aliases": [
+    "Silverpine"
+   ]
+  },
+  {
+   "entity_id": "E_DIGITAL_BRIEFING_ROOM",
+   "canonical": "Digital Briefing Room",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_NORTH_RUNWAY_METER",
+   "canonical": "North Runway Meter",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_RUNWAY_METER",
+   "canonical": "South Runway Meter",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EAST_APRON_SENSOR",
+   "canonical": "East Apron Sensor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WEST_APRON_SENSOR",
+   "canonical": "West Apron Sensor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SECTOR_LOAD_MONITOR",
+   "canonical": "Sector Load Monitor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GATE_CONFLICT_DETECTOR",
+   "canonical": "Gate Conflict Detector",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BUSINESS_RULES_REGISTRY",
+   "canonical": "Business Rules Registry",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TIME_SYNCHRONIZATION_SERVICE",
+   "canonical": "Time Synchronization Service",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RUNWAY_INSPECTION_NOTE",
+   "canonical": "Runway Inspection Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CREW_BUS_DELAY_SLIP",
+   "canonical": "Crew Bus Delay Slip",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DEICING_PAD_QUEUE_CARD",
+   "canonical": "Deicing Pad Queue Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_STAND_TOW_REQUEST_FORM",
+   "canonical": "Stand Tow Request Form",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TEMPORARY_RESTRICTION_NOTICE",
+   "canonical": "Temporary Restriction Notice",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FUEL_TRUCK_HOLD_ADVICE",
+   "canonical": "Fuel Truck Hold Advice",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GATE_REOPENING_MEMO",
+   "canonical": "Gate Reopening Memo",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PUSHBACK_WINDOW_TOKEN",
+   "canonical": "Pushback Window Token",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LATE_BAGGAGE_TAG_LIST",
+   "canonical": "Late Baggage Tag List",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_STORM_CELL_SNAPSHOT",
+   "canonical": "Storm Cell Snapshot",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DEPARTURE_FIX_LOAD_SHEET",
+   "canonical": "Departure Fix Load Sheet",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MEDICAL_DIVERSION_NOTICE",
+   "canonical": "Medical Diversion Notice",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TOWBAR_SHORTAGE_REPORT",
+   "canonical": "Towbar Shortage Report",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_REMOTE_STAND_SHUTTLE_COUNT",
+   "canonical": "Remote Stand Shuttle Count",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CUSTOMS_HOLD_RELEASE_NOTE",
+   "canonical": "Customs Hold Release Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RUNWAY_LIGHTING_OUTAGE_CARD",
+   "canonical": "Runway Lighting Outage Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CREW_DUTY_EXTENSION_LOG",
+   "canonical": "Crew Duty Extension Log",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_APRON_SWEEP_COMPLETION_NOTE",
+   "canonical": "Apron Sweep Completion Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SLOT_SWAP_PERMISSION_EMAIL",
+   "canonical": "Slot Swap Permission Email",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PASSENGER_MISCONNECT_COUNT",
+   "canonical": "Passenger Misconnect Count",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FLIGHT_INTENT_MESSAGE",
+   "canonical": "Flight Intent Message",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRPORT_CAPACITY_PLAN",
+   "canonical": "Airport Capacity Plan",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CALCULATED_TAKEOFF_TIME",
+   "canonical": "Calculated Takeoff Time",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TARGET_OFF_BLOCK_TIME",
+   "canonical": "Target Off Block Time",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_GROUND_DELAY_PROGRAM",
+   "canonical": "Ground Delay Program",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRPORT_ACCEPTANCE_RATE",
+   "canonical": "Airport Acceptance Rate",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_COMMON_SITUATION_DISPLAY",
+   "canonical": "Common Situation Display",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_COLLABORATIVE_DECISION_LOG",
+   "canonical": "Collaborative Decision Log",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TACTICAL_REGULATION_PROPOSAL",
+   "canonical": "Tactical Regulation Proposal",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_POST_OPERATIONS_REPORT",
+   "canonical": "Post Operations Report",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_NORMAL_OPERATIONS",
+   "canonical": "Normal Operations",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ADVERSE_WEATHER_MODE",
+   "canonical": "Adverse Weather Mode",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CAPACITY_REDUCTION_STATE",
+   "canonical": "Capacity Reduction State",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RECOVERY_PHASE",
+   "canonical": "Recovery Phase",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CONTINGENCY_FALLBACK_STATE",
+   "canonical": "Contingency Fallback State",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SLOT_COMPLIANCE_STATE",
+   "canonical": "Slot Compliance State",
+   "kind": "state",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_TOWER_SUPERVISOR",
+   "consumer": "E_AIRPORT_DUTY_MANAGER",
+   "item": "E_RUNWAY_INSPECTION_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S060",
+   "link_unit": "S181",
+   "distance_tokens": 3322
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_GROUND_HANDLING_DISPATCHER",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "item": "E_CREW_BUS_DELAY_SLIP",
+   "link_ref": "short",
+   "short_ref": "the delay slip",
+   "intro_unit": "S140",
+   "link_unit": "S237",
+   "distance_tokens": 2691
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_DEICING_COORDINATOR",
+   "consumer": "E_RAMP_CONTROL_LEAD",
+   "item": "E_DEICING_PAD_QUEUE_CARD",
+   "link_ref": "short",
+   "short_ref": "the queue card",
+   "intro_unit": "S294",
+   "link_unit": "S378",
+   "distance_tokens": 2414
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_RAMP_CONTROL_LEAD",
+   "consumer": "E_HANDLING_RESOURCE_PLANNER",
+   "item": "E_STAND_TOW_REQUEST_FORM",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S208",
+   "link_unit": "S304",
+   "distance_tokens": 2728
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_MILITARY_AIRSPACE_LIAISON",
+   "consumer": "E_REGIONAL_FLOW_MANAGER",
+   "item": "E_TEMPORARY_RESTRICTION_NOTICE",
+   "link_ref": "short",
+   "short_ref": "the restriction notice",
+   "intro_unit": "S325",
+   "link_unit": "S399",
+   "distance_tokens": 2000
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_RAMP_MOVEMENT_BOARD",
+   "consumer": "E_TOWER_SEQUENCE_MANAGER",
+   "item": "E_FUEL_TRUCK_HOLD_ADVICE",
+   "link_ref": "short",
+   "short_ref": "the hold advice",
+   "intro_unit": "S361",
+   "link_unit": "S450",
+   "distance_tokens": 2414
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_GATE_CONFLICT_DETECTOR",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "item": "E_GATE_REOPENING_MEMO",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S386",
+   "link_unit": "S472",
+   "distance_tokens": 2375
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_SLOT_ALLOCATION_ENGINE",
+   "consumer": "E_AIRPORT_CDM_PORTAL",
+   "item": "E_PUSHBACK_WINDOW_TOKEN",
+   "link_ref": "short",
+   "short_ref": "the window token",
+   "intro_unit": "S428",
+   "link_unit": "S503",
+   "distance_tokens": 2148
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_AIRLINE_INTERFACE_ADAPTER",
+   "consumer": "E_GROUND_HANDLING_DISPATCHER",
+   "item": "E_LATE_BAGGAGE_TAG_LIST",
+   "link_ref": "short",
+   "short_ref": "the tag list",
+   "intro_unit": "S452",
+   "link_unit": "S519",
+   "distance_tokens": 1955
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_METEOROLOGY_BRIEFING_OFFICER",
+   "consumer": "E_CAPACITY_ASSESSMENT_MODULE",
+   "item": "E_STORM_CELL_SNAPSHOT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S085",
+   "link_unit": "S133",
+   "distance_tokens": 1295
+  },
+  {
+   "probe_id": "F11",
+   "type": "split_flow",
+   "producer": "E_SECTOR_LOAD_MONITOR",
+   "consumer": "E_REGIONAL_FLOW_MANAGER",
+   "item": "E_DEPARTURE_FIX_LOAD_SHEET",
+   "link_ref": "short",
+   "short_ref": "the load sheet",
+   "intro_unit": "S484",
+   "link_unit": "S598",
+   "distance_tokens": 3167
+  },
+  {
+   "probe_id": "F12",
+   "type": "split_flow",
+   "producer": "E_AIRPORT_DUTY_MANAGER",
+   "consumer": "E_ARRIVAL_REGULATION_CONSOLE",
+   "item": "E_MEDICAL_DIVERSION_NOTICE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S496",
+   "link_unit": "S576",
+   "distance_tokens": 2206
+  },
+  {
+   "probe_id": "F13",
+   "type": "split_flow",
+   "producer": "E_GROUND_HANDLING_DISPATCHER",
+   "consumer": "E_RAMP_CONTROL_LEAD",
+   "item": "E_TOWBAR_SHORTAGE_REPORT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S523",
+   "link_unit": "S556",
+   "distance_tokens": 878
+  },
+  {
+   "probe_id": "F14",
+   "type": "split_flow",
+   "producer": "E_HANDLING_RESOURCE_PLANNER",
+   "consumer": "E_AIRPORT_CDM_PORTAL",
+   "item": "E_REMOTE_STAND_SHUTTLE_COUNT",
+   "link_ref": "short",
+   "short_ref": "the shuttle count",
+   "intro_unit": "S547",
+   "link_unit": "S648",
+   "distance_tokens": 2661
+  },
+  {
+   "probe_id": "F15",
+   "type": "split_flow",
+   "producer": "E_AIRPORT_DUTY_MANAGER",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "item": "E_CUSTOMS_HOLD_RELEASE_NOTE",
+   "link_ref": "short",
+   "short_ref": "the release note",
+   "intro_unit": "S568",
+   "link_unit": "S679",
+   "distance_tokens": 2896
+  },
+  {
+   "probe_id": "F16",
+   "type": "split_flow",
+   "producer": "E_SURFACE_SURVEILLANCE_ADAPTER",
+   "consumer": "E_TOWER_SUPERVISOR",
+   "item": "E_RUNWAY_LIGHTING_OUTAGE_CARD",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S606",
+   "link_unit": "S693",
+   "distance_tokens": 2273
+  },
+  {
+   "probe_id": "F17",
+   "type": "split_flow",
+   "producer": "E_AIRCRAFT_OPERATOR_REPRESENTATIVE",
+   "consumer": "E_SLOT_COORDINATOR",
+   "item": "E_CREW_DUTY_EXTENSION_LOG",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S620",
+   "link_unit": "S726",
+   "distance_tokens": 2844
+  },
+  {
+   "probe_id": "F18",
+   "type": "split_flow",
+   "producer": "E_RAMP_CONTROL_LEAD",
+   "consumer": "E_AIRPORT_DUTY_MANAGER",
+   "item": "E_APRON_SWEEP_COMPLETION_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S647",
+   "link_unit": "S678",
+   "distance_tokens": 798
+  },
+  {
+   "probe_id": "F19",
+   "type": "split_flow",
+   "producer": "E_SLOT_COORDINATOR",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "item": "E_SLOT_SWAP_PERMISSION_EMAIL",
+   "link_ref": "short",
+   "short_ref": "the permission email",
+   "intro_unit": "S672",
+   "link_unit": "S795",
+   "distance_tokens": 3425
+  },
+  {
+   "probe_id": "F20",
+   "type": "split_flow",
+   "producer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "consumer": "E_DEPARTURE_METERING_SERVICE",
+   "item": "E_PASSENGER_MISCONNECT_COUNT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S740",
+   "link_unit": "S851",
+   "distance_tokens": 2999
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_REGIONAL_FLOW_PLATFORM",
+   "alias": "Cedarbell",
+   "intro_unit": "S029",
+   "link_unit": "S164",
+   "distance_tokens": 3821
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_DEMAND_PREDICTION_SERVICE",
+   "alias": "Marlinstone",
+   "intro_unit": "S101",
+   "link_unit": "S216",
+   "distance_tokens": 3127
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_SLOT_ALLOCATION_ENGINE",
+   "alias": "Blueharbor",
+   "intro_unit": "S224",
+   "link_unit": "S355",
+   "distance_tokens": 3781
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_AIRPORT_CDM_PORTAL",
+   "alias": "Foxglove",
+   "intro_unit": "S151",
+   "link_unit": "S293",
+   "distance_tokens": 4012
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_TOWER_SEQUENCE_MANAGER",
+   "alias": "Ironleaf",
+   "intro_unit": "S276",
+   "link_unit": "S334",
+   "distance_tokens": 1702
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_RAMP_MOVEMENT_BOARD",
+   "alias": "Skylark",
+   "intro_unit": "S310",
+   "link_unit": "S427",
+   "distance_tokens": 3231
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_DEPARTURE_METERING_SERVICE",
+   "alias": "Emberline",
+   "intro_unit": "S348",
+   "link_unit": "S426",
+   "distance_tokens": 2103
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_ARRIVAL_REGULATION_CONSOLE",
+   "alias": "Nightjar",
+   "intro_unit": "S423",
+   "link_unit": "S535",
+   "distance_tokens": 3157
+  },
+  {
+   "probe_id": "A9",
+   "type": "alias_ref",
+   "entity_id": "E_REGIONAL_FLOW_MANAGER",
+   "alias": "Copperfin",
+   "intro_unit": "S076",
+   "link_unit": "S137",
+   "distance_tokens": 1631
+  },
+  {
+   "probe_id": "A10",
+   "type": "alias_ref",
+   "entity_id": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "alias": "Saffron",
+   "intro_unit": "S125",
+   "link_unit": "S260",
+   "distance_tokens": 3728
+  },
+  {
+   "probe_id": "A12",
+   "type": "alias_ref",
+   "entity_id": "E_RAMP_CONTROL_LEAD",
+   "alias": "Quartzline",
+   "intro_unit": "S199",
+   "link_unit": "S387",
+   "distance_tokens": 5345
+  },
+  {
+   "probe_id": "A13",
+   "type": "alias_ref",
+   "entity_id": "E_SLOT_COORDINATOR",
+   "alias": "Halcyon",
+   "intro_unit": "S257",
+   "link_unit": "S356",
+   "distance_tokens": 2852
+  },
+  {
+   "probe_id": "A14",
+   "type": "alias_ref",
+   "entity_id": "E_WEATHER_INGEST_GATEWAY",
+   "alias": "Orchard",
+   "intro_unit": "S102",
+   "link_unit": "S182",
+   "distance_tokens": 2159
+  },
+  {
+   "probe_id": "A15",
+   "type": "alias_ref",
+   "entity_id": "E_ALERT_DISTRIBUTION_HUB",
+   "alias": "Lantern",
+   "intro_unit": "S330",
+   "link_unit": "S461",
+   "distance_tokens": 3565
+  },
+  {
+   "probe_id": "A16",
+   "type": "alias_ref",
+   "entity_id": "E_CONTINGENCY_OPERATIONS_CONSOLE",
+   "alias": "Silverpine",
+   "intro_unit": "S718",
+   "link_unit": "S783",
+   "distance_tokens": 1814
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_RUNWAY_METER",
+   "confusable_entity_id": "E_SOUTH_RUNWAY_METER",
+   "shared_head": "Runway Meter",
+   "link_unit": "S454",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_EAST_APRON_SENSOR",
+   "confusable_entity_id": "E_WEST_APRON_SENSOR",
+   "shared_head": "Apron Sensor",
+   "link_unit": "S578",
+   "distance_tokens": 0
+  }
+ ]
+}

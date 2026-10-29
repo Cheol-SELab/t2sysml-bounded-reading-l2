@@ -1,0 +1,417 @@
+{
+ "title": "Operational Concept for the Caldera Wildfire Detection and Suppression Support System",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Mission Context and Operational Scope",
+   "topic": "Defines the wildfire threat environment, participating agencies, supported decisions, and the boundaries between detection support, suppression support, and command authority."
+  },
+  {
+   "index": 2,
+   "heading": "System Architecture and Site Layout",
+   "topic": "Describes the fixed camera masts, drone dock, analytics services, communications links, weather ingestion, and primary operator interfaces used across the operating area."
+  },
+  {
+   "index": 3,
+   "heading": "Detection, Triage, and Confirmation Workflow",
+   "topic": "Explains how smoke indications, thermal cues, human review, and confirmation rules move a suspected ignition from first observation to an actionable incident record."
+  },
+  {
+   "index": 4,
+   "heading": "Airspace, Radio, and Interagency Coordination",
+   "topic": "Covers flight deconfliction, radio bridging, county liaison procedures, temporary restrictions, and coordination with crew and aviation supervisors."
+  },
+  {
+   "index": 5,
+   "heading": "Fire Behavior Assessment and Common Operating Picture",
+   "topic": "Details how camera observations, drone imagery, weather updates, and geospatial overlays are converted into map products and operational recommendations."
+  },
+  {
+   "index": 6,
+   "heading": "Suppression Planning and Aviation Support",
+   "topic": "Describes how drone reconnaissance, tanker dispatch planning, retardant loading status, and supervisor approvals support initial attack and extended attack."
+  },
+  {
+   "index": 7,
+   "heading": "Ground Crew Integration and Resource Staging",
+   "topic": "Explains how helitack and ground crews receive assignments, staging information, hazards, and updated intelligence from the support system."
+  },
+  {
+   "index": 8,
+   "heading": "Reliability, Cybersecurity, and Maintenance Operations",
+   "topic": "Specifies degraded-mode behavior, authentication, audit logging, data retention, equipment maintenance, and resilience expectations during long incidents."
+  },
+  {
+   "index": 9,
+   "heading": "Training, Exercises, and Performance Measures",
+   "topic": "Defines role-based training, tabletop and live exercises, evaluation metrics, false-alarm review, and proficiency requirements for seasonal readiness."
+  },
+  {
+   "index": 10,
+   "heading": "Deployment Governance and Continuous Improvement",
+   "topic": "Summarizes rollout governance, acceptance criteria, after-action review practices, data stewardship, and procedures for improving the system after each fire season."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "canonical": "Caldera Incident Command Portal",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_LOOKOUT_CAMERA_MAST",
+   "canonical": "North Lookout Camera Mast",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_LOOKOUT_CAMERA_MAST",
+   "canonical": "South Lookout Camera Mast",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "canonical": "Horizon Ridge Drone Dock",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DRONE_TASKING_SERVICE",
+   "canonical": "Drone Tasking Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "canonical": "Sentinel Fireline Analytics Engine",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SMOKE_CLASSIFIER_MODULE",
+   "canonical": "Smoke Classifier Module",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "canonical": "Talon Air Tanker Dispatch Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EAST_RETARDANT_LOADING_PUMP",
+   "canonical": "East Retardant Loading Pump",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_RETARDANT_LOADING_PUMP",
+   "canonical": "West Retardant Loading Pump",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_VHF_RADIO_GATEWAY_REPEATER",
+   "canonical": "VHF Radio Gateway Repeater",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "canonical": "MesoWest Weather Fusion Node",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CREWLINE_MOBILE_TABLET",
+   "canonical": "Crewline Mobile Tablet",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DUTY_DETECTION_OFFICER",
+   "canonical": "Duty Detection Officer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_AIR_ATTACK_SUPERVISOR",
+   "canonical": "Air Attack Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_TANKER_BASE_MANAGER",
+   "canonical": "Tanker Base Manager",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_HELITACK_CREW_LEADER",
+   "canonical": "Helitack Crew Leader",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DRONE_PILOT_OPERATOR",
+   "canonical": "Drone Pilot Operator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_COUNTY_EMERGENCY_LIAISON",
+   "canonical": "County Emergency Liaison",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CONFIRMED_IGNITION_STATE",
+   "canonical": "Confirmed Ignition State",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_AIRSPACE_RESTRICTED_STATE",
+   "canonical": "Airspace Restricted State",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_THERMAL_SPOT_SNIPPET",
+   "canonical": "Thermal Spot Snippet",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_WIND_SHIFT_BULLETIN",
+   "canonical": "Wind Shift Bulletin",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DRONE_CORRIDOR_PERMIT",
+   "canonical": "Drone Corridor Permit",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RETARDANT_BATCH_SLIP",
+   "canonical": "Retardant Batch Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CAMERA_CLEANING_LOG",
+   "canonical": "Camera Cleaning Log",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CREW_STAGING_PIN",
+   "canonical": "Crew Staging Pin",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RUNWAY_RELEASE_NOTE",
+   "canonical": "Runway Release Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BATTERY_SWAP_TICKET",
+   "canonical": "Battery Swap Ticket",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RIDGE_SHADOW_MASK",
+   "canonical": "Ridge Shadow Mask",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SUPPRESSION_DROP_RECEIPT",
+   "canonical": "Suppression Drop Receipt",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "alias": "Emberhall",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "alias": "Kestrel",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "alias": "Lantern",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "alias": "Marigold",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_VHF_RADIO_GATEWAY_REPEATER",
+   "alias": "Badger",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "alias": "Brindle",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_DUTY_DETECTION_OFFICER",
+   "alias": "Orion",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_AIR_ATTACK_SUPERVISOR",
+   "alias": "Redtail",
+   "intro_section": 3
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_NORTH_LOOKOUT_CAMERA_MAST",
+   "item": "E_THERMAL_SPOT_SNIPPET",
+   "consumer": "E_DUTY_DETECTION_OFFICER",
+   "intro_section": 2,
+   "link_section": 5,
+   "link_ref": "short",
+   "short_ref": "the spot snippet"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "item": "E_WIND_SHIFT_BULLETIN",
+   "consumer": "E_AIR_ATTACK_SUPERVISOR",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_COUNTY_EMERGENCY_LIAISON",
+   "item": "E_DRONE_CORRIDOR_PERMIT",
+   "consumer": "E_DRONE_TASKING_SERVICE",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "short",
+   "short_ref": "the corridor permit"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_EAST_RETARDANT_LOADING_PUMP",
+   "item": "E_RETARDANT_BATCH_SLIP",
+   "consumer": "E_TANKER_BASE_MANAGER",
+   "intro_section": 3,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the batch slip"
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_SOUTH_LOOKOUT_CAMERA_MAST",
+   "item": "E_CAMERA_CLEANING_LOG",
+   "consumer": "E_SMOKE_CLASSIFIER_MODULE",
+   "intro_section": 4,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "item": "E_CREW_STAGING_PIN",
+   "consumer": "E_HELITACK_CREW_LEADER",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the staging pin"
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "item": "E_RUNWAY_RELEASE_NOTE",
+   "consumer": "E_TANKER_BASE_MANAGER",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "item": "E_BATTERY_SWAP_TICKET",
+   "consumer": "E_DRONE_PILOT_OPERATOR",
+   "intro_section": 2,
+   "link_section": 5,
+   "link_ref": "short",
+   "short_ref": "the swap ticket"
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_SMOKE_CLASSIFIER_MODULE",
+   "item": "E_RIDGE_SHADOW_MASK",
+   "consumer": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "item": "E_SUPPRESSION_DROP_RECEIPT",
+   "consumer": "E_COUNTY_EMERGENCY_LIAISON",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_VHF_RADIO_GATEWAY_REPEATER",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_DUTY_DETECTION_OFFICER",
+   "link_section": 4
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_AIR_ATTACK_SUPERVISOR",
+   "link_section": 10
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_LOOKOUT_CAMERA_MAST",
+   "confusable_entity_id": "E_SOUTH_LOOKOUT_CAMERA_MAST",
+   "shared_head": "Lookout Camera Mast",
+   "link_section": 5
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_RETARDANT_LOADING_PUMP",
+   "confusable_entity_id": "E_WEST_RETARDANT_LOADING_PUMP",
+   "shared_head": "Retardant Loading Pump",
+   "link_section": 8
+  }
+ ],
+ "writer": "gpt-5.5",
+ "plan_sample": 0,
+ "domain": "a wildfire detection and suppression support system using fixed cameras, drones and air tankers"
+}

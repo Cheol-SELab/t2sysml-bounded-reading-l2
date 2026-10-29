@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Station Supervisory Control System, target=Control Room Operator, payload=equipment indications)\n\nSource sentences (the last one is where the fact was extracted):\nS087: Any discrepancy between field observations and control-room indications is treated as an unsafe condition until resolved.\nS088: The crew promptly reports uncertain equipment conditions through the designated operational communication channel.\nS089: Substation Field Crew completes and sends the Breaker Inspection Tag after recording the observed breaker condition and inspection time.\nS090: The Station Supervisory Control System presents available equipment indications for operator review during normal operation.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S090 says the Station Supervisory Control System presents equipment indications for operator review, which implies a flow of equipment indications to the operator; the operator is plausibly the Control Room Operator (S087 references control-room indications).\"}",
+ "usage": {
+  "input_tokens": 657,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.989,
+ "created": "2026-10-14T12:52:29"
+}

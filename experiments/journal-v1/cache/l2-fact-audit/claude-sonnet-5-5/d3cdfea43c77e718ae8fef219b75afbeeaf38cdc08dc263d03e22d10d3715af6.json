@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=primary monthly service review, label=records trend explanations for any measure that moves outside the watch band)\n\nSource sentences (the last one is where the fact was extracted):\nS243: Granite preserves the accepted archive baseline and confirms that retrieval tests meet the service objective before routine operations are declared stable.\nS244: Operational key performance indicators include contact success rate, telemetry completeness, command validation timeliness, product latency, product quality disposition time, archive availability, help desk responsiveness, and unresolved anomaly age.\nS245: Each key performance indicator has an assigned data source, sampling interval, review owner, threshold, and corrective action trigger so that routine reporting does not depend on informal judgment.\nS246: The primary monthly service review compares actual performance against the accepted baseline and records trend explanations for any measure that moves outside the watch band.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S246 states that the primary monthly service review records trend explanations for any measure that moves outside the watch band, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 735,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 61,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.746,
+ "created": "2026-10-14T12:52:07"
+}

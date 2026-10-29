@@ -1,0 +1,21 @@
+......F.......................                                           [100%]
+================================== FAILURES ===================================
+_______ test_scoped_ledger_and_tables_reconstruct_from_result_artifacts _______
+
+    def test_scoped_ledger_and_tables_reconstruct_from_result_artifacts():
+        products = builder.products()
+        for name, content in products.items():
+>           assert (builder.PAPER / name).read_text(encoding="utf-8") == content, f"stale evidence: {name}"
+E           AssertionError: stale evidence: evidence-ledger.json
+E           assert '{\n  "draft_...489022a"\n}\n' == '{\n  "draft_...489022a"\n}\n'
+E             
+E             Skipping 12020 identical leading characters in diff, use -v to show
+E             Skipping 1623 identical trailing characters in diff, use -v to show
+E             - nal.md": "c675f99d7892dee40e43d56a74e329b96a84a46c8364a8b0777303691a3fde76",
+E             + nal.md": "8bff6563d02a9207b3b8dcaf606f77bdd4893c3bb3f7c054b49c9d556c7bd22a",
+E                   "p
+
+tests\test_paper_evidence.py:15: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_paper_evidence.py::test_scoped_ledger_and_tables_reconstruct_from_result_artifacts
+1 failed, 29 passed in 3.27s

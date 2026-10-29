@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: South Filter Gallery provides \"the Filter Run Exception Note\" to Chief Operator (an information or material flow).\n\nSource sentences:\nS060: North Filter Gallery records individual filter effluent turbidity and headloss at the end of each control scan.\nS061: South Filter Gallery sends the Filter Run Exception Note when a filter run ends outside the normal operating limits.\nS152: The SCADA Historian Server records recovery volume, tank level, turbidity trend, and return timing for each backwash recovery event.\nS153: The Chief Operator uses the Filter Run Exception Note to determine whether a shortened run, high headloss, or abnormal turbidity response requires follow-up before the next wash sequence.\n\nAnswer \"supported\" only if the sentences state that South Filter Gallery produces or sends this item AND that Chief Operator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\n(none found)",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S061 states South Filter Gallery sends the Filter Run Exception Note, and S153 states the Chief Operator uses that same note to decide on follow-up.\"}",
+ "usage": {
+  "input_tokens": 721,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 69,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.691,
+ "created": "2026-10-19T19:12:43"
+}

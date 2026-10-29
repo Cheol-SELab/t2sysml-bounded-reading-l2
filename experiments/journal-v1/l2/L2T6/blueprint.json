@@ -1,0 +1,422 @@
+{
+ "title": "Airport Checked-Baggage Handling and Screening Operational Concept",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "System Purpose and Operating Boundaries",
+   "topic": "Define the end-to-end operating concept, system boundaries, principal interfaces, service objectives, and coordination responsibilities."
+  },
+  {
+   "index": 2,
+   "heading": "Bag Acceptance and Induction",
+   "topic": "Describe check-in acceptance, bag identification, oversize handling, transfer-feed entry, and controlled induction onto the conveyor network."
+  },
+  {
+   "index": 3,
+   "heading": "Screening and Alarm Response",
+   "topic": "Explain screening stages, image review, alarm handling, access controls, and the safe routing of bags requiring additional examination."
+  },
+  {
+   "index": 4,
+   "heading": "Sortation and Routing Control",
+   "topic": "Set out sort-plan execution, route selection, congestion awareness, exception diversion, and recovery of bags from abnormal paths."
+  },
+  {
+   "index": 5,
+   "heading": "Flight Data and Cutoff Management",
+   "topic": "Describe how flight information, planned dispatch times, operational cutoffs, and screening status govern routing and prioritization."
+  },
+  {
+   "index": 6,
+   "heading": "Make-Up and Transfer Operations",
+   "topic": "Define bag delivery to make-up positions, transfer-bag handling, release authorization, and coordination with airline ground operations."
+  },
+  {
+   "index": 7,
+   "heading": "Manual Resolution and Reconciliation",
+   "topic": "Explain operator image resolution, identity checks, bag-to-flight reconciliation, and controlled return to the planned process."
+  },
+  {
+   "index": 8,
+   "heading": "Safety, Maintenance, and Recovery",
+   "topic": "Specify safe operating states, maintenance access, fault response, conveyor recovery, and the responsibilities of technical and supervisory personnel."
+  },
+  {
+   "index": 9,
+   "heading": "Security, Custody, and Departure Readiness",
+   "topic": "Describe secure handling, custody assurance, final reconciliation, and the checks required before bags are accepted for aircraft loading."
+  },
+  {
+   "index": 10,
+   "heading": "Performance Assurance and Contingency Operations",
+   "topic": "Set out operational monitoring, service measures, degraded-mode decisions, escalation, and return-to-service criteria."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_BAG_DROP_UNIT",
+   "canonical": "Pier 4 Bag-Drop Unit",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BAGGAGE_CONTROL_SYSTEM",
+   "canonical": "Baggage Control System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ZONE_CONTROLLER",
+   "canonical": "Concourse Zone Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_INDUCTION_CONVEYOR",
+   "canonical": "Induction Tray Conveyor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PRIMARY_SORTER",
+   "canonical": "Primary Crossbelt Sorter",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "canonical": "North Gate Scanner",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_GATE_SCANNER",
+   "canonical": "South Gate Scanner",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_IMAGE_RESOLUTION_DESK",
+   "canonical": "Image Resolution Desk",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "canonical": "Explosives Response Team",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_MAKEUP_CAROUSEL",
+   "canonical": "Carousel 7 Make-Up Unit",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TRANSFER_BAG_FEEDER",
+   "canonical": "Transfer Bag Feeder",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RAMP_COORDINATOR",
+   "canonical": "Airline Ramp Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_OPERATIONS_SUPERVISOR",
+   "canonical": "Baggage Operations Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_MAINTENANCE_TECHNICIAN",
+   "canonical": "Maintenance Technician",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SECURITY_DUTY_MANAGER",
+   "canonical": "Security Duty Manager",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_INSPECTION_CHUTE",
+   "canonical": "Secondary Inspection Chute",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RECONCILIATION_STATION",
+   "canonical": "Bag Reconciliation Station",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FLIGHT_DATA_GATEWAY",
+   "canonical": "Flight Data Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BAG_TAG_PRINTER",
+   "canonical": "Bag Tag Printer",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_LOAD_CONTROL_DESK",
+   "canonical": "Outbound Load Control Desk",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EAST_MAKEUP_CONVEYOR",
+   "canonical": "East Make-Up Conveyor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_MAKEUP_CONVEYOR",
+   "canonical": "West Make-Up Conveyor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_OVERSIZE_EXCEPTION_TICKET",
+   "canonical": "Oversize Exception Ticket",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_FLIGHT_CUTOFF_ADVISORY",
+   "canonical": "Flight Cutoff Advisory",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_MANUAL_RESCAN_RECEIPT",
+   "canonical": "Manual Rescan Receipt",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CHUTE_OCCUPANCY_NOTE",
+   "canonical": "Chute Occupancy Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_LATE_TRANSFER_BAG_CARD",
+   "canonical": "Late Transfer Bag Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CUSTODY_SEAL_LOG",
+   "canonical": "Custody Seal Log",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RECOVERY_ROUTE_CARD",
+   "canonical": "Recovery Route Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CALIBRATION_WITNESS_TAG",
+   "canonical": "Calibration Witness Tag",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BAG_MATCH_QUERY",
+   "canonical": "Bag Match Query",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CAROUSEL_RELEASE_SLIP",
+   "canonical": "Carousel Release Slip",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_ZONE_CONTROLLER",
+   "alias": "Mosslight",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_BAGGAGE_CONTROL_SYSTEM",
+   "alias": "Velvet",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_PRIMARY_SORTER",
+   "alias": "Juniper",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "alias": "Kestrel",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "alias": "Pebble",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_MAKEUP_CAROUSEL",
+   "alias": "Orchard",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_FLIGHT_DATA_GATEWAY",
+   "alias": "Lantern",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_OPERATIONS_SUPERVISOR",
+   "alias": "Tern",
+   "intro_section": 4
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_BAG_DROP_UNIT",
+   "item": "E_OVERSIZE_EXCEPTION_TICKET",
+   "consumer": "E_IMAGE_RESOLUTION_DESK",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the exception ticket"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_FLIGHT_DATA_GATEWAY",
+   "item": "E_FLIGHT_CUTOFF_ADVISORY",
+   "consumer": "E_BAGGAGE_CONTROL_SYSTEM",
+   "intro_section": 1,
+   "link_section": 5,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_SOUTH_GATE_SCANNER",
+   "item": "E_MANUAL_RESCAN_RECEIPT",
+   "consumer": "E_IMAGE_RESOLUTION_DESK",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the rescan receipt"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_PRIMARY_SORTER",
+   "item": "E_CHUTE_OCCUPANCY_NOTE",
+   "consumer": "E_OPERATIONS_SUPERVISOR",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "short",
+   "short_ref": "the occupancy note"
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_TRANSFER_BAG_FEEDER",
+   "item": "E_LATE_TRANSFER_BAG_CARD",
+   "consumer": "E_RECONCILIATION_STATION",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "item": "E_CUSTODY_SEAL_LOG",
+   "consumer": "E_SECURITY_DUTY_MANAGER",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the seal log"
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_ZONE_CONTROLLER",
+   "item": "E_RECOVERY_ROUTE_CARD",
+   "consumer": "E_MAINTENANCE_TECHNICIAN",
+   "intro_section": 1,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_BAG_TAG_PRINTER",
+   "item": "E_CALIBRATION_WITNESS_TAG",
+   "consumer": "E_MAINTENANCE_TECHNICIAN",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the witness tag"
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_RECONCILIATION_STATION",
+   "item": "E_BAG_MATCH_QUERY",
+   "consumer": "E_RAMP_COORDINATOR",
+   "intro_section": 4,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_RAMP_COORDINATOR",
+   "item": "E_CAROUSEL_RELEASE_SLIP",
+   "consumer": "E_MAKEUP_CAROUSEL",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_ZONE_CONTROLLER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_BAGGAGE_CONTROL_SYSTEM",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_PRIMARY_SORTER",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_MAKEUP_CAROUSEL",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_FLIGHT_DATA_GATEWAY",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_OPERATIONS_SUPERVISOR",
+   "link_section": 10
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "confusable_entity_id": "E_SOUTH_GATE_SCANNER",
+   "shared_head": "Gate Scanner",
+   "link_section": 7
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_MAKEUP_CONVEYOR",
+   "confusable_entity_id": "E_WEST_MAKEUP_CONVEYOR",
+   "shared_head": "Make-Up Conveyor",
+   "link_section": 8
+  }
+ ],
+ "writer": "gpt-6-luna",
+ "plan_sample": 0,
+ "domain": "an airport checked-baggage handling and screening system (check-in, sorters, explosive detection, make-up carousels)"
+}

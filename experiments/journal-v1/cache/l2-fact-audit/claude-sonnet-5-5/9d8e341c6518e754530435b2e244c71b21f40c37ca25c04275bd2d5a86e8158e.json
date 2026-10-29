@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Maintenance Technician, label=confirms that the route is safe)\n\nSource sentences (the last one is where the fact was extracted):\nS100: The Bag Reconciliation Station compares bag identity with the active handling record and flags unresolved discrepancies.\nS101: The Bag Reconciliation Station sends a Bag Match Query when bag identity cannot be reconciled with the active handling record.\nS102: Bags found on a stopped or misdirected path are held from onward movement until their location and identity are established.\nS103: The Maintenance Technician isolates a failed conveyor section and confirms that the route is safe before service resumes.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S103 states that the Maintenance Technician isolates a failed conveyor section and confirms that the route is safe, so the performer and the action label both match the text.\"}",
+ "usage": {
+  "input_tokens": 661,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.62,
+ "created": "2026-10-14T12:52:24"
+}

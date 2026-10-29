@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "The Alder Creek Electrical Distribution Substation supplies distribution circuits through transformer and feeder bays.",
+   "tags": []
+  },
+  {
+   "text": "The station automation boundary covers bay-level monitoring and control, station coordination, and the interfaces to external operating personnel and systems.",
+   "tags": []
+  },
+  {
+   "text": "Primary equipment, protection functions, and field wiring remain subject to their approved designs and operating limits.",
+   "tags": []
+  },
+  {
+   "text": "The Bay Automation Controller is assigned the project codename Juniper.",
+   "tags": [
+    "ALIAS:E_BAY_AUTOMATION_CONTROLLER"
+   ]
+  },
+  {
+   "text": "The Bay Automation Controller performs bay-level sequencing, status evaluation, and control permissive checks.",
+   "tags": []
+  },
+  {
+   "text": "The Bay Automation Controller produces a Bay Status Digest for operational awareness.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "North Bay Controller and South Bay Controller provide bay-specific automation for their respective portions of the station.",
+   "tags": []
+  },
+  {
+   "text": "The Feeder Protection Relay detects feeder faults and initiates protection actions within its configured protection zone.",
+   "tags": []
+  },
+  {
+   "text": "The Feeder Protection Relay produces a Relay Diagnostic Note when its self-monitoring identifies a condition requiring engineering attention.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "text": "Protection trips remain independent of routine bay-control commands so that a control-system failure does not inhibit fault clearing.",
+   "tags": []
+  },
+  {
+   "text": "The Breaker Control Unit executes authorized breaker operations and enforces its local electrical and mechanical interlocks.",
+   "tags": []
+  },
+  {
+   "text": "The Bay Automation Controller requests breaker operations only when the applicable operating mode and permissives allow them.",
+   "tags": []
+  },
+  {
+   "text": "Local control takes precedence when equipment is selected for local operation.",
+   "tags": []
+  },
+  {
+   "text": "Remote commands are subject to station authority, bay selection, interlocking, and equipment availability.",
+   "tags": []
+  },
+  {
+   "text": "The Station Supervisory Control System provides the station-level operating interface and supervisory coordination.",
+   "tags": []
+  },
+  {
+   "text": "The Station Gateway defines the communications boundary for authorized connections beyond the station automation network.",
+   "tags": []
+  },
+  {
+   "text": "The Satellite Time Receiver provides the station with a reference for time synchronization.",
+   "tags": []
+  },
+  {
+   "text": "The Sequence Event Archive retains operational event information for later review.",
+   "tags": []
+  },
+  {
+   "text": "The Engineering Workstation supports authorized configuration and maintenance activities under controlled access.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Remote Terminal is limited to approved maintenance access and does not replace local operating authority.",
+   "tags": []
+  },
+  {
+   "text": "The Station DC System supplies control power to automation and protection equipment within its design capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Control Room Operator directs routine station operation and verifies that commanded equipment states are appropriate.",
+   "tags": []
+  },
+  {
+   "text": "The Protection Relay Engineer maintains protection settings and evaluates relay performance within the approved change process.",
+   "tags": []
+  },
+  {
+   "text": "The Substation Field Crew performs field checks and equipment work under the applicable switching instructions and clearances.",
+   "tags": []
+  }
+ ]
+}

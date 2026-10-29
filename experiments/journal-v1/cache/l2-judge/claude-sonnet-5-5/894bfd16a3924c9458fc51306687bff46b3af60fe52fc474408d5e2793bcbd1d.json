@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metro Operations Control System provides \"commanded route, locked route, point state, and track occupancy state\" to North District Zone Controller (an information or material flow).\n\nSource sentences:\nS097: Safety Data Communication Network paths between the zone controllers and the interlockings are configured for deterministic delivery of vital state changes and command acknowledgements.\nS098: Metro Operations Control System displays the commanded route, locked route, point state, and track occupancy state as separate indications so that control staff can identify mismatches.\nS131: A departure command is not considered available to the Revenue Train Operator until the relevant platform door state is compatible with the requested direction of travel.\nS132: North District Zone Controller suppresses platform departure authority when the associated berth reports an unsafe door interface state.\n\nAnswer \"supported\" only if the sentences state that Metro Operations Control System produces or sends this item AND that North District Zone Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S098 only says the Metro Operations Control System displays these four items to control staff, and no sentence says North District Zone Controller receives or uses them from it (S132 concerns door interface state).\"}",
+ "usage": {
+  "input_tokens": 708,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 79,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.598,
+ "created": "2026-10-14T12:34:03"
+}

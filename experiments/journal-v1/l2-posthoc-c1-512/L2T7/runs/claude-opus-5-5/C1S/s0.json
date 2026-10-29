@@ -1,0 +1,4678 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Sentinel Vale",
+   "label": "provide routine land, coastal, and cryosphere imaging products"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "plan spacecraft activities"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "acquire mission data"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "maintain safe spacecraft operations"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "generate user products"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "preserve mission records"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "provide controlled access to services"
+  },
+  {
+   "unit_id": "S004",
+   "type": "composition",
+   "whole": "ground segment",
+   "parts": [
+    "Mission Control Center",
+    "Flight Dynamics Facility",
+    "Payload Processing Facility",
+    "Network Control System",
+    "Long Term Archive",
+    "User Services Portal",
+    "Mission Planning System",
+    "Command Validation Gateway",
+    "Telemetry Ingest Service",
+    "Orbit Determination Engine",
+    "Product Quality Service",
+    "Primary Processing Cluster",
+    "Backup Processing Cluster"
+   ]
+  },
+  {
+   "unit_id": "S005",
+   "type": "composition",
+   "whole": "ground segment",
+   "parts": [
+    "North S-Band Antenna",
+    "South S-Band Antenna",
+    "Kiruna X-Band Antenna",
+    "Svalbard X-Band Antenna"
+   ]
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "real-time spacecraft operations"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "pass supervision"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "anomaly response"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "release of validated command activities"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides orbit analysis"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides maneuver planning support"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides access prediction"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides navigation products"
+  },
+  {
+   "unit_id": "S008",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "target": "null",
+   "payload": "navigation products"
+  },
+  {
+   "unit_id": "S009",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "provides the operational environment for payload data processing, calibration control, product assessment, and distribution staging"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "monitors communications availability"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "routes operational traffic"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "provides status awareness for ground connectivity"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "converts approved imaging demand and spacecraft constraints into executable activity plans"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "provides the formal barrier between planning outputs and command release"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "enforces rule checks"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "null",
+   "label": "commands are made available for uplink"
+  },
+  {
+   "unit_id": "S012",
+   "type": "succession",
+   "before": "enforces rule checks",
+   "after": "commands are made available for uplink"
+  },
+  {
+   "unit_id": "S012",
+   "type": "flow",
+   "source": "Mission Planning System",
+   "target": "Command Validation Gateway",
+   "payload": "executable activity plans"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "receives spacecraft telemetry from scheduled contacts"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "makes it available to operations, engineering analysis, and downstream processing functions"
+  },
+  {
+   "unit_id": "S013",
+   "type": "flow",
+   "source": "spacecraft",
+   "target": "Telemetry Ingest Service",
+   "payload": "spacecraft telemetry"
+  },
+  {
+   "unit_id": "S013",
+   "type": "flow",
+   "source": "Telemetry Ingest Service",
+   "target": "null",
+   "payload": "spacecraft telemetry"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "supports routine orbit maintenance"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "processing tracking inputs"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "producing controlled orbit knowledge"
+  },
+  {
+   "unit_id": "S014",
+   "type": "flow",
+   "source": "Orbit Determination Engine",
+   "target": "null",
+   "payload": "orbit knowledge"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "performs automated and analyst-supported checks on generated products"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "null",
+   "label": "exposed through operational dissemination channels"
+  },
+  {
+   "unit_id": "S015",
+   "type": "succession",
+   "before": "performs automated and analyst-supported checks on generated products",
+   "after": "exposed through operational dissemination channels"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "nominal production environment for standard mission products"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "null",
+   "label": "Backup Processing Cluster is maintained for resilience and controlled failover"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "preserves mission data, generated products, processing records, and operational evidence"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "provides the controlled external interface for product search, ordering, status communication, and user support workflows"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "coordinates availability of the antenna assets"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "confirms that scheduled contact opportunities are compatible with station readiness and maintenance constraints"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "owns spacecraft safety execution, contact conduct, command authorization support, and operational decision making"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "owns flight dynamics analysis, orbit maintenance recommendations, and operational coordination for navigation-related constraints"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "owns payload performance monitoring, calibration parameter stewardship, and the technical assessment of product quality trends"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "provides continuous security monitoring, operational security guidance, and escalation support"
+  },
+  {
+   "unit_id": "S025",
+   "type": "requirement",
+   "subject": "spacecraft commanding",
+   "text": "human authorization remains required for spacecraft commanding and major configuration changes"
+  },
+  {
+   "unit_id": "S027",
+   "type": "attribute",
+   "owner": "ground station estate",
+   "name": "resource classification",
+   "value": "shared mission resource under configuration control"
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "performer": "North S-Band Antenna",
+   "label": "provides the nominal early-pass command uplink and low-rate telemetry return"
+  },
+  {
+   "unit_id": "S028",
+   "type": "flow",
+   "source": "North S-Band Antenna",
+   "target": "null",
+   "payload": "command uplink"
+  },
+  {
+   "unit_id": "S028",
+   "type": "flow",
+   "source": "North S-Band Antenna",
+   "target": "null",
+   "payload": "low-rate telemetry"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "South S-Band Antenna",
+   "label": "provides the alternate S-band path"
+  },
+  {
+   "unit_id": "S029",
+   "type": "state",
+   "owner": "South S-Band Antenna",
+   "label": "compatible configuration"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "Kiruna X-Band Antenna",
+   "label": "is assigned primarily to high-rate payload downlink"
+  },
+  {
+   "unit_id": "S030",
+   "type": "flow",
+   "source": "Kiruna X-Band Antenna",
+   "target": "null",
+   "payload": "high-rate payload downlink"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "Svalbard X-Band Antenna",
+   "label": "extends northern contact opportunities"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "maintains the operational contact schedule"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "uses it as the controlling reference for console staffing, command readiness, and telemetry coverage"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "distributes station allocations"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "confirms antenna readiness states"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "records the actual start and end times of each contact"
+  },
+  {
+   "unit_id": "S033",
+   "type": "flow",
+   "source": "Network Control System",
+   "payload": "station allocations"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "label": "Contact booking requests are submitted through the Mission Planning System"
+  },
+  {
+   "unit_id": "S034",
+   "type": "flow",
+   "target": "Mission Planning System",
+   "payload": "Contact booking requests"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "label": "Routine contacts are frozen at the daily planning cut-off"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "label": "contingency contacts may be inserted later"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "label": "Conflicts are resolved first by spacecraft safety need"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "label": "then by data timeliness need"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "label": "then by efficient use of common ground resources"
+  },
+  {
+   "unit_id": "S036",
+   "type": "succession",
+   "before": "Conflicts are resolved first by spacecraft safety need",
+   "after": "then by data timeliness need"
+  },
+  {
+   "unit_id": "S036",
+   "type": "succession",
+   "before": "then by data timeliness need",
+   "after": "then by efficient use of common ground resources"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "arbitrates unresolved contact conflicts"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "verifies that station commitments remain consistent with maintenance windows and staffing limits"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides visibility predictions and antenna pointing support products to the planning process"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "label": "contacts are released for execution"
+  },
+  {
+   "unit_id": "S040",
+   "type": "succession",
+   "before": "provides visibility predictions and antenna pointing support products to the planning process",
+   "after": "contacts are released for execution"
+  },
+  {
+   "unit_id": "S040",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "payload": "visibility predictions"
+  },
+  {
+   "unit_id": "S040",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "payload": "antenna pointing support products"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "produces the Doppler Residual Report"
+  },
+  {
+   "unit_id": "S041",
+   "type": "flow",
+   "source": "Orbit Determination Engine",
+   "payload": "Doppler Residual Report"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Local station teams",
+   "label": "antenna pre-pass configuration"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Local station teams",
+   "label": "frequency standard verification"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Local station teams",
+   "label": "time correlation checks"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Local station teams",
+   "label": "safety interlocks"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "Local station teams",
+   "label": "logging of any local anomalies"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "Station operators",
+   "label": "notify the Mission Control Center"
+  },
+  {
+   "unit_id": "S043",
+   "type": "flow",
+   "source": "Station operators",
+   "target": "Mission Control Center",
+   "payload": "local constraints"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "issues the Antenna Deicing Notice"
+  },
+  {
+   "unit_id": "S044",
+   "type": "flow",
+   "source": "Ground Network Manager",
+   "payload": "Antenna Deicing Notice"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "label": "Weather constraints are assessed using local forecasts and real-time measurements"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "label": "X-band contacts may be downgraded or moved"
+  },
+  {
+   "unit_id": "S046",
+   "type": "constraint",
+   "subject": "X-band contacts",
+   "expression": "link margin below the approved operating threshold"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "label": "make an antenna unavailable for service"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "receives contact status and data-flow indicators"
+  },
+  {
+   "unit_id": "S048",
+   "type": "flow",
+   "target": "Telemetry Ingest Service",
+   "payload": "contact status"
+  },
+  {
+   "unit_id": "S048",
+   "type": "flow",
+   "target": "Telemetry Ingest Service",
+   "payload": "data-flow indicators"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "coordinates with Primary Processing Cluster and Backup Processing Cluster"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "label": "reviewed performance trends for each antenna"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "label": "converted into corrective actions"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "label": "extends the ground network management practices"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "label": "uses redundant terrestrial circuits"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "North S-Band Antenna",
+   "label": "connect to the Mission Control Center"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "South S-Band Antenna",
+   "label": "connect to the Mission Control Center"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "protected access routers",
+   "label": "keep command and telemetry traffic separate from site administration traffic"
+  },
+  {
+   "unit_id": "S055",
+   "type": "flow",
+   "source": "Kiruna X-Band Antenna",
+   "target": "Payload Processing Facility",
+   "payload": "payload downlink traffic"
+  },
+  {
+   "unit_id": "S055",
+   "type": "flow",
+   "source": "Svalbard X-Band Antenna",
+   "target": "Payload Processing Facility",
+   "payload": "payload downlink traffic"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Kiruna X-Band Antenna",
+   "label": "use dual wide area paths toward the Payload Processing Facility"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Svalbard X-Band Antenna",
+   "label": "use dual wide area paths toward the Payload Processing Facility"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "hosts the primary routing policy point"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "maintains operational visibility of circuit state, path selection, and active maintenance windows"
+  },
+  {
+   "unit_id": "S057",
+   "type": "attribute",
+   "owner": "Network Control System",
+   "name": "role",
+   "value": "authoritative view of wide area circuit status"
+  },
+  {
+   "unit_id": "S059",
+   "type": "constraint",
+   "subject": "Dynamic routing",
+   "expression": "permitted only on controlled adjacencies"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "label": "preconfigured static backup routes for antenna sites"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "label": "pinned critical contact paths before acquisition of signal"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "determines that a maintenance condition could cause route oscillation"
+  },
+  {
+   "unit_id": "S061",
+   "type": "constraint",
+   "subject": "administration networks",
+   "expression": "Management access restricted to dedicated administration networks not advertised to mission data enclaves"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "label": "assigned latency budgets by service class"
+  },
+  {
+   "unit_id": "S063",
+   "type": "flow",
+   "source": "Mission Control Center",
+   "target": "Command Validation Gateway",
+   "payload": "command and telemetry traffic"
+  },
+  {
+   "unit_id": "S063",
+   "type": "flow",
+   "source": "Mission Control Center",
+   "target": "Telemetry Ingest Service",
+   "payload": "command and telemetry traffic"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "label": "managed as an end-to-end figure"
+  },
+  {
+   "unit_id": "S064",
+   "type": "attribute",
+   "owner": "Orbit Determination Engine",
+   "name": "jitter objective",
+   "value": "tighter than routine file movement"
+  },
+  {
+   "unit_id": "S065",
+   "type": "flow",
+   "source": "Primary Processing Cluster",
+   "target": "Long Term Archive",
+   "payload": "Transfers"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "label": "rate limited transfers during active contacts"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "label": "receives lower routing preference during normal operations",
+   "performer": "Backup Processing Cluster"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "label": "its paths are tested routinely"
+  },
+  {
+   "unit_id": "S066",
+   "type": "state",
+   "owner": "Backup Processing Cluster",
+   "label": "normal operations"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "verifies carrier performance"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "checks routing state, packet loss, queue depth, and security inspection delays"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "declaring a mission-impacting network condition"
+  },
+  {
+   "unit_id": "S067",
+   "type": "succession",
+   "before": "verifies carrier performance",
+   "after": "checks routing state, packet loss, queue depth, and security inspection delays"
+  },
+  {
+   "unit_id": "S067",
+   "type": "succession",
+   "before": "checks routing state, packet loss, queue depth, and security inspection delays",
+   "after": "declaring a mission-impacting network condition"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "label": "Time synchronization is provided from redundant reference clocks",
+   "performer": "redundant reference clocks"
+  },
+  {
+   "unit_id": "S068",
+   "type": "composition",
+   "whole": "Mission Control Center",
+   "parts": [
+    "redundant reference clocks"
+   ]
+  },
+  {
+   "unit_id": "S068",
+   "type": "composition",
+   "whole": "Flight Dynamics Facility",
+   "parts": [
+    "redundant reference clocks"
+   ]
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "label": "Precision Time Protocol is used inside data centers and processing enclaves"
+  },
+  {
+   "unit_id": "S069",
+   "type": "constraint",
+   "subject": "Precision Time Protocol",
+   "expression": "sub-millisecond alignment"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "label": "authenticated Network Time Protocol is used for general server and workstation timekeeping"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Antenna site equipment",
+   "label": "validates time against independent local references before contact start"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "monitors timing quality alongside orbit support metrics"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "confirms that the alarm is not caused by a known maintenance interval or a failed local reference check"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "label": "Timing alarms are forwarded to the Spacecraft Operations Team"
+  },
+  {
+   "unit_id": "S072",
+   "type": "flow",
+   "target": "Spacecraft Operations Team",
+   "payload": "Timing alarms"
+  },
+  {
+   "unit_id": "S072",
+   "type": "succession",
+   "before": "confirms that the alarm is not caused by a known maintenance interval or a failed local reference check",
+   "after": "Timing alarms are forwarded to the Spacecraft Operations Team"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "Cybersecurity monitoring is applied at each site"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "configuration compliance checks that are reviewed during every operational shift"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "sends a Security Exception Ticket"
+  },
+  {
+   "unit_id": "S074",
+   "type": "flow",
+   "source": "Cybersecurity Desk",
+   "payload": "Security Exception Ticket"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "label": "Correlation rules emphasize changes that could affect mission continuity"
+  },
+  {
+   "unit_id": "S076",
+   "type": "state",
+   "owner": "Ground Network Manager",
+   "label": "contingency operations"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "coordinate"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "coordinate"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "label": "blocking traffic"
+  },
+  {
+   "unit_id": "S076",
+   "type": "succession",
+   "before": "coordinate",
+   "after": "blocking traffic"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "treats every scheduled contact as a controlled operational activity"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "North S-Band Antenna",
+   "label": "assigned for command and low-rate telemetry contacts"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "South S-Band Antenna",
+   "label": "assigned for command and low-rate telemetry contacts"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Kiruna X-Band Antenna",
+   "label": "support high-rate telemetry reception"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Svalbard X-Band Antenna",
+   "label": "support high-rate telemetry reception"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "provides the Mission Control Center with antenna status, link configuration, timing references, and routing readiness"
+  },
+  {
+   "unit_id": "S079",
+   "type": "flow",
+   "source": "Network Control System",
+   "target": "Mission Control Center",
+   "payload": "antenna status, link configuration, timing references, and routing readiness"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "accepts real-time frames"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "validates basic framing and time continuity"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "records reception metadata"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "produces the Pass Replay Packet"
+  },
+  {
+   "unit_id": "S081",
+   "type": "flow",
+   "source": "Telemetry Ingest Service",
+   "payload": "Pass Replay Packet"
+  },
+  {
+   "unit_id": "S081",
+   "type": "requirement",
+   "subject": "Telemetry Ingest Service",
+   "text": "the received stream must be reconstructed for engineering review"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "monitors spacecraft mode, power state, thermal margins, attitude indicators, command counters, onboard storage, and fault protection messages"
+  },
+  {
+   "unit_id": "S082",
+   "type": "flow",
+   "source": "Mission Control Center",
+   "target": "Spacecraft Operations Team",
+   "payload": "spacecraft mode, power state, thermal margins, attitude indicators, command counters, onboard storage, and fault protection messages"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "emphasize deviations from expected state"
+  },
+  {
+   "unit_id": "S083",
+   "type": "requirement",
+   "subject": "Spacecraft Operations Team",
+   "text": "operators must identify safety trends while a contact is still available"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "console lead",
+   "label": "declaring pass status"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "console lead",
+   "label": "authorizing planned command execution through the Command Validation Gateway"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "console lead",
+   "label": "pausing the activity"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "telemetry engineer",
+   "label": "verifies reception quality, frame loss, latency, and stream continuity"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "telemetry engineer",
+   "label": "advises the console lead"
+  },
+  {
+   "unit_id": "S085",
+   "type": "flow",
+   "source": "telemetry engineer",
+   "target": "console lead",
+   "payload": "degraded link conditions advice"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "spacecraft systems engineer",
+   "label": "interprets health telemetry"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "spacecraft systems engineer",
+   "label": "confirms that subsystem states remain within flight rules"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "spacecraft systems engineer",
+   "label": "records any anomaly context"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "accountable for antenna assignment, ground link availability, and coordination with site operations"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "uses tracking measurements and validated time tags"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "support orbit assessment"
+  },
+  {
+   "unit_id": "S088",
+   "type": "allocation",
+   "action": "support orbit assessment",
+   "to": "Flight Dynamics Facility"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "supports routine state updates"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "provides the basis for predicting future visibility periods, maneuver planning constraints, and antenna pointing expectations"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "null",
+   "label": "Pass reconstruction begins"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "null",
+   "label": "combines command history, received telemetry timing, ground station status, and operator log entries"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "null",
+   "label": "contact closes"
+  },
+  {
+   "unit_id": "S090",
+   "type": "succession",
+   "before": "contact closes",
+   "after": "Pass reconstruction begins"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "null",
+   "label": "confirm whether planned objectives were completed"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "coordinates with the Payload Processing Facility"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "sends the Calibration Patch Bundle"
+  },
+  {
+   "unit_id": "S094",
+   "type": "flow",
+   "source": "Payload Calibration Team",
+   "payload": "Calibration Patch Bundle"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "label": "calibration analysis identifies an approved update"
+  },
+  {
+   "unit_id": "S094",
+   "type": "succession",
+   "before": "calibration analysis identifies an approved update",
+   "after": "sends the Calibration Patch Bundle"
+  },
+  {
+   "unit_id": "S095",
+   "type": "requirement",
+   "subject": "Subsystem specialists",
+   "text": "they must be reachable during planned critical activities and whenever a console operator declares an off-nominal condition"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "console operator",
+   "label": "declares an off-nominal condition"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "begins with the console lead"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "moves to the responsible discipline lead"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "reaches mission management"
+  },
+  {
+   "unit_id": "S096",
+   "type": "succession",
+   "before": "begins with the console lead",
+   "after": "moves to the responsible discipline lead"
+  },
+  {
+   "unit_id": "S096",
+   "type": "succession",
+   "before": "moves to the responsible discipline lead",
+   "after": "reaches mission management"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "coordinate closely before orbit-control activities"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "coordinate closely before orbit-control activities"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "operators",
+   "label": "preserve the command state"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "operators",
+   "label": "avoid discretionary commanding"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "operators",
+   "label": "request specialist review"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "label": "changing spacecraft configuration"
+  },
+  {
+   "unit_id": "S098",
+   "type": "succession",
+   "before": "request specialist review",
+   "after": "changing spacecraft configuration"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "receives operational constraints"
+  },
+  {
+   "unit_id": "S099",
+   "type": "flow",
+   "source": "Mission Control Center",
+   "target": "Mission Planning System",
+   "payload": "operational constraints"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "records unresolved actions, open engineering questions, and expected specialist responses"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "next operations crew",
+   "label": "maintain continuity"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "label": "Mission planning begins"
+  },
+  {
+   "unit_id": "S101",
+   "type": "flow",
+   "source": "User Services Portal",
+   "target": "Mission Planning System",
+   "payload": "observation requests"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "assembling candidate observation timelines and associated ground contact activities"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "label": "is checked for requester authority, target definition, time sensitivity, acquisition mode, expected data volume, and any handling restrictions"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "label": "is admitted to the planning pool"
+  },
+  {
+   "unit_id": "S103",
+   "type": "succession",
+   "before": "is checked for requester authority, target definition, time sensitivity, acquisition mode, expected data volume, and any handling restrictions",
+   "after": "is admitted to the planning pool"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "records the request state"
+  },
+  {
+   "unit_id": "S104",
+   "type": "state",
+   "owner": "observation requests",
+   "label": "accepted"
+  },
+  {
+   "unit_id": "S104",
+   "type": "state",
+   "owner": "observation requests",
+   "label": "awaiting technical review"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "reviews late operational requests"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides orbit predictions and visibility assumptions"
+  },
+  {
+   "unit_id": "S106",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "payload": "orbit predictions"
+  },
+  {
+   "unit_id": "S106",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "payload": "visibility assumptions"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "label": "determine feasible imaging windows and ground contacts"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "combines request priority, instrument availability, contact opportunities, onboard storage margin, and downlink capacity into a draft activity schedule"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "draft schedule",
+   "label": "covers payload imaging, recorder management, housekeeping activities"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "draft schedule",
+   "label": "accounts for downlink opportunities through the Kiruna X-Band Antenna and Svalbard X-Band Antenna"
+  },
+  {
+   "unit_id": "S110",
+   "type": "flow",
+   "source": "null",
+   "target": "Payload Processing Facility",
+   "payload": "planning metadata"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "receives planning metadata"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "prepare downstream processing expectations"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "null",
+   "label": "verify that expected acquisition loads remain compatible with routine processing capacity"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "Juniper",
+   "label": "confirms that planned station use is compatible with network maintenance windows"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "null",
+   "label": "schedule is released for command preparation"
+  },
+  {
+   "unit_id": "S112",
+   "type": "succession",
+   "before": "confirms that planned station use is compatible with network maintenance windows",
+   "after": "schedule is released for command preparation"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "uses the Antenna Deicing Notice to assess whether planned support can proceed"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "flags conflicts"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "null",
+   "label": "Constraint checking includes slew time, sun-angle limits, power balance, thermal recovery time, recorder capacity, command load size, and required separation"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "reviews cases where orbital uncertainty or contact geometry could reduce the execution margin"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "reviews planned calibration activities"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "exports a command preparation package"
+  },
+  {
+   "unit_id": "S118",
+   "type": "flow",
+   "source": "Mission Planning System",
+   "target": "Mission Control Center",
+   "payload": "command preparation package"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "performs independent validation of command stacks"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "checks syntax, timing, parameter ranges, sequencing rules, spacecraft mode compatibility, and consistency with the approved schedule baseline"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "rejects command stacks"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "null",
+   "label": "confirm that the command assumptions still match actual configuration and health"
+  },
+  {
+   "unit_id": "S122",
+   "type": "flow",
+   "source": "Telemetry Ingest Service",
+   "target": "null",
+   "payload": "latest spacecraft state"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "provides the current orbital solution"
+  },
+  {
+   "unit_id": "S123",
+   "type": "flow",
+   "source": "Orbit Determination Engine",
+   "target": "null",
+   "payload": "current orbital solution"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "add planning feedback"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "reviews command preparation exceptions"
+  },
+  {
+   "unit_id": "S126",
+   "type": "requirement",
+   "subject": "Mission Control Center",
+   "text": "Final approval requires concurrence from the Mission Control Center and the Spacecraft Operations Team before any command stack is placed in the queue for the next authorized uplink opportunity."
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "label": "placed in the queue"
+  },
+  {
+   "unit_id": "S126",
+   "type": "succession",
+   "before": "Final approval",
+   "after": "placed in the queue"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "label": "orbit state management remains under continuous control"
+  },
+  {
+   "unit_id": "S127",
+   "type": "succession",
+   "before": "final command approval",
+   "after": "orbit state management remains under continuous control"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "fits dynamic orbit solutions"
+  },
+  {
+   "unit_id": "S129",
+   "type": "composition",
+   "whole": "Tracking arcs",
+   "parts": [
+    "North S-Band Antenna",
+    "South S-Band Antenna",
+    "Kiruna X-Band Antenna",
+    "Svalbard X-Band Antenna"
+   ]
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "checks each orbit solution"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "uses the residual report"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "separate station-related tracking biases from dynamic model errors"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "accepting an orbit solution"
+  },
+  {
+   "unit_id": "S131",
+   "type": "succession",
+   "before": "separate station-related tracking biases from dynamic model errors",
+   "after": "accepting an orbit solution"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "maintains the authoritative orbit catalog"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "records the modeling assumptions"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "evaluates orbit maintenance options"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "computes expected state change, execution tolerance, recovery strategy, and the earliest time"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "label": "estimate miss distance, encounter geometry, and probability of collision"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "maintains screening rules"
+  },
+  {
+   "unit_id": "S137",
+   "type": "flow",
+   "source": "null",
+   "target": "Spacecraft Operations Team",
+   "payload": "maneuver recommendation package"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "receives a maneuver recommendation package"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "label": "translates the predicted orbit into Sun angle, Earth limb, lunar exclusion, target visibility, and antenna pointing information"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "verifying predicted bright-object exclusions"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "sends the Star Tracker Mask File"
+  },
+  {
+   "unit_id": "S139",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "payload": "Star Tracker Mask File"
+  },
+  {
+   "unit_id": "S139",
+   "type": "succession",
+   "before": "verifying predicted bright-object exclusions",
+   "after": "sends the Star Tracker Mask File"
+  },
+  {
+   "unit_id": "S140",
+   "type": "requirement",
+   "subject": "Bluebell",
+   "text": "each flight dynamics delivery include a validity interval, coordinate frame, generation time, and operational use statement"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "distributes routine ephemerides and event predictions"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "target": "Mission Control Center",
+   "payload": "ephemerides and event predictions"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "target": "Mission Planning System",
+   "payload": "ephemerides and event predictions"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "target": "Payload Processing Facility",
+   "payload": "ephemerides and event predictions"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "align imaging requests, contact opportunities, recorder margins, and downlink windows"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "uses accepted orbit files"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "checks maneuver command parameters against the screened burn plan"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "allowing the command stack to proceed"
+  },
+  {
+   "unit_id": "S143",
+   "type": "succession",
+   "before": "checks maneuver command parameters against the screened burn plan",
+   "after": "allowing the command stack to proceed"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "produces the Ephemeris Delta Note"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Orbit Determination Engine",
+   "label": "produces the Laser Retroreflector Window"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "receives maneuver recommendations"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "rehearse commanding"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "verify contingency actions"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "coordinate contact coverage"
+  },
+  {
+   "unit_id": "S146",
+   "type": "flow",
+   "source": "null",
+   "target": "Spacecraft Operations Team",
+   "payload": "maneuver recommendations"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "obtains predicted viewing geometry from flight dynamics products"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "interpret instrument trends"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "plan calibration activities"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "uses antenna pointing predictions"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "prepare scheduled contacts"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "verify tracking readiness"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "retains released orbit products, covariance data, maneuver records, and quality decisions"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Backup Processing Cluster",
+   "label": "supports product generation"
+  },
+  {
+   "unit_id": "S150",
+   "type": "state",
+   "owner": "Primary Processing Cluster",
+   "label": "unavailable"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "transforming downlinked payload telemetry into image products"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "null",
+   "label": "Raw transfer starts"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "null",
+   "label": "station delivery files arrive"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "null",
+   "label": "verifies file size, sequence continuity, checksum, and acquisition time"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "null",
+   "label": "processing is scheduled"
+  },
+  {
+   "unit_id": "S152",
+   "type": "succession",
+   "before": "station delivery files arrive",
+   "after": "Raw transfer starts"
+  },
+  {
+   "unit_id": "S152",
+   "type": "succession",
+   "before": "verifies file size, sequence continuity, checksum, and acquisition time",
+   "after": "processing is scheduled"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "writes accepted raw data to immutable staging storage"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Telemetry Ingest Service",
+   "label": "records the session identifier"
+  },
+  {
+   "unit_id": "S153",
+   "type": "flow",
+   "source": "Telemetry Ingest Service",
+   "target": "staging storage",
+   "payload": "accepted raw data"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "null",
+   "label": "Corrupted or incomplete raw segments are isolated from the nominal queue"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "operator display",
+   "label": "shows whether recovery, retransmission, or discard is required"
+  },
+  {
+   "unit_id": "S154",
+   "type": "flow",
+   "source": "operator display",
+   "target": "null",
+   "payload": "recovery, retransmission, or discard status"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "generates Level 0 products"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "removing transfer framing"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "ordering source packets"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "preserving instrument time tags"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "null",
+   "label": "reconstructs detector samples"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "null",
+   "label": "appends engineering context"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "null",
+   "label": "applies radiometric calibration and sensor model parameters"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "null",
+   "label": "applies geolocation, atmospheric screening where applicable, and gridding rules"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "processing level",
+   "label": "records software build identifiers, calibration baseline identifiers, and ancillary input versions"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "label": "stored in the Long Term Archive"
+  },
+  {
+   "unit_id": "S160",
+   "type": "flow",
+   "target": "Long Term Archive",
+   "payload": "Released products"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "maintains the approved calibration baseline"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "reviews trend evidence"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "label": "made eligible for operational use"
+  },
+  {
+   "unit_id": "S161",
+   "type": "succession",
+   "before": "reviews trend evidence",
+   "after": "made eligible for operational use"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "uses the patch bundle to update calibration applicability checks"
+  },
+  {
+   "unit_id": "S162",
+   "type": "flow",
+   "target": "Product Quality Service",
+   "payload": "patch bundle"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "label": "applied to a controlled sample of recent scenes"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "label": "compared with the current operational baseline"
+  },
+  {
+   "unit_id": "S163",
+   "type": "succession",
+   "before": "applied to a controlled sample of recent scenes",
+   "after": "compared with the current operational baseline"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "label": "affected product specifications are updated"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "label": "general release resumes"
+  },
+  {
+   "unit_id": "S164",
+   "type": "succession",
+   "before": "affected product specifications are updated",
+   "after": "general release resumes"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "assigns quality flags for missing source packets, timing discontinuity, saturation, cloud screening uncertainty, geolocation residuals, and processing fallback"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "label": "encoded in product metadata and summary records"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "automated consumers",
+   "label": "reject, warn, or accept data consistently"
+  },
+  {
+   "unit_id": "S167",
+   "type": "state",
+   "owner": "product",
+   "label": "delivery hold"
+  },
+  {
+   "unit_id": "S167",
+   "type": "transition",
+   "to": "delivery hold",
+   "trigger": "mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "produces the Product Hold List"
+  },
+  {
+   "unit_id": "S168",
+   "type": "flow",
+   "source": "Product Quality Service",
+   "payload": "Product Hold List"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "label": "not promoted for user delivery"
+  },
+  {
+   "unit_id": "S169",
+   "type": "transition",
+   "from": "delivery hold",
+   "trigger": "blocking condition has been cleared"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "uses the Security Exception Ticket to restrict affected transfer paths"
+  },
+  {
+   "unit_id": "S170",
+   "type": "flow",
+   "target": "Network Control System",
+   "payload": "Security Exception Ticket"
+  },
+  {
+   "unit_id": "S171",
+   "type": "requirement",
+   "subject": "Lantern",
+   "text": "Lantern shall preserve the last validated routing configuration and reject unreviewed changes while payload product transfers are active."
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Lantern",
+   "label": "preserve the last validated routing configuration"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Lantern",
+   "label": "reject unreviewed changes"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "scheduling service",
+   "label": "assigns eligible jobs to the Backup Processing Cluster"
+  },
+  {
+   "unit_id": "S172",
+   "type": "flow",
+   "source": "scheduling service",
+   "target": "Backup Processing Cluster",
+   "payload": "eligible jobs"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Backup Processing Cluster",
+   "label": "writes provenance that identifies the fallback execution path"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "treats that marker as an input to its quality decision"
+  },
+  {
+   "unit_id": "S173",
+   "type": "flow",
+   "source": "Backup Processing Cluster",
+   "target": "Product Quality Service",
+   "payload": "provenance"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "sends the Storage Watermark Snapshot"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "daily storage assessment"
+  },
+  {
+   "unit_id": "S174",
+   "type": "succession",
+   "before": "daily storage assessment",
+   "after": "sends the Storage Watermark Snapshot"
+  },
+  {
+   "unit_id": "S174",
+   "type": "flow",
+   "source": "Long Term Archive",
+   "payload": "Storage Watermark Snapshot"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "label": "processing is suspended"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "label": "raw data are preserved in staging"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "label": "Mission Control Center is notified through the normal operational event channel"
+  },
+  {
+   "unit_id": "S175",
+   "type": "flow",
+   "target": "Mission Control Center",
+   "payload": "notification"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "label": "prioritizes products with contractual latency commitments"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "label": "processes remaining scenes in acquisition order"
+  },
+  {
+   "unit_id": "S176",
+   "type": "succession",
+   "before": "prioritizes products with contractual latency commitments",
+   "after": "processes remaining scenes in acquisition order"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "mission management",
+   "label": "approves a different backlog rule"
+  },
+  {
+   "unit_id": "S177",
+   "type": "attribute",
+   "owner": "Long Term Archive",
+   "name": "role",
+   "value": "authoritative repository for Sentinel Vale raw downlink, auxiliary data, processing inputs, generated products, and operational metadata"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "delivered the product package, associated quality metadata, and checksum evidence"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "Archive admission begins"
+  },
+  {
+   "unit_id": "S178",
+   "type": "succession",
+   "before": "delivered the product package, associated quality metadata, and checksum evidence",
+   "after": "Archive admission begins"
+  },
+  {
+   "unit_id": "S178",
+   "type": "flow",
+   "source": "Payload Processing Facility",
+   "target": "Long Term Archive",
+   "payload": "product package"
+  },
+  {
+   "unit_id": "S178",
+   "type": "flow",
+   "source": "Payload Processing Facility",
+   "target": "Long Term Archive",
+   "payload": "quality metadata"
+  },
+  {
+   "unit_id": "S178",
+   "type": "flow",
+   "source": "Payload Processing Facility",
+   "target": "Long Term Archive",
+   "payload": "checksum evidence"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "label": "is assigned a persistent identifier"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "stores object content separately from searchable metadata"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "label": "Catalogue records are published to User Services Portal"
+  },
+  {
+   "unit_id": "S181",
+   "type": "flow",
+   "target": "User Services Portal",
+   "payload": "Catalogue records"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "has set the public quality status"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "label": "the embargo rule has been evaluated"
+  },
+  {
+   "unit_id": "S181",
+   "type": "succession",
+   "before": "has set the public quality status",
+   "after": "Catalogue records are published to User Services Portal"
+  },
+  {
+   "unit_id": "S181",
+   "type": "succession",
+   "before": "the embargo rule has been evaluated",
+   "after": "Catalogue records are published to User Services Portal"
+  },
+  {
+   "unit_id": "S182",
+   "type": "state",
+   "owner": "Products",
+   "label": "under operational review"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "label": "remain discoverable only to authorized mission staff"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "provides search, preview, order, and download functions"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Download services",
+   "label": "support resumable transfer, integrity verification, and rate controls"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Registered users",
+   "label": "receive authorization scopes"
+  },
+  {
+   "unit_id": "S185",
+   "type": "flow",
+   "target": "Registered users",
+   "payload": "authorization scopes"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "label": "Anonymous access is allowed"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "mission management",
+   "label": "approved for open dissemination"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "retains raw acquisition data"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "label": "are retained online"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "label": "may be moved to lower-cost storage"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "label": "Deletion is performed"
+  },
+  {
+   "unit_id": "S191",
+   "type": "requirement",
+   "text": "Retention exceptions require traceability to the approving authority, the affected product classes, and the expected operational impact."
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "label": "Reprocessing is triggered"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "request a reprocessing campaign"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Mistral",
+   "label": "publishes orbit quality state changes to the archive operations queue"
+  },
+  {
+   "unit_id": "S194",
+   "type": "flow",
+   "source": "Mistral",
+   "target": "archive operations queue",
+   "payload": "orbit quality state changes"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "label": "catalogue validity flags are updated"
+  },
+  {
+   "unit_id": "S194",
+   "type": "succession",
+   "before": "publishes orbit quality state changes to the archive operations queue",
+   "after": "catalogue validity flags are updated"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Product Quality Service",
+   "label": "records the reason for any reprocessing decision"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "Long Term Archive",
+   "label": "preserves the replaced product version"
+  },
+  {
+   "unit_id": "S196",
+   "type": "state",
+   "owner": "Long Term Archive",
+   "label": "reprocessing"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Catalogue records",
+   "label": "show processing baseline, sensing time, publication time, quality status, and replacement relationships"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "uses the Pass Replay Packet to confirm that archived downlink context can support anomaly reconstruction"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "External interfaces",
+   "label": "expose catalogue search, subscription notification, product ordering, and download status"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "reviews public interface changes"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "confirm authentication, logging, and abuse-control requirements are satisfied"
+  },
+  {
+   "unit_id": "S200",
+   "type": "succession",
+   "before": "reviews public interface changes",
+   "after": "deployment"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "displays a service status message"
+  },
+  {
+   "unit_id": "S201",
+   "type": "flow",
+   "source": "User Services Portal",
+   "payload": "service status message"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "operations staff",
+   "label": "open the normal incident process"
+  },
+  {
+   "unit_id": "S202",
+   "type": "attribute",
+   "owner": "Sentinel Vale ground segment",
+   "name": "security operations basis",
+   "value": "least privilege, strong authentication, network segmentation, and continuous audit collection"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "maintains the authority boundary for routine spacecraft operations"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "confirms that elevated access is tied to an approved shift role and a time-limited operational need"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "reviews privileged access daily"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "challenges dormant, shared, or unexplained accounts"
+  },
+  {
+   "unit_id": "S204",
+   "type": "constraint",
+   "subject": "Cybersecurity Desk",
+   "expression": "reviews privileged access daily"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "enforces approved routing paths between ground stations, processing services, and external interfaces"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "records configuration changes in the operational log"
+  },
+  {
+   "unit_id": "S205",
+   "type": "flow",
+   "source": "Network Control System",
+   "target": "operational log",
+   "payload": "configuration changes"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Command Validation Gateway",
+   "label": "accepts the mask file"
+  },
+  {
+   "unit_id": "S206",
+   "type": "constraint",
+   "subject": "Command Validation Gateway",
+   "expression": "only when the integrity check, configuration identifier, and operator approval state match the active security baseline"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "treats the retroreflector window as a constrained planning input"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "prevents its use outside the approved scheduling interval"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "null",
+   "label": "classified by impact to safety, command authority, data custody, service continuity, and user-facing commitments"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "leads triage for spacecraft safety indicators"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "leads triage for antenna, link, and site-service indicators"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "assesses orbit and timing effects"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "assesses product integrity"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "assumes coordination authority"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "operators",
+   "label": "preserve volatile logs, current configuration state, operator console history, and relevant message identifiers"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "operators",
+   "label": "restarting services or changing routing"
+  },
+  {
+   "unit_id": "S213",
+   "type": "succession",
+   "before": "preserve volatile logs, current configuration state, operator console history, and relevant message identifiers",
+   "after": "restarting services or changing routing"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "label": "Evidence is stored in write-protected case storage"
+  },
+  {
+   "unit_id": "S214",
+   "type": "flow",
+   "target": "write-protected case storage",
+   "payload": "Evidence"
+  },
+  {
+   "unit_id": "S215",
+   "type": "requirement",
+   "subject": "Forgehouse",
+   "text": "Forgehouse must quarantine suspect input and derived output when product lineage cannot be proven during an active anomaly investigation."
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "Forgehouse",
+   "label": "quarantine suspect input and derived output"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Cedar",
+   "label": "suspends automatic schedule publication"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "Continuity modes are declared"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "label": "recorded with the operational objective, expected duration, and exit criteria"
+  },
+  {
+   "unit_id": "S218",
+   "type": "state",
+   "owner": "ground segment",
+   "label": "monitor-only mode"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "label": "command release is stopped"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "label": "telemetry reception continues"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "engineering teams",
+   "label": "focus on stabilizing observability and protecting evidence"
+  },
+  {
+   "unit_id": "S219",
+   "type": "state",
+   "owner": "ground segment",
+   "label": "essential-service mode"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "performer": "ground segment",
+   "label": "prioritizes spacecraft safety contacts, time-critical telemetry capture, core orbit support, and protection of unrecoverable payload data"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "pause nonessential production queues"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "Primary Processing Cluster",
+   "label": "reserve compute capacity for validated recovery runs from known-good inputs"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "label": "input custody, software baseline, and operator authorization have been verified"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "label": "processing work is transferred to Backup Processing Cluster"
+  },
+  {
+   "unit_id": "S221",
+   "type": "succession",
+   "before": "input custody, software baseline, and operator authorization have been verified",
+   "after": "processing work is transferred to Backup Processing Cluster"
+  },
+  {
+   "unit_id": "S221",
+   "type": "flow",
+   "source": "Primary Processing Cluster",
+   "target": "Backup Processing Cluster",
+   "payload": "processing work"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "Cross-site failover is coordinated"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "label": "placed in the recovery plan according to current availability and the spacecraft contact priority"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "delayed ingest or publication is reconciled"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "normal service status is restored"
+  },
+  {
+   "unit_id": "S224",
+   "type": "succession",
+   "before": "delayed ingest or publication is reconciled",
+   "after": "normal service status is restored"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "communicates confirmed service impacts in operational terms"
+  },
+  {
+   "unit_id": "S225",
+   "type": "flow",
+   "source": "User Services Portal",
+   "payload": "confirmed service impacts"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "avoids publishing speculative root cause information"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "incident lead",
+   "label": "approves release"
+  },
+  {
+   "unit_id": "S225",
+   "type": "succession",
+   "before": "approves release",
+   "after": "avoids publishing speculative root cause information"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "label": "Recovery is accepted"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "label": "command authority is verified"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "label": "telemetry and product flows are reconciled"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "label": "signed the incident record"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "label": "Routine mission service begins"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "operational readiness review",
+   "label": "confirms that ground procedures, staffing rosters, monitoring views, and escalation paths are under configuration control"
+  },
+  {
+   "unit_id": "S227",
+   "type": "succession",
+   "before": "confirms that ground procedures, staffing rosters, monitoring views, and escalation paths are under configuration control",
+   "after": "Routine mission service begins"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "readiness review board",
+   "label": "verifies that each open action from launch and commissioning has an owner, a due date, and an accepted residual risk statement"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "label": "Acceptance evidence is drawn from end-to-end rehearsals, procedure dry runs, interface verification records, capacity tests, security monitoring checks, and operator training completion records"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "demonstrates continuous console coverage for the agreed service hours"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Mission Control Center",
+   "label": "proves that shift handover logs contain the state needed by the incoming controller"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "performer": "Flight Dynamics Facility",
+   "label": "provides readiness evidence"
+  },
+  {
+   "unit_id": "S231",
+   "type": "flow",
+   "source": "Flight Dynamics Facility",
+   "payload": "readiness evidence"
+  },
+  {
+   "unit_id": "S231",
+   "type": "constraint",
+   "subject": "Flight Dynamics Facility",
+   "expression": "within the committed planning cycle"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "Payload Processing Facility",
+   "label": "demonstrates that science product generation can be sustained during representative contact patterns"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Network Control System",
+   "label": "records rehearsal outcomes for planned maintenance, station loss, degraded routing, and restoration of nominal connectivity"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Ground Network Manager",
+   "label": "accepts the antenna readiness baseline"
+  },
+  {
+   "unit_id": "S234",
+   "type": "constraint",
+   "subject": "Ground Network Manager",
+   "expression": "only when the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna have current maintenance clearances"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Spacecraft Operations Team",
+   "label": "conducts at least one integrated day-in-the-life rehearsal"
+  },
+  {
+   "unit_id": "S235",
+   "type": "constraint",
+   "subject": "Spacecraft Operations Team",
+   "expression": "at least one integrated day-in-the-life rehearsal"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "Flight Dynamics Team",
+   "label": "conducts a separate rehearsal for missed tracking data and late orbit update availability"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Payload Calibration Team",
+   "label": "validates that calibration operations are represented in the rehearsal schedule"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "participates in the final exercise"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "Cybersecurity Desk",
+   "label": "validating alert routing, privileged access review, and incident coordination with operations management"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "User Services Portal",
+   "label": "uses the Product Hold List to prevent release of affected products"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "performer": "Mission Planning System",
+   "label": "applies the delta note during schedule validation"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Backup Processing Cluster",
+   "label": "uses the Storage Watermark Snapshot to verify that recovery capacity is sufficient"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Backup Processing Cluster",
+   "label": "accepts routine standby responsibility"
+  },
+  {
+   "unit_id": "S241",
+   "type": "succession",
+   "before": "uses the Storage Watermark Snapshot to verify that recovery capacity is sufficient",
+   "after": "accepts routine standby responsibility"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Osprey",
+   "label": "rejects any command request that lacks the approved authorization state, validation result, and operator acknowledgment"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "Granite",
+   "label": "preserves the accepted archive baseline"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "Granite",
+   "label": "confirms that retrieval tests meet the service objective"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "label": "routine operations are declared stable"
+  },
+  {
+   "unit_id": "S243",
+   "type": "succession",
+   "before": "confirms that retrieval tests meet the service objective",
+   "after": "routine operations are declared stable"
+  },
+  {
+   "unit_id": "S244",
+   "type": "composition",
+   "whole": "key performance indicator",
+   "parts": [
+    "contact success rate",
+    "telemetry completeness",
+    "command validation timeliness",
+    "product latency",
+    "product quality disposition time",
+    "archive availability",
+    "help desk responsiveness",
+    "unresolved anomaly age"
+   ]
+  },
+  {
+   "unit_id": "S245",
+   "type": "attribute",
+   "owner": "key performance indicator",
+   "name": "data source"
+  },
+  {
+   "unit_id": "S245",
+   "type": "attribute",
+   "owner": "key performance indicator",
+   "name": "sampling interval"
+  },
+  {
+   "unit_id": "S245",
+   "type": "attribute",
+   "owner": "key performance indicator",
+   "name": "review owner"
+  },
+  {
+   "unit_id": "S245",
+   "type": "attribute",
+   "owner": "key performance indicator",
+   "name": "threshold"
+  },
+  {
+   "unit_id": "S245",
+   "type": "attribute",
+   "owner": "key performance indicator",
+   "name": "corrective action trigger"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "primary monthly service review",
+   "label": "compares actual performance against the accepted baseline"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "primary monthly service review",
+   "label": "records trend explanations for any measure that moves outside the watch band"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "label": "baselined with approved software versions, processing configurations, capacity reservations, monitoring checks, and rollback instructions before handover"
+  },
+  {
+   "unit_id": "S247",
+   "type": "attribute",
+   "owner": "Primary Processing Cluster",
+   "name": "approved software versions"
+  },
+  {
+   "unit_id": "S247",
+   "type": "attribute",
+   "owner": "Backup Processing Cluster",
+   "name": "approved software versions"
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "label": "frozen at readiness review entry"
+  },
+  {
+   "unit_id": "S248",
+   "type": "action",
+   "label": "changed only through approved change control"
+  },
+  {
+   "unit_id": "S248",
+   "type": "constraint",
+   "subject": "configuration baselines",
+   "expression": "changed only through approved change control"
+  },
+  {
+   "unit_id": "S249",
+   "type": "action",
+   "label": "Handover to routine mission service is authorized"
+  },
+  {
+   "unit_id": "S249",
+   "type": "action",
+   "performer": "accountable owners",
+   "label": "open risks are acknowledged"
+  },
+  {
+   "unit_id": "S249",
+   "type": "action",
+   "performer": "support teams",
+   "label": "confirm on-call coverage"
+  },
+  {
+   "unit_id": "S249",
+   "type": "state",
+   "owner": "null",
+   "label": "routine mission service"
+  },
+  {
+   "unit_id": "S249",
+   "type": "transition",
+   "from": "null",
+   "to": "routine mission service",
+   "trigger": "acceptance evidence is complete, rehearsals meet their objectives, open risks are acknowledged, support teams confirm on-call coverage"
+  },
+  {
+   "unit_id": "S250",
+   "type": "state",
+   "owner": "null",
+   "label": "stabilization period"
+  },
+  {
+   "unit_id": "S250",
+   "type": "transition",
+   "from": "null",
+   "to": "stabilization period",
+   "trigger": "handover"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "deviations are reviewed daily"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "label": "permanent process changes are deferred until sufficient evidence is available"
+  },
+  {
+   "unit_id": "S250",
+   "type": "succession",
+   "before": "Handover to routine mission service is authorized",
+   "after": "deviations are reviewed daily"
+  }
+ ],
+ "entities": [
+  {
+   "name": "Sentinel Vale",
+   "aliases": []
+  },
+  {
+   "name": "ground segment",
+   "aliases": []
+  },
+  {
+   "name": "spacecraft",
+   "aliases": []
+  },
+  {
+   "name": "launch segment",
+   "aliases": []
+  },
+  {
+   "name": "external user processing environments",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": [
+    "Bluebell"
+   ]
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": []
+  },
+  {
+   "name": "Command Validation Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Telemetry Ingest Service",
+   "aliases": []
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "Product Quality Service",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "spacecraft telemetry",
+   "aliases": []
+  },
+  {
+   "name": "executable activity plans",
+   "aliases": []
+  },
+  {
+   "name": "orbit knowledge",
+   "aliases": []
+  },
+  {
+   "name": "commands",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Cybersecurity Desk",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "ground station estate",
+   "aliases": []
+  },
+  {
+   "name": "operational contact schedule",
+   "aliases": []
+  },
+  {
+   "name": "mission data",
+   "aliases": []
+  },
+  {
+   "name": "command uplink",
+   "aliases": []
+  },
+  {
+   "name": "low-rate telemetry",
+   "aliases": []
+  },
+  {
+   "name": "high-rate payload downlink",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": [
+    "Mistral"
+   ]
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "Doppler Residual Report",
+   "aliases": []
+  },
+  {
+   "name": "Local station teams",
+   "aliases": []
+  },
+  {
+   "name": "Station operators",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Antenna Deicing Notice",
+   "aliases": []
+  },
+  {
+   "name": "Telemetry Ingest Service",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Contact booking requests",
+   "aliases": []
+  },
+  {
+   "name": "station allocations",
+   "aliases": []
+  },
+  {
+   "name": "visibility predictions",
+   "aliases": []
+  },
+  {
+   "name": "antenna pointing support products",
+   "aliases": []
+  },
+  {
+   "name": "contact status",
+   "aliases": []
+  },
+  {
+   "name": "data-flow indicators",
+   "aliases": []
+  },
+  {
+   "name": "antenna",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "protected access routers",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "Command Validation Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Telemetry Ingest Service",
+   "aliases": []
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "payload downlink traffic",
+   "aliases": []
+  },
+  {
+   "name": "command and telemetry traffic",
+   "aliases": []
+  },
+  {
+   "name": "administration networks",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "Antenna site equipment",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Cybersecurity Desk",
+   "aliases": []
+  },
+  {
+   "name": "Security Exception Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Timing alarms",
+   "aliases": []
+  },
+  {
+   "name": "redundant reference clocks",
+   "aliases": []
+  },
+  {
+   "name": "Precision Time Protocol",
+   "aliases": []
+  },
+  {
+   "name": "Network Time Protocol",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Telemetry Ingest Service",
+   "aliases": []
+  },
+  {
+   "name": "Pass Replay Packet",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "console lead",
+   "aliases": []
+  },
+  {
+   "name": "Command Validation Gateway",
+   "aliases": []
+  },
+  {
+   "name": "telemetry engineer",
+   "aliases": []
+  },
+  {
+   "name": "spacecraft systems engineer",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": [
+    "Forgehouse"
+   ]
+  },
+  {
+   "name": "subsystem specialists",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": [
+    "mission control"
+   ]
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Calibration Patch Bundle",
+   "aliases": []
+  },
+  {
+   "name": "Subsystem specialists",
+   "aliases": []
+  },
+  {
+   "name": "console operator",
+   "aliases": []
+  },
+  {
+   "name": "console lead",
+   "aliases": []
+  },
+  {
+   "name": "discipline lead",
+   "aliases": []
+  },
+  {
+   "name": "mission management",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": [
+    "Cedar"
+   ]
+  },
+  {
+   "name": "operational constraints",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "observation requests",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "orbit predictions",
+   "aliases": []
+  },
+  {
+   "name": "visibility assumptions",
+   "aliases": []
+  },
+  {
+   "name": "draft activity schedule",
+   "aliases": []
+  },
+  {
+   "name": "next operations crew",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Juniper",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Antenna Deicing Notice",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "command preparation package",
+   "aliases": []
+  },
+  {
+   "name": "Command Validation Gateway",
+   "aliases": [
+    "Osprey"
+   ]
+  },
+  {
+   "name": "Telemetry Ingest Service",
+   "aliases": []
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "Product Quality Service",
+   "aliases": []
+  },
+  {
+   "name": "planning metadata",
+   "aliases": []
+  },
+  {
+   "name": "draft schedule",
+   "aliases": []
+  },
+  {
+   "name": "Cybersecurity Desk",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Product Quality Service",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "residual report",
+   "aliases": []
+  },
+  {
+   "name": "orbit catalog",
+   "aliases": []
+  },
+  {
+   "name": "maneuver recommendation package",
+   "aliases": []
+  },
+  {
+   "name": "Star Tracker Mask File",
+   "aliases": []
+  },
+  {
+   "name": "Bluebell",
+   "aliases": []
+  },
+  {
+   "name": "Tracking arcs",
+   "aliases": []
+  },
+  {
+   "name": "orbit solution",
+   "aliases": []
+  },
+  {
+   "name": "conjunction data",
+   "aliases": []
+  },
+  {
+   "name": "command stack",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Command Validation Gateway",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Ephemeris Delta Note",
+   "aliases": []
+  },
+  {
+   "name": "Orbit Determination Engine",
+   "aliases": []
+  },
+  {
+   "name": "Laser Retroreflector Window",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Telemetry Ingest Service",
+   "aliases": []
+  },
+  {
+   "name": "ephemerides",
+   "aliases": []
+  },
+  {
+   "name": "event predictions",
+   "aliases": []
+  },
+  {
+   "name": "orbit files",
+   "aliases": []
+  },
+  {
+   "name": "maneuver recommendations",
+   "aliases": []
+  },
+  {
+   "name": "antenna pointing predictions",
+   "aliases": []
+  },
+  {
+   "name": "image products",
+   "aliases": []
+  },
+  {
+   "name": "payload telemetry",
+   "aliases": []
+  },
+  {
+   "name": "Level 0 products",
+   "aliases": []
+  },
+  {
+   "name": "operator display",
+   "aliases": []
+  },
+  {
+   "name": "staging storage",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": [
+    "Granite"
+   ]
+  },
+  {
+   "name": "processing level",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Product Quality Service",
+   "aliases": []
+  },
+  {
+   "name": "patch bundle",
+   "aliases": []
+  },
+  {
+   "name": "Product Hold List",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Security Exception Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Lantern",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "scheduling service",
+   "aliases": []
+  },
+  {
+   "name": "Storage Watermark Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "quality flags",
+   "aliases": []
+  },
+  {
+   "name": "Released products",
+   "aliases": []
+  },
+  {
+   "name": "provenance",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": [
+    "repository"
+   ]
+  },
+  {
+   "name": "Sentinel Vale",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "Product Quality Service",
+   "aliases": []
+  },
+  {
+   "name": "mission management",
+   "aliases": []
+  },
+  {
+   "name": "mission staff",
+   "aliases": []
+  },
+  {
+   "name": "Registered users",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Mistral",
+   "aliases": []
+  },
+  {
+   "name": "archive operations queue",
+   "aliases": []
+  },
+  {
+   "name": "product package",
+   "aliases": []
+  },
+  {
+   "name": "quality metadata",
+   "aliases": []
+  },
+  {
+   "name": "checksum evidence",
+   "aliases": []
+  },
+  {
+   "name": "Catalogue records",
+   "aliases": []
+  },
+  {
+   "name": "authorization scopes",
+   "aliases": []
+  },
+  {
+   "name": "orbit quality state changes",
+   "aliases": []
+  },
+  {
+   "name": "Download services",
+   "aliases": []
+  },
+  {
+   "name": "Product Quality Service",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Pass Replay Packet",
+   "aliases": []
+  },
+  {
+   "name": "Cybersecurity Desk",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "Sentinel Vale ground segment",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Command Validation Gateway",
+   "aliases": []
+  },
+  {
+   "name": "mask file",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": []
+  },
+  {
+   "name": "retroreflector window",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "External interfaces",
+   "aliases": []
+  },
+  {
+   "name": "Catalogue records",
+   "aliases": []
+  },
+  {
+   "name": "operations staff",
+   "aliases": []
+  },
+  {
+   "name": "service status message",
+   "aliases": []
+  },
+  {
+   "name": "operational log",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "write-protected case storage",
+   "aliases": []
+  },
+  {
+   "name": "Forgehouse",
+   "aliases": []
+  },
+  {
+   "name": "Cedar",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "ground segment",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Long Term Archive",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "engineering teams",
+   "aliases": []
+  },
+  {
+   "name": "incident lead",
+   "aliases": []
+  },
+  {
+   "name": "operational readiness review",
+   "aliases": []
+  },
+  {
+   "name": "chain of custody entry",
+   "aliases": []
+  },
+  {
+   "name": "incident record",
+   "aliases": []
+  },
+  {
+   "name": "readiness review board",
+   "aliases": []
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Facility",
+   "aliases": []
+  },
+  {
+   "name": "Payload Processing Facility",
+   "aliases": []
+  },
+  {
+   "name": "Network Control System",
+   "aliases": []
+  },
+  {
+   "name": "Ground Network Manager",
+   "aliases": []
+  },
+  {
+   "name": "North S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "South S-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Kiruna X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Svalbard X-Band Antenna",
+   "aliases": []
+  },
+  {
+   "name": "Spacecraft Operations Team",
+   "aliases": []
+  },
+  {
+   "name": "Flight Dynamics Team",
+   "aliases": []
+  },
+  {
+   "name": "Payload Calibration Team",
+   "aliases": []
+  },
+  {
+   "name": "Cybersecurity Desk",
+   "aliases": []
+  },
+  {
+   "name": "User Services Portal",
+   "aliases": []
+  },
+  {
+   "name": "Product Hold List",
+   "aliases": []
+  },
+  {
+   "name": "Mission Planning System",
+   "aliases": []
+  },
+  {
+   "name": "delta note",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Storage Watermark Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "Osprey",
+   "aliases": []
+  },
+  {
+   "name": "Granite",
+   "aliases": []
+  },
+  {
+   "name": "shift handover logs",
+   "aliases": []
+  },
+  {
+   "name": "incoming controller",
+   "aliases": []
+  },
+  {
+   "name": "operations management",
+   "aliases": []
+  },
+  {
+   "name": "Primary Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "Backup Processing Cluster",
+   "aliases": []
+  },
+  {
+   "name": "key performance indicator",
+   "aliases": []
+  },
+  {
+   "name": "primary monthly service review",
+   "aliases": []
+  },
+  {
+   "name": "support teams",
+   "aliases": []
+  },
+  {
+   "name": "accountable owners",
+   "aliases": []
+  },
+  {
+   "name": "configuration baselines",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S016"
+   ],
+   "chunk_tokens": 461,
+   "memory_tokens": 0,
+   "prompt_tokens": 1173,
+   "input": 2688,
+   "output": 3764,
+   "reasoning": null,
+   "cached": true
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S017",
+    "S032"
+   ],
+   "chunk_tokens": 453,
+   "memory_tokens": 0,
+   "prompt_tokens": 1166,
+   "input": 2664,
+   "output": 2005,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S033",
+    "S050"
+   ],
+   "chunk_tokens": 441,
+   "memory_tokens": 0,
+   "prompt_tokens": 1160,
+   "input": 2672,
+   "output": 2936,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S051",
+    "S064"
+   ],
+   "chunk_tokens": 445,
+   "memory_tokens": 0,
+   "prompt_tokens": 1153,
+   "input": 2630,
+   "output": 2071,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S065",
+    "S077"
+   ],
+   "chunk_tokens": 429,
+   "memory_tokens": 0,
+   "prompt_tokens": 1133,
+   "input": 2627,
+   "output": 2571,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S078",
+    "S092"
+   ],
+   "chunk_tokens": 461,
+   "memory_tokens": 0,
+   "prompt_tokens": 1171,
+   "input": 2651,
+   "output": 3095,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S093",
+    "S107"
+   ],
+   "chunk_tokens": 437,
+   "memory_tokens": 0,
+   "prompt_tokens": 1148,
+   "input": 2640,
+   "output": 2991,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S108",
+    "S124"
+   ],
+   "chunk_tokens": 452,
+   "memory_tokens": 0,
+   "prompt_tokens": 1168,
+   "input": 2682,
+   "output": 2294,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S125",
+    "S140"
+   ],
+   "chunk_tokens": 438,
+   "memory_tokens": 0,
+   "prompt_tokens": 1150,
+   "input": 2674,
+   "output": 2417,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S141",
+    "S157"
+   ],
+   "chunk_tokens": 453,
+   "memory_tokens": 0,
+   "prompt_tokens": 1169,
+   "input": 2703,
+   "output": 3821,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S158",
+    "S175"
+   ],
+   "chunk_tokens": 442,
+   "memory_tokens": 0,
+   "prompt_tokens": 1160,
+   "input": 2626,
+   "output": 4294,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S176",
+    "S194"
+   ],
+   "chunk_tokens": 449,
+   "memory_tokens": 0,
+   "prompt_tokens": 1173,
+   "input": 2637,
+   "output": 3822,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S195",
+    "S212"
+   ],
+   "chunk_tokens": 456,
+   "memory_tokens": 0,
+   "prompt_tokens": 1175,
+   "input": 2678,
+   "output": 2704,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S213",
+    "S227"
+   ],
+   "chunk_tokens": 438,
+   "memory_tokens": 0,
+   "prompt_tokens": 1147,
+   "input": 2597,
+   "output": 2917,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S228",
+    "S243"
+   ],
+   "chunk_tokens": 459,
+   "memory_tokens": 0,
+   "prompt_tokens": 1171,
+   "input": 2688,
+   "output": 2643,
+   "reasoning": null,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S244",
+    "S250"
+   ],
+   "chunk_tokens": 233,
+   "memory_tokens": 0,
+   "prompt_tokens": 919,
+   "input": 2204,
+   "output": 1811,
+   "reasoning": null,
+   "cached": false
+  }
+ ],
+ "cond_note": "C1S post-hoc: 512-token chunks, no memory",
+ "wall_s": 305.3
+}

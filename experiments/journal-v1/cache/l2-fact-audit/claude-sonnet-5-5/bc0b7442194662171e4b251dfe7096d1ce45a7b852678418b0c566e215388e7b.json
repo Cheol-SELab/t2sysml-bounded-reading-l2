@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Carousel 7 Make-Up Unit, label=presents bags for outbound loading)\n\nSource sentences (the last one is where the fact was extracted):\nS123: Concourse Zone Controller coordinates induction demand with available conveyor capacity across the operating area.\nS124: Induction Tray Conveyor admits bags in priority order, subject to scan confirmation and safe spacing.\nS125: East Make-Up Conveyor and West Make-Up Conveyor receive flight groups according to active allocation rules.\nS126: Carousel 7 Make-Up Unit presents bags for outbound loading only after flight grouping and screening status are confirmed.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S126 states that Carousel 7 Make-Up Unit presents bags for outbound loading, so both the performer and the action label match the text; the added condition about confirmed flight grouping and screening is not part of the fact's slots.\"}",
+ "usage": {
+  "input_tokens": 672,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.254,
+ "created": "2026-10-14T12:52:30"
+}

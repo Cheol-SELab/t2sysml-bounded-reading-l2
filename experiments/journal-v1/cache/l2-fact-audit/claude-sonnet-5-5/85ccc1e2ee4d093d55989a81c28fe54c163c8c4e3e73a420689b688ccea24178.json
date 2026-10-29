@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Chief Operator, label=reviews the next-day schedule with operations staff)\n\nSource sentences (the last one is where the fact was extracted):\nS099: The Backwash Recovery Tank is sampled after return-to-process events when recovered water quality could influence filter performance or finished water stability.\nS100: The Laboratory Technician preserves all custody and acceptance records for review by the Chief Operator, Duty Engineer, and regulatory auditors.\nS101: Planned maintenance is controlled through a work order process that ties each task to an approved operating window, a named responsible person, and a defined return-to-service condition.\nS102: The Chief Operator reviews the next-day schedule with operations staff so that treatment capacity, water quality risk, and distribution demand are understood before work is released.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S102 states directly that the Chief Operator reviews the next-day schedule with operations staff, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 711,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 58,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.648,
+ "created": "2026-10-14T12:52:17"
+}

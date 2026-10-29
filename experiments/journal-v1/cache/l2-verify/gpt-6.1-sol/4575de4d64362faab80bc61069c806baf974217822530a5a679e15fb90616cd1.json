@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Aircraft Operator Representative provides \"the Crew Duty Extension Log\" to Slot Coordinator (an information or material flow).\n\nSource sentences:\nS619: The model uses time thresholds, qualification flags, and pairing feasibility status, but it does not require names, pay rules, hotel arrangements, or internal crew roster details.\nS620: Aircraft Operator Representative sends the Crew Duty Extension Log when an approved company process extends duty availability for a specific rotation.\nS725: The Airline Operations Coordinator and Aircraft Operator Representative acknowledge manual slot assignments through recorded voice readback or an agreed written channel.\nS726: The Slot Coordinator uses the Crew Duty Extension Log to check whether manually issued slot times remain operationally achievable.\n\nAnswer \"supported\" only if the sentences state that Aircraft Operator Representative produces or sends this item AND that Slot Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S620 states that the Aircraft Operator Representative sends the Crew Duty Extension Log, and S726 states that the Slot Coordinator uses the same log.\"}",
+ "usage": {
+  "input_tokens": 313,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 358
+ },
+ "attempts": 1,
+ "wall_s": 4.478,
+ "created": "2026-10-14T12:47:29"
+}

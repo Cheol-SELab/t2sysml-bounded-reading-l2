@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Network Operations Liaison provides \"external coordination outcomes\" to Audit Event Ledger (an information or material flow).\n\nSource sentences:\nS083: The Network Operations Liaison coordinates with adjacent network units and confirms that regional measures remain compatible with upstream and downstream flow constraints.\nS084: The Network Operations Liaison also records external coordination outcomes in the Collaborative Decision Log so that later decisions can be reconstructed without relying on informal communications.\nS416: During Capacity Reduction State, the Regional Flow Manager may combine arrival regulation with departure metering to protect surface balance and prevent inbound aircraft from occupying gates needed for recovery flights.\nS417: All rate changes, rejected options, coordination outcomes, and effective times are written to the Audit Event Ledger for later review.\n\nAnswer \"supported\" only if the sentences state that Network Operations Liaison produces or sends this item AND that Audit Event Ledger receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S084 says the Liaison records external coordination outcomes in the Collaborative Decision Log, not the Audit Event Ledger, while S417 passively says coordination outcomes are written to the Audit Event Ledger without naming the Liaison as the source, so the link is plausible but not explicitly stated.\"}",
+ "usage": {
+  "input_tokens": 731,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 117,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.391,
+ "created": "2026-10-14T12:45:03"
+}

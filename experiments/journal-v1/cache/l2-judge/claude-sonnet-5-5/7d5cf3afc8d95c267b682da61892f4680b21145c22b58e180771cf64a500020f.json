@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Capacity Assessment Module provides \"runway-specific capacity values\" to tactical position (an information or material flow).\n\nSource sentences:\nS113: Weather impacts are translated into capacity modifiers for runway configuration, arrival spacing, departure spacing, surface movement constraints, and approach sector availability.\nS114: The North Runway Meter and South Runway Meter receive runway-specific capacity values after the Capacity Assessment Module applies the current wind, visibility, and precipitation assumptions.\nS433: The Military Airspace Liaison can mark an airspace release or closure assumption for review before it affects tactical flow calculations.\nS434: The Meteorology Briefing Officer verifies weather impacts shown from the Weather Ingest Gateway before the position applies weather-driven capacity values.\n\nAnswer \"supported\" only if the sentences state that Capacity Assessment Module produces or sends this item AND that tactical position receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S114 says the North and South Runway Meters receive runway-specific capacity values after the Capacity Assessment Module applies assumptions, and S434 says the position applies weather-driven capacity values, but no sentence states that the tactical position receives these values from the module, so the link is indirect.\"}",
+ "usage": {
+  "input_tokens": 717,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 110,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.041,
+ "created": "2026-10-14T12:45:05"
+}

@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Data Governance Steward provides \"mandatory fields, permissible status values, retention rules, and data quality thresholds\" to Capacity Assessment Module (an information or material flow).\n\nSource sentences:\nS169: The Collaborative Decision Log records who changed a value, when the change was made, whether the change was provisional or confirmed, and what operational decision relied on it.\nS170: The Data Governance Steward defines the mandatory fields, permissible status values, retention rules, and data quality thresholds used by the Airport CDM Portal.\nS599: Departure fix saturation is calculated by comparing planned departures by fix against the usable fix capacity declared in Airport Capacity Plan.\nS600: Capacity Assessment Module applies Business Rules Registry thresholds to distinguish a short tactical peak from sustained saturation requiring a Tactical Regulation Proposal.\n\nAnswer \"supported\" only if the sentences state that Data Governance Steward produces or sends this item AND that Capacity Assessment Module receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Data Governance Steward defines these items for the Airport CDM Portal, while the Capacity Assessment Module uses Business Rules Registry thresholds, not the stated governance items.\"}",
+ "usage": {
+  "input_tokens": 330,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 48,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 378
+ },
+ "attempts": 1,
+ "wall_s": 2.566,
+ "created": "2026-10-14T12:46:44"
+}

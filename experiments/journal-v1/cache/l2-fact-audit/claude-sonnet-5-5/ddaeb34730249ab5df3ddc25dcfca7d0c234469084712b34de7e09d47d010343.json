@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=West Retardant Loading Pump, payload=equipment state)\n\nSource sentences (the last one is where the fact was extracted):\nS139: The Airspace Restricted State limits dispatch options until the Air Attack Supervisor confirms that the planned route and working altitude are acceptable.\nS140: The Talon Air Tanker Dispatch Console produces the Runway Release Note after the planned departure sequence has been validated against runway constraints.\nS141: The Tanker Base Manager uses the batch slip to confirm that the loading record matches the aircraft assignment and planned retardant quantity.\nS142: The East Retardant Loading Pump and West Retardant Loading Pump report equipment state, flow readiness, and out-of-service conditions to support base capacity estimates.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S142 states that the West Retardant Loading Pump (with the East pump) reports equipment state, so a flow with the pump as source and equipment state as payload is directly stated, although the destination is not given.\"}",
+ "usage": {
+  "input_tokens": 710,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.336,
+ "created": "2026-10-14T12:51:47"
+}

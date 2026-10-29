@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Turbine Controller provides \"the Pitch Deviation Notice\" to SCADA Gateway (an information or material flow).\n\nSource sentences:\nS060: The Turbine Controller performs local turbine control functions within the offshore equipment environment.\nS061: The Turbine Controller produces the Pitch Deviation Notice for operational handling.\nS158: Technical reviewers confirm that the work scope is compatible with equipment condition and the planned maintenance method.\nS159: SCADA Gateway uses the deviation notice to flag work packages that may require technical review.\n\nAnswer \"supported\" only if the sentences state that Turbine Controller produces or sends this item AND that SCADA Gateway receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S061 states that Turbine Controller produces the Pitch Deviation Notice, and S159 states that SCADA Gateway uses the same item, named more briefly as the deviation notice.\"}",
+ "usage": {
+  "input_tokens": 280,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 52,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 332
+ },
+ "attempts": 1,
+ "wall_s": 5.767,
+ "created": "2026-10-14T12:53:48"
+}

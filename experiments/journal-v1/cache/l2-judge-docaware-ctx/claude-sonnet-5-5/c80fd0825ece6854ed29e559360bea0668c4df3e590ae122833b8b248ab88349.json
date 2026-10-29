@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Sector Load Monitor provides \"the Departure Fix Load Sheet\" to Regional Flow Manager (an information or material flow).\n\nSource sentences:\nS483: The Departure Metering Service sequences recovered departures so that aircraft released from delayed turnarounds do not create a new surface queue at the runway holding points.\nS484: Sector Load Monitor produces the Departure Fix Load Sheet when projected recovered departures require a consolidated view of demand by departure fix.\nS597: Mixed-flow constraints are converted into paired measures so that departure metering does not protect one sector by creating an unmanaged arrival queue.\nS598: The Regional Flow Manager uses the load sheet to confirm whether a departure fix constraint should be represented as an airport departure measure.\n\nAnswer \"supported\" only if the sentences state that Sector Load Monitor produces or sends this item AND that Regional Flow Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\nS722: If the Slot Allocation Engine is unavailable, the Slot Coordinator initiates manual slot procedures using a time-ordered control sheet maintained at the Contingency Operations Console.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S484 says Sector Load Monitor produces the Departure Fix Load Sheet, and S598 says the Regional Flow Manager uses 'the load sheet' to confirm departure fix constraints, which refers to the same item.\"}",
+ "usage": {
+  "input_tokens": 807,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.009,
+ "created": "2026-10-19T19:06:34"
+}

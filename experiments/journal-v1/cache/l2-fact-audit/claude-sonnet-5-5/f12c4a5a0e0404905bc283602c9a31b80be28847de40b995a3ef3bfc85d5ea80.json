@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: transition(to=Airspace Restricted State, trigger=air operations are constrained)\n\nSource sentences (the last one is where the fact was extracted):\nS071: The Confirmed Ignition State includes the best known location, confidence basis, observation history, reviewer identity, and current recommended coordination posture.\nS072: Crewline Mobile Tablet users receive only the confirmed incident context that has been released for field distribution by the command workflow.\nS073: East Retardant Loading Pump sends the Retardant Batch Slip after a load cycle is metered and sealed.\nS074: If air operations are constrained, the Caldera Incident Command Portal can associate the incident with the Airspace Restricted State before aircraft tasking is attempted.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S074 says that if air operations are constrained, the portal can associate the incident with the Airspace Restricted State, so the target state and the trigger condition both match the text.\"}",
+ "usage": {
+  "input_tokens": 692,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 68,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.175,
+ "created": "2026-10-14T12:52:32"
+}

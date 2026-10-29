@@ -1,0 +1,3800 @@
+{
+ "facts": [
+  {
+   "unit_id": "S002",
+   "type": "constraint",
+   "subject": "airport network",
+   "expression": "two daily peaks"
+  },
+  {
+   "unit_id": "S003",
+   "type": "action",
+   "performer": "airport network",
+   "label": "routinely operates near declared capacity during Normal Operations"
+  },
+  {
+   "unit_id": "S003",
+   "type": "state",
+   "owner": "airport network",
+   "label": "Normal Operations"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "balancing demand against capacity across the Meridian region"
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "coordinating regional traffic management actions"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "integrate planning, tactical regulation, airport readiness, and post-event analysis into a single operational environment"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "estimates expected demand from scheduled operations, Flight Intent Message data, known airline recovery plans, and near-term operational changes"
+  },
+  {
+   "unit_id": "S013",
+   "type": "flow",
+   "source": "Flight Data Exchange",
+   "target": "Demand Prediction Service",
+   "payload": "Flight Intent Message"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Capacity Assessment Module",
+   "label": "supports the assessment of declared and tactical capacity using weather, runway availability, sector loading, and airport resource conditions"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "supports fair and traceable allocation of constrained departure and arrival opportunities when demand exceeds available capacity"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "provides airport stakeholders with a controlled interface for sharing operational readiness information and confirming decisions that affect the surface and terminal sequence"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Common Situation Display",
+   "label": "give authorized users a shared view of demand, capacity, constraints, and active traffic management measures"
+  },
+  {
+   "unit_id": "S020",
+   "type": "flow",
+   "source": "Common Situation Display",
+   "payload": "shared view of demand, capacity, constraints, and active traffic management measures"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Collaborative Decision Log",
+   "label": "preserve the rationale, timing, and authorization of material operational decisions"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "preserve the rationale, timing, and authorization of material operational decisions"
+  },
+  {
+   "unit_id": "S022",
+   "type": "requirement",
+   "text": "During Adverse Weather Mode or Capacity Reduction State, the system must support rapid development of a Tactical Regulation Proposal and consistent communication of the resulting Ground Delay Program when one is required."
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "label": "support rapid development of a Tactical Regulation Proposal and consistent communication of the resulting Ground Delay Program when one is required"
+  },
+  {
+   "unit_id": "S023",
+   "type": "requirement",
+   "text": "During Recovery Phase, the system must help stakeholders restore scheduled flow while monitoring Target Off Block Time, Calculated Takeoff Time, and Slot Compliance State performance."
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "label": "help stakeholders restore scheduled flow while monitoring Target Off Block Time, Calculated Takeoff Time, and Slot Compliance State performance"
+  },
+  {
+   "unit_id": "S030",
+   "type": "composition",
+   "whole": "Regional Flow Platform",
+   "parts": [
+    "common services"
+   ]
+  },
+  {
+   "unit_id": "S031",
+   "type": "composition",
+   "whole": "Regional Flow Platform",
+   "parts": [
+    "Demand Prediction Service",
+    "Capacity Assessment Module",
+    "Slot Allocation Engine",
+    "Airport CDM Portal",
+    "Digital Briefing Room"
+   ]
+  },
+  {
+   "unit_id": "S032",
+   "type": "composition",
+   "whole": "Regional Flow Platform",
+   "parts": [
+    "Tower Sequence Manager",
+    "Ramp Movement Board",
+    "Departure Metering Service",
+    "Arrival Regulation Console",
+    "Contingency Operations Console"
+   ]
+  },
+  {
+   "unit_id": "S033",
+   "type": "composition",
+   "whole": "Regional Flow Platform",
+   "parts": [
+    "Weather Ingest Gateway",
+    "Flight Data Exchange",
+    "Surface Surveillance Adapter",
+    "Airline Interface Adapter",
+    "Alert Distribution Hub"
+   ]
+  },
+  {
+   "unit_id": "S034",
+   "type": "composition",
+   "whole": "Regional Flow Platform",
+   "parts": [
+    "Performance Analytics Warehouse",
+    "Audit Event Ledger",
+    "Identity Access Service",
+    "Business Rules Registry",
+    "Time Synchronization Service"
+   ]
+  },
+  {
+   "unit_id": "S035",
+   "type": "composition",
+   "whole": "Regional Flow Platform",
+   "parts": [
+    "North Runway Meter",
+    "South Runway Meter",
+    "East Apron Sensor",
+    "West Apron Sensor",
+    "Sector Load Monitor",
+    "Gate Conflict Detector"
+   ]
+  },
+  {
+   "unit_id": "S046",
+   "type": "composition",
+   "whole": "shared operational picture",
+   "parts": [
+    "Flight Intent Message",
+    "Airport Capacity Plan",
+    "Target Off Block Time",
+    "Calculated Takeoff Time",
+    "Airport Acceptance Rate",
+    "Common Situation Display",
+    "Tactical Regulation Proposal",
+    "Collaborative Decision Log",
+    "Post Operations Report"
+   ]
+  },
+  {
+   "unit_id": "S047",
+   "type": "state",
+   "label": "Normal Operations"
+  },
+  {
+   "unit_id": "S047",
+   "type": "state",
+   "label": "Adverse Weather Mode"
+  },
+  {
+   "unit_id": "S047",
+   "type": "state",
+   "label": "Capacity Reduction State"
+  },
+  {
+   "unit_id": "S047",
+   "type": "state",
+   "label": "Recovery Phase"
+  },
+  {
+   "unit_id": "S047",
+   "type": "state",
+   "label": "Contingency Fallback State"
+  },
+  {
+   "unit_id": "S047",
+   "type": "state",
+   "label": "Slot Compliance State"
+  },
+  {
+   "unit_id": "S048",
+   "type": "requirement",
+   "text": "Participation in the regional system requires each stakeholder organization to assign accountable representatives, maintain current contact details, follow agreed data use rules, and support post-operational review of decisions made through the Regional Flow Platform."
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "label": "prepared each morning before the main bank structure is locked for operational use"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "label": "locked for operational use"
+  },
+  {
+   "unit_id": "S049",
+   "type": "succession",
+   "before": "prepared each morning before the main bank structure is locked for operational use",
+   "after": "locked for operational use"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "confirms that the planning horizon, cutover time, and review checkpoints are understood by the participating operational roles"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "creates the initial demand picture from published schedules, approved seasonal allocations, overnight schedule changes, and received Flight Intent Message data"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "performer": "Flight Data Exchange",
+   "label": "normalizes flight identifiers, aircraft types, routing fields, and planned operating times"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "converts the normalized schedule into expected arrival and departure demand by time band, runway direction, terminal area, and major traffic flow"
+  },
+  {
+   "unit_id": "S053",
+   "type": "flow",
+   "source": "Flight Data Exchange",
+   "target": "Demand Prediction Service",
+   "payload": "normalized schedule"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "reviews material deviations from filed intent, including aircraft swaps, early cancellations, recovery flights, and known connection protection actions"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Aircraft Operator Representative",
+   "label": "validates that operator priorities are visible where they are allowed by the Business Rules Registry and local coordination agreements"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Meteorology Briefing Officer",
+   "label": "provides the morning weather outlook with emphasis on wind trend, ceiling, visibility, convective risk, temperature limits, and confidence over the planning horizon"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "Weather Ingest Gateway",
+   "label": "makes the outlook available to the Capacity Assessment Module"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "Weather Ingest Gateway",
+   "label": "preserves the forecast issue time for audit and later performance review"
+  },
+  {
+   "unit_id": "S057",
+   "type": "flow",
+   "source": "Weather Ingest Gateway",
+   "target": "Capacity Assessment Module",
+   "payload": "morning weather outlook"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Airspace Sector Planner",
+   "label": "declares expected sector constraints, route availability assumptions, and any planned staffing limitations that could influence arrival or departure metering"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Military Airspace Liaison",
+   "label": "confirms whether shared airspace assumptions remain valid for the morning"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Military Airspace Liaison",
+   "label": "identifies any conditional availability that must be treated as uncertain"
+  },
+  {
+   "unit_id": "S059",
+   "type": "requirement",
+   "text": "The Military Airspace Liaison confirms whether shared airspace assumptions remain valid for the morning and identifies any conditional availability that must be treated as uncertain."
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Tower Supervisor",
+   "label": "sends the Runway Inspection Note before the first planning consolidation window"
+  },
+  {
+   "unit_id": "S060",
+   "type": "flow",
+   "source": "Tower Supervisor",
+   "payload": "Runway Inspection Note"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "Tower Supervisor",
+   "label": "declares anticipated runway configuration, usable operating length assumptions, and any local sequencing constraints that affect the North Runway Meter and South Runway Meter"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "Airport Duty Manager",
+   "label": "confirms terminal opening status, essential facility readiness, and airport service constraints that may affect the first operational waves"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "reviews early stand readiness using information from the Ramp Movement Board, East Apron Sensor, West Apron Sensor, and handling coordination calls"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Ground Handling Dispatcher",
+   "label": "confirms whether planned handling teams and equipment coverage are sufficient for the expected concentration of turns in each apron area"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "Handling Resource Planner",
+   "label": "compares the demand curve with available ground resources"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "Handling Resource Planner",
+   "label": "flags time bands where aircraft turn performance is likely to reduce stand availability"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Capacity Assessment Module",
+   "label": "combines the runway declaration, weather outlook, airspace constraints, stand readiness, and ground resource assumptions into a proposed Airport Acceptance Rate by period"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "label": "tested against the demand profile to identify overloads, underused capacity, and points where a Ground Delay Program may become necessary"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "uses the Slot Allocation Engine to prepare an initial slot feasibility view"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "does not publish binding Calculated Takeoff Time values during baseline construction"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Departure Metering Service",
+   "label": "estimates provisional Target Off Block Time sensitivity"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Arrival Regulation Console",
+   "label": "highlights inbound demand periods where holding, speed control, or upstream sequencing may be needed if the forecast capacity materializes"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Digital Briefing Room",
+   "label": "displays the emerging Airport Capacity Plan"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Digital Briefing Room",
+   "label": "records unresolved assumptions in the Collaborative Decision Log for confirmation during the morning coordination briefing"
+  },
+  {
+   "unit_id": "S071",
+   "type": "flow",
+   "source": "Digital Briefing Room",
+   "payload": "Airport Capacity Plan"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Common Situation Display",
+   "label": "presents the approved pre-tactical baseline as the shared reference for Normal Operations, Adverse Weather Mode, Capacity Reduction State, and early Recovery Phase decisions"
+  },
+  {
+   "unit_id": "S072",
+   "type": "flow",
+   "source": "Common Situation Display",
+   "payload": "approved pre-tactical baseline"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "Alert Distribution Hub",
+   "label": "notifies participating roles that the morning plan is available and that changes must be entered through controlled Regional Flow Platform functions"
+  },
+  {
+   "unit_id": "S073",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "When the baseline is approved, the Alert Distribution Hub notifies participating roles that the morning plan is available and that changes must be entered through controlled Regional Flow Platform functions."
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Performance Analytics Warehouse",
+   "label": "retains the baseline inputs, capacity declarations, and approval timestamps"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "reviews the Airport Capacity Plan, the Ground Delay Program status, and any Tactical Regulation Proposal before they are presented for collaborative agreement"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Airspace Sector Planner",
+   "label": "validating sector constraints in the Sector Load Monitor"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Airspace Sector Planner",
+   "label": "advising whether demand smoothing is required before tactical execution"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "confirms that the Slot Allocation Engine applies the current Business Rules Registry parameters"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "represents carrier operating priorities"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "confirms that Flight Intent Message updates are complete, timely, and traceable"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Aircraft Operator Representative",
+   "label": "provides aircraft-specific constraints when requested"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Network Operations Liaison",
+   "label": "coordinates with adjacent network units"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Network Operations Liaison",
+   "label": "records external coordination outcomes in the Collaborative Decision Log"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "Meteorology Briefing Officer",
+   "label": "produces the Storm Cell Snapshot before the pre-tactical capacity review begins"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "Meteorology Briefing Officer",
+   "label": "briefs forecast confidence, timing risk, and expected operational impact in the Digital Briefing Room using data supplied through the Weather Ingest Gateway"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "Meteorology Briefing Officer",
+   "label": "states the trigger conditions that would justify moving from Normal Operations to Adverse Weather Mode"
+  },
+  {
+   "unit_id": "S087",
+   "type": "transition",
+   "from": "Normal Operations",
+   "to": "Adverse Weather Mode",
+   "trigger": "forecast uncertainty is material"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Airport Duty Manager",
+   "label": "confirms that airport-side constraints are reflected consistently across the Airport CDM Portal and the Common Situation Display"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Tower Supervisor",
+   "label": "confirms that the Tower Sequence Manager reflects the current runway configuration"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "maintains the Ramp Movement Board in a state that supports reliable departure metering"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Ground Handling Dispatcher",
+   "label": "confirms that handling resource assumptions are current in the Handling Resource Planner"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Ground Handling Dispatcher",
+   "label": "escalates material deviations through the Airport Duty Manager"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Deicing Coordinator",
+   "label": "provides pre-tactical and tactical advice when winter operations affect departure readiness, metering stability, or achievable throughput"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Military Airspace Liaison",
+   "label": "confirms military airspace availability assumptions"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Military Airspace Liaison",
+   "label": "alerts the Regional Flow Manager when civil routing options may be constrained"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "chairs decision checkpoints"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "authorizes changes to flow measures when the Capacity Assessment Module indicates that declared capacity no longer matches observed conditions"
+  },
+  {
+   "unit_id": "S095",
+   "type": "requirement",
+   "text": "The Departure Metering Service and Arrival Regulation Console are used only under the authority of the accountable flow roles, and their outputs must remain visible on the Common Situation Display."
+  },
+  {
+   "unit_id": "S096",
+   "type": "requirement",
+   "subject": "Emergency Response Coordinator",
+   "text": "Escalation to the Emergency Response Coordinator is required when a safety event, security event, or emergency response activity may affect airport acceptance, surface movement, or airspace availability."
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Data Governance Steward",
+   "label": "verifies that operational decisions, role acknowledgements, and exception handling are captured in the Audit Event Ledger with synchronized timestamps from the Time Synchronization Service"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "generates the demand forecast used by the Regional Flow Platform"
+  },
+  {
+   "unit_id": "S101",
+   "type": "flow",
+   "source": "Demand Prediction Service",
+   "target": "Regional Flow Platform",
+   "payload": "demand forecast"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Weather Ingest Gateway",
+   "label": "normalizes external and local meteorological feeds before they are used in operational capacity calculations"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "receives filed flight information through the Flight Data Exchange"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "compares it with the current operating schedule held by the Airline Interface Adapter"
+  },
+  {
+   "unit_id": "S103",
+   "type": "flow",
+   "source": "Flight Data Exchange",
+   "target": "Demand Prediction Service",
+   "payload": "filed flight information"
+  },
+  {
+   "unit_id": "S103",
+   "type": "flow",
+   "source": "Airline Interface Adapter",
+   "target": "Demand Prediction Service",
+   "payload": "current operating schedule"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Capacity Assessment Module",
+   "label": "combines demand projections with the Airport Capacity Plan to determine whether a published Airport Acceptance Rate remains feasible"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "Weather Ingest Gateway",
+   "label": "accepts aviation forecasts, radar-derived precipitation fields, lightning alerts, wind forecasts, ceiling and visibility forecasts, and runway condition weather inputs from approved sources"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Time Synchronization Service",
+   "label": "provides the reference clock used to compare forecast issue times with operational decision times"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Weather Ingest Gateway",
+   "label": "marks the feed as degraded rather than silently excluding it from the operational picture"
+  },
+  {
+   "unit_id": "S114",
+   "type": "flow",
+   "source": "Capacity Assessment Module",
+   "target": "North Runway Meter",
+   "payload": "runway-specific capacity values"
+  },
+  {
+   "unit_id": "S114",
+   "type": "flow",
+   "source": "Capacity Assessment Module",
+   "target": "South Runway Meter",
+   "payload": "runway-specific capacity values"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "uses the Common Situation Display to compare forecast demand, assessed capacity, and any active Ground Delay Program effects in one operational view"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Capacity Assessment Module",
+   "label": "flags the associated capacity values as provisional"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Alert Distribution Hub",
+   "label": "notifies the Regional Flow Manager, Tower Supervisor, and Airline Operations Coordinator that the capacity picture may change"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "retains the trace from incoming forecast product to capacity value"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Airline Operations Centre",
+   "label": "submits a Flight Intent Message through the Airline Interface Adapter using an authenticated system account managed by the Identity Access Service"
+  },
+  {
+   "unit_id": "S126",
+   "type": "flow",
+   "source": "Airline Operations Centre",
+   "target": "Airline Interface Adapter",
+   "payload": "Flight Intent Message"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Airline Interface Adapter",
+   "label": "validates message structure"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Airline Interface Adapter",
+   "label": "maps carrier codes to the Business Rules Registry"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Airline Interface Adapter",
+   "label": "forwards accepted intent data to the Flight Data Exchange"
+  },
+  {
+   "unit_id": "S128",
+   "type": "flow",
+   "source": "Airline Interface Adapter",
+   "target": "Flight Data Exchange",
+   "payload": "accepted intent data"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "Capacity Assessment Module",
+   "label": "uses the Storm Cell Snapshot to qualify capacity confidence during convective weather impacts"
+  },
+  {
+   "unit_id": "S133",
+   "type": "flow",
+   "source": "Meteorology Briefing Officer",
+   "target": "Capacity Assessment Module",
+   "payload": "Storm Cell Snapshot"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "converts accepted constraints into Calculated Takeoff Time values and Target Off Block Time guidance for affected flights"
+  },
+  {
+   "unit_id": "S135",
+   "type": "flow",
+   "source": "Slot Allocation Engine",
+   "target": "Airline Operations Centre",
+   "payload": "Calculated Takeoff Time"
+  },
+  {
+   "unit_id": "S135",
+   "type": "flow",
+   "source": "Slot Allocation Engine",
+   "target": "Airline Operations Centre",
+   "payload": "Target Off Block Time"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "confirms airline recovery priorities before the Slot Allocation Engine publishes a revised constraint set"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "publishes a revised constraint set"
+  },
+  {
+   "unit_id": "S137",
+   "type": "succession",
+   "before": "confirms airline recovery priorities before the Slot Allocation Engine publishes a revised constraint set",
+   "after": "publishes a revised constraint set"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Ground Handling Dispatcher",
+   "label": "sends the Crew Bus Delay Slip when crew transport lateness affects an aircraft turn"
+  },
+  {
+   "unit_id": "S140",
+   "type": "flow",
+   "source": "Ground Handling Dispatcher",
+   "payload": "Crew Bus Delay Slip"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "permits more frequent intent updates while retaining the previous values needed for audit and performance review"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Performance Analytics Warehouse",
+   "label": "compares submitted intents, issued constraints, actual off-block times, and achieved arrival outcomes to improve recovery playbooks"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "provides the shared operational workspace where airport participants maintain a common view of departure readiness, arrival constraints, surface conditions, and slot impacts"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Identity Access Service",
+   "label": "controlled by the Identity Access Service"
+  },
+  {
+   "unit_id": "S164",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "Cedarbell shall expose the current regional demand and constraint context to the shared workspace at each publication cycle without requiring manual re-entry."
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "expose the current regional demand and constraint context to the shared workspace at each publication cycle without requiring manual re-entry"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "Common Situation Display",
+   "label": "distinguishes values supplied by connected services, values confirmed by users, and values that have exceeded the configured freshness threshold"
+  },
+  {
+   "unit_id": "S166",
+   "type": "requirement",
+   "subject": "Airport CDM Portal",
+   "text": "When a milestone becomes stale, the Airport CDM Portal shall highlight the affected flight and notify the role accountable for the next update through the Alert Distribution Hub."
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "highlight the affected flight"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "notify the role accountable for the next update through the Alert Distribution Hub"
+  },
+  {
+   "unit_id": "S167",
+   "type": "requirement",
+   "text": "Each airport participant shall update a material change within two minutes of becoming aware of it during Normal Operations and within one minute during Adverse Weather Mode or Capacity Reduction State."
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "label": "update a material change within two minutes of becoming aware of it during Normal Operations and within one minute during Adverse Weather Mode or Capacity Reduction State"
+  },
+  {
+   "unit_id": "S167",
+   "type": "constraint",
+   "expression": "within two minutes of becoming aware of it during Normal Operations"
+  },
+  {
+   "unit_id": "S167",
+   "type": "constraint",
+   "expression": "within one minute during Adverse Weather Mode or Capacity Reduction State"
+  },
+  {
+   "unit_id": "S168",
+   "type": "requirement",
+   "text": "If the exact value is not yet known, the accountable participant shall enter a provisional value with an uncertainty flag rather than leaving the milestone unchanged."
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Collaborative Decision Log",
+   "label": "records who changed a value, when the change was made, whether the change was provisional or confirmed, and what operational decision relied on it"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Data Governance Steward",
+   "label": "defines the mandatory fields, permissible status values, retention rules, and data quality thresholds used by the Airport CDM Portal"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "System Support Engineer",
+   "label": "monitors portal availability, interface latency, user session faults, and synchronization status against the Time Synchronization Service"
+  },
+  {
+   "unit_id": "S172",
+   "type": "requirement",
+   "subject": "Airport CDM Portal",
+   "text": "During Contingency Fallback State, the Airport CDM Portal shall preserve the last synchronized milestone set and clearly mark any updates entered under degraded operating procedures."
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "preserve the last synchronized milestone set"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "clearly mark any updates entered under degraded operating procedures"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Surface Surveillance Adapter",
+   "label": "consolidates position updates from the East Apron Sensor and West Apron Sensor"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Surface Surveillance Adapter",
+   "label": "presents movement indications to the Airport CDM Portal"
+  },
+  {
+   "unit_id": "S179",
+   "type": "flow",
+   "source": "Surface Surveillance Adapter",
+   "target": "Airport CDM Portal",
+   "payload": "movement indications"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Airport Duty Manager",
+   "label": "uses the Runway Inspection Note to confirm that the duty desk has a current record of pavement status before endorsing any declared capacity change"
+  },
+  {
+   "unit_id": "S181",
+   "type": "flow",
+   "source": "Tower Supervisor",
+   "target": "Airport Duty Manager",
+   "payload": "Runway Inspection Note"
+  },
+  {
+   "unit_id": "S182",
+   "type": "requirement",
+   "subject": "Weather Ingest Gateway",
+   "text": "Orchard shall issue time-stamped weather condition updates for use in tower and airport duty coordination."
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Weather Ingest Gateway",
+   "label": "issue time-stamped weather condition updates for use in tower and airport duty coordination"
+  },
+  {
+   "unit_id": "S182",
+   "type": "flow",
+   "source": "Weather Ingest Gateway",
+   "payload": "time-stamped weather condition updates"
+  },
+  {
+   "unit_id": "S187",
+   "type": "requirement",
+   "subject": "Time Synchronization Service",
+   "text": "The Time Synchronization Service shall keep tower, duty desk, surveillance, and portal event times aligned so that later review can reconstruct the sequence of events."
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Time Synchronization Service",
+   "label": "keep tower, duty desk, surveillance, and portal event times aligned"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Alert Distribution Hub",
+   "label": "distributes approved duty coordination alerts to affected operational roles when a local condition changes runway availability, taxi routing, or apron access"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Identity Access Service",
+   "label": "restricts entry of duty desk confirmations to authorized airport operations staff"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Identity Access Service",
+   "label": "records each transaction in the Audit Event Ledger"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "Contingency Operations Console",
+   "label": "provides a degraded channel for recording tower and duty desk decisions until normal service is restored"
+  },
+  {
+   "unit_id": "S202",
+   "type": "requirement",
+   "subject": "Ramp Control Lead",
+   "text": "The Ramp Control Lead shall not release a pushback until the Tower Supervisor has confirmed that the movement can be integrated with the active ground route and runway plan."
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "not release a pushback until the Tower Supervisor has confirmed that the movement can be integrated with the active ground route and runway plan"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Tower Supervisor",
+   "label": "confirmed that the movement can be integrated with the active ground route and runway plan"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "sends the Stand Tow Request Form when a parked aircraft must be repositioned to release a stand, remove an apron blockage, or support a confirmed operating plan"
+  },
+  {
+   "unit_id": "S208",
+   "type": "flow",
+   "source": "Ramp Control Lead",
+   "payload": "Stand Tow Request Form"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Gate Conflict Detector",
+   "label": "alerts the Ramp Control Lead when a planned arrival, departure, or tow would create an overlapping occupancy condition at a stand or adjacent service lane"
+  },
+  {
+   "unit_id": "S214",
+   "type": "requirement",
+   "subject": "Airline Operations Coordinator",
+   "text": "Airline Operations Coordinator participation is required when a resequence would materially affect passenger boarding, connection protection, or aircraft rotation plans."
+  },
+  {
+   "unit_id": "S216",
+   "type": "requirement",
+   "subject": "Demand Prediction Service",
+   "text": "Marlinstone shall refresh stand demand forecasts when the Ramp Movement Board records a material change in planned off-block timing."
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "refresh stand demand forecasts when the Ramp Movement Board records a material change in planned off-block timing"
+  },
+  {
+   "unit_id": "S217",
+   "type": "flow",
+   "source": "Ramp Movement Board",
+   "target": "Tower Sequence Manager",
+   "payload": "current ramp intent"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "proposes regulated departure and arrival opportunities by matching demand from the Demand Prediction Service to constraints supplied by the Capacity Assessment Module"
+  },
+  {
+   "unit_id": "S225",
+   "type": "flow",
+   "source": "Demand Prediction Service",
+   "target": "Slot Allocation Engine",
+   "payload": "demand"
+  },
+  {
+   "unit_id": "S225",
+   "type": "flow",
+   "source": "Capacity Assessment Module",
+   "target": "Slot Allocation Engine",
+   "payload": "constraints"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "derives a Calculated Takeoff Time or arrival opportunity that preserves the declared capacity envelope before local preference is applied"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "administers the allocation run"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "reviews exceptions"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "confirms that proposed results are ready for publication through the Airport CDM Portal"
+  },
+  {
+   "unit_id": "S234",
+   "type": "requirement",
+   "subject": "Slot Allocation Engine",
+   "text": "The engine shall not improve one operator's position by imposing an excessive delay on another operator unless the rule basis is visible and logged."
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "uses the delay slip when requesting an exemption review for a crew connectivity constraint that is not already represented in the allocation data"
+  },
+  {
+   "unit_id": "S237",
+   "type": "flow",
+   "source": "Ground Handling Dispatcher",
+   "target": "Airline Operations Coordinator",
+   "payload": "Crew Bus Delay Slip"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Arrival Regulation Console",
+   "label": "presents proposed arrival opportunities with the capacity source, regulation start time, and expected delay for each affected flight"
+  },
+  {
+   "unit_id": "S241",
+   "type": "flow",
+   "source": "Arrival Regulation Console",
+   "payload": "proposed arrival opportunities"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Departure Metering Service",
+   "label": "presents proposed departure opportunities and associated Calculated Takeoff Time values for coordination with the Tower Sequence Manager"
+  },
+  {
+   "unit_id": "S242",
+   "type": "flow",
+   "source": "Departure Metering Service",
+   "target": "Tower Sequence Manager",
+   "payload": "proposed departure opportunities and associated Calculated Takeoff Time values"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "Contingency Operations Console",
+   "label": "preserves the last valid allocation"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "Contingency Operations Console",
+   "label": "supports manual amendments"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "Contingency Operations Console",
+   "label": "marks the resulting Slot Compliance State as provisional"
+  },
+  {
+   "unit_id": "S247",
+   "type": "transition",
+   "to": "Contingency Fallback State"
+  },
+  {
+   "unit_id": "S250",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "creates the initial Target Off Block Time proposal from current flight intent, stand readiness, turnaround progress, and applicable airport capacity constraints"
+  },
+  {
+   "unit_id": "S253",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "derives the Calculated Takeoff Time by combining runway metering constraints, departure fix loading, and applicable Ground Delay Program rules"
+  },
+  {
+   "unit_id": "S260",
+   "type": "requirement",
+   "subject": "Airline Operations Coordinator",
+   "text": "Saffron shall confirm any operator-requested Target Off Block Time revision in the Airport CDM Portal before the freeze horizon expires."
+  },
+  {
+   "unit_id": "S260",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "confirm any operator-requested Target Off Block Time revision in the Airport CDM Portal before the freeze horizon expires"
+  },
+  {
+   "unit_id": "S264",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "presents each proposed value with its confidence status, last update time, and the reason code assigned by the proposing function or authorized user"
+  },
+  {
+   "unit_id": "S265",
+   "type": "action",
+   "performer": "Common Situation Display",
+   "label": "shows the current agreed target set"
+  },
+  {
+   "unit_id": "S265",
+   "type": "flow",
+   "source": "Common Situation Display",
+   "payload": "current agreed target set"
+  },
+  {
+   "unit_id": "S267",
+   "type": "action",
+   "performer": "Collaborative Decision Log",
+   "label": "records each challenge, counterproposal, acceptance, rejection, and reason code associated with the Target Off Block Time and Calculated Takeoff Time"
+  },
+  {
+   "unit_id": "S268",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "locks the Target Off Block Time unless a rule-based exception or an authorized operational override is recorded"
+  },
+  {
+   "unit_id": "S271",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "stores the previous value, new value, responsible user or automated function, timestamp, authority basis, and applicable operating state for every target time change"
+  },
+  {
+   "unit_id": "S279",
+   "type": "action",
+   "performer": "Tower Sequence Manager",
+   "label": "builds a provisional order by runway, departure fix, aircraft wake category, and locally configured spacing rule"
+  },
+  {
+   "unit_id": "S293",
+   "type": "requirement",
+   "subject": "Airport CDM Portal",
+   "text": "Foxglove shall publish tower readiness changes to authenticated airline and handling users within the configured refresh interval."
+  },
+  {
+   "unit_id": "S293",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "publish tower readiness changes to authenticated airline and handling users within the configured refresh interval"
+  },
+  {
+   "unit_id": "S293",
+   "type": "flow",
+   "source": "Airport CDM Portal",
+   "payload": "tower readiness changes"
+  },
+  {
+   "unit_id": "S294",
+   "type": "action",
+   "performer": "Deicing Coordinator",
+   "label": "sends the Deicing Pad Queue Card when pad demand, treatment progress, or release timing changes"
+  },
+  {
+   "unit_id": "S294",
+   "type": "flow",
+   "source": "Deicing Coordinator",
+   "payload": "Deicing Pad Queue Card"
+  },
+  {
+   "unit_id": "S304",
+   "type": "action",
+   "performer": "Handling Resource Planner",
+   "label": "uses the Stand Tow Request Form to reserve towing capacity and to test whether the requested movement can be completed before the proposed Target Off Block Time"
+  },
+  {
+   "unit_id": "S304",
+   "type": "flow",
+   "source": "Ramp Control Lead",
+   "target": "Handling Resource Planner",
+   "payload": "Stand Tow Request Form"
+  },
+  {
+   "unit_id": "S312",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "presents the resource-driven feasibility status to the Airline Operations Coordinator and the Aircraft Operator Representative"
+  },
+  {
+   "unit_id": "S312",
+   "type": "flow",
+   "source": "Airport CDM Portal",
+   "target": "Airline Operations Coordinator",
+   "payload": "resource-driven feasibility status"
+  },
+  {
+   "unit_id": "S312",
+   "type": "flow",
+   "source": "Airport CDM Portal",
+   "target": "Aircraft Operator Representative",
+   "payload": "resource-driven feasibility status"
+  },
+  {
+   "unit_id": "S313",
+   "type": "requirement",
+   "subject": "Tower Supervisor",
+   "text": "Brindle must confirm that any revised off-block sequence remains compatible with the Departure Metering Service before the change is released to the airport community."
+  },
+  {
+   "unit_id": "S313",
+   "type": "action",
+   "performer": "Tower Supervisor",
+   "label": "confirm that any revised off-block sequence remains compatible with the Departure Metering Service before the change is released to the airport community"
+  },
+  {
+   "unit_id": "S325",
+   "type": "action",
+   "performer": "Military Airspace Liaison",
+   "label": "sends the Temporary Restriction Notice after confirming the activation window, affected volume, controlling authority, and any published contingency conditions"
+  },
+  {
+   "unit_id": "S325",
+   "type": "action",
+   "performer": "Military Airspace Liaison",
+   "label": "confirming the activation window, affected volume, controlling authority, and any published contingency conditions"
+  },
+  {
+   "unit_id": "S325",
+   "type": "flow",
+   "source": "Military Airspace Liaison",
+   "payload": "Temporary Restriction Notice"
+  },
+  {
+   "unit_id": "S325",
+   "type": "succession",
+   "before": "confirming the activation window, affected volume, controlling authority, and any published contingency conditions",
+   "after": "sends the Temporary Restriction Notice after confirming the activation window, affected volume, controlling authority, and any published contingency conditions"
+  },
+  {
+   "unit_id": "S334",
+   "type": "requirement",
+   "subject": "Tower Sequence Manager",
+   "text": "Ironleaf must refresh affected departure sequence advisories when a restriction changes the usable departure routes or expected release spacing."
+  },
+  {
+   "unit_id": "S334",
+   "type": "action",
+   "performer": "Tower Sequence Manager",
+   "label": "refresh affected departure sequence advisories when a restriction changes the usable departure routes or expected release spacing"
+  },
+  {
+   "unit_id": "S337",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "displays the active restriction status, expected operational effect, and any related coordination notes on the Common Situation Display"
+  },
+  {
+   "unit_id": "S337",
+   "type": "flow",
+   "source": "Airport CDM Portal",
+   "target": "Common Situation Display",
+   "payload": "active restriction status, expected operational effect, and any related coordination notes"
+  },
+  {
+   "unit_id": "S355",
+   "type": "requirement",
+   "subject": "Slot Allocation Engine",
+   "text": "Blueharbor shall adjust allocated departure times when metering rules require additional stand absorption to preserve the planned runway sequence."
+  },
+  {
+   "unit_id": "S355",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "adjust allocated departure times when metering rules require additional stand absorption to preserve the planned runway sequence"
+  },
+  {
+   "unit_id": "S356",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "records the agreed pushback window rationale in the coordination notes before the plan is released to operational users"
+  },
+  {
+   "unit_id": "S361",
+   "type": "action",
+   "performer": "Ramp Movement Board",
+   "label": "produces the Fuel Truck Hold Advice when metering decisions require servicing activity to remain clear of an aircraft that is being held at stand"
+  },
+  {
+   "unit_id": "S371",
+   "type": "state",
+   "owner": "Regional Flow Platform",
+   "label": "winter operating mode"
+  },
+  {
+   "unit_id": "S371",
+   "type": "transition",
+   "to": "winter operating mode",
+   "trigger": "freezing precipitation, contamination reports, or low surface temperature forecasts make untreated ground movement unreliable"
+  },
+  {
+   "unit_id": "S378",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "uses the queue card to verify pad entry order before authorizing a movement from the staging area"
+  },
+  {
+   "unit_id": "S378",
+   "type": "flow",
+   "source": "Deicing Coordinator",
+   "target": "Ramp Control Lead",
+   "payload": "Deicing Pad Queue Card"
+  },
+  {
+   "unit_id": "S386",
+   "type": "action",
+   "performer": "Gate Conflict Detector",
+   "label": "produces the Gate Reopening Memo when a stand becomes usable after snow clearance and the gate occupancy constraint has been removed"
+  },
+  {
+   "unit_id": "S387",
+   "type": "requirement",
+   "subject": "Ramp Control Lead",
+   "text": "Quartzline must coordinate every pad release with the Tower Supervisor before the aircraft leaves the treated area."
+  },
+  {
+   "unit_id": "S387",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "coordinate every pad release with the Tower Supervisor before the aircraft leaves the treated area"
+  },
+  {
+   "unit_id": "S393",
+   "type": "transition",
+   "from": "Capacity Reduction State",
+   "to": "Recovery Phase",
+   "trigger": "pad backlog, runway condition, and surface flow indicators are stable"
+  },
+  {
+   "unit_id": "S399",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "uses the restriction notice to bound the arrival regulation timeline before committing new landing-rate values in the Arrival Regulation Console"
+  },
+  {
+   "unit_id": "S399",
+   "type": "flow",
+   "source": "Military Airspace Liaison",
+   "target": "Regional Flow Manager",
+   "payload": "Temporary Restriction Notice"
+  },
+  {
+   "unit_id": "S405",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "presents the resulting arrival plan to Aircraft Operator Representative users"
+  },
+  {
+   "unit_id": "S405",
+   "type": "flow",
+   "source": "Airport CDM Portal",
+   "target": "Aircraft Operator Representative",
+   "payload": "arrival plan"
+  },
+  {
+   "unit_id": "S420",
+   "type": "action",
+   "performer": "Integrated Tactical Management Position",
+   "label": "presents a combined tactical view"
+  },
+  {
+   "unit_id": "S420",
+   "type": "flow",
+   "source": "Integrated Tactical Management Position",
+   "target": "Regional Flow Manager",
+   "payload": "combined tactical view"
+  },
+  {
+   "unit_id": "S426",
+   "type": "action",
+   "performer": "Departure Metering Service",
+   "label": "sends revised departure metering advisories when runway demand exceeds the configured queue threshold"
+  },
+  {
+   "unit_id": "S426",
+   "type": "flow",
+   "source": "Departure Metering Service",
+   "payload": "revised departure metering advisories"
+  },
+  {
+   "unit_id": "S427",
+   "type": "requirement",
+   "subject": "Ramp Movement Board",
+   "text": "Skylark must refresh the apron movement layer within five seconds of each validated surface event."
+  },
+  {
+   "unit_id": "S427",
+   "type": "action",
+   "performer": "Ramp Movement Board",
+   "label": "refresh the apron movement layer within five seconds of each validated surface event"
+  },
+  {
+   "unit_id": "S427",
+   "type": "constraint",
+   "subject": "Ramp Movement Board",
+   "expression": "within five seconds of each validated surface event"
+  },
+  {
+   "unit_id": "S428",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "produces the Pushback Window Token when the agreed departure window is frozen for tactical execution"
+  },
+  {
+   "unit_id": "S429",
+   "type": "flow",
+   "source": "Airport CDM Portal",
+   "target": "Integrated Tactical Management Position",
+   "payload": "agreed Target Off Block Time values and stakeholder remarks"
+  },
+  {
+   "unit_id": "S445",
+   "type": "flow",
+   "source": "Surface Surveillance Adapter",
+   "target": "Ramp Movement Board",
+   "payload": "current movement area occupancy and equipment status indicators"
+  },
+  {
+   "unit_id": "S445",
+   "type": "flow",
+   "source": "Surface Surveillance Adapter",
+   "target": "Tower Sequence Manager",
+   "payload": "current movement area occupancy and equipment status indicators"
+  },
+  {
+   "unit_id": "S450",
+   "type": "action",
+   "performer": "Tower Sequence Manager",
+   "label": "uses the hold advice to prevent a departure from being sequenced ahead of a fueling constraint that is still active"
+  },
+  {
+   "unit_id": "S450",
+   "type": "flow",
+   "source": "Ramp Movement Board",
+   "target": "Tower Sequence Manager",
+   "payload": "Fuel Truck Hold Advice"
+  },
+  {
+   "unit_id": "S452",
+   "type": "action",
+   "performer": "Airline Interface Adapter",
+   "label": "produces the Late Baggage Tag List when baggage reconciliation data indicates that departure readiness may be overstated"
+  },
+  {
+   "unit_id": "S461",
+   "type": "requirement",
+   "subject": "Alert Distribution Hub",
+   "text": "Lantern must distribute surface equipment and apron congestion advisories to subscribed operational roles within the latency target defined in the Business Rules Registry."
+  },
+  {
+   "unit_id": "S461",
+   "type": "action",
+   "performer": "Alert Distribution Hub",
+   "label": "distribute surface equipment and apron congestion advisories to subscribed operational roles within the latency target defined in the Business Rules Registry"
+  },
+  {
+   "unit_id": "S472",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "uses the Gate Reopening Memo to confirm when a previously unavailable gate can be planned again for arrival handling, boarding, and connection recovery"
+  },
+  {
+   "unit_id": "S472",
+   "type": "flow",
+   "source": "Gate Conflict Detector",
+   "target": "Airline Operations Coordinator",
+   "payload": "Gate Reopening Memo"
+  },
+  {
+   "unit_id": "S484",
+   "type": "action",
+   "performer": "Sector Load Monitor",
+   "label": "produces the Departure Fix Load Sheet when projected recovered departures require a consolidated view of demand by departure fix"
+  },
+  {
+   "unit_id": "S496",
+   "type": "action",
+   "performer": "Airport Duty Manager",
+   "label": "sends the Medical Diversion Notice when a medical priority aircraft requires airport-level coordination before landing"
+  },
+  {
+   "unit_id": "S496",
+   "type": "flow",
+   "source": "Airport Duty Manager",
+   "payload": "Medical Diversion Notice"
+  },
+  {
+   "unit_id": "S503",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "uses the window token to preserve the agreed pushback opportunity when diversion recovery requires a protected departure movement"
+  },
+  {
+   "unit_id": "S503",
+   "type": "flow",
+   "source": "Slot Allocation Engine",
+   "target": "Airport CDM Portal",
+   "payload": "Pushback Window Token"
+  },
+  {
+   "unit_id": "S519",
+   "type": "action",
+   "performer": "Ground Handling Dispatcher",
+   "label": "uses the tag list to confirm which flights require baggage reconciliation before off-block readiness is updated"
+  },
+  {
+   "unit_id": "S519",
+   "type": "flow",
+   "source": "Airline Interface Adapter",
+   "target": "Ground Handling Dispatcher",
+   "payload": "Late Baggage Tag List"
+  },
+  {
+   "unit_id": "S523",
+   "type": "action",
+   "performer": "Ground Handling Dispatcher",
+   "label": "sends the Towbar Shortage Report when towbar availability cannot support the agreed pushback sequence"
+  },
+  {
+   "unit_id": "S523",
+   "type": "flow",
+   "source": "Ground Handling Dispatcher",
+   "payload": "Towbar Shortage Report"
+  },
+  {
+   "unit_id": "S535",
+   "type": "requirement",
+   "subject": "Arrival Regulation Console",
+   "text": "Nightjar shall suppress handler-exception annotations for arriving flights unless the exception changes the Airport Acceptance Rate or a regulated arrival sequence."
+  },
+  {
+   "unit_id": "S535",
+   "type": "action",
+   "performer": "Arrival Regulation Console",
+   "label": "suppress handler-exception annotations for arriving flights unless the exception changes the Airport Acceptance Rate or a regulated arrival sequence"
+  },
+  {
+   "unit_id": "S547",
+   "type": "action",
+   "performer": "Handling Resource Planner",
+   "label": "produces the Remote Stand Shuttle Count at regular operating intervals to represent available passenger transfer capacity for remote stand activity"
+  },
+  {
+   "unit_id": "S556",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "uses the Towbar Shortage Report to determine whether remote stand aircraft can be repositioned without creating secondary apron congestion"
+  },
+  {
+   "unit_id": "S556",
+   "type": "flow",
+   "source": "Ground Handling Dispatcher",
+   "target": "Ramp Control Lead",
+   "payload": "Towbar Shortage Report"
+  },
+  {
+   "unit_id": "S568",
+   "type": "action",
+   "performer": "Airport Duty Manager",
+   "label": "produces the Customs Hold Release Note when border processing confirms that a held arrival may proceed to normal turnaround handling"
+  },
+  {
+   "unit_id": "S576",
+   "type": "action",
+   "performer": "Arrival Regulation Console",
+   "label": "uses the Medical Diversion Notice to protect arrival priority, stand assignment timing, and downstream border coordination in the active arrival plan"
+  },
+  {
+   "unit_id": "S576",
+   "type": "flow",
+   "source": "Airport Duty Manager",
+   "target": "Arrival Regulation Console",
+   "payload": "Medical Diversion Notice"
+  },
+  {
+   "unit_id": "S578",
+   "type": "action",
+   "performer": "East Apron Sensor",
+   "label": "reports stand occupancy transitions, pushback lane blockage durations, and sensor confidence values at a synchronized event time"
+  },
+  {
+   "unit_id": "S578",
+   "type": "flow",
+   "source": "East Apron Sensor",
+   "payload": "stand occupancy transitions, pushback lane blockage durations, and sensor confidence values"
+  },
+  {
+   "unit_id": "S585",
+   "type": "requirement",
+   "subject": "Time Synchronization Service",
+   "text": "The Time Synchronization Service is required because customs status events and apron sensor events must align with Calculated Takeoff Time and Target Off Block Time decisions."
+  },
+  {
+   "unit_id": "S598",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "uses the load sheet to confirm whether a departure fix constraint should be represented as an airport departure measure"
+  },
+  {
+   "unit_id": "S598",
+   "type": "flow",
+   "source": "Sector Load Monitor",
+   "target": "Regional Flow Manager",
+   "payload": "Departure Fix Load Sheet"
+  },
+  {
+   "unit_id": "S606",
+   "type": "action",
+   "performer": "Surface Surveillance Adapter",
+   "label": "produces the Runway Lighting Outage Card when monitored runway lighting status affects a declared operating configuration"
+  },
+  {
+   "unit_id": "S614",
+   "type": "action",
+   "performer": "Alert Distribution Hub",
+   "label": "sends notifications to Regional Flow Manager, Tower Supervisor, Ramp Control Lead, Slot Coordinator, and Network Operations Liaison when a measure changes operational behavior"
+  },
+  {
+   "unit_id": "S614",
+   "type": "flow",
+   "source": "Alert Distribution Hub",
+   "target": "Regional Flow Manager",
+   "payload": "notifications"
+  },
+  {
+   "unit_id": "S614",
+   "type": "flow",
+   "source": "Alert Distribution Hub",
+   "target": "Tower Supervisor",
+   "payload": "notifications"
+  },
+  {
+   "unit_id": "S614",
+   "type": "flow",
+   "source": "Alert Distribution Hub",
+   "target": "Ramp Control Lead",
+   "payload": "notifications"
+  },
+  {
+   "unit_id": "S614",
+   "type": "flow",
+   "source": "Alert Distribution Hub",
+   "target": "Slot Coordinator",
+   "payload": "notifications"
+  },
+  {
+   "unit_id": "S614",
+   "type": "flow",
+   "source": "Alert Distribution Hub",
+   "target": "Network Operations Liaison",
+   "payload": "notifications"
+  },
+  {
+   "unit_id": "S620",
+   "type": "action",
+   "performer": "Aircraft Operator Representative",
+   "label": "sends the Crew Duty Extension Log when an approved company process extends duty availability for a specific rotation"
+  },
+  {
+   "unit_id": "S620",
+   "type": "flow",
+   "source": "Aircraft Operator Representative",
+   "payload": "Crew Duty Extension Log"
+  },
+  {
+   "unit_id": "S647",
+   "type": "action",
+   "performer": "Ramp Control Lead",
+   "label": "sends the Apron Sweep Completion Note after the responsible sweep team confirms that the assigned apron area is clean, safe, and free of observed foreign object debris"
+  },
+  {
+   "unit_id": "S647",
+   "type": "flow",
+   "source": "Ramp Control Lead",
+   "payload": "Apron Sweep Completion Note"
+  },
+  {
+   "unit_id": "S648",
+   "type": "action",
+   "performer": "Airport CDM Portal",
+   "label": "uses the shuttle count to confirm that remote-stand passenger transfer demand is consistent with stand readiness timing"
+  },
+  {
+   "unit_id": "S648",
+   "type": "flow",
+   "source": "Handling Resource Planner",
+   "target": "Airport CDM Portal",
+   "payload": "Remote Stand Shuttle Count"
+  },
+  {
+   "unit_id": "S660",
+   "type": "transition",
+   "to": "Capacity Reduction State",
+   "trigger": "repeated apron contamination or stand closures materially reduce usable gate capacity"
+  },
+  {
+   "unit_id": "S663",
+   "type": "state",
+   "label": "inspection-required state"
+  },
+  {
+   "unit_id": "S663",
+   "type": "transition",
+   "to": "inspection-required state",
+   "trigger": "readiness validity window expires before movement begins"
+  },
+  {
+   "unit_id": "S672",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "sends the Slot Swap Permission Email only after the governance checks have been completed and recorded"
+  },
+  {
+   "unit_id": "S672",
+   "type": "flow",
+   "source": "Slot Coordinator",
+   "payload": "Slot Swap Permission Email"
+  },
+  {
+   "unit_id": "S678",
+   "type": "action",
+   "performer": "Airport Duty Manager",
+   "label": "uses the Apron Sweep Completion Note to confirm that apron availability constraints do not invalidate an approved substitution"
+  },
+  {
+   "unit_id": "S678",
+   "type": "flow",
+   "source": "Ramp Control Lead",
+   "target": "Airport Duty Manager",
+   "payload": "Apron Sweep Completion Note"
+  },
+  {
+   "unit_id": "S679",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "uses the release note to confirm that a candidate substitution is eligible for customs release before requesting a slot swap"
+  },
+  {
+   "unit_id": "S679",
+   "type": "flow",
+   "source": "Airport Duty Manager",
+   "target": "Airline Operations Coordinator",
+   "payload": "Customs Hold Release Note"
+  },
+  {
+   "unit_id": "S693",
+   "type": "action",
+   "performer": "Tower Supervisor",
+   "label": "uses the Runway Lighting Outage Card to confirm which runway lighting elements are unavailable before approving the operational status shown in the Tower Sequence Manager"
+  },
+  {
+   "unit_id": "S693",
+   "type": "flow",
+   "source": "Surface Surveillance Adapter",
+   "target": "Tower Supervisor",
+   "payload": "Runway Lighting Outage Card"
+  },
+  {
+   "unit_id": "S726",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "uses the Crew Duty Extension Log to check whether manually issued slot times remain operationally achievable"
+  },
+  {
+   "unit_id": "S726",
+   "type": "flow",
+   "source": "Aircraft Operator Representative",
+   "target": "Slot Coordinator",
+   "payload": "Crew Duty Extension Log"
+  },
+  {
+   "unit_id": "S728",
+   "type": "requirement",
+   "subject": "Departure Metering Service",
+   "text": "The Departure Metering Service may remain in monitoring mode while manual slot control is active, but it must not automatically overwrite issued times."
+  },
+  {
+   "unit_id": "S728",
+   "type": "state",
+   "owner": "Departure Metering Service",
+   "label": "monitoring mode"
+  },
+  {
+   "unit_id": "S735",
+   "type": "requirement",
+   "text": "Transition out of the Contingency Fallback State requires stable service performance, verified data consistency, successful user access, and agreement from the operational leads affected by the outage."
+  },
+  {
+   "unit_id": "S740",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "sends the Passenger Misconnect Count"
+  },
+  {
+   "unit_id": "S740",
+   "type": "flow",
+   "source": "Airline Operations Coordinator",
+   "payload": "Passenger Misconnect Count"
+  },
+  {
+   "unit_id": "S764",
+   "type": "requirement",
+   "text": "Each named operational user shall authenticate with an individually assigned identity before accessing the Airport CDM Portal, Digital Briefing Room, or any operational console."
+  },
+  {
+   "unit_id": "S767",
+   "type": "requirement",
+   "text": "Role profiles shall grant the minimum access needed to view, propose, approve, or administer operational data within the Regional Flow Platform."
+  },
+  {
+   "unit_id": "S772",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer may maintain infrastructure components and investigate technical faults, but operational approval privileges shall remain separated from technical administration privileges."
+  },
+  {
+   "unit_id": "S774",
+   "type": "requirement",
+   "text": "Operational segregation shall prevent a single user from creating, approving, and technically concealing a material change to a Ground Delay Program, Airport Acceptance Rate, or Tactical Regulation Proposal."
+  },
+  {
+   "unit_id": "S775",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "Where dual control is required, the Regional Flow Platform shall record the initiating user, the approving user, the affected operational object, and the effective time of the decision."
+  },
+  {
+   "unit_id": "S775",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "record the initiating user, the approving user, the affected operational object, and the effective time of the decision"
+  },
+  {
+   "unit_id": "S776",
+   "type": "requirement",
+   "subject": "Performance Analytics Warehouse",
+   "text": "Access to the Performance Analytics Warehouse shall be restricted to authorized analytical roles and shall not allow retrospective alteration of operational records held in the Audit Event Ledger."
+  },
+  {
+   "unit_id": "S777",
+   "type": "requirement",
+   "subject": "Audit Event Ledger",
+   "text": "The Audit Event Ledger shall capture successful and failed authentication attempts, role changes, privilege elevations, operational approvals, configuration changes, data exports, and emergency access activations."
+  },
+  {
+   "unit_id": "S777",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "capture successful and failed authentication attempts, role changes, privilege elevations, operational approvals, configuration changes, data exports, and emergency access activations"
+  },
+  {
+   "unit_id": "S778",
+   "type": "requirement",
+   "text": "All audit records shall use time derived from the Time Synchronization Service so that investigations can reconstruct event order across the Airport CDM Portal, Slot Allocation Engine, and Alert Distribution Hub."
+  },
+  {
+   "unit_id": "S779",
+   "type": "requirement",
+   "text": "Audit records shall be protected against ordinary user modification and retained for a period agreed by the airport operator, regional authority, and participating aircraft operators."
+  },
+  {
+   "unit_id": "S780",
+   "type": "requirement",
+   "text": "Security monitoring shall alert the System Support Engineer and Data Governance Steward when unusual access patterns indicate possible credential compromise or inappropriate privilege use."
+  },
+  {
+   "unit_id": "S781",
+   "type": "requirement",
+   "subject": "Identity Access Service",
+   "text": "The Identity Access Service shall support rapid suspension of accounts when a user changes role, leaves an organization, or becomes subject to an operational integrity concern."
+  },
+  {
+   "unit_id": "S781",
+   "type": "action",
+   "performer": "Identity Access Service",
+   "label": "support rapid suspension of accounts when a user changes role, leaves an organization, or becomes subject to an operational integrity concern"
+  },
+  {
+   "unit_id": "S782",
+   "type": "requirement",
+   "text": "Temporary access shall have a defined sponsor, purpose, role scope, and expiry time, and shall be reviewed after the operational need has ended."
+  },
+  {
+   "unit_id": "S783",
+   "type": "requirement",
+   "subject": "Contingency Operations Console",
+   "text": "Silverpine shall accept emergency access activations only after the Identity Access Service records the authorizing incident reference and expiry time."
+  },
+  {
+   "unit_id": "S783",
+   "type": "action",
+   "performer": "Contingency Operations Console",
+   "label": "accept emergency access activations only after the Identity Access Service records the authorizing incident reference and expiry time"
+  },
+  {
+   "unit_id": "S783",
+   "type": "action",
+   "performer": "Identity Access Service",
+   "label": "records the authorizing incident reference and expiry time"
+  },
+  {
+   "unit_id": "S783",
+   "type": "succession",
+   "before": "records the authorizing incident reference and expiry time",
+   "after": "accept emergency access activations only after the Identity Access Service records the authorizing incident reference and expiry time"
+  },
+  {
+   "unit_id": "S785",
+   "type": "requirement",
+   "text": "Use of emergency access shall generate prominent audit events and shall require post-event review by the Data Governance Steward and the responsible operational authority."
+  },
+  {
+   "unit_id": "S786",
+   "type": "requirement",
+   "text": "During Contingency Fallback State, access control shall continue to enforce role separation even when some integrations are unavailable and manual coordination becomes necessary."
+  },
+  {
+   "unit_id": "S787",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "When normal connectivity is restored, the Regional Flow Platform shall reconcile contingency actions with the Collaborative Decision Log so that accountability is preserved across the full incident timeline."
+  },
+  {
+   "unit_id": "S787",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "reconcile contingency actions with the Collaborative Decision Log"
+  },
+  {
+   "unit_id": "S788",
+   "type": "requirement",
+   "text": "After connectivity is restored, audit processing shall treat reconciled contingency actions as part of the same operational record as actions taken during Normal Operations."
+  },
+  {
+   "unit_id": "S789",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "The Regional Flow Platform shall record slot compliance events in the Audit Event Ledger using the operating date, flight identifier, airport, runway direction, and applicable regulation reference."
+  },
+  {
+   "unit_id": "S789",
+   "type": "action",
+   "performer": "Regional Flow Platform",
+   "label": "record slot compliance events in the Audit Event Ledger using the operating date, flight identifier, airport, runway direction, and applicable regulation reference"
+  },
+  {
+   "unit_id": "S790",
+   "type": "requirement",
+   "text": "Each compliance assessment shall compare the Calculated Takeoff Time, the Target Off Block Time, actual off-block time, and actual takeoff time against the tolerance defined in the Business Rules Registry."
+  },
+  {
+   "unit_id": "S791",
+   "type": "requirement",
+   "subject": "Slot Compliance State",
+   "text": "The Slot Compliance State shall indicate whether a flight was compliant, early, late, exempted, substituted, cancelled, or pending review at the end of the traffic period."
+  },
+  {
+   "unit_id": "S792",
+   "type": "requirement",
+   "subject": "Audit Event Ledger",
+   "text": "The Audit Event Ledger shall preserve the time source applied by the Time Synchronization Service so that later review can distinguish operational delay from data latency."
+  },
+  {
+   "unit_id": "S792",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "preserve the time source applied by the Time Synchronization Service"
+  },
+  {
+   "unit_id": "S793",
+   "type": "requirement",
+   "subject": "Airport CDM Portal",
+   "text": "User decisions entered through the Airport CDM Portal shall be linked to the authenticated role provided by the Identity Access Service."
+  },
+  {
+   "unit_id": "S794",
+   "type": "requirement",
+   "subject": "Collaborative Decision Log",
+   "text": "The Collaborative Decision Log shall retain the stated reason, decision time, affected flight, and visible operational context for each material change to a slot or sequence."
+  },
+  {
+   "unit_id": "S794",
+   "type": "action",
+   "performer": "Collaborative Decision Log",
+   "label": "retain the stated reason, decision time, affected flight, and visible operational context for each material change to a slot or sequence"
+  },
+  {
+   "unit_id": "S795",
+   "type": "action",
+   "performer": "Airline Operations Coordinator",
+   "label": "uses the permission email to justify an approved slot substitution during post-operations review"
+  },
+  {
+   "unit_id": "S795",
+   "type": "flow",
+   "source": "Slot Coordinator",
+   "target": "Airline Operations Coordinator",
+   "payload": "Slot Swap Permission Email"
+  },
+  {
+   "unit_id": "S796",
+   "type": "requirement",
+   "text": "Substitution records shall show the original flight, replacement flight, assigned Calculated Takeoff Time, acceptance status, and any subsequent cancellation or reversion."
+  },
+  {
+   "unit_id": "S797",
+   "type": "requirement",
+   "text": "When an Aircraft Operator Representative proposes a substitution, the audit trail shall capture whether the change preserved the constraints of the active Ground Delay Program."
+  },
+  {
+   "unit_id": "S798",
+   "type": "requirement",
+   "subject": "Slot Coordinator",
+   "text": "The Slot Coordinator shall review substitution activity after operations to confirm that priority rules were applied consistently across participating operators."
+  },
+  {
+   "unit_id": "S798",
+   "type": "action",
+   "performer": "Slot Coordinator",
+   "label": "review substitution activity after operations to confirm that priority rules were applied consistently across participating operators"
+  },
+  {
+   "unit_id": "S799",
+   "type": "requirement",
+   "text": "Late operational changes shall be distinguished from planned updates by comparing the change timestamp with the freeze horizon held in the Business Rules Registry."
+  },
+  {
+   "unit_id": "S800",
+   "type": "requirement",
+   "text": "Changes made inside the freeze horizon shall require a reason code and shall be visible to the Regional Flow Manager during post-operations review."
+  },
+  {
+   "unit_id": "S801",
+   "type": "requirement",
+   "text": "The Tower Sequence Manager and Ramp Movement Board shall provide actual movement milestones that support independent verification of slot performance."
+  },
+  {
+   "unit_id": "S801",
+   "type": "action",
+   "performer": "Tower Sequence Manager",
+   "label": "provide actual movement milestones that support independent verification of slot performance"
+  },
+  {
+   "unit_id": "S801",
+   "type": "action",
+   "performer": "Ramp Movement Board",
+   "label": "provide actual movement milestones that support independent verification of slot performance"
+  },
+  {
+   "unit_id": "S802",
+   "type": "requirement",
+   "subject": "Surface Surveillance Adapter",
+   "text": "Surface movement evidence from the Surface Surveillance Adapter shall be retained long enough to support dispute resolution and regulatory audit requests."
+  },
+  {
+   "unit_id": "S803",
+   "type": "requirement",
+   "subject": "Capacity Assessment Module",
+   "text": "Capacity changes made through the Capacity Assessment Module shall be correlated with the active Airport Capacity Plan and Airport Acceptance Rate used at the time of allocation."
+  },
+  {
+   "unit_id": "S804",
+   "type": "requirement",
+   "subject": "Performance Analytics Warehouse",
+   "text": "The Performance Analytics Warehouse shall aggregate compliance outcomes by carrier, route group, regulation, airport operating configuration, and time band."
+  },
+  {
+   "unit_id": "S804",
+   "type": "action",
+   "performer": "Performance Analytics Warehouse",
+   "label": "aggregate compliance outcomes by carrier, route group, regulation, airport operating configuration, and time band"
+  },
+  {
+   "unit_id": "S805",
+   "type": "requirement",
+   "text": "Aggregated metrics shall support review of systemic lateness without exposing commercially sensitive detail beyond authorized roles."
+  },
+  {
+   "unit_id": "S806",
+   "type": "requirement",
+   "subject": "Data Governance Steward",
+   "text": "The Data Governance Steward shall verify that audit fields required for slot performance reporting remain complete, immutable, and traceable to approved data definitions."
+  },
+  {
+   "unit_id": "S806",
+   "type": "action",
+   "performer": "Data Governance Steward",
+   "label": "verify that audit fields required for slot performance reporting remain complete, immutable, and traceable to approved data definitions"
+  },
+  {
+   "unit_id": "S807",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall investigate technical gaps when audit sequences show missing events, duplicate updates, or inconsistent timestamps."
+  },
+  {
+   "unit_id": "S807",
+   "type": "action",
+   "performer": "System Support Engineer",
+   "label": "investigate technical gaps when audit sequences show missing events, duplicate updates, or inconsistent timestamps"
+  },
+  {
+   "unit_id": "S808",
+   "type": "requirement",
+   "subject": "Regional Flow Manager",
+   "text": "The Regional Flow Manager shall use the Post Operations Report to identify whether noncompliance resulted from operator choice, airport constraint, airspace constraint, weather impact, or system issue."
+  },
+  {
+   "unit_id": "S808",
+   "type": "action",
+   "performer": "Regional Flow Manager",
+   "label": "use the Post Operations Report to identify whether noncompliance resulted from operator choice, airport constraint, airspace constraint, weather impact, or system issue"
+  },
+  {
+   "unit_id": "S809",
+   "type": "requirement",
+   "subject": "Airport Duty Manager",
+   "text": "The Airport Duty Manager shall review late airport-driven changes that affected multiple flights and shall record whether the operational justification was valid."
+  },
+  {
+   "unit_id": "S810",
+   "type": "requirement",
+   "text": "Findings from the review shall feed adjustments to tolerance values, reason code definitions, and training material, subject to change control."
+  },
+  {
+   "unit_id": "S811",
+   "type": "requirement",
+   "text": "All audit outputs shall be retained according to the approved records schedule and shall remain searchable for compliance investigations, performance meetings, and lessons-learned activity."
+  },
+  {
+   "unit_id": "S812",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "Data governance for the Regional Flow Platform shall assign accountable owners to each operational data domain and shall make those assignments visible in the Airport CDM Portal."
+  },
+  {
+   "unit_id": "S813",
+   "type": "requirement",
+   "subject": "Data Governance Steward",
+   "text": "The Data Governance Steward shall maintain the data ownership register and shall coordinate updates through the Business Rules Registry."
+  },
+  {
+   "unit_id": "S814",
+   "type": "requirement",
+   "subject": "Regional Flow Manager",
+   "text": "The Regional Flow Manager shall own flow management policy data, including Ground Delay Program parameters and Tactical Regulation Proposal status values."
+  },
+  {
+   "unit_id": "S815",
+   "type": "requirement",
+   "subject": "Slot Coordinator",
+   "text": "The Slot Coordinator shall own slot allocation reference data, including Calculated Takeoff Time tolerances and Slot Compliance State definitions."
+  },
+  {
+   "unit_id": "S816",
+   "type": "requirement",
+   "subject": "Airport Duty Manager",
+   "text": "The Airport Duty Manager shall own airport capacity declarations, including Airport Capacity Plan records and Airport Acceptance Rate values."
+  },
+  {
+   "unit_id": "S817",
+   "type": "requirement",
+   "subject": "Tower Supervisor",
+   "text": "The Tower Supervisor shall own tower sequence status data maintained for the Tower Sequence Manager."
+  },
+  {
+   "unit_id": "S818",
+   "type": "requirement",
+   "subject": "Ramp Control Lead",
+   "text": "The Ramp Control Lead shall own ramp movement status data maintained for the Ramp Movement Board."
+  },
+  {
+   "unit_id": "S819",
+   "type": "requirement",
+   "subject": "Meteorology Briefing Officer",
+   "text": "The Meteorology Briefing Officer shall own operational weather classification inputs accepted by the Weather Ingest Gateway."
+  },
+  {
+   "unit_id": "S820",
+   "type": "requirement",
+   "subject": "Airline Operations Coordinator",
+   "text": "The Airline Operations Coordinator shall be accountable for airline-supplied schedule intent, readiness status, and Target Off Block Time updates submitted through approved interfaces."
+  },
+  {
+   "unit_id": "S821",
+   "type": "requirement",
+   "text": "Each owned data element shall have a defined business meaning, allowed value range, update authority, retention class, and escalation contact."
+  },
+  {
+   "unit_id": "S822",
+   "type": "requirement",
+   "subject": "Common Situation Display",
+   "text": "Freshness indicators shall be displayed on the Common Situation Display wherever stale data could affect sequencing, metering, regulation, or resource allocation decisions."
+  },
+  {
+   "unit_id": "S822",
+   "type": "action",
+   "label": "displayed on the Common Situation Display wherever stale data could affect sequencing, metering, regulation, or resource allocation decisions"
+  },
+  {
+   "unit_id": "S822",
+   "type": "flow",
+   "source": "Common Situation Display",
+   "payload": "Freshness indicators"
+  },
+  {
+   "unit_id": "S823",
+   "type": "requirement",
+   "text": "The freshness indicator shall include the time of last accepted update, the maximum permitted age, and a visual state that distinguishes current, aging, stale, and unavailable data."
+  },
+  {
+   "unit_id": "S824",
+   "type": "requirement",
+   "subject": "Time Synchronization Service",
+   "text": "The Time Synchronization Service shall provide the common time basis used for freshness calculations across the Regional Flow Platform."
+  },
+  {
+   "unit_id": "S824",
+   "type": "action",
+   "performer": "Time Synchronization Service",
+   "label": "provide the common time basis used for freshness calculations across the Regional Flow Platform"
+  },
+  {
+   "unit_id": "S825",
+   "type": "requirement",
+   "text": "The Demand Prediction Service, Capacity Assessment Module, Slot Allocation Engine, and Departure Metering Service shall reject data that lacks a trusted timestamp."
+  },
+  {
+   "unit_id": "S825",
+   "type": "action",
+   "performer": "Demand Prediction Service",
+   "label": "reject data that lacks a trusted timestamp"
+  },
+  {
+   "unit_id": "S825",
+   "type": "action",
+   "performer": "Capacity Assessment Module",
+   "label": "reject data that lacks a trusted timestamp"
+  },
+  {
+   "unit_id": "S825",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "reject data that lacks a trusted timestamp"
+  },
+  {
+   "unit_id": "S825",
+   "type": "action",
+   "performer": "Departure Metering Service",
+   "label": "reject data that lacks a trusted timestamp"
+  },
+  {
+   "unit_id": "S826",
+   "type": "requirement",
+   "text": "Validation rules shall include schema checks, mandatory field checks, code set checks, temporal sequence checks, and operational plausibility checks."
+  },
+  {
+   "unit_id": "S827",
+   "type": "requirement",
+   "subject": "Flight Data Exchange",
+   "text": "The Flight Data Exchange shall validate Flight Intent Message content before the data is made available for operational use."
+  },
+  {
+   "unit_id": "S827",
+   "type": "action",
+   "performer": "Flight Data Exchange",
+   "label": "validate Flight Intent Message content before the data is made available for operational use"
+  },
+  {
+   "unit_id": "S828",
+   "type": "requirement",
+   "subject": "Surface Surveillance Adapter",
+   "text": "The Surface Surveillance Adapter shall apply position quality checks and shall mark uncertain observations before they are used by surface decision functions."
+  },
+  {
+   "unit_id": "S829",
+   "type": "requirement",
+   "subject": "Airline Interface Adapter",
+   "text": "The Airline Interface Adapter shall apply carrier-specific format checks while preserving the common operational meaning required by the Regional Flow Platform."
+  },
+  {
+   "unit_id": "S830",
+   "type": "requirement",
+   "subject": "Handling Resource Planner",
+   "text": "The Handling Resource Planner shall validate resource quantities, task timing, and allocation identifiers against active operational reference data."
+  },
+  {
+   "unit_id": "S831",
+   "type": "requirement",
+   "subject": "Business Rules Registry",
+   "text": "The Business Rules Registry shall hold the current validation thresholds, allowable reason codes, and exception rules approved for Normal Operations, Adverse Weather Mode, Capacity Reduction State, Recovery Phase, and Contingency Fallback State."
+  },
+  {
+   "unit_id": "S832",
+   "type": "requirement",
+   "text": "When a discrepancy is detected, the affected component shall mark the data as disputed and shall preserve the prior accepted value until an authorized correction is available."
+  },
+  {
+   "unit_id": "S833",
+   "type": "requirement",
+   "subject": "Data Governance Steward",
+   "text": "The Data Governance Steward shall coordinate discrepancy resolution with the responsible operational owner and shall record the disposition in the Audit Event Ledger."
+  },
+  {
+   "unit_id": "S834",
+   "type": "requirement",
+   "text": "Urgent discrepancies that could change a metering, arrival regulation, or slot allocation decision shall be raised through the Alert Distribution Hub and reviewed in the Digital Briefing Room."
+  },
+  {
+   "unit_id": "S835",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall investigate technical causes of missing, delayed, duplicated, or transformed records and shall provide evidence needed for stewardship decisions."
+  },
+  {
+   "unit_id": "S836",
+   "type": "requirement",
+   "subject": "Performance Analytics Warehouse",
+   "text": "The Performance Analytics Warehouse shall retain data quality measures, including validation failure rates, freshness breaches, manual corrections, and recurring ownership conflicts."
+  },
+  {
+   "unit_id": "S837",
+   "type": "requirement",
+   "text": "Stewardship reviews shall use those measures to update training, adjust validation rules, and improve the reliability of information used in operational decision making."
+  },
+  {
+   "unit_id": "S838",
+   "type": "requirement",
+   "subject": "Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System",
+   "text": "Performance measurement for the Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System shall convert operational events into repeatable indicators that can be reviewed after each operating day."
+  },
+  {
+   "unit_id": "S839",
+   "type": "requirement",
+   "subject": "Performance Analytics Warehouse",
+   "text": "The Performance Analytics Warehouse shall calculate delay absorption as the portion of expected airborne or terminal-area delay that is converted into controlled ground delay before departure."
+  },
+  {
+   "unit_id": "S840",
+   "type": "requirement",
+   "text": "Delay absorption shall be measured by comparing the unconstrained demand predicted by the Demand Prediction Service with the regulated demand produced by the Slot Allocation Engine and the realized movement times captured through the Flight Data Exchange."
+  },
+  {
+   "unit_id": "S841",
+   "type": "requirement",
+   "text": "The principal delay absorption indicator shall report minutes absorbed at origin, minutes remaining in the arrival stream, and minutes transferred to surface queues within the region."
+  },
+  {
+   "unit_id": "S842",
+   "type": "requirement",
+   "subject": "Regional Flow Manager",
+   "text": "The Regional Flow Manager shall use this indicator to verify that a Ground Delay Program reduced airborne holding without creating excessive departure congestion at constrained airports."
+  },
+  {
+   "unit_id": "S843",
+   "type": "requirement",
+   "text": "Queue length performance shall be measured for runway departure queues, arrival metering queues, apron movement queues, and regulation waiting lists."
+  },
+  {
+   "unit_id": "S844",
+   "type": "requirement",
+   "text": "The Tower Sequence Manager shall provide runway sequence counts, while the Ramp Movement Board shall provide surface queue counts based on movement status and surveillance confirmation."
+  },
+  {
+   "unit_id": "S844",
+   "type": "action",
+   "performer": "Tower Sequence Manager",
+   "label": "provide runway sequence counts"
+  },
+  {
+   "unit_id": "S844",
+   "type": "action",
+   "performer": "Ramp Movement Board",
+   "label": "provide surface queue counts based on movement status and surveillance confirmation"
+  },
+  {
+   "unit_id": "S845",
+   "type": "requirement",
+   "text": "The North Runway Meter, South Runway Meter, East Apron Sensor, and West Apron Sensor shall support independent checks of queue length where surveillance coverage is available."
+  },
+  {
+   "unit_id": "S846",
+   "type": "requirement",
+   "text": "Queue metrics shall include maximum queue length, average queue length, time above threshold, and recovery time after a constraint is lifted."
+  },
+  {
+   "unit_id": "S847",
+   "type": "requirement",
+   "text": "Slot adherence shall be measured as the difference between actual movement times and the assigned Calculated Takeoff Time or Target Off Block Time."
+  },
+  {
+   "unit_id": "S848",
+   "type": "requirement",
+   "subject": "Slot Coordinator",
+   "text": "The Slot Coordinator shall review slot adherence by operator, airport, time band, and regulation identifier to detect recurring causes of noncompliance."
+  },
+  {
+   "unit_id": "S849",
+   "type": "requirement",
+   "text": "A flight shall be counted within tolerance when the actual takeoff or off-block event occurs inside the operating window defined in the Business Rules Registry."
+  },
+  {
+   "unit_id": "S850",
+   "type": "requirement",
+   "subject": "Slot Compliance State",
+   "text": "The Slot Compliance State shall be used to identify periods when adherence monitoring has operational priority over advisory optimization."
+  },
+  {
+   "unit_id": "S851",
+   "type": "action",
+   "performer": "Departure Metering Service",
+   "label": "uses the Passenger Misconnect Count to weight departure sequencing decisions when connection protection is an approved local objective"
+  },
+  {
+   "unit_id": "S851",
+   "type": "flow",
+   "source": "Airline Operations Coordinator",
+   "target": "Departure Metering Service",
+   "payload": "Passenger Misconnect Count"
+  },
+  {
+   "unit_id": "S852",
+   "type": "requirement",
+   "text": "Cancellation avoidance shall be estimated by comparing actual cancellations with a baseline scenario derived from demand, capacity, weather, and historical disruption outcomes."
+  },
+  {
+   "unit_id": "S853",
+   "type": "requirement",
+   "subject": "Capacity Assessment Module",
+   "text": "The Capacity Assessment Module shall record the available Airport Acceptance Rate used in each baseline so that avoided cancellation estimates remain traceable."
+  },
+  {
+   "unit_id": "S854",
+   "type": "requirement",
+   "text": "The Airline Operations Coordinator and Aircraft Operator Representative shall be able to challenge cancellation avoidance results through the Collaborative Decision Log when local business decisions affected the outcome."
+  },
+  {
+   "unit_id": "S855",
+   "type": "requirement",
+   "text": "Emissions reduction shall be estimated from reduced airborne holding, reduced taxi-out time, avoided engine running in queues, and smoother departure metering."
+  },
+  {
+   "unit_id": "S856",
+   "type": "requirement",
+   "subject": "Performance Analytics Warehouse",
+   "text": "The Performance Analytics Warehouse shall apply approved fuel burn and emissions factors by aircraft category, operating phase, and delay location."
+  },
+  {
+   "unit_id": "S857",
+   "type": "requirement",
+   "text": "Emissions metrics shall distinguish between actual reductions and delay transfers that only move fuel burn from one phase of flight to another."
+  },
+  {
+   "unit_id": "S858",
+   "type": "requirement",
+   "subject": "Meteorology Briefing Officer",
+   "text": "The Meteorology Briefing Officer shall support interpretation of emissions results by identifying periods when weather routing or convective avoidance dominated fuel performance."
+  },
+  {
+   "unit_id": "S859",
+   "type": "requirement",
+   "text": "Stakeholder benefit tracking shall allocate measured outcomes to aircraft operators, airport operations, air navigation service functions, ground handling activities, and passengers where the source data supports that attribution."
+  },
+  {
+   "unit_id": "S860",
+   "type": "requirement",
+   "subject": "Airport Duty Manager",
+   "text": "The Airport Duty Manager shall receive benefit summaries that show changes in stand occupancy, surface congestion, recovery duration, and passenger-facing disruption indicators."
+  },
+  {
+   "unit_id": "S861",
+   "type": "requirement",
+   "subject": "Data Governance Steward",
+   "text": "The Data Governance Steward shall ensure that published performance measures identify data sources, calculation versions, confidence limits, and known exclusions."
+  },
+  {
+   "unit_id": "S862",
+   "type": "requirement",
+   "subject": "Post Operations Report",
+   "text": "The Post Operations Report shall present regional benefits alongside operational trade-offs so that decision makers can see whether delay, queue, slot, cancellation, and emissions objectives were balanced in practice."
+  },
+  {
+   "unit_id": "S863",
+   "type": "requirement",
+   "subject": "Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System",
+   "text": "Training for the Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System shall be role based and shall cover normal coordination, constrained operations, recovery actions, and degraded system use."
+  },
+  {
+   "unit_id": "S864",
+   "type": "requirement",
+   "subject": "Regional Flow Manager",
+   "text": "The Regional Flow Manager shall receive advanced instruction on interpreting demand and capacity information, leading collaborative decisions, and authorizing operational measures in the Regional Flow Platform."
+  },
+  {
+   "unit_id": "S865",
+   "type": "requirement",
+   "text": "Air traffic controllers shall be trained to understand how flow measures, sequencing changes, and calculated times affect sector workload, runway demand, and controller tactical flexibility."
+  },
+  {
+   "unit_id": "S866",
+   "type": "requirement",
+   "subject": "Tower Supervisor",
+   "text": "The Tower Supervisor shall receive practical training on the Tower Sequence Manager, Departure Metering Service, Arrival Regulation Console, North Runway Meter, and South Runway Meter."
+  },
+  {
+   "unit_id": "S867",
+   "type": "requirement",
+   "text": "Ramp personnel shall be trained under the direction of the Ramp Control Lead to use the Ramp Movement Board without substituting system indications for required visual checks, radio coordination, and local safety procedures."
+  },
+  {
+   "unit_id": "S868",
+   "type": "requirement",
+   "text": "The Airline Operations Coordinator and Aircraft Operator Representative shall be trained to submit, review, and update Flight Intent Message data through approved interfaces and to assess the operational effect of Calculated Takeoff Time and Target Off Block Time changes."
+  },
+  {
+   "unit_id": "S869",
+   "type": "requirement",
+   "text": "Ground handling personnel shall be trained by the Ground Handling Dispatcher on the Handling Resource Planner and on procedures for confirming that resource constraints are represented accurately before they influence collaborative decisions."
+  },
+  {
+   "unit_id": "S870",
+   "type": "requirement",
+   "subject": "Slot Coordinator",
+   "text": "The Slot Coordinator shall receive training on the Slot Allocation Engine, Airport CDM Portal, and applicable Business Rules Registry entries so that slot actions are applied consistently and transparently."
+  },
+  {
+   "unit_id": "S871",
+   "type": "requirement",
+   "text": "The Network Operations Liaison and Airspace Sector Planner shall be trained to coordinate regional constraints, sector load conditions, and network measures using the Sector Load Monitor and Common Situation Display."
+  },
+  {
+   "unit_id": "S872",
+   "type": "requirement",
+   "subject": "Airport Duty Manager",
+   "text": "The Airport Duty Manager shall be trained to recognize when an Airport Capacity Plan requires revision and when the operational state should move from Normal Operations to Adverse Weather Mode or Capacity Reduction State."
+  },
+  {
+   "unit_id": "S873",
+   "type": "requirement",
+   "subject": "Meteorology Briefing Officer",
+   "text": "The Meteorology Briefing Officer shall be trained to explain weather uncertainty in operational terms and to verify that the Weather Ingest Gateway supports the assumptions used during briefings."
+  },
+  {
+   "unit_id": "S874",
+   "type": "requirement",
+   "subject": "Emergency Response Coordinator",
+   "text": "The Emergency Response Coordinator shall participate in recurrent training so that emergency priorities are integrated into flow management decisions without obscuring command authority or safety responsibilities."
+  },
+  {
+   "unit_id": "S875",
+   "type": "requirement",
+   "subject": "Deicing Coordinator",
+   "text": "The Deicing Coordinator shall receive seasonal refresher training on how deicing capacity assumptions are represented in demand and departure metering tools."
+  },
+  {
+   "unit_id": "S876",
+   "type": "requirement",
+   "subject": "Data Governance Steward",
+   "text": "The Data Governance Steward shall train operational users on data quality responsibilities, privacy expectations, and the correct interpretation of audit records in the Audit Event Ledger."
+  },
+  {
+   "unit_id": "S877",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall train superusers on service status checks, access fault escalation, and safe use of the Contingency Operations Console during partial outages."
+  },
+  {
+   "unit_id": "S878",
+   "type": "requirement",
+   "text": "Initial training shall include classroom instruction, supervised workstation practice, scenario walkthroughs in the Digital Briefing Room, and observed operational shadowing before independent system use is authorized."
+  },
+  {
+   "unit_id": "S879",
+   "type": "requirement",
+   "text": "Recurrent training shall be required at least annually and after major changes to the Regional Flow Platform, Demand Prediction Service, Capacity Assessment Module, or Flight Data Exchange."
+  },
+  {
+   "unit_id": "S879",
+   "type": "constraint",
+   "expression": "at least annually"
+  },
+  {
+   "unit_id": "S880",
+   "type": "requirement",
+   "text": "Simulation exercises shall use realistic traffic samples, weather constraints, surface congestion, airline schedule pressure, handling resource shortages, and recovery objectives to test coordinated decision making."
+  },
+  {
+   "unit_id": "S881",
+   "type": "requirement",
+   "text": "Each exercise shall include participants from tower, ramp, airline operations, handling, airport operations, network coordination, meteorology, data governance, and system support functions when those functions are relevant to the scenario."
+  },
+  {
+   "unit_id": "S882",
+   "type": "requirement",
+   "text": "Exercises shall cover transitions among Normal Operations, Adverse Weather Mode, Capacity Reduction State, Recovery Phase, Contingency Fallback State, and Slot Compliance State."
+  },
+  {
+   "unit_id": "S883",
+   "type": "requirement",
+   "text": "Simulation events shall require users to compare automated recommendations with local knowledge, document significant decisions in the Collaborative Decision Log, and explain departures from system proposals."
+  },
+  {
+   "unit_id": "S884",
+   "type": "requirement",
+   "text": "Human factors safeguards shall include workload monitoring, clear alert prioritization, consistent terminology, confirmation steps for high impact actions, and protection against silent mode changes."
+  },
+  {
+   "unit_id": "S885",
+   "type": "requirement",
+   "text": "Workstation layouts shall support rapid comparison between the Common Situation Display, Airport CDM Portal, Tower Sequence Manager, Ramp Movement Board, and relevant advisory messages without forcing users to copy critical values manually."
+  },
+  {
+   "unit_id": "S886",
+   "type": "requirement",
+   "text": "Training assessments shall verify that users can identify stale data, time synchronization problems, duplicate flights, conflicting constraints, and inappropriate automation reliance before such issues affect live operations."
+  },
+  {
+   "unit_id": "S887",
+   "type": "requirement",
+   "text": "Post-exercise reviews shall use evidence from the Performance Analytics Warehouse and Audit Event Ledger to improve procedures, refine training materials, and confirm that human performance concerns are assigned to accountable owners."
+  },
+  {
+   "unit_id": "S888",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "Deployment of the Regional Flow Platform shall proceed through phased increments that limit operational exposure while progressively adding airports, interfaces, and decision support functions."
+  },
+  {
+   "unit_id": "S889",
+   "type": "requirement",
+   "text": "The first increment shall establish the core operational baseline for the Regional Flow Manager, Network Operations Liaison, Data Governance Steward, and System Support Engineer in a controlled production environment."
+  },
+  {
+   "unit_id": "S890",
+   "type": "requirement",
+   "text": "This baseline shall include the Identity Access Service, Time Synchronization Service, Audit Event Ledger, Performance Analytics Warehouse, and Business Rules Registry before any airport is permitted to exchange operational data."
+  },
+  {
+   "unit_id": "S891",
+   "type": "requirement",
+   "text": "Pilot airport selection shall favor locations with stable operational leadership, representative traffic complexity, available surface surveillance data, and demonstrated willingness to participate in joint procedure development."
+  },
+  {
+   "unit_id": "S892",
+   "type": "requirement",
+   "text": "The initial pilot shall include one constrained primary airport and one less constrained regional airport so that both high-demand and routine operating patterns are exercised."
+  },
+  {
+   "unit_id": "S892",
+   "type": "constraint",
+   "expression": "one constrained primary airport and one less constrained regional airport"
+  },
+  {
+   "unit_id": "S893",
+   "type": "requirement",
+   "text": "Each candidate airport shall provide evidence that the Airport Duty Manager, Tower Supervisor, Ramp Control Lead, Airline Operations Coordinator, Ground Handling Dispatcher, and Aircraft Operator Representative have named accountable implementation contacts."
+  },
+  {
+   "unit_id": "S894",
+   "type": "requirement",
+   "subject": "Readiness Gate 1",
+   "text": "Readiness Gate 1 shall confirm that governance, security approvals, user role definitions, operating hours, and support escalation paths are documented and accepted by local stakeholders."
+  },
+  {
+   "unit_id": "S895",
+   "type": "requirement",
+   "subject": "Readiness Gate 2",
+   "text": "Readiness Gate 2 shall confirm that the Flight Data Exchange, Airline Interface Adapter, Surface Surveillance Adapter, and Weather Ingest Gateway can be connected without disrupting existing airport operations."
+  },
+  {
+   "unit_id": "S896",
+   "type": "requirement",
+   "subject": "Readiness Gate 3",
+   "text": "Readiness Gate 3 shall confirm that local procedures have been mapped to the Airport CDM Portal, Tower Sequence Manager, Ramp Movement Board, Departure Metering Service, and Arrival Regulation Console."
+  },
+  {
+   "unit_id": "S897",
+   "type": "requirement",
+   "subject": "Readiness Gate 4",
+   "text": "Readiness Gate 4 shall confirm that training, shadow operations, contingency procedures, and operational acceptance criteria have been completed before live collaborative decisions are made through the Regional Flow Platform."
+  },
+  {
+   "unit_id": "S898",
+   "type": "requirement",
+   "text": "Interface certification shall be performed separately from operational acceptance so that technical conformance defects do not become unresolved procedural issues."
+  },
+  {
+   "unit_id": "S899",
+   "type": "requirement",
+   "text": "Each interface shall be tested for message structure, time stamping, identity attribution, replay handling, duplicate detection, outage recovery, and rejection behavior under degraded network conditions."
+  },
+  {
+   "unit_id": "S900",
+   "type": "requirement",
+   "text": "The Demand Prediction Service, Capacity Assessment Module, Slot Allocation Engine, Gate Conflict Detector, Sector Load Monitor, North Runway Meter, and South Runway Meter shall be certified against agreed reference scenarios before they are used for operational recommendations."
+  },
+  {
+   "unit_id": "S901",
+   "type": "requirement",
+   "text": "Certification results shall be recorded in the Collaborative Decision Log when they affect operational procedures and in the Audit Event Ledger when they affect access, configuration, or transaction traceability."
+  },
+  {
+   "unit_id": "S902",
+   "type": "requirement",
+   "text": "Airport onboarding shall start with data discovery workshops that identify local tools, manual workarounds, unofficial spreadsheets, and locally maintained constraint registers."
+  },
+  {
+   "unit_id": "S903",
+   "type": "requirement",
+   "text": "The migration plan shall classify each local tool as retired, retained for read-only reference, integrated through an approved interface, or replaced by a Regional Flow Platform function."
+  },
+  {
+   "unit_id": "S904",
+   "type": "requirement",
+   "text": "No local tool shall be retired until the responsible operational owner verifies that its essential decisions, timing assumptions, and audit needs are supported in the target process."
+  },
+  {
+   "unit_id": "S905",
+   "type": "requirement",
+   "text": "During shadow operations, local tools shall remain the authoritative source while the Regional Flow Platform produces parallel outputs for comparison by operational users."
+  },
+  {
+   "unit_id": "S906",
+   "type": "requirement",
+   "text": "The cutover decision shall be based on measured agreement between local practice and Regional Flow Platform outputs, user confidence, defect closure, and demonstrated recovery from simulated failures."
+  },
+  {
+   "unit_id": "S907",
+   "type": "requirement",
+   "text": "After cutover, local users shall enter operational decisions through the Airport CDM Portal and shall avoid reintroducing uncontrolled parallel records that undermine common situational awareness."
+  },
+  {
+   "unit_id": "S908",
+   "type": "requirement",
+   "subject": "Contingency Operations Console",
+   "text": "The Contingency Operations Console shall be available at each onboarded airport before reliance on the Regional Flow Platform is declared for Normal Operations, Adverse Weather Mode, Capacity Reduction State, Recovery Phase, or Contingency Fallback State."
+  },
+  {
+   "unit_id": "S909",
+   "type": "requirement",
+   "text": "Expansion beyond the pilot airports shall occur in waves that group airports by interface maturity, traffic dependency, stakeholder readiness, and available support capacity."
+  },
+  {
+   "unit_id": "S910",
+   "type": "requirement",
+   "text": "Each onboarding wave shall include a stabilization period in which the System Support Engineer and Data Governance Steward monitor defect trends, data quality, access changes, and user adoption."
+  },
+  {
+   "unit_id": "S911",
+   "type": "requirement",
+   "text": "Full regional deployment shall be declared only after the Regional Flow Manager confirms that operational benefits, safety constraints, cyber controls, and stakeholder obligations remain stable across multiple airports and traffic conditions."
+  },
+  {
+   "unit_id": "S912",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "Operational service management for the Regional Flow Platform shall begin when a deployed airport is accepted into steady state support after the regional stabilization period."
+  },
+  {
+   "unit_id": "S913",
+   "type": "requirement",
+   "text": "The service model shall distinguish continuous operational support from planned engineering support so that safety related traffic flow functions remain protected at all times."
+  },
+  {
+   "unit_id": "S914",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall provide round the clock on call coverage for production incidents affecting the Regional Flow Platform, Airport CDM Portal, Slot Allocation Engine, Departure Metering Service, Arrival Regulation Console, and Alert Distribution Hub."
+  },
+  {
+   "unit_id": "S915",
+   "type": "requirement",
+   "text": "Standard service desk coverage for access requests, reporting questions, configuration inquiries, and minor usability issues shall be available during normal regional administrative hours on business days."
+  },
+  {
+   "unit_id": "S916",
+   "type": "requirement",
+   "text": "During published peak traffic periods, Adverse Weather Mode, Capacity Reduction State, and Recovery Phase, the on call support posture shall be raised so that the System Support Engineer can join the Digital Briefing Room without delay."
+  },
+  {
+   "unit_id": "S917",
+   "type": "requirement",
+   "text": "The Regional Flow Manager, Tower Supervisor, Ramp Control Lead, Airport Duty Manager, and Network Operations Liaison shall retain operational command authority during support activity."
+  },
+  {
+   "unit_id": "S918",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall advise operational supervisors on technical status, known workarounds, data integrity concerns, and recovery options, but shall not issue traffic management instructions."
+  },
+  {
+   "unit_id": "S919",
+   "type": "requirement",
+   "text": "Incidents shall be classified by operational effect, with the highest priority assigned to loss of common situational awareness, loss of slot computation, corruption of operational timing data, or failure of alert distribution during active traffic management."
+  },
+  {
+   "unit_id": "S920",
+   "type": "requirement",
+   "text": "A critical incident shall be acknowledged within fifteen minutes and shall have continuous technical ownership until service is restored or an agreed operational workaround is in place."
+  },
+  {
+   "unit_id": "S920",
+   "type": "constraint",
+   "expression": "within fifteen minutes"
+  },
+  {
+   "unit_id": "S921",
+   "type": "requirement",
+   "text": "A high priority incident that degrades a major function without stopping tactical coordination shall be acknowledged within thirty minutes and shall be reviewed with the affected operational supervisor at least hourly."
+  },
+  {
+   "unit_id": "S921",
+   "type": "constraint",
+   "expression": "within thirty minutes"
+  },
+  {
+   "unit_id": "S921",
+   "type": "constraint",
+   "expression": "at least hourly"
+  },
+  {
+   "unit_id": "S922",
+   "type": "requirement",
+   "text": "Medium and low priority incidents shall be handled through the service queue, with target updates provided at intervals appropriate to their operational impact and planned resolution path."
+  },
+  {
+   "unit_id": "S923",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall maintain an incident record that captures the initial symptom, affected components, operational state, timeline, mitigation actions, data corrections, and supervisor decisions."
+  },
+  {
+   "unit_id": "S924",
+   "type": "requirement",
+   "text": "Incident records shall reference the Audit Event Ledger where user actions, configuration changes, interface events, or automated decisions are relevant to the investigation."
+  },
+  {
+   "unit_id": "S925",
+   "type": "requirement",
+   "subject": "Collaborative Decision Log",
+   "text": "The Collaborative Decision Log shall be used to preserve the operational context of major incidents when traffic management decisions are made while a technical degradation is present."
+  },
+  {
+   "unit_id": "S926",
+   "type": "transition",
+   "to": "Contingency Fallback State",
+   "trigger": "Regional Flow Platform cannot support safe collaborative operation"
+  },
+  {
+   "unit_id": "S927",
+   "type": "requirement",
+   "subject": "System Support Engineer",
+   "text": "The System Support Engineer shall verify that fallback tools, exported operational data, and restoration checkpoints are available before advising that normal technical service can resume."
+  },
+  {
+   "unit_id": "S928",
+   "type": "requirement",
+   "text": "Post incident review shall be required for critical incidents, repeated high priority incidents, security related events, and failures that occur during capacity constrained operations."
+  },
+  {
+   "unit_id": "S929",
+   "type": "requirement",
+   "text": "The review shall identify technical root cause, operational contributing factors, effectiveness of workarounds, user communication quality, and corrective actions assigned to named owners."
+  },
+  {
+   "unit_id": "S930",
+   "type": "requirement",
+   "text": "Planned change windows shall normally be scheduled during low demand night periods and shall be coordinated with the Regional Flow Manager, Airport Duty Manager, Tower Supervisor, and affected Aircraft Operator Representative groups before approval."
+  },
+  {
+   "unit_id": "S931",
+   "type": "requirement",
+   "text": "Changes that modify the Business Rules Registry, Identity Access Service, Time Synchronization Service, Flight Data Exchange, or operational metering behavior shall require additional validation in a representative test environment before production release."
+  },
+  {
+   "unit_id": "S932",
+   "type": "requirement",
+   "text": "Emergency changes may be applied outside the standard window when needed to restore service, protect cyber security, or prevent material operational harm, but they shall be documented and retrospectively approved."
+  },
+  {
+   "unit_id": "S933",
+   "type": "requirement",
+   "text": "Service level targets shall include monthly availability for critical production functions, incident response time, restoration time, data feed timeliness, and successful completion of scheduled operational reports."
+  },
+  {
+   "unit_id": "S934",
+   "type": "requirement",
+   "text": "Availability targets shall exclude approved maintenance windows, customer network outages outside the managed boundary, and periods when operational supervisors have directed use of contingency procedures for nontechnical reasons."
+  },
+  {
+   "unit_id": "S935",
+   "type": "requirement",
+   "text": "Performance against service targets shall be reviewed with the Regional Flow Manager and Data Governance Steward so that service quality, operational benefit, data quality, and user confidence are managed as a single operating obligation."
+  },
+  {
+   "unit_id": "S936",
+   "type": "requirement",
+   "subject": "Regional Flow Platform",
+   "text": "Future enhancement of the Regional Flow Platform should be treated as an incremental extension of the operational service rather than as a replacement of the current concept."
+  },
+  {
+   "unit_id": "S939",
+   "type": "requirement",
+   "text": "Cross-border exchange should use standardized message structures where practical, but the Business Rules Registry should retain the local parameters needed for Meridian operations."
+  },
+  {
+   "unit_id": "S940",
+   "type": "requirement",
+   "subject": "Flight Data Exchange",
+   "text": "The Flight Data Exchange should be enhanced to accept richer intent data, including improved route options, expected cruise profiles, and updated departure readiness information."
+  },
+  {
+   "unit_id": "S941",
+   "type": "requirement",
+   "subject": "Demand Prediction Service",
+   "text": "The Demand Prediction Service should use this data to create more stable demand pictures across longer planning horizons while still preserving tactical responsiveness."
+  },
+  {
+   "unit_id": "S942",
+   "type": "requirement",
+   "text": "Trajectory prediction should also make greater use of weather features, sector configuration, runway direction, and surface movement status when estimating flight progress."
+  },
+  {
+   "unit_id": "S943",
+   "type": "requirement",
+   "text": "The Weather Ingest Gateway and Sector Load Monitor should provide the common inputs needed to connect airspace capacity and airport capacity in the same prediction cycle."
+  },
+  {
+   "unit_id": "S944",
+   "type": "requirement",
+   "subject": "Capacity Assessment Module",
+   "text": "The Capacity Assessment Module should evolve from a mainly rules-based assessment into a service that can compare planned capacity, observed throughput, and predicted constraint persistence."
+  },
+  {
+   "unit_id": "S945",
+   "type": "requirement",
+   "text": "Any use of learning models should be introduced with explainability requirements so that operational users can understand why a capacity or delay estimate has changed."
+  },
+  {
+   "unit_id": "S946",
+   "type": "requirement",
+   "text": "Advanced turnaround prediction should combine aircraft state, handling milestones, stand occupancy, crew readiness, passenger processing, and ramp congestion signals."
+  },
+  {
+   "unit_id": "S947",
+   "type": "requirement",
+   "text": "The Airport CDM Portal, Airline Interface Adapter, Handling Resource Planner, and Ramp Movement Board should provide the main operational inputs for this capability."
+  },
+  {
+   "unit_id": "S948",
+   "type": "requirement",
+   "subject": "Target Off Block Time",
+   "text": "Predicted changes to Target Off Block Time should be presented with confidence levels rather than as unconditional system corrections."
+  },
+  {
+   "unit_id": "S949",
+   "type": "requirement",
+   "subject": "Slot Allocation Engine",
+   "text": "The Slot Allocation Engine should use improved turnaround predictions to protect feasible Calculated Takeoff Time assignments and to reduce avoidable re-sequencing."
+  },
+  {
+   "unit_id": "S950",
+   "type": "requirement",
+   "text": "The Tower Sequence Manager and Departure Metering Service should receive only the information needed for tactical sequencing, with detailed airline operational data controlled by policy."
+  },
+  {
+   "unit_id": "S951",
+   "type": "requirement",
+   "text": "Machine-assisted recovery options should support the Recovery Phase by proposing coordinated actions that balance runway throughput, sector loading, stand availability, and airline priorities."
+  },
+  {
+   "unit_id": "S952",
+   "type": "requirement",
+   "text": "These options should be generated by the Contingency Operations Console and reviewed through the Common Situation Display before any operational decision is applied."
+  },
+  {
+   "unit_id": "S952",
+   "type": "action",
+   "performer": "Contingency Operations Console",
+   "label": "generated by the Contingency Operations Console"
+  },
+  {
+   "unit_id": "S953",
+   "type": "requirement",
+   "text": "The system should not automatically impose a Ground Delay Program, change an Airport Acceptance Rate, or alter a tactical measure without authorized human confirmation."
+  },
+  {
+   "unit_id": "S954",
+   "type": "requirement",
+   "text": "Recovery recommendations should include the operational rationale, expected benefit, key assumptions, and possible secondary effects on connected flights and surface movements."
+  },
+  {
+   "unit_id": "S955",
+   "type": "requirement",
+   "text": "The Collaborative Decision Log and Audit Event Ledger should record each proposed option, the user response, and the final decision so that performance can be reviewed after operations."
+  },
+  {
+   "unit_id": "S955",
+   "type": "action",
+   "performer": "Collaborative Decision Log",
+   "label": "record each proposed option, the user response, and the final decision"
+  },
+  {
+   "unit_id": "S955",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "record each proposed option, the user response, and the final decision"
+  },
+  {
+   "unit_id": "S956",
+   "type": "requirement",
+   "text": "Regional expansion should include a repeatable onboarding pattern for new airports, airspace sectors, airlines, and handling organizations."
+  },
+  {
+   "unit_id": "S957",
+   "type": "requirement",
+   "text": "The Identity Access Service, Time Synchronization Service, and Performance Analytics Warehouse should be scaled early because they form shared foundations for a wider regional deployment."
+  },
+  {
+   "unit_id": "S958",
+   "type": "requirement",
+   "subject": "Data Governance Steward",
+   "text": "Data governance should remain under the Data Governance Steward, with clear rules for retention, consent, quality thresholds, and permitted operational use."
+  },
+  {
+   "unit_id": "S959",
+   "type": "requirement",
+   "text": "Future releases should be validated in shadow mode before operational activation so that the Regional Flow Manager, Airline Operations Coordinator, Tower Supervisor, and Airport Duty Manager can compare recommendations with actual outcomes."
+  },
+  {
+   "unit_id": "S960",
+   "type": "requirement",
+   "text": "Sustained regional ATFM and A-CDM operation requires each participating organization to treat the operating picture as a shared operational asset rather than a local advisory product."
+  },
+  {
+   "unit_id": "S974",
+   "type": "requirement",
+   "subject": "Common Situation Display",
+   "text": "The Common Situation Display is the shared baseline for time-critical coordination and should be kept consistent with the Regional Flow Platform and Airport CDM Portal."
+  },
+  {
+   "unit_id": "S976",
+   "type": "requirement",
+   "text": "Calculated Takeoff Time and Target Off Block Time commitments should be treated as executable operating constraints unless they are revised through the agreed coordination process."
+  },
+  {
+   "unit_id": "S977",
+   "type": "requirement",
+   "text": "Ground Delay Program decisions, Tactical Regulation Proposal review, and Airport Acceptance Rate changes should be visible to affected participants before they are applied whenever operational time permits."
+  },
+  {
+   "unit_id": "S979",
+   "type": "requirement",
+   "text": "The Flight Data Exchange, Airline Interface Adapter, Surface Surveillance Adapter, and Weather Ingest Gateway must be operated with monitored data quality thresholds and clear fallback procedures."
+  },
+  {
+   "unit_id": "S980",
+   "type": "requirement",
+   "text": "The Slot Allocation Engine, Departure Metering Service, Arrival Regulation Console, Tower Sequence Manager, and Ramp Movement Board must use the approved rules recorded in the Business Rules Registry."
+  },
+  {
+   "unit_id": "S980",
+   "type": "action",
+   "performer": "Slot Allocation Engine",
+   "label": "use the approved rules recorded in the Business Rules Registry"
+  },
+  {
+   "unit_id": "S980",
+   "type": "action",
+   "performer": "Departure Metering Service",
+   "label": "use the approved rules recorded in the Business Rules Registry"
+  },
+  {
+   "unit_id": "S980",
+   "type": "action",
+   "performer": "Arrival Regulation Console",
+   "label": "use the approved rules recorded in the Business Rules Registry"
+  },
+  {
+   "unit_id": "S980",
+   "type": "action",
+   "performer": "Tower Sequence Manager",
+   "label": "use the approved rules recorded in the Business Rules Registry"
+  },
+  {
+   "unit_id": "S980",
+   "type": "action",
+   "performer": "Ramp Movement Board",
+   "label": "use the approved rules recorded in the Business Rules Registry"
+  },
+  {
+   "unit_id": "S981",
+   "type": "requirement",
+   "text": "The Identity Access Service and Audit Event Ledger must support traceability, least-privilege access, and after-action accountability for all operationally significant changes."
+  },
+  {
+   "unit_id": "S981",
+   "type": "action",
+   "performer": "Identity Access Service",
+   "label": "support traceability, least-privilege access, and after-action accountability for all operationally significant changes"
+  },
+  {
+   "unit_id": "S981",
+   "type": "action",
+   "performer": "Audit Event Ledger",
+   "label": "support traceability, least-privilege access, and after-action accountability for all operationally significant changes"
+  },
+  {
+   "unit_id": "S982",
+   "type": "requirement",
+   "text": "The Performance Analytics Warehouse and Post Operations Report should be used to measure compliance, delay outcomes, capacity use, and the effectiveness of collaborative decisions."
+  },
+  {
+   "unit_id": "S983",
+   "type": "requirement",
+   "text": "Governance should favor transparent decision making, timely challenge by affected parties, documented resolution of disputes, and continuous improvement through training, exercises, and post-operations review."
+  }
+ ],
+ "entities": [
+  {
+   "name": "Meridian region",
+   "aliases": []
+  },
+  {
+   "name": "primary international hub",
+   "aliases": []
+  },
+  {
+   "name": "high-frequency domestic airports",
+   "aliases": []
+  },
+  {
+   "name": "cargo and general aviation aerodromes",
+   "aliases": []
+  },
+  {
+   "name": "airport network",
+   "aliases": []
+  },
+  {
+   "name": "Regional Flow Manager",
+   "aliases": [
+    "Copperfin"
+   ]
+  },
+  {
+   "name": "Airline Operations Coordinator",
+   "aliases": [
+    "Saffron"
+   ]
+  },
+  {
+   "name": "Aircraft Operator Representative",
+   "aliases": []
+  },
+  {
+   "name": "Airport Duty Manager",
+   "aliases": []
+  },
+  {
+   "name": "Tower Supervisor",
+   "aliases": [
+    "Brindle"
+   ]
+  },
+  {
+   "name": "Ramp Control Lead",
+   "aliases": [
+    "Quartzline"
+   ]
+  },
+  {
+   "name": "Slot Coordinator",
+   "aliases": [
+    "Halcyon"
+   ]
+  },
+  {
+   "name": "Regional Flow Platform",
+   "aliases": [
+    "Cedarbell"
+   ]
+  },
+  {
+   "name": "Demand Prediction Service",
+   "aliases": [
+    "Marlinstone"
+   ]
+  },
+  {
+   "name": "Capacity Assessment Module",
+   "aliases": []
+  },
+  {
+   "name": "Slot Allocation Engine",
+   "aliases": [
+    "Blueharbor"
+   ]
+  },
+  {
+   "name": "Airport CDM Portal",
+   "aliases": [
+    "Foxglove"
+   ]
+  },
+  {
+   "name": "Tower Sequence Manager",
+   "aliases": [
+    "Ironleaf"
+   ]
+  },
+  {
+   "name": "Ramp Movement Board",
+   "aliases": [
+    "Skylark"
+   ]
+  },
+  {
+   "name": "Departure Metering Service",
+   "aliases": [
+    "Emberline"
+   ]
+  },
+  {
+   "name": "Arrival Regulation Console",
+   "aliases": [
+    "Nightjar"
+   ]
+  },
+  {
+   "name": "Weather Ingest Gateway",
+   "aliases": [
+    "Orchard"
+   ]
+  },
+  {
+   "name": "Flight Data Exchange",
+   "aliases": []
+  },
+  {
+   "name": "Surface Surveillance Adapter",
+   "aliases": []
+  },
+  {
+   "name": "Airline Interface Adapter",
+   "aliases": []
+  },
+  {
+   "name": "Sector Load Monitor",
+   "aliases": []
+  },
+  {
+   "name": "Gate Conflict Detector",
+   "aliases": []
+  },
+  {
+   "name": "North Runway Meter",
+   "aliases": []
+  },
+  {
+   "name": "South Runway Meter",
+   "aliases": []
+  },
+  {
+   "name": "East Apron Sensor",
+   "aliases": []
+  },
+  {
+   "name": "West Apron Sensor",
+   "aliases": []
+  },
+  {
+   "name": "Common Situation Display",
+   "aliases": []
+  },
+  {
+   "name": "Collaborative Decision Log",
+   "aliases": []
+  },
+  {
+   "name": "Audit Event Ledger",
+   "aliases": []
+  },
+  {
+   "name": "Flight Intent Message",
+   "aliases": []
+  },
+  {
+   "name": "Airport Acceptance Rate",
+   "aliases": []
+  },
+  {
+   "name": "Tactical Regulation Proposal",
+   "aliases": []
+  },
+  {
+   "name": "Ground Delay Program",
+   "aliases": []
+  },
+  {
+   "name": "Target Off Block Time",
+   "aliases": []
+  },
+  {
+   "name": "Calculated Takeoff Time",
+   "aliases": []
+  },
+  {
+   "name": "Normal Operations",
+   "aliases": []
+  },
+  {
+   "name": "Adverse Weather Mode",
+   "aliases": []
+  },
+  {
+   "name": "Capacity Reduction State",
+   "aliases": []
+  },
+  {
+   "name": "Recovery Phase",
+   "aliases": []
+  },
+  {
+   "name": "Contingency Fallback State",
+   "aliases": []
+  },
+  {
+   "name": "Slot Compliance State",
+   "aliases": []
+  },
+  {
+   "name": "Meridian International Airport",
+   "aliases": []
+  },
+  {
+   "name": "Harbor East Airport",
+   "aliases": []
+  },
+  {
+   "name": "North Valley Airport",
+   "aliases": []
+  },
+  {
+   "name": "Lakeside Regional Airport",
+   "aliases": []
+  },
+  {
+   "name": "Southport Airport",
+   "aliases": []
+  },
+  {
+   "name": "Digital Briefing Room",
+   "aliases": []
+  },
+  {
+   "name": "Contingency Operations Console",
+   "aliases": [
+    "Silverpine"
+   ]
+  },
+  {
+   "name": "Alert Distribution Hub",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Performance Analytics Warehouse",
+   "aliases": []
+  },
+  {
+   "name": "Identity Access Service",
+   "aliases": []
+  },
+  {
+   "name": "Business Rules Registry",
+   "aliases": []
+  },
+  {
+   "name": "Time Synchronization Service",
+   "aliases": []
+  },
+  {
+   "name": "Network Operations Liaison",
+   "aliases": []
+  },
+  {
+   "name": "Ground Handling Dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "Deicing Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Meteorology Briefing Officer",
+   "aliases": []
+  },
+  {
+   "name": "Airspace Sector Planner",
+   "aliases": []
+  },
+  {
+   "name": "Military Airspace Liaison",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Response Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Data Governance Steward",
+   "aliases": []
+  },
+  {
+   "name": "System Support Engineer",
+   "aliases": []
+  },
+  {
+   "name": "Airport Capacity Plan",
+   "aliases": []
+  },
+  {
+   "name": "Post Operations Report",
+   "aliases": []
+  },
+  {
+   "name": "Runway Inspection Note",
+   "aliases": []
+  },
+  {
+   "name": "Handling Resource Planner",
+   "aliases": []
+  },
+  {
+   "name": "Storm Cell Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System",
+   "aliases": []
+  },
+  {
+   "name": "Airline Operations Centre",
+   "aliases": []
+  },
+  {
+   "name": "Crew Bus Delay Slip",
+   "aliases": []
+  },
+  {
+   "name": "airport duty desk",
+   "aliases": []
+  },
+  {
+   "name": "Stand Tow Request Form",
+   "aliases": []
+  },
+  {
+   "name": "Meridian Regional Airport",
+   "aliases": []
+  },
+  {
+   "name": "Deicing Pad Queue Card",
+   "aliases": []
+  },
+  {
+   "name": "Temporary Restriction Notice",
+   "aliases": []
+  },
+  {
+   "name": "Fuel Truck Hold Advice",
+   "aliases": []
+  },
+  {
+   "name": "winter operating mode",
+   "aliases": []
+  },
+  {
+   "name": "Gate Reopening Memo",
+   "aliases": []
+  },
+  {
+   "name": "Integrated Tactical Management Position",
+   "aliases": []
+  },
+  {
+   "name": "Pushback Window Token",
+   "aliases": []
+  },
+  {
+   "name": "Late Baggage Tag List",
+   "aliases": []
+  },
+  {
+   "name": "Departure Fix Load Sheet",
+   "aliases": []
+  },
+  {
+   "name": "Medical Diversion Notice",
+   "aliases": []
+  },
+  {
+   "name": "Towbar Shortage Report",
+   "aliases": []
+  },
+  {
+   "name": "Remote Stand Shuttle Count",
+   "aliases": []
+  },
+  {
+   "name": "Customs Hold Release Note",
+   "aliases": []
+  },
+  {
+   "name": "Runway Lighting Outage Card",
+   "aliases": []
+  },
+  {
+   "name": "Crew Duty Extension Log",
+   "aliases": []
+  },
+  {
+   "name": "Apron Sweep Completion Note",
+   "aliases": []
+  },
+  {
+   "name": "Slot Swap Permission Email",
+   "aliases": []
+  },
+  {
+   "name": "Passenger Misconnect Count",
+   "aliases": []
+  },
+  {
+   "name": "Readiness Gate 1",
+   "aliases": []
+  },
+  {
+   "name": "Readiness Gate 2",
+   "aliases": []
+  },
+  {
+   "name": "Readiness Gate 3",
+   "aliases": []
+  },
+  {
+   "name": "Readiness Gate 4",
+   "aliases": []
+  },
+  {
+   "name": "airline reservation platforms",
+   "aliases": []
+  },
+  {
+   "name": "crew management systems",
+   "aliases": []
+  },
+  {
+   "name": "baggage reconciliation systems",
+   "aliases": []
+  },
+  {
+   "name": "airport commercial systems",
+   "aliases": []
+  },
+  {
+   "name": "national surveillance infrastructure",
+   "aliases": []
+  },
+  {
+   "name": "aircraft avionics",
+   "aliases": []
+  },
+  {
+   "name": "statutory air traffic control",
+   "aliases": []
+  },
+  {
+   "name": "airport operator control rooms",
+   "aliases": []
+  },
+  {
+   "name": "airline operational control centers",
+   "aliases": []
+  },
+  {
+   "name": "ground handling dispatch systems",
+   "aliases": []
+  },
+  {
+   "name": "scheduled passenger operators",
+   "aliases": []
+  },
+  {
+   "name": "cargo operators",
+   "aliases": []
+  },
+  {
+   "name": "charter operators",
+   "aliases": []
+  },
+  {
+   "name": "based carriers",
+   "aliases": []
+  },
+  {
+   "name": "contracted handlers",
+   "aliases": []
+  },
+  {
+   "name": "fueling providers",
+   "aliases": []
+  },
+  {
+   "name": "deicing providers",
+   "aliases": []
+  },
+  {
+   "name": "towing providers",
+   "aliases": []
+  },
+  {
+   "name": "passenger transport providers",
+   "aliases": []
+  },
+  {
+   "name": "ramp service organizations",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S983"
+   ],
+   "chunk_tokens": 27820,
+   "memory_tokens": 0,
+   "prompt_tokens": 31408,
+   "input": 31614,
+   "output": 30018,
+   "reasoning": 516,
+   "cached": false
+  }
+ ],
+ "wall_s": 355.8
+}

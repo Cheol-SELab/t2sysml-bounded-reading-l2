@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metocean Buoy provides \"the Wave Burst Record\" to Weather Analyst (an information or material flow).\n\nSource sentences:\nS193: The Control Engineer reviews persistent alarms and coordinates electrical support with the Substation Operator.\nS194: Metocean Buoy produces the Wave Burst Record at the configured sampling interval.\nS322: The HSE Officer reviews task hazards and confirms that required controls are assigned before the permit is authorized.\nS323: The Weather Analyst uses the Wave Burst Record to assess whether the planned access period remains suitable.\n\nAnswer \"supported\" only if the sentences state that Metocean Buoy produces or sends this item AND that Weather Analyst receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\nS155: Work Permit Portal maintains the request record and its revision history throughout review and execution.\nS169: Work Permit Portal records the start, pause, resumption, and completion of authorized work against the permit record.\nS317: The Shore Control Room retains the decision record, supporting observations, and response outcome for operational review.\nS371: The Shore Control Room maintains the current dispatch target, ramp rate, and next review time in the shift record.\nS390: Vessel Master produces the Crew Count Correction when a verified headcount differs from the departure record.\nS413: When communications are unavailable, the responsible supervisor keeps a local record and reports it when service is restored.\nS456: When evidence is incomplete, the inspection record identifies the uncertainty and specifies additional measurements or imagery needed.\nS464: The Duty Planner updates the maintenance record and schedules follow-up inspection when residual uncertainty or defect history warrants it.\nS527: The Duty Planner records the proposed sequence, required approvals, execution roles, and planned communications in the operating record.\nS561: The Duty Planner maintains a clear record of the restriction, response actions, approvals, and outstanding checks for shift handover.\nS584: The record includes the expected count, observed count, persons still unaccounted for, actions taken, and current status.\nS686: The inventory record covers serviceable parts, consumables, repairable units, and their locations across shore and offshore stores.\nS708: During transport, the dispatch record identifies the quantity, destination, handling conditions, and responsible receiving location.\nS721: A mismatch between the field label and the approved record prevents the crew from proceeding until it is resolved.\nS784: The responsible manager reviews record completeness after significant events and assigns correction or follow-up actions where evidence is missing.\nS823: The audit record distinguishes a rejected credential from an authorization that lacks the required scope.\nS824: The system retains successful and unsuccessful attempts under the site's access record retention policy.\nS830: Temporary decisions are reconciled against the normal access record when scanner service is restored.\nS844: The record supports routine review of access activity and investigation of anomalies.\nS874: The Personnel Tracking Console is used to maintain an accurate record of personnel entering and leaving the route.\nS957: The system retains the event record and recovery decisions for review, trend analysis, and improvement of operating procedures.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S194 says Metocean Buoy produces the Wave Burst Record, and S323 says the Weather Analyst uses that same record, so the item flows from buoy to analyst.\"}",
+ "usage": {
+  "input_tokens": 1459,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 74,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.062,
+ "created": "2026-10-19T19:09:51"
+}

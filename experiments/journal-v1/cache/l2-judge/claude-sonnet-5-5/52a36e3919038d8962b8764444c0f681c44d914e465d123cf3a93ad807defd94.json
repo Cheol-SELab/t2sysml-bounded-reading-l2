@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Revenue Train Operator provides \"the Test Train Clearance Memo\" to Metro Operations Control System (an information or material flow).\n\nSource sentences:\nS196: The Cryptographic Key Management Appliance shall not be bypassed to accelerate service recovery unless the approved emergency security procedure is active.\nS197: The Revenue Train Operator sends the Test Train Clearance Memo after completing the prescribed proving run under restricted manual control.\nS215: The Revenue Train Operator shall not be assigned cybersecurity administration duties during passenger service, although security warnings presented in the cab shall remain part of normal operating awareness.\nS216: The Metro Operations Control System uses the Test Train Clearance Memo as a controlled prerequisite before accepting security exceptions for non-revenue movement in protected territory.\n\nAnswer \"supported\" only if the sentences state that Revenue Train Operator produces or sends this item AND that Metro Operations Control System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S197 states the Revenue Train Operator sends the Test Train Clearance Memo, and S216 states the Metro Operations Control System uses that same memo as a prerequisite, so both the sender and the receiver or user are stated.\"}",
+ "usage": {
+  "input_tokens": 729,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 91,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.265,
+ "created": "2026-10-14T12:33:13"
+}

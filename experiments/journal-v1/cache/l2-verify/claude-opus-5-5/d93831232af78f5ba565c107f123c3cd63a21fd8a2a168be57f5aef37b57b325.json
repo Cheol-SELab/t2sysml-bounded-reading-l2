@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: South Gate Scanner provides \"a Manual Rescan Receipt\" to Image Resolution Desk (an information or material flow).\n\nSource sentences:\nS060: A bag remains under controlled routing while its image is awaiting review, and the system prevents it from entering an outbound make-up path prematurely.\nS061: The South Gate Scanner produces a Manual Rescan Receipt when a manual rescan is required.\nS158: The operator confirms that the image is legible enough to support a decision and does not rely on an uncertain visual match.\nS159: Image Resolution Desk uses the rescan receipt to confirm that a second image was captured under the approved procedure.\n\nAnswer \"supported\" only if the sentences state that South Gate Scanner produces or sends this item AND that Image Resolution Desk receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S061 states that the South Gate Scanner produces the Manual Rescan Receipt, and S159 states that the Image Resolution Desk uses the rescan receipt, which is the same item named more briefly.\"}",
+ "usage": {
+  "input_tokens": 670,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 83,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.516,
+ "created": "2026-10-14T01:39:03"
+}

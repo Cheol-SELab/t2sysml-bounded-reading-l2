@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "The controlled slot swap process begins when an Aircraft Operator Representative identifies a flight that can exchange its assigned demand position without reducing declared capacity or creating an unfair priority change.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator enters the proposed substitution in the Airport CDM Portal with the flight identifiers, operational reason, readiness basis, and requested effective time.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal validates the submitting user through the Identity Access Service and blocks any proposal from a party without delegated operator authority.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine evaluates the candidate swap against active Ground Delay Program constraints, Calculated Takeoff Time integrity, Target Off Block Time dependencies, and Airport Acceptance Rate commitments.",
+   "tags": []
+  },
+  {
+   "text": "The Business Rules Registry provides the governing parameters for precedence, equity, customs eligibility, minimum notification time, and prohibited trades.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator reviews any exception raised by the Slot Allocation Engine and confirms whether the swap remains consistent with regional flow objectives.",
+   "tags": []
+  },
+  {
+   "text": "Slot Coordinator sends the Slot Swap Permission Email only after the governance checks have been completed and recorded.",
+   "tags": [
+    "F19:intro"
+   ]
+  },
+  {
+   "text": "For airline-to-airline coordination, each Aircraft Operator Representative records concurrence in the Airport CDM Portal rather than relying on a verbal agreement.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison monitors aggregate displacement from approved substitutions to ensure that one carrier's recovery action does not destabilize the wider network plan.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager may suspend collaborative substitution during a Capacity Reduction State when scarce capacity must be protected for the published tactical plan.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor retains authority to reject a swap if the resulting sequence would conflict with safe runway sequencing or local control workload.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead confirms that the revised sequence remains compatible with stand occupancy, pushback spacing, and tug availability shown on the Ramp Movement Board.",
+   "tags": []
+  },
+  {
+   "text": "Airport Duty Manager uses the Apron Sweep Completion Note to confirm that apron availability constraints do not invalidate an approved substitution.",
+   "tags": [
+    "F18:link"
+   ]
+  },
+  {
+   "text": "Airline Operations Coordinator uses the release note to confirm that a candidate substitution is eligible for customs release before requesting a slot swap.",
+   "tags": [
+    "F15:link"
+   ]
+  },
+  {
+   "text": "Customs release status is treated as a prerequisite condition for any substitution that would move an international departure into an earlier operating position.",
+   "tags": []
+  },
+  {
+   "text": "If customs status is incomplete, the Airport CDM Portal keeps the proposal pending and prevents the Slot Allocation Engine from publishing the revised slot assignment.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log captures the proposed flights, the reason code, the user confirmations, the governance outcome, and the final decision time.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger records each approval, rejection, cancellation, and override so that later review can distinguish operational judgment from system enforcement.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Data Exchange publishes revised Flight Intent Message content only after the approved substitution is final and time synchronized.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display presents the updated Calculated Takeoff Time and Target Off Block Time so that operational users share the same view of the accepted change.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service recalculates metering advisories after approval and prevents the swap from creating a new demand peak at a departure fix.",
+   "tags": []
+  },
+  {
+   "text": "Disputes between operators are escalated to the Regional Flow Manager when the recorded concurrences conflict or when a party alleges that governance rules were bypassed.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer investigates technical failures in submission, validation, or publication without altering the operational decision unless authorized through the defined control process.",
+   "tags": []
+  },
+  {
+   "text": "The Post Operations Report includes swap volume, rejection reasons, approval latency, compliance with revised times, and any equity concerns identified during the operating period.",
+   "tags": []
+  }
+ ]
+}

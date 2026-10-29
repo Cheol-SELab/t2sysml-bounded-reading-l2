@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Emergency Department provides \"access constraints\" to Shift Commander (an information or material flow).\n\nSource sentences:\nS154: Larkspur confirms the incident identifier and intended receiving facility before the destination request is transmitted.\nS155: The Emergency Department advises the Hospital Liaison Desk of relevant capacity limits, access constraints, or changes to its receiving status.\nS162: The South Gate Status Board displays current access information for crews approaching the receiving facility through the south entrance.\nS163: The Shift Commander reviews access constraints that could affect arrival timing or safe patient transfer.\n\nAnswer \"supported\" only if the sentences state that Emergency Department produces or sends this item AND that Shift Commander receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Emergency Department sends access constraints to the Hospital Liaison Desk, while the Shift Commander merely reviews access constraints; the text does not state that the Emergency Department provides them to the Shift Commander.\"}",
+ "usage": {
+  "input_tokens": 287,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 337,
+  "output_tokens_details": {
+   "reasoning_tokens": 280
+  },
+  "total_tokens": 624
+ },
+ "attempts": 1,
+ "wall_s": 5.327,
+ "created": "2026-10-14T00:08:22"
+}

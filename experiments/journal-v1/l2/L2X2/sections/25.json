@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Software changes are managed through a controlled lifecycle that protects the integrity and availability of operational systems.",
+   "tags": []
+  },
+  {
+   "text": "Each operational software component has an identified owner, approved version, and documented configuration baseline.",
+   "tags": []
+  },
+  {
+   "text": "The baseline records software versions, configuration parameters, dependencies, and applicable hardware revisions.",
+   "tags": []
+  },
+  {
+   "text": "Source code and configuration files are held in access-controlled repositories with revision history enabled.",
+   "tags": []
+  },
+  {
+   "text": "Changes are developed and reviewed outside the live operational environment.",
+   "tags": []
+  },
+  {
+   "text": "Release packages are built from approved source and checked for completeness, integrity, and compatibility.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Engineer uses the Firmware Hash Attestation to verify the approved image before loading a release.",
+   "tags": [
+    "F16:link"
+   ]
+  },
+  {
+   "text": "The Control Engineer confirms that proposed changes have a clear operational purpose and defined scope.",
+   "tags": []
+  },
+  {
+   "text": "Technical approval is recorded before a change is scheduled for deployment to an operational system.",
+   "tags": []
+  },
+  {
+   "text": "Reviewers assess safety effects, cybersecurity risks, interfaces, and the impact on ongoing maintenance activities.",
+   "tags": []
+  },
+  {
+   "text": "Changes affecting protection functions or control behavior receive additional engineering scrutiny.",
+   "tags": []
+  },
+  {
+   "text": "Testing is performed in a representative test environment before operational acceptance is considered.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Gateway is checked for compatibility with the approved software and configuration baseline.",
+   "tags": []
+  },
+  {
+   "text": "The Turbine Controller is tested against defined operating limits and expected fault responses.",
+   "tags": []
+  },
+  {
+   "text": "The Pitch System is verified to retain its approved control behavior after an applicable software change.",
+   "tags": []
+  },
+  {
+   "text": "The Converter Cabinet is checked for expected communication and protection behavior during regression testing.",
+   "tags": []
+  },
+  {
+   "text": "Changes affecting the Offshore Substation are reviewed for consequences to the safe operation of connected equipment.",
+   "tags": []
+  },
+  {
+   "text": "The Main Transformer protection settings remain subject to their separate engineering approval process.",
+   "tags": []
+  },
+  {
+   "text": "The Cybersecurity Gateway is assessed for continued compliance with access controls and security requirements.",
+   "tags": []
+  },
+  {
+   "text": "The Shore Control Room confirms that monitoring and operator procedures remain suitable for the revised configuration.",
+   "tags": []
+  },
+  {
+   "text": "Deployment is scheduled for an approved maintenance window with qualified personnel available to supervise the work.",
+   "tags": []
+  },
+  {
+   "text": "A rollback method is documented and checked before deployment begins.",
+   "tags": []
+  },
+  {
+   "text": "If verification fails, the change is stopped and the affected system is returned to its last approved baseline where practicable.",
+   "tags": []
+  },
+  {
+   "text": "Configuration records are updated after successful deployment, including the approval evidence, test results, and installed version.",
+   "tags": []
+  },
+  {
+   "text": "Operational handover records identify the deployed change, any outstanding limitations, and the responsible technical contact.",
+   "tags": []
+  }
+ ]
+}

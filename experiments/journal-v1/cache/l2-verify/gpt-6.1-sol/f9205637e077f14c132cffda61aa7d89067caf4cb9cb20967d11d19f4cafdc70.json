@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pharmacy Fulfillment Robot provides \"the Priority Refill Tote Tag\" to North Ward Cabinet Controller (an information or material flow).\n\nSource sentences:\nS010: The Pharmacy Technician performs routine preparation tasks within approved procedures and escalates discrepancies to the Clinical Pharmacist.\nS011: The Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag for eligible refill work.\nS102: South Ward Cabinet Controller records the arrival time and the destination cabinet for loads assigned to the south ward.\nS103: North Ward Cabinet Controller uses the Priority Refill Tote Tag to confirm the intended ward before staff accept a tote.\n\nAnswer \"supported\" only if the sentences state that Pharmacy Fulfillment Robot produces or sends this item AND that North Ward Cabinet Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S011 states that Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag, and S103 states that North Ward Cabinet Controller uses the same item.\"}",
+ "usage": {
+  "input_tokens": 300,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 47,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 347
+ },
+ "attempts": 1,
+ "wall_s": 3.665,
+ "created": "2026-10-14T12:35:17"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Digital Briefing Room provides \"Airport Capacity Plan\" to Slot Allocation Engine (an information or material flow).\n\nSource sentences:\nS070: The Arrival Regulation Console highlights inbound demand periods where holding, speed control, or upstream sequencing may be needed if the forecast capacity materializes.\nS071: The Digital Briefing Room displays the emerging Airport Capacity Plan and records unresolved assumptions in the Collaborative Decision Log for confirmation during the morning coordination briefing.\nS225: The Slot Allocation Engine proposes regulated departure and arrival opportunities by matching demand from the Demand Prediction Service to constraints supplied by the Capacity Assessment Module.\nS226: The primary inputs are the Flight Intent Message, the Airport Capacity Plan, the current Airport Acceptance Rate, runway metering limits, and airspace sector loading conditions.\n\nAnswer \"supported\" only if the sentences state that Digital Briefing Room produces or sends this item AND that Slot Allocation Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Digital Briefing Room only displays the Airport Capacity Plan (S071), and the Slot Allocation Engine uses it as an input (S226) with no source stating that the Capacity Assessment Module or other upstream element, not the Briefing Room, supplies it, so no Briefing Room-to-Engine flow is stated.\"}",
+ "usage": {
+  "input_tokens": 766,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 127,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.46,
+ "created": "2026-10-14T12:45:21"
+}

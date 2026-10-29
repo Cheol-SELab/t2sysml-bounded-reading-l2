@@ -1,0 +1,113 @@
+{
+ "sentences": [
+  {
+   "text": "Normal sequencing resumes without changing the order of pallets already committed to a transfer path.",
+   "tags": []
+  },
+  {
+   "text": "Outbound preparation starts when the Warehouse Management System establishes the intended shipment window and loading priorities.",
+   "tags": []
+  },
+  {
+   "text": "Wave planning accounts for pallet identity, destination, due time, and the available staging positions.",
+   "tags": []
+  },
+  {
+   "text": "The Warehouse Management System checks that planned pallet moves remain consistent with outbound capacity and current inventory records.",
+   "tags": []
+  },
+  {
+   "text": "Morrowglass is an operational alias for the Warehouse Management System.",
+   "tags": [
+    "ALIAS:E_WMS"
+   ]
+  },
+  {
+   "text": "Morrowglass issues a Dispatch Wave Amendment when a destination, priority, or load sequence changes after wave preparation has begun.",
+   "tags": [
+    "ALIAS:E_WMS",
+    "F6:intro"
+   ]
+  },
+  {
+   "text": "Outbound Dispatch Sorter receives the Dispatch Wave Amendment and applies its authorized changes to outbound staging.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "text": "The sorter preserves committed pallet order unless the amendment explicitly authorizes a change.",
+   "tags": []
+  },
+  {
+   "text": "Autonomous Forklift Fleet is introduced under the alias Larkspur.",
+   "tags": [
+    "ALIAS:E_FORKLIFT_FLEET"
+   ]
+  },
+  {
+   "text": "The fleet accepts work only when its vehicle status, assigned operating area, and required travel path are valid.",
+   "tags": []
+  },
+  {
+   "text": "Each vehicle selects an available task according to dispatch priority, battery condition, and proximity to the pickup point.",
+   "tags": []
+  },
+  {
+   "text": "Route selection accounts for aisle access, transfer-point readiness, pedestrian controls, and temporary operating restrictions.",
+   "tags": []
+  },
+  {
+   "text": "Vehicles confirm pallet identity and pickup location before lifting a load.",
+   "tags": []
+  },
+  {
+   "text": "The fleet limits speed and turning rates to protect pallet stability and maintain safe clearance from warehouse structures.",
+   "tags": []
+  },
+  {
+   "text": "During outbound preparation, the fleet assembles the data needed to document each completed transfer and its receiving position.",
+   "tags": []
+  },
+  {
+   "text": "Autonomous Forklift Fleet produces the Forklift Handoff Confirmation after the transfer is complete.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "Handoff reporting records the vehicle identifier, pallet identifier, transfer time, and any incomplete or deferred movement.",
+   "tags": []
+  },
+  {
+   "text": "Fire Alarm Panel produces the Sprinkler Zone Inhibit Notice when the applicable fire-protection condition is detected.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "Vehicles stop or reroute when active safety controls prevent entry to an assigned travel area.",
+   "tags": []
+  },
+  {
+   "text": "East Transfer Conveyor and West Transfer Conveyor provide designated interfaces for moving pallets between vehicle travel and outbound staging.",
+   "tags": []
+  },
+  {
+   "text": "Pallet Dimension Scanner measurements support route and handling decisions for loads that exceed standard pallet envelopes.",
+   "tags": []
+  },
+  {
+   "text": "Outbound Dispatch Sorter verifies that staging positions match the current outbound plan before loading begins.",
+   "tags": []
+  },
+  {
+   "text": "Shipping Documentation Desk prepares shipment records from the confirmed pallet and destination data.",
+   "tags": []
+  },
+  {
+   "text": "Warehouse Operations Supervisor reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints before releasing the next outbound wave.",
+   "tags": []
+  }
+ ]
+}

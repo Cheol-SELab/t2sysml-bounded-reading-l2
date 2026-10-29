@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: SCADA Gateway provides \"Operational records\" to responsible organization (an information or material flow).\n\nSource sentences:\nS018: Unplanned maintenance is assumed to use prioritized fault assessment and controlled mobilization appropriate to the severity of the failure.\nS019: At end of life, the concept supports safe isolation, removal planning, and transfer of residual operational records to the responsible organization.\nS913: Performance definitions identify the source data, calculation method, reporting interval, and accountable owner for each measure.\nS914: The SCADA Gateway provides operational records used to assess turbine availability and production trends.\n\nAnswer \"supported\" only if the sentences state that SCADA Gateway produces or sends this item AND that responsible organization receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S914 says the SCADA Gateway provides operational records, and S019 says residual operational records are transferred to the responsible organization, so the same item links both ends, though S019 credits the transfer to the concept rather than naming the gateway.\"}",
+ "usage": {
+  "input_tokens": 652,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 361,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 270
+  }
+ },
+ "attempts": 1,
+ "wall_s": 8.705,
+ "created": "2026-10-14T12:51:25"
+}

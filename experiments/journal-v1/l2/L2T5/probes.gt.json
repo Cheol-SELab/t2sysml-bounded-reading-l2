@@ -1,0 +1,418 @@
+{
+ "doc_id": "L2T5",
+ "writer": "gpt-5.5",
+ "verifier": "gpt-6-luna",
+ "budget": 1024,
+ "doc_tokens": 6905,
+ "far_share": 0.9411764705882353,
+ "entities": [
+  {
+   "entity_id": "E_RIVER_INTAKE_PUMP_STATION",
+   "canonical": "River Intake Pump Station",
+   "kind": "part",
+   "aliases": [
+    "Ironwood"
+   ]
+  },
+  {
+   "entity_id": "E_RAW_WATER_SCREEN_CHANNEL",
+   "canonical": "Raw Water Screen Channel",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "canonical": "North Filter Gallery",
+   "kind": "part",
+   "aliases": [
+    "Cobalt"
+   ]
+  },
+  {
+   "entity_id": "E_SOUTH_FILTER_GALLERY",
+   "canonical": "South Filter Gallery",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_COAGULANT_DOSING_SKID",
+   "canonical": "Coagulant Dosing Skid",
+   "kind": "part",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "entity_id": "E_CHLORINE_CONTACT_BASIN",
+   "canonical": "Chlorine Contact Basin",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CLEARWELL_LEVEL_CONTROLLER",
+   "canonical": "Clearwell Level Controller",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HIGH_SERVICE_PUMP_HEADER",
+   "canonical": "High Service Pump Header",
+   "kind": "part",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "entity_id": "E_NORTH_DISTRIBUTION_PRESSURE_STATION",
+   "canonical": "North Distribution Pressure Station",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "canonical": "South Distribution Pressure Station",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "canonical": "Laboratory Sample Receiving Bench",
+   "kind": "part",
+   "aliases": [
+    "Sparrow"
+   ]
+  },
+  {
+   "entity_id": "E_SCADA_HISTORIAN_SERVER",
+   "canonical": "SCADA Historian Server",
+   "kind": "part",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "entity_id": "E_BACKWASH_RECOVERY_TANK",
+   "canonical": "Backwash Recovery Tank",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CHIEF_OPERATOR",
+   "canonical": "Chief Operator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LAB_TECHNICIAN",
+   "canonical": "Laboratory Technician",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MAINTENANCE_PLANNER",
+   "canonical": "Maintenance Planner",
+   "kind": "actor",
+   "aliases": [
+    "Quarry"
+   ]
+  },
+  {
+   "entity_id": "E_DISTRIBUTION_DISPATCHER",
+   "canonical": "Distribution Dispatcher",
+   "kind": "actor",
+   "aliases": [
+    "Falcon"
+   ]
+  },
+  {
+   "entity_id": "E_CHEMICAL_SUPPLIER_DRIVER",
+   "canonical": "Chemical Supplier Driver",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DUTY_ENGINEER",
+   "canonical": "Duty Engineer",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RESIDUALS_HAULER",
+   "canonical": "Residuals Hauler",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RAKE_TORQUE_SNAPSHOT",
+   "canonical": "Rake Torque Snapshot",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FILTER_RUN_EXCEPTION_NOTE",
+   "canonical": "Filter Run Exception Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_ALUM_BATCH_TICKET",
+   "canonical": "Alum Batch Ticket",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SAMPLE_CHAIN_SLIP",
+   "canonical": "Sample Chain Slip",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CLEARWELL_DIVER_ENTRY_PERMIT",
+   "canonical": "Clearwell Diver Entry Permit",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BACKWASH_SOLIDS_MANIFEST",
+   "canonical": "Backwash Solids Manifest",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PRESSURE_ZONE_HANDOFF_CARD",
+   "canonical": "Pressure Zone Handoff Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CHLORINE_CYLINDER_SEAL_LOG",
+   "canonical": "Chlorine Cylinder Seal Log",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_JAR_TEST_PHOTOGRAPH_SET",
+   "canonical": "Jar Test Photograph Set",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PUMP_BEARING_VIBRATION_CLIP",
+   "canonical": "Pump Bearing Vibration Clip",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_STORM_INTAKE_MODE",
+   "canonical": "Storm Intake Mode",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CHLORINE_RESIDUAL_ALARM",
+   "canonical": "Chlorine Residual Alarm",
+   "kind": "state",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_RAW_WATER_SCREEN_CHANNEL",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "item": "E_RAKE_TORQUE_SNAPSHOT",
+   "link_ref": "short",
+   "short_ref": "the snapshot",
+   "intro_unit": "S034",
+   "link_unit": "S105",
+   "distance_tokens": 1851
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_SOUTH_FILTER_GALLERY",
+   "consumer": "E_CHIEF_OPERATOR",
+   "item": "E_FILTER_RUN_EXCEPTION_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S061",
+   "link_unit": "S153",
+   "distance_tokens": 2436
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_COAGULANT_DOSING_SKID",
+   "consumer": "E_LAB_TECHNICIAN",
+   "item": "E_ALUM_BATCH_TICKET",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S056",
+   "link_unit": "S083",
+   "distance_tokens": 677
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_LAB_TECHNICIAN",
+   "consumer": "E_SCADA_HISTORIAN_SERVER",
+   "item": "E_SAMPLE_CHAIN_SLIP",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S084",
+   "link_unit": "S188",
+   "distance_tokens": 2829
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_CLEARWELL_LEVEL_CONTROLLER",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "item": "E_CLEARWELL_DIVER_ENTRY_PERMIT",
+   "link_ref": "short",
+   "short_ref": "the permit",
+   "intro_unit": "S134",
+   "link_unit": "S222",
+   "distance_tokens": 2533
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_CHIEF_OPERATOR",
+   "consumer": "E_RESIDUALS_HAULER",
+   "item": "E_BACKWASH_SOLIDS_MANIFEST",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S173",
+   "link_unit": "S245",
+   "distance_tokens": 2025
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_DISTRIBUTION_DISPATCHER",
+   "consumer": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "item": "E_PRESSURE_ZONE_HANDOFF_CARD",
+   "link_ref": "short",
+   "short_ref": "the card",
+   "intro_unit": "S189",
+   "link_unit": "S243",
+   "distance_tokens": 1525
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_CHEMICAL_SUPPLIER_DRIVER",
+   "consumer": "E_DUTY_ENGINEER",
+   "item": "E_CHLORINE_CYLINDER_SEAL_LOG",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S112",
+   "link_unit": "S223",
+   "distance_tokens": 3167
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_HIGH_SERVICE_PUMP_HEADER",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "item": "E_PUMP_BEARING_VIBRATION_CLIP",
+   "link_ref": "short",
+   "short_ref": "the clip",
+   "intro_unit": "S140",
+   "link_unit": "S239",
+   "distance_tokens": 2829
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_RIVER_INTAKE_PUMP_STATION",
+   "alias": "Ironwood",
+   "intro_unit": "S004",
+   "link_unit": "S109",
+   "distance_tokens": 2762
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_SCADA_HISTORIAN_SERVER",
+   "alias": "Lantern",
+   "intro_unit": "S012",
+   "link_unit": "S086",
+   "distance_tokens": 1935
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_COAGULANT_DOSING_SKID",
+   "alias": "Marigold",
+   "intro_unit": "S055",
+   "link_unit": "S160",
+   "distance_tokens": 2796
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "alias": "Cobalt",
+   "intro_unit": "S059",
+   "link_unit": "S186",
+   "distance_tokens": 3421
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "alias": "Sparrow",
+   "intro_unit": "S079",
+   "link_unit": "S187",
+   "distance_tokens": 2939
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_MAINTENANCE_PLANNER",
+   "alias": "Quarry",
+   "intro_unit": "S103",
+   "link_unit": "S204",
+   "distance_tokens": 2843
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_HIGH_SERVICE_PUMP_HEADER",
+   "alias": "Juniper",
+   "intro_unit": "S136",
+   "link_unit": "S230",
+   "distance_tokens": 2701
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_DISTRIBUTION_DISPATCHER",
+   "alias": "Falcon",
+   "intro_unit": "S143",
+   "link_unit": "S242",
+   "distance_tokens": 2834
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "confusable_entity_id": "E_SOUTH_FILTER_GALLERY",
+   "shared_head": "Filter Gallery",
+   "link_unit": "S060",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "confusable_entity_id": "E_NORTH_DISTRIBUTION_PRESSURE_STATION",
+   "shared_head": "Distribution Pressure Station",
+   "link_unit": "S180",
+   "distance_tokens": 0
+  }
+ ]
+}

@@ -1,0 +1,422 @@
+{
+ "title": "Operational Concept for the Cedar Falls Municipal Drinking Water Treatment Plant Control System",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Plant Mission, Boundaries, and Control Architecture",
+   "topic": "Defines the treatment plant mission, control-system scope, operating assumptions, major interfaces, and the roles of the intake, treatment, laboratory, and distribution functions."
+  },
+  {
+   "index": 2,
+   "heading": "River Intake and Raw Water Screening Operations",
+   "topic": "Describes river intake operating modes, screen-channel monitoring, raw-water quality triggers, pump permissives, and storm-response coordination."
+  },
+  {
+   "index": 3,
+   "heading": "Coagulation, Chemical Dosing, and Filter Control",
+   "topic": "Explains coagulant adjustment, filter run management, analyzer feedback, manual override expectations, and how operators respond to process deviations."
+  },
+  {
+   "index": 4,
+   "heading": "Laboratory Sampling, Verification, and Data Acceptance",
+   "topic": "Covers sample custody, laboratory verification steps, field-to-lab data reconciliation, and quality rules for accepting process measurements."
+  },
+  {
+   "index": 5,
+   "heading": "Maintenance Coordination, Chemical Access, and Work Control",
+   "topic": "Outlines planned work controls, supplier access, lockout coordination, shift communication, and evidence required before equipment is returned to service."
+  },
+  {
+   "index": 6,
+   "heading": "Disinfection, Clearwell Control, and High-Service Pumping",
+   "topic": "Details chlorine contact management, clearwell operating limits, pump-header sequencing, pressure support, and abnormal-condition safeguards."
+  },
+  {
+   "index": 7,
+   "heading": "Backwash Recovery, Residuals Handling, and Process Upset Response",
+   "topic": "Describes backwash recovery, solids handling, exception review, upset classification, and operator actions during storm-driven or filtration-related events."
+  },
+  {
+   "index": 8,
+   "heading": "Distribution Monitoring and Dispatch Coordination",
+   "topic": "Explains pressure-zone monitoring, dispatcher responsibilities, handoff practices, distribution station behavior, and control-room coordination with field crews."
+  },
+  {
+   "index": 9,
+   "heading": "Cybersecurity, Reliability, Alarms, and Emergency Governance",
+   "topic": "Defines access controls, alarm governance, backup power expectations, emergency authority, cybersecurity controls, and reliability requirements for critical plant services."
+  },
+  {
+   "index": 10,
+   "heading": "Commissioning, Training, Performance Review, and Continuous Improvement",
+   "topic": "Sets expectations for commissioning tests, operator training, maintenance feedback, distribution readiness, records retention, and periodic improvement of the control concept."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_RIVER_INTAKE_PUMP_STATION",
+   "canonical": "River Intake Pump Station",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RAW_WATER_SCREEN_CHANNEL",
+   "canonical": "Raw Water Screen Channel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "canonical": "North Filter Gallery",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_FILTER_GALLERY",
+   "canonical": "South Filter Gallery",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_COAGULANT_DOSING_SKID",
+   "canonical": "Coagulant Dosing Skid",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CHLORINE_CONTACT_BASIN",
+   "canonical": "Chlorine Contact Basin",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CLEARWELL_LEVEL_CONTROLLER",
+   "canonical": "Clearwell Level Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_HIGH_SERVICE_PUMP_HEADER",
+   "canonical": "High Service Pump Header",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_DISTRIBUTION_PRESSURE_STATION",
+   "canonical": "North Distribution Pressure Station",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "canonical": "South Distribution Pressure Station",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "canonical": "Laboratory Sample Receiving Bench",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SCADA_HISTORIAN_SERVER",
+   "canonical": "SCADA Historian Server",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BACKWASH_RECOVERY_TANK",
+   "canonical": "Backwash Recovery Tank",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CHIEF_OPERATOR",
+   "canonical": "Chief Operator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_LAB_TECHNICIAN",
+   "canonical": "Laboratory Technician",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_MAINTENANCE_PLANNER",
+   "canonical": "Maintenance Planner",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DISTRIBUTION_DISPATCHER",
+   "canonical": "Distribution Dispatcher",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CHEMICAL_SUPPLIER_DRIVER",
+   "canonical": "Chemical Supplier Driver",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DUTY_ENGINEER",
+   "canonical": "Duty Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_RESIDUALS_HAULER",
+   "canonical": "Residuals Hauler",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_RAKE_TORQUE_SNAPSHOT",
+   "canonical": "Rake Torque Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_FILTER_RUN_EXCEPTION_NOTE",
+   "canonical": "Filter Run Exception Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ALUM_BATCH_TICKET",
+   "canonical": "Alum Batch Ticket",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SAMPLE_CHAIN_SLIP",
+   "canonical": "Sample Chain Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CLEARWELL_DIVER_ENTRY_PERMIT",
+   "canonical": "Clearwell Diver Entry Permit",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BACKWASH_SOLIDS_MANIFEST",
+   "canonical": "Backwash Solids Manifest",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PRESSURE_ZONE_HANDOFF_CARD",
+   "canonical": "Pressure Zone Handoff Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CHLORINE_CYLINDER_SEAL_LOG",
+   "canonical": "Chlorine Cylinder Seal Log",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_JAR_TEST_PHOTOGRAPH_SET",
+   "canonical": "Jar Test Photograph Set",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PUMP_BEARING_VIBRATION_CLIP",
+   "canonical": "Pump Bearing Vibration Clip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_STORM_INTAKE_MODE",
+   "canonical": "Storm Intake Mode",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_CHLORINE_RESIDUAL_ALARM",
+   "canonical": "Chlorine Residual Alarm",
+   "kind": "state"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_RIVER_INTAKE_PUMP_STATION",
+   "alias": "Ironwood",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_SCADA_HISTORIAN_SERVER",
+   "alias": "Lantern",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_COAGULANT_DOSING_SKID",
+   "alias": "Marigold",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "alias": "Cobalt",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "alias": "Sparrow",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_MAINTENANCE_PLANNER",
+   "alias": "Quarry",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_HIGH_SERVICE_PUMP_HEADER",
+   "alias": "Juniper",
+   "intro_section": 6
+  },
+  {
+   "entity_id": "E_DISTRIBUTION_DISPATCHER",
+   "alias": "Falcon",
+   "intro_section": 6
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_RAW_WATER_SCREEN_CHANNEL",
+   "item": "E_RAKE_TORQUE_SNAPSHOT",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "intro_section": 2,
+   "link_section": 5,
+   "link_ref": "short",
+   "short_ref": "the snapshot"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_SOUTH_FILTER_GALLERY",
+   "item": "E_FILTER_RUN_EXCEPTION_NOTE",
+   "consumer": "E_CHIEF_OPERATOR",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_COAGULANT_DOSING_SKID",
+   "item": "E_ALUM_BATCH_TICKET",
+   "consumer": "E_LAB_TECHNICIAN",
+   "intro_section": 3,
+   "link_section": 4,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_LAB_TECHNICIAN",
+   "item": "E_SAMPLE_CHAIN_SLIP",
+   "consumer": "E_SCADA_HISTORIAN_SERVER",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_CLEARWELL_LEVEL_CONTROLLER",
+   "item": "E_CLEARWELL_DIVER_ENTRY_PERMIT",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "intro_section": 6,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the permit"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_CHIEF_OPERATOR",
+   "item": "E_BACKWASH_SOLIDS_MANIFEST",
+   "consumer": "E_RESIDUALS_HAULER",
+   "intro_section": 7,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_DISTRIBUTION_DISPATCHER",
+   "item": "E_PRESSURE_ZONE_HANDOFF_CARD",
+   "consumer": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "intro_section": 8,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the card"
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_CHEMICAL_SUPPLIER_DRIVER",
+   "item": "E_CHLORINE_CYLINDER_SEAL_LOG",
+   "consumer": "E_DUTY_ENGINEER",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "item": "E_JAR_TEST_PHOTOGRAPH_SET",
+   "consumer": "E_COAGULANT_DOSING_SKID",
+   "intro_section": 4,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the set"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_HIGH_SERVICE_PUMP_HEADER",
+   "item": "E_PUMP_BEARING_VIBRATION_CLIP",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the clip"
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_RIVER_INTAKE_PUMP_STATION",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_SCADA_HISTORIAN_SERVER",
+   "link_section": 4
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_COAGULANT_DOSING_SKID",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_MAINTENANCE_PLANNER",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_HIGH_SERVICE_PUMP_HEADER",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_DISTRIBUTION_DISPATCHER",
+   "link_section": 10
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "confusable_entity_id": "E_SOUTH_FILTER_GALLERY",
+   "shared_head": "Filter Gallery",
+   "link_section": 3
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "confusable_entity_id": "E_NORTH_DISTRIBUTION_PRESSURE_STATION",
+   "shared_head": "Distribution Pressure Station",
+   "link_section": 8
+  }
+ ],
+ "writer": "gpt-5.5",
+ "plan_sample": 0,
+ "domain": "a municipal drinking water treatment plant control system (intake, filtration, dosing, laboratory, distribution)"
+}

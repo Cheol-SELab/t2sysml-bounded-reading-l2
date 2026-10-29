@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Medication Return Kiosk provides \"the Return Bin Audit Label\" to Pharmacy Technician (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS020: The Medication Return Kiosk provides a controlled point for recording medication returns and capturing return details.\nS021: The Medication Return Kiosk produces the Return Bin Audit Label for a recorded return transaction.\nS116: Tallowmere guides ward staff through return-bin checks and records each check outcome for follow-up.\nS117: The Pharmacy Technician uses the audit label to identify a return bin for the scheduled collection.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS197: The Clinical Pharmacist also confirms that the patient identifiers and pharmacy label agree with the authorized order.\n\nAnswer \"supported\" only if the document states that Medication Return Kiosk produces or sends this item AND that Pharmacy Technician receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Pharmacy Technician uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S021 states the Medication Return Kiosk produces the Return Bin Audit Label, and S117 states the Pharmacy Technician uses the audit label to identify a return bin; no other sentence names a different producer or a different similarly named item (S197 concerns a pharmacy label for patient orders, which is unrelated).\"}",
+ "usage": {
+  "input_tokens": 810,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 121,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.312,
+ "created": "2026-10-19T19:02:46"
+}

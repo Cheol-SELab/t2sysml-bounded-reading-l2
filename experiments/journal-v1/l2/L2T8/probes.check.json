@@ -1,0 +1,246 @@
+{
+ "kept": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_RECEIVING_DESK",
+   "consumer": "E_YARD_GATE",
+   "item": "E_TRAILER_EXCEPTION_NOTE",
+   "link_ref": "short",
+   "short_ref": "the exception note",
+   "intro_unit": "S036",
+   "link_unit": "S129",
+   "distance_tokens": 1596,
+   "issues": []
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_WMS",
+   "consumer": "E_NORTH_CRANE",
+   "item": "E_SLOT_RESERVATION_RECEIPT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S057",
+   "link_unit": "S154",
+   "distance_tokens": 1690,
+   "issues": []
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_NORTH_CRANE",
+   "consumer": "E_WMS",
+   "item": "E_AISLE_OCCUPANCY_SNAPSHOT",
+   "link_ref": "short",
+   "short_ref": "the occupancy snapshot",
+   "intro_unit": "S092",
+   "link_unit": "S177",
+   "distance_tokens": 1587,
+   "issues": []
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_CONVEYOR_CONTROLLER",
+   "consumer": "E_FORKLIFT_FLEET",
+   "item": "E_TRANSFER_INDUCTION_TICKET",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S088",
+   "link_unit": "S200",
+   "distance_tokens": 2095,
+   "issues": []
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_FORKLIFT_FLEET",
+   "consumer": "E_WMS",
+   "item": "E_FORKLIFT_HANDOFF_CONFIRMATION",
+   "link_ref": "short",
+   "short_ref": "the handoff confirmation",
+   "intro_unit": "S115",
+   "link_unit": "S225",
+   "distance_tokens": 2095,
+   "issues": []
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_DIMENSION_SCANNER",
+   "consumer": "E_WMS",
+   "item": "E_OVERSIZE_LOAD_ADVISORY",
+   "link_ref": "short",
+   "short_ref": "the load advisory",
+   "intro_unit": "S070",
+   "link_unit": "S156",
+   "distance_tokens": 1510,
+   "issues": []
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_FIRE_PANEL",
+   "consumer": "E_SAFETY_CONTROLLER",
+   "item": "E_SPRINKLER_ZONE_INHIBIT_NOTICE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S117",
+   "link_unit": "S204",
+   "distance_tokens": 1663,
+   "issues": []
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_MAINTENANCE_TERMINAL",
+   "consumer": "E_NORTH_CRANE",
+   "item": "E_CRANE_SERVICE_RELEASE_CARD",
+   "link_ref": "short",
+   "short_ref": "the release card",
+   "intro_unit": "S140",
+   "link_unit": "S228",
+   "distance_tokens": 1682,
+   "issues": []
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_OUTBOUND_SCALE",
+   "consumer": "E_SHIPPING_DESK",
+   "item": "E_GROSS_WEIGHT_VARIANCE_SLIP",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S167",
+   "link_unit": "S226",
+   "distance_tokens": 1095,
+   "issues": []
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_YARD_GATE",
+   "alias": "Velvetrook",
+   "intro_unit": "S029",
+   "link_unit": "S179",
+   "distance_tokens": 2682,
+   "issues": []
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_NORTH_CRANE",
+   "alias": "Juniperwake",
+   "intro_unit": "S062",
+   "link_unit": "S206",
+   "distance_tokens": 2642,
+   "issues": []
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_CONVEYOR_CONTROLLER",
+   "alias": "Brasshaven",
+   "intro_unit": "S081",
+   "link_unit": "S232",
+   "distance_tokens": 2810,
+   "issues": []
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_FORKLIFT_FLEET",
+   "alias": "Larkspur",
+   "intro_unit": "S108",
+   "link_unit": "S233",
+   "distance_tokens": 2382,
+   "issues": []
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_DIMENSION_SCANNER",
+   "alias": "Moonquarry",
+   "intro_unit": "S067",
+   "link_unit": "S207",
+   "distance_tokens": 2568,
+   "issues": []
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_MAINTENANCE_TERMINAL",
+   "alias": "Copperfield",
+   "intro_unit": "S139",
+   "link_unit": "S234",
+   "distance_tokens": 1817,
+   "issues": []
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_SOUTH_CRANE",
+   "confusable_entity_id": "E_NORTH_CRANE",
+   "shared_head": "Aisle Stacker Crane",
+   "link_unit": "S182",
+   "distance_tokens": 0,
+   "issues": []
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_EAST_TRANSFER_CONVEYOR",
+   "confusable_entity_id": "E_WEST_TRANSFER_CONVEYOR",
+   "shared_head": "Transfer Conveyor",
+   "link_unit": "S210",
+   "distance_tokens": 0,
+   "issues": []
+  }
+ ],
+ "rejected": [
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_WMS",
+   "consumer": "E_DISPATCH_SORTER",
+   "item": "E_DISPATCH_WAVE_AMENDMENT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": null,
+   "link_unit": "S106",
+   "distance_tokens": null,
+   "issues": [
+    "tags intro=2 link=1"
+   ]
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_WMS",
+   "alias": "Morrowglass",
+   "intro_unit": null,
+   "link_unit": null,
+   "distance_tokens": null,
+   "issues": [
+    "tags intro=3 link=2"
+   ]
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_RECEIVING_DESK",
+   "alias": "Cinderbay",
+   "intro_unit": "S032",
+   "link_unit": null,
+   "distance_tokens": null,
+   "issues": [
+    "tags intro=1 link=2"
+   ]
+  }
+ ],
+ "n_units": 243,
+ "doc_tokens": 4383,
+ "far_share": 1.0,
+ "budget": 1024
+}

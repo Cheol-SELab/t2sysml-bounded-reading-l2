@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: DRAW Advisory List provides \"proposed reroutes\" to Traffic Managers (an information or material flow).\n\nSource sentences:\nU0027: The arrival-specific rerouting algorithm continuously searches for reroute opportunities as track and flight plan data are updated.\nU0028: The DRAW’s route trial planning capability is integrated with arrival scheduling components to allow the Traffic Management Coordinators (TMCs) at Centers to evaluate the impact of proposed DRAW reroutes on arrival scheduling before implementing them (see Figure 1).\nU0036: An example of the current DRAW interface is shown in Figure 3.\nU0037: Key features include the DRAW Advisory List which displays proposed reroutes, and an integrated route and schedule trial planner that allows routes and corresponding schedule impact to be evaluated simultaneously.\n\nAnswer \"supported\" only if the sentences state that DRAW Advisory List produces or sends this item AND that Traffic Managers receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"U0037 says the DRAW Advisory List displays proposed reroutes, and U0028 says TMCs evaluate proposed DRAW reroutes, but no sentence states that TMCs (Traffic Managers) receive or use the list's displayed reroutes, so the link is only implied.\"}",
+ "usage": {
+  "input_tokens": 739,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 113,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.555,
+ "created": "2026-10-15T00:19:23"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Duty Planner provides \"the Transfer Manifest Addendum\" to Vessel Master (an information or material flow).\n\nSource sentences:\nS125: Blade Inspection Drone is designated Larkspur for this operational concept.\nS126: Duty Planner prepares the Transfer Manifest Addendum to capture approved vessel deployment changes.\nS277: The Marine Coordinator reviews access options and vessel availability when a work window narrows.\nS278: The Vessel Master receives the Transfer Manifest Addendum before departure.\n\nAnswer \"supported\" only if the sentences state that Duty Planner produces or sends this item AND that Vessel Master receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S126 states Duty Planner prepares the Transfer Manifest Addendum, and S278 states Vessel Master receives the same item before departure, so the flow from Duty Planner to Vessel Master is supported.\"}",
+ "usage": {
+  "input_tokens": 628,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 86,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 6.055,
+ "created": "2026-10-14T12:50:15"
+}

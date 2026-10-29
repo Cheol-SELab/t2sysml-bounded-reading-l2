@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metocean Buoy provides \"the Wave Burst Record\" to Weather Analyst (an information or material flow).\n\nSource sentences:\nS193: The Control Engineer reviews persistent alarms and coordinates electrical support with the Substation Operator.\nS194: Metocean Buoy produces the Wave Burst Record at the configured sampling interval.\nS322: The HSE Officer reviews task hazards and confirms that required controls are assigned before the permit is authorized.\nS323: The Weather Analyst uses the Wave Burst Record to assess whether the planned access period remains suitable.\n\nAnswer \"supported\" only if the sentences state that Metocean Buoy produces or sends this item AND that Weather Analyst receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S194 states that Metocean Buoy produces the Wave Burst Record, and S323 states that the Weather Analyst uses the same record.\"}",
+ "usage": {
+  "input_tokens": 287,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 45,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 332
+ },
+ "attempts": 1,
+ "wall_s": 3.465,
+ "created": "2026-10-14T12:54:16"
+}

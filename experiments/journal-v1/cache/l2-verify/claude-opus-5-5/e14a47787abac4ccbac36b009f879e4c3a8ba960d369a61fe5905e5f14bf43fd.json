@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Interfaces to external systems provides \"approved coordination information\" to Ramp Control Lead (an information or material flow).\n\nSource sentences:\nS036: Systems outside the boundary include airline reservation platforms, crew management systems, baggage reconciliation systems, airport commercial systems, national surveillance infrastructure, and aircraft avionics.\nS037: Interfaces to external systems are included in the boundary only to the extent required to validate identity, receive authorized operational data, publish approved coordination information, and maintain auditable records.\nS062: The Airport Duty Manager confirms terminal opening status, essential facility readiness, and airport service constraints that may affect the first operational waves.\nS063: The Ramp Control Lead reviews early stand readiness using information from the Ramp Movement Board, East Apron Sensor, West Apron Sensor, and handling coordination calls.\n\nAnswer \"supported\" only if the sentences state that Interfaces to external systems produces or sends this item AND that Ramp Control Lead receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S037 says the interfaces publish approved coordination information, but no sentence names the Ramp Control Lead as its recipient; S063 has the Ramp Control Lead using information from the Ramp Movement Board, apron sensors and coordination calls instead.\"}",
+ "usage": {
+  "input_tokens": 743,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 101,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.065,
+ "created": "2026-10-14T12:45:57"
+}

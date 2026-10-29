@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "Slot allocation within the Regional Flow Platform is governed by operational safety, published capacity, equitable access, and traceable collaborative decision making.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine is introduced in operating documentation with the local alias Blueharbor for controller-facing references during transition training.",
+   "tags": [
+    "ALIAS:E_SLOT_ALLOCATION_ENGINE"
+   ]
+  },
+  {
+   "text": "The Slot Allocation Engine proposes regulated departure and arrival opportunities by matching demand from the Demand Prediction Service to constraints supplied by the Capacity Assessment Module.",
+   "tags": []
+  },
+  {
+   "text": "The primary inputs are the Flight Intent Message, the Airport Capacity Plan, the current Airport Acceptance Rate, runway metering limits, and airspace sector loading conditions.",
+   "tags": []
+  },
+  {
+   "text": "When a Ground Delay Program is active, the engine derives a Calculated Takeoff Time or arrival opportunity that preserves the declared capacity envelope before local preference is applied.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager owns the final operating policy for priority classes and may authorize temporary rule changes during a Capacity Reduction State.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator administers the allocation run, reviews exceptions, and confirms that proposed results are ready for publication through the Airport CDM Portal.",
+   "tags": []
+  },
+  {
+   "text": "Baseline priority is assigned first to safety-critical, emergency, humanitarian, and national obligation flights, subject to validation by the appropriate operational authority.",
+   "tags": []
+  },
+  {
+   "text": "Scheduled commercial services are then handled according to the published timetable, declared readiness, airport acceptance capacity, and the fairness rules held in the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "General aviation, repositioning, training, and discretionary movements are allocated after protected and scheduled demand unless a specific operational justification is approved.",
+   "tags": []
+  },
+  {
+   "text": "Fairness is measured across operators by delay distribution, proportional access to constrained capacity, and avoidance of systematic disadvantage over the active regulation period.",
+   "tags": []
+  },
+  {
+   "text": "The engine shall not improve one operator's position by imposing an excessive delay on another operator unless the rule basis is visible and logged.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Interface Adapter supplies operator preferences, but those preferences are advisory unless they are consistent with the governing priority class and available capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Target Off Block Time is used to test readiness, and an aircraft that cannot meet readiness criteria may be resequenced behind aircraft that can use the opportunity.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator uses the delay slip when requesting an exemption review for a crew connectivity constraint that is not already represented in the allocation data.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "text": "Exemption requests are evaluated against safety impact, network impact, passenger impact, crew legality, and the availability of a lower-impact alternative.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator records each accepted or rejected exemption in the Collaborative Decision Log with the rule applied, the approving role, and the expected operational consequence.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward ensures that exemption categories, priority codes, and fairness metrics are versioned in the Business Rules Registry before they are used in live allocation.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console presents proposed arrival opportunities with the capacity source, regulation start time, and expected delay for each affected flight.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service presents proposed departure opportunities and associated Calculated Takeoff Time values for coordination with the Tower Sequence Manager.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor may reject a proposed departure opportunity when runway safety, wake spacing, or local sequencing conditions make the proposal impracticable.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead may identify apron constraints through the Ramp Movement Board, but the Slot Allocation Engine remains responsible for recalculating the regulated opportunity.",
+   "tags": []
+  },
+  {
+   "text": "All allocation runs are time stamped by the Time Synchronization Service and written to the Audit Event Ledger for later reconstruction of the decision sequence.",
+   "tags": []
+  },
+  {
+   "text": "During Normal Operations, allocation results are refreshed at regular intervals, while Adverse Weather Mode and Recovery Phase allow shorter recalculation cycles approved by the Regional Flow Manager.",
+   "tags": []
+  },
+  {
+   "text": "If the Regional Flow Platform enters Contingency Fallback State, the Contingency Operations Console preserves the last valid allocation, supports manual amendments, and marks the resulting Slot Compliance State as provisional.",
+   "tags": []
+  },
+  {
+   "text": "Post-event assessment in the Performance Analytics Warehouse compares proposed opportunities, actual movement times, exemption usage, and operator-level delay equity to improve subsequent rule calibration.",
+   "tags": []
+  }
+ ]
+}

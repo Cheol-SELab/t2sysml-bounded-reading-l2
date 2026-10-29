@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Regional Dispatch Center provides \"the Unit Staging Change Card\" to Radio Coordinator (an information or material flow).\n\nSource sentences:\nS111: The dispatcher records the authorized unit and any conditions attached to its assignment.\nS112: Regional Dispatch Center produces the Unit Staging Change Card when a previously selected unit must be repositioned.\nS206: North Gate Status Board and South Gate Status Board provide separate views of access conditions that may affect radio reach or ambulance movement.\nS207: Radio Coordinator uses the change card to adjust channel assignments and record the effective time of each change.\n\nAnswer \"supported\" only if the sentences state that Regional Dispatch Center produces or sends this item AND that Radio Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S112 states that the Regional Dispatch Center produces the Unit Staging Change Card, and S207 states that the Radio Coordinator uses the same change card.\"}",
+ "usage": {
+  "input_tokens": 292,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 133,
+  "output_tokens_details": {
+   "reasoning_tokens": 84
+  },
+  "total_tokens": 425
+ },
+ "attempts": 1,
+ "wall_s": 2.067,
+ "created": "2026-10-14T00:08:07"
+}

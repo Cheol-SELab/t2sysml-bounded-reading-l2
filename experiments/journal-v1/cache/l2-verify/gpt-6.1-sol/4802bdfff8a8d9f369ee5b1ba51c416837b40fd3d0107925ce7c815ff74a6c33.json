@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Maintenance Release Terminal provides \"the Crane Service Release Card\" to North Aisle Stacker Crane (an information or material flow).\n\nSource sentences:\nS139: Maintenance Release Terminal is also known as Copperfield.\nS140: Maintenance Release Terminal produces the Crane Service Release Card after required maintenance checks have been completed.\nS227: A scale variance outside the approved tolerance is investigated and resolved before the affected shipment is released.\nS228: The North Aisle Stacker Crane accepts the release card as authorization to return to service after its checks are complete.\n\nAnswer \"supported\" only if the sentences state that Maintenance Release Terminal produces or sends this item AND that North Aisle Stacker Crane receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S140 states that Maintenance Release Terminal produces the Crane Service Release Card, and S228 states that North Aisle Stacker Crane accepts the release card as authorization to return to service.\"}",
+ "usage": {
+  "input_tokens": 293,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 54,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 347
+ },
+ "attempts": 1,
+ "wall_s": 3.796,
+ "created": "2026-10-14T12:43:20"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: constraint(subject=scheduled contact opportunities, expression=scheduled contact opportunities are compatible with station readiness and maintenance constraints)\n\nSource sentences (the last one is where the fact was extracted):\nS016: The Primary Processing Cluster is the nominal production environment for standard mission products, while the Backup Processing Cluster is maintained for resilience and controlled failover.\nS017: The Long Term Archive is the authoritative repository for preserved mission data, generated products, processing records, and operational evidence required for traceability.\nS018: The User Services Portal provides the controlled external interface for product search, ordering, status communication, and user support workflows.\nS019: The Ground Network Manager coordinates availability of the antenna assets and confirms that scheduled contact opportunities are compatible with station readiness and maintenance constraints.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S019 states that the Ground Network Manager confirms scheduled contact opportunities are compatible with station readiness and maintenance constraints, which matches the constraint expression and its subject.\"}",
+ "usage": {
+  "input_tokens": 725,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 76,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.404,
+ "created": "2026-10-14T12:52:01"
+}

@@ -1,0 +1,89 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "S036 states that the Inbound Inspection Desk sends the Trailer Seal Exception Note, and S129's 'the exception note' is used by the Yard Gate Controller with no competing exception note introduced."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "S057 says the Warehouse Management System produces the Slot Reservation Receipt, and S154 says the North Aisle Stacker Crane uses that receipt."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "S092 states the North Aisle Stacker Crane sends the Aisle Occupancy Snapshot, and S177 says Morrowglass, the Warehouse Management System, receives the occupancy snapshot."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "S088 identifies the Conveyor Line Controller as producer of the Transfer Induction Ticket, and S200 states the Autonomous Forklift Fleet receives that ticket."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "S115 says the Autonomous Forklift Fleet produces the Forklift Handoff Confirmation, and S225 says the Warehouse Management System uses the handoff confirmation."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "S070 states the Pallet Dimension Scanner produces the Oversize Load Advisory, and S156 says Morrowglass, the Warehouse Management System, consumes the load advisory."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "S117 says the Fire Alarm Panel produces the Sprinkler Zone Inhibit Notice, and S204 says the Safety Zone Controller applies that notice."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "S140 identifies the Maintenance Release Terminal as producing the Crane Service Release Card, and S228 says the North Aisle Stacker Crane accepts the release card."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "S167 says the Outbound Checkweigh Scale produces the Gross Weight Variance Slip, and S226 says the Shipping Documentation Desk receives and reconciles it."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "S029 establishes Velvetrook as another name for the Yard Gate Controller, and the alias is used consistently in S179."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "S062 establishes Juniperwake as the alias of the North Aisle Stacker Crane, and S206 uses it consistently for aisle-clearance behavior."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "S081 establishes Brasshaven as the Conveyor Line Controller, and S232 uses the alias for conveyor-zone checks."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "S108 introduces Larkspur as the alias for the Autonomous Forklift Fleet, and S233 uses it consistently for fleet vehicles."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "S067 establishes Moonquarry as the Pallet Dimension Scanner, and S207 uses the alias for pallet-profile dimension checks."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "S139 establishes Copperfield as the Maintenance Release Terminal, and S234 uses the alias for service-work records."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "S182 explicitly names the South Aisle Stacker Crane as performing the recovery maneuver, not the North Aisle Stacker Crane."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "S210 explicitly names the East Transfer Conveyor as performing the controlled restart, not the West Transfer Conveyor."
+  }
+ ]
+}

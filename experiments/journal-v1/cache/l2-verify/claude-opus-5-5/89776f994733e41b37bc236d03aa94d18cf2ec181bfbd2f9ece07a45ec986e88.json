@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airline Interface Adapter provides \"the Late Baggage Tag List\" to Ground Handling Dispatcher (an information or material flow).\n\nSource sentences:\nS451: The Airline Operations Coordinator remains responsible for confirming whether the affected flight should keep its Target Off Block Time, request a new value, or accept a later Calculated Takeoff Time.\nS452: Airline Interface Adapter produces the Late Baggage Tag List when baggage reconciliation data indicates that departure readiness may be overstated.\nS518: Each exception record carries the affected flight, stand, readiness milestone, estimated recovery time, confidence level, and accountable operational role.\nS519: Ground Handling Dispatcher uses the tag list to confirm which flights require baggage reconciliation before off-block readiness is updated.\n\nAnswer \"supported\" only if the sentences state that Airline Interface Adapter produces or sends this item AND that Ground Handling Dispatcher receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S452 states the Airline Interface Adapter produces the Late Baggage Tag List, and S519 states the Ground Handling Dispatcher uses 'the tag list', which is the same item named more briefly.\"}",
+ "usage": {
+  "input_tokens": 731,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.926,
+ "created": "2026-10-14T12:46:20"
+}

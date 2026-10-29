@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: East Junction Interlocking provides \"the Axle Counter Reset Request\" to Signal Maintenance Engineer (an information or material flow).\n\nSource sentences:\nS086: Where axle counter occupation conflicts with the train location estimated by the CBTC system, the more restrictive state is applied until the discrepancy is resolved.\nS087: East Junction Interlocking sends the Axle Counter Reset Request under the configured degraded-mode reset procedure.\nS188: Before a manual route is issued, the Signal Maintenance Engineer verifies point condition, track vacancy, and local protection using approved field procedures.\nS189: The Signal Maintenance Engineer uses the Axle Counter Reset Request as the controlling authority for restoring a failed section after local occupancy checks are complete.\n\nAnswer \"supported\" only if the sentences state that East Junction Interlocking produces or sends this item AND that Signal Maintenance Engineer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S087 states East Junction Interlocking sends the Axle Counter Reset Request, and S189 states the Signal Maintenance Engineer uses that same item as controlling authority, so both the producer and the user of the item are covered.\"}",
+ "usage": {
+  "input_tokens": 721,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 90,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.839,
+ "created": "2026-10-14T12:33:06"
+}

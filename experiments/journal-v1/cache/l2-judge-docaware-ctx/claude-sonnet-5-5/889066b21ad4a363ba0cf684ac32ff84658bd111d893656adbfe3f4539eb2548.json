@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Laboratory Technician provides \"the Sample Chain Slip\" to SCADA Historian Server (an information or material flow).\n\nSource sentences:\nS083: The Laboratory Technician uses the Alum Batch Ticket to verify chemical lot identity before recording related laboratory observations.\nS084: The Laboratory Technician prepares and sends the Sample Chain Slip after verifying that custody entries are complete and legible.\nS187: Sparrow records incoming distribution check samples with the pressure zone, collection point, and time needed for control-room review.\nS188: The SCADA Historian Server uses the Sample Chain Slip to associate distribution water-quality entries with the operating period shown in the electronic log.\n\nAnswer \"supported\" only if the sentences state that Laboratory Technician produces or sends this item AND that SCADA Historian Server receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\n(none found)",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S084 states the Laboratory Technician prepares and sends the Sample Chain Slip, and S188 states the SCADA Historian Server uses the same Sample Chain Slip, so the provider and receiver roles match the candidate.\"}",
+ "usage": {
+  "input_tokens": 721,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 92,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.718,
+ "created": "2026-10-19T19:12:33"
+}

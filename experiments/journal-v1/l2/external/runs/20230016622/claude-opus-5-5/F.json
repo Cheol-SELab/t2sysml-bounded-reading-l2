@@ -1,0 +1,254 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0004",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "crew will be given greater access to a variety of information to make locally informed decisions"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "requirement",
+   "subject": "flight team",
+   "text": "The broader flight team will need to simultaneously interact with this data and provide new means of support throughout the mission"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "flight team",
+   "label": "interact with this data"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "flight team",
+   "label": "provide new means of support"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "National Aeronautics and Space Administration",
+   "label": "proposed requirements for a digital display for an EVA spacesuit"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "requirement",
+   "subject": "JSC-EV3",
+   "text": "Proposed changes to this document shall be submitted to JSC-EV3 for consideration and disposition"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "flow",
+   "source": "null",
+   "target": "JSC-EV3",
+   "payload": "Proposed changes"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "requirement",
+   "subject": "crew",
+   "text": "Crew on these long duration missions will need technologies that promote autonomy across all phases of flight"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "requirement",
+   "subject": "advanced informatics device",
+   "text": "an advanced informatics device must not only service the needs of the suited crew member, but it must also support the broader team of remote support personnel and accommodate interfaces with a variety of other EVA assets"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "requirement",
+   "subject": "advanced informatics device",
+   "text": "the advanced informatics device cannot simply be designed for a single user"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "constraint",
+   "subject": "xEVAS vendors",
+   "expression": "not required to implement an AR form factor"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Maximize EV crew productivity without compromising their safety"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Minimize the number of discrete physical acts required by the EV crew to operate"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Minimize the amount of time required to change from the current state to a desired state"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Minimize the interference with other means of communication among the work system"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "Provide redundant means of control for EV crew"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "crew",
+   "label": "view and understand digital content"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "requirement",
+   "subject": "null",
+   "text": "numerous different control schemes should be considered for feasibility, ease of use, and overall functionality"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "advanced informatics display and control system",
+   "text": "the display and control system must be capable of coping with the complexities of the jobs that crew will face"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "composition",
+   "whole": "helmet bubble",
+   "parts": [
+    "Joint Augmented Reality Visual Informatics System"
+   ]
+  },
+  {
+   "unit_id": "U0101",
+   "type": "composition",
+   "whole": "multi-modal control scheme",
+   "parts": [
+    "crew physical hand controller"
+   ]
+  },
+  {
+   "unit_id": "U0101",
+   "type": "attribute",
+   "owner": "crew physical hand controller",
+   "name": "configuration",
+   "value": "two-button and dial"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "composition",
+   "whole": "multi-modal control scheme",
+   "parts": [
+    "voice control",
+    "remote control"
+   ]
+  },
+  {
+   "unit_id": "U0095",
+   "type": "attribute",
+   "owner": "user interface",
+   "name": "color",
+   "value": "monochrome green"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "constraint",
+   "subject": "Joint Augmented Reality Visual Informatics System",
+   "expression": "four years of research and development"
+  }
+ ],
+ "entities": [
+  {
+   "name": "National Aeronautics and Space Administration",
+   "aliases": [
+    "NASA"
+   ]
+  },
+  {
+   "name": "Joint Augmented Reality Visual Informatics System",
+   "aliases": [
+    "Joint AR"
+   ]
+  },
+  {
+   "name": "Mission Control Center",
+   "aliases": [
+    "MCC"
+   ]
+  },
+  {
+   "name": "xEVAS System Requirements Document",
+   "aliases": [
+    "SRD"
+   ]
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "flight team",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics device",
+   "aliases": []
+  },
+  {
+   "name": "advanced informatics display and control system",
+   "aliases": []
+  },
+  {
+   "name": "JSC-EV3",
+   "aliases": []
+  },
+  {
+   "name": "EV crew",
+   "aliases": []
+  },
+  {
+   "name": "crew physical hand controller",
+   "aliases": []
+  },
+  {
+   "name": "multi-modal control scheme",
+   "aliases": []
+  },
+  {
+   "name": "helmet bubble",
+   "aliases": []
+  },
+  {
+   "name": "user interface",
+   "aliases": []
+  },
+  {
+   "name": "xEVAS vendors",
+   "aliases": []
+  },
+  {
+   "name": "registered AR",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0111"
+   ],
+   "chunk_tokens": 4549,
+   "memory_tokens": 0,
+   "prompt_tokens": 5657,
+   "input": 9557,
+   "output": 2342,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

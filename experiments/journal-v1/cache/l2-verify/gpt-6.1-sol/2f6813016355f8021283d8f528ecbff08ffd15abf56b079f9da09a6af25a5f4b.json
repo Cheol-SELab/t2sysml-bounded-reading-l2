@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Capacity Assessment Module provides \"runway-specific capacity values\" to Integrated Tactical Management Position (an information or material flow).\n\nSource sentences:\nS113: Weather impacts are translated into capacity modifiers for runway configuration, arrival spacing, departure spacing, surface movement constraints, and approach sector availability.\nS114: The North Runway Meter and South Runway Meter receive runway-specific capacity values after the Capacity Assessment Module applies the current wind, visibility, and precipitation assumptions.\nS433: The Military Airspace Liaison can mark an airspace release or closure assumption for review before it affects tactical flow calculations.\nS434: The Meteorology Briefing Officer verifies weather impacts shown from the Weather Ingest Gateway before the position applies weather-driven capacity values.\n\nAnswer \"supported\" only if the sentences state that Capacity Assessment Module produces or sends this item AND that Integrated Tactical Management Position receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S114 identifies the North and South Runway Meters as recipients of runway-specific capacity values, while S434 does not establish that the Integrated Tactical Management Position receives or uses those same values.\"}",
+ "usage": {
+  "input_tokens": 324,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 157,
+  "output_tokens_details": {
+   "reasoning_tokens": 100
+  },
+  "total_tokens": 481
+ },
+ "attempts": 1,
+ "wall_s": 5.849,
+ "created": "2026-10-14T12:46:37"
+}

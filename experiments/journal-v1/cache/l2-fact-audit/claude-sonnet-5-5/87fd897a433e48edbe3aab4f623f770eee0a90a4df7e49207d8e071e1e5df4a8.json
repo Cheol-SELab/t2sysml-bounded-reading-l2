@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=Latency budgets are assigned by service class)\n\nSource sentences (the last one is where the fact was extracted):\nS059: Dynamic routing is permitted only on controlled adjacencies, and static backup routes are preconfigured for antenna sites where local carrier behavior is not sufficiently predictable.\nS060: Critical contact paths are pinned before acquisition of signal when the Ground Network Manager determines that a maintenance condition could cause route oscillation.\nS061: Management access to routers, firewalls, time servers, and monitoring probes is restricted to dedicated administration networks that are not advertised to mission data enclaves.\nS062: Latency budgets are assigned by service class so that command validation, real-time telemetry display, orbit determination support, processing transfers, and archive replication can be measured against different expectations.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S062 directly states that latency budgets are assigned by service class, which matches the action label exactly.\"}",
+ "usage": {
+  "input_tokens": 721,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 47,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.57,
+ "created": "2026-10-14T12:52:19"
+}

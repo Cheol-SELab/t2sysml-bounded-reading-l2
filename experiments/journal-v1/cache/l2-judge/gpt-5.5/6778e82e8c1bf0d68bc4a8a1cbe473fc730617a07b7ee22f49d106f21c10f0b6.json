@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Computer Aided Dispatch Console provides \"current incident details\" to Call Taker Mara (an information or material flow).\n\nSource sentences:\nS004: The service operates continuously and maintains a shared operational picture of incidents, available units, and known access constraints.\nS005: Call Taker Mara obtains essential incident details, confirms the reported location, and enters the request for assessment.\nS089: Data Quality Officer flags data defects for review but does not independently change a clinical priority.\nS090: Computer Aided Dispatch Console presents the current incident details and assigned priority to authorized dispatch staff.\n\nAnswer \"supported\" only if the sentences state that Computer Aided Dispatch Console produces or sends this item AND that Call Taker Mara receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The text says the Computer Aided Dispatch Console presents current incident details to authorized dispatch staff, while Call Taker Mara obtains essential incident details without stating they come from the console.\"}",
+ "usage": {
+  "input_tokens": 297,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 338,
+  "output_tokens_details": {
+   "reasoning_tokens": 284
+  },
+  "total_tokens": 635
+ },
+ "attempts": 1,
+ "wall_s": 8.755,
+ "created": "2026-10-14T00:07:56"
+}

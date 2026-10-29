@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Work Permit Portal is the controlled entry point for planning, reviewing, approving, and closing maintenance work.",
+   "tags": []
+  },
+  {
+   "text": "Work Permit Portal is referred to as Redoubt in this section.",
+   "tags": [
+    "ALIAS:E_WORK_PERMIT_PORTAL"
+   ]
+  },
+  {
+   "text": "The authorization lifecycle begins when a work request is entered with its location, scope, planned duration, and responsible team.",
+   "tags": []
+  },
+  {
+   "text": "The requester identifies the equipment affected and describes the intended work in terms that can be checked against operating constraints.",
+   "tags": []
+  },
+  {
+   "text": "Duty Planner reviews the request for completeness and assigns it to the appropriate planning queue.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Planning Engine can use reviewed condition information when prioritizing future maintenance activities.",
+   "tags": []
+  },
+  {
+   "text": "Work Permit Portal maintains the request record and its revision history throughout review and execution.",
+   "tags": []
+  },
+  {
+   "text": "The review identifies hazards, required controls, access arrangements, and any operating coordination needed before work can proceed.",
+   "tags": []
+  },
+  {
+   "text": "HSE Officer reviews the proposed controls when the task presents a material personnel or environmental risk.",
+   "tags": []
+  },
+  {
+   "text": "Technical reviewers confirm that the work scope is compatible with equipment condition and the planned maintenance method.",
+   "tags": []
+  },
+  {
+   "text": "SCADA Gateway uses the deviation notice to flag work packages that may require technical review.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "text": "Marine Coordinator checks that the planned access method and timing are practical for the work location.",
+   "tags": []
+  },
+  {
+   "text": "Vessel Master confirms that the vessel plan can support the approved personnel and equipment transfer.",
+   "tags": []
+  },
+  {
+   "text": "Work Permit Portal records review decisions and returns incomplete requests to the requester with the required corrections identified.",
+   "tags": []
+  },
+  {
+   "text": "Warehouse System produces a Backorder Exception Slip when a requested component cannot be supplied by the planned issue date.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "The Duty Planner resolves outstanding supply and scheduling issues before submitting the request for authorization.",
+   "tags": []
+  },
+  {
+   "text": "The designated authorizing role grants permission only after required reviews and controls are recorded in the portal.",
+   "tags": []
+  },
+  {
+   "text": "Approval is limited to the stated scope, work location, time window, and assigned personnel.",
+   "tags": []
+  },
+  {
+   "text": "Field Supervisor verifies that the approved conditions remain valid before the crew starts work.",
+   "tags": []
+  },
+  {
+   "text": "Any material change to scope, conditions, or timing requires reassessment and may suspend the current authorization.",
+   "tags": []
+  },
+  {
+   "text": "Work Permit Portal records the start, pause, resumption, and completion of authorized work against the permit record.",
+   "tags": []
+  },
+  {
+   "text": "The responsible team reports completion status and outstanding issues before the permit is closed.",
+   "tags": []
+  },
+  {
+   "text": "Juniper Vale shall provide current operational status to permit reviewers when requested as part of the authorization check.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "Closed records remain available for audit, incident review, and future planning.",
+   "tags": []
+  }
+ ]
+}

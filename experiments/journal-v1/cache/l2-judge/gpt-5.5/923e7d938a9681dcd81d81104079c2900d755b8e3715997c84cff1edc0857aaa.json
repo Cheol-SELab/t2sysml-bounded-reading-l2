@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Computer Aided Dispatch Console provides \"estimated travel times, unit availability, and relevant access constraints\" to Shift Commander (an information or material flow).\n\nSource sentences:\nS102: The Ambulance Coordination Platform presents units whose reported status and capabilities match the incident requirements.\nS103: The Computer Aided Dispatch Console displays estimated travel times, unit availability, and relevant access constraints.\nS162: The South Gate Status Board displays current access information for crews approaching the receiving facility through the south entrance.\nS163: The Shift Commander reviews access constraints that could affect arrival timing or safe patient transfer.\n\nAnswer \"supported\" only if the sentences state that Computer Aided Dispatch Console produces or sends this item AND that Shift Commander receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S103 says the Computer Aided Dispatch Console displays estimated travel times, unit availability, and access constraints, but S163 only says the Shift Commander reviews access constraints and does not state that the console provides the full listed information to the Shift Commander.\"}",
+ "usage": {
+  "input_tokens": 296,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 426,
+  "output_tokens_details": {
+   "reasoning_tokens": 358
+  },
+  "total_tokens": 722
+ },
+ "attempts": 1,
+ "wall_s": 6.802,
+ "created": "2026-10-13T23:54:17"
+}

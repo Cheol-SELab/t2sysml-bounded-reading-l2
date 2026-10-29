@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Cutover planning, label=define the exact control boundaries, permissible train movements, staffing levels, and rollback conditions for each migration stage)\n\nSource sentences (the last one is where the fact was extracted):\nS228: The South District Zone Controller shall be commissioned under the same test regime so that boundary behavior is verified before whole-line operation is attempted.\nS229: East Junction Interlocking and West Junction Interlocking shall remain under enhanced monitoring during migration because route setting, point detection, and authority release behavior are critical to mixed-mode operation.\nS230: The staged migration from legacy signalling shall divide the railway into controlled areas that can be commissioned, operated, and, if necessary, returned to legacy control without affecting uncommissioned areas.\nS231: Cutover planning shall define the exact control boundaries, permissible train movements, staffing levels, and rollback conditions for each migration stage.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S231 states that cutover planning shall define the exact control boundaries, permissible train movements, staffing levels, and rollback conditions for each migration stage, matching the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 757,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 76,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.18,
+ "created": "2026-10-14T12:51:56"
+}

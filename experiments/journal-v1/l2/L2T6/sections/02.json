@@ -1,0 +1,118 @@
+{
+ "sentences": [
+  {
+   "text": "Check-in acceptance begins when staff confirm that the bag is eligible for carriage under the applicable airline rules.",
+   "tags": []
+  },
+  {
+   "text": "Staff verify the passenger and flight details before accepting the bag into the checked-baggage process.",
+   "tags": []
+  },
+  {
+   "text": "The Pier 4 Bag-Drop Unit records the accepted bag and initiates its processing.",
+   "tags": []
+  },
+  {
+   "text": "The Bag Tag Printer produces a durable tag with a unique identifier for each accepted bag.",
+   "tags": []
+  },
+  {
+   "text": "The tag identifier is associated with the passenger and flight record in the Baggage Control System.",
+   "tags": []
+  },
+  {
+   "text": "The Baggage Control System checks that the flight is open for bag acceptance and that the bag record is complete.",
+   "tags": []
+  },
+  {
+   "text": "Bags with missing, unreadable, or conflicting acceptance data are held for staff resolution before induction.",
+   "tags": []
+  },
+  {
+   "text": "Staff check bag dimensions and weight against the configured limits for standard conveyor handling.",
+   "tags": []
+  },
+  {
+   "text": "The Pier 4 Bag-Drop Unit sends an Oversize Exception Ticket when a checked bag exceeds the configured size envelope.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "text": "Oversized bags remain in a designated holding area until staff confirm an approved handling route.",
+   "tags": []
+  },
+  {
+   "text": "The Transfer Bag Feeder identifies each inbound transfer bag and records its arrival into the local handling process.",
+   "tags": []
+  },
+  {
+   "text": "The Transfer Bag Feeder sends a Late Transfer Bag Card when a bag enters from an inbound transfer stream.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "Staff confirm that transfer-bag identifiers are legible and correspond to a valid onward flight record.",
+   "tags": []
+  },
+  {
+   "text": "The Baggage Control System compares transfer-bag data with the current routing information before the bag is released for induction.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Data Gateway supplies flight and routing records used for acceptance and induction decisions.",
+   "tags": []
+  },
+  {
+   "text": "Before induction, the bag record must be valid, the selected route must be available, and the receiving equipment must be ready.",
+   "tags": []
+  },
+  {
+   "text": "The Concourse Zone Controller grants an induction permissive only when local equipment status and operating restrictions allow movement.",
+   "tags": []
+  },
+  {
+   "text": "The Induction Tray Conveyor accepts bags through controlled feed points and maintains separation between successive bags.",
+   "tags": []
+  },
+  {
+   "text": "Interlocks stop feed movement when a jam, access-door opening, or loss of downstream readiness is detected.",
+   "tags": []
+  },
+  {
+   "text": "The North Gate Scanner reads the bag identifier as the bag enters the screening and sorting network.",
+   "tags": []
+  },
+  {
+   "text": "The North Gate Scanner is also known locally as Kestrel.",
+   "tags": [
+    "ALIAS:E_NORTH_GATE_SCANNER"
+   ]
+  },
+  {
+   "text": "The South Gate Scanner provides an independent read point for bags routed through its assigned entry path.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Crossbelt Sorter receives inducted bags and directs them according to the active routing data.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Crossbelt Sorter is also known locally as Juniper.",
+   "tags": [
+    "ALIAS:E_PRIMARY_SORTER"
+   ]
+  },
+  {
+   "text": "When automated image review cannot resolve a bag image, staff at the Image Resolution Desk assess the available image and record a disposition.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Ramp Coordinator sends a Carousel Release Slip when the outbound build is authorized.",
+   "tags": [
+    "F10:intro"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Airport Duty Manager provides \"the Medical Diversion Notice\" to Arrival Regulation Console (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS495: The Arrival Regulation Console presents diversion options with estimated holding exposure, likely gate or stand impact, and any expected effect on regulated arrivals already in the plan.\nS496: The Airport Duty Manager sends the Medical Diversion Notice when a medical priority aircraft requires airport-level coordination before landing.\nS575: The Slot Allocation Engine treats an unresolved customs hold as a reason to avoid assigning an aggressive departure sequence position to the affected flight.\nS576: The Arrival Regulation Console uses the Medical Diversion Notice to protect arrival priority, stand assignment timing, and downstream border coordination in the active arrival plan.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS325: The Military Airspace Liaison sends the Temporary Restriction Notice after confirming the activation window, affected volume, controlling authority, and any published contingency conditions.\nS399: The Regional Flow Manager uses the restriction notice to bound the arrival regulation timeline before committing new landing-rate values in the Arrival Regulation Console.\n\nAnswer \"supported\" only if the document states that Airport Duty Manager produces or sends this item AND that Arrival Regulation Console receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Arrival Regulation Console uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S496 states the Airport Duty Manager sends the Medical Diversion Notice, S576 states the Arrival Regulation Console uses that same notice, and no other sentence names a different producer or a similarly named different item.\"}",
+ "usage": {
+  "input_tokens": 967,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 87,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.009,
+ "created": "2026-10-19T18:56:09"
+}

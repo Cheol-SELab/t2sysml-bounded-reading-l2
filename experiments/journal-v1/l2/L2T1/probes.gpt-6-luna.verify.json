@@ -1,0 +1,104 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "Atlas Onboard Controller produces the Brake Curve Checksum Log, and Maintenance Diagnostic Server uses the matching checksum log."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "The Line Traffic Controller produces the Temporary Speed Restriction Notice, which North District Zone Controller applies after validating its limits."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "Wayside Radio Access Network sends the Radio Handover Audit File, and the Cyber Security Officer uses the matching audit file to investigate radio session continuity."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "East Junction Interlocking sends the Axle Counter Reset Request, and Signal Maintenance Engineer uses that request as the controlling authority for restoration."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "Platform Screen Door Controller produces the Platform Door Status Snapshot, and Metro Operations Control System uses the matching status snapshot."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "Metro Operations Control System sends the Crew Login Token Bundle, and Atlas Onboard Controller uses the matching token bundle."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "West Junction Interlocking sends the Route Release Exception List, which Line Traffic Controller receives and uses during incident triage."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "Safety Data Communication Network sends the Clock Drift Sample Report, and Cryptographic Key Management Appliance uses the matching sample report."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "Cryptographic Key Management Appliance produces the Encryption Certificate Renewal Pack, which Train Radio Modem uses before accepting renewed secure sessions."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "Revenue Train Operator sends the Test Train Clearance Memo, and Metro Operations Control System uses that memo as a controlled prerequisite."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "The document assigns Lantern as shorthand for Metro Operations Control System, and the link sentence uses Lantern for that system."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "The document assigns Maple as shorthand for Signal Maintenance Engineer, and the link sentence uses Maple for that engineer."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "The document identifies Kestrel as an alternate name for Atlas Onboard Controller, and the link sentence uses that name for the controller."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "The document identifies Quarry as an alternate name for Maintenance Diagnostic Server, and the link sentence uses Quarry for that server."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "The document identifies Marble as another name for North District Zone Controller, and the link sentence uses Marble for that controller."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "The document identifies Orchid as another name for South District Zone Controller, and the link sentence uses Orchid for that controller."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "The document identifies Saffron as another name for Wayside Radio Access Network, and the link sentence uses Saffron for that network."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "The document identifies Falcon as a local name for East Junction Interlocking, and the link sentence uses Falcon for that interlocking."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "The link sentence explicitly names North District Zone Controller, not South District Zone Controller."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "The link sentence explicitly names East Junction Interlocking, not West Junction Interlocking."
+  }
+ ]
+}

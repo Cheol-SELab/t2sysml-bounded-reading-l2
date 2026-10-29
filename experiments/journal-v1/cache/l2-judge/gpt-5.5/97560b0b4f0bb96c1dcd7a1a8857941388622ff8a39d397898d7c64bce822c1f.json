@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: /null/ provides \"displayed information\" to operational staff (an information or material flow).\n\nSource sentences:\nS044: The Ambulance Coordination Platform provides a shared operational view of zone coverage and unit availability.\nS045: The Computer Aided Dispatch Console supports dispatch work, while operational staff remain responsible for verifying that displayed information is current.\n\nAnswer \"supported\" only if the sentences state that /null/ produces or sends this item AND that operational staff receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The sentences mention the Ambulance Coordination Platform providing a shared operational view and operational staff verifying displayed information, but they do not state that /null/ produces or sends displayed information to operational staff.\"}",
+ "usage": {
+  "input_tokens": 246,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 232,
+  "output_tokens_details": {
+   "reasoning_tokens": 175
+  },
+  "total_tokens": 478
+ },
+ "attempts": 1,
+ "wall_s": 3.897,
+ "created": "2026-10-14T00:07:59"
+}

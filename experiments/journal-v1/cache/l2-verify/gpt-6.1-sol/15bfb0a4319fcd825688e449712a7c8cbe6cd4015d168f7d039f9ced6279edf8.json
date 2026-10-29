@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Digital Briefing Room provides \"Airport Capacity Plan\" to Regional Flow Manager (an information or material flow).\n\nSource sentences:\nS070: The Arrival Regulation Console highlights inbound demand periods where holding, speed control, or upstream sequencing may be needed if the forecast capacity materializes.\nS071: The Digital Briefing Room displays the emerging Airport Capacity Plan and records unresolved assumptions in the Collaborative Decision Log for confirmation during the morning coordination briefing.\nS720: If the Airport CDM Portal becomes unavailable, participants continue coordination through the Digital Briefing Room and record decisions in the Collaborative Decision Log when service is restored.\nS721: If the Demand Prediction Service or Capacity Assessment Module is unreliable, the Regional Flow Manager applies the last verified Airport Capacity Plan and adjusts it by direct coordination with the Airspace Sector Planner and Meteorology Briefing Officer.\n\nAnswer \"supported\" only if the sentences state that Digital Briefing Room produces or sends this item AND that Regional Flow Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The Digital Briefing Room displays the emerging Airport Capacity Plan and the Regional Flow Manager uses the last verified plan, but the text does not establish that the room sends or provides that plan to the manager.\"}",
+ "usage": {
+  "input_tokens": 344,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 159,
+  "output_tokens_details": {
+   "reasoning_tokens": 99
+  },
+  "total_tokens": 503
+ },
+ "attempts": 1,
+ "wall_s": 6.584,
+ "created": "2026-10-14T12:47:05"
+}

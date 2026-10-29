@@ -1,0 +1,402 @@
+{
+ "title": "Regional Emergency Medical Dispatch and Ambulance Coordination Operational Concept",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Mission, Authority, and Operating Model",
+   "topic": "Defines the regional service mandate, decision authority, and coordination roles, including the Regional Dispatch Center (Juniper) and Shift Commander (Sundial)."
+  },
+  {
+   "index": 2,
+   "heading": "Coverage Geography and Readiness",
+   "topic": "Explains service zones, access conditions, readiness checks, the Radio Coordinator (Mistral), the Fleet Maintenance Cell (Bluejay), and the two gate status boards."
+  },
+  {
+   "index": 3,
+   "heading": "Call Intake and Incident Creation",
+   "topic": "Describes how Call Taker Mara (Larkspur) gathers location and medical details and how the Hospital Liaison Desk (Kestrel) supports intake coordination."
+  },
+  {
+   "index": 4,
+   "heading": "Clinical Triage and Dispatch Priorities",
+   "topic": "Sets out clinical prioritization, escalation rules, and the responsibilities of the Triage Supervisor (Copperfield) and Data Quality Officer (Pebble)."
+  },
+  {
+   "index": 5,
+   "heading": "Resource Selection and Dispatch",
+   "topic": "Covers ambulance selection, dispatch authorization, radio procedures, and the controlled handoff from the dispatch floor to field crews."
+  },
+  {
+   "index": 6,
+   "heading": "Field Operations and Unit Movement",
+   "topic": "Explains staging, route changes, crew status updates, and the use of readiness information to maintain safe ambulance coverage."
+  },
+  {
+   "index": 7,
+   "heading": "Hospital Coordination and Patient Arrival",
+   "topic": "Describes destination consultation, receiving-facility coordination, and the confirmation of patient arrival and handover."
+  },
+  {
+   "index": 8,
+   "heading": "Surge, Mutual Aid, and Clinical Exceptions",
+   "topic": "Defines surge triggers, mutual-aid coordination, pediatric escalation, and exception handling across dispatch and receiving facilities."
+  },
+  {
+   "index": 9,
+   "heading": "Communications Resilience and Shift Control",
+   "topic": "Sets out degraded-radio procedures, coverage monitoring, shift-level decisions, and continuity of command during disruptions."
+  },
+  {
+   "index": 10,
+   "heading": "Assurance, Review, and Improvement",
+   "topic": "Establishes audit, release, maintenance, and performance-review practices that support safe and accountable regional operations."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_REGIONAL_DISPATCH_CENTER",
+   "canonical": "Regional Dispatch Center",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CALL_TAKER_MARA",
+   "canonical": "Call Taker Mara",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_TRIAGE_SUPERVISOR",
+   "canonical": "Triage Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_RADIO_COORDINATOR",
+   "canonical": "Radio Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_FLEET_MAINTENANCE_CELL",
+   "canonical": "Fleet Maintenance Cell",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_HOSPITAL_LIAISON_DESK",
+   "canonical": "Hospital Liaison Desk",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_GATE_STATUS_BOARD",
+   "canonical": "North Gate Status Board",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_GATE_STATUS_BOARD",
+   "canonical": "South Gate Status Board",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SHIFT_COMMANDER",
+   "canonical": "Shift Commander",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DATA_QUALITY_OFFICER",
+   "canonical": "Data Quality Officer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_AMBULANCE_COORDINATION_PLATFORM",
+   "canonical": "Ambulance Coordination Platform",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_COMPUTER_AIDED_DISPATCH_CONSOLE",
+   "canonical": "Computer Aided Dispatch Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MEDICAL_DIRECTOR",
+   "canonical": "Regional Medical Director",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PARAMEDIC_CREW",
+   "canonical": "Paramedic Crew",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_EMERGENCY_DEPARTMENT",
+   "canonical": "Emergency Department",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TRAUMA_CENTER",
+   "canonical": "Riverside Trauma Center",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_REGIONAL_RADIO_NETWORK",
+   "canonical": "Regional Radio Network",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_AMBULANCE_UNIT_417",
+   "canonical": "Ambulance Unit 417",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CALLER_LOCATION_CORRECTION_SLIP",
+   "canonical": "Caller Location Correction Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PEDIATRIC_ACUITY_NOTE",
+   "canonical": "Pediatric Acuity Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_UNIT_STAGING_CHANGE_CARD",
+   "canonical": "Unit Staging Change Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_COVERAGE_GAP_BULLETIN",
+   "canonical": "Coverage Gap Bulletin",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BATTERY_SWAP_VOUCHER",
+   "canonical": "Battery Swap Voucher",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BEDSIDE_ARRIVAL_RECEIPT",
+   "canonical": "Bedside Arrival Receipt",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_NORTH_APPROACH_QUEUE_SNAPSHOT",
+   "canonical": "North Approach Queue Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_MUTUAL_AID_RELEASE_FORM",
+   "canonical": "Mutual Aid Release Form",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DUPLICATE_INCIDENT_AUDIT_MEMO",
+   "canonical": "Duplicate Incident Audit Memo",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SOUTH_ACCESS_LANE_NOTICE",
+   "canonical": "South Access Lane Notice",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_REGIONAL_DISPATCH_CENTER",
+   "alias": "Juniper",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_CALL_TAKER_MARA",
+   "alias": "Larkspur",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_TRIAGE_SUPERVISOR",
+   "alias": "Copperfield",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_RADIO_COORDINATOR",
+   "alias": "Mistral",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_FLEET_MAINTENANCE_CELL",
+   "alias": "Bluejay",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_HOSPITAL_LIAISON_DESK",
+   "alias": "Kestrel",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_SHIFT_COMMANDER",
+   "alias": "Sundial",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_DATA_QUALITY_OFFICER",
+   "alias": "Pebble",
+   "intro_section": 4
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_CALL_TAKER_MARA",
+   "item": "E_CALLER_LOCATION_CORRECTION_SLIP",
+   "consumer": "E_REGIONAL_DISPATCH_CENTER",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the correction slip"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_TRIAGE_SUPERVISOR",
+   "item": "E_PEDIATRIC_ACUITY_NOTE",
+   "consumer": "E_HOSPITAL_LIAISON_DESK",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_REGIONAL_DISPATCH_CENTER",
+   "item": "E_UNIT_STAGING_CHANGE_CARD",
+   "consumer": "E_RADIO_COORDINATOR",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the change card"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_RADIO_COORDINATOR",
+   "item": "E_COVERAGE_GAP_BULLETIN",
+   "consumer": "E_SHIFT_COMMANDER",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_FLEET_MAINTENANCE_CELL",
+   "item": "E_BATTERY_SWAP_VOUCHER",
+   "consumer": "E_REGIONAL_DISPATCH_CENTER",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the swap voucher"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_HOSPITAL_LIAISON_DESK",
+   "item": "E_BEDSIDE_ARRIVAL_RECEIPT",
+   "consumer": "E_CALL_TAKER_MARA",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_NORTH_GATE_STATUS_BOARD",
+   "item": "E_NORTH_APPROACH_QUEUE_SNAPSHOT",
+   "consumer": "E_REGIONAL_DISPATCH_CENTER",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the queue snapshot"
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_SHIFT_COMMANDER",
+   "item": "E_MUTUAL_AID_RELEASE_FORM",
+   "consumer": "E_FLEET_MAINTENANCE_CELL",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_DATA_QUALITY_OFFICER",
+   "item": "E_DUPLICATE_INCIDENT_AUDIT_MEMO",
+   "consumer": "E_TRIAGE_SUPERVISOR",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "short",
+   "short_ref": "the audit memo"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_SOUTH_GATE_STATUS_BOARD",
+   "item": "E_SOUTH_ACCESS_LANE_NOTICE",
+   "consumer": "E_RADIO_COORDINATOR",
+   "intro_section": 7,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_REGIONAL_DISPATCH_CENTER",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_CALL_TAKER_MARA",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_TRIAGE_SUPERVISOR",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_RADIO_COORDINATOR",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_FLEET_MAINTENANCE_CELL",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_HOSPITAL_LIAISON_DESK",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_SHIFT_COMMANDER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_DATA_QUALITY_OFFICER",
+   "link_section": 9
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_GATE_STATUS_BOARD",
+   "confusable_entity_id": "E_SOUTH_GATE_STATUS_BOARD",
+   "shared_head": "Gate Status Board",
+   "link_section": 6
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_SOUTH_GATE_STATUS_BOARD",
+   "confusable_entity_id": "E_NORTH_GATE_STATUS_BOARD",
+   "shared_head": "Gate Status Board",
+   "link_section": 7
+  }
+ ],
+ "writer": "gpt-6-luna",
+ "plan_sample": 0,
+ "domain": "a regional emergency medical dispatch and ambulance coordination system (call takers, dispatch software, ambulances, hospitals)"
+}

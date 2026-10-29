@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Emergency Department provides \"operationally relevant capacity information\" to Hospital Liaison Desk (an information or material flow).\n\nSource sentences:\nS094: Ambulance Unit 417 follows the active dispatch instructions and requests clarification when the incident details do not support safe response.\nS095: Emergency Department may provide operationally relevant capacity information, while clinical triage remains governed by approved regional protocols.\nS142: Regional Medical Director establishes clinical priorities that dispatch applies when assigning units during elevated demand.\nS143: Hospital Liaison Desk provides receiving-facility capacity information for consideration during transport planning.\n\nAnswer \"supported\" only if the sentences state that Emergency Department produces or sends this item AND that Hospital Liaison Desk receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The ED may provide capacity information, but no sentence says the Hospital Liaison Desk receives or uses it; instead, the desk is described as providing receiving-facility capacity information.\"}",
+ "usage": {
+  "input_tokens": 294,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 224,
+  "output_tokens_details": {
+   "reasoning_tokens": 169
+  },
+  "total_tokens": 518
+ },
+ "attempts": 1,
+ "wall_s": 3.71,
+ "created": "2026-10-13T23:47:19"
+}

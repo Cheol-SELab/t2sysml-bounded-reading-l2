@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: attribute(owner=Operational key performance indicators, name=threshold)\n\nSource sentences (the last one is where the fact was extracted):\nS242: Osprey rejects any command request that lacks the approved authorization state, validation result, and operator acknowledgment required for routine service.\nS243: Granite preserves the accepted archive baseline and confirms that retrieval tests meet the service objective before routine operations are declared stable.\nS244: Operational key performance indicators include contact success rate, telemetry completeness, command validation timeliness, product latency, product quality disposition time, archive availability, help desk responsiveness, and unresolved anomaly age.\nS245: Each key performance indicator has an assigned data source, sampling interval, review owner, threshold, and corrective action trigger so that routine reporting does not depend on informal judgment.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S245 states that each key performance indicator has an assigned threshold (among other attributes), and S244 identifies these as the operational key performance indicators, so the owner and attribute name are directly implied.\"}",
+ "usage": {
+  "input_tokens": 721,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 78,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.237,
+ "created": "2026-10-14T12:51:56"
+}

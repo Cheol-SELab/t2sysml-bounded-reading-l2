@@ -1,0 +1,2564 @@
+{
+  "doc_id": "20180007516",
+  "title": "Concept of Operations for Management by Trajectory",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "1."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "Introduction In the present day National Airspace System (NAS), the air traffic management (ATM) system has a predicted trajectory for each flight based on the approved flight plan and a scheduled or controlled departure time."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "Once the aircraft starts to move, controllers tactically manage the aircraft, using “open trajectory” vectors, altitude changes, and speed clearances, to implement traffic management restrictions, separate otherwise conflicting aircraft, and address arising NAS constraints."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "The current ATM system tends to be conservative in the strategic time frame, when changes are implemented via flight plan changes, to avoid delaying aircraft more than necessary."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "As a result, many problems are left to the controller to solve tactically (e.g., routing an aircraft around weather or complying with a new Traffic Flow Management [TFM] restriction)."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "Tactical controller actions are not directly communicated to the automation systems or other stakeholders."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "These aspects of the current system, coupled with gaps in trajectory prediction data and models, impede the ability to predict how NAS constraints will influence a flight’s trajectory."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "Ground Delay Programs (GDPs) and Airspace Flow Programs (AFPs) assign departure times designed to comply with a Controlled Time of Arrival (CTA) at a NAS constraint, based on the airspace user’s estimated time en route but without knowledge of controller actions to address other constraints."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "Time Based Flow Management (TBFM) makes a similar assumption that the estimated times of arrival (ETAs) to the constraint are correct, when a variety of disruptions can introduce unexpected delays that affect the flight’s ETA."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "Until the flight is affected, the impact of local traffic management decisions on individual flights is not known, and a flight may encounter several such disruptions en route to its destination."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "This makes NAS demand predictions at each NAS resource less accurate."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "Management by Trajectory (MBT) is a concept for future ATM in which the Federal Aviation Administration (FAA) and airspace users negotiate four-dimensional trajectories (4DTs) for all flights that respect the airspace user’s goals while complying with NAS constraints.1 By considering both airspace user and FAA objectives, and utilizing negotiated 4DTs to communicate the traffic management plan, the concept is highly flexible to different types of airspace users and trajectory characteristics."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "As a result, the baseline concept accommodates a broad and expanding spectrum of current and anticipated airspace operations, from traditional commercial aviation to emerging users such as Unmanned Aircraft Systems, space vehicles, and on-demand air transportation vehicles."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "Pilots and air traffic controllers use automation to keep the aircraft on its assigned trajectory, which includes complying with temporal or speed constraints."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "Equipped aircraft have substantial responsibility for complying with the assigned trajectory without controller intervention."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "Assigned trajectories are constructed to respect all of the known constraints from the aircraft’s current location to its destination, making the flight’s entire trajectory much more predictable than it is today."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "Where uncertainty or disruptions occur, resolutions are, to the extent possible, handled through trajectory modifications as far in advance as possible."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "Future improvements in automation (ground-based and aircraft) and data communications (air-ground and among stakeholders on the ground) make the MBT concept possible."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "MBT eliminates most local, reactive control actions being applied to aircraft, which cannot be predicted in advance and which have impacts on the downstream trajectory that cannot be known until they happen."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "MBT does this by inserting the impact of all NAS constraints into the assigned trajectory in the form of trajectory constraints."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "Where uncertainty remains, necessary adjustments to the trajectory constraints are made proactively, maximizing trajectory predictability and delivering associated benefits. 1 In this way, MBT is similar to Trajectory Based Operations concepts that employ a 4D contract."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "The appendix “Comparison with ICAO TBO Concept” compares MBT with the International Civil Aviation Organization (ICAO) TBO concept."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "In the past decade, the term Trajectory Based Operations (TBO) has been used widely."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "The term TBO has come to be used in two distinct ways."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "One meaning of TBO is as a high-level vision for the future of the NAS in which 4DTs are the core of air traffic control and air traffic management."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "The second meaning of TBO is an evolving set of specific endeavors intended to advance the NAS toward the future vision."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "MBT is one specific interpretation of the high-level TBO vision, and is the starting point from which specific challenges can be identified and studied, contributing to the refinement of the MBT concept and the overall body of knowledge related to TBO. 1.1 NAS Shortfalls Addressed by MBT This section summarizes the shortfalls in the current NAS that are addressed by MBT, as shown in Table 1."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "These shortfalls are consistent with those identified in the International Civil Aviation Organization (ICAO) TBO Concept Document [1]."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "The ICAO TBO Concept Document provides high-level guidance for resolving these shortfalls, and the MBT concept provides a specific vision for resolving the shortfalls that is consistent with the ICAO TBO Concept."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "Table 1."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "NAS Shortfalls Addressed by MBT Shortfalls MBT Improvements Data exchanged between airspace users and the FAA are too sparse to support accurate trajectory prediction across all phases of flight and trajectory synchronization across automation systems."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "The data needed by all relevant airspace users, aircraft, and FAA automation systems to develop accurate, consistent 4DT predictions are available to all relevant systems."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "The use of open trajectories, including tactical maneuvers, causes poor trajectory predictability."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "Aircraft operate on closed trajectories to the extent possible, which improves trajectory predictability."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "Insufficient publication of trajectory changes and lack of trajectory synchronization result in poor trajectory predictability."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "Publication of all trajectory changes and advanced exchange of trajectory information between ground automation systems and the aircraft allow for trajectory synchronization across systems, resulting in consistent trajectory predictions across systems."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "Poor trajectory predictability inhibits strategic (longer look ahead) trajectory management."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "Improved trajectory predictability, improved coordination capabilities, and use of 4DTs enable controllers to use strategic, closed clearances."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "A high level of trajectory predictability becomes the new norm."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "Enhanced predictability will improve TFM performance and provide a more consistent flow of air traffic, where demand will more accurately meet available capacity, reducing or eliminating delay."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "All applicable NAS constraints, both dynamic (e.g., TFM) and static (e.g., crossing restrictions) are published such that they can be known by all airspace users and relevant automation systems."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "All constraints affecting a given aircraft are reflected in the 4DT."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "Lack of knowledge about certain types of constraints prevents airspace users from planning business-efficient, acceptable trajectories."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "Those constraints also are unknown to every ground automation system, causing aircraft to be handled with an open- ended clearance when the constraints are encountered."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "Insufficient mechanisms to allow traffic managers and controllers to efficiently and effectively amend flights’ routes cause route amendment backlogs during disruptive NAS events."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "Traffic managers apply constraints to efficiently amend trajectories as NAS events evolve, enabling a more flexible and responsive ATM system that can take full advantage of available airspace and drastically reduce delay.2 There is not a good mechanism that allows controllers and traffic managers to predict the downstream consequences of an action or decision on specific aircrafts’ trajectories."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "Downstream effects of actions on a trajectory are considered in decision making associated with a given trajectory, including tactical control actions."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "By quantifying time-based performance as a metric that complements existing PBN metrics, all IFR aircraft may be managed by a single ATM concept that maximizes efficiency while maintaining an acceptable level of safety risk."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "Current time of arrival control (TOAC) standards establish a minimum performance requirement that some aircraft will be certified for while others will not."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "This type of standard may inadvertently introduce unacceptable safety risk into the NAS and creates a mixed equipage environment in which one ATM concept applies to those who meet the standard while another concept must be applied to those who do not. 1.2 MBT Overview The MBT concept can be summarized by the following key points.  MBT applies to all aircraft operating according to Instrument Flight Rules (IFR).  Aircraft are assigned 4DTs, which are negotiated, closed trajectories, from their current state to their destination.  A NAS Constraint Service publishes common information about NAS constraints to all stakeholders.  Trajectory constraints can be mapped to NAS constraints to facilitate identifying affected aircraft when NAS constraints change.  All aircraft follow their negotiated, assigned trajectories, complying with trajectory constraints.  Trajectory constraints and associated tolerances are defined based on the flight’s individual performance capabilities and the situational need for the constraint. 2 This document does not describe the details of how traffic managers or traffic management automation determines what trajectory constraints to impose on each flight."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "Traffic management automation will identify which flights are affected by each TMI and translate that TMI into one or more trajectory constraints specific to the flight.  Aircraft provide detailed information about their predicted 4DT (a.k.a. intent data) that is shared across stakeholders."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "Aircraft provide updates when intent data change.  Conflicts can be detected further in advance due to improved predictability, and intervention can be accomplished through adding or modifying constraints in the assigned 4DT.  Open trajectories (i.e., tactical vectoring by controllers) for which the controller’s and/or pilot’s intent is unknown by other actors in the system are minimized.  MBT follows two paths to eliminating open trajectories: 1) introducing methods for planning tactical maneuvers as closed trajectory modifications and 2) eliminating the need for tactical maneuvers through improved predictability.  Digital air-ground communication is used to deliver 4DTs to aircraft cockpits for easy loading and execution in the Flight Management System (FMS).  Broadband air-ground communications and advanced electronic flight bag (EFB) applications are used to include the flight crew in the trajectory negotiation process.  A negotiating controller subsumes the responsibilities of the D-side controller."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "Together, the negotiating controller and traffic management coordinators (TMCs), with their longer time horizon perspectives, proactively intervene to avoid conflicts and achieve TFM objectives, using automation enhancements that facilitate coordinating 4DT changes across multiple sectors. 1.3 Purpose This document is intended to describe a far-term MBT concept."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "Far-term is not precisely defined but targets an operational environment in which the NAS, and the vast majority of aircraft, are capable of the advanced data exchange and automation capabilities associated with the Aeronautical Telecommunications Network-Baseline 2 (ATN-B2)."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "The value of this document is to provide a vector to guide research. 1.4 Near- vs."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "Far-Term MBT This MBT Concept of Operations (ConOps) presents an end-state vision for MBT, while beginning to identify what could be feasible in the more near-term timeframe."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "The near- and far- term MBT concepts differ in two ways."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "First, the near-term concept is constrained by the current NAS and currently planned changes to the NAS (i.e., changes that the FAA plans and are documented within the NAS Enterprise Architecture [EA] evolution within the NextGen timeframe), while the far-term concept may make assumptions about future enabling changes."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "Second, while the far-term concept encompasses the entirety of air traffic control (ATC) within the NAS, in the near-term a more limited set of TBO operations may be feasible and beneficial. 1.5 Assumptions This section summarizes key assumptions about the near-term and far-term environments in which MBT would operate. 1.5.1 Assumptions about the Near-Term MBT Environment  Air traffic controllers will still be responsible for separation management and conflict avoidance; self-separation of IFR aircraft will not be the norm in the far-term MBT environment.  Air vehicle capabilities and equipage will be consistent with the current progression of safety and performance standards.  The capabilities of highly equipped aircraft will not change."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "For example, aircraft FMS that include Required Time of Arrival (RTA) functionality will remain limited to a single active RTA constraint at a time."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "Controller-pilot data link communications (CPDLC) with route clearances and trajectory intent output will be standard services supported by avionics.  MBT will slowly seep into NAS operations; there will not be a step change in procedures."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "This will allow equipped aircraft to experience some benefit while operating among unequipped aircraft, and allow controllers with different perspectives on changing technologies and procedures to adapt to MBT at different paces.  MBT tools will be introduced incrementally through upgrades to existing automation platforms and extensions to the information shared via System Wide Information Management (SWIM)."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "Adoption of MBT will be varied around the NAS with some facilities and controllers more willing and able to adopt new capabilities than others."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "Benefits will initially be slow to accumulate as controllers become more comfortable with the technologies."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "Experience will allow the tools to be refined to improve performance and increase user acceptance."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "Eventually, a critical mass of usage will be reached, resulting in increased usage and benefits.  Adoption of supporting technologies by airspace users will continue at its current pace."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "Equipped aircraft from participating operators will benefit from the ability to negotiate their trajectories and will be more likely to be left alone to follow the assigned trajectory.  Current structured airspace will remain in use, although increased use of direct routing will be allowed in regions of low-to-medium operational density.  Controllers will use automation support to define and issue closed trajectories in advance, rather than reverting to open-trajectory vectors issued via voice. 1.5.2 Assumptions about the Far-Term MBT Environment  EFBs will become much more capable and will have reliable, high-speed connectivity to ground-based systems."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "This will enable a rapid advance in air vehicle capabilities without requiring all of the changes to occur within legacy FMS architectures, which could be more expensive and slower to enter the fleet.  All aircraft will be capable of receiving assigned trajectories via digital communication and flying these trajectories with known accuracies."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "Voice will continue to exist for cases when immediate feedback and action are required."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "While many aircraft will be capable of digitally receiving trajectories and automatically loading them into the FMS, others will require pilots to manually load trajectory data into the FMS or otherwise fly the assigned trajectory.  The rapid advance of technologies and applications for unmanned aircraft systems (UAS) operations in the NAS will overflow into other categories of aviation operations."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology will experience a substantial evolution based on emerging UAS detect and avoid capabilities."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "This technology change will converge with technologies that support self-separation between aircraft (e.g., Advanced Interval Management [A-IM])."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "As a result, the long-term environment will be characterized by all IFR aircraft being equipped with coordinated tactical conflict avoidance capabilities that can detect and safely avoid complex conflict scenarios involving multiple aircraft of all types, while providing the planned avoidance maneuvers to ground automation via broadband communication."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "This will provide the final layer of safety in the MBT concept.  TFM will evolve considerably."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "GDPs and AFPs will move toward controlling by CTA at the constrained NAS resource rather than departure time."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "The time horizon over which TBFM is applied will expand further into the en route environment, and TBFM will be used to address airspace constraints as well as airport capacity constraints.  Use of generic miles-in-trail (MIT) restrictions (i.e., the same restriction across many aircraft) will be eliminated."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "When metering is not required, aircraft will be spaced for safety and efficiency using either time-based management or A-IM.  MBT facilitates a transition to time-based separation standards."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Whether the NAS uses distance-based or time-based separation requirements, or a combination of both, to define minimum separation standards, is inconsequential to MBT."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "MBT is able to function for any type of separation requirements.  Aircraft capability to meet TOAC constraints is described using a Required Time Performance (RTP) metric that serves as a complement to existing standards used to describe Required Navigation Performance (RNP)."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "An aircraft’s time-based performance is denoted by RTP-Y, where Y is a variable that describes the 95% confidence interval of the expected crossing time error distribution, in seconds, regardless of its shape."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "In an MBT environment, all aircraft will be certified to operate at some RTP level, including aircraft that are not equipped with automation systems that include RTA functionality.  Airspace users’ flight operations centers will develop advanced capabilities to fully participate in MBT."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "Software applications and private service providers will enable non- airline flights to fully participate in MBT.  The NAS will accommodate new aircraft classes, including on-demand travel, personal mobility, UAS, space vehicle launch and return operations, airships, and loitering operations (e.g., to provide communication or ground surveillance services)."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "Many of these newer, emerging users are expected to have the necessary capabilities to be fully compliant with MBT. 1.6 Document Scope 1.6.1 Surface Operations This ConOps document focuses on the airborne phases of flight."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "However, MBT is applicable to all phases of flight."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "Although nothing in the MBT concept precludes including a surface trajectory as part of the aircraft’s 4DT, defining the surface trajectory and the aircraft following it would require new ground and aircraft automation capabilities, distinct from those required for airborne MBT trajectories."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "Therefore, the application of MBT to surface operations will not be pursued in this effort unless the incremental benefits of including management of surface operations within the MBT concept is justified."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "Application of TBO elements is still possible without the full application of MBT to surface operations."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "For example, the ATM system can plan and control pushback times based on scheduled takeoff times and with consideration of runway queue management, without needing to provide a closed trajectory on the surface."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "However, MBT is compatible with TBO concepts that do envision a closed trajectory on the surface such as [3]."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "What is most important for MBT, from the surface point of view, is exchange of the necessary data to provide an interface between surface and en route operations and an assigned trajectory that is consistent with a surface management plan that delivers expected surface event times that impact airborne operations [1]."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "For example, reliable takeoff and landing time predictions, runway assignments, and inclusion of the departure and arrival transitions in the assigned trajectory support coordination between en route and surface environments."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "Surface operations will be very diverse for different types of users, further motivating treating MBT ground operations as a separate research topic."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "Emergent users may share traditional airports or operate to/from alternative sites."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "Space vehicles operate from special launch and recovery sites and often have no surface movements."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "Rotorcraft are able to “air taxi” and therefore are not constrained by taxiways and do not require runways. 1.6.2 Traffic Flow Management Traffic flow management is separate from the MBT concept."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "TFM is responsible for selecting traffic management initiatives (TMIs), which impose constraints on trajectories."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "The MBT concept addresses the assignment of trajectories that are compliant with all TMIs, the modification of assigned trajectories as constraints change, and the satisfaction of the constraints as aircraft follow the assigned trajectories."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "Improved predictability resulting from MBT will allow TFM to select more-effective TMIs."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "In the near-term, GDPs and AFPs will continue to function as they presently do."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "In the longer-term environment, GDPs/AFPs will move from controlling through the use of an Expect Departure Clearance Time (EDCT) constraining the departure time to enforcement of the CTA at the limited resource as a time constraint on the assigned trajectory."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "The operator will have flexibility to determine when the aircraft takes off, depending on how fast or slow it wants to fly to conform with the CTA and how the takeoff time will affect other constraints."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "Mile-in-trail and minute-in-trail (MINIT) restrictions will be reduced in the near term and eventually eliminated as unnecessary when flights are following 4DTs that include time-based constraints where necessary."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "Increased use of self-separation techniques (e.g., A-IM) will allow efficient management of aircraft merging to a runway or other constrained airspace resource, without needing to repeatedly update time constraints in the assigned trajectories in response to residual uncertainty."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "By keeping all flights on closed trajectories that are de-conflicted over at least the next 30 minutes, MBT may increase sector capacities."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "Uncertainty, which MBT will reduce, hampers current TFM performance."
+    },
+    {
+      "unit_id": "U0106",
+      "text": "However, many TFM processes take advantage of the flexibility in current operations."
+    },
+    {
+      "unit_id": "U0107",
+      "text": "In any TBO environment, if aircraft are more predictable and are scheduled accordingly, the reduction in uncertainty may be accompanied by a reduction in flexibility."
+    },
+    {
+      "unit_id": "U0108",
+      "text": "However, some residual uncertainty will persist, creating the possibility that the TFM system might be more fragile to the remaining uncertainty."
+    },
+    {
+      "unit_id": "U0109",
+      "text": "One area in which research will be required to validate the MBT concept is how TFM must adjust to the tradeoff between uncertainty and flexibility to achieve the anticipated TFM benefits."
+    },
+    {
+      "unit_id": "U0110",
+      "text": "For example, if TFM continues to be conservative and initially absorb less delay than it expects will be required, to leave flexibility to fill an empty slot caused by another flight being late, then most flights will need their assigned trajectories to be updated, potentially multiple times, as the TFM system “releases” more and more of the expected necessary delay to the flights."
+    },
+    {
+      "unit_id": "U0111",
+      "text": "How will this affect predictability and MBT benefits? 1.7 Document Structure The remainder of this document is organized as follows:  Section 2 defines several terms that are key to the MBT ConOps.  Section 3 describes the trajectory negotiation process.  Section 4 presents the trajectory constraint language.  Section 5 describes several elements of the MBT concept.  Section 6 provides use cases that illustrate the MBT concept.  Section 7 summarizes the MBT benefit mechanisms.  Section 8 summarizes expected changes in roles and responsibilities in the NAS due to MBT.  Section 9 provides a summary of the MBT concept. 2."
+    },
+    {
+      "unit_id": "U0112",
+      "text": "Definitions This chapter presents definitions and discussions of key terminology and concepts. 2.1 Trajectory In the context of MBT, a three-dimensional trajectory (3DT) is a description of an aircraft’s path in space."
+    },
+    {
+      "unit_id": "U0113",
+      "text": "A 3DT is often visualized as a string or tube through space, and described by two dimensions in a horizontal plane (e.g., longitude and latitude) and one vertical dimension (the aircraft’s altitude)."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        0,
+        2
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3,
+        229
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        230,
+        504
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        505,
+        683
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        684,
+        867
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        868,
+        974
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        975,
+        1159
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        1160,
+        1452
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        1453,
+        1679
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        1680,
+        1875
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        1876,
+        1945
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        1946,
+        2443
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        2444,
+        2718
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        2719,
+        2878
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        2879,
+        3004
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3005,
+        3217
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3218,
+        3370
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3371,
+        3537
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3538,
+        3745
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3746,
+        3874
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        3875,
+        4145
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        4146,
+        4277
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        4278,
+        4362
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        4363,
+        4417
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        4418,
+        4566
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        4567,
+        4687
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        4688,
+        5082
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5083,
+        5218
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5219,
+        5431
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5432,
+        5440
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5441,
+        5693
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5694,
+        5865
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5866,
+        5964
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        5965,
+        6070
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        6071,
+        6198
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        6199,
+        6451
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        6452,
+        6544
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        6545,
+        6688
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        6689,
+        6752
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        6753,
+        6946
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        6947,
+        7141
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        7142,
+        7210
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        7211,
+        7346
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        7347,
+        7515
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        7516,
+        7695
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        7696,
+        8095
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        8096,
+        8247
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        8248,
+        8472
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        8473,
+        8629
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        8630,
+        9831
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "normalized_body_span": [
+        9832,
+        10124
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        10125,
+        11150
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        11151,
+        11515
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        11516,
+        11792
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        11793,
+        11875
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        11876,
+        12050
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        12051,
+        12107
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        12108,
+        12428
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "normalized_body_span": [
+        12429,
+        13180
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        13181,
+        13329
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        13330,
+        13570
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        13571,
+        13983
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        13984,
+        14127
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        14128,
+        14235
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        14236,
+        14334
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        14335,
+        14522
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        14523,
+        15187
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        15188,
+        15533
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        15534,
+        15621
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        15622,
+        16024
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16025,
+        16219
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16220,
+        16365
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16366,
+        16719
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16720,
+        16815
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16816,
+        16925
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "normalized_body_span": [
+        16926,
+        17236
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        17237,
+        17428
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        17429,
+        17596
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        17597,
+        17874
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        17875,
+        18084
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        18085,
+        18373
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        18374,
+        18733
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        18734,
+        18956
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        18957,
+        19008
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19009,
+        19301
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19302,
+        19507
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19508,
+        19612
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19613,
+        19823
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19824,
+        19933
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19934,
+        20252
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20253,
+        20478
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20479,
+        20628
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20629,
+        20712
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "normalized_body_span": [
+        20713,
+        20811
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20812,
+        21007
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21008,
+        21121
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21122,
+        21363
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21364,
+        21452
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21453,
+        21532
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21533,
+        21793
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21794,
+        21996
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21997,
+        22210
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22211,
+        22491
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22492,
+        22631
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22632,
+        22700
+      ]
+    },
+    {
+      "unit_id": "U0106",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22701,
+        22785
+      ]
+    },
+    {
+      "unit_id": "U0107",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22786,
+        22952
+      ]
+    },
+    {
+      "unit_id": "U0108",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22953,
+        23098
+      ]
+    },
+    {
+      "unit_id": "U0109",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        23099,
+        23286
+      ]
+    },
+    {
+      "unit_id": "U0110",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        23287,
+        23671
+      ]
+    },
+    {
+      "unit_id": "U0111",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "normalized_body_span": [
+        23672,
+        24306
+      ]
+    },
+    {
+      "unit_id": "U0112",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        24307,
+        24525
+      ]
+    },
+    {
+      "unit_id": "U0113",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        24526,
+        24725
+      ]
+    }
+  ],
+  "removed_blocks": [
+    {
+      "page": 12,
+      "block": 6,
+      "text": "1",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 14,
+      "text": "2",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 12,
+      "text": "3",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 9,
+      "text": "4",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 3,
+      "text": "5",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 7,
+      "text": "6",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 9,
+      "text": "7",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 9,
+      "text": "8",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 13,
+      "text": "9",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 8,
+      "text": "10",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 7,
+      "text": "11",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 2,
+      "text": "12",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 7,
+      "text": "13",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 13,
+      "text": "14",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 11,
+      "text": "15",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 8,
+      "text": "16",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 9,
+      "text": "17",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 9,
+      "text": "18",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 30,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 30,
+      "block": 11,
+      "text": "19",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 31,
+      "block": 9,
+      "text": "20",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 8,
+      "text": "21",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 9,
+      "text": "22",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 34,
+      "block": 8,
+      "text": "23",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 35,
+      "block": 6,
+      "text": "24",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 36,
+      "block": 9,
+      "text": "25",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 37,
+      "block": 3,
+      "text": "26",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 38,
+      "block": 8,
+      "text": "27",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 39,
+      "block": 12,
+      "text": "28",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 40,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 40,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 40,
+      "block": 5,
+      "text": "29",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 41,
+      "block": 10,
+      "text": "30",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 42,
+      "block": 6,
+      "text": "31",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 43,
+      "block": 7,
+      "text": "32",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 44,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 44,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 44,
+      "block": 11,
+      "text": "33",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 45,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 45,
+      "block": 11,
+      "text": "34",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 46,
+      "block": 11,
+      "text": "35",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 47,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 47,
+      "block": 28,
+      "text": "36",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 48,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 48,
+      "block": 16,
+      "text": "37",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 49,
+      "block": 6,
+      "text": "38",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 50,
+      "block": 11,
+      "text": "39",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 51,
+      "block": 7,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 51,
+      "block": 11,
+      "text": "40",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 52,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 52,
+      "block": 18,
+      "text": "41",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 53,
+      "block": 12,
+      "text": "42",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 54,
+      "block": 12,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 54,
+      "block": 17,
+      "text": "43",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 55,
+      "block": 12,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 55,
+      "block": 14,
+      "text": "44",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 56,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 56,
+      "block": 5,
+      "text": "45",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 57,
+      "block": 6,
+      "text": "46",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 58,
+      "block": 14,
+      "text": "47",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 59,
+      "block": 8,
+      "text": "48",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 60,
+      "block": 18,
+      "text": "49",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 61,
+      "block": 8,
+      "text": "50",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 62,
+      "block": 9,
+      "text": "51",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 63,
+      "block": 8,
+      "text": "52",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 64,
+      "block": 7,
+      "text": "53",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 65,
+      "block": 5,
+      "text": "54",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 66,
+      "block": 11,
+      "text": "55",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 67,
+      "block": 7,
+      "text": "56",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 68,
+      "block": 15,
+      "text": "57",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 69,
+      "block": 8,
+      "text": "58",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 70,
+      "block": 9,
+      "text": "59",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 71,
+      "block": 8,
+      "text": "60",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 72,
+      "block": 11,
+      "text": "61",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 73,
+      "block": 9,
+      "text": "62",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 74,
+      "block": 13,
+      "text": "63",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 75,
+      "block": 15,
+      "text": "64",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 76,
+      "block": 12,
+      "text": "65",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 77,
+      "block": 7,
+      "text": "66",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 78,
+      "block": 8,
+      "text": "67",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 79,
+      "block": 10,
+      "text": "68",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 80,
+      "block": 5,
+      "text": "69",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 81,
+      "block": 13,
+      "text": "70",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 82,
+      "block": 8,
+      "text": "71",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 83,
+      "block": 6,
+      "text": "72",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 84,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 84,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 84,
+      "block": 8,
+      "text": "73",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 85,
+      "block": 19,
+      "text": "74",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 86,
+      "block": 19,
+      "text": "75",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 87,
+      "block": 17,
+      "text": "76",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 88,
+      "block": 15,
+      "text": "77",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 89,
+      "block": 2,
+      "text": "78",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 90,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 90,
+      "block": 8,
+      "text": "79",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 91,
+      "block": 10,
+      "text": "80",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 12,
+      "text": "Improved trajectory prediction",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 17,
+      "text": "Improved trajectory prediction",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 19,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 21,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 24,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 92,
+      "block": 28,
+      "text": "81",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 93,
+      "block": 0,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 93,
+      "block": 1,
+      "text": "Improved trajectory prediction",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 93,
+      "block": 4,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 93,
+      "block": 8,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 93,
+      "block": 11,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 93,
+      "block": 22,
+      "text": "82",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 94,
+      "block": 5,
+      "text": "83",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 95,
+      "block": 6,
+      "text": "84",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 96,
+      "block": 6,
+      "text": "85",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 97,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 97,
+      "block": 8,
+      "text": "86",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 98,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 98,
+      "block": 9,
+      "text": "Improved trajectory prediction",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 98,
+      "block": 30,
+      "text": "87",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 99,
+      "block": 6,
+      "text": "88",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 100,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 100,
+      "block": 23,
+      "text": "Dollars (via cost of operations)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 100,
+      "block": 27,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 100,
+      "block": 28,
+      "text": "89",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 101,
+      "block": 6,
+      "text": "90",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 102,
+      "block": 7,
+      "text": "91",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 103,
+      "block": 7,
+      "text": "92",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 104,
+      "block": 1,
+      "text": "93",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 105,
+      "block": 6,
+      "text": "94",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 106,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 106,
+      "block": 3,
+      "text": "95",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 107,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 107,
+      "block": 26,
+      "text": "96",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 108,
+      "block": 13,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 108,
+      "block": 14,
+      "text": "97",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 109,
+      "block": 5,
+      "text": "98",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 110,
+      "block": 6,
+      "text": "99",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 111,
+      "block": 10,
+      "text": "100",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 112,
+      "block": 9,
+      "text": "101",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 113,
+      "block": 7,
+      "text": "102",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 114,
+      "block": 10,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 114,
+      "block": 17,
+      "text": "103",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 115,
+      "block": 14,
+      "text": "104",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 116,
+      "block": 10,
+      "text": "105",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 117,
+      "block": 6,
+      "text": "106",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 118,
+      "block": 9,
+      "text": "107",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 119,
+      "block": 12,
+      "text": "108",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 120,
+      "block": 17,
+      "text": "109",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 121,
+      "block": 9,
+      "text": "110",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 122,
+      "block": 10,
+      "text": "111",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 123,
+      "block": 12,
+      "text": "112",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 124,
+      "block": 10,
+      "text": "113",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 125,
+      "block": 7,
+      "text": "114",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 126,
+      "block": 10,
+      "text": "115",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 127,
+      "block": 14,
+      "text": "116",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 128,
+      "block": 10,
+      "text": "117",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 129,
+      "block": 11,
+      "text": "118",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 130,
+      "block": 4,
+      "text": "119",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 131,
+      "block": 7,
+      "text": "Concept of Operations for Management by Trajectory",
+      "reason": "numeric_or_repeated_header"
+    }
+  ],
+  "source_only": true
+}

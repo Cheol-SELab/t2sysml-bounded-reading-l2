@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Common Situation Display provides \"Target Off Block Time\" to Airport CDM Portal (an information or material flow).\n\nSource sentences:\nS601: A short peak normally becomes a sequence advisory in Tower Sequence Manager or a limited departure metering adjustment in Departure Metering Service.\nS602: Sustained saturation is converted into revised Calculated Takeoff Time targets and, when necessary, adjusted Target Off Block Time values published through Airport CDM Portal.\nS684: The Flight Data Exchange publishes revised Flight Intent Message content only after the approved substitution is final and time synchronized.\nS685: The Common Situation Display presents the updated Calculated Takeoff Time and Target Off Block Time so that operational users share the same view of the accepted change.\n\nAnswer \"supported\" only if the sentences state that Common Situation Display produces or sends this item AND that Airport CDM Portal receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S685 says Common Situation Display presents Target Off Block Time to operational users, and S602 says Airport CDM Portal publishes adjusted values, so the portal is the publisher rather than a recipient from the display; no sentence describes the display sending this item to the portal.\"}",
+ "usage": {
+  "input_tokens": 713,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 105,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.086,
+ "created": "2026-10-14T12:45:33"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: succession(before=compare the analyzer trend with nearby sample results, after=declaring a process upset)\n\nSource sentences (the last one is where the fact was extracted):\nS061: South Filter Gallery sends the Filter Run Exception Note when a filter run ends outside the normal operating limits.\nS062: Filter run management is based on run time, terminal headloss, effluent turbidity, prior backwash quality, and the current condition of upstream treatment.\nS063: A filter is not returned to service after washing until rinse-to-waste quality meets the operating target and the turbidity trend is stable.\nS064: If a filter shows an unusual turbidity rise, operating staff compare the analyzer trend with nearby sample results before declaring a process upset.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S064 states that operating staff compare the analyzer trend with nearby sample results before declaring a process upset, which directly gives the ordering of the two actions.\"}",
+ "usage": {
+  "input_tokens": 693,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.97,
+ "created": "2026-10-14T12:52:34"
+}

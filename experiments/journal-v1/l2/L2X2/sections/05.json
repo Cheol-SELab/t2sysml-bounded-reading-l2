@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "The Shore Control Room maintains operational oversight and provides a point of coordination for shore-based personnel.",
+   "tags": []
+  },
+  {
+   "text": "This section defines how offshore environmental observations and protected operational networks support safe farm operations.",
+   "tags": []
+  },
+  {
+   "text": "The Metocean Buoy is designated Copper Finch for operational reference.",
+   "tags": [
+    "ALIAS:E_METOCEAN_BUOY"
+   ]
+  },
+  {
+   "text": "The Metocean Buoy measures wind speed and direction, wave height and period, current, air temperature, and barometric pressure.",
+   "tags": []
+  },
+  {
+   "text": "Sensors are selected and mounted to limit exposure to spray, icing, vibration, and corrosion.",
+   "tags": []
+  },
+  {
+   "text": "An onboard logger timestamps observations and retains a local history during intermittent communications.",
+   "tags": []
+  },
+  {
+   "text": "The Vessel AIS Receiver produces a Position Quality Flag when position integrity checks fail or confidence falls below its configured threshold.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "The Weather Service uses validated environmental observations in forecast products for offshore planning.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Analyst reviews forecast limitations and identifies conditions that may affect vessel access or turbine work.",
+   "tags": []
+  },
+  {
+   "text": "Measurement intervals and alarm thresholds are configured to support both trend analysis and timely operational decisions.",
+   "tags": []
+  },
+  {
+   "text": "Time synchronization and sensor health are checked as part of routine monitoring.",
+   "tags": []
+  },
+  {
+   "text": "The Cybersecurity Gateway is designated Quiet Harbor for operational reference.",
+   "tags": [
+    "ALIAS:E_CYBERSECURITY_GATEWAY"
+   ]
+  },
+  {
+   "text": "The Cybersecurity Gateway establishes a controlled boundary between authorized shore-side services and offshore operational networks.",
+   "tags": []
+  },
+  {
+   "text": "The boundary permits only approved protocols, destinations, and service accounts.",
+   "tags": []
+  },
+  {
+   "text": "External connectivity is denied by default and enabled only for documented operational needs.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Gateway remains responsible for supervisory communications within its defined control scope.",
+   "tags": []
+  },
+  {
+   "text": "Administrative access requires authenticated individual accounts and role-based authorization.",
+   "tags": []
+  },
+  {
+   "text": "Privileged sessions are time limited, logged, and reviewed against approved maintenance activity.",
+   "tags": []
+  },
+  {
+   "text": "The Cybersecurity Analyst monitors gateway events for unusual access patterns and configuration changes.",
+   "tags": []
+  },
+  {
+   "text": "Loss of the security boundary places remote administrative functions in a restricted state without bypassing local protective controls.",
+   "tags": []
+  },
+  {
+   "text": "Security events are retained in protected logs for investigation and audit.",
+   "tags": []
+  },
+  {
+   "text": "Network segmentation limits the effect of a compromised endpoint and supports controlled restoration of service.",
+   "tags": []
+  },
+  {
+   "text": "Interfaces are tested after configuration changes to confirm that permitted functions remain available and prohibited paths remain blocked.",
+   "tags": []
+  },
+  {
+   "text": "Operational procedures identify the authority for approving access, responding to alarms, and returning affected services to normal operation.",
+   "tags": []
+  }
+ ]
+}

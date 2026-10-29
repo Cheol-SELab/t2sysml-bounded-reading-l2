@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Long Term Archive, label=daily storage assessment)\n\nSource sentences (the last one is where the fact was extracted):\nS171: Lantern shall preserve the last validated routing configuration and reject unreviewed changes while payload product transfers are active.\nS172: When the Primary Processing Cluster cannot meet the processing window, the scheduling service assigns eligible jobs to the Backup Processing Cluster using the same container image and rule set.\nS173: The Backup Processing Cluster writes provenance that identifies the fallback execution path, and the Product Quality Service treats that marker as an input to its quality decision.\nS174: The Long Term Archive sends the Storage Watermark Snapshot after each daily storage assessment.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S174 says the Long Term Archive sends the Storage Watermark Snapshot after each daily storage assessment, which implies the archive performs that assessment, so performer and label both match.\"}",
+ "usage": {
+  "input_tokens": 694,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 75,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.33,
+ "created": "2026-10-14T12:52:24"
+}

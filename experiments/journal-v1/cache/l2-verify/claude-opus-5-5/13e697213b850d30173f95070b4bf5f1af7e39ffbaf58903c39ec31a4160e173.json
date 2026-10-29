@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Blade Inspection Drone provides \"the Leading Edge Tile Image\" to Blade Specialist (an information or material flow).\n\nSource sentences:\nS312: The Crew Transfer Vessel uses the Harness Audit Card to verify the applicable equipment checks before personnel transfer.\nS313: The Blade Inspection Drone produces the Leading Edge Tile Image during a close-range survey of the blade surface.\nS444: Remote surveys use the Blade Inspection Drone to capture repeatable views of blade surfaces while the turbine is in an approved operating state.\nS445: The Blade Specialist reviews the tile image to classify visible damage and identify areas requiring closer assessment.\n\nAnswer \"supported\" only if the sentences state that Blade Inspection Drone produces or sends this item AND that Blade Specialist receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S313 says the Blade Inspection Drone produces the Leading Edge Tile Image, and S445 says the Blade Specialist reviews the tile image, which is a shorter name for the same item.\"}",
+ "usage": {
+  "input_tokens": 687,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 8.106,
+ "created": "2026-10-14T12:53:16"
+}

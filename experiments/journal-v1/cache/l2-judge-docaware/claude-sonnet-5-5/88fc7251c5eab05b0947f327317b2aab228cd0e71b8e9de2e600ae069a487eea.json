@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Safety Data Communication Network provides \"the Clock Drift Sample Report\" to Cryptographic Key Management Appliance (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS040: Safety Data Communication Network provides the protected communications transport used by train control messages that require integrity, authentication, and bounded latency.\nS041: Safety Data Communication Network sends the Clock Drift Sample Report at defined synchronization intervals.\nS122: The Passenger Information Gateway receives the operational service state needed to align platform messages and train destination information with the current regulating plan.\nS123: The Cryptographic Key Management Appliance uses the sample report to verify that certificate validity windows and controller clocks remain within the permitted tolerance before operational use.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS068: East Junction Interlocking and West Junction Interlocking report switch state, track occupancy, and route locking status to the responsible zone controller through vital interfaces.\nS109: When an engineering possession or field report requires a temporary operating constraint, the Line Traffic Controller produces the Temporary Speed Restriction Notice after confirming the limits, speed value, start time, and expected removal condition.\nS144: Kestrel shall report train door enable side, berth identity, and departure readiness to support platform interface checks during dwell and dispatch.\nS160: The East Junction Interlocking and West Junction Interlocking report route command histories, point detection changes, and protective lock status to support failure localisation.\nS181: The Train Radio Modem shall report loss of safe data connectivity to the Atlas Onboard Controller and shall not mask intermittent communication failures from the cab display.\nS222: The Dual Channel Odometer and Atlas Onboard Controller shall report security-relevant diagnostic conditions in a manner that supports investigation without exposing cryptographic material.\n\nAnswer \"supported\" only if the document states that Safety Data Communication Network produces or sends this item AND that Cryptographic Key Management Appliance receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Cryptographic Key Management Appliance uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S041 states the Safety Data Communication Network sends the Clock Drift Sample Report, S123 states the Cryptographic Key Management Appliance uses 'the sample report' to verify clock tolerance, and no other sentence names a different producer or a similarly named item.\"}",
+ "usage": {
+  "input_tokens": 1176,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 104,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.724,
+ "created": "2026-10-19T19:01:41"
+}

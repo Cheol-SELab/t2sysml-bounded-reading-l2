@@ -1,0 +1,1583 @@
+{
+ "doc_id": "L2T7",
+ "title": "Operational Concept for the Sentinel Vale Earth-Observation Ground Segment",
+ "writer": "gpt-5.5",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "Sentinel Vale is an Earth-observation mission intended to provide routine land, coastal, and cryosphere imaging products with predictable latency and documented data quality.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The ground segment exists to plan spacecraft activities, acquire mission data, maintain safe spacecraft operations, generate user products, preserve mission records, and provide controlled access to services.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "This operational concept treats the spacecraft, launch segment, and external user processing environments as outside the ground segment boundary except where interfaces are required for operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "The ground segment boundary includes the Mission Control Center, Flight Dynamics Facility, Payload Processing Facility, Network Control System, Long Term Archive, User Services Portal, Mission Planning System, Command Validation Gateway, Telemetry Ingest Service, Orbit Determination Engine, Product Quality Service, Primary Processing Cluster, and Backup Processing Cluster.",
+   "tags": []
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "The boundary also includes the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna as controlled operational assets.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "For local voice coordination only, Mission Control Center is introduced in this document with the alias Bluebell.",
+   "tags": [
+    "ALIAS:E_MISSION_CONTROL_CENTER"
+   ]
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "The Mission Control Center is the authority for real-time spacecraft operations, pass supervision, anomaly response, and release of validated command activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "The Flight Dynamics Facility provides orbit analysis, maneuver planning support, access prediction, and navigation products required by other ground functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The Payload Processing Facility provides the operational environment for payload data processing, calibration control, product assessment, and distribution staging.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "The Network Control System monitors communications availability, routes operational traffic, and provides status awareness for ground connectivity supporting the mission.",
+   "tags": []
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Mission Planning System converts approved imaging demand and spacecraft constraints into executable activity plans for routine operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The Command Validation Gateway provides the formal barrier between planning outputs and command release, and it enforces rule checks before commands are made available for uplink.",
+   "tags": []
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The Telemetry Ingest Service receives spacecraft telemetry from scheduled contacts and makes it available to operations, engineering analysis, and downstream processing functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The Orbit Determination Engine supports routine orbit maintenance by processing tracking inputs and producing controlled orbit knowledge for planning and product generation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "The Product Quality Service performs automated and analyst-supported checks on generated products before they are exposed through operational dissemination channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The Primary Processing Cluster is the nominal production environment for standard mission products, while the Backup Processing Cluster is maintained for resilience and controlled failover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "The Long Term Archive is the authoritative repository for preserved mission data, generated products, processing records, and operational evidence required for traceability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "The User Services Portal provides the controlled external interface for product search, ordering, status communication, and user support workflows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The Ground Network Manager coordinates availability of the antenna assets and confirms that scheduled contact opportunities are compatible with station readiness and maintenance constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The Spacecraft Operations Team owns spacecraft safety execution, contact conduct, command authorization support, and operational decision making during nominal and contingency conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "The Flight Dynamics Team owns flight dynamics analysis, orbit maintenance recommendations, and operational coordination for navigation-related constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "The Payload Calibration Team owns payload performance monitoring, calibration parameter stewardship, and the technical assessment of product quality trends.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "The Cybersecurity Desk provides continuous security monitoring, operational security guidance, and escalation support for events that could affect mission services.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "The baseline service assumption is continuous monitoring for safety-critical functions, scheduled contact support for every planned pass, and business-hours engineering support augmented by on-call coverage for urgent conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 1,
+   "text": "Routine autonomy is assumed for monitoring, routing, ingestion, processing, archiving, and user service transactions, but human authorization remains required for spacecraft commanding and major configuration changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 1,
+   "text": "Mission assurance is based on controlled procedures, configuration management, segregation of duties, evidence retention, rehearsed contingency response, and periodic verification that redundant capabilities can support the required mission service levels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "The ground station estate is treated as a shared mission resource under the same configuration control principles that apply to command, telemetry, and processing services.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "North S-Band Antenna provides the nominal early-pass command uplink and low-rate telemetry return for contacts that require conservative link margins.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "South S-Band Antenna provides the alternate S-band path and is kept in a compatible configuration so that short-notice reassignment can be made without changing spacecraft procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "Kiruna X-Band Antenna is assigned primarily to high-rate payload downlink during European visibility periods and is planned with margin for setup, carrier acquisition, and post-contact checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "Svalbard X-Band Antenna extends northern contact opportunities and is favored when the orbit geometry gives longer visibility or lower elevation loss.",
+   "tags": []
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "The Mission Control Center maintains the operational contact schedule and uses it as the controlling reference for console staffing, command readiness, and telemetry coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "The Network Control System distributes station allocations, confirms antenna readiness states, and records the actual start and end times of each contact.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "Contact booking requests are submitted through the Mission Planning System with the required service type, antenna preference, minimum elevation, data volume expectation, and priority class.",
+   "tags": []
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "Routine contacts are frozen at the daily planning cut-off, while contingency contacts may be inserted later when approved operational justification is recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "Conflicts are resolved first by spacecraft safety need, then by data timeliness need, then by efficient use of common ground resources.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "The Ground Network Manager is also known as Juniper in standing operational rosters.",
+   "tags": [
+    "ALIAS:E_GROUND_NETWORK_MANAGER"
+   ]
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "The Ground Network Manager arbitrates unresolved contact conflicts and verifies that station commitments remain consistent with maintenance windows and staffing limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "The Flight Dynamics Facility is also known as Mistral in legacy shift logs.",
+   "tags": [
+    "ALIAS:E_FLIGHT_DYNAMICS_FACILITY"
+   ]
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "Flight Dynamics Facility provides visibility predictions and antenna pointing support products to the planning process before contacts are released for execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "Orbit Determination Engine produces the Doppler Residual Report after each qualified tracking pass to support navigation trend assessment.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "Local station teams are responsible for antenna pre-pass configuration, frequency standard verification, time correlation checks, safety interlocks, and logging of any local anomalies.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "Station operators notify the Mission Control Center when local constraints could affect an approved contact, including equipment warm-up limits, access restrictions, or unexpected maintenance activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "Ground Network Manager issues the Antenna Deicing Notice when forecast icing or measured buildup threatens tracking performance.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "Weather constraints are assessed using local forecasts and real-time measurements for wind, precipitation, temperature, lightning risk, and atmospheric attenuation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "X-band contacts may be downgraded or moved when heavy precipitation is expected to reduce the link margin below the approved operating threshold.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "S-band contacts are normally more tolerant of weather, but high winds or unsafe outdoor conditions can still make an antenna unavailable for service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "The Telemetry Ingest Service receives contact status and data-flow indicators so that downstream processing can distinguish planned gaps from station-side interruptions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "The Payload Processing Facility coordinates with Primary Processing Cluster and Backup Processing Cluster when a downlink allocation change alters expected processing load or delivery timing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 2,
+   "text": "Ground network management practices emphasize advance coordination, disciplined change approval, continuous monitoring during contacts, and post-contact reconciliation against the approved schedule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S051",
+   "section": 2,
+   "text": "Performance trends for each antenna are reviewed at regular operations meetings so that recurring acquisition delays, pointing errors, or link-margin shortfalls are converted into corrective actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 3,
+   "text": "The wide area connectivity design extends the ground network management practices from the scheduling domain into continuous transport control across all operational sites.",
+   "tags": []
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "The physical topology uses redundant terrestrial circuits between the Mission Control Center, the Flight Dynamics Facility, the Payload Processing Facility, and the Long Term Archive, with diverse carrier entrances where local infrastructure permits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "The North S-Band Antenna and the South S-Band Antenna connect to the Mission Control Center through protected access routers that keep command and telemetry traffic separate from site administration traffic.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "The Kiruna X-Band Antenna and the Svalbard X-Band Antenna use dual wide area paths toward the Payload Processing Facility so that payload downlink traffic can continue during a single carrier outage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "The Mission Control Center hosts the primary routing policy point, while the Network Control System maintains operational visibility of circuit state, path selection, and active maintenance windows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "The Network Control System is known operationally as Lantern and is treated as the authoritative view of wide area circuit status.",
+   "tags": [
+    "ALIAS:E_NETWORK_CONTROL_SYSTEM"
+   ]
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "Routing policy is based on approved prefixes, authenticated neighbor relationships, and deterministic preference values rather than ad hoc route changes during contacts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "Dynamic routing is permitted only on controlled adjacencies, and static backup routes are preconfigured for antenna sites where local carrier behavior is not sufficiently predictable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "Critical contact paths are pinned before acquisition of signal when the Ground Network Manager determines that a maintenance condition could cause route oscillation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "Management access to routers, firewalls, time servers, and monitoring probes is restricted to dedicated administration networks that are not advertised to mission data enclaves.",
+   "tags": []
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "Latency budgets are assigned by service class so that command validation, real-time telemetry display, orbit determination support, processing transfers, and archive replication can be measured against different expectations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "The budget for real-time command and telemetry traffic between the Mission Control Center, the Command Validation Gateway, and the Telemetry Ingest Service is managed as an end-to-end figure that includes encryption overhead and firewall inspection time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "Traffic supporting the Orbit Determination Engine is given a tighter jitter objective than routine file movement because late or uneven delivery can reduce the usefulness of contact assessment products.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "Transfers from the Primary Processing Cluster to the Long Term Archive are rate limited during active contacts so that bulk movement cannot starve operational telemetry or control-plane monitoring.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The Backup Processing Cluster receives lower routing preference during normal operations, but its paths are tested routinely so that failover does not expose stale firewall rules or asymmetric return routes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "If a latency budget is exceeded, the Ground Network Manager first verifies carrier performance, then checks routing state, packet loss, queue depth, and security inspection delays before declaring a mission-impacting network condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "Time synchronization is provided from redundant reference clocks at the Mission Control Center and the Flight Dynamics Facility, with holdover capability sized to cover credible external timing outages.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "Precision Time Protocol is used inside data centers and processing enclaves where sub-millisecond alignment is required for correlation, while authenticated Network Time Protocol is used for general server and workstation timekeeping.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "Antenna site equipment validates time against independent local references before contact start so that tracking records, telemetry frames, and operator displays remain comparable across locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "The Flight Dynamics Team monitors timing quality alongside orbit support metrics because clock bias can appear as an apparent measurement error if it is not separated from actual tracking performance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "Timing alarms are forwarded to the Spacecraft Operations Team only after the Network Control System confirms that the alarm is not caused by a known maintenance interval or a failed local reference check.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "Cybersecurity monitoring is applied at each site through network sensors, endpoint telemetry, privileged-access logging, and configuration compliance checks that are reviewed during every operational shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 3,
+   "text": "The Cybersecurity Desk sends a Security Exception Ticket when a monitored event requires temporary deviation from the approved security baseline.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S075",
+   "section": 3,
+   "text": "Correlation rules emphasize changes that could affect mission continuity, including unexpected route advertisements, repeated authentication failures, unscheduled remote access, and unexplained increases in encrypted traffic volume.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 3,
+   "text": "During contingency operations, the Ground Network Manager and the Cybersecurity Desk coordinate before blocking traffic so that protective actions do not unintentionally interrupt a spacecraft contact or prevent recovery of processing services.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "Following the network coordination described in the preceding section, the Mission Control Center treats every scheduled contact as a controlled operational activity with a defined readiness check, live monitoring period, and post-pass closure step.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "The North S-Band Antenna and South S-Band Antenna are normally assigned for command and low-rate telemetry contacts, while the Kiruna X-Band Antenna and Svalbard X-Band Antenna support high-rate telemetry reception when the visibility geometry and data volume justify their use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The Network Control System provides the Mission Control Center with antenna status, link configuration, timing references, and routing readiness before each pass begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "The Telemetry Ingest Service accepts real-time frames, validates basic framing and time continuity, and records reception metadata needed for later operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "The Telemetry Ingest Service produces the Pass Replay Packet after a contact when the received stream must be reconstructed for engineering review.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "During live operations, the Spacecraft Operations Team monitors spacecraft mode, power state, thermal margins, attitude indicators, command counters, onboard storage, and fault protection messages from the Mission Control Center consoles.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "Console displays emphasize deviations from expected state rather than raw parameter volume, because operators must identify safety trends while a contact is still available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "The console lead is responsible for declaring pass status, authorizing planned command execution through the Command Validation Gateway, and pausing the activity when telemetry does not match the expected configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "The telemetry engineer verifies reception quality, frame loss, latency, and stream continuity, and advises the console lead when degraded link conditions could affect command confidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "The spacecraft systems engineer interprets health telemetry, confirms that subsystem states remain within flight rules, and records any anomaly context needed by subsystem specialists.",
+   "tags": []
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "The Ground Network Manager remains accountable for antenna assignment, ground link availability, and coordination with site operations when weather, equipment status, or routing issues affect a contact.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "The Flight Dynamics Team uses tracking measurements and validated time tags from the contact to support orbit assessment at the Flight Dynamics Facility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "The Orbit Determination Engine supports routine state updates and provides the basis for predicting future visibility periods, maneuver planning constraints, and antenna pointing expectations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "Pass reconstruction begins when the contact closes and combines command history, received telemetry timing, ground station status, and operator log entries into a single operational narrative.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "The reconstructed pass record is used to confirm whether planned objectives were completed, whether any onboard event occurred outside the timeline, and whether additional engineering analysis is required.",
+   "tags": []
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "The Payload Processing Facility is also known operationally as Forgehouse in console discussions and shift logs.",
+   "tags": [
+    "ALIAS:E_PAYLOAD_PROCESSING_FACILITY"
+   ]
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "The Mission Control Center coordinates with the Payload Processing Facility when instrument mode changes, data downlink priorities, or reception gaps could affect downstream processing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "The Payload Calibration Team sends the Calibration Patch Bundle after calibration analysis identifies an approved update for payload processing behavior.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "Subsystem specialists are not expected to staff every live contact, but they must be reachable during planned critical activities and whenever a console operator declares an off-nominal condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "Escalation from the Mission Control Center begins with the console lead, moves to the responsible discipline lead, and then reaches mission management when the condition threatens spacecraft safety, contact continuity, or recovery schedule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "The Spacecraft Operations Team and Flight Dynamics Team coordinate closely before orbit-control activities so that command timing, attitude constraints, tracking expectations, and post-burn assessment steps remain consistent.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "When telemetry indicates a possible onboard fault, operators preserve the command state, avoid discretionary commanding, and request specialist review before changing spacecraft configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 4,
+   "text": "The Mission Planning System receives operational constraints from mission control after anomalies, station outages, or spacecraft configuration changes require adjustment of future contacts or payload activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 4,
+   "text": "At the end of each shift, the Mission Control Center records unresolved actions, open engineering questions, and expected specialist responses so that the next operations crew can maintain continuity without relying on informal handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "Mission planning begins when observation requests arrive through the User Services Portal or from internal operations channels at the Mission Control Center.",
+   "tags": []
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "The Mission Planning System, also called Cedar in this section, is the authoritative tool for assembling candidate observation timelines and associated ground contact activities.",
+   "tags": [
+    "ALIAS:E_MISSION_PLANNING_SYSTEM"
+   ]
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "Each request is checked for requester authority, target definition, time sensitivity, acquisition mode, expected data volume, and any handling restrictions before it is admitted to the planning pool.",
+   "tags": []
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "The User Services Portal records the request state so that external users can distinguish accepted requests from those still awaiting technical review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "The Spacecraft Operations Team reviews late operational requests when they affect spacecraft attitude, thermal margin, stored command capacity, or contact preparation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "The Flight Dynamics Facility provides orbit predictions and visibility assumptions that the planning cycle uses to determine feasible imaging windows and ground contacts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "The Mission Planning System combines request priority, instrument availability, contact opportunities, onboard storage margin, and downlink capacity into a draft activity schedule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "The draft schedule covers payload imaging, recorder management, housekeeping activities, and expected support from the North S-Band Antenna and South S-Band Antenna.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "For high-volume acquisitions, the schedule also accounts for downlink opportunities through the Kiruna X-Band Antenna and Svalbard X-Band Antenna.",
+   "tags": []
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "The Payload Processing Facility receives planning metadata needed to prepare downstream processing expectations without treating the planning schedule as a commitment to deliver products.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "The Primary Processing Cluster and Backup Processing Cluster are considered during planning only to verify that expected acquisition loads remain compatible with routine processing capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "Juniper confirms that planned station use is compatible with network maintenance windows before the schedule is released for command preparation.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "The Spacecraft Operations Team uses the Antenna Deicing Notice to assess whether planned support can proceed without adding contingency contact margin.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "The Mission Planning System flags conflicts when two activities compete for the same spacecraft resource, ground station resource, or operational staffing interval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "Constraint checking includes slew time, sun-angle limits, power balance, thermal recovery time, recorder capacity, command load size, and required separation between incompatible activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "The Flight Dynamics Team reviews cases where orbital uncertainty or contact geometry could reduce the execution margin for a planned acquisition or downlink.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "The Payload Calibration Team reviews planned calibration activities when they share resources with revenue observations or affect instrument configuration states.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "After schedule convergence, the Mission Planning System exports a command preparation package to the command engineering workflow at the Mission Control Center.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "The Command Validation Gateway, also called Osprey in this section, performs independent validation of command stacks before they are eligible for operational approval.",
+   "tags": [
+    "ALIAS:E_COMMAND_VALIDATION_GATEWAY"
+   ]
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "Command stack validation checks syntax, timing, parameter ranges, sequencing rules, spacecraft mode compatibility, and consistency with the approved schedule baseline.",
+   "tags": []
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "The Command Validation Gateway rejects command stacks that contain unapproved manual edits, missing provenance, expired configuration references, or activities outside the planning authority window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "The Telemetry Ingest Service is consulted for the latest spacecraft state needed to confirm that the command assumptions still match actual configuration and health.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 5,
+   "text": "The Orbit Determination Engine provides the current orbital solution used to confirm time-tagged events, contact visibility, and any attitude-dependent observation geometry.",
+   "tags": []
+  },
+  {
+   "unit_id": "S124",
+   "section": 5,
+   "text": "The Product Quality Service may add planning feedback when previous acquisitions indicate that a requested geometry or instrument mode is unlikely to meet quality objectives.",
+   "tags": []
+  },
+  {
+   "unit_id": "S125",
+   "section": 5,
+   "text": "The Cybersecurity Desk reviews command preparation exceptions when unusual access, emergency procedure use, or nonstandard transfer paths are requested before uplink.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 5,
+   "text": "Final approval requires concurrence from the Mission Control Center and the Spacecraft Operations Team before any command stack is placed in the queue for the next authorized uplink opportunity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "After final command approval, orbit state management remains under continuous control so that operations users work from a common predicted trajectory.",
+   "tags": []
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "The Orbit Determination Engine fits dynamic orbit solutions using radiometric tracking, spacecraft telemetry timing, force models, and the latest approved maneuver history.",
+   "tags": []
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "Tracking arcs include measurements associated with the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna when those data meet quality and timing criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "The Product Quality Service checks each orbit solution for frame consistency, covariance reasonableness, time-tag continuity, and agreement with recent contact predictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "The Flight Dynamics Team uses the residual report to separate station-related tracking biases from dynamic model errors before accepting an orbit solution.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "The Flight Dynamics Facility maintains the authoritative orbit catalog for the ground segment and records the modeling assumptions applied to each accepted solution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "Maneuver screening evaluates orbit maintenance options against fuel use, ground contact visibility, payload outage constraints, and post-burn tracking opportunities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "For each candidate burn, the Flight Dynamics Team computes expected state change, execution tolerance, recovery strategy, and the earliest time when the solution can be declared stable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "Collision assessment uses externally supplied conjunction data together with the current covariance to estimate miss distance, encounter geometry, and probability of collision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "The Flight Dynamics Team maintains screening rules that distinguish routine catalog monitoring from events requiring immediate operator notification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "If the predicted risk exceeds the mission threshold, the Spacecraft Operations Team receives a maneuver recommendation package that includes timing constraints and operational impacts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "Attitude geometry support translates the predicted orbit into Sun angle, Earth limb, lunar exclusion, target visibility, and antenna pointing information for daily operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "The Flight Dynamics Facility sends the Star Tracker Mask File after verifying predicted bright-object exclusions against the current attitude plan.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "Bluebell requires that each flight dynamics delivery include a validity interval, coordinate frame, generation time, and operational use statement.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "The Flight Dynamics Facility distributes routine ephemerides and event predictions through controlled interfaces used by the Mission Control Center, Mission Planning System, and Payload Processing Facility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "The Mission Planning System uses accepted orbit files to align imaging requests, contact opportunities, recorder margins, and downlink windows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "The Command Validation Gateway checks maneuver command parameters against the screened burn plan before allowing the command stack to proceed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "The Flight Dynamics Team produces the Ephemeris Delta Note when updated state vectors change predicted acquisition times or imaging geometry beyond agreed thresholds.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "The Orbit Determination Engine produces the Laser Retroreflector Window from the refined orbit solution and the approved station geometry constraints.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "The Spacecraft Operations Team receives maneuver recommendations with enough lead time to rehearse commanding, verify contingency actions, and coordinate contact coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 6,
+   "text": "The Payload Calibration Team obtains predicted viewing geometry from flight dynamics products to interpret instrument trends and plan calibration activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 6,
+   "text": "The Network Control System uses antenna pointing predictions derived from the accepted ephemeris to prepare scheduled contacts and verify tracking readiness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S149",
+   "section": 6,
+   "text": "The Long Term Archive retains released orbit products, covariance data, maneuver records, and quality decisions so that later processing can reproduce the operational context.",
+   "tags": []
+  },
+  {
+   "unit_id": "S150",
+   "section": 6,
+   "text": "When the Primary Processing Cluster is unavailable, the Backup Processing Cluster supports product generation with the same validation checks and distribution rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 7,
+   "text": "The Payload Processing Facility is responsible for transforming downlinked payload telemetry into image products that are traceable to the source telemetry and to the processing configuration used at execution time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "Raw transfer starts when station delivery files arrive with an accompanying manifest, and the ingest workflow verifies file size, sequence continuity, checksum, and acquisition time before processing is scheduled.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "The Telemetry Ingest Service writes accepted raw data to immutable staging storage and records the session identifier used by downstream processors.",
+   "tags": []
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "Corrupted or incomplete raw segments are isolated from the nominal queue, and the operator display shows whether recovery, retransmission, or discard is required.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "The Primary Processing Cluster generates Level 0 products by removing transfer framing, ordering source packets, and preserving instrument time tags without radiometric or geometric correction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "Level 1A processing reconstructs detector samples and appends engineering context, while Level 1B processing applies radiometric calibration and sensor model parameters.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "Level 2 processing applies geolocation, atmospheric screening where applicable, and gridding rules defined in the active product specification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "Each processing level records software build identifiers, calibration baseline identifiers, and ancillary input versions so that a product can be regenerated under audit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "The Long Term Archive is also known as Granite in operator procedures for storage capacity and retrieval coordination.",
+   "tags": [
+    "ALIAS:E_LONG_TERM_ARCHIVE"
+   ]
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "Released products are stored in the Long Term Archive with metadata that distinguish operational output from test output and reprocessed output.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "The Payload Calibration Team maintains the approved calibration baseline and reviews trend evidence before a new baseline is made eligible for operational use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "The Product Quality Service uses the patch bundle to update calibration applicability checks before the next product assessment cycle.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "Calibration changes are first applied to a controlled sample of recent scenes, and the resulting metrics are compared with the current operational baseline.",
+   "tags": []
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "If a calibration change alters radiometric scale, geometric alignment, or saturation behavior, affected product specifications are updated before general release resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "The Product Quality Service assigns quality flags for missing source packets, timing discontinuity, saturation, cloud screening uncertainty, geolocation residuals, and processing fallback.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "Quality flags are encoded in product metadata and summary records so that automated consumers can reject, warn, or accept data consistently.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "A product is placed in a delivery hold state when mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "The Product Quality Service produces the Product Hold List when release blocking defects must be tracked across scenes and processing levels.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "Held products remain reproducible in staging storage, but they are not promoted for user delivery until the blocking condition has been cleared.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "The Network Control System uses the Security Exception Ticket to restrict affected transfer paths until approved containment actions are complete.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S171",
+   "section": 7,
+   "text": "Lantern shall preserve the last validated routing configuration and reject unreviewed changes while payload product transfers are active.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S172",
+   "section": 7,
+   "text": "When the Primary Processing Cluster cannot meet the processing window, the scheduling service assigns eligible jobs to the Backup Processing Cluster using the same container image and rule set.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 7,
+   "text": "The Backup Processing Cluster writes provenance that identifies the fallback execution path, and the Product Quality Service treats that marker as an input to its quality decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 7,
+   "text": "The Long Term Archive sends the Storage Watermark Snapshot after each daily storage assessment.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S175",
+   "section": 7,
+   "text": "If both clusters are unavailable, processing is suspended, raw data are preserved in staging, and Mission Control Center is notified through the normal operational event channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 7,
+   "text": "Recovery after suspension prioritizes products with contractual latency commitments, then processes remaining scenes in acquisition order unless mission management approves a different backlog rule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "Long Term Archive is the authoritative repository for Sentinel Vale raw downlink, auxiliary data, processing inputs, generated products, and operational metadata after routine production has completed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "Archive admission begins only after Payload Processing Facility has delivered the product package, associated quality metadata, and checksum evidence required by the configured acceptance rule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "Each accepted object is assigned a persistent identifier that remains stable across media migration, catalogue refresh, and later reprocessing campaigns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "The repository stores object content separately from searchable metadata so that catalogue publication can proceed without exposing internal storage paths.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "Catalogue records are published to User Services Portal after Product Quality Service has set the public quality status and the embargo rule has been evaluated.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "Products under operational review remain discoverable only to authorized mission staff until the release condition is cleared.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "User Services Portal provides search, preview, order, and download functions through a browser interface and documented machine interfaces.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "Download services support resumable transfer, integrity verification, and rate controls that protect mission operations from excessive external demand.",
+   "tags": []
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "Registered users receive authorization scopes based on mission policy, contractual access rights, and applicable data licensing constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Anonymous access is allowed only for product classes that have been approved for open dissemination by mission management.",
+   "tags": []
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "Long Term Archive retains raw acquisition data for the life of the mission and for the post-mission preservation period defined in the archive policy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "Standard Level 1 and Level 2 products are retained online while demand, contractual latency, or reprocessing dependence justifies low-latency access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "Older product copies may be moved to lower-cost storage when catalogue metadata, checksums, and restore procedures remain available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "Deletion is performed only against superseded temporary products, expired working copies, or objects covered by an approved disposal rule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "Retention exceptions require traceability to the approving authority, the affected product classes, and the expected operational impact.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "Reprocessing is triggered when calibration improvements, processor corrections, orbit updates, or quality investigations materially change product fitness for use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "Payload Calibration Team may request a reprocessing campaign when validation evidence shows a systematic radiometric or geometric issue.",
+   "tags": []
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "Mistral publishes orbit quality state changes to the archive operations queue before catalogue validity flags are updated.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "Product Quality Service records the reason for any reprocessing decision so that users can distinguish scientific updates from operational recovery actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "During reprocessing, Long Term Archive preserves the replaced product version unless the applicable policy allows consolidation after a defined comparison period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 8,
+   "text": "Catalogue records show processing baseline, sensing time, publication time, quality status, and replacement relationships for each released product.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 8,
+   "text": "Spacecraft Operations Team uses the Pass Replay Packet to confirm that archived downlink context can support anomaly reconstruction.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S199",
+   "section": 8,
+   "text": "External interfaces expose catalogue search, subscription notification, product ordering, and download status using versioned service contracts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 8,
+   "text": "Cybersecurity Desk reviews public interface changes before deployment to confirm authentication, logging, and abuse-control requirements are satisfied.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 8,
+   "text": "If Long Term Archive cannot meet a restore or publication commitment, User Services Portal displays a service status message and operations staff open the normal incident process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "Security operations for the Sentinel Vale ground segment are based on least privilege, strong authentication, network segmentation, and continuous audit collection across all operational environments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "Mission Control Center maintains the authority boundary for routine spacecraft operations and confirms that elevated access is tied to an approved shift role and a time-limited operational need.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "Cybersecurity Desk reviews privileged access daily and challenges dormant, shared, or unexplained accounts before they can be used during a pass or processing shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "Network Control System enforces approved routing paths between ground stations, processing services, and external interfaces, and it records configuration changes in the operational log.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "Command Validation Gateway accepts the mask file only when the integrity check, configuration identifier, and operator approval state match the active security baseline.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "Mission Planning System treats the retroreflector window as a constrained planning input and prevents its use outside the approved scheduling interval.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "An anomaly is first classified by impact to safety, command authority, data custody, service continuity, and user-facing commitments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "Spacecraft Operations Team leads triage for spacecraft safety indicators, while Ground Network Manager leads triage for antenna, link, and site-service indicators.",
+   "tags": []
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "Flight Dynamics Team assesses orbit and timing effects when tracking quality, contact geometry, or prediction freshness is suspected to be degraded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "Payload Calibration Team assesses product integrity when calibration state, instrument configuration, or processing repeatability is questioned.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "Cybersecurity Desk assumes coordination authority when the anomaly includes suspicious authentication, unexpected data movement, unexplained service behavior, or evidence of tampering.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "During triage, operators preserve volatile logs, current configuration state, operator console history, and relevant message identifiers before restarting services or changing routing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "Evidence is stored in write-protected case storage with a chain of custody entry that identifies the collector, collection time, source system, and reason for capture.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "Forgehouse must quarantine suspect input and derived output when product lineage cannot be proven during an active anomaly investigation.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "Cedar suspends automatic schedule publication when a security or continuity anomaly could invalidate contact commitments or conflict with manual recovery actions.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "Continuity modes are declared by the Mission Control Center after consultation with the affected technical leads and are recorded with the operational objective, expected duration, and exit criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "In monitor-only mode, command release is stopped, telemetry reception continues where safe, and engineering teams focus on stabilizing observability and protecting evidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "In essential-service mode, the ground segment prioritizes spacecraft safety contacts, time-critical telemetry capture, core orbit support, and protection of unrecoverable payload data.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "Primary Processing Cluster can pause nonessential production queues and reserve compute capacity for validated recovery runs from known-good inputs.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S221",
+   "section": 9,
+   "text": "If site degradation persists, processing work is transferred to Backup Processing Cluster only after input custody, software baseline, and operator authorization have been verified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 9,
+   "text": "Cross-site failover is coordinated through Ground Network Manager so that antenna allocation, network routing, firewall state, and contact schedules remain consistent.",
+   "tags": []
+  },
+  {
+   "unit_id": "S223",
+   "section": 9,
+   "text": "North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna are placed in the recovery plan according to current availability and the spacecraft contact priority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 9,
+   "text": "Long Term Archive remains the custody reference during degraded operations, and any delayed ingest or publication is reconciled before normal service status is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 9,
+   "text": "User Services Portal communicates confirmed service impacts in operational terms and avoids publishing speculative root cause information before the incident lead approves release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 9,
+   "text": "Recovery is accepted only when command authority is verified, telemetry and product flows are reconciled, security monitoring has returned to the approved baseline, and responsible teams have signed the incident record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "Routine mission service begins only after the operational readiness review confirms that ground procedures, staffing rosters, monitoring views, and escalation paths are under configuration control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "The readiness review board verifies that each open action from launch and commissioning has an owner, a due date, and an accepted residual risk statement where closure is not required before service start.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "Acceptance evidence is drawn from end-to-end rehearsals, procedure dry runs, interface verification records, capacity tests, security monitoring checks, and operator training completion records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Mission Control Center demonstrates continuous console coverage for the agreed service hours and proves that shift handover logs contain the state needed by the incoming controller.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The Flight Dynamics Facility provides readiness evidence showing that orbit products, maneuver screening, and conjunction coordination can be performed within the committed planning cycle.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "The Payload Processing Facility demonstrates that science product generation can be sustained during representative contact patterns without manual intervention beyond approved operator actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "The Network Control System records rehearsal outcomes for planned maintenance, station loss, degraded routing, and restoration of nominal connectivity after a simulated outage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "The Ground Network Manager accepts the antenna readiness baseline only when the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna have current maintenance clearances.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "The Spacecraft Operations Team conducts at least one integrated day-in-the-life rehearsal that includes pass preparation, commanding discipline, telemetry surveillance, anomaly declaration, and recovery reporting.",
+   "tags": []
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "The Flight Dynamics Team conducts a separate rehearsal for missed tracking data and late orbit update availability to confirm that planning products remain usable under degraded conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "The Payload Calibration Team validates that calibration operations are represented in the rehearsal schedule and that product quality decisions can be traced to approved engineering criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "The Cybersecurity Desk participates in the final exercise by validating alert routing, privileged access review, and incident coordination with operations management.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The User Services Portal uses the Product Hold List to prevent release of affected products until the applicable hold condition has been cleared.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "The Mission Planning System applies the delta note during schedule validation to ensure that contact and activity timing remains consistent with the latest operational constraint.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "The Backup Processing Cluster uses the Storage Watermark Snapshot to verify that recovery capacity is sufficient before it accepts routine standby responsibility.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "Osprey rejects any command request that lacks the approved authorization state, validation result, and operator acknowledgment required for routine service.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "Granite preserves the accepted archive baseline and confirms that retrieval tests meet the service objective before routine operations are declared stable.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "Operational key performance indicators include contact success rate, telemetry completeness, command validation timeliness, product latency, product quality disposition time, archive availability, help desk responsiveness, and unresolved anomaly age.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "Each key performance indicator has an assigned data source, sampling interval, review owner, threshold, and corrective action trigger so that routine reporting does not depend on informal judgment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S246",
+   "section": 10,
+   "text": "The primary monthly service review compares actual performance against the accepted baseline and records trend explanations for any measure that moves outside the watch band.",
+   "tags": []
+  },
+  {
+   "unit_id": "S247",
+   "section": 10,
+   "text": "The Primary Processing Cluster and Backup Processing Cluster are baselined with approved software versions, processing configurations, capacity reservations, monitoring checks, and rollback instructions before handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S248",
+   "section": 10,
+   "text": "Configuration baselines for ground software, operational procedures, interface control data, account roles, and monitoring rules are frozen at readiness review entry and changed only through approved change control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S249",
+   "section": 10,
+   "text": "Handover to routine mission service is authorized when acceptance evidence is complete, rehearsals meet their objectives, open risks are acknowledged by accountable owners, and support teams confirm on-call coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S250",
+   "section": 10,
+   "text": "After handover, the first operational reporting cycle is treated as a stabilization period in which deviations are reviewed daily and permanent process changes are deferred until sufficient evidence is available.",
+   "tags": []
+  }
+ ]
+}

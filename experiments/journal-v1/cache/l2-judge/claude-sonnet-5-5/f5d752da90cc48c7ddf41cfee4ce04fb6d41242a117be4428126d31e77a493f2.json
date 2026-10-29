@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Chief Operator provides \"the Backwash Solids Manifest\" to Residuals Hauler (an information or material flow).\n\nSource sentences:\nS172: The Distribution Dispatcher is notified when treatment changes could affect operating reserves at the North Distribution Pressure Station or South Distribution Pressure Station.\nS173: The Chief Operator produces the Backwash Solids Manifest after solids removal quantities and handling conditions have been verified for the completed residuals event.\nS244: The North Distribution Pressure Station shall be included in readiness checks for telemetry validity, pump permissives, local alarm indication, and operator communications.\nS245: During commissioning of residuals handling, the Residuals Hauler shall use the Backwash Solids Manifest to confirm load identity, destination, and acceptance requirements.\n\nAnswer \"supported\" only if the sentences state that Chief Operator produces or sends this item AND that Residuals Hauler receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S173 says the Chief Operator produces the Backwash Solids Manifest, and S245 says the Residuals Hauler uses that same manifest to confirm load identity, destination, and acceptance requirements, so it is created by one and used by the other.\"}",
+ "usage": {
+  "input_tokens": 723,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 96,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.404,
+ "created": "2026-10-14T12:38:59"
+}

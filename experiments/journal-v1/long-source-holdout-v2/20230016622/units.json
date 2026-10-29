@@ -1,0 +1,1571 @@
+{
+  "doc_id": "20230016622",
+  "title": "Joint Augmented Reality Visual Informatics System: Concept of Operations",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 12 of 110 Title: Concept of Operations 1 Introduction The National Aeronautics and Space Administration (NASA) is embarking on a 21st century space exploration initiative via the Moon to Mars and Artemis programs.1 These programs aim to es- tablish a sustained lunar presence and explore the moon’s surface using innovative technologies."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "One primary goal of these initiatives is to enable crew autonomy."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "The existing human spaceflight work domain must undergo a substantial transformation to redistribute and create work capabilities among future flight teams, which includes both crew and Earth based mission support personnel."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "For example, crew will be given greater access to a variety of information to make locally informed decisions."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "The broader flight team will need to simultaneously interact with this data and provide new means of support throughout the mission as crew take on more responsibility and authority."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "Achieving increased crew autonomy will require new technologies and operational concepts to fa- cilitate information exchange among the flight team and crew in future planetary exploration work demands."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "To meet these demands, NASA proposed requirements for a digital display for an EVA spacesuit to provide relevant information to the crew member."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "The Joint Augmented Reality Visual Informatics System (Joint AR) project pursued four years of research and development towards a suit-display system in a near-eye, AR form factor."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "The project was responsible for developing software (cus- tom graphics engine and core flight software), physical hardware prototyping (controls, projection display optics, suited display platform), virtual prototyping platform (a virtual reality testbed), and human-in-the-loop (HITL) operational testing informed by EVA flight controllers, crew members, and human factors engineers for con-ops definition."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "This document contains substantial updates to CTSD-ADV-1788 Rev."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "Basic."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "This revision was pro- duced by the project to summarize the use-cases and and user experiences developed throughout the project, and refine the Basic revision originally drafted at the beginning of the project life cycle. 1.1 Purpose The primary purpose of this document is to summarize and make available the scenario devel- opment efforts that have been pursued and explored within the Joint AR project."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "This includes descriptions of the scenarios themselves as well as corresponding potential of advanced informat- ics displays to support those specified scenarios."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "In doing so, this document provides a variety of approaches to deconstruct and hypothesize how future technological capabilities so that with future EVA work demands can be satisfied within future human planetary spaceflight missions. 1.2 Scope The scope of this document is intended to support two audiences: 1) on-going NASA and vendor efforts to enable advanced informatics for EVA operations and 2) researchers and technology de- velopers in the broader academic and commercial sector."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "This document extends the spacesuit informatics concepts found within published NASA documentation by exploring a variety of possi- ble envisioned futures to help imagine and describe what future EVA operations could look like with crew having decision support capabilities via an advanced informatics display."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "The contents of this document are applicable to any advanced informatics development efforts. 1For more information: https://www.nasa.gov/MoonToMarsArchitecture Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 13 of 110 Title: Concept of Operations This document is neither prescriptive, nor definitive in offering solutions."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "Instead, this document of- fers a deliberate attempt to articulate the simultaneous creation of both the situated work demands of future EVA operations and the corresponding value propositions of Joint AR capabilities."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "In do- ing so, a shared vision of future EVA operations can be distilled to inform subsequent work domain development efforts in conjunction with technological development. 1.3 Change Authority and Responsibility Proposed changes to this document shall be submitted to JSC-EV3 for consideration and disposi- tion. 2 On the Path to Enabling Earth-Independence In 2023, NASA released its Moon-to-Mars Architecture Definition Document."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "This architecture document serves to set the baseline goals to create a systems engineering framework for the necessary program contributions to return to the Moon and journey on to Mars."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "Furthermore, this architecture has established high level objectives in a variety of domains including science, infrastructure, transportation and habitation, and operations."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "Meeting these objectives will provide the scientific and technical capabilities for sustained lunar and eventual Martian presence. “The implementation of Earth-independent missions will be one of the biggest challenges facing a sustained space presence."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "As of 2023, all aspects of space missions have been monitored and coordinated with reliance on Earth-based Mission Control Center (MCC)."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "However, anticipated delays in radio communications and blackouts require future missions to be independent from Earth in a way not yet seen in space flight."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "Crew on these long duration missions will need technologies that promote autonomy across all phases of flight."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "Objective OP-2 from the architecture document reads Optimize operations, training and interaction between the team on Earth, crew members on orbit, and a Martian surface team considering communication delays, autonomy level, and time required for an early return to the Earth."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "In other words, technologies and new ways of working need to be developed to ensure mission goals are accomplished within the environmental constraints that will be present in future missions (e.g. limited communication bandwidth between all members of the flight team)."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "Imagining how to support all phases of a future mission in new ways, with novel technology is no easy feat."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "This challenge broadly aligns with the envisioned world problem [16, 8] and is an active area of study within the fields of human factors and cognitive systems engineering [4, 3, 12]."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "For the purposes of this document, a subset of human spaceflight operations, known as EVA [7, 15, 9], is offered as a case study for how to begin the process of enabling Earth-independence."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "The methods employed in this document are inspired by the deliberate discussion of user context [14, 13, 1], function allocation [2], and work domain construction [8]."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "Collectively, these approaches attempt to help imagine the work domain that might one day exist and grapple with the practical realities of working in that hypothetical future."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 14 of 110 Title: Concept of Operations 3 Advanced Informatics Display System and EVA Concept of Operations Definition The contents of this document aim to explore hypothetical future moments during EVA execution to establish more specific account of the contextually relevant details of existing concept of operations documents."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "Specifically, Section 5 explores moments within Phase 7 \"EVA Operations\" as shown in Figure 3.1."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "Section 6 describes potential solutions within the context of those hypothesized moments to help show how a spacesuit-compatible informatics system could help the user in that particular situation."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "Section 4 provides an overview of the methods involved in this detailed concept of operations process."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "The remainder of this section describes how this document builds upon details found in parent concept of operations documents (Section 3.1)."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "Additionally, Section 3.2 provides rationale on why a spacesuit-compatible augmented reality informatics system is the highest value proposition solution regarding an EVA informatics display system. 3.1 Con-Ops Traceability Below is a list of the governing documents that were used to prioritize the scope of content in this document. • EVA-EXP-0042 - Exploration EVA System Concept of Operations • xEVAS System Requirement Document, specifically RQMT-065 Figure 3.1 outlines the over-arching phases of operation that are anticipated to be involved in future EVA operations."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "Section 7.2.8 and APPENDIX F of EVA-EXP-0042 also adds details regarding the variety of potential engineering and science tasks crew might perform."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "APPENDIX H INFORMAT- ICS outlines a list of potentially desirable advanced digital content capabilities."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "The exploration EVA system found in EVA-EXP-0042 is shown in Figure 3.2 with annotations of the anticipated interconnections that will be required if an advanced informatics display such as an augmented reality display is to ever be realized [10]."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "A central point of this annotated diagram is that an advanced informatics device must not only service the needs of the suited crew member, but it must also support the broader team of remote support personnel and accommodate interfaces with a variety of other EVA assets."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "In other words, the advanced informatics device cannot simply be designed for a single user when EVA operations requires a team of people and a variety of assets."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "Most recently, the xEVAS System Requirements Document (SRD) outlines the expected advanced informatics capabilities of future spacesuits within RQMT-065."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "This content is summarized along- side the desired features outlined in EVA-EXP-0042 in Figure 3.3 to help bound the capabilities discussed in the remainder of this document."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "Seven of the ten requirement statements align with concept of operations expectations."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "However, current xEVAS vendors are not required to imple- ment an AR form factor as the necessary display for their spacesuits, which is the hypothesized ideal solution for future operations."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "EXP-EVA-0042 and subsequently this document continues to hypothesize that an augmented reality experience for the crew member will yield the most desired crew informatics interface possible to conduct an EVA."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "See Section 3.2 for more discussion on the value proposition of an augmented reality system."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "In summary, there exists a variety of higher level descriptions of how future EVA operations might be performed."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "However, these existing concept of operations descriptions do not provide the amount Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 15 of 110 Title: Concept of Operations Figure 3.1: Phases of Operations for the xEVA System as defined in Section 4.1.3 of EXP- EVA-0042."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "Figure 3.2: Annotated example from EXP-0042 Figure 5.2 that highlights how an AR Device must be integrated with the surrounding assets that encompass the broader EVA system which includes electronic systems and other human agents upon which the suited crew members must dependent to perform EVA work. of detail required to actually situate how an advanced informatics system might support future user work demands during an EVA."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "The contents found in Section 5 below focus on expanding Phase 7 Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 16 of 110 Title: Concept of Operations Figure 3.3: Summary of desired features and vendor requirements for an advanced infor- matics display for EVA operations."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "\"EVA Operations\" via a series of use-cases. 3.2 Value Proposition for Augmented Reality This document does not attempt to document all possible informatics display form factors and their corresponding value propositions."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "Both the narratives and user interface solutions in this document are directly applicable to a multitude of display form factors."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "However, we make a deliberate attempt to propose that an augmented reality system as an informatics display technology offers the most desired end result of capabilities to support future EVA operations."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "The value proposition discussed in this section that motivates the Joint AR solution [11] was driven by the design philosophies outlined below: An advanced informatics display and control system for suited crew operations should: • Maximize EV crew productivity without compromising their safety. • Minimize the number of discrete physical acts required by the EV crew to operate. • Minimize the amount of time required to change from the current state to a desired state. • Minimize the interference with other means of communication among the work system (e.g., audio, visual). • Provide redundant means of control for EV crew."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "Simply put, EVA is the most expensive, demanding, and arguably the riskiest phase of human spaceflight."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "Crew time during EVA is precious and any time spent not achieving EVA goals is time wasted."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "AR as technology theoretically offers the fastest mode of information access by simply having the data immediately in view and contextualized within crew surroundings for consumption."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "In other words, crew would not be required to physically handle a piece of separate display hard- ware like a portable display (e.g. tablet) which requires time and attention of the crew member."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 17 of 110 Title: Concept of Operations Additionally, AR that is integrated with the helmet bubble offers the potential to align digital content within the real-world view from the crew member’s first person perspective."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "This capability is known as registered AR and could further reduce the necessary time for the crew member to view and understand digital content while performing EVA."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "For example, the crew could simply see the desti- nation they need to reach in their real-world by looking at the horizon without ever having to look at a 2-dimensional map and perform the orienting work required to transform 2-D map data into their 3-D surroundings to identify where to travel."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "In addition to the display form factor, numerous different control schemes should be considered for feasibility, ease of use, and overall functionality compatible with a suit-compatible AR system."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "The Joint AR advocates that a multi-modal control scheme that includes both direct EV control (e.g. physical crew control and hands free control), in tandem with remote control offers the most flexibil- ity to support EVA work dynamics."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "EVA work ebbs and flows through a series of possible situations that necessitate a fluid control scheme among the broader flight team."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "A particular control method might be momentarily infeasible due to the work situation the crew are facing."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "For example, crew might experience a brief communication outage with their remote teammates, physical hand control might be prevented when crew hands are occupied with task work, or existing audio conversations among the team might preclude or interrupt the activation of voice control commands."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "Ultimately, if an advanced informatics display is to be used and found useful by crew, the display and control system must be capable of coping with the complexities of the jobs that crew will face in future operational scenarios."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "For more detail on the Joint AR project, please see Refs: [10, 11]."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 18 of 110 Title: Concept of Operations 4 Framing the Scenarios This document prioritizes the deliberate articulation of future work domain attributes and potential corresponding solutions to demands faced by users in those hypothetical situations."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "In doing so, aspects of the envisioned world problem challenges summarized below can begin to be addressed [16]. • plurality: there are multiple versions of how the proposed changes will effect the character of the field of practice in the future. • underspecification: each envisioned concept is vague on many aspects of what it would mean to function in that field of practice in the future; in other words, each is a simplification, or partial representation of what it will mean to practice when that envisioned world becomes concrete. • ungrounded: envisioned concepts can easily be disconnected or even contradict, from the research base, the actual consequences of the changes on people, technology and work. • overconfident: advocates are miscalibrated and overconfident that, if the systems envisioned can be realized, the predicted consequences and only the predicted consequence will occur."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "These challenges all stem from many people having internalized assumptions about what a future system is and what it could and should do."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "In an attempt to help build a common vision for what the future work could look like, this document implements the approach shown Figure 4.1."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "We acknowledge that there is a boundless set of options that might exist one day."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "To cope with the limitless possibilities, we encourage the deliberate construction of a finite set of imagined futures to help narrow the discussion."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "As discussed in Section 4.1, this method is an attempt to overcome some of the initial challenges of the envisioned world problem. use case narratives and momentary demands provide a deliberate set of specific instances that address plurality, underspecification, and ungrounded concerns."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Providing interface prototypes that trace directly to momentary de- mands provide a mechanism to help address being overconfident by calibrating user expectations to meet the moment in question."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "These efforts should be coupled with iterative prototype testing of a real-world solution help build alignment with system expectations and capabilities within the work domain being built."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 19 of 110 Title: Concept of Operations Figure 4.1: Visual description of the translation of an infinite amount of hypothetical work domain possibilities to a more concrete set of concrete work domain possibilities Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 20 of 110 Title: Concept of Operations DISCLAIMER The framing described here depends on a highly iterative refinement and should serve as a means by which a group of people can imagine in a common direction."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "Agreement and discussion should be iteratively assessed on the use case narratives, momentary demands, and user interface prototypes."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "This approach is not meant to serve as a standalone method but rather demonstrate how to start the process of understanding envisioned user needs and iteratively discover potential solutions as documented in existing human-centered design processes [5, 6]. 4.1 Methods and Approach for Eliciting Advanced Informatics Features 4.1.1 Use Case Definition Template Figure 4.2 shows the components of the use cases defined in this document."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "The section header conveys the primary work goal illustrated within the hypothetical use case narrative."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "The agents involved in the use case narrative are represented with their respective icons."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "Icons representing all possible agents are derived from the elements outlined in the EXP-EVA-0042 document (see Figure 3.2)."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "The body of the narrative is written in the third person perspective and showcases the sequence of interactions among appropriate agent(s) and their informatics display."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "The informatics display addresses pertinent momentary demands related to information needs for successful task completion."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "Each momentary demand (also referred to as \"I want to...\" statements) is indicated in superscript within the narrative."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "Some momentary demands may not be listed in the footnote for that use case because it was already referenced/defined in a previously stated narrative."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "Figure 4.2: Use case definition depiction of key elements Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 21 of 110 Title: Concept of Operations 4.1.2 Joint AR Proposed User Interface Template Figure 4.3 shows the synthesized work demands identified in the use cases with corresponding feature elements."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "These feature elements were considered the minimum amount of necessary information a user could hypothetically require in order to answer that specific work demand."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "Figure 4.3: Mapping of use case work demands to associated user interface features Figure 4.4 shows the corresponding work demand and representative user interface."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "The user interface is annotated with the features represented on the screen to indicate how those features might be represented for user interpretation."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "Black components of the user interface are transparent to the user."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "Given the variable lighting conditions in a lunar surface setting, a monochrome green color was selected for early prototyping to increase the likelihood of fielding a visible and legible interface solution."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "The Joint AR prototype optical placement is outlined approximately in Figure 4.5."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "The prototype user interface solutions assume a monocular, monochromatic transparent AR solution that is seam- lessly integrated with the helmet bubble."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "The display is slightly offset to the right side of the user and slightly above the horizontal field of view."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "The depictions shown in Figure 4.5 are notional alignments to help situate the context of the user interface displays described in the subsequent section."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "See Ref: [11] for more details on the broader Joint AR solution."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "Unless otherwise indicated, all user interface solutions described in this document are supported by a multi-modal control scheme that consists of a crew physical hand controller that consists of a two-button and dial configuration."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "Hands-free control includes voice control and remote control."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "Each use case section is decomposed into specific features considered by the Joint AR team and prototype solutions are provided for a large portion of the work demands discussed in this document."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "Note, the solutions provided here offer a specific traceable method to connect use case demands to user interface and experience considerations."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "The solutions provided are neither comprehensive nor final."
+    },
+    {
+      "unit_id": "U0106",
+      "text": "Instead, the prototype solutions offer a snapshot of potential solutions to critique, examine, and adjust via iterative prototype development and testing."
+    },
+    {
+      "unit_id": "U0107",
+      "text": "The primary focus of providing potential system solution content in this concept of operations document is to help explicitly link use case assumptions and corresponding system design concepts."
+    },
+    {
+      "unit_id": "U0108",
+      "text": "Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 22 of 110 Title: Concept of Operations Figure 4.4: Mapping of work demands to associated user interface prototype with annota- tions Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 23 of 110 Title: Concept of Operations Figure 4.5: Approximate optical placement of the proposed Joint AR system Revision: Rev A Document No: CTSD-ADV-1788 Effective Date: November, 2023 Page: Page 24 of 110 Title: Concept of Operations 5 EVA Use Case Definition Utilizing Advanced Informatics This section contains a variety of EVA operations tasks as summarized in parent documents found in Section 3.1."
+    },
+    {
+      "unit_id": "U0109",
+      "text": "However, this section extends this content by elaborating on specific hypothetical moments that future crew members might face, particularly in the context of utilizing an advanced informatics display."
+    },
+    {
+      "unit_id": "U0110",
+      "text": "The following moments summarized below: • Navigation Use Cases (Section 5.1) • Tool and Hardware Use Cases (Section 5.2) • Science Exploration Use Cases (Section 5.3) All categories of use cases are presented in the form as described in Section 4.1.1."
+    },
+    {
+      "unit_id": "U0111",
+      "text": "The reader should approach this content with the expectation that the moments and corresponding work as- sumptions described in each use case should be a topic of specific debate and discussion."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        0,
+        422
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        423,
+        488
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        489,
+        713
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        714,
+        824
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        825,
+        1007
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        1008,
+        1210
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        1211,
+        1355
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        1356,
+        1536
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        1537,
+        1944
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        1945,
+        2009
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        2010,
+        2016
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        2017,
+        2423
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        2424,
+        2586
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        2587,
+        3076
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        3077,
+        3387
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "normalized_body_span": [
+        3388,
+        3749
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        3750,
+        3968
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        3969,
+        4401
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        4402,
+        4589
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        4590,
+        4764
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        4765,
+        5018
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        5019,
+        5155
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        5156,
+        5313
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        5314,
+        5424
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        5425,
+        5701
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        5702,
+        5972
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        5973,
+        6080
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        6081,
+        6264
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        6265,
+        6454
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        6455,
+        6622
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        6623,
+        6799
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        6800,
+        7213
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        7214,
+        7310
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        7311,
+        7508
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        7509,
+        7611
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        7612,
+        7752
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        7753,
+        8327
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        8328,
+        8475
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        8476,
+        8580
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        8581,
+        8828
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        8829,
+        9101
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        9102,
+        9264
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        9265,
+        9418
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        9419,
+        9593
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        9594,
+        9680
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        9681,
+        9872
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        9873,
+        10081
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        10082,
+        10174
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        10175,
+        10287
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "normalized_body_span": [
+        10288,
+        10595
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        10596,
+        11024
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "normalized_body_span": [
+        11025,
+        11335
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        11336,
+        11556
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        11557,
+        11686
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        11687,
+        11890
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        11891,
+        12520
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        12521,
+        12624
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        12625,
+        12716
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        12717,
+        12900
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        12901,
+        13095
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        13096,
+        13400
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        13401,
+        13567
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        13568,
+        13863
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        13864,
+        14060
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        14061,
+        14297
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        14298,
+        14432
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        14433,
+        14539
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        14540,
+        14835
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        14836,
+        15066
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        15067,
+        15134
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        15135,
+        15467
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        15468,
+        16369
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        16370,
+        16507
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        16508,
+        16649
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        16650,
+        16731
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        16732,
+        16881
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        16882,
+        17170
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        17171,
+        17365
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        17366,
+        17554
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        20,
+        21
+      ],
+      "normalized_body_span": [
+        17555,
+        18146
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        18147,
+        18280
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        18281,
+        18716
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        18717,
+        18821
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        18822,
+        18912
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        18913,
+        19037
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        19038,
+        19207
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        19208,
+        19330
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        19331,
+        19450
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        21
+      ],
+      "normalized_body_span": [
+        19451,
+        19601
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "normalized_body_span": [
+        19602,
+        19942
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        19943,
+        20107
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20108,
+        20272
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20273,
+        20425
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20426,
+        20493
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20494,
+        20701
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20702,
+        20783
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20784,
+        20936
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        20937,
+        21046
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21047,
+        21201
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21202,
+        21266
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21267,
+        21499
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21500,
+        21561
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21562,
+        21757
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21758,
+        21902
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21903,
+        21962
+      ]
+    },
+    {
+      "unit_id": "U0106",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        21963,
+        22117
+      ]
+    },
+    {
+      "unit_id": "U0107",
+      "pdf_pages": [
+        22
+      ],
+      "normalized_body_span": [
+        22118,
+        22311
+      ]
+    },
+    {
+      "unit_id": "U0108",
+      "pdf_pages": [
+        23,
+        24,
+        25
+      ],
+      "normalized_body_span": [
+        22312,
+        23020
+      ]
+    },
+    {
+      "unit_id": "U0109",
+      "pdf_pages": [
+        25
+      ],
+      "normalized_body_span": [
+        23021,
+        23222
+      ]
+    },
+    {
+      "unit_id": "U0110",
+      "pdf_pages": [
+        25
+      ],
+      "normalized_body_span": [
+        23223,
+        23474
+      ]
+    },
+    {
+      "unit_id": "U0111",
+      "pdf_pages": [
+        25
+      ],
+      "normalized_body_span": [
+        23475,
+        23669
+      ]
+    }
+  ],
+  "removed_blocks": [],
+  "source_only": true
+}

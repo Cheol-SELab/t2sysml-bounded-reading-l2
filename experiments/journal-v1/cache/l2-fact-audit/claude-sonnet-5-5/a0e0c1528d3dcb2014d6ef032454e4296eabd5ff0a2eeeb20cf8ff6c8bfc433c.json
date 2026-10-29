@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Distribution Dispatcher, label=communicates demand changes)\n\nSource sentences (the last one is where the fact was extracted):\nS019: The Chief Operator has overall operating authority for plant mode selection, production targets, treatment response, and coordination of abnormal condition response.\nS020: The Duty Engineer supports configuration control, evaluates control-system problems, and approves engineering changes that affect operating behavior or documented boundaries.\nS021: The Maintenance Planner converts equipment condition information into planned work while coordinating with operations to avoid unnecessary treatment or distribution risk.\nS022: The Distribution Dispatcher coordinates finished-water delivery expectations with the plant and communicates demand changes that may affect pumping and storage strategy.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S022 states that the Distribution Dispatcher communicates demand changes that may affect pumping and storage strategy, so both the performer and the action label are directly stated.\"}",
+ "usage": {
+  "input_tokens": 707,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 69,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.376,
+ "created": "2026-10-14T12:52:12"
+}

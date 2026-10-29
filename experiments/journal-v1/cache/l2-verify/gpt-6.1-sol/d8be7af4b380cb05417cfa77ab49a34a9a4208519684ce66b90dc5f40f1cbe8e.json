@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Metro Operations Control System provides \"the Crew Login Token Bundle\" to Atlas Onboard Controller (an information or material flow).\n\nSource sentences:\nS023: Cyber Security Officer oversees access controls, key-management processes supported by Cryptographic Key Management Appliance, and the response to security events that could affect train control availability or integrity.\nS024: Metro Operations Control System sends the Crew Login Token Bundle as part of the controlled start-of-duty process.\nS094: If platform door readiness is absent, the approaching train may be held outside the platform stopping window even when the junction route is otherwise proved.\nS095: The Atlas Onboard Controller uses the token bundle to validate that onboard operating context is current before accepting supervised route-related data.\n\nAnswer \"supported\" only if the sentences state that Metro Operations Control System produces or sends this item AND that Atlas Onboard Controller receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S024 states that Metro Operations Control System sends the Crew Login Token Bundle, and S095 states that Atlas Onboard Controller uses the token bundle.\"}",
+ "usage": {
+  "input_tokens": 324,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 46,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 370
+ },
+ "attempts": 1,
+ "wall_s": 3.593,
+ "created": "2026-10-14T12:34:15"
+}

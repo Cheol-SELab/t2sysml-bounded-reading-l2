@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Diversion and irregular operations handling extends the operational concept beyond planned flow control by supporting safe acceptance, prioritization, communication, and recovery during the Recovery Phase and the Contingency Fallback State.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager uses the Regional Flow Platform to maintain a ranked view of candidate diversions, expected arrival times, required services, and the operational consequence of accepting each aircraft.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service compares amended Flight Intent Message data with the Airport Capacity Plan and the current Airport Acceptance Rate to show whether a diversion can be absorbed without creating unsafe demand peaks.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module evaluates runway availability, stand availability, sector load, handling capacity, and service constraints before a diversion recommendation is displayed.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console presents diversion options with estimated holding exposure, likely gate or stand impact, and any expected effect on regulated arrivals already in the plan.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager sends the Medical Diversion Notice when a medical priority aircraft requires airport-level coordination before landing.",
+   "tags": [
+    "F12:intro"
+   ]
+  },
+  {
+   "text": "Medical priority cases are treated as time-critical movements, and the operational objective is to minimize airborne delay while ensuring that emergency reception, surface routing, and stand access are ready.",
+   "tags": []
+  },
+  {
+   "text": "Technical priority cases include aircraft with abnormal system indications, degraded performance, fuel limitations, or maintenance requirements that make continued flight or extended holding undesirable.",
+   "tags": []
+  },
+  {
+   "text": "The Emergency Response Coordinator confirms rescue, medical, and airport safety readiness with the Airport Duty Manager before the arrival sequence is adjusted for a priority case.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor coordinates airborne sequencing with the Airspace Sector Planner so that priority handling does not overload approach sectors or create unstable runway demand.",
+   "tags": []
+  },
+  {
+   "text": "The Airspace Sector Planner protects sector margins and may request a Tactical Regulation Proposal when diversion traffic requires a broader arrival management action.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator reviews the effect of diversion acceptance on Calculated Takeoff Time and Target Off Block Time commitments for departures that are already in a Slot Compliance State.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal uses the window token to preserve the agreed pushback opportunity when diversion recovery requires a protected departure movement.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "Communication sequencing follows the principle that safety status is confirmed first, airspace and runway feasibility second, airport resource readiness third, and passenger or network recovery actions last.",
+   "tags": []
+  },
+  {
+   "text": "The Alert Distribution Hub provides role-specific alert summaries so that each operational group receives the timing, constraint, and decision ownership information needed for its task.",
+   "tags": []
+  },
+  {
+   "text": "The Digital Briefing Room records the diversion rationale, priority classification, resource commitment, and agreed recovery target in the Collaborative Decision Log.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator supplies passenger, crew, maintenance, and aircraft rotation impacts so that the diversion decision accounts for both airport capacity and network recovery needs.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher and Ramp Control Lead confirm stand access, towing resources, refueling constraints, and unloading capacity through the Handling Resource Planner.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector flags conflicts between diversion parking requirements and planned turnarounds, including cases where a short-duration stand occupancy would still disrupt a critical departure bank.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison coordinates downstream network effects, including alternate airport choices, aircraft swaps, crew legality risk, and rebooking pressure.",
+   "tags": []
+  },
+  {
+   "text": "The Military Airspace Liaison states whether flexible use airspace can be adjusted to accommodate rerouting, holding relief, or shortened recovery paths.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer maintains rapidly updated forecast information so that diversion choices reflect changing ceiling, visibility, wind, and convective risk.",
+   "tags": []
+  },
+  {
+   "text": "During the Recovery Phase, the Regional Flow Manager shifts from acceptance decisions to recovery coordination by balancing restored arrival capacity, departure release opportunities, and stand clearance timing.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse compares actual handling times, sector load, connection outcomes, and regulation changes against the recorded diversion plan to support post-operations review.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger and Identity Access Service retain traceability of who viewed, changed, or approved diversion decisions, while the Data Governance Steward ensures that sensitive operational and passenger information remains role-restricted.",
+   "tags": []
+  }
+ ]
+}

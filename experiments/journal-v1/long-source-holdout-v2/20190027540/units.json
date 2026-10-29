@@ -1,0 +1,2291 @@
+{
+  "doc_id": "20190027540",
+  "title": "Development of an Accepted Medical Condition List for Exploration Medical Capability Scoping",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "1.0 INTRODUCTION Future NASA human spaceflight programs are on the verge of moving beyond Low Earth Orbit (LEO) to implement missions in lunar space and ultimately Mars."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "The mission constraints for these types of missions are expected to be progressively challenging for integration of Human Systems requirements into the vehicle and mission architectures."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "Mass and volume allocations are expected to become increasingly restrictive at the same time that mission realities will drive an increasing need for crew self-sufficiency in the maintenance and repair of both vehicle systems and human systems."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "To meet these challenges, a systematic, traceable, and repeatable approach to identifying, defining, and prioritizing medical capabilities is required."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "To provide a systematic and repeatable approach to defining and prioritizing clinical capabilities for spaceflight medicine, a clear process is required for delivering a list of prioritized medical capabilities to the Systems Engineering process that will delineate the mass, power, volume, and similar needs and the trade space analysis for a given space vehicle and mission architecture."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "Figure 1 shows the process and products needed to deliver a medical capabilities list to the Systems Engineering team responsible for Human Systems Requirements development."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "Figure 1: Flow of work from the Concept of Operations to defining clinical capabilities needed for interfacing with Systems Engineering Teams."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "The Accepted Medical Conditions List, highlighted in green, is used to scope clinically desirable capabilities for inclusion in the Medical System in the exploration vehicle and mission design."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "Starting with the Concept of Operations for the medical system, Planned Activities and Unplanned Activities are considered."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "Planned Activities are those medical crew activities that are expected to be performed throughout a nominal mission."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "Examples include private medical conferences, periodic dental exams, self-examinations by crew, psychological examinations, exercise sessions, etc."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "Unplanned activities are those medical conditions that occur and require medical evaluation, diagnosis, monitoring, treatment, or long-term care to be implemented by the crew during the mission."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "Consideration of which medical conditions may occur in-mission uses a list of the expected medical conditions [1], [2] as the starting point for assessment."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "It is a given assumption that NASA will not be able to provide a full, Earth-like medical capability in flight to evaluate, monitor, diagnose, treat, or provide long-term management for all of the potential medical conditions that may occur."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "Since this is the case, it is critical to provide a process that allows for an evidence-based consensus position on what medical conditions mission planners should prioritize for the vehicle and mission design process."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "The Accepted Medical Conditions List (AMCL) is a product designed to provide a traceable, repeatable, evidence-based consensus process for scoping the medical capability needs for future design reference missions (DRMs) and upcoming programs."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "These include a Mars transit DRM and a shorter duration cis-lunar DRM."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "The development of a baseline AMCL by the Exploration Medical Capability (ExMC) Element will assist the effort to identify high priority medical capabilities for inclusion in mission and vehicle planning and provide traceable and documented clinical needs to the Systems Engineering teams tasked with requirements development and design work."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "The ExMC Clinician’s group developed a process to identify and prioritize potential medical conditions that a medical capability should plan to address during these DRMs."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "This was done in two separate iterations as described below, first as an AMCL Version 1.0 designed around a Mars transit DRM and subsequently as an AMCL Version 2.0 designed around a shorter duration cis-lunar DRM."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "Defining an AMCL allows the Element to better scope a potential exploration medical capability and identify the necessary resources for inclusion aboard future exploration vehicles within the context of known conditions, desired treatment capabilities, and limitations of vehicle and mission design."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "This document explores the methodology used in pilot efforts toward development of an AMCL and results of the first and second iterations, as well as lessons learned that can be used for future refinement of these AMCLs, and development of new ones to address future DRMs."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "There is a precedent with regard to identifying the medical conditions that pose a sufficient risk due to incidence, severity, morbidity, mortality, futility, or a combination of these factors during spaceflight missions."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "Previous efforts have led to the development of the Exploration Medical Condition List (EMCL) [3], derived from the International Space Station (ISS) Integrated Medical Group (IMG) Medical Checklist (JSC-48522) [4], the Flight Data File Medical Checklist (JSC-48031) [5], inflight medical incidence data in the Lifetime Surveillance of Astronaut Health (LSAH) repository, and NASA Flight Surgeon subject matter expertise."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "The EMCL has served as a foundation in determining which medical conditions might affect crewmembers during a given mission profile, helping to define which conditions might be of concern and require treatment and to identify gaps in knowledge that should be addressed by dedicated research or technological advances for future mission development [6]."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "Similarly, NASA developed the Integrated Medical Model (IMM) condition list (IMCL), a list of medical conditions considered to be of concern for ISS- specific spaceflight [1], [2]."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "This list, along with data from the Integrated Medical Evidence Database (iMED) have been used to populate the IMM for probabilistic risk analysis calculations for ISS missions based on the makeup of a given crew and specific mission parameters."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "Use of the iMED database allows for an evidence-based assessment of medical conditions’ probability of occurrence and an estimate of the number of occurrences that may occur throughout a given DRM."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "The EMCL and IMCL database are closely related."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "Knowledge gaps and uncertainty surrounding the probability of medical events during spaceflight are a known challenge faced at this time in human spaceflight."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "These naturally limit the ability to define an AMCL that will closely match what medical events occur in upcoming missions."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "This fact will not prevent human spaceflight missions from occurring, and impending timelines for cis-lunar missions and Mars transit missions beyond LEO drive the need for the best available AMCL that can inform vehicle and mission design efforts."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "This pilot effort attempts to identify the conditions that should, or should not, influence medical system planning for cis-lunar and Mars transit missions in the near-term future."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "When this process is used correctly, the best available evidence-based information on what medical conditions are likely to occur is considered along with survey-based Subject Matter Expert (SME) interpretation of the complexity and futility involved in dealing with each of those conditions, allowing a prioritization process that is transparent, repeatable, and traceable."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "The role of the SMEs in this process cannot be understated."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "In this process, SMEs are defined to include spaceflight support personnel with clinical experience in treating medical conditions such as operational flight surgeons, pharmacists, and nurses. 2.0 METHODS A pilot effort was developed to generate a logical method for comparative analysis of various medical conditions that might be experienced during Mars exploration spaceflight in an attempt to determine which conditions should or should not be accommodated by the medical system for such a mission."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "This led to an initial medical list that was subsequently modified to a second list that was appropriate for a shorter duration cis-lunar mission profile."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "The IMM Condition List was used as a starting point for all discussion of potential medical conditions of concern."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "To preserve familiarity of language, each condition was considered in two scenarios, as in the iMED [1], [2] – a “Best Case” scenario, where all interventions and treatments are successful and the patient recovers in the best manner possible for a given condition, and a “Worst Case” scenario, where the condition is complicated by poor response to treatment and failed interventions."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "The definitions for Best Case and Worst Care are taken from the iMED list in the IMM definitions document (IMM Service Request number D-20160815-365) and were not altered for this process."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "As IMM simulations can be requested and tailored for specific applications and different mission needs, varied mission parameters were implemented for different IMM runs specific to each AMCL effort."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "The probability of occurrence was identified based upon model output data from the NASA IMM Project at Johnson Space Center, Houston, TX (IMM Service Request number SR-20170306-376), using IMM version 3.0, programmed in MatLab® version 8.3 (2014a, MathWorks, Natick, MA)."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "Model parameters included a four crew (two male, two female) profile for a 16-month DRM with no extra-vehicular (EVA) activity for the Mars transit version."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "Of 200 Best and Worst Case conditions included in the iMED, six were excluded from consideration in scoring because of their association with EVAs and their probabilities were assumed to be 0 as EVA activity was removed from the DRM."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "The six conditions excluded from this effort were Best and Worst Case scenarios for Decompression Sickness, Fingernail Delamination, and Paresthesias."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "With the transition from a Mars transit DRM to a shorter duration cis-lunar DRM, data were extracted from an IMM run previously requested for another task (IMM Service Request number 201710623-384; IMM version 4.1, programmed in MatLab® version 8.3 (2014a, MathWorks, Natick, MA)), which included four crew (all male) and excluded EVA conditions for a cis-lunar mission lasting 42 days."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "While a mixed-sex crew is preferable, this run was selected to demonstrate the process while limiting cost and schedule impacts and comes with recognized limitations to the outcomes. 2.1 Scoring Variables The medical conditions were provided to ExMC medical professionals for review."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "These medical professionals included an Aerospace-trained pharmacist and six physicians with training and certification in Aerospace Medicine, Emergency Medicine, Internal Medicine, Family Medicine, and Physical Medicine and Rehabilitation, as well as familiarity and experience in operational aerospace medicine practice and the exploration mission concept."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "For the initial version of the medical list, each provider reviewed the conditions and Best/Worst Case scenarios, identifying whether management of each condition or scenario would be feasible for an exploration medical capability specific to the Mars transit Design Reference Mission."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "Specifically, each provider was asked to score the condition based on complexity (low, medium, high) and futility (low, medium, high) as defined in the tables below."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "These scores were translated to a logarithmic scale to roughly estimate the likelihood of successful intervention and good clinical outcome."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "Table 1 shows the definitions and scoring schema assigned to the Complexity category."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "Table 2 shows the definitions and scoring schema assigned to the Futility category."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "Table 1: Complexity variable definition and scoring schema."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "Clinical subject matter experts assigned scores on a logarithmic scale."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "Complexity Key Score Clinical Definition High 1 Large number of resources required to diagnose and treat, or difficult management."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "(i.e."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "Worst Case sepsis) Medium 0.1 Moderate number of resources required Low 0.01 Small number of resources required (i.e."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "Best Case mild headache) Table 2: Futility variable definition and scoring schema."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "Clinical subject matter experts assigned scores on a logarithmic scale."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "Futility Key Score Clinical Definition High 1 Highly likely to result in death or disability despite treatment Medium 0.1 Somewhat likely to result in death or disability despite treatment Low 0.01 Unlikely to result in death or disability The logarithmic score for futility was multiplied by the score for complexity, with the product then divided by the probability of occurrence to provide a final comparative ratio, the Exclusion Score (ES). 𝐸𝑥𝑐𝑙𝑢𝑠𝑖𝑜𝑛 𝑆𝑐𝑜𝑟𝑒= 𝐶𝑜𝑚𝑝𝑙𝑒𝑥𝑖𝑡𝑦∗𝐹𝑢𝑡𝑖𝑙𝑖𝑡𝑦 𝑃𝑟𝑜𝑏𝑎𝑏𝑖𝑙𝑖𝑡𝑦 By this schema, conditions that are unlikely to occur (probability), are unlikely to have a good outcome despite full treatment (futility), and are difficult to accommodate in light of resource and training constraints (complexity) will have a high ES."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "Those conditions that are likely to occur, have good expected outcomes, and require minimal resources will have a low ES."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "This allowed for a logical mathematical comparison of the viability of planning for conditions given a resource-limited exploration medical capability."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "It should be noted that, while the probability of occurrence is an evidence-based output from the IMM, the other two variables are subjective clinical SME assessments and logarithmic scores according to the definitions above."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "This is an acknowledged limitation to the methodology of this study and is discussed further in the Limitations and the Future Directions sections below."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "For process purposes, consistent use of the same definition set and scoring algorithm allows for a repeatable process despite these limitations. 2.2 Manual Review Calculated ESs were reviewed by the Exploration Medical Capability Element Scientist (the individual responsible for guiding the science and research of ExMC) to assess any inconsistencies and determine face validity."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "The Element Scientist assessed each condition, considering whether to recommend “Should Plan to Treat” or “Should Not Plan to Treat” based upon the variables (probability, complexity, and futility), the ES, and clinical experience."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "Of note, designation of a condition as “Should Not Plan to Treat” should not be interpreted as an indication that there would be no attempt to help a crewmember experiencing such a condition, but rather that dedicated exploration medical capabilities would not be specifically included in exploration medical planning and scoping for the purpose of anticipating and treating that specific illness or injury."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "As the methodology for this modeling evolved, a further designation of “Might Plan to Treat” was also incorporated to indicate a condition that might require certain additional resources that could be included in a medical capability if given the additional volume, mass, and training that would be required."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "Conditions with this designation could then be discussed further by the SMEs regarding the risk/benefit of inclusion within the model, at a later date when vehicle and crew training limitations were better defined."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "Conditions or scenarios were reordered manually to reflect the likelihood of successful intervention and whether such conditions should be considered treatable during an exploration mission."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "Following Element Scientist review, the remaining medical experts were asked to agree or disagree with the Element Scientist’s assessments and any reorganization by the Element Scientist and to provide rationale for any disagreement."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "Where majority consensus was reached, conditions were again manually reordered to reflect SME consensus."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "Where consensus was not reached, the Element Scientist provided the final designation based upon the interpretation of considerations presented by the SMEs queried."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "With transition from a Mars transit DRM to a shorter duration cis-lunar DRM, ExMC further refined the medical condition list by attaching medical resources/capabilities to each of the conditions."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "Necessary capabilities for the prevention, diagnosis, and treatment for each of the conditions were identified and the resources were determined based on what would be considered terrestrial standards of best practice."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "However, these “best practices” were modified to account for assumed resource limitations of the flight environment (e.g. future deep space missions are most likely not going to have a robust surgical capability, so conditions requiring the use of such a capability were modified to account for this limitation)."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Once these resources/capabilities were determined for each of the conditions, this information was used by the SMEs to further order and refine which conditions would and would not be treated, incorporating a dimension of “resource requirements” to previous assessments of complexity, futility, and probability."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "This was done subjectively, with the medical professionals providing an updated expert opinion on whether to treat or not treat each condition based on the initial exclusion scoring of the condition and the resources identified to manage them."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "With the methodology established, a final list of medical conditions that should or should not be treated during an exploration mission was generated."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "This list represents the consensus views of queried experts. 3.0 RESULTS The initial pilot project outcomes include lists of 1. conditions that an exploration medical capability “Should Plan to Treat” and 2. conditions that an exploration medical capability “Should Not Plan to Treat,” each subcategorized by Best- and Worst-Case scenario."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "The third “Might Plan to Treat” designation (referred to in the condition list as “Plan to Treat, with Conditions”) is included in the first list, identifying medical scenarios that would require dedicated additions to an exploration medical capability that would most likely be beyond the scope of the current medical capability design but could be managed in part using medical capabilities included in the planned medical system that would be used to manage other medical conditions."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "This third designation could also encompass conditions where treatment would be initiated but may be limited in duration based upon limited quantities of available resources."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "Lists are provided in Appendix A."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "Examples of calculations and comparative ratios are provided in Appendix B."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "There was general agreement between providers regarding conditions of high probability and low futility and simplicity of intervention; these conditions were nearly universally accepted as “Should Plan to Treat” conditions."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "The conditions that most often generated consensus toward no intent to treat were generally the rarest and most complex (least simple) conditions, and scenarios that, despite gold-standard intervention, would likely progress to poor clinical outcome (most futile)."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "Of the 194 conditions considered for the initial pilot project design, 135 were listed as “Should Plan to Treat” for medical system scoping with no dissent."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "Twenty-two conditions were listed as “Plan to Treat, with Conditions,” with clarification regarding the nature or extent of treatment capability to be provisioned and that additional dedicated resources/capabilities would not be included for these specific conditions."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "Thirty-four conditions were excluded from consideration for system scoping by consensus, designated as Should Not Plan to Treat."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "Figure 2 shows relevant proportions for condition inclusion and level of disagreement encountered among the SMEs."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "Disagreement was noted in the recommendation regarding 14 of the conditions; in that subset of cases, the Element Scientist provided final disposition."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "This accounted for 7% of the total number of conditions."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "Figure 2: A. relative proportion of conditions recommended for inclusion (“Should Plan to Treat”), inclusion with clarification (“Plan to Treat, with Conditions”), and exclusion (“Should Not Plan to Treat”) for medical system scoping from this approach."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "B."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "Relative percentage of conditions for which disagreement was encountered; final designations for these conditions required single voice disposition by the Element Scientist."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "The follow-on iteration to this model, developed in response to the shift to a shorter duration cis-lunar DRM, consolidated the initial 194 conditions (plus the six EVA conditions) into a 100-condition list by removing the “Best Case” and “Worst Case” definitions and looking at requirements for treating the condition as a whole."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "This was done by taking the previously developed mathematical calculations of probability, futility, and complexity and incorporating a “resource requirement” dimension, as described previously."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "Once done, the conditions were re-ranked and again organized into categories of “Should Plan to Treat,” “Might Plan to Treat,” and “Should Not Plan to Treat.” This was again done based on expert opinion of the previously described panel of SMEs."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "Given the challenges in reaching consensus in the first iteration of the model, the second iteration utilized an alternative methodology that involved developing a comprehensive approach to spaceflight-specific diagnosis and treatment of each condition."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "Once this comprehensive approach had been developed, it was simpler to identify futility and complexity and reach consensus regarding “Should Plan to Treat,” “Plan to Treat with Conditions,” and “Should not Plan to Treat” categorization."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "Finally, after this process was complete, the condition list was re-expanded to include Best Case and Worst Case definitions."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "Clinicians were asked to reevaluate the cases in light of the determined diagnostic and treatment plan and identify whether either case altered the resources needed or management plans."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "This expanded the final list back to 200 total conditions considered."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "Of the 200 conditions in this second iteration, 92 were listed as “Should Plan to Treat” for medical system scoping with no dissent, 89 conditions were listed as “Plan to Treat, with Conditions,” and 19 conditions were excluded from consideration for system scoping by consensus, designated as “Should Not Plan to Treat.” Using this adjusted approach, providers reached 100% consensus for categorization of the medical conditions for a shorter duration cis-lunar DRM."
+    },
+    {
+      "unit_id": "U0106",
+      "text": "Examples of calculations and comparative ratios are provided in Appendix C. 4.0 DISCUSSION Classification of medical conditions for comparative review, as well as determining reasonable vs. unreasonable medical management, is complex and difficult."
+    },
+    {
+      "unit_id": "U0107",
+      "text": "Here, a first pilot effort attempted to provide some framework for approaching the problem with mathematical and logarithmic designations of complexity, futility, and a calculation of probability generated by evidence-based modeling tools."
+    },
+    {
+      "unit_id": "U0108",
+      "text": "Subsequent revisions of the process attempted to quantify a “resource requirement” dimension for each medical condition, based on terrestrial standards adapted for spaceflight."
+    },
+    {
+      "unit_id": "U0109",
+      "text": "The intention behind these first process attempts was to find a starting point to generate discussion and then allow for refinement of technique through iteration. 4.1 Sources of Disagreement Providers identified unresolved disagreement in 7% of conditions for the initial design and no disagreement in the second-round design of the process."
+    },
+    {
+      "unit_id": "U0110",
+      "text": "As program-level planning and approval processes often require multiple levels of decision-making, limiting the discussion to small areas of SME disagreement may streamline review, deliberation, and the need for dedicated SME time for these approval efforts."
+    },
+    {
+      "unit_id": "U0111",
+      "text": "Of note, disagreement in the pilot effort most often occurred with conditions where complexity or futility is considered to be high."
+    },
+    {
+      "unit_id": "U0112",
+      "text": "Most often, providers expressed disagreement or struggled to reach consensus regarding two types of conditions."
+    },
+    {
+      "unit_id": "U0113",
+      "text": "First were conditions that were considered rare but likely to be successfully managed with the addition of few resources to a medical capability."
+    },
+    {
+      "unit_id": "U0114",
+      "text": "With these cases, there were at times disagreements over whether a dedication of resources to such low-probability events would be appropriate, regardless of the chance for successful treatment should one of these events occur."
+    },
+    {
+      "unit_id": "U0115",
+      "text": "Second were conditions that were interpreted differently by providers of differing medical backgrounds regarding the likelihood of successful intervention, likelihood of poor clinical outcome despite intervention, or definition of what a “Worst Case” scenario might entail."
+    },
+    {
+      "unit_id": "U0116",
+      "text": "An example of this was the condition, Acute Radiation Syndrome, where there tended to be differences in opinions for the care of this condition between those clinicians with a background in acute-care management (e.g."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        0,
+        169
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        170,
+        356
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        357,
+        601
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        602,
+        753
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        754,
+        1143
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        1144,
+        1317
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1318,
+        1460
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1461,
+        1654
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1655,
+        1778
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1779,
+        1895
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1896,
+        2043
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        2044,
+        2238
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        2239,
+        2395
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        2396,
+        2637
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        8,
+        9
+      ],
+      "normalized_body_span": [
+        2638,
+        2856
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2857,
+        3099
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3100,
+        3170
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3171,
+        3513
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3514,
+        3684
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3685,
+        3899
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3900,
+        4199
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        4200,
+        4472
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        4473,
+        4694
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        4695,
+        5116
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "normalized_body_span": [
+        5117,
+        5469
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5470,
+        5650
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5651,
+        5896
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5897,
+        6094
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6095,
+        6142
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6143,
+        6301
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6302,
+        6425
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6426,
+        6674
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6675,
+        6855
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6856,
+        7230
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        7231,
+        7290
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "normalized_body_span": [
+        7291,
+        7793
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7794,
+        7948
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7949,
+        8063
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8064,
+        8448
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8449,
+        8637
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8638,
+        8837
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8838,
+        9109
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9110,
+        9266
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9267,
+        9500
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9501,
+        9651
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9652,
+        10038
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "normalized_body_span": [
+        10039,
+        10322
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10323,
+        10681
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10682,
+        10967
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10968,
+        11133
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11134,
+        11274
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11275,
+        11360
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11361,
+        11444
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11445,
+        11504
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11505,
+        11576
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11577,
+        11707
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11708,
+        11713
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11714,
+        11831
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11832,
+        11914
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11915,
+        11986
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "normalized_body_span": [
+        11987,
+        12734
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12735,
+        12856
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12857,
+        13008
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13009,
+        13234
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13235,
+        13388
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13389,
+        13769
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13770,
+        14001
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14002,
+        14409
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14410,
+        14718
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14719,
+        14933
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        14934,
+        15124
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "normalized_body_span": [
+        15125,
+        15358
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15359,
+        15463
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15464,
+        15628
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15629,
+        15824
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15825,
+        16043
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16044,
+        16356
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16357,
+        16668
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16669,
+        16912
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        16913,
+        17063
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "normalized_body_span": [
+        17064,
+        17403
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17404,
+        17890
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        17891,
+        18065
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18066,
+        18099
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18100,
+        18175
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18176,
+        18399
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18400,
+        18664
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18665,
+        18821
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        18822,
+        19090
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19091,
+        19219
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19220,
+        19333
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19334,
+        19485
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        19486,
+        19542
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19543,
+        19796
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19797,
+        19799
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19800,
+        19973
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19974,
+        20304
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20305,
+        20499
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20500,
+        20745
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20746,
+        20999
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21000,
+        21237
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21238,
+        21363
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21364,
+        21549
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        21550,
+        21619
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        21620,
+        22087
+      ]
+    },
+    {
+      "unit_id": "U0106",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        22088,
+        22336
+      ]
+    },
+    {
+      "unit_id": "U0107",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        22337,
+        22576
+      ]
+    },
+    {
+      "unit_id": "U0108",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        22577,
+        22753
+      ]
+    },
+    {
+      "unit_id": "U0109",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        22754,
+        23096
+      ]
+    },
+    {
+      "unit_id": "U0110",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23097,
+        23355
+      ]
+    },
+    {
+      "unit_id": "U0111",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23356,
+        23488
+      ]
+    },
+    {
+      "unit_id": "U0112",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23489,
+        23600
+      ]
+    },
+    {
+      "unit_id": "U0113",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23601,
+        23746
+      ]
+    },
+    {
+      "unit_id": "U0114",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        23747,
+        23974
+      ]
+    },
+    {
+      "unit_id": "U0115",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "normalized_body_span": [
+        23975,
+        24248
+      ]
+    },
+    {
+      "unit_id": "U0116",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        24249,
+        24466
+      ]
+    }
+  ],
+  "removed_blocks": [
+    {
+      "page": 7,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 7,
+      "block": 11,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 7,
+      "block": 17,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 7,
+      "block": 20,
+      "text": "1",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 15,
+      "text": "2",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 12,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 24,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 35,
+      "text": "3",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 10,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 26,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 27,
+      "text": "4",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 34,
+      "text": "5",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 31,
+      "text": "6",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 34,
+      "text": "7",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 21,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 25,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 26,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 27,
+      "text": "8",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 14,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 21,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 33,
+      "text": "9",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 12,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 24,
+      "text": "10",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 9,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 34,
+      "text": "11",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 20,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 33,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 34,
+      "text": "12",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 29,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 34,
+      "text": "13",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 15,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 28,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 34,
+      "text": "14",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 15,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 28,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 29,
+      "text": "15",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 19,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 20,
+      "text": "16",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 24,
+      "text": "17",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 28,
+      "text": "18",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 7,
+      "text": "(space adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 24,
+      "text": "Activity",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 28,
+      "text": "19",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 33,
+      "text": "Activity",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 34,
+      "text": "20",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 19,
+      "text": "adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 24,
+      "text": "21",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 12,
+      "text": "adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 24,
+      "text": "(space adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 25,
+      "text": "22",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 5,
+      "text": "(space adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 29,
+      "block": 12,
+      "text": "23",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 30,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 30,
+      "block": 2,
+      "text": "Activity",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 30,
+      "block": 16,
+      "text": "24",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 31,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 31,
+      "block": 25,
+      "text": "25",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 2,
+      "text": "adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 32,
+      "block": 35,
+      "text": "26",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 12,
+      "text": "(space adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 14,
+      "text": "adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 33,
+      "block": 25,
+      "text": "27",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 34,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 34,
+      "block": 17,
+      "text": "28",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 35,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 35,
+      "block": 6,
+      "text": "adaptation)",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 35,
+      "block": 27,
+      "text": "29",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 36,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 36,
+      "block": 19,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 36,
+      "block": 20,
+      "text": "30",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 37,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 37,
+      "block": 27,
+      "text": "31",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 38,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 38,
+      "block": 50,
+      "text": "32",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 39,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 39,
+      "block": 12,
+      "text": "33",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 40,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 40,
+      "block": 3,
+      "text": "34",
+      "reason": "numeric_or_repeated_header"
+    }
+  ],
+  "source_only": true
+}

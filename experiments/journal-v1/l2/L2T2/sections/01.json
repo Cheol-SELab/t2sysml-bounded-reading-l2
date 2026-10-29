@@ -1,0 +1,118 @@
+{
+ "sentences": [
+  {
+   "text": "This section defines the mission, scope, and operating roles for automated medication dispensing and medication returns in the hospital.",
+   "tags": []
+  },
+  {
+   "text": "The workflow is intended to support timely fulfillment while preserving pharmacist oversight, medication traceability, and clinical control.",
+   "tags": []
+  },
+  {
+   "text": "The concept covers order intake, pharmacy preparation and verification, ward access, and the initial handling of returned medication.",
+   "tags": []
+  },
+  {
+   "text": "In this concept, the Pharmacy Fulfillment Robot is called Cinderwake.",
+   "tags": [
+    "ALIAS:E_PHARMACY_ROBOT"
+   ]
+  },
+  {
+   "text": "In this concept, the Pharmacy Verification Station is called Juniper.",
+   "tags": [
+    "ALIAS:E_VERIFICATION_STATION"
+   ]
+  },
+  {
+   "text": "In this concept, the Medication Return Kiosk is called Tallowmere.",
+   "tags": [
+    "ALIAS:E_RETURN_KIOSK"
+   ]
+  },
+  {
+   "text": "In this concept, the Registered Nurse is called Larkspur.",
+   "tags": [
+    "ALIAS:E_REGISTERED_NURSE"
+   ]
+  },
+  {
+   "text": "The Medication Order Gateway provides the controlled entry point for medication orders and communicates order status to authorized hospital systems.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist reviews clinical appropriateness and resolves medication questions that require professional judgment.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician performs routine preparation tasks within approved procedures and escalates discrepancies to the Clinical Pharmacist.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag for eligible refill work.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "text": "The Clinical Pharmacist produces the Dose Exception Review Slip when an order requires a documented exception review.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "The Pharmacy Fulfillment Robot prepares eligible medication against the active order and records its handling actions.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Verification Station supports a final verification step before medication is released for delivery or ward access.",
+   "tags": []
+  },
+  {
+   "text": "The Sensor-monitored Medication Cooler maintains monitored storage conditions for medication that requires temperature control.",
+   "tags": []
+  },
+  {
+   "text": "The East Tube Dispatch Console and West Tube Dispatch Console provide controlled interfaces for routing authorized pharmacy deliveries.",
+   "tags": []
+  },
+  {
+   "text": "The Pneumatic Tube Network carries compatible deliveries between designated hospital locations under established routing procedures.",
+   "tags": []
+  },
+  {
+   "text": "Ward medication access remains subject to local authorization, patient-care requirements, and applicable cabinet controls.",
+   "tags": []
+  },
+  {
+   "text": "The Charge Nurse coordinates ward readiness, communicates operational constraints, and supports escalation when dispensing service is disrupted.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Return Kiosk provides a controlled point for recording medication returns and capturing return details.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Return Kiosk produces the Return Bin Audit Label for a recorded return transaction.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "Returned medication remains segregated from usable stock until its disposition has been assessed under hospital procedure.",
+   "tags": []
+  },
+  {
+   "text": "The Hospital Courier supports authorized movement of medication and returns when automated routes are unavailable or unsuitable.",
+   "tags": []
+  },
+  {
+   "text": "The Biomedical Engineer maintains supported equipment, while the IT Operations Specialist monitors system connectivity and service availability.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Safety Officer oversees safety concerns, reviews relevant trends, and supports updates to medication handling procedures.",
+   "tags": []
+  }
+ ]
+}

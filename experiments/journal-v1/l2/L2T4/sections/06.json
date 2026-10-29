@@ -1,0 +1,116 @@
+{
+ "sentences": [
+  {
+   "text": "The Switching Desk Coordinator is known operationally as Keystone.",
+   "tags": [
+    "ALIAS:E_SWITCHING_DESK_COORDINATOR"
+   ]
+  },
+  {
+   "text": "The Switching Desk Coordinator maintains the station-wide switching plan and coordinates work across the two bay boundaries.",
+   "tags": []
+  },
+  {
+   "text": "The Control Room Operator submits switching requests with the affected equipment, intended state changes, and requested timing.",
+   "tags": []
+  },
+  {
+   "text": "The Switching Desk Coordinator checks each request for conflicts with active clearances and other approved work.",
+   "tags": []
+  },
+  {
+   "text": "The Substation Supervisor resolves priority conflicts and confirms the operational authority for exceptional switching conditions.",
+   "tags": []
+  },
+  {
+   "text": "Approved switching sequences identify the required order of actions, hold points, and conditions for stopping work.",
+   "tags": []
+  },
+  {
+   "text": "The North Bay Controller manages control and interlocking functions assigned to the north bay under the approved sequence.",
+   "tags": []
+  },
+  {
+   "text": "The North Bay Controller blocks a close command when its local interlocks indicate that the bay is not ready.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "text": "The South Bay Controller manages the corresponding control and interlocking functions assigned to the south bay.",
+   "tags": []
+  },
+  {
+   "text": "The two controllers have separate equipment scopes and do not substitute for one another when executing a switching sequence.",
+   "tags": []
+  },
+  {
+   "text": "The bay boundary defines which controller may operate each device and which indications are used to confirm its state.",
+   "tags": []
+  },
+  {
+   "text": "Equipment shared across the boundary requires explicit coordination before a switching action can affect either bay.",
+   "tags": []
+  },
+  {
+   "text": "The Bay Automation Controller presents bay control status while preserving the separate operating scopes of the two controllers.",
+   "tags": []
+  },
+  {
+   "text": "The Breaker Control Unit executes permitted breaker commands only when the applicable control conditions are satisfied.",
+   "tags": []
+  },
+  {
+   "text": "The North Protection Panel supports protection functions for the north-side equipment within its assigned scope.",
+   "tags": []
+  },
+  {
+   "text": "The Transformer Protection Panel retains its protection authority independently of the bay switching sequence.",
+   "tags": []
+  },
+  {
+   "text": "The Station Supervisory Control System uses the status digest to review current station operating conditions.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "text": "The Sequence Event Archive receives the Clock Drift Snapshot for event-time correlation.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "The Switching Desk Coordinator produces the Isolation Boundary Card for the planned work.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "The Station Gateway produces the Protocol Retry Summary for communication review.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "text": "Larkspur reviews protection coordination questions that could affect the planned switching sequence.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "Bluefin provides the station time reference used to align recorded event times.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "text": "The Substation Field Crew confirms device identity and local conditions before carrying out an authorized operation.",
+   "tags": []
+  },
+  {
+   "text": "After the Switching Desk Coordinator confirms operational handback, state-change evidence remains available for authorized engineering review.",
+   "tags": []
+  }
+ ]
+}

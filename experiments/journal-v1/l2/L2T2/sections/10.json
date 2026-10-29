@@ -1,0 +1,104 @@
+{
+ "sentences": [
+  {
+   "text": "A cabinet outage is treated as a service incident when the cabinet stops responding, reports a fault, or fails a dispensing check.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist uses the Cabinet Downtime Notice to open a controlled incident record and identify the affected cabinet.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "text": "The IT Operations Specialist checks controller status, network connectivity, and recent event logs before attempting recovery.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist records the time the fault was detected and the affected equipment identifier.",
+   "tags": []
+  },
+  {
+   "text": "The affected North Ward Cabinet Controller or South Ward Cabinet Controller remains Out of Service while the cause is assessed.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist isolates the fault where necessary to prevent repeated dispense requests from reaching an unavailable cabinet.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Order Gateway retains pending requests for review rather than treating an interrupted transaction as completed.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist checks whether any transaction was interrupted before the cabinet became unavailable.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Verification Station is used to confirm that pending medication orders remain valid before they are re-presented.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Fulfillment Robot is held from supplying medication to a cabinet that has not passed its recovery checks.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist coordinates technical troubleshooting with the Biomedical Engineer when equipment inspection or repair is required.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist reviews medication orders affected by the outage when clinical validation is needed.",
+   "tags": []
+  },
+  {
+   "text": "The Registered Nurse uses the established clinical process for urgent medication needs while the cabinet is unavailable.",
+   "tags": []
+  },
+  {
+   "text": "The Biomedical Engineer reports completed repairs and any equipment limitations to the IT Operations Specialist.",
+   "tags": []
+  },
+  {
+   "text": "After repair, the IT Operations Specialist verifies communications, status reporting, and cabinet transaction behavior under controlled conditions.",
+   "tags": []
+  },
+  {
+   "text": "The responsible staff confirm that no unresolved transaction could cause a duplicate or missed dispense.",
+   "tags": []
+  },
+  {
+   "text": "The cabinet remains Out of Service until required functional checks pass and the responsible staff approve its return to Ready for Dispense.",
+   "tags": []
+  },
+  {
+   "text": "The West Tube Dispatch Console uses the Pneumatic Capsule Seal Record to verify capsule identity and seal status before closing its dispatch-side handoff checks.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "text": "The West Tube Dispatch Console records completion of its handoff checks only after the required dispatch data are consistent.",
+   "tags": []
+  },
+  {
+   "text": "The Pneumatic Tube Network remains under monitoring while dispatch service is being restored.",
+   "tags": []
+  },
+  {
+   "text": "The Hospital Courier confirms physical receipt through the established delivery process.",
+   "tags": []
+  },
+  {
+   "text": "The West Tube Dispatch Console retains the handoff completion status for operational review.",
+   "tags": []
+  },
+  {
+   "text": "The IT Operations Specialist monitors cabinet and tube service status for recurrence during the recovery period.",
+   "tags": []
+  },
+  {
+   "text": "Audit records retain timestamps, equipment identifiers, recovery checks, and disposition details to support operational review and investigation.",
+   "tags": []
+  }
+ ]
+}

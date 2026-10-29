@@ -1,0 +1,116 @@
+{
+ "sentences": [
+  {
+   "text": "After successful operator authentication, Atlas Onboard Controller assumes the active train control role when the train is energized and train integrity indications are valid.",
+   "tags": []
+  },
+  {
+   "text": "The Atlas Onboard Controller is referred to in some installation drawings as Kestrel, but this document uses Atlas Onboard Controller as the canonical name.",
+   "tags": [
+    "ALIAS:E_ONBOARD_CONTROLLER"
+   ]
+  },
+  {
+   "text": "Atlas Onboard Controller supervises movement authority processing, onboard speed enforcement, door enable logic, and train interface commands required for CBTC operation.",
+   "tags": []
+  },
+  {
+   "text": "The controller maintains a safety-critical state machine that separates initialization, protected manual operation, automatic train operation, fallback operation, and cutout conditions.",
+   "tags": []
+  },
+  {
+   "text": "Movement authority data received from North District Zone Controller and South District Zone Controller is checked for sequence, applicability, and consistency before it is applied onboard.",
+   "tags": []
+  },
+  {
+   "text": "Interlocking indications associated with East Junction Interlocking and West Junction Interlocking are treated as wayside state inputs conveyed through established safety channels.",
+   "tags": []
+  },
+  {
+   "text": "Dual Channel Odometer provides independent speed and distance measurements derived from axle rotation, inertial sensing, and configured calibration parameters.",
+   "tags": []
+  },
+  {
+   "text": "Atlas Onboard Controller compares the two odometry channels continuously and degrades the operating mode when the measured divergence exceeds the permitted threshold.",
+   "tags": []
+  },
+  {
+   "text": "When odometry confidence is reduced, the onboard functions increase position uncertainty and request operating actions that preserve separation from other trains.",
+   "tags": []
+  },
+  {
+   "text": "The trainborne interface to propulsion and braking equipment converts safety commands into vehicle-compatible requests while preserving electrical isolation from non-vital circuits.",
+   "tags": []
+  },
+  {
+   "text": "Brake assurance functions verify service and emergency brake availability by monitoring brake feedback, pneumatic pressure indications, and commanded deceleration response.",
+   "tags": []
+  },
+  {
+   "text": "During each enforcement cycle, Atlas Onboard Controller recalculates the braking demand needed to keep the train within the authorized movement limits.",
+   "tags": []
+  },
+  {
+   "text": "Atlas Onboard Controller produces the Brake Curve Checksum Log after validating the active enforcement data set.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "text": "Train Radio Modem provides the onboard data radio function and maintains CBTC sessions over Wayside Radio Access Network coverage areas.",
+   "tags": []
+  },
+  {
+   "text": "The radio subsystem reports link quality, registration state, and session continuity information to Atlas Onboard Controller for use in mode management.",
+   "tags": []
+  },
+  {
+   "text": "Safety Data Communication Network provides the protected communications transport used by train control messages that require integrity, authentication, and bounded latency.",
+   "tags": []
+  },
+  {
+   "text": "Safety Data Communication Network sends the Clock Drift Sample Report at defined synchronization intervals.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "Cryptographic Key Management Appliance supports the security material used by onboard communications without changing the safety logic executed on the train.",
+   "tags": []
+  },
+  {
+   "text": "The operator interface presents movement authority limits, permitted speed, train location confidence, radio condition, and required operator actions to Revenue Train Operator.",
+   "tags": []
+  },
+  {
+   "text": "Acknowledgements entered by Revenue Train Operator are passed to Atlas Onboard Controller through a monitored input path that rejects stale or inconsistent commands.",
+   "tags": []
+  },
+  {
+   "text": "Voice Dispatch Console remains operationally separate from the vital CBTC data path, but it provides a means for voice coordination during degraded service.",
+   "tags": []
+  },
+  {
+   "text": "Platform Screen Door Controller exchanges door enable and closed-and-locked indications with the train interface when the train is correctly berthed at a platform.",
+   "tags": []
+  },
+  {
+   "text": "Passenger Information Gateway receives non-vital train position and service state data through an interface that prevents passenger systems from influencing safety decisions.",
+   "tags": []
+  },
+  {
+   "text": "Service Timetable Server provides schedule context to Metro Operations Control System and related non-vital functions, while onboard enforcement remains based on safety authority and train state.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Diagnostic Server is referred to in some maintenance work instructions as Quarry, but this document uses Maintenance Diagnostic Server as the canonical name.",
+   "tags": [
+    "ALIAS:E_MAINTENANCE_DIAGNOSTIC_SERVER"
+   ]
+  },
+  {
+   "text": "Maintenance Diagnostic Server collects non-vital health indications from trainborne equipment so that Signal Maintenance Engineer can review faults without connecting directly to vital processing functions.",
+   "tags": []
+  }
+ ]
+}

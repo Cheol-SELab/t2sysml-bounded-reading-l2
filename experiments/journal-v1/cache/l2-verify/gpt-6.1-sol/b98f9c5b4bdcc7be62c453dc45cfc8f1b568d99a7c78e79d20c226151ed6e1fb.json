@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Wayside Radio Access Network provides \"the Radio Handover Audit File\" to Cyber Security Officer (an information or material flow).\n\nSource sentences:\nS072: Maintenance Diagnostic Server receives non-vital summaries of radio and network health, which allows Signal Maintenance Engineer to investigate degraded coverage trends without connecting to the vital channels.\nS073: Wayside Radio Access Network sends the Radio Handover Audit File after each configured reporting interval.\nS205: The Line Traffic Controller shall be notified when a cybersecurity event requires a restriction on automatic operation or a change in communications mode.\nS206: The Cyber Security Officer uses the audit file to investigate radio session continuity and to confirm that security monitoring records are complete.\n\nAnswer \"supported\" only if the sentences state that Wayside Radio Access Network produces or sends this item AND that Cyber Security Officer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S073 states that Wayside Radio Access Network sends the Radio Handover Audit File, and S206 states that the Cyber Security Officer uses the audit file, referring to the same item.\"}",
+ "usage": {
+  "input_tokens": 319,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 55,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 374
+ },
+ "attempts": 1,
+ "wall_s": 3.525,
+ "created": "2026-10-14T12:34:21"
+}

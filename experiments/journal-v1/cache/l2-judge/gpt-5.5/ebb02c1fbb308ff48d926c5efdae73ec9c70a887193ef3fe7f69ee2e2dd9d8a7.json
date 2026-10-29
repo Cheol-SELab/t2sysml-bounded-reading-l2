@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: DWR List provides \"flight\" to list (an information or material flow).\n\nSource sentences:\nU0089: Auxiliary waypoints are added when needed to avoid weather, or optionally weather and traffic, and provide the minimum-delay route based on geometry and winds.\nU0090: If a route correction is found that can save the user-defined minimum time or more relative to the current flight plan, the flight is posted to a list displayed to an FAA traffic manager or to an airline ATC coordinator (see Figure 4).\nU0105: The downstream ‘Capture fix’ used to compute the direct route, and the ‘Auxiliary waypoint’ used to find the route around convective weather polygons, are displayed as well.\nU0106: Flights that have sufficient user-defined flight-time savings are displayed in the ‘DWR list’ on the top-left part of the big window.\n\nAnswer \"supported\" only if the sentences state that DWR List produces or sends this item AND that list receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The sentences state that qualifying flights are posted to or displayed in the DWR list, not that the DWR List provides flights to a separate list.\"}",
+ "usage": {
+  "input_tokens": 354,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 186,
+  "output_tokens_details": {
+   "reasoning_tokens": 137
+  },
+  "total_tokens": 540
+ },
+ "attempts": 1,
+ "wall_s": 8.898,
+ "created": "2026-10-14T00:27:41"
+}

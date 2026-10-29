@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Sector Load Monitor provides \"the operational view of expected demand against the reduced sector capacity\" to Capacity Assessment Module (an information or material flow).\n\nSource sentences:\nS328: The Capacity Assessment Module treats a restriction as a time-bounded reduction in route, sector, or airport throughput, depending on the geometry and operational impact of the area.\nS329: The Sector Load Monitor provides the operational view of expected demand against the reduced sector capacity and highlights intervals where overload is likely.\nS493: The Demand Prediction Service compares amended Flight Intent Message data with the Airport Capacity Plan and the current Airport Acceptance Rate to show whether a diversion can be absorbed without creating unsafe demand peaks.\nS494: The Capacity Assessment Module evaluates runway availability, stand availability, sector load, handling capacity, and service constraints before a diversion recommendation is displayed.\n\nAnswer \"supported\" only if the sentences state that Sector Load Monitor produces or sends this item AND that Capacity Assessment Module receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S329 says the Sector Load Monitor provides the operational view but does not name a recipient, and S328 and S494 only say the Capacity Assessment Module treats restrictions and evaluates sector load, so the text never links this view as an input to the Capacity Assessment Module.\"}",
+ "usage": {
+  "input_tokens": 764,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 107,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.357,
+ "created": "2026-10-14T12:45:19"
+}

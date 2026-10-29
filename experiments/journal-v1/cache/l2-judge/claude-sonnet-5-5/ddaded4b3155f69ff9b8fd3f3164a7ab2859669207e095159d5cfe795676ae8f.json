@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Crewline Mobile Tablet provides \"last verified assignment package\" to Helitack Crew Leader (an information or material flow).\n\nSource sentences:\nS155: The Crewline Mobile Tablet displays the current division assignment, route guidance, rally location, and assigned communications channel for the logged-in crew.\nS156: The Helitack Crew Leader receives the same operational package with aviation constraints and landing zone notes after Air Attack Supervisor approval.\nS171: The VHF Radio Gateway Repeater mirrors priority assignment summaries for crews that cannot maintain a data session in canyon or timbered terrain.\nS172: If the data link is degraded, the Crewline Mobile Tablet presents the last verified assignment package and clearly identifies the time of last update.\n\nAnswer \"supported\" only if the sentences state that Crewline Mobile Tablet produces or sends this item AND that Helitack Crew Leader receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S172 says the tablet presents the last verified assignment package when the link is degraded, but it never names the Helitack Crew Leader as a recipient; S156 says the leader receives the same operational package, yet it does not say the tablet delivers it or that the leader gets the last-verified version.\"}",
+ "usage": {
+  "input_tokens": 718,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 109,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.596,
+ "created": "2026-10-14T12:36:11"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=is also blocked)\n\nSource sentences (the last one is where the fact was extracted):\nS041: The North Filter Gallery and South Filter Gallery are advised when incoming water quality is expected to shorten filter run time or increase solids loading.\nS042: Pump permissives at the River Intake Pump Station include adequate suction level, available discharge path, healthy motor status, open isolation valves, and absence of active protective trips.\nS043: A pump is not permitted to start when the Raw Water Screen Channel downstream level is below the established low-level limit.\nS044: A pump start is also blocked when the associated drive reports a fault, when local control is selected, or when a safety interlock is not proven.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S044 does say a pump start is 'also blocked', but the fact's label 'is also blocked' is just a sentence fragment, not an action name. It leaves out what is blocked (pump start) and the conditions (drive fault, local control, unproven safety interlock).\"}",
+ "usage": {
+  "input_tokens": 679,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 105,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.342,
+ "created": "2026-10-14T12:51:49"
+}

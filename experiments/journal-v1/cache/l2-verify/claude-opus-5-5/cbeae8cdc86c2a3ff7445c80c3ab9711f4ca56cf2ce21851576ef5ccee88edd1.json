@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Product Quality Service provides \"the Product Hold List\" to User Services Portal (an information or material flow).\n\nSource sentences:\nS167: A product is placed in a delivery hold state when mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review.\nS168: The Product Quality Service produces the Product Hold List when release blocking defects must be tracked across scenes and processing levels.\nS238: The Cybersecurity Desk participates in the final exercise by validating alert routing, privileged access review, and incident coordination with operations management.\nS239: The User Services Portal uses the Product Hold List to prevent release of affected products until the applicable hold condition has been cleared.\n\nAnswer \"supported\" only if the sentences state that Product Quality Service produces or sends this item AND that User Services Portal receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S168 states the Product Quality Service produces the Product Hold List, and S239 states the User Services Portal uses the same Product Hold List, which supports the flow from producer to user.\"}",
+ "usage": {
+  "input_tokens": 677,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 74,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.837,
+ "created": "2026-10-14T12:41:13"
+}

@@ -1,0 +1,407 @@
+{
+ "title": "Operational Concept for the Alder Creek Electrical Distribution Substation Automation System",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Substation Mission and Automation Boundary",
+   "topic": "Establish the station operating boundary, introduce the Bay Automation Controller with the project codename Juniper, and describe the initial protection and bay-control responsibilities."
+  },
+  {
+   "index": 2,
+   "heading": "Supervisory Architecture and Time Services",
+   "topic": "Introduce the Station Supervisory Control System as Glasswing and the Satellite Time Receiver as Bluefin while explaining supervisory visibility, time distribution, and their operating limits."
+  },
+  {
+   "index": 3,
+   "heading": "Protection and Engineering Configuration",
+   "topic": "Introduce the Feeder Protection Relay as Tandem and the Protection Relay Engineer as Larkspur, then establish the engineering, review, and controlled configuration practices."
+  },
+  {
+   "index": 4,
+   "heading": "Field Work and Safe Access",
+   "topic": "Introduce the Substation Field Crew as Cinder and explain how field access, work control, and confirmation of equipment conditions fit into automated operations."
+  },
+  {
+   "index": 5,
+   "heading": "Event Evidence and Operational Records",
+   "topic": "Introduce the Sequence Event Archive as Orchard and define how the station preserves event evidence, supports engineering review, and maintains records for later use."
+  },
+  {
+   "index": 6,
+   "heading": "Switching Coordination and Bay Boundaries",
+   "topic": "Introduce the Switching Desk Coordinator as Keystone, explain switching coordination, and distinguish the North Bay Controller from the South Bay Controller."
+  },
+  {
+   "index": 7,
+   "heading": "Alarms, Operator Response, and Protection Panels",
+   "topic": "Set out the control-room operator’s alarm response and distinguish the North Protection Panel from the Transformer Protection Panel in operational procedures."
+  },
+  {
+   "index": 8,
+   "heading": "Communications, Control, and Equipment Feedback",
+   "topic": "Describe the exchange of control and equipment feedback across station interfaces, including the responsibilities of the gateway, controller, and protection functions."
+  },
+  {
+   "index": 9,
+   "heading": "Maintenance, Testing, and Degraded Operation",
+   "topic": "Explain maintenance coordination, controlled testing, and the handling of degraded communications or equipment conditions without weakening field safety controls."
+  },
+  {
+   "index": 10,
+   "heading": "Operating Assurance and Handover",
+   "topic": "Close with operational assurance, switching handover, responsibility boundaries, and the review practices that keep automation actions traceable and safe."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_FEEDER_PROTECTION_RELAY",
+   "canonical": "Feeder Protection Relay",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BAY_AUTOMATION_CONTROLLER",
+   "canonical": "Bay Automation Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_STATION_SUPERVISORY_CONTROL_SYSTEM",
+   "canonical": "Station Supervisory Control System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_STATION_GATEWAY",
+   "canonical": "Station Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SATELLITE_TIME_RECEIVER",
+   "canonical": "Satellite Time Receiver",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SEQUENCE_EVENT_ARCHIVE",
+   "canonical": "Sequence Event Archive",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ENGINEERING_WORKSTATION",
+   "canonical": "Engineering Workstation",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MAINTENANCE_REMOTE_TERMINAL",
+   "canonical": "Maintenance Remote Terminal",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_STATION_DC_SYSTEM",
+   "canonical": "Station DC System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BREAKER_CONTROL_UNIT",
+   "canonical": "Breaker Control Unit",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_BAY_CONTROLLER",
+   "canonical": "North Bay Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_BAY_CONTROLLER",
+   "canonical": "South Bay Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_PROTECTION_PANEL",
+   "canonical": "North Protection Panel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TRANSFORMER_PROTECTION_PANEL",
+   "canonical": "Transformer Protection Panel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SUBSTATION_FIELD_CREW",
+   "canonical": "Substation Field Crew",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_CONTROL_ROOM_OPERATOR",
+   "canonical": "Control Room Operator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_PROTECTION_RELAY_ENGINEER",
+   "canonical": "Protection Relay Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SWITCHING_DESK_COORDINATOR",
+   "canonical": "Switching Desk Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SUBSTATION_SUPERVISOR",
+   "canonical": "Substation Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_RELAY_DIAGNOSTIC_NOTE",
+   "canonical": "Relay Diagnostic Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BAY_STATUS_DIGEST",
+   "canonical": "Bay Status Digest",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ALARM_ACKNOWLEDGEMENT_SLIP",
+   "canonical": "Alarm Acknowledgement Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CLOCK_DRIFT_SNAPSHOT",
+   "canonical": "Clock Drift Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BREAKER_INSPECTION_TAG",
+   "canonical": "Breaker Inspection Tag",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SETTINGS_REVIEW_RECEIPT",
+   "canonical": "Settings Review Receipt",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_ISOLATION_BOUNDARY_CARD",
+   "canonical": "Isolation Boundary Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_BATTERY_LOAD_TEST_RECORD",
+   "canonical": "Battery Load Test Record",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PROTOCOL_RETRY_SUMMARY",
+   "canonical": "Protocol Retry Summary",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CLEARANCE_HANDOFF_MEMO",
+   "canonical": "Clearance Handoff Memo",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_BAY_AUTOMATION_CONTROLLER",
+   "alias": "Juniper",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_STATION_SUPERVISORY_CONTROL_SYSTEM",
+   "alias": "Glasswing",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_FEEDER_PROTECTION_RELAY",
+   "alias": "Tandem",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_SUBSTATION_FIELD_CREW",
+   "alias": "Cinder",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_PROTECTION_RELAY_ENGINEER",
+   "alias": "Larkspur",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_SATELLITE_TIME_RECEIVER",
+   "alias": "Bluefin",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_SEQUENCE_EVENT_ARCHIVE",
+   "alias": "Orchard",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_SWITCHING_DESK_COORDINATOR",
+   "alias": "Keystone",
+   "intro_section": 6
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_FEEDER_PROTECTION_RELAY",
+   "item": "E_RELAY_DIAGNOSTIC_NOTE",
+   "consumer": "E_PROTECTION_RELAY_ENGINEER",
+   "intro_section": 1,
+   "link_section": 5,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_BAY_AUTOMATION_CONTROLLER",
+   "item": "E_BAY_STATUS_DIGEST",
+   "consumer": "E_STATION_SUPERVISORY_CONTROL_SYSTEM",
+   "intro_section": 1,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the status digest"
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_STATION_SUPERVISORY_CONTROL_SYSTEM",
+   "item": "E_ALARM_ACKNOWLEDGEMENT_SLIP",
+   "consumer": "E_CONTROL_ROOM_OPERATOR",
+   "intro_section": 2,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the acknowledgement slip"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_SATELLITE_TIME_RECEIVER",
+   "item": "E_CLOCK_DRIFT_SNAPSHOT",
+   "consumer": "E_SEQUENCE_EVENT_ARCHIVE",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_SUBSTATION_FIELD_CREW",
+   "item": "E_BREAKER_INSPECTION_TAG",
+   "consumer": "E_BAY_AUTOMATION_CONTROLLER",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "short",
+   "short_ref": "the inspection tag"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_ENGINEERING_WORKSTATION",
+   "item": "E_SETTINGS_REVIEW_RECEIPT",
+   "consumer": "E_MAINTENANCE_REMOTE_TERMINAL",
+   "intro_section": 3,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the review receipt"
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_SWITCHING_DESK_COORDINATOR",
+   "item": "E_ISOLATION_BOUNDARY_CARD",
+   "consumer": "E_SUBSTATION_FIELD_CREW",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_STATION_DC_SYSTEM",
+   "item": "E_BATTERY_LOAD_TEST_RECORD",
+   "consumer": "E_BAY_AUTOMATION_CONTROLLER",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "short",
+   "short_ref": "the load test record"
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_STATION_GATEWAY",
+   "item": "E_PROTOCOL_RETRY_SUMMARY",
+   "consumer": "E_STATION_SUPERVISORY_CONTROL_SYSTEM",
+   "intro_section": 6,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_CONTROL_ROOM_OPERATOR",
+   "item": "E_CLEARANCE_HANDOFF_MEMO",
+   "consumer": "E_SWITCHING_DESK_COORDINATOR",
+   "intro_section": 7,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_BAY_AUTOMATION_CONTROLLER",
+   "link_section": 5
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_STATION_SUPERVISORY_CONTROL_SYSTEM",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_FEEDER_PROTECTION_RELAY",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_SUBSTATION_FIELD_CREW",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_PROTECTION_RELAY_ENGINEER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_SATELLITE_TIME_RECEIVER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_SEQUENCE_EVENT_ARCHIVE",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_SWITCHING_DESK_COORDINATOR",
+   "link_section": 10
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_BAY_CONTROLLER",
+   "confusable_entity_id": "E_SOUTH_BAY_CONTROLLER",
+   "shared_head": "Bay Controller",
+   "link_section": 6
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_TRANSFORMER_PROTECTION_PANEL",
+   "confusable_entity_id": "E_NORTH_PROTECTION_PANEL",
+   "shared_head": "Protection Panel",
+   "link_section": 7
+  }
+ ],
+ "writer": "gpt-6-luna",
+ "plan_sample": 0,
+ "domain": "an electrical distribution substation automation system (protection relays, bay controllers, SCADA, field crews)"
+}

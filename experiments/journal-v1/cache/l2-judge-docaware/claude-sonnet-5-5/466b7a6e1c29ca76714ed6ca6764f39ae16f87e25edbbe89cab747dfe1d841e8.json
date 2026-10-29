@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: East Tube Dispatch Console provides \"a Tube Route Exception Ticket\" to Biomedical Engineer (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS051: The East Tube Dispatch Console monitors capsule movement and records route, timing, and equipment status for each dispatch.\nS052: The East Tube Dispatch Console sends a Tube Route Exception Ticket when a dispatch cannot follow its assigned route or complete delivery within the configured interval.\nS210: Stonewake reviews the received operational record, correlates its equipment identifiers and timestamps with local telemetry, and records an engineering disposition.\nS211: The Biomedical Engineer uses the exception ticket to identify the affected path and compare reported symptoms with equipment telemetry.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\n(none found)\n\nAnswer \"supported\" only if the document states that East Tube Dispatch Console produces or sends this item AND that Biomedical Engineer receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Biomedical Engineer uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S052 states the East Tube Dispatch Console sends a Tube Route Exception Ticket, and S211 states the Biomedical Engineer uses the exception ticket (a brief name for the same item), with no contradicting producer found.\"}",
+ "usage": {
+  "input_tokens": 831,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 92,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.052,
+ "created": "2026-10-19T19:02:33"
+}

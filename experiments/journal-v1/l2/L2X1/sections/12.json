@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "The tower sequencing function translates the frozen operational targets from the regional flow process into an executable runway order for departures at Meridian Regional Airport.",
+   "tags": []
+  },
+  {
+   "text": "In this section, Tower Sequence Manager is also called Ironleaf for tower sequencing discussions.",
+   "tags": [
+    "ALIAS:E_TOWER_SEQUENCE_MANAGER"
+   ]
+  },
+  {
+   "text": "The Tower Supervisor is the operational owner of the departure sequence and uses the Tower Sequence Manager to confirm that each flight can be advanced without creating unsafe surface compression.",
+   "tags": []
+  },
+  {
+   "text": "The workflow starts when the Flight Data Exchange provides current flight intent data and the Departure Metering Service aligns each Target Off Block Time with the applicable Calculated Takeoff Time.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager then builds a provisional order by runway, departure fix, aircraft wake category, and locally configured spacing rule.",
+   "tags": []
+  },
+  {
+   "text": "The North Runway Meter and South Runway Meter maintain separate queues, but the Tower Supervisor can view both queues together when runway balancing is required.",
+   "tags": []
+  },
+  {
+   "text": "The Surface Surveillance Adapter confirms whether an aircraft is still at stand, entering the movement area, holding short, or already committed to the departure stream.",
+   "tags": []
+  },
+  {
+   "text": "The East Apron Sensor and West Apron Sensor improve queue accuracy by detecting aircraft movement before manual ramp status updates are available.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead coordinates pushback release priorities against stand conflicts, taxi lane constraints, and the runway demand visible in the Tower Sequence Manager.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator may request a sequence review when a flight has a valid operational reason to protect a connection, crew limit, or network rotation.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator verifies that any proposed resequencing remains compatible with the Calculated Takeoff Time tolerance and the current Slot Compliance State.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager is notified when local resequencing threatens to erode the planned departure rate in the Airport Capacity Plan.",
+   "tags": []
+  },
+  {
+   "text": "Runway queue management favors stable ordering, but the Tower Supervisor may intervene when wake spacing, route restrictions, runway crossings, or emergency traffic require a change.",
+   "tags": []
+  },
+  {
+   "text": "Each manual sequence change is recorded in the Collaborative Decision Log with the user identity, timestamp, affected flight, and reason code.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger preserves the sequence history so that post-event review can distinguish operational necessity from avoidable volatility.",
+   "tags": []
+  },
+  {
+   "text": "Departure readiness checks combine aircraft operator status, ground handling status, cockpit readiness, route clearance availability, and surface position into a single tower-readable indicator.",
+   "tags": []
+  },
+  {
+   "text": "The Aircraft Operator Representative is responsible for keeping aircraft readiness information current enough for the tower team to trust the displayed status.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher updates boarding, loading, door closure, and tow readiness milestones through the operational interface before the flight is considered eligible for pushback planning.",
+   "tags": []
+  },
+  {
+   "text": "Foxglove shall publish tower readiness changes to authenticated airline and handling users within the configured refresh interval.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "The Deicing Coordinator sends the Deicing Pad Queue Card when pad demand, treatment progress, or release timing changes.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "The deicing interface point exposes whether a flight still requires treatment, is waiting for pad access, is under treatment, or has been released for taxi within the protected time assumption.",
+   "tags": []
+  },
+  {
+   "text": "When deicing demand increases, the Tower Supervisor compares pad release expectations with runway queue gaps before accepting an aircraft into the active departure stream.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode or a Capacity Reduction State, the Tower Sequence Manager applies the active spacing rules from the Business Rules Registry and highlights flights that may miss their Calculated Takeoff Time.",
+   "tags": []
+  },
+  {
+   "text": "In the Recovery Phase, the tower sequence workflow emphasizes measured acceleration rather than first-come recovery, because uncontrolled pushback surges can overload taxiways and recreate delay.",
+   "tags": []
+  }
+ ]
+}

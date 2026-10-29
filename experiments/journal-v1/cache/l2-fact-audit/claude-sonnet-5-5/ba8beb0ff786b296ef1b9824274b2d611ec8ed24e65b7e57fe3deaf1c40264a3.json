@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: state(owner=request, label=awaiting technical review)\n\nSource sentences (the last one is where the fact was extracted):\nS101: Mission planning begins when observation requests arrive through the User Services Portal or from internal operations channels at the Mission Control Center.\nS102: The Mission Planning System, also called Cedar in this section, is the authoritative tool for assembling candidate observation timelines and associated ground contact activities.\nS103: Each request is checked for requester authority, target definition, time sensitivity, acquisition mode, expected data volume, and any handling restrictions before it is admitted to the planning pool.\nS104: The User Services Portal records the request state so that external users can distinguish accepted requests from those still awaiting technical review.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S104 says the portal records request state so users can distinguish accepted requests from those still awaiting technical review, so 'awaiting technical review' is a state of a request.\"}",
+ "usage": {
+  "input_tokens": 689,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 68,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.637,
+ "created": "2026-10-14T12:52:07"
+}

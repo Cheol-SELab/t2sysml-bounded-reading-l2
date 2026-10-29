@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Bluejay maintains a time-stamped temperature history for each refrigerated medication compartment and raises an alarm when a configured limit is exceeded.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "text": "Sensor-monitored Medication Cooler applies approved upper and lower temperature limits to each monitored compartment.",
+   "tags": []
+  },
+  {
+   "text": "Calibrated probes report readings at configured intervals, and the cooler records probe identity and calibration status with each reading.",
+   "tags": []
+  },
+  {
+   "text": "Refrigerated stock is identified by medication, lot, and expiration date so that each unit remains traceable to its storage history.",
+   "tags": []
+  },
+  {
+   "text": "When readings exceed a limit or a probe becomes unavailable, the affected stock is marked ineligible for routine dispensing.",
+   "tags": []
+  },
+  {
+   "text": "The cooler preserves the affected stock in its current controlled environment while the condition is assessed.",
+   "tags": []
+  },
+  {
+   "text": "Sensor-monitored Medication Cooler uses the handoff card to compare a transfer’s recorded custody time with its temperature history.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "text": "A Clinical Pharmacist reviews excursion details and determines whether affected stock may be released, quarantined, or discarded under pharmacy policy.",
+   "tags": []
+  },
+  {
+   "text": "The cooler retains the disposition status against the affected lot and prevents stock marked ineligible from being selected for routine dispensing.",
+   "tags": []
+  },
+  {
+   "text": "Authorized access to refrigerated compartments is recorded with the user identity, access time, and affected stock identifiers.",
+   "tags": []
+  },
+  {
+   "text": "Door-open duration is monitored so that an access event that threatens temperature control can be distinguished from a brief inspection.",
+   "tags": []
+  },
+  {
+   "text": "Temperature alarms remain active during loss of network connectivity, and local records are retained until communication is restored.",
+   "tags": []
+  },
+  {
+   "text": "East Tube Dispatch Console maintains the approved route map and the current availability status of supported pneumatic segments.",
+   "tags": []
+  },
+  {
+   "text": "East Tube Dispatch Console checks the selected route against the destination cabinet, current network availability, and approved routing configuration before releasing a capsule.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "The console confirms that the destination is reachable and that the route does not include a segment reported unavailable.",
+   "tags": []
+  },
+  {
+   "text": "Route selection uses the destination identifier and the latest approved configuration version rather than an operator-entered sequence of segments.",
+   "tags": []
+  },
+  {
+   "text": "Before dispatch, the console checks for conflicting capsule movements and confirms that required interlocks are satisfied.",
+   "tags": []
+  },
+  {
+   "text": "The Pneumatic Tube Network reports segment status, transfer progress, and delivery confirmation to the dispatch console.",
+   "tags": []
+  },
+  {
+   "text": "If route status is stale or incomplete, the console holds the capsule and displays the condition for operator review.",
+   "tags": []
+  },
+  {
+   "text": "A loss of communication with a route sensor prevents the console from treating the affected segment as available.",
+   "tags": []
+  },
+  {
+   "text": "An interruption during transit is recorded with the capsule identifier, last confirmed location, and time of the interruption.",
+   "tags": []
+  },
+  {
+   "text": "The console alerts a Pharmacy Technician when a transfer stops progressing or cannot be confirmed at its destination.",
+   "tags": []
+  },
+  {
+   "text": "After recovery, the console requires refreshed segment status and an approved route decision before dispatch resumes.",
+   "tags": []
+  },
+  {
+   "text": "Route and temperature records retain timestamps and equipment identifiers to support operational review and investigation.",
+   "tags": []
+  }
+ ]
+}

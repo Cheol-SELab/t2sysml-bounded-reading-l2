@@ -1,0 +1,609 @@
+package L2Model {
+    item def AisleOccupancySnapshotItem { doc /* @S092,S177 */ }
+    item def AuthorizedReleaseItem { doc /* @S021,S109,S136 */ }
+    item def CraneServiceReleaseCardItem { doc /* @S228 */ }
+    item def DimensionsItem { doc /* @S052,S073 */ }
+    item def DispatchWaveAmendmentItem { doc /* @S042,S105,S106 */ }
+    item def DoorAssignmentItem { doc /* @S039 */ }
+    item def ForkliftHandoffConfirmationItem { doc /* @S225 */ }
+    item def GrossWeightVarianceSlipItem { doc /* @S226 */ }
+    item def OversizeLoadAdvisoryItem { doc /* @S151,S156 */ }
+    item def RemainingEquipmentRestrictionsItem { doc /* @S233 */ }
+    item def SlotReservationReceiptItem { doc /* @S154 */ }
+    item def SprinklerZoneInhibitNoticeItem { doc /* @S204 */ }
+    item def TrailerReadinessToLeaveTheDoorAndReturnToTheYardRouteItem { doc /* @S047 */ }
+    item def TrailerSealExceptionNoteItem { doc /* @S036,S129,S179 */ }
+    item def TransferInductionTicketItem { doc /* @S200 */ }
+    part def AccumulationZones { doc /* @S085 */ }
+    part def AffectedInductionPath { doc /* @S096 */ }
+    part def AllocationLogic { doc /* @S055 */ }
+    part def ApprovedTestPlan { doc /* @S220 */ }
+    part def AutonomousForkliftFleet { doc /* @S013,S109,S113,S114,S115,S136,S190,S200,S225,S233 */ }
+    part def ControlLogic { doc /* @S205 */ }
+    part def ControlRecord { doc /* @S158 */ }
+    part def ControlledRecoveryManeuver { doc /* @S183 */ }
+    part def ControlledTest { doc /* @S193,S194 */ }
+    part def ConveyorLineController { doc /* @S012,S078,S079,S080,S087,S088,S090,S098,S134,S169,S176,S200,S212,S232 */ }
+    part def ConveyorSections { doc /* @S082 */ }
+    part def Destination { doc /* @S154 */ }
+    part def Dimensions { doc /* @S120 */ }
+    part def DispatchWaveAmendment { doc /* @S107 */ }
+    part def Drivers { doc /* @S030 */ }
+    part def EastTransferConveyor { doc /* @S010,S076,S119,S135,S189,S210 */ }
+    part def Equipment { doc /* @S021,S055,S161,S163,S165,S174,S191,S193 */ }
+    part def ExceptionHandling { doc /* @S148 */ }
+    part def FireAlarmPanel { doc /* @S025,S117,S146,S170,S173,S204 */ }
+    part def GateProcess { doc /* @S031 */ }
+    part def HandoffReporting { doc /* @S116 */ }
+    part def InboundArrivals { doc /* @S031 */ }
+    part def InboundInspectionDesk { doc /* @S004,S033,S036,S045,S129,S131,S151,S179,S231,S237 */ }
+    part def InboundPalletBuffer { doc /* @S006,S132,S153,S188 */ }
+    part def IncomingShift { doc /* @S218,S233,S243 */ }
+    part def Interlocks { doc /* @S082 */ }
+    part def InventoryRecords { doc /* @S045 */ }
+    part def MaintenanceReleaseTerminal { doc /* @S026,S140,S164,S191,S228,S234 */ }
+    part def NextConveyorSection { doc /* @S086 */ }
+    part def NormalSequencing { doc /* @S099,S100 */ }
+    part def NorthAisleStackerCrane { doc /* @S008,S063,S092,S095,S137,S154,S155,S162,S163,S177,S206,S228 */ }
+    part def OperatingRecord { doc /* @S150 */ }
+    part def OperatingTeam { doc /* @S159 */ }
+    part def Operators { doc /* @S199 */ }
+    part def OutboundCheckweighScale { doc /* @S016,S144,S167,S226 */ }
+    part def OutboundDispatchSorter { doc /* @S015,S042,S105,S106,S107,S121,S143,S237 */ }
+    part def OutboundPreparation { doc /* @S101 */ }
+    part def OutgoingShift { doc /* @S217,S243 */ }
+    part def OutputRecord { doc /* @S089 */ }
+    part def OversizeLoadAdvisory { doc /* @S071,S072 */ }
+    part def PalletDimensionScanner { doc /* @S005,S052,S068,S070,S073,S133,S151,S156,S207 */ }
+    part def Pallets { doc /* @S002,S004,S075,S079,S083,S131,S148,S151,S152 */ }
+    part def Personnel { doc /* @S163,S184 */ }
+    part def PresenceSensors { doc /* @S083 */ }
+    part def ProtectiveDevice { doc /* @S212 */ }
+    part def ReceivingDoor { doc /* @S040 */ }
+    part def ReceivingException { doc /* @S130 */ }
+    part def ReceivingProcess { doc /* @S050 */ }
+    part def ReceivingStaff { doc /* @S043,S047 */ }
+    part def RecoveryPlan { doc /* @S181 */ }
+    part def RecoveryResponse { doc /* @S172 */ }
+    part def ReportedAisleCondition { doc /* @S093 */ }
+    part def Reservation { doc /* @S058 */ }
+    part def ReservationRecord { doc /* @S059 */ }
+    part def RestartRecord { doc /* @S211 */ }
+    part def RouteSelection { doc /* @S111 */ }
+    part def SafetyChecks { doc /* @S203 */ }
+    part def SafetyZoneController { doc /* @S024,S146,S170,S173,S174,S187,S204 */ }
+    part def ServiceReadiness { doc /* @S161 */ }
+    part def ShiftCheck { doc /* @S205 */ }
+    part def ShippingDocumentationDesk { doc /* @S017,S122,S145,S226 */ }
+    part def SouthAisleStackerCrane { doc /* @S009,S064,S137,S182,S183 */ }
+    part def Spotter { doc /* @S185 */ }
+    part def StackerCrane { doc /* @S061,S065,S066,S229 */ }
+    part def Staff { doc /* @S034 */ }
+    part def StorageAllocation { doc /* @S051 */ }
+    part def StorageLocations { doc /* @S022,S223 */ }
+    part def Trailer { doc /* @S038,S039,S040,S047 */ }
+    part def TransferPoint { doc /* @S084 */ }
+    part def Vehicle { doc /* @S110,S112,S118,S128,S201 */ }
+    part def WarehouseManagementSystem { doc /* @S020,S021,S041,S042,S052,S057,S073,S092,S101,S103,S105,S106,S109,S124,S136,S142,S154,S156,S157,S177,S178,S197,S225,S230 */ }
+    part def WarehouseOperatingBoundary { doc /* @S001 */ }
+    part def WarehouseOperationsSupervisor { doc /* @S018,S049,S074,S097,S123,S138,S147,S159,S160,S171,S175,S192,S198,S199,S214,S222,S239 */ }
+    part def WavePlanning { doc /* @S102 */ }
+    part def WestTransferConveyor { doc /* @S011,S077,S119,S135,S189 */ }
+    part def WorkRequests { doc /* @S126 */ }
+    part def YardGateController { doc /* @S014,S028,S036,S039,S127,S128,S129,S179 */ }
+    part def YardPersonnel { doc /* @S047 */ }
+    part def YardTraffic { doc /* @S180 */ }
+    part system {
+        part accumulationZones : AccumulationZones {
+            perform action a0 { doc /* provide controlled spacing between pallets @S085 */ }
+        }
+        part affectedInductionPath : AffectedInductionPath {
+            perform action a0 { doc /* remains held until current status is available @S096 */ }
+            exhibit state modes {
+                state s0 { doc /* held @S096 */ }
+            }
+        }
+        part allocationLogic : AllocationLogic {
+            perform action a0 { doc /* preserves clearances for the pallet and the equipment needed to access it @S055 */ }
+        }
+        part approvedTestPlan : ApprovedTestPlan {
+            perform action a0 { doc /* defines expected behavior, safety limits, evidence requirements, and criteria for blocking release @S220 */ }
+        }
+        part autonomousForkliftFleet : AutonomousForkliftFleet {
+            perform action a0 { doc /* moves pallets only within approved travel areas and under authorized tasking @S013 */ }
+            perform action a1 { doc /* accepts work only when its vehicle status, assigned operating area, and required travel path are valid @S109 */ }
+            perform action a2 { doc /* limits speed and turning rates @S113 */ }
+            perform action a3 { doc /* protect pallet stability @S113 */ }
+            perform action a4 { doc /* maintain safe clearance from warehouse structures @S113 */ }
+            perform action a5 { doc /* assembles the data needed to document each completed transfer and its receiving position @S114 */ }
+            perform action a6 { doc /* document each completed transfer and its receiving position @S114 */ }
+            perform action a7 { doc /* produces the Forklift Handoff Confirmation @S115 */ }
+            perform action a8 { doc /* receives work only when a route and destination are available for the assigned vehicle @S136 */ }
+            perform action a9 { doc /* receives a hold instruction for routes that approach the recovery area @S190 */ }
+            perform action a10 { doc /* receives the Transfer Induction Ticket @S200 */ }
+            perform action a11 { doc /* validates its destination against the assigned route @S200 */ }
+            perform action a12 { doc /* parks its vehicles in approved locations @S233 */ }
+            perform action a13 { doc /* reports any remaining equipment restrictions for the next shift @S233 */ }
+        }
+        part controlLogic : ControlLogic {
+            perform action a0 { doc /* enforced by the applicable control logic @S205 */ }
+        }
+        part controlRecord : ControlRecord {
+            perform action a0 { doc /* identifies the hold reason @S158 */ }
+            perform action a1 { doc /* retains the pallet's last confirmed location @S158 */ }
+        }
+        part controlledRecoveryManeuver : ControlledRecoveryManeuver {
+            perform action a0 { doc /* uses only the travel needed to reach a stable position or clear the obstruction under review @S183 */ }
+        }
+        part controlledTest : ControlledTest {
+            perform action a0 { doc /* confirms that the equipment responds correctly to stop commands and that its reported position is stable @S193 */ }
+            perform action a1 { doc /* passes @S194 */ }
+        }
+        part conveyorLineController : ConveyorLineController {
+            perform action a0 { doc /* coordinates conveyor movement within its assigned operating scope @S012 */ }
+            perform action a1 { doc /* sequences pallet movement across the available conveyor sections @S078 */ }
+            perform action a2 { doc /* uses conveyor status and transfer-point signals @S079 */ }
+            perform action a3 { doc /* determine when a pallet can advance @S079 */ }
+            perform action a4 { doc /* maintains a separate sequence for each active conveyor path @S080 */ }
+            perform action a5 { doc /* grants passage to one approaching pallet at a time @S087 */ }
+            perform action a6 { doc /* produces the Transfer Induction Ticket for each accepted induction @S088 */ }
+            perform action a7 { doc /* checks that required induction fields are present @S090 */ }
+            perform action a8 { doc /* releasing the pallet from the transfer point @S090 */ }
+            perform action a9 { doc /* verifies transfer-point readiness @S098 */ }
+            perform action a10 { doc /* resuming the held sequence @S098 */ }
+            perform action a11 { doc /* coordinates conveyor movement @S134 */ }
+            perform action a12 { doc /* stops affected equipment @S134 */ }
+            perform action a13 { doc /* holds affected transfers @S169 */ }
+            perform action a14 { doc /* holds transfers that could feed material into the isolated area @S176 */ }
+            perform action a15 { doc /* inhibits feed @S212 */ }
+            perform action a16 { doc /* verifies that conveyor zones are clear @S232 */ }
+            perform action a17 { doc /* records the completion of its assigned closing checks @S232 */ }
+        }
+        part conveyorSections : ConveyorSections {
+            exhibit state modes {
+                state s0 { doc /* occupied @S082 */ }
+                state s1 { doc /* unavailable @S082 */ }
+            }
+        }
+        part destination : Destination {
+            exhibit state modes {
+                state s0 { doc /* reserved @S154 */ }
+            }
+        }
+        part dimensions : Dimensions {
+            perform action a0 { doc /* support route and handling decisions for loads that exceed standard pallet envelopes @S120 */ }
+        }
+        part dispatchWaveAmendment : DispatchWaveAmendment {
+            perform action a0 { doc /* explicitly authorizes a change @S107 */ }
+        }
+        part drivers : Drivers {
+            perform action a0 { doc /* follow the gate instructions to the designated staging lane @S030 */ }
+        }
+        part eastTransferConveyor : EastTransferConveyor {
+            perform action a0 { doc /* carries pallets along its designated transfer route @S010 */ }
+            perform action a1 { doc /* carries pallets along the eastern approach to the transfer area @S076 */ }
+            perform action a2 { doc /* provide designated interfaces for moving pallets between vehicle travel and outbound staging @S119 */ }
+            perform action a3 { doc /* provide separate routes for moving pallets between operating areas @S135 */ }
+            perform action a4 { doc /* remain stopped where their movement could compromise the boundary @S189 */ }
+            perform action a5 { doc /* demonstrates a controlled restart @S210 */ }
+            perform action a6 { doc /* running empty at reduced speed for one complete cycle @S210 */ }
+            perform action a7 { doc /* accepting a pallet @S210 */ }
+            exhibit state modes {
+                state s0 { doc /* stopped @S189 */ }
+            }
+        }
+        part equipment : Equipment {
+            perform action a0 { doc /* begin inventory-moving work @S021 */ }
+            perform action a1 { doc /* access it @S055 */ }
+            perform action a2 { doc /* can continue safely @S163 */ }
+            perform action a3 { doc /* entering it @S174 */ }
+            perform action a4 { doc /* can return to service @S191 */ }
+            perform action a5 { doc /* responds correctly to stop commands @S193 */ }
+            exhibit state modes {
+                state s0 { doc /* fault state @S161 */ }
+                state s1 { doc /* inhibited @S165 */ }
+            }
+        }
+        part exceptionHandling : ExceptionHandling {
+            perform action a0 { doc /* preserves a traceable hold state @S148 */ }
+        }
+        part fireAlarmPanel : FireAlarmPanel {
+            perform action a0 { doc /* provides facility alarm status for operational response @S025 */ }
+            perform action a1 { doc /* produces the Sprinkler Zone Inhibit Notice @S117 */ }
+            perform action a2 { doc /* provide safety status that can require movement to stop or be restricted @S146 */ }
+            perform action a3 { doc /* retain authority to stop or restrict movement whenever their safety status requires it @S170 */ }
+            perform action a4 { doc /* stop @S170 */ }
+            perform action a5 { doc /* restrict movement @S170 */ }
+            perform action a6 { doc /* retain authority to stop or restrict movement whenever their safety status requires it @S173 */ }
+            perform action a7 { doc /* stop @S173 */ }
+            perform action a8 { doc /* restrict movement @S173 */ }
+        }
+        part gateProcess : GateProcess {
+            perform action a0 { doc /* flags unscheduled arrivals for review @S031 */ }
+        }
+        part handoffReporting : HandoffReporting {
+            perform action a0 { doc /* records the vehicle identifier, pallet identifier, transfer time, and any incomplete or deferred movement @S116 */ }
+        }
+        part inboundArrivals : InboundArrivals {
+            perform action a0 { doc /* enter the receiving area @S031 */ }
+        }
+        part inboundInspectionDesk : InboundInspectionDesk {
+            perform action a0 { doc /* records inspection outcomes @S004 */ }
+            perform action a1 { doc /* checks delivery paperwork against the expected shipment @S033 */ }
+            perform action a2 { doc /* confirms the trailer is presented for inspection @S033 */ }
+            perform action a3 { doc /* sends the Trailer Seal Exception Note @S036 */ }
+            perform action a4 { doc /* records inspection results promptly @S045 */ }
+            perform action a5 { doc /* records inspection outcomes @S131 */ }
+            perform action a6 { doc /* consumes its inspection-stage advisory @S151 */ }
+            perform action a7 { doc /* records whether the pallet can proceed, requires rework, or must remain held @S151 */ }
+            perform action a8 { doc /* records governance approval @S231 */ }
+            perform action a9 { doc /* confirms that the accepted operating configuration is under change control @S231 */ }
+            perform action a10 { doc /* confirm that their operating interfaces are available and that exceptions can be held safely @S237 */ }
+        }
+        part inboundPalletBuffer : InboundPalletBuffer {
+            perform action a0 { doc /* holds accepted pallets temporarily @S006 */ }
+            perform action a1 { doc /* provides a controlled staging point @S132 */ }
+            perform action a2 { doc /* provides temporary staging without implying that a held load has been accepted into inventory @S153 */ }
+            perform action a3 { doc /* remains unavailable to new receipts @S188 */ }
+            exhibit state modes {
+                state s0 { doc /* unavailable @S188 */ }
+            }
+        }
+        part incomingShift : IncomingShift {
+            perform action a0 { doc /* acknowledges those conditions @S218 */ }
+            perform action a1 { doc /* authorizing routine movements @S218 */ }
+            perform action a2 { doc /* acknowledges them @S243 */ }
+            perform action a3 { doc /* authorizing routine movements @S243 */ }
+        }
+        part interlocks : Interlocks {
+            perform action a0 { doc /* prevent movement into a section that is occupied or unavailable @S082 */ }
+        }
+        part inventoryRecords : InventoryRecords {
+            perform action a0 { doc /* remains aligned with the received goods @S045 */ }
+        }
+        part maintenanceReleaseTerminal : MaintenanceReleaseTerminal {
+            perform action a0 { doc /* records equipment availability for operational planning @S026 */ }
+            perform action a1 { doc /* produces the Crane Service Release Card @S140 */ }
+            perform action a2 { doc /* records the inspection outcome and the identity of the person authorizing a return to operation @S164 */ }
+            perform action a3 { doc /* records the inspection outcome and any repair work required @S191 */ }
+            perform action a4 { doc /* records completed service work @S234 */ }
+            perform action a5 { doc /* confirms that equipment restrictions remain visible until formally cleared @S234 */ }
+        }
+        part nextConveyorSection : NextConveyorSection {
+            perform action a0 { doc /* reports ready @S086 */ }
+            exhibit state modes {
+                state s0 { doc /* ready @S086 */ }
+            }
+        }
+        part normalSequencing : NormalSequencing {
+            perform action a0 { doc /* resumes without changing the order of pallets already committed to a transfer path @S099 */ }
+            perform action a1 { doc /* resumes without changing the order of pallets already committed to a transfer path @S100 */ }
+        }
+        part northAisleStackerCrane : NorthAisleStackerCrane {
+            perform action a0 { doc /* performs assigned storage and retrieval work in its designated aisle @S008 */ }
+            perform action a1 { doc /* serves storage positions in the north aisle @S063 */ }
+            perform action a2 { doc /* follows the aisle's configured travel limits @S063 */ }
+            perform action a3 { doc /* sends the Aisle Occupancy Snapshot @S092 */ }
+            perform action a4 { doc /* updates its reported condition @S095 */ }
+            perform action a5 { doc /* report operating availability @S137 */ }
+            perform action a6 { doc /* uses the Slot Reservation Receipt @S154 */ }
+            perform action a7 { doc /* confirm that its assigned destination remains reserved @S154 */ }
+            perform action a8 { doc /* checks its current task state @S155 */ }
+            perform action a9 { doc /* stops if the destination or access path is no longer valid @S155 */ }
+            perform action a10 { doc /* movement @S155 */ }
+            perform action a11 { doc /* reports a fault that could affect positioning, load retention, braking, or travel @S162 */ }
+            perform action a12 { doc /* remains unavailable @S163 */ }
+            perform action a13 { doc /* verifies aisle clearance @S206 */ }
+            perform action a14 { doc /* resuming a stored-pallet movement @S206 */ }
+            perform action a15 { doc /* stops if an obstruction is detected @S206 */ }
+            perform action a16 { doc /* accepts the release card as authorization to return to service @S228 */ }
+            perform action a17 { doc /* return to service @S228 */ }
+            exhibit state modes {
+                state s0 { doc /* unavailable @S163 */ }
+            }
+        }
+        part operatingRecord : OperatingRecord {
+            perform action a0 { doc /* retains the scan result, location, and time of detection @S150 */ }
+        }
+        part operatingTeam : OperatingTeam {
+            perform action a0 { doc /* cannot clear them locally @S159 */ }
+        }
+        part operators : Operators {
+            perform action a0 { doc /* understand current speed limits, exclusion boundaries, and stop-work criteria @S199 */ }
+        }
+        part outboundCheckweighScale : OutboundCheckweighScale {
+            perform action a0 { doc /* verifies pallet weight @S016 */ }
+            perform action a1 { doc /* verifies shipment weight @S144 */ }
+            perform action a2 { doc /* produces the Gross Weight Variance Slip @S167 */ }
+        }
+        part outboundDispatchSorter : OutboundDispatchSorter {
+            perform action a0 { doc /* organizes eligible pallets for their assigned dispatch sequence @S015 */ }
+            perform action a1 { doc /* receives the Dispatch Wave Amendment @S106 */ }
+            perform action a2 { doc /* applies its authorized changes to outbound staging @S106 */ }
+            perform action a3 { doc /* preserves committed pallet order @S107 */ }
+            perform action a4 { doc /* verifies that staging positions match the current outbound plan @S121 */ }
+            perform action a5 { doc /* organizes completed pallets according to the current shipping plan @S143 */ }
+            perform action a6 { doc /* confirm that their operating interfaces are available and that exceptions can be held safely @S237 */ }
+        }
+        part outboundPreparation : OutboundPreparation {
+            perform action a0 { doc /* starts @S101 */ }
+        }
+        part outgoingShift : OutgoingShift {
+            perform action a0 { doc /* records equipment restrictions, pending checks, and unresolved safety concerns @S217 */ }
+            perform action a1 { doc /* records remaining restrictions and unresolved concerns @S243 */ }
+        }
+        part outputRecord : OutputRecord {
+            perform action a0 { doc /* carries the identifiers and routing details needed to associate the induction with its pallet @S089 */ }
+        }
+        part oversizeLoadAdvisory : OversizeLoadAdvisory {
+            perform action a0 { doc /* identifies a measured profile that exceeds an applicable storage or handling limit @S071 */ }
+            perform action a1 { doc /* does not by itself authorize placement in a position that fails the storage rules @S072 */ }
+        }
+        part palletDimensionScanner : PalletDimensionScanner {
+            perform action a0 { doc /* captures dimensions used to determine handling and storage eligibility @S005 */ }
+            perform action a1 { doc /* measures pallet height, width, and length @S068 */ }
+            perform action a2 { doc /* produces the Oversize Load Advisory @S070 */ }
+            perform action a3 { doc /* supplies measurements used to identify pallets that require a different handling path @S133 */ }
+            perform action a4 { doc /* checks each pallet profile against configured dimensional limits @S207 */ }
+            perform action a5 { doc /* flags measurements outside tolerance @S207 */ }
+        }
+        part pallets : Pallets {
+            perform action a0 { doc /* remain within this boundary @S002 */ }
+            perform action a1 { doc /* enter storage operations @S004 */ }
+            perform action a2 { doc /* enter the conveyor area @S075 */ }
+            perform action a3 { doc /* can advance @S079 */ }
+            perform action a4 { doc /* has reached the expected position @S083 */ }
+            perform action a5 { doc /* enter routine warehouse handling @S131 */ }
+            perform action a6 { doc /* can proceed @S151 */ }
+            perform action a7 { doc /* requires rework @S151 */ }
+            perform action a8 { doc /* must remain held @S151 */ }
+            perform action a9 { doc /* remains separated from available stock @S152 */ }
+            exhibit state modes {
+                state s0 { doc /* held @S151 */ }
+                state s1 { doc /* hold state @S148 */ }
+            }
+        }
+        part personnel : Personnel {
+            perform action a0 { doc /* inspect the fault @S163 */ }
+            perform action a1 { doc /* verify that adjacent equipment can continue safely @S163 */ }
+            perform action a2 { doc /* remain outside the crane travel envelope throughout the maneuver @S184 */ }
+        }
+        part presenceSensors : PresenceSensors {
+            perform action a0 { doc /* confirm that a pallet has reached the expected position @S083 */ }
+        }
+        part protectiveDevice : ProtectiveDevice {
+            perform action a0 { doc /* changes state @S212 */ }
+        }
+        part receivingDoor : ReceivingDoor {
+            exhibit state modes {
+                state s0 { doc /* unavailable @S040 */ }
+            }
+        }
+        part receivingException : ReceivingException {
+            perform action a0 { doc /* remains visible to the Warehouse Operations Supervisor @S130 */ }
+        }
+        part receivingProcess : ReceivingProcess {
+            perform action a0 { doc /* closes @S050 */ }
+        }
+        part receivingStaff : ReceivingStaff {
+            perform action a0 { doc /* compare the physical pallet count with the shipment paperwork @S043 */ }
+        }
+        part recoveryPlan : RecoveryPlan {
+            perform action a0 { doc /* identifies the permitted travel envelope, the expected stopping point, and the conditions that require an immediate stop @S181 */ }
+        }
+        part recoveryResponse : RecoveryResponse {
+            perform action a0 { doc /* begins @S172 */ }
+        }
+        part reportedAisleCondition : ReportedAisleCondition {
+            perform action a0 { doc /* reflects the crane's current view of occupied and available storage positions @S093 */ }
+        }
+        part reservation : Reservation {
+            perform action a0 { doc /* remains subject to confirmation that the selected position and its access path are available for operation @S058 */ }
+        }
+        part reservationRecord : ReservationRecord {
+            perform action a0 { doc /* identifies the selected position and the conditions used to validate its suitability @S059 */ }
+        }
+        part restartRecord : RestartRecord {
+            perform action a0 { doc /* includes the initiating authorization, observed speed, cycle result, and any alarm response @S211 */ }
+        }
+        part routeSelection : RouteSelection {
+            perform action a0 { doc /* accounts for aisle access, transfer-point readiness, pedestrian controls, and temporary operating restrictions @S111 */ }
+        }
+        part safetyChecks : SafetyChecks {
+            perform action a0 { doc /* verify that personnel detection, audible warnings, and emergency stops respond @S203 */ }
+        }
+        part safetyZoneController : SafetyZoneController {
+            perform action a0 { doc /* enforces movement restrictions in designated protected areas @S024 */ }
+            perform action a1 { doc /* provide safety status that can require movement to stop or be restricted @S146 */ }
+            perform action a2 { doc /* retain authority to stop or restrict movement whenever their safety status requires it @S170 */ }
+            perform action a3 { doc /* stop @S170 */ }
+            perform action a4 { doc /* restrict movement @S170 */ }
+            perform action a5 { doc /* retain authority to stop or restrict movement whenever their safety status requires it @S173 */ }
+            perform action a6 { doc /* stop @S173 */ }
+            perform action a7 { doc /* restrict movement @S173 */ }
+            perform action a8 { doc /* establishes a controlled boundary around the affected aisle @S174 */ }
+            perform action a9 { doc /* prevents new equipment from entering it @S174 */ }
+            perform action a10 { doc /* maintains the boundary @S187 */ }
+            perform action a11 { doc /* applies the Sprinkler Zone Inhibit Notice @S204 */ }
+            perform action a12 { doc /* maintaining the specified exclusion boundary @S204 */ }
+        }
+        part serviceReadiness : ServiceReadiness;
+        part shiftCheck : ShiftCheck {
+            perform action a0 { doc /* confirms that the active boundary is visible to operators and enforced by the applicable control logic @S205 */ }
+        }
+        part shippingDocumentationDesk : ShippingDocumentationDesk {
+            perform action a0 { doc /* prepares the records required for outbound loads @S017 */ }
+            perform action a1 { doc /* prepares shipment records from the confirmed pallet and destination data @S122 */ }
+            perform action a2 { doc /* prepares shipment records from confirmed pallet and destination data @S145 */ }
+            perform action a3 { doc /* receives @S226 */ }
+            perform action a4 { doc /* reconciles the Gross Weight Variance Slip against the applicable shipment record @S226 */ }
+            perform action a5 { doc /* completing its paperwork @S226 */ }
+        }
+        part southAisleStackerCrane : SouthAisleStackerCrane {
+            perform action a0 { doc /* performs assigned storage and retrieval work in its designated aisle @S009 */ }
+            perform action a1 { doc /* serves its assigned storage positions under equivalent travel and access controls @S064 */ }
+            perform action a2 { doc /* report operating availability @S137 */ }
+            perform action a3 { doc /* performs a controlled recovery maneuver at reduced speed within the isolated aisle @S182 */ }
+            perform action a4 { doc /* reach a stable position @S183 */ }
+            perform action a5 { doc /* clear the obstruction under review @S183 */ }
+        }
+        part spotter : Spotter {
+            perform action a0 { doc /* may observe from a protected location @S185 */ }
+            perform action a1 { doc /* does not enter the isolated aisle @S185 */ }
+        }
+        part stackerCrane : StackerCrane {
+            perform action a0 { doc /* normally retrieves @S061 */ }
+            perform action a1 { doc /* stores pallets within its assigned aisle boundaries @S061 */ }
+            perform action a2 { doc /* does not extend beyond authorized operating zones @S065 */ }
+            perform action a3 { doc /* remains unavailable for automated assignments @S229 */ }
+            exhibit state modes {
+                state s0 { doc /* unavailable @S229 */ }
+            }
+        }
+        part staff : Staff {
+            perform action a0 { doc /* verify trailer identification @S034 */ }
+            perform action a1 { doc /* inspect accessible seals @S034 */ }
+        }
+        part storageAllocation : StorageAllocation {
+            perform action a0 { doc /* begins @S051 */ }
+        }
+        part storageLocations : StorageLocations {
+            perform action a0 { doc /* remain dependable throughout operations @S022 */ }
+            exhibit state modes {
+                state s0 { doc /* unavailable @S223 */ }
+            }
+        }
+        part trailer : Trailer {
+            perform action a0 { doc /* do not obstruct active traffic routes @S038 */ }
+            perform action a1 { doc /* remains in a safe holding position @S040 */ }
+            perform action a2 { doc /* leave the door @S047 */ }
+            perform action a3 { doc /* return to the yard route @S047 */ }
+        }
+        part transferPoint : TransferPoint {
+            perform action a0 { doc /* holds the affected pallet upstream @S084 */ }
+            exhibit state modes {
+                state s0 { doc /* blocked @S084 */ }
+            }
+        }
+        part vehicle : Vehicle {
+            perform action a0 { doc /* selects an available task according to dispatch priority, battery condition, and proximity to the pickup point @S110 */ }
+            perform action a1 { doc /* confirm pallet identity and pickup location @S112 */ }
+            perform action a2 { doc /* lifting a load @S112 */ }
+            perform action a3 { doc /* stop @S118 */ }
+            perform action a4 { doc /* reroute @S118 */ }
+            perform action a5 { doc /* proceeding @S128 */ }
+            exhibit state modes {
+                state s0 { doc /* ready for service @S201 */ }
+            }
+        }
+        part warehouseManagementSystem : WarehouseManagementSystem {
+            perform action a0 { doc /* maintains the authoritative status, location, and handling eligibility of each controlled pallet @S020 */ }
+            perform action a1 { doc /* maintains the expected inbound shipment data used during receiving checks @S041 */ }
+            perform action a2 { doc /* sends the Dispatch Wave Amendment @S042 */ }
+            perform action a3 { doc /* evaluates available positions against pallet dimensions, mass, storage compatibility, and expected retrieval demand @S052 */ }
+            perform action a4 { doc /* produces the Slot Reservation Receipt @S057 */ }
+            perform action a5 { doc /* can retain the measured dimensions with the pallet's inventory record for later allocation decisions @S073 */ }
+            perform action a6 { doc /* establishes the intended shipment window and loading priorities @S101 */ }
+            perform action a7 { doc /* checks that planned pallet moves remain consistent with outbound capacity and current inventory records @S103 */ }
+            perform action a8 { doc /* issues a Dispatch Wave Amendment @S105 */ }
+            perform action a9 { doc /* maintains the authoritative task state for pallet movements, inventory status, and operating priorities @S124 */ }
+            perform action a10 { doc /* reconciles work across operating areas @S142 */ }
+            perform action a11 { doc /* preserves a consistent view of task status and outstanding constraints @S142 */ }
+            perform action a12 { doc /* consumes the load advisory @S156 */ }
+            perform action a13 { doc /* apply the required handling constraints to affected work @S156 */ }
+            perform action a14 { doc /* prevents an incompatible allocation from being released @S157 */ }
+            perform action a15 { doc /* receives the occupancy snapshot for recovery planning @S177 */ }
+            perform action a16 { doc /* reconciles its location records with available sensor data @S178 */ }
+            perform action a17 { doc /* presents a recovery plan @S178 */ }
+            perform action a18 { doc /* records transaction times @S197 */ }
+            perform action a19 { doc /* reconciles completed movements against the active shift plan @S197 */ }
+            perform action a20 { doc /* uses the handoff confirmation @S225 */ }
+            perform action a21 { doc /* close the applicable movement record @S225 */ }
+            perform action a22 { doc /* closes the commissioning action register @S230 */ }
+        }
+        part warehouseOperatingBoundary : WarehouseOperatingBoundary {
+            perform action a0 { doc /* begins at the designated receiving interface @S001 */ }
+            perform action a1 { doc /* ends when a completed outbound load is released from the shipping interface @S001 */ }
+        }
+        part warehouseOperationsSupervisor : WarehouseOperationsSupervisor {
+            perform action a0 { doc /* oversees exceptions, operational priorities, and recovery decisions @S018 */ }
+            perform action a1 { doc /* resolves receiving issues that exceed the desk's routine authority @S049 */ }
+            perform action a2 { doc /* can review unresolved allocation conditions through established operational procedures @S074 */ }
+            perform action a3 { doc /* can review persistent holds through established operational procedures @S097 */ }
+            perform action a4 { doc /* reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints @S123 */ }
+            perform action a5 { doc /* releasing the next outbound wave @S123 */ }
+            perform action a6 { doc /* can defer work @S138 */ }
+            perform action a7 { doc /* reviews delayed tasks, abnormal vehicle stops, and unresolved staging constraints @S147 */ }
+            perform action a8 { doc /* releasing the next outbound wave @S147 */ }
+            perform action a9 { doc /* reviews unresolved holds @S159 */ }
+            perform action a10 { doc /* assigns an escalation @S159 */ }
+            perform action a11 { doc /* also confirms that a delayed task will not compromise a later outbound wave or an aisle access limit @S160 */ }
+            perform action a12 { doc /* releases normal work @S171 */ }
+            perform action a13 { doc /* verifies that personnel are clear of the boundary @S175 */ }
+            perform action a14 { doc /* authorizing recovery work @S175 */ }
+            perform action a15 { doc /* reconciles outstanding exceptions, maintenance holds, and access constraints @S192 */ }
+            perform action a16 { doc /* releasing normal work @S192 */ }
+            perform action a17 { doc /* reviews open alarms, equipment status, and the previous shift's unresolved work @S198 */ }
+            perform action a18 { doc /* confirms that operators understand current speed limits, exclusion boundaries, and stop-work criteria @S199 */ }
+            perform action a19 { doc /* compares reported downtime with control-system event records at each shift review @S214 */ }
+            perform action a20 { doc /* confirms that acceptance evidence is complete and that any remaining limitations are documented @S222 */ }
+            perform action a21 { doc /* reviewed by the Warehouse Operations Supervisor @S239 */ }
+        }
+        part wavePlanning : WavePlanning {
+            perform action a0 { doc /* accounts for pallet identity, destination, due time, and the available staging positions @S102 */ }
+        }
+        part westTransferConveyor : WestTransferConveyor {
+            perform action a0 { doc /* carries pallets along its designated transfer route @S011 */ }
+            perform action a1 { doc /* carries pallets along the western approach to the transfer area @S077 */ }
+            perform action a2 { doc /* provide designated interfaces for moving pallets between vehicle travel and outbound staging @S119 */ }
+            perform action a3 { doc /* provide separate routes for moving pallets between operating areas @S135 */ }
+            perform action a4 { doc /* remain stopped where their movement could compromise the boundary @S189 */ }
+            exhibit state modes {
+                state s0 { doc /* stopped @S189 */ }
+            }
+        }
+        part workRequests : WorkRequests {
+            perform action a0 { doc /* should include a unique task reference, a destination, and any operating constraints needed for safe execution @S126 */ }
+        }
+        part yardGateController : YardGateController {
+            perform action a0 { doc /* controls vehicle access at the facility perimeter @S014 */ }
+            perform action a1 { doc /* records vehicle identity, carrier, trailer number, and arrival time @S028 */ }
+            perform action a2 { doc /* directs each cleared trailer from staging to its assigned receiving door @S039 */ }
+            perform action a3 { doc /* validates arriving vehicle information against the active receiving plan @S127 */ }
+            perform action a4 { doc /* directing a vehicle onward @S127 */ }
+            perform action a5 { doc /* records unresolved discrepancies for review @S128 */ }
+            perform action a6 { doc /* prevents an affected vehicle from proceeding @S128 */ }
+            perform action a7 { doc /* uses the exception note @S129 */ }
+            perform action a8 { doc /* manage a receiving discrepancy at the gate @S129 */ }
+            perform action a9 { doc /* applies the yard exception @S179 */ }
+            perform action a10 { doc /* holding affected vehicle movements outside the recovery boundary @S179 */ }
+        }
+        part yardPersonnel : YardPersonnel {
+            perform action a0 { doc /* notify receiving staff when a trailer is ready to leave the door and return to the yard route @S047 */ }
+        }
+        part yardTraffic : YardTraffic {
+            perform action a0 { doc /* remains under controlled access @S180 */ }
+        }
+        flow f0 of AuthorizedReleaseItem from warehouseManagementSystem to equipment { doc /* @S021 */ }
+        flow f1 of TrailerSealExceptionNoteItem from inboundInspectionDesk to yardGateController { doc /* @S036 */ }
+        flow f2 of DoorAssignmentItem from yardGateController to trailer { doc /* @S039 */ }
+        flow f3 of DispatchWaveAmendmentItem from warehouseManagementSystem to outboundDispatchSorter { doc /* @S042 */ }
+        flow f4 of TrailerReadinessToLeaveTheDoorAndReturnToTheYardRouteItem from yardPersonnel to receivingStaff { doc /* @S047 */ }
+        flow f5 of DimensionsItem from palletDimensionScanner to warehouseManagementSystem { doc /* @S052 */ }
+        flow f7 of AisleOccupancySnapshotItem from northAisleStackerCrane to warehouseManagementSystem { doc /* @S092 */ }
+        flow f10 of AuthorizedReleaseItem from warehouseManagementSystem to autonomousForkliftFleet { doc /* @S109 */ }
+        flow f13 of OversizeLoadAdvisoryItem from palletDimensionScanner to inboundInspectionDesk { doc /* @S151 */ }
+        flow f14 of SlotReservationReceiptItem from warehouseManagementSystem to northAisleStackerCrane { doc /* @S154 */ }
+        flow f15 of OversizeLoadAdvisoryItem from palletDimensionScanner to warehouseManagementSystem { doc /* @S156 */ }
+        flow f18 of TransferInductionTicketItem from conveyorLineController to autonomousForkliftFleet { doc /* @S200 */ }
+        flow f19 of SprinklerZoneInhibitNoticeItem from fireAlarmPanel to safetyZoneController { doc /* @S204 */ }
+        flow f20 of ForkliftHandoffConfirmationItem from autonomousForkliftFleet to warehouseManagementSystem { doc /* @S225 */ }
+        flow f21 of GrossWeightVarianceSlipItem from outboundCheckweighScale to shippingDocumentationDesk { doc /* @S226 */ }
+        flow f22 of CraneServiceReleaseCardItem from maintenanceReleaseTerminal to northAisleStackerCrane { doc /* @S228 */ }
+        flow f23 of RemainingEquipmentRestrictionsItem from autonomousForkliftFleet to incomingShift { doc /* @S233 */ }
+    }
+    requirement def R0 { doc /* No equipment may begin inventory-moving work without an authorized release from the Warehouse Management System. @S021 */ subject s : Equipment; }
+    requirement def R1 { doc /* Work requests should include a unique task reference, a destination, and any operating constraints needed for safe execution. @S126 */ subject s : WorkRequests; }
+    requirement def R2 { doc /* the pallet can proceed, requires rework, or must remain held @S151 */ subject s : Pallets; }
+    requirement def R3 { doc /* Service readiness requires a recorded fault state, a controlled work area, and a clear separation between maintenance activity and live movement. @S161 */ subject s : ServiceReadiness; }
+}

@@ -1,0 +1,104 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "S011 states that the Pharmacy Fulfillment Robot produces the Priority Refill Tote Tag, and S103 states that the North Ward Cabinet Controller uses that same tag."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "S012 identifies the Clinical Pharmacist as producing the Dose Exception Review Slip, and S128's 'the review slip' unambiguously refers to that slip used by the Pharmacy Verification Station."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "S032 says the Medication Order Gateway produces the Order Reconciliation Snapshot, and S149 says the Pharmacy Fulfillment Robot uses the Order Reconciliation Snapshot."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "S041 says the Pharmacy Technician produces the Cold Chain Handoff Card, and S177's 'the handoff card' refers to that card used by the Sensor-monitored Medication Cooler."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "S052 says the East Tube Dispatch Console sends a Tube Route Exception Ticket, and S211's 'the exception ticket' refers to that ticket used by the Biomedical Engineer."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "S064 states that the Charge Nurse sends a Cabinet Downtime Notice, and S222 states that the IT Operations Specialist uses that notice."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "S021 states that the Medication Return Kiosk produces the Return Bin Audit Label, and S117's 'the audit label' refers to that label used by the Pharmacy Technician."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "S047 says the Medication Safety Officer produces the Diversion Review Packet, and S141 says the IT Operations Specialist receives it."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "S079 says the Pharmacy Verification Station produces the Batch Release Note, and S204's 'the release note' refers to that note received by the South Ward Cabinet Controller."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "S091 states that the Hospital Courier produces the Pneumatic Capsule Seal Record, and S238 states that the West Tube Dispatch Console uses that same record."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "S004 establishes Cinderwake as the name for the Pharmacy Fulfillment Robot, and S126 uses Cinderwake consistently with that alias."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "S005 establishes Juniper as the name for the Pharmacy Verification Station, and S127 uses Juniper consistently with that alias."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "S006 establishes Tallowmere as the name for the Medication Return Kiosk, and S116 uses Tallowmere consistently with that alias."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "S007 establishes Larkspur as the name for the Registered Nurse, and S131 uses Larkspur consistently with that alias."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "S026 establishes Morrowglass as the name for the Medication Order Gateway, and S147 uses Morrowglass consistently with that alias."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "S027 establishes Bluejay as the name for the Sensor-monitored Medication Cooler, and S171 uses Bluejay consistently with that alias."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "S028 establishes Copperfield as the name for the Pharmacy Technician, and S148 uses Copperfield consistently with that alias."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "S050 establishes Stonewake as a local name for the Biomedical Engineer, and S210 uses Stonewake consistently with that alias."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "S161 explicitly names the North Ward Cabinet Controller, not the South Ward Cabinet Controller."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "S184 explicitly names the East Tube Dispatch Console, not the West Tube Dispatch Console."
+  }
+ ]
+}

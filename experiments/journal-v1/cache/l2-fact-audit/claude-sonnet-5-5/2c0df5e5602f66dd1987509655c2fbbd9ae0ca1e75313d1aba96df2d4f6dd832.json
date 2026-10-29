@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Charge Nurse, label=confirms that ownership is maintained at shift handover)\n\nSource sentences (the last one is where the fact was extracted):\nS131: Larkspur keeps the cabinet transaction locked and confirms that the medication has not been administered while review is pending.\nS132: The Registered Nurse escalates an urgent patient-care concern to the Clinical Pharmacist and follows the hospital's clinical response procedure.\nS133: The Registered Nurse does not bypass a hold or substitute a product to clear an exception.\nS134: The Charge Nurse assigns unresolved exceptions to a named role and confirms that ownership is maintained at shift handover.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S134 states that the Charge Nurse confirms that ownership is maintained at shift handover, so both the performer and the action label match the text.\"}",
+ "usage": {
+  "input_tokens": 677,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 60,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.779,
+ "created": "2026-10-14T12:51:39"
+}

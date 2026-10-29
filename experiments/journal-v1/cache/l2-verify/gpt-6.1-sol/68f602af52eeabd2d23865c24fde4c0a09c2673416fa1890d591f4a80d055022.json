@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Dual Channel Odometer provides \"train position\" to Passenger Information Gateway (an information or material flow).\n\nSource sentences:\nS046: Platform Screen Door Controller exchanges door enable and closed-and-locked indications with the train interface when the train is correctly berthed at a platform.\nS047: Passenger Information Gateway receives non-vital train position and service state data through an interface that prevents passenger systems from influencing safety decisions.\nS065: The boundary between North District Zone Controller and South District Zone Controller is defined by track section ownership, radio coverage overlap, and the point at which a train authority must be reissued by the receiving zone.\nS066: At a zone boundary, the Atlas Onboard Controller confirms train position from the Dual Channel Odometer before accepting the next authority source.\n\nAnswer \"supported\" only if the sentences state that Dual Channel Odometer produces or sends this item AND that Passenger Information Gateway receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S066 identifies the Dual Channel Odometer as the source of train position, and S047 states that the Passenger Information Gateway receives train position data.\"}",
+ "usage": {
+  "input_tokens": 337,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 197,
+  "output_tokens_details": {
+   "reasoning_tokens": 148
+  },
+  "total_tokens": 534
+ },
+ "attempts": 1,
+ "wall_s": 9.509,
+ "created": "2026-10-14T12:34:11"
+}

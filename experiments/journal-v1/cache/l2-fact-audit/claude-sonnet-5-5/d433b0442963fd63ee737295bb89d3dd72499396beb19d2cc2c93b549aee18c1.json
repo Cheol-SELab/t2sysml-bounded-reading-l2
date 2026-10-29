@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Autonomous Forklift Fleet, label=receives the Transfer Induction Ticket)\n\nSource sentences (the last one is where the fact was extracted):\nS197: The Warehouse Management System records transaction times and reconciles completed movements against the active shift plan.\nS198: At shift start, the Warehouse Operations Supervisor reviews open alarms, equipment status, and the previous shift's unresolved work.\nS199: The Warehouse Operations Supervisor confirms that operators understand current speed limits, exclusion boundaries, and stop-work criteria.\nS200: Autonomous Forklift Fleet receives the Transfer Induction Ticket and validates its destination against the assigned route.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S200 states that the Autonomous Forklift Fleet receives the Transfer Induction Ticket, so the performer and the action label both match the text.\"}",
+ "usage": {
+  "input_tokens": 687,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 64,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.026,
+ "created": "2026-10-14T12:52:20"
+}

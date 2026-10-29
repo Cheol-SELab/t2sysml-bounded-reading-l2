@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Maintenance Planning Engine provides \"the Deferred Task Rationale\" to Field Supervisor (an information or material flow).\n\nSource sentences:\nS284: The Vessel Master can pause or abort an approach when observed conditions differ from the forecast or deteriorate during transit.\nS285: Maintenance Planning Engine produces the Deferred Task Rationale when weather prevents a planned task from proceeding.\nS429: Field Supervisor checks that cybersecurity requirements are included in the work briefing before technicians begin affected tasks.\nS430: Field Supervisor uses the Deferred Task Rationale when a cybersecurity-related work item must be postponed.\n\nAnswer \"supported\" only if the sentences state that Maintenance Planning Engine produces or sends this item AND that Field Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\nS286: The rationale supports later reprioritization without implying that the task is safe under the current conditions.\nS980: Released revisions identify the change, rationale, approval, effective date, and superseded baseline.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S285 states the Maintenance Planning Engine produces the Deferred Task Rationale, and S430 states the Field Supervisor uses the same item, so the flow from engine to supervisor is stated across the two sentences.\"}",
+ "usage": {
+  "input_tokens": 771,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 88,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.11,
+ "created": "2026-10-19T19:09:26"
+}

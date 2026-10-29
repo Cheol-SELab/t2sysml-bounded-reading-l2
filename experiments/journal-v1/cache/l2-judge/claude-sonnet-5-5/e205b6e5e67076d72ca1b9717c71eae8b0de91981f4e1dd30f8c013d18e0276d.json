@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Flight Data Exchange provides \"only the approved operational result\" to Departure Metering Service (an information or material flow).\n\nSource sentences:\nS625: Slot Allocation Engine uses these constraints when evaluating whether a Calculated Takeoff Time should be offered, retained, exchanged, or released.\nS626: Departure Metering Service receives only the feasibility result and timing boundary needed for sequencing decisions.\nS637: Collaborative Decision Log records any agreed operational outcome, including whether the decision was constrained by crew legality or by an operator preference.\nS638: Flight Data Exchange distributes only the approved operational result to downstream services that need to update schedules, metering, or airport resource plans.\n\nAnswer \"supported\" only if the sentences state that Flight Data Exchange produces or sends this item AND that Departure Metering Service receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S638 says Flight Data Exchange distributes only the approved operational result to downstream services needing to update metering, which covers Departure Metering Service, and S626 confirms the service receives only a limited result for sequencing, though S626 words the item as the feasibility result and timing boundary.\"}",
+ "usage": {
+  "input_tokens": 689,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 107,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.896,
+ "created": "2026-10-14T12:45:35"
+}

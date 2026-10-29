@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Network Control System provides \"antenna status, link configuration, timing references, and routing readiness\" to Ground Network Manager (an information or material flow).\n\nSource sentences:\nS078: The North S-Band Antenna and South S-Band Antenna are normally assigned for command and low-rate telemetry contacts, while the Kiruna X-Band Antenna and Svalbard X-Band Antenna support high-rate telemetry reception when the visibility geometry and data volume justify their use.\nS079: The Network Control System provides the Mission Control Center with antenna status, link configuration, timing references, and routing readiness before each pass begins.\nS233: The Network Control System records rehearsal outcomes for planned maintenance, station loss, degraded routing, and restoration of nominal connectivity after a simulated outage.\nS234: The Ground Network Manager accepts the antenna readiness baseline only when the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna have current maintenance clearances.\n\nAnswer \"supported\" only if the sentences state that Network Control System produces or sends this item AND that Ground Network Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S079 says the Network Control System provides antenna status, link configuration, timing references, and routing readiness to the Mission Control Center, not the Ground Network Manager, which S234 only describes accepting an antenna readiness baseline based on maintenance clearances.\"}",
+ "usage": {
+  "input_tokens": 801,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 102,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.11,
+ "created": "2026-10-14T01:38:57"
+}

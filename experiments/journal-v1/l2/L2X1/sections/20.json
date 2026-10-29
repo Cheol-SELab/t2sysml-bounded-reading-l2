@@ -1,0 +1,104 @@
+{
+ "sentences": [
+  {
+   "text": "Stand, gate, and passenger connection recovery begins after surface constraints have been reduced enough for individual aircraft rotations to become the controlling problem.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector compares planned arrivals, planned departures, assigned gates, towing availability, and published stand status to identify conflicts that would otherwise be hidden inside local spreadsheets.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board maintains the operational view of occupied, blocked, cleaning, boarding, and tow-ready positions so that ramp decisions are based on the same stand timeline used by airport and airline users.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal presents each gate conflict with the affected flights, passenger connection exposure, aircraft size compatibility, and the latest feasible off-block time.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager sets the recovery priority for stands that can be reopened quickly, giving preference to positions that remove multiple downstream conflicts rather than a single isolated delay.",
+   "tags": []
+  },
+  {
+   "text": "Airline Operations Coordinator uses the Gate Reopening Memo to confirm when a previously unavailable gate can be planned again for arrival handling, boarding, and connection recovery.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "text": "The Ramp Control Lead coordinates stand reopening with the Ground Handling Dispatcher so that ground equipment, marshalling staff, and safe access routes are available before a flight is reassigned.",
+   "tags": []
+  },
+  {
+   "text": "The Surface Surveillance Adapter verifies that the apron position is physically clear, while the East Apron Sensor and West Apron Sensor provide supporting movement evidence for the reopened area.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor is advised only when the gate or stand decision changes runway sequence assumptions, expected taxi duration, or a departure metering commitment.",
+   "tags": []
+  },
+  {
+   "text": "The Aircraft Operator Representative confirms whether the aircraft can accept a revised stand assignment without disrupting maintenance release, fueling sequence, boarding control, or cabin readiness.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner estimates whether the proposed turnaround can be recovered using available loading teams, passenger stairs, boarding bridges, cleaning crews, and baggage transfer resources.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Interface Adapter maintains airline-provided connection exposure, including protected passengers, minimum connection time pressure, and groups that require assisted transfer.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager balances passenger connection pressure against network fairness when a gate recovery action would improve one bank of departures but consume scarce apron capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison reviews whether protecting a connecting passenger group supports wider network recovery or only transfers delay to a later sector.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator protects constrained rotations by checking that a recovered gate plan remains compatible with the applicable Calculated Takeoff Time and any slot compliance expectation.",
+   "tags": []
+  },
+  {
+   "text": "The Target Off Block Time is revised only when the actor responsible for the turnaround confirms that the boarding, servicing, and ramp movement assumptions are achievable.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service sequences recovered departures so that aircraft released from delayed turnarounds do not create a new surface queue at the runway holding points.",
+   "tags": []
+  },
+  {
+   "text": "Sector Load Monitor produces the Departure Fix Load Sheet when projected recovered departures require a consolidated view of demand by departure fix.",
+   "tags": [
+    "F11:intro"
+   ]
+  },
+  {
+   "text": "The Airport CDM Portal shows downstream departure-fix pressure as contextual information for gate recovery decisions, without allowing the stand plan to override accepted airspace constraints.",
+   "tags": []
+  },
+  {
+   "text": "The Business Rules Registry holds the local rules for connection protection, gate compatibility, towing priority, stand reopening approval, and minimum turnaround recovery margins.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log records each accepted conflict resolution with the chosen stand, rejected alternatives, affected passenger connections, and the rationale used by the responsible actor.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger preserves the same decision history for later traceability, including manual overrides, timestamp corrections, and identity of the approving role.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse measures whether recovered gate assignments reduced missed connections, reduced secondary stand conflicts, and improved aircraft rotation stability during the Recovery Phase.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward ensures that passenger connection information used for prioritization is aggregated or role-restricted so that operational users see only the detail required for recovery decisions.",
+   "tags": []
+  }
+ ]
+}

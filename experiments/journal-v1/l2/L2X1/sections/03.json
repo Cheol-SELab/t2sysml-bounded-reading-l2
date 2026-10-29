@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "The daily planning cycle begins with a pre-tactical baseline prepared each morning before the main bank structure is locked for operational use.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager owns the baseline process and confirms that the planning horizon, cutover time, and review checkpoints are understood by the participating operational roles.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform creates the initial demand picture from published schedules, approved seasonal allocations, overnight schedule changes, and received Flight Intent Message data.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Data Exchange normalizes flight identifiers, aircraft types, routing fields, and planned operating times so that later comparisons use a single reference record.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service converts the normalized schedule into expected arrival and departure demand by time band, runway direction, terminal area, and major traffic flow.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator reviews material deviations from filed intent, including aircraft swaps, early cancellations, recovery flights, and known connection protection actions.",
+   "tags": []
+  },
+  {
+   "text": "The Aircraft Operator Representative validates that operator priorities are visible where they are allowed by the Business Rules Registry and local coordination agreements.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer provides the morning weather outlook with emphasis on wind trend, ceiling, visibility, convective risk, temperature limits, and confidence over the planning horizon.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Ingest Gateway makes the outlook available to the Capacity Assessment Module and preserves the forecast issue time for audit and later performance review.",
+   "tags": []
+  },
+  {
+   "text": "The Airspace Sector Planner declares expected sector constraints, route availability assumptions, and any planned staffing limitations that could influence arrival or departure metering.",
+   "tags": []
+  },
+  {
+   "text": "The Military Airspace Liaison confirms whether shared airspace assumptions remain valid for the morning and identifies any conditional availability that must be treated as uncertain.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor sends the Runway Inspection Note before the first planning consolidation window.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "text": "The Tower Supervisor also declares anticipated runway configuration, usable operating length assumptions, and any local sequencing constraints that affect the North Runway Meter and South Runway Meter.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager confirms terminal opening status, essential facility readiness, and airport service constraints that may affect the first operational waves.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead reviews early stand readiness using information from the Ramp Movement Board, East Apron Sensor, West Apron Sensor, and handling coordination calls.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher confirms whether planned handling teams and equipment coverage are sufficient for the expected concentration of turns in each apron area.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner compares the demand curve with available ground resources and flags time bands where aircraft turn performance is likely to reduce stand availability.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module combines the runway declaration, weather outlook, airspace constraints, stand readiness, and ground resource assumptions into a proposed Airport Acceptance Rate by period.",
+   "tags": []
+  },
+  {
+   "text": "The proposed Airport Acceptance Rate is tested against the demand profile to identify overloads, underused capacity, and points where a Ground Delay Program may become necessary.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator uses the Slot Allocation Engine to prepare an initial slot feasibility view but does not publish binding Calculated Takeoff Time values during baseline construction.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service estimates provisional Target Off Block Time sensitivity so planners can see how small changes in capacity would affect stand occupancy and departure queues.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console highlights inbound demand periods where holding, speed control, or upstream sequencing may be needed if the forecast capacity materializes.",
+   "tags": []
+  },
+  {
+   "text": "The Digital Briefing Room displays the emerging Airport Capacity Plan and records unresolved assumptions in the Collaborative Decision Log for confirmation during the morning coordination briefing.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display presents the approved pre-tactical baseline as the shared reference for Normal Operations, Adverse Weather Mode, Capacity Reduction State, and early Recovery Phase decisions.",
+   "tags": []
+  },
+  {
+   "text": "When the baseline is approved, the Alert Distribution Hub notifies participating roles that the morning plan is available and that changes must be entered through controlled Regional Flow Platform functions.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse retains the baseline inputs, capacity declarations, and approval timestamps so the Post Operations Report can compare planned performance with actual outcomes.",
+   "tags": []
+  }
+ ]
+}

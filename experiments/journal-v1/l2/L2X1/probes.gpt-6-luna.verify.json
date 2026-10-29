@@ -1,0 +1,194 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "The Tower Supervisor sends the Runway Inspection Note, and the Airport Duty Manager uses that note to confirm pavement status."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "The Ground Handling Dispatcher sends the Crew Bus Delay Slip, and the Airline Operations Coordinator uses the delay slip for an exemption review."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "The Deicing Coordinator sends the Deicing Pad Queue Card, and the Ramp Control Lead uses the queue card to verify pad entry order."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "The Ramp Control Lead sends the Stand Tow Request Form, and the Handling Resource Planner uses it to reserve towing capacity."
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "The Military Airspace Liaison sends the Temporary Restriction Notice, and the Regional Flow Manager uses the restriction notice to bound the arrival regulation timeline."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "The Ramp Movement Board produces the Fuel Truck Hold Advice, and the Tower Sequence Manager uses the hold advice to manage sequencing around an active fueling constraint."
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "The Gate Conflict Detector produces the Gate Reopening Memo, and the Airline Operations Coordinator uses it to confirm gate availability for planning."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "The Slot Allocation Engine produces the Pushback Window Token, and the Airport CDM Portal uses the window token to preserve the agreed pushback opportunity."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "The Airline Interface Adapter produces the Late Baggage Tag List, and the Ground Handling Dispatcher uses the tag list to identify flights requiring baggage reconciliation."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "The Meteorology Briefing Officer produces the Storm Cell Snapshot, and the Capacity Assessment Module uses it to qualify capacity confidence."
+  },
+  {
+   "probe_id": "F11",
+   "supported": true,
+   "reason": "The Sector Load Monitor produces the Departure Fix Load Sheet, and the Regional Flow Manager uses the load sheet to assess a departure fix constraint."
+  },
+  {
+   "probe_id": "F12",
+   "supported": true,
+   "reason": "The Airport Duty Manager sends the Medical Diversion Notice, and the Arrival Regulation Console uses it to protect arrival priority and related planning."
+  },
+  {
+   "probe_id": "F13",
+   "supported": true,
+   "reason": "The Ground Handling Dispatcher sends the Towbar Shortage Report, and the Ramp Control Lead uses it to assess remote-stand repositioning."
+  },
+  {
+   "probe_id": "F14",
+   "supported": true,
+   "reason": "The Handling Resource Planner produces the Remote Stand Shuttle Count, and the Airport CDM Portal uses the shuttle count to check passenger transfer demand."
+  },
+  {
+   "probe_id": "F15",
+   "supported": true,
+   "reason": "The Airport Duty Manager produces the Customs Hold Release Note, and the Airline Operations Coordinator uses the release note to confirm customs eligibility for a proposed substitution."
+  },
+  {
+   "probe_id": "F16",
+   "supported": true,
+   "reason": "The Surface Surveillance Adapter produces the Runway Lighting Outage Card, and the Tower Supervisor uses it to confirm unavailable lighting elements."
+  },
+  {
+   "probe_id": "F17",
+   "supported": true,
+   "reason": "The Aircraft Operator Representative sends the Crew Duty Extension Log, and the Slot Coordinator uses it to assess whether manually issued slot times are achievable."
+  },
+  {
+   "probe_id": "F18",
+   "supported": true,
+   "reason": "The Ramp Control Lead sends the Apron Sweep Completion Note, and the Airport Duty Manager uses it to check apron availability constraints."
+  },
+  {
+   "probe_id": "F19",
+   "supported": true,
+   "reason": "The Slot Coordinator sends the Slot Swap Permission Email, and the Airline Operations Coordinator uses the permission email in post-operations review."
+  },
+  {
+   "probe_id": "F20",
+   "supported": true,
+   "reason": "The Airline Operations Coordinator sends the Passenger Misconnect Count, and the Departure Metering Service uses it to weight departure sequencing when permitted."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "The document introduces Cedarbell as the Regional Flow Platform’s initial platform name, and the link sentence uses Cedarbell for that platform."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "The document identifies Marlinstone as the Demand Prediction Service, and the link sentence assigns it a demand-forecasting function."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "The document introduces Blueharbor as the Slot Allocation Engine’s local alias, and the link sentence assigns it an allocation function."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "The document identifies Foxglove as the Airport CDM Portal, and the link sentence assigns it a portal publishing function."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "The document identifies Ironleaf as the Tower Sequence Manager, and the link sentence assigns it a departure-sequence advisory function."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "The document identifies Skylark as the Ramp Movement Board, and the link sentence assigns it an apron movement refresh function."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "The document identifies Emberline as the Departure Metering Service, and the link sentence assigns it a departure metering advisory function."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "The document identifies Nightjar as the Arrival Regulation Console, and the link sentence assigns it an arrival-related annotation function."
+  },
+  {
+   "probe_id": "A9",
+   "supported": true,
+   "reason": "The document identifies Copperfin as the Regional Flow Manager, and the link sentence assigns Copperfin the manager’s airline recovery decision."
+  },
+  {
+   "probe_id": "A10",
+   "supported": true,
+   "reason": "The document identifies Saffron as the Airline Operations Coordinator, and the link sentence assigns Saffron an operator-requested time confirmation."
+  },
+  {
+   "probe_id": "A11",
+   "supported": false,
+   "reason": "The alias is expressly defined for this section only, while the link sentence using Brindle appears in a later section."
+  },
+  {
+   "probe_id": "A12",
+   "supported": true,
+   "reason": "The document identifies Quartzline as the Ramp Control Lead, and the link sentence assigns Quartzline a ramp coordination task."
+  },
+  {
+   "probe_id": "A13",
+   "supported": true,
+   "reason": "The document identifies Halcyon as the Slot Coordinator’s call sign, and the link sentence assigns Halcyon a coordination-recording task."
+  },
+  {
+   "probe_id": "A14",
+   "supported": true,
+   "reason": "The document identifies Orchard as the Weather Ingest Gateway, and the link sentence assigns Orchard a weather-update function."
+  },
+  {
+   "probe_id": "A15",
+   "supported": true,
+   "reason": "The document identifies Lantern as the Alert Distribution Hub, and the link sentence assigns Lantern an advisory-distribution function."
+  },
+  {
+   "probe_id": "A16",
+   "supported": true,
+   "reason": "The document identifies Silverpine as the Contingency Operations Console, and the link sentence assigns Silverpine an emergency-access function."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "The link sentence explicitly names the North Runway Meter, not the South Runway Meter."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "The link sentence explicitly names the East Apron Sensor, not the West Apron Sensor."
+  }
+ ]
+}

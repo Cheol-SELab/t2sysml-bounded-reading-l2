@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pharmacy Fulfillment Robot provides \"eligible medication against the active order\" to Medication Order Gateway (an information or material flow).\n\nSource sentences:\nS012: The Clinical Pharmacist produces the Dose Exception Review Slip when an order requires a documented exception review.\nS013: The Pharmacy Fulfillment Robot prepares eligible medication against the active order and records its handling actions.\nS029: The Medication Order Gateway accepts medication orders from authorized clinical systems and records their arrival times.\nS030: It checks required order fields, patient identifiers, medication codes, quantities, and destination details before routing an order for pharmacy review.\n\nAnswer \"supported\" only if the sentences state that Pharmacy Fulfillment Robot produces or sends this item AND that Medication Order Gateway receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Pharmacy Fulfillment Robot prepares eligible medication, while the Medication Order Gateway receives and checks medication orders, which are different items.\"}",
+ "usage": {
+  "input_tokens": 298,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 71,
+  "output_tokens_details": {
+   "reasoning_tokens": 27
+  },
+  "total_tokens": 369
+ },
+ "attempts": 1,
+ "wall_s": 3.969,
+ "created": "2026-10-14T12:35:12"
+}

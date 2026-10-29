@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Blade Inspection Drone provides \"the Leading Edge Tile Image\" to Blade Specialist (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS312: The Crew Transfer Vessel uses the Harness Audit Card to verify the applicable equipment checks before personnel transfer.\nS313: The Blade Inspection Drone produces the Leading Edge Tile Image during a close-range survey of the blade surface.\nS444: Remote surveys use the Blade Inspection Drone to capture repeatable views of blade surfaces while the turbine is in an approved operating state.\nS445: The Blade Specialist reviews the tile image to classify visible damage and identify areas requiring closer assessment.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS314: Larkspur shall repeat a close-range pass when image coverage is insufficient to assess the suspected surface condition.\nS446: Image records are linked to the turbine, blade, inspection date, viewing angle, and relevant operating conditions.\nS593: The SCADA Engineer uses the Firmware Hash Attestation to verify the approved image before loading a release.\nS818: Neither a verbal request nor a manually presented credential image overrides a scanner denial.\n\nAnswer \"supported\" only if the document states that Blade Inspection Drone produces or sends this item AND that Blade Specialist receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item Blade Specialist uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S313 states the Blade Inspection Drone produces the Leading Edge Tile Image, S445 states the Blade Specialist reviews the tile image (a shorter name for the same item), and no other sentence names a different producer or a similarly named different item.\"}",
+ "usage": {
+  "input_tokens": 951,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 97,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.959,
+ "created": "2026-10-19T19:00:18"
+}

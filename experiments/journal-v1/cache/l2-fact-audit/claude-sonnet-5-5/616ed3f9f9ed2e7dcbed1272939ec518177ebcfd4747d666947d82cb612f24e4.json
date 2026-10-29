@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=condition, label=could compromise screening coverage, security controls, or custody continuity)\n\nSource sentences (the last one is where the fact was extracted):\nS240: The East Make-Up Conveyor and the West Make-Up Conveyor are assessed separately so that a local fault does not obscure the condition of the other conveyor.\nS241: Tern reviews the operating dashboard and confirms that material service degradation has been assigned an owner and response priority.\nS242: The Maintenance Technician investigates equipment faults that exceed the approved recovery interval and records the corrective action taken.\nS243: The Security Duty Manager assesses any condition that could compromise screening coverage, security controls, or custody continuity.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"The label text appears in S243, but the performer is wrong: the Security Duty Manager performs the assessing, and 'condition' is only the thing assessed, not an actor.\"}",
+ "usage": {
+  "input_tokens": 685,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 74,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.253,
+ "created": "2026-10-14T12:52:01"
+}

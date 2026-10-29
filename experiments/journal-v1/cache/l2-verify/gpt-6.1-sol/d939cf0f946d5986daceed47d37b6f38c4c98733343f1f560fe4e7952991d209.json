@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Payload Calibration Team provides \"the Calibration Patch Bundle\" to Product Quality Service (an information or material flow).\n\nSource sentences:\nS093: The Mission Control Center coordinates with the Payload Processing Facility when instrument mode changes, data downlink priorities, or reception gaps could affect downstream processing.\nS094: The Payload Calibration Team sends the Calibration Patch Bundle after calibration analysis identifies an approved update for payload processing behavior.\nS161: The Payload Calibration Team maintains the approved calibration baseline and reviews trend evidence before a new baseline is made eligible for operational use.\nS162: The Product Quality Service uses the patch bundle to update calibration applicability checks before the next product assessment cycle.\n\nAnswer \"supported\" only if the sentences state that Payload Calibration Team produces or sends this item AND that Product Quality Service receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S094 states that the Payload Calibration Team sends the Calibration Patch Bundle, and S162 states that the Product Quality Service uses the same item, referred to as the patch bundle.\"}",
+ "usage": {
+  "input_tokens": 308,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 52,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 360
+ },
+ "attempts": 1,
+ "wall_s": 4.897,
+ "created": "2026-10-14T12:41:45"
+}

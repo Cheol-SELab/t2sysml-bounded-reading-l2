@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "The Sequence Event Archive is the station's authoritative repository for time-stamped operational event evidence.",
+   "tags": []
+  },
+  {
+   "text": "The Sequence Event Archive is known operationally as Orchard.",
+   "tags": [
+    "ALIAS:E_SEQUENCE_EVENT_ARCHIVE"
+   ]
+  },
+  {
+   "text": "It preserves event records in their received form so later review does not depend on transient operator displays.",
+   "tags": []
+  },
+  {
+   "text": "Each retained record includes its source identity, event time, archive receipt time, and available quality indications.",
+   "tags": []
+  },
+  {
+   "text": "The archive preserves original event ordering and marks records whose time quality or sequence continuity is uncertain.",
+   "tags": []
+  },
+  {
+   "text": "The Satellite Time Receiver supports station time alignment, and loss of its reference is treated as a condition affecting interpretation rather than a reason to discard evidence.",
+   "tags": []
+  },
+  {
+   "text": "Events with corrected or estimated times remain distinguishable from records with valid time quality.",
+   "tags": []
+  },
+  {
+   "text": "The Sequence Event Archive retains configuration and access history associated with archive administration.",
+   "tags": []
+  },
+  {
+   "text": "The Station Supervisory Control System presents current operating indications separately from the long-term evidence held by the archive.",
+   "tags": []
+  },
+  {
+   "text": "The Control Room Operator reviews archived event sequences to establish the order of alarms, status changes, and operator actions.",
+   "tags": []
+  },
+  {
+   "text": "The Protection Relay Engineer compares event times and relay indications during disturbance analysis.",
+   "tags": []
+  },
+  {
+   "text": "The Protection Relay Engineer uses the Relay Diagnostic Note during fault analysis.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "text": "The Engineering Workstation provides approved tools for searching, filtering, and exporting event records.",
+   "tags": []
+  },
+  {
+   "text": "Review queries should be bounded by station, equipment identifier, and time interval to keep results reproducible.",
+   "tags": []
+  },
+  {
+   "text": "Exported evidence retains original timestamps and quality flags, and any derived ordering is identified as an engineering interpretation.",
+   "tags": []
+  },
+  {
+   "text": "Engineering conclusions are recorded separately from the preserved source evidence.",
+   "tags": []
+  },
+  {
+   "text": "Access to archive functions is limited to authorized roles, and administrative changes are auditable.",
+   "tags": []
+  },
+  {
+   "text": "The archive retains records under the station records schedule and applicable utility retention requirements.",
+   "tags": []
+  },
+  {
+   "text": "Records selected for an investigation are protected from routine deletion until the hold is released by the responsible authority.",
+   "tags": []
+  },
+  {
+   "text": "Archive health is checked for storage capacity, ingestion continuity, and recoverability.",
+   "tags": []
+  },
+  {
+   "text": "Recovery testing verifies that retained records remain readable and that timestamps and quality indications survive restoration.",
+   "tags": []
+  },
+  {
+   "text": "The station preserves an additional protected copy of essential event evidence in accordance with approved backup procedures.",
+   "tags": []
+  },
+  {
+   "text": "The Station DC System produces a Battery Load Test Record for retention with station engineering records.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "Juniper timestamps locally generated state changes for later correlation.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "text": "After the Switching Desk Coordinator confirms operational handback, evidence from the completed work remains available for authorized engineering review.",
+   "tags": []
+  }
+ ]
+}

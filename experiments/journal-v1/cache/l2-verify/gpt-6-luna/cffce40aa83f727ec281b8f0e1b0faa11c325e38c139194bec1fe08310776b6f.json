@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Computer Aided Dispatch Console provides \"the latest confirmed unit status alongside the time and source of that confirmation\" to Regional Dispatch Center (an information or material flow).\n\nSource sentences:\nS169: The Data Quality Officer reviews incomplete arrival or handover fields during routine record-quality checks.\nS170: The Regional Dispatch Center updates the incident status after receiving confirmation that the patient has been transferred to facility care.\nS202: If voice contact fails, dispatchers use the approved data channel when available and record the time of each attempted contact.\nS203: Computer Aided Dispatch Console displays the latest confirmed unit status alongside the time and source of that confirmation.\n\nAnswer \"supported\" only if the sentences state that Computer Aided Dispatch Console produces or sends this item AND that Regional Dispatch Center receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The console displays the status, time, and source, but the text does not say the Regional Dispatch Center receives or uses that item; it says the center receives confirmation of patient transfer.\"}",
+ "usage": {
+  "input_tokens": 309,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 196,
+  "output_tokens_details": {
+   "reasoning_tokens": 140
+  },
+  "total_tokens": 505
+ },
+ "attempts": 1,
+ "wall_s": 3.092,
+ "created": "2026-10-13T23:47:33"
+}

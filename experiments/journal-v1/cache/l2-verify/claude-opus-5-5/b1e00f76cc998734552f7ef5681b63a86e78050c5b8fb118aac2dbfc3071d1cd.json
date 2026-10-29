@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Aircraft Operator Representative provides \"the Crew Duty Extension Log\" to Slot Coordinator (an information or material flow).\n\nSource sentences:\nS619: The model uses time thresholds, qualification flags, and pairing feasibility status, but it does not require names, pay rules, hotel arrangements, or internal crew roster details.\nS620: Aircraft Operator Representative sends the Crew Duty Extension Log when an approved company process extends duty availability for a specific rotation.\nS725: The Airline Operations Coordinator and Aircraft Operator Representative acknowledge manual slot assignments through recorded voice readback or an agreed written channel.\nS726: The Slot Coordinator uses the Crew Duty Extension Log to check whether manually issued slot times remain operationally achievable.\n\nAnswer \"supported\" only if the sentences state that Aircraft Operator Representative produces or sends this item AND that Slot Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S620 says the Aircraft Operator Representative sends the Crew Duty Extension Log, and S726 says the Slot Coordinator uses that same log, so the flow is in the stated direction.\"}",
+ "usage": {
+  "input_tokens": 722,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 80,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.219,
+ "created": "2026-10-14T12:47:34"
+}

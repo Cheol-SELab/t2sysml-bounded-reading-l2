@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Coagulant Dosing Skid, target=Laboratory Technician, payload=Alum Batch Ticket)\n\nSource sentences (the last one is where the fact was extracted):\nS080: Field samples are labeled at collection with location, time, collector initials, preservation method, and requested analyses before they leave operating areas.\nS081: The Laboratory Technician checks container type, holding time, temperature, preservative status, and seal condition before logging a sample for analysis.\nS082: Samples from the River Intake Pump Station, Raw Water Screen Channel, North Filter Gallery, South Filter Gallery, Chlorine Contact Basin, and High Service Pump Header are verified against the current sampling schedule before testing begins.\nS083: The Laboratory Technician uses the Alum Batch Ticket to verify chemical lot identity before recording related laboratory observations.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S083 says the Laboratory Technician uses the Alum Batch Ticket to verify chemical lot identity, but it never says the Coagulant Dosing Skid sends or produces the ticket, so the flow's source is not supported by any sentence.\"}",
+ "usage": {
+  "input_tokens": 743,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 99,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.819,
+ "created": "2026-10-14T12:52:34"
+}

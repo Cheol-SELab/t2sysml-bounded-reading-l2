@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Autonomous Forklift Fleet provides \"the Forklift Handoff Confirmation\" to Warehouse Management System (an information or material flow).\n\nSource sentences:\nS114: During outbound preparation, the fleet assembles the data needed to document each completed transfer and its receiving position.\nS115: Autonomous Forklift Fleet produces the Forklift Handoff Confirmation after the transfer is complete.\nS224: Acceptance is withheld when a material defect could compromise personnel safety, inventory control, or shipment accuracy.\nS225: The Warehouse Management System uses the handoff confirmation to close the applicable movement record.\n\nAnswer \"supported\" only if the sentences state that Autonomous Forklift Fleet produces or sends this item AND that Warehouse Management System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S115 states that Autonomous Forklift Fleet produces the Forklift Handoff Confirmation, and S225 states that Warehouse Management System uses the same handoff confirmation to close the applicable movement record.\"}",
+ "usage": {
+  "input_tokens": 292,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 54,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 346
+ },
+ "attempts": 1,
+ "wall_s": 2.307,
+ "created": "2026-10-14T12:43:14"
+}

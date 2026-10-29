@@ -1,0 +1,102 @@
+{
+ "sentences": [
+  {
+   "text": "After connectivity is restored, audit processing shall treat reconciled contingency actions as part of the same operational record as actions taken during Normal Operations.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform shall record slot compliance events in the Audit Event Ledger using the operating date, flight identifier, airport, runway direction, and applicable regulation reference.",
+   "tags": []
+  },
+  {
+   "text": "Each compliance assessment shall compare the Calculated Takeoff Time, the Target Off Block Time, actual off-block time, and actual takeoff time against the tolerance defined in the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Compliance State shall indicate whether a flight was compliant, early, late, exempted, substituted, cancelled, or pending review at the end of the traffic period.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger shall preserve the time source applied by the Time Synchronization Service so that later review can distinguish operational delay from data latency.",
+   "tags": []
+  },
+  {
+   "text": "User decisions entered through the Airport CDM Portal shall be linked to the authenticated role provided by the Identity Access Service.",
+   "tags": []
+  },
+  {
+   "text": "The Collaborative Decision Log shall retain the stated reason, decision time, affected flight, and visible operational context for each material change to a slot or sequence.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator uses the permission email to justify an approved slot substitution during post-operations review.",
+   "tags": [
+    "F19:link"
+   ]
+  },
+  {
+   "text": "Substitution records shall show the original flight, replacement flight, assigned Calculated Takeoff Time, acceptance status, and any subsequent cancellation or reversion.",
+   "tags": []
+  },
+  {
+   "text": "When an Aircraft Operator Representative proposes a substitution, the audit trail shall capture whether the change preserved the constraints of the active Ground Delay Program.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator shall review substitution activity after operations to confirm that priority rules were applied consistently across participating operators.",
+   "tags": []
+  },
+  {
+   "text": "Late operational changes shall be distinguished from planned updates by comparing the change timestamp with the freeze horizon held in the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "Changes made inside the freeze horizon shall require a reason code and shall be visible to the Regional Flow Manager during post-operations review.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Sequence Manager and Ramp Movement Board shall provide actual movement milestones that support independent verification of slot performance.",
+   "tags": []
+  },
+  {
+   "text": "Surface movement evidence from the Surface Surveillance Adapter shall be retained long enough to support dispute resolution and regulatory audit requests.",
+   "tags": []
+  },
+  {
+   "text": "Capacity changes made through the Capacity Assessment Module shall be correlated with the active Airport Capacity Plan and Airport Acceptance Rate used at the time of allocation.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse shall aggregate compliance outcomes by carrier, route group, regulation, airport operating configuration, and time band.",
+   "tags": []
+  },
+  {
+   "text": "Aggregated metrics shall support review of systemic lateness without exposing commercially sensitive detail beyond authorized roles.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward shall verify that audit fields required for slot performance reporting remain complete, immutable, and traceable to approved data definitions.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer shall investigate technical gaps when audit sequences show missing events, duplicate updates, or inconsistent timestamps.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager shall use the Post Operations Report to identify whether noncompliance resulted from operator choice, airport constraint, airspace constraint, weather impact, or system issue.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager shall review late airport-driven changes that affected multiple flights and shall record whether the operational justification was valid.",
+   "tags": []
+  },
+  {
+   "text": "Findings from the review shall feed adjustments to tolerance values, reason code definitions, and training material, subject to change control.",
+   "tags": []
+  },
+  {
+   "text": "All audit outputs shall be retained according to the approved records schedule and shall remain searchable for compliance investigations, performance meetings, and lessons-learned activity.",
+   "tags": []
+  }
+ ]
+}

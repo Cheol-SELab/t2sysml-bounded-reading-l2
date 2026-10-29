@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Slot Coordinator provides \"the Slot Swap Permission Email\" to Airline Operations Coordinator (an information or material flow).\n\nSource sentences:\nS671: The Slot Coordinator reviews any exception raised by the Slot Allocation Engine and confirms whether the swap remains consistent with regional flow objectives.\nS672: Slot Coordinator sends the Slot Swap Permission Email only after the governance checks have been completed and recorded.\nS794: The Collaborative Decision Log shall retain the stated reason, decision time, affected flight, and visible operational context for each material change to a slot or sequence.\nS795: The Airline Operations Coordinator uses the permission email to justify an approved slot substitution during post-operations review.\n\nAnswer \"supported\" only if the sentences state that Slot Coordinator produces or sends this item AND that Airline Operations Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S672 states that Slot Coordinator sends the Slot Swap Permission Email, and S795 states that Airline Operations Coordinator uses the permission email, referring to the same item.\"}",
+ "usage": {
+  "input_tokens": 307,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 49,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 356
+ },
+ "attempts": 1,
+ "wall_s": 3.866,
+ "created": "2026-10-14T12:47:09"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Wayside Radio Access Network, label=sends the Radio Handover Audit File)\n\nSource sentences (the last one is where the fact was extracted):\nS070: When the comparison detects a mismatch, the affected authority is withheld or shortened until the condition is resolved under the applicable operating rule.\nS071: Metro Operations Control System displays zone status, radio coverage alarms, and train supervision states so that Line Traffic Controller can manage service without direct intervention in vital logic.\nS072: Maintenance Diagnostic Server receives non-vital summaries of radio and network health, which allows Signal Maintenance Engineer to investigate degraded coverage trends without connecting to the vital channels.\nS073: Wayside Radio Access Network sends the Radio Handover Audit File after each configured reporting interval.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S073 directly states that Wayside Radio Access Network sends the Radio Handover Audit File, matching the performer and action label.\"}",
+ "usage": {
+  "input_tokens": 724,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 58,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.229,
+ "created": "2026-10-14T12:52:15"
+}

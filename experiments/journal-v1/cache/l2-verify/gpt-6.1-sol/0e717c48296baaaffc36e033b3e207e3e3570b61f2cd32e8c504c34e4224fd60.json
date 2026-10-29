@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Common Situation Display provides \"Calculated Takeoff Time and Target Off Block Time\" to Airline Operations Coordinator (an information or material flow).\n\nSource sentences:\nS258: The Slot Coordinator reviews proposed Calculated Takeoff Time values against network constraints and requests adjustment when the allocation would create avoidable delay or unfair sequencing.\nS259: The Airline Operations Coordinator reviews the proposed Target Off Block Time against aircraft readiness, crew availability, passenger connection risk, and operator recovery priorities.\nS684: The Flight Data Exchange publishes revised Flight Intent Message content only after the approved substitution is final and time synchronized.\nS685: The Common Situation Display presents the updated Calculated Takeoff Time and Target Off Block Time so that operational users share the same view of the accepted change.\n\nAnswer \"supported\" only if the sentences state that Common Situation Display produces or sends this item AND that Airline Operations Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The Common Situation Display presents both updated times, but the Airline Operations Coordinator is only stated to review a proposed Target Off Block Time, not to receive or use the displayed pair.\"}",
+ "usage": {
+  "input_tokens": 327,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 90
+  },
+  "total_tokens": 472
+ },
+ "attempts": 1,
+ "wall_s": 5.432,
+ "created": "2026-10-14T12:45:56"
+}

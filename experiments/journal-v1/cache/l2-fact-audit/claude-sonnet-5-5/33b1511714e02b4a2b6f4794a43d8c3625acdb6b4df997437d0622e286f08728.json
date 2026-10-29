@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Sensor-monitored Medication Cooler, payload=excursions)\n\nSource sentences (the last one is where the fact was extracted):\nS136: The Medication Order Gateway rejects incomplete or internally inconsistent order updates and retains the rejection reason for review.\nS137: The North Ward Cabinet Controller prevents access to a held transaction until an authorized disposition is recorded.\nS138: The South Ward Cabinet Controller reports a failed lock or an unrecognized access attempt for immediate operational review.\nS139: The Sensor-monitored Medication Cooler reports excursions that could affect medication suitability, and affected stock remains unavailable pending assessment.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S139 states that the Sensor-monitored Medication Cooler reports excursions, so the flow's source and payload are both stated; no target is given in the fact or the text.\"}",
+ "usage": {
+  "input_tokens": 680,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 70,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.579,
+ "created": "2026-10-14T12:52:21"
+}

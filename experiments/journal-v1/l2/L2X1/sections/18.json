@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "The Integrated Tactical Management Position is the primary workstation for real-time coordination of Meridian departure flow, arrival flow, airport capacity, and airspace constraints.",
+   "tags": []
+  },
+  {
+   "text": "It presents a combined tactical view so that the Regional Flow Manager can compare planned demand, measured throughput, and active control measures without changing applications.",
+   "tags": []
+  },
+  {
+   "text": "The Common Situation Display provides the base map, timeline, flight list, and measure status panels used at the position.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform synchronizes the tactical display with the Time Synchronization Service so that all timestamps, countdowns, and validity intervals use the same operational clock.",
+   "tags": []
+  },
+  {
+   "text": "The Arrival Regulation Console is also known as Nightjar at the Integrated Tactical Management Position, where the alias is displayed only in operator profile help text.",
+   "tags": [
+    "ALIAS:E_ARRIVAL_REGULATION_CONSOLE"
+   ]
+  },
+  {
+   "text": "Arrival demand is monitored against the Airport Acceptance Rate, current sequencing performance, and any Ground Delay Program that remains in effect.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor uses the display to see runway assignment pressure, airborne sequence spacing, and expected crossing points at the North Runway Meter and the South Runway Meter.",
+   "tags": []
+  },
+  {
+   "text": "Emberline sends revised departure metering advisories when runway demand exceeds the configured queue threshold.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "text": "Skylark must refresh the apron movement layer within five seconds of each validated surface event.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "text": "The Slot Allocation Engine produces the Pushback Window Token when the agreed departure window is frozen for tactical execution.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "The Airport CDM Portal exposes agreed Target Off Block Time values and stakeholder remarks to the tactical position in read-only mode unless the operator has an assigned coordination role.",
+   "tags": []
+  },
+  {
+   "text": "The Demand Prediction Service continuously updates short-term traffic forecasts using the Flight Intent Message stream and recent airport performance history.",
+   "tags": []
+  },
+  {
+   "text": "The Capacity Assessment Module recalculates available capacity when runway configuration, weather category, staffing assumptions, or sector workload changes.",
+   "tags": []
+  },
+  {
+   "text": "The Airspace Sector Planner monitors sector demand through the Sector Load Monitor and confirms whether proposed measures are compatible with en route capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Military Airspace Liaison can mark an airspace release or closure assumption for review before it affects tactical flow calculations.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer verifies weather impacts shown from the Weather Ingest Gateway before the position applies weather-driven capacity values.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager can declare Normal Operations, Adverse Weather Mode, Capacity Reduction State, Recovery Phase, or Contingency Fallback State from the tactical header after coordination is complete.",
+   "tags": []
+  },
+  {
+   "text": "When the operating state changes, the Business Rules Registry supplies the applicable thresholds for alerting, approval routing, and measure publication.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator and Aircraft Operator Representative review proposed timing changes in the same timeline used by flow staff, which reduces duplicate verbal coordination.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher uses the Handling Resource Planner view to compare planned off-block demand with available servicing capacity at affected stands.",
+   "tags": []
+  },
+  {
+   "text": "The Gate Conflict Detector highlights stand conflicts that would undermine a proposed departure recovery plan or compress arrival unloading capacity.",
+   "tags": []
+  },
+  {
+   "text": "A Tactical Regulation Proposal can be drafted directly from the display, checked against current capacity assumptions, and routed through the Alert Distribution Hub for stakeholder acknowledgement.",
+   "tags": []
+  },
+  {
+   "text": "Accepted adjustments are reflected as Calculated Takeoff Time updates, Slot Compliance State changes, or airport capacity annotations depending on the measure type.",
+   "tags": []
+  },
+  {
+   "text": "Every operator action, system recommendation, acknowledgement, and rejected alternative is written to the Collaborative Decision Log and the Audit Event Ledger for traceability and post-operation analysis.",
+   "tags": []
+  }
+ ]
+}

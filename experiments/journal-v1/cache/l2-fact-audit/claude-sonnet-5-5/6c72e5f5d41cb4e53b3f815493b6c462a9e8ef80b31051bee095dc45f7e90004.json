@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=staff, label=record a disposition)\n\nSource sentences (the last one is where the fact was extracted):\nS055: The Primary Crossbelt Sorter maintains bag identity and routes each bag according to the screening disposition available at the time of sorting.\nS056: The North Gate Scanner and South Gate Scanner acquire screening images and return a disposition for each bag that passes through them.\nS057: Screening equipment records image quality and alarm status so that an incomplete examination is not treated as a clear result.\nS058: When automated image review cannot resolve a bag image, staff at the Image Resolution Desk assess the available image and record a disposition.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S058 states that staff at the Image Resolution Desk assess the image and record a disposition, so the performer 'staff' and the action 'record a disposition' are both directly stated.\"}",
+ "usage": {
+  "input_tokens": 664,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 73,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.916,
+ "created": "2026-10-14T12:52:07"
+}

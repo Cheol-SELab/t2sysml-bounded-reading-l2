@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "This section establishes the operating context and naming convention for the offshore wind farm operations and maintenance system.",
+   "tags": []
+  },
+  {
+   "text": "The system boundary covers offshore generation assets, supporting marine and shore facilities, operational personnel, and external organizations involved in farm activities.",
+   "tags": []
+  },
+  {
+   "text": "The farm operates in a variable marine environment where access, equipment condition, and grid requirements influence the timing and conduct of work.",
+   "tags": []
+  },
+  {
+   "text": "Canonical entity names are used throughout this document to identify system parts, actors, operational states, and controlled items.",
+   "tags": []
+  },
+  {
+   "text": "In this document, Turbine Controller is referred to by the alias Glassfin.",
+   "tags": [
+    "ALIAS:E_TURBINE_CONTROLLER"
+   ]
+  },
+  {
+   "text": "In this document, Offshore Substation is referred to by the alias Morrowick.",
+   "tags": [
+    "ALIAS:E_OFFSHORE_SUBSTATION"
+   ]
+  },
+  {
+   "text": "In this document, Weather Service is referred to by the alias Pale Lantern.",
+   "tags": [
+    "ALIAS:E_WEATHER_SERVICE"
+   ]
+  },
+  {
+   "text": "The Turbine Controller represents the control function associated with an individual turbine.",
+   "tags": []
+  },
+  {
+   "text": "Pitch System and Rotor Brake Unit are turbine subsystems considered within the operational boundary.",
+   "tags": []
+  },
+  {
+   "text": "Converter Cabinet and Nacelle Condition Monitor are treated as distinct turbine equipment for maintenance planning and condition review.",
+   "tags": []
+  },
+  {
+   "text": "The Blade Inspection Drone is an operational asset used for turbine blade assessment.",
+   "tags": []
+  },
+  {
+   "text": "The Offshore Substation provides the farm's offshore electrical collection and switching environment.",
+   "tags": []
+  },
+  {
+   "text": "Main Transformer and Export Cable Monitor are included as substation and export-system assets, respectively.",
+   "tags": []
+  },
+  {
+   "text": "SCADA Gateway is the supervisory interface associated with farm monitoring and control operations.",
+   "tags": []
+  },
+  {
+   "text": "Shore Control Room provides a shore-based operating location for authorized personnel.",
+   "tags": []
+  },
+  {
+   "text": "Fleet Dispatch Console supports the coordination of operational resources across the farm.",
+   "tags": []
+  },
+  {
+   "text": "Maintenance Planning Engine supports the preparation and sequencing of maintenance activities.",
+   "tags": []
+  },
+  {
+   "text": "Weather Service represents the external weather information capability considered by farm operations.",
+   "tags": []
+  },
+  {
+   "text": "Metocean Buoy represents an offshore source of environmental observations within the operating context.",
+   "tags": []
+  },
+  {
+   "text": "Crew Transfer Vessel, Daughter Craft, and Service Operations Vessel represent marine resources that may support offshore work.",
+   "tags": []
+  },
+  {
+   "text": "Helideck is included as an access facility for activities supported by helicopter operations.",
+   "tags": []
+  },
+  {
+   "text": "Personnel Tracking Console represents the personnel location and accountability function.",
+   "tags": []
+  },
+  {
+   "text": "Warehouse System and Spares Hub represent the inventory and logistics context for maintenance materials.",
+   "tags": []
+  },
+  {
+   "text": "Work Permit Portal and Cybersecurity Gateway represent enabling functions that support controlled and secure operations.",
+   "tags": []
+  },
+  {
+   "text": "The operating concept also recognizes grid, emergency response, communications, and port support as external or enabling capabilities.",
+   "tags": []
+  }
+ ]
+}

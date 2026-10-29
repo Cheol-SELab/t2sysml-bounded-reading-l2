@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Regional Flow Platform provides \"Ground Delay Program\" to Regional Flow Manager (an information or material flow).\n\nSource sentences:\nS021: The Collaborative Decision Log and Audit Event Ledger are expected to preserve the rationale, timing, and authorization of material operational decisions.\nS022: During Adverse Weather Mode or Capacity Reduction State, the system must support rapid development of a Tactical Regulation Proposal and consistent communication of the resulting Ground Delay Program when one is required.\nS841: The principal delay absorption indicator shall report minutes absorbed at origin, minutes remaining in the arrival stream, and minutes transferred to surface queues within the region.\nS842: The Regional Flow Manager shall use this indicator to verify that a Ground Delay Program reduced airborne holding without creating excessive departure congestion at constrained airports.\n\nAnswer \"supported\" only if the sentences state that Regional Flow Platform produces or sends this item AND that Regional Flow Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"The sentences never name Regional Flow Platform as providing the Ground Delay Program; S022 refers only generically to 'the system' communicating it, and S842 shows the Regional Flow Manager using an indicator to verify a Ground Delay Program, not receiving the program itself from the platform.\"}",
+ "usage": {
+  "input_tokens": 747,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 113,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.853,
+ "created": "2026-10-14T12:45:39"
+}

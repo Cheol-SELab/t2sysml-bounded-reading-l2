@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Crewline Mobile Tablet, label=marks any expired package as unavailable for execution)\n\nSource sentences (the last one is where the fact was extracted):\nS156: The Helitack Crew Leader receives the same operational package with aviation constraints and landing zone notes after Air Attack Supervisor approval.\nS157: Ground crew assignments are formatted for field execution and avoid analytic scores that are not needed for tactical movement.\nS158: Staging information is maintained as georeferenced areas and route descriptions so that crews can confirm location without relying on informal landmarks.\nS159: The Crewline Mobile Tablet caches the latest accepted staging information and marks any expired package as unavailable for execution.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S159 states that the Crewline Mobile Tablet marks any expired package as unavailable for execution, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 689,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 61,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.545,
+ "created": "2026-10-14T12:52:21"
+}

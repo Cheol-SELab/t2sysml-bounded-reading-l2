@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Pharmacy Technician provides \"the Cold Chain Handoff Card\" to Sensor-monitored Medication Cooler (an information or material flow).\n\nSource sentences:\nS040: The Pharmacy Technician checks the cooler's status and confirms that refrigerated stock remains within handling limits before use.\nS041: The Pharmacy Technician produces the Cold Chain Handoff Card to document custody and handling conditions.\nS176: The cooler preserves the affected stock in its current controlled environment while the condition is assessed.\nS177: Sensor-monitored Medication Cooler uses the handoff card to compare a transfer’s recorded custody time with its temperature history.\n\nAnswer \"supported\" only if the sentences state that Pharmacy Technician produces or sends this item AND that Sensor-monitored Medication Cooler receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\n(none found)",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S041 states the Pharmacy Technician produces the Cold Chain Handoff Card, and S177 states the Sensor-monitored Medication Cooler uses the handoff card, which refers to the same item.\"}",
+ "usage": {
+  "input_tokens": 718,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.895,
+ "created": "2026-10-19T19:11:18"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Medication Return Kiosk provides \"the Return Bin Audit Label\" to Pharmacy Technician (an information or material flow).\n\nSource sentences:\nS020: The Medication Return Kiosk provides a controlled point for recording medication returns and capturing return details.\nS021: The Medication Return Kiosk produces the Return Bin Audit Label for a recorded return transaction.\nS116: Tallowmere guides ward staff through return-bin checks and records each check outcome for follow-up.\nS117: The Pharmacy Technician uses the audit label to identify a return bin for the scheduled collection.\n\nAnswer \"supported\" only if the sentences state that Medication Return Kiosk produces or sends this item AND that Pharmacy Technician receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S021 says the Medication Return Kiosk produces the Return Bin Audit Label, and S117 says the Pharmacy Technician uses the audit label to identify a return bin, which is the same item named more briefly.\"}",
+ "usage": {
+  "input_tokens": 655,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 86,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.971,
+ "created": "2026-10-14T12:34:42"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport CDM Portal provides \"reason code\" to Collaborative Decision Log (an information or material flow).\n\nSource sentences:\nS263: The Tower Supervisor may challenge a proposed Calculated Takeoff Time when runway configuration, wake spacing, or local sequencing conditions make the value operationally unsuitable.\nS264: The Airport CDM Portal presents each proposed value with its confidence status, last update time, and the reason code assigned by the proposing function or authorized user.\nS287: Runway queue management favors stable ordering, but the Tower Supervisor may intervene when wake spacing, route restrictions, runway crossings, or emergency traffic require a change.\nS288: Each manual sequence change is recorded in the Collaborative Decision Log with the user identity, timestamp, affected flight, and reason code.\n\nAnswer \"supported\" only if the sentences state that Airport CDM Portal produces or sends this item AND that Collaborative Decision Log receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S264 says the Portal presents reason codes assigned by the proposing function or user, and S288 says manual sequence changes are recorded in the Log with a reason code, but nothing states that the Portal sends or provides the reason code to the Log.\"}",
+ "usage": {
+  "input_tokens": 730,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 95,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.229,
+ "created": "2026-10-14T12:45:02"
+}

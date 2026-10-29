@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Common Situation Display provides \"Calculated Takeoff Time and Target Off Block Time\" to Training assessments (an information or material flow).\n\nSource sentences:\nS684: The Flight Data Exchange publishes revised Flight Intent Message content only after the approved substitution is final and time synchronized.\nS685: The Common Situation Display presents the updated Calculated Takeoff Time and Target Off Block Time so that operational users share the same view of the accepted change.\nS885: Workstation layouts shall support rapid comparison between the Common Situation Display, Airport CDM Portal, Tower Sequence Manager, Ramp Movement Board, and relevant advisory messages without forcing users to copy critical values manually.\nS886: Training assessments shall verify that users can identify stale data, time synchronization problems, duplicate flights, conflicting constraints, and inappropriate automation reliance before such issues affect live operations.\n\nAnswer \"supported\" only if the sentences state that Common Situation Display produces or sends this item AND that Training assessments receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The Common Situation Display presents the updated times to operational users, while Training assessments verify users’ ability to detect operational issues and are not stated to receive or use those times.\"}",
+ "usage": {
+  "input_tokens": 340,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 86,
+  "output_tokens_details": {
+   "reasoning_tokens": 33
+  },
+  "total_tokens": 426
+ },
+ "attempts": 1,
+ "wall_s": 3.657,
+ "created": "2026-10-14T12:46:31"
+}

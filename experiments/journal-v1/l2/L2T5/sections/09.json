@@ -1,0 +1,114 @@
+{
+ "sentences": [
+  {
+   "text": "The control system for the Cedar Falls Municipal Drinking Water Treatment Plant shall use role-based access control with named accounts for operators, engineering users, maintenance users, and read-only review users.",
+   "tags": []
+  },
+  {
+   "text": "Shared credentials are not acceptable for routine operation of the River Intake Pump Station, North Filter Gallery, South Filter Gallery, Coagulant Dosing Skid, Chlorine Contact Basin, Clearwell Level Controller, High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station.",
+   "tags": []
+  },
+  {
+   "text": "Operator privileges shall be limited to the actions needed to run assigned plant areas, and engineering privileges shall require separate approval before setpoints, control logic, alarm limits, or historian configuration are changed.",
+   "tags": []
+  },
+  {
+   "text": "Remote access to the control network shall require multi-factor authentication, encrypted connectivity, a recorded business reason, and approval by the Chief Operator or Duty Engineer.",
+   "tags": []
+  },
+  {
+   "text": "Quarry maintains the weekly access review for maintenance accounts and disables privileges after reassignment.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "text": "The SCADA Historian Server shall be protected as a critical asset because it supports compliance review, alarm analysis, operational trending, and event reconstruction.",
+   "tags": []
+  },
+  {
+   "text": "The control network shall be segmented from administrative networks, and only documented pathways shall be allowed between the SCADA Historian Server, operator workstations, controllers, and approved support systems.",
+   "tags": []
+  },
+  {
+   "text": "Security patches, firmware updates, and antivirus changes shall be tested in a controlled manner before deployment to equipment that affects water production or distribution pressure.",
+   "tags": []
+  },
+  {
+   "text": "The Chief Operator owns alarm governance for process alarms, and the Duty Engineer supports alarm limit review when control changes or recurring nuisance alarms are identified.",
+   "tags": []
+  },
+  {
+   "text": "Alarm priorities shall reflect consequence, response time, operator action, and the risk of losing treatment, storage, or distribution capability.",
+   "tags": []
+  },
+  {
+   "text": "A Chlorine Residual Alarm shall remain configured as a high-priority condition when residual concentration indicates a potential treatment compliance or public health concern.",
+   "tags": []
+  },
+  {
+   "text": "Alarm shelving, suppression, and disabling shall require a documented reason, a time limit, and review at the end of the operating shift.",
+   "tags": []
+  },
+  {
+   "text": "Standing alarms shall be reviewed during each shift turnover so that unresolved equipment failures are not hidden by routine acknowledgement.",
+   "tags": []
+  },
+  {
+   "text": "During Storm Intake Mode, alarm response expectations shall account for higher debris load, faster raw water quality changes, and increased dependence on intake screening and chemical dose verification.",
+   "tags": []
+  },
+  {
+   "text": "Backup power shall support safe operation or controlled shutdown of the River Intake Pump Station, Raw Water Screen Channel, Chlorine Contact Basin, Clearwell Level Controller, SCADA Historian Server, High Service Pump Header, and essential control-room equipment.",
+   "tags": []
+  },
+  {
+   "text": "The plant shall maintain written expectations for generator start time, automatic transfer performance, fuel availability, and operator checks during extended utility outages.",
+   "tags": []
+  },
+  {
+   "text": "Uninterruptible power supplies shall be sized to bridge transfer events and allow orderly shutdown of servers, network switches, control processors, and communication equipment.",
+   "tags": []
+  },
+  {
+   "text": "Loss of both normal and standby power to a critical service shall be treated as an emergency operating condition requiring immediate notification of the Chief Operator and Duty Engineer.",
+   "tags": []
+  },
+  {
+   "text": "The Chief Operator has authority to direct emergency operating priorities when treatment, storage, distribution pressure, or personnel safety is at risk.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Engineer may authorize temporary control workarounds during an emergency, but the workaround shall be logged, bounded by time or condition, and removed when normal control is restored.",
+   "tags": []
+  },
+  {
+   "text": "The Distribution Dispatcher shall be informed when failures at the High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station may affect pressure zones or fire-flow readiness.",
+   "tags": []
+  },
+  {
+   "text": "The Laboratory Technician shall retain access needed for sample status review and reporting, but laboratory accounts shall not allow control actions on plant equipment.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Planner uses the permit to verify isolation boundaries before confined-space work is released.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "text": "The Duty Engineer reviews the Chlorine Cylinder Seal Log before accepting a change in chlorine storage status.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "Reliability targets for critical plant services shall include prompt detection of failed sensors, redundant communication paths where practical, recoverable configuration backups, and periodic restoration testing.",
+   "tags": []
+  },
+  {
+   "text": "After any cybersecurity event, major alarm failure, or emergency control action, the Chief Operator shall require a brief operational review that identifies the cause, affected services, corrective actions, and any needed procedure changes.",
+   "tags": []
+  }
+ ]
+}

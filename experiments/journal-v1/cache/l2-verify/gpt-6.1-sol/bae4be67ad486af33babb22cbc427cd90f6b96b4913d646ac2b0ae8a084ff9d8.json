@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Bag Reconciliation Station provides \"a Bag Match Query\" to Airline Ramp Coordinator (an information or material flow).\n\nSource sentences:\nS100: The Bag Reconciliation Station compares bag identity with the active handling record and flags unresolved discrepancies.\nS101: The Bag Reconciliation Station sends a Bag Match Query when bag identity cannot be reconciled with the active handling record.\nS218: The Bag Reconciliation Station compares scanned bag identities against the expected flight population and flags missing or duplicate records for resolution.\nS219: The Airline Ramp Coordinator uses the Bag Match Query to review unresolved bag-to-flight mismatches before loading authorization is granted.\n\nAnswer \"supported\" only if the sentences state that Bag Reconciliation Station produces or sends this item AND that Airline Ramp Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S101 states that the Bag Reconciliation Station sends a Bag Match Query, and S219 states that the Airline Ramp Coordinator uses that same item.\"}",
+ "usage": {
+  "input_tokens": 304,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 46,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 350
+ },
+ "attempts": 1,
+ "wall_s": 3.3,
+ "created": "2026-10-14T12:40:51"
+}

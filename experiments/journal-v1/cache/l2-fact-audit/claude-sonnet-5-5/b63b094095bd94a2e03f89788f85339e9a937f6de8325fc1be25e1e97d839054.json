@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Substation Field Crew, label=carrying out an authorized operation)\n\nSource sentences (the last one is where the fact was extracted):\nS142: The Station Gateway produces the Protocol Retry Summary for communication review.\nS143: Larkspur reviews protection coordination questions that could affect the planned switching sequence.\nS144: Bluefin provides the station time reference used to align recorded event times.\nS145: The Substation Field Crew confirms device identity and local conditions before carrying out an authorized operation.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S145 states that the Substation Field Crew carries out an authorized operation after confirming device identity and local conditions, so the performer and the action label both match the text.\"}",
+ "usage": {
+  "input_tokens": 622,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 66,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.907,
+ "created": "2026-10-14T12:51:41"
+}

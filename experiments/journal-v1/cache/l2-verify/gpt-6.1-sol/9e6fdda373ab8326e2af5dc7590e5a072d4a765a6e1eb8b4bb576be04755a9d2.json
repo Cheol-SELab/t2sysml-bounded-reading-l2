@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport CDM Portal provides \"Target Off Block Time\" to Collaborative Decision Log (an information or material flow).\n\nSource sentences:\nS320: In the Recovery Phase, the system does not release every aircraft as soon as it becomes ready because a surge of simultaneous pushbacks can exceed tow team availability and block service roads.\nS321: Each resource-driven revision is recorded in the Collaborative Decision Log with the reason code, revised Target Off Block Time, and affected flight identifier.\nS601: A short peak normally becomes a sequence advisory in Tower Sequence Manager or a limited departure metering adjustment in Departure Metering Service.\nS602: Sustained saturation is converted into revised Calculated Takeoff Time targets and, when necessary, adjusted Target Off Block Time values published through Airport CDM Portal.\nS623: Airline Operations Coordinator may mark a flight as non-recoverable by delay after a specified time, which prevents automated suggestions that would create an infeasible rotation.\nS624: The same representation supports aircraft and crew combinations that are valid only if a Target Off Block Time is achieved within a limited tolerance.\nS684: The Flight Data Exchange publishes revised Flight Intent Message content only after the approved substitution is final and time synchronized.\nS685: The Common Situation Display presents the updated Calculated Takeoff Time and Target Off Block Time so that operational users share the same view of the accepted change.\nS752: The system records these actions as operational context rather than as passenger service tasks assigned to the airport flow management process.\nS753: The Regional Flow Manager may consider a recovery action credible only when it is aligned with a valid Target Off Block Time, crew availability status, and confirmed aircraft readiness.\nS789: The Regional Flow Platform shall record slot compliance events in the Audit Event Ledger using the operating date, flight identifier, airport, runway direction, and applicable regulation reference.\nS790: Each compliance assessment shall compare the Calculated Takeoff Time, the Target Off Block Time, actual off-block time, and actual takeoff time against the tolerance defined in the Business Rules Registry.\nS846: Queue metrics shall include maximum queue length, average queue length, time above threshold, and recovery time after a constraint is lifted.\nS847: Slot adherence shall be measured as the difference between actual movement times and the assigned Calculated Takeoff Time or Target Off Block Time.\n\nAnswer \"supported\" only if the sentences state that Airport CDM Portal produces or sends this item AND that Collaborative Decision Log receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S602 states that adjusted Target Off Block Time values are published through Airport CDM Portal, and S321 states that revised Target Off Block Time is recorded in the Collaborative Decision Log.\"}",
+ "usage": {
+  "input_tokens": 647,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 95,
+  "output_tokens_details": {
+   "reasoning_tokens": 40
+  },
+  "total_tokens": 742
+ },
+ "attempts": 1,
+ "wall_s": 3.691,
+ "created": "2026-10-14T12:46:25"
+}

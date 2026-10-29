@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Satellite Time Receiver provides \"the Clock Drift Snapshot\" to Sequence Event Archive (an information or material flow).\n\nSource sentences:\nS043: Holdover performance varies by device and may degrade as the interval without a valid reference increases.\nS044: The Satellite Time Receiver produces the Clock Drift Snapshot when its measured offset meets the configured reporting condition.\nS139: The Station Supervisory Control System uses the status digest to review current station operating conditions.\nS140: The Sequence Event Archive receives the Clock Drift Snapshot for event-time correlation.\n\nAnswer \"supported\" only if the sentences state that Satellite Time Receiver produces or sends this item AND that Sequence Event Archive receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S044 states that the Satellite Time Receiver produces the Clock Drift Snapshot, and S140 states that the Sequence Event Archive receives that same item for event-time correlation.\"}",
+ "usage": {
+  "input_tokens": 283,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 49,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 332
+ },
+ "attempts": 1,
+ "wall_s": 4.229,
+ "created": "2026-10-14T12:38:36"
+}

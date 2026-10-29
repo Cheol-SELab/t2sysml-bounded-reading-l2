@@ -1,0 +1,624 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0002",
+   "type": "attribute",
+   "owner": "air traffic management system",
+   "name": "predicted trajectory",
+   "value": "based on the approved flight plan and a scheduled or controlled departure time"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "starts to move"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "controllers",
+   "label": "tactically manage the aircraft"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "succession",
+   "before": "starts to move",
+   "after": "tactically manage the aircraft"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "Ground Delay Programs",
+   "label": "assign departure times"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "Airspace Flow Programs",
+   "label": "assign departure times"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "Federal Aviation Administration",
+   "label": "negotiate four-dimensional trajectories (4DTs) for all flights"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "airspace users",
+   "label": "negotiate four-dimensional trajectories (4DTs) for all flights"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "Pilots",
+   "label": "use automation to keep the aircraft on its assigned trajectory"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "controllers",
+   "label": "use automation to keep the aircraft on its assigned trajectory"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "inserting the impact of all NAS constraints into the assigned trajectory"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "eliminates most local, reactive control actions"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "requirement",
+   "subject": "Federal Aviation Administration",
+   "text": "The data needed by all relevant airspace users, aircraft, and FAA automation systems to develop accurate, consistent 4DT predictions are available to all relevant systems."
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "subject": "Traffic Flow Management",
+   "text": "Enhanced predictability will improve TFM performance and provide a more consistent flow of air traffic"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "label": "published such that they can be known by all airspace users and relevant automation systems"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "apply constraints to efficiently amend trajectories"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "composition",
+   "whole": "Management by Trajectory",
+   "parts": [
+    "NAS Constraint Service"
+   ]
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "NAS Constraint Service",
+   "label": "publishes common information about NAS constraints to all stakeholders"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "flow",
+   "source": "NAS Constraint Service",
+   "payload": "common information about NAS constraints"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "follow their negotiated, assigned trajectories"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "requirement",
+   "subject": "traffic management automation",
+   "text": "Traffic management automation will identify which flights are affected by each TMI and translate that TMI into one or more trajectory constraints specific to the flight."
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "traffic management automation",
+   "label": "identify which flights are affected by each TMI"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "traffic management automation",
+   "label": "translate that TMI into one or more trajectory constraints"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "provide detailed information about their predicted 4DT"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "flow",
+   "source": "Aircraft",
+   "payload": "intent data"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "provide updates when intent data change"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "source": "Aircraft",
+   "payload": "intent data updates"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "label": "deliver 4DTs to aircraft cockpits"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "target": "Flight Management System",
+   "payload": "four-dimensional trajectories"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "subsumes the responsibilities of the D-side controller"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "proactively intervene to avoid conflicts and achieve TFM objectives"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "traffic management coordinators",
+   "label": "proactively intervene to avoid conflicts and achieve TFM objectives"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "requirement",
+   "subject": "controllers",
+   "text": "Air traffic controllers will still be responsible for separation management and conflict avoidance"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "constraint",
+   "subject": "Flight Management System",
+   "expression": "limited to a single active RTA constraint at a time"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "requirement",
+   "subject": "Controller-pilot data link communications",
+   "text": "CPDLC with route clearances and trajectory intent output will be standard services supported by avionics."
+  },
+  {
+   "unit_id": "U0062",
+   "type": "requirement",
+   "subject": "Management by Trajectory",
+   "text": "MBT tools will be introduced incrementally through upgrades to existing automation platforms and extensions to the information shared via System Wide Information Management (SWIM)."
+  },
+  {
+   "unit_id": "U0067",
+   "type": "requirement",
+   "subject": "controllers",
+   "text": "Controllers will use automation support to define and issue closed trajectories in advance, rather than reverting to open-trajectory vectors issued via voice."
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "controllers",
+   "label": "define and issue closed trajectories in advance"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "flow",
+   "source": "controllers",
+   "target": "Aircraft",
+   "payload": "closed trajectories"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "requirement",
+   "subject": "electronic flight bag",
+   "text": "EFBs will become much more capable and will have reliable, high-speed connectivity to ground-based systems."
+  },
+  {
+   "unit_id": "U0068",
+   "type": "requirement",
+   "subject": "Aircraft",
+   "text": "All aircraft will be capable of receiving assigned trajectories via digital communication and flying these trajectories with known accuracies."
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "Pilots",
+   "label": "manually load trajectory data into the FMS"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "flow",
+   "source": "Pilots",
+   "target": "Flight Management System",
+   "payload": "trajectory data"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "detect and safely avoid complex conflict scenarios"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "flow",
+   "source": "Aircraft",
+   "target": "ground automation",
+   "payload": "planned avoidance maneuvers"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "requirement",
+   "subject": "Ground Delay Programs",
+   "text": "GDPs and AFPs will move toward controlling by CTA at the constrained NAS resource rather than departure time."
+  },
+  {
+   "unit_id": "U0076",
+   "type": "requirement",
+   "subject": "Time Based Flow Management",
+   "text": "TBFM will be used to address airspace constraints as well as airport capacity constraints."
+  },
+  {
+   "unit_id": "U0076",
+   "type": "requirement",
+   "subject": "miles-in-trail",
+   "text": "Use of generic miles-in-trail (MIT) restrictions will be eliminated."
+  },
+  {
+   "unit_id": "U0080",
+   "type": "constraint",
+   "subject": "Required Time Performance",
+   "expression": "95% confidence interval of the expected crossing time error distribution, in seconds"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "requirement",
+   "subject": "Aircraft",
+   "text": "all aircraft will be certified to operate at some RTP level"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "requirement",
+   "subject": "flight operations centers",
+   "text": "Airspace users' flight operations centers will develop advanced capabilities to fully participate in MBT."
+  },
+  {
+   "unit_id": "U0082",
+   "type": "requirement",
+   "subject": "National Airspace System",
+   "text": "The NAS will accommodate new aircraft classes"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "performer": "air traffic management system",
+   "label": "plan and control pushback times"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "selecting traffic management initiatives (TMIs)"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "requirement",
+   "subject": "Ground Delay Programs",
+   "text": "GDPs/AFPs will move from controlling through the use of an Expect Departure Clearance Time (EDCT) constraining the departure time to enforcement of the CTA at the limited resource"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "requirement",
+   "subject": "minute-in-trail",
+   "text": "Mile-in-trail and minute-in-trail (MINIT) restrictions will be reduced in the near term and eventually eliminated"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "constraint",
+   "subject": "Management by Trajectory",
+   "expression": "de-conflicted over at least the next 30 minutes"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "attribute",
+   "owner": "three-dimensional trajectory",
+   "name": "description",
+   "value": "a description of an aircraft's path in space"
+  }
+ ],
+ "entities": [
+  {
+   "name": "National Airspace System",
+   "aliases": [
+    "NAS"
+   ]
+  },
+  {
+   "name": "air traffic management system",
+   "aliases": [
+    "ATM system",
+    "ATM"
+   ]
+  },
+  {
+   "name": "controllers",
+   "aliases": [
+    "air traffic controllers"
+   ]
+  },
+  {
+   "name": "Traffic Flow Management",
+   "aliases": [
+    "TFM"
+   ]
+  },
+  {
+   "name": "Ground Delay Programs",
+   "aliases": [
+    "GDPs"
+   ]
+  },
+  {
+   "name": "Airspace Flow Programs",
+   "aliases": [
+    "AFPs"
+   ]
+  },
+  {
+   "name": "Controlled Time of Arrival",
+   "aliases": [
+    "CTA"
+   ]
+  },
+  {
+   "name": "Time Based Flow Management",
+   "aliases": [
+    "TBFM"
+   ]
+  },
+  {
+   "name": "estimated times of arrival",
+   "aliases": [
+    "ETAs"
+   ]
+  },
+  {
+   "name": "Management by Trajectory",
+   "aliases": [
+    "MBT"
+   ]
+  },
+  {
+   "name": "Federal Aviation Administration",
+   "aliases": [
+    "FAA"
+   ]
+  },
+  {
+   "name": "airspace users",
+   "aliases": []
+  },
+  {
+   "name": "four-dimensional trajectories",
+   "aliases": [
+    "4DTs",
+    "4DT"
+   ]
+  },
+  {
+   "name": "Trajectory Based Operations",
+   "aliases": [
+    "TBO"
+   ]
+  },
+  {
+   "name": "International Civil Aviation Organization",
+   "aliases": [
+    "ICAO"
+   ]
+  },
+  {
+   "name": "ICAO TBO Concept Document",
+   "aliases": []
+  },
+  {
+   "name": "NAS Constraint Service",
+   "aliases": []
+  },
+  {
+   "name": "traffic management automation",
+   "aliases": []
+  },
+  {
+   "name": "traffic managers",
+   "aliases": []
+  },
+  {
+   "name": "Aircraft",
+   "aliases": []
+  },
+  {
+   "name": "intent data",
+   "aliases": []
+  },
+  {
+   "name": "Flight Management System",
+   "aliases": [
+    "FMS"
+   ]
+  },
+  {
+   "name": "electronic flight bag",
+   "aliases": [
+    "EFB"
+   ]
+  },
+  {
+   "name": "flight crew",
+   "aliases": []
+  },
+  {
+   "name": "negotiating controller",
+   "aliases": []
+  },
+  {
+   "name": "D-side controller",
+   "aliases": []
+  },
+  {
+   "name": "traffic management coordinators",
+   "aliases": [
+    "TMCs"
+   ]
+  },
+  {
+   "name": "Aeronautical Telecommunications Network-Baseline 2",
+   "aliases": [
+    "ATN-B2"
+   ]
+  },
+  {
+   "name": "Required Time of Arrival",
+   "aliases": [
+    "RTA"
+   ]
+  },
+  {
+   "name": "Controller-pilot data link communications",
+   "aliases": [
+    "CPDLC"
+   ]
+  },
+  {
+   "name": "System Wide Information Management",
+   "aliases": [
+    "SWIM"
+   ]
+  },
+  {
+   "name": "Traffic Collision Avoidance System/Airborne Collision Avoidance System",
+   "aliases": [
+    "TCAS/ACAS"
+   ]
+  },
+  {
+   "name": "Advanced Interval Management",
+   "aliases": [
+    "A-IM"
+   ]
+  },
+  {
+   "name": "unmanned aircraft systems",
+   "aliases": [
+    "UAS"
+   ]
+  },
+  {
+   "name": "time of arrival control",
+   "aliases": [
+    "TOAC"
+   ]
+  },
+  {
+   "name": "Required Time Performance",
+   "aliases": [
+    "RTP"
+   ]
+  },
+  {
+   "name": "Required Navigation Performance",
+   "aliases": [
+    "RNP"
+   ]
+  },
+  {
+   "name": "Expect Departure Clearance Time",
+   "aliases": [
+    "EDCT"
+   ]
+  },
+  {
+   "name": "minute-in-trail",
+   "aliases": [
+    "MINIT"
+   ]
+  },
+  {
+   "name": "miles-in-trail",
+   "aliases": [
+    "MIT"
+   ]
+  },
+  {
+   "name": "traffic management initiatives",
+   "aliases": [
+    "TMIs",
+    "TMI"
+   ]
+  },
+  {
+   "name": "ground automation",
+   "aliases": [
+    "ground automation systems"
+   ]
+  },
+  {
+   "name": "flight operations centers",
+   "aliases": []
+  },
+  {
+   "name": "Pilots",
+   "aliases": []
+  },
+  {
+   "name": "three-dimensional trajectory",
+   "aliases": [
+    "3DT"
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0113"
+   ],
+   "chunk_tokens": 4546,
+   "memory_tokens": 0,
+   "prompt_tokens": 5655,
+   "input": 10030,
+   "output": 6155,
+   "reasoning": null,
+   "cached": false
+  }
+ ]
+}

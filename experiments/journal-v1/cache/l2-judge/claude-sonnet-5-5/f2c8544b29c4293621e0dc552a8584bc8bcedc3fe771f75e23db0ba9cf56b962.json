@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Smoke Classifier Module provides \"the Ridge Shadow Mask\" to Sentinel Fireline Analytics Engine (an information or material flow).\n\nSource sentences:\nS055: Thermal cues are treated as supporting evidence unless they persist across sequential frames or align with a visible smoke indication.\nS056: The Smoke Classifier Module produces the Ridge Shadow Mask when terrain-shadow conditions could otherwise inflate a smoke confidence score.\nS161: The Sentinel Fireline Analytics Engine updates hazard summaries when fire spread estimates, access constraints, or field observations change.\nS162: The Sentinel Fireline Analytics Engine applies the Ridge Shadow Mask when estimating crew-visible fire edge confidence in steep terrain.\n\nAnswer \"supported\" only if the sentences state that Smoke Classifier Module produces or sends this item AND that Sentinel Fireline Analytics Engine receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S056 states the Smoke Classifier Module produces the Ridge Shadow Mask, and S162 states the Sentinel Fireline Analytics Engine applies the same Ridge Shadow Mask, so the flow from classifier to engine is supported.\"}",
+ "usage": {
+  "input_tokens": 731,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 100,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.059,
+ "created": "2026-10-14T12:36:19"
+}

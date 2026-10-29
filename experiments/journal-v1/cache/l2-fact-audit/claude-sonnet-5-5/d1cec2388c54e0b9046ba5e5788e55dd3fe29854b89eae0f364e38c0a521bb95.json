@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=headloss, label=requires follow-up before the next wash sequence)\n\nSource sentences (the last one is where the fact was extracted):\nS150: Backwash recovery operation begins when the North Filter Gallery or South Filter Gallery completes a backwash cycle and the control system confirms that turbidity, valve position, and flow indications are within the expected recovery range.\nS151: The Backwash Recovery Tank receives spent washwater under controlled conditions so that recovered water can be returned only after solids have settled and the operator has verified acceptable clarity.\nS152: The SCADA Historian Server records recovery volume, tank level, turbidity trend, and return timing for each backwash recovery event.\nS153: The Chief Operator uses the Filter Run Exception Note to determine whether a shortened run, high headloss, or abnormal turbidity response requires follow-up before the next wash sequence.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S153 says high headloss is one of several conditions (with shortened run and abnormal turbidity) that the Chief Operator assesses for needing follow-up before the next wash sequence, so the label is roughly right, but headloss is a condition rather than a performer of an action and the follow-up requirement is conditional, not stated outright.\"}",
+ "usage": {
+  "input_tokens": 747,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 124,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.47,
+ "created": "2026-10-14T12:52:00"
+}

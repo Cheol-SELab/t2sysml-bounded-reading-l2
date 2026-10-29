@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Departure Metering Service provides \"proposed departure opportunities and associated Calculated Takeoff Time values\" to Slot Coordinator (an information or material flow).\n\nSource sentences:\nS241: The Arrival Regulation Console presents proposed arrival opportunities with the capacity source, regulation start time, and expected delay for each affected flight.\nS242: The Departure Metering Service presents proposed departure opportunities and associated Calculated Takeoff Time values for coordination with the Tower Sequence Manager.\nS257: For voice coordination, Halcyon is the operational call sign used by the Slot Coordinator during daily target time conferences.\nS258: The Slot Coordinator reviews proposed Calculated Takeoff Time values against network constraints and requests adjustment when the allocation would create avoidable delay or unfair sequencing.\n\nAnswer \"supported\" only if the sentences state that Departure Metering Service produces or sends this item AND that Slot Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"The Departure Metering Service presents proposed departure opportunities and associated Calculated Takeoff Time values, and the Slot Coordinator reviews those proposed Calculated Takeoff Time values.\"}",
+ "usage": {
+  "input_tokens": 325,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 121,
+  "output_tokens_details": {
+   "reasoning_tokens": 70
+  },
+  "total_tokens": 446
+ },
+ "attempts": 1,
+ "wall_s": 63.086,
+ "created": "2026-10-14T12:45:32"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Dual Channel Odometer provides \"train position\" to Passenger Information Gateway (an information or material flow).\n\nSource sentences:\nS046: Platform Screen Door Controller exchanges door enable and closed-and-locked indications with the train interface when the train is correctly berthed at a platform.\nS047: Passenger Information Gateway receives non-vital train position and service state data through an interface that prevents passenger systems from influencing safety decisions.\nS065: The boundary between North District Zone Controller and South District Zone Controller is defined by track section ownership, radio coverage overlap, and the point at which a train authority must be reissued by the receiving zone.\nS066: At a zone boundary, the Atlas Onboard Controller confirms train position from the Dual Channel Odometer before accepting the next authority source.\nS186: The West Junction Interlocking shall reject a route command that conflicts with a manually protected train movement.\nS187: Manual route recovery begins when the Line Traffic Controller confirms train positions through independent indications and direct verbal reports.\n\nAnswer \"supported\" only if the sentences state that Dual Channel Odometer produces or sends this item AND that Passenger Information Gateway receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S066 shows the Dual Channel Odometer gives train position to the Atlas Onboard Controller, and S047 says the Passenger Information Gateway receives train position data without naming the odometer as its source, so no sentence states the odometer sends train position to the gateway.\"}",
+ "usage": {
+  "input_tokens": 801,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 105,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.353,
+ "created": "2026-10-14T12:33:16"
+}

@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "The wide area connectivity design extends the ground network management practices from the scheduling domain into continuous transport control across all operational sites.",
+   "tags": []
+  },
+  {
+   "text": "The physical topology uses redundant terrestrial circuits between the Mission Control Center, the Flight Dynamics Facility, the Payload Processing Facility, and the Long Term Archive, with diverse carrier entrances where local infrastructure permits.",
+   "tags": []
+  },
+  {
+   "text": "The North S-Band Antenna and the South S-Band Antenna connect to the Mission Control Center through protected access routers that keep command and telemetry traffic separate from site administration traffic.",
+   "tags": []
+  },
+  {
+   "text": "The Kiruna X-Band Antenna and the Svalbard X-Band Antenna use dual wide area paths toward the Payload Processing Facility so that payload downlink traffic can continue during a single carrier outage.",
+   "tags": []
+  },
+  {
+   "text": "The Mission Control Center hosts the primary routing policy point, while the Network Control System maintains operational visibility of circuit state, path selection, and active maintenance windows.",
+   "tags": []
+  },
+  {
+   "text": "The Network Control System is known operationally as Lantern and is treated as the authoritative view of wide area circuit status.",
+   "tags": [
+    "ALIAS:E_NETWORK_CONTROL_SYSTEM"
+   ]
+  },
+  {
+   "text": "Routing policy is based on approved prefixes, authenticated neighbor relationships, and deterministic preference values rather than ad hoc route changes during contacts.",
+   "tags": []
+  },
+  {
+   "text": "Dynamic routing is permitted only on controlled adjacencies, and static backup routes are preconfigured for antenna sites where local carrier behavior is not sufficiently predictable.",
+   "tags": []
+  },
+  {
+   "text": "Critical contact paths are pinned before acquisition of signal when the Ground Network Manager determines that a maintenance condition could cause route oscillation.",
+   "tags": []
+  },
+  {
+   "text": "Management access to routers, firewalls, time servers, and monitoring probes is restricted to dedicated administration networks that are not advertised to mission data enclaves.",
+   "tags": []
+  },
+  {
+   "text": "Latency budgets are assigned by service class so that command validation, real-time telemetry display, orbit determination support, processing transfers, and archive replication can be measured against different expectations.",
+   "tags": []
+  },
+  {
+   "text": "The budget for real-time command and telemetry traffic between the Mission Control Center, the Command Validation Gateway, and the Telemetry Ingest Service is managed as an end-to-end figure that includes encryption overhead and firewall inspection time.",
+   "tags": []
+  },
+  {
+   "text": "Traffic supporting the Orbit Determination Engine is given a tighter jitter objective than routine file movement because late or uneven delivery can reduce the usefulness of contact assessment products.",
+   "tags": []
+  },
+  {
+   "text": "Transfers from the Primary Processing Cluster to the Long Term Archive are rate limited during active contacts so that bulk movement cannot starve operational telemetry or control-plane monitoring.",
+   "tags": []
+  },
+  {
+   "text": "The Backup Processing Cluster receives lower routing preference during normal operations, but its paths are tested routinely so that failover does not expose stale firewall rules or asymmetric return routes.",
+   "tags": []
+  },
+  {
+   "text": "If a latency budget is exceeded, the Ground Network Manager first verifies carrier performance, then checks routing state, packet loss, queue depth, and security inspection delays before declaring a mission-impacting network condition.",
+   "tags": []
+  },
+  {
+   "text": "Time synchronization is provided from redundant reference clocks at the Mission Control Center and the Flight Dynamics Facility, with holdover capability sized to cover credible external timing outages.",
+   "tags": []
+  },
+  {
+   "text": "Precision Time Protocol is used inside data centers and processing enclaves where sub-millisecond alignment is required for correlation, while authenticated Network Time Protocol is used for general server and workstation timekeeping.",
+   "tags": []
+  },
+  {
+   "text": "Antenna site equipment validates time against independent local references before contact start so that tracking records, telemetry frames, and operator displays remain comparable across locations.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team monitors timing quality alongside orbit support metrics because clock bias can appear as an apparent measurement error if it is not separated from actual tracking performance.",
+   "tags": []
+  },
+  {
+   "text": "Timing alarms are forwarded to the Spacecraft Operations Team only after the Network Control System confirms that the alarm is not caused by a known maintenance interval or a failed local reference check.",
+   "tags": []
+  },
+  {
+   "text": "Cybersecurity monitoring is applied at each site through network sensors, endpoint telemetry, privileged-access logging, and configuration compliance checks that are reviewed during every operational shift.",
+   "tags": []
+  },
+  {
+   "text": "The Cybersecurity Desk sends a Security Exception Ticket when a monitored event requires temporary deviation from the approved security baseline.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "Correlation rules emphasize changes that could affect mission continuity, including unexpected route advertisements, repeated authentication failures, unscheduled remote access, and unexplained increases in encrypted traffic volume.",
+   "tags": []
+  },
+  {
+   "text": "During contingency operations, the Ground Network Manager and the Cybersecurity Desk coordinate before blocking traffic so that protective actions do not unintentionally interrupt a spacecraft contact or prevent recovery of processing services.",
+   "tags": []
+  }
+ ]
+}

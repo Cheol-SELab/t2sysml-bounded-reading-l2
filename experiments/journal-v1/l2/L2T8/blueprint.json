@@ -1,0 +1,402 @@
+{
+ "title": "Operational Concept for an Automated Pallet Warehouse",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Facility Mission and Operating Model",
+   "topic": "Define the warehouse operating boundary, pallet-flow principles, service objectives, and the Warehouse Management System (Morrowglass) as the authority for inventory and work release."
+  },
+  {
+   "index": 2,
+   "heading": "Inbound Receiving and Yard Interface",
+   "topic": "Describe arrival checks and door coordination, introduce the Inbound Inspection Desk (Cinderbay) and Yard Gate Controller (Velvetrook), and have the desk send a trailer exception note without identifying its eventual recipient."
+  },
+  {
+   "index": 3,
+   "heading": "Storage Allocation and Crane Operations",
+   "topic": "Explain storage selection and crane operating zones, introduce the North Aisle Stacker Crane (Juniperwake) and Pallet Dimension Scanner (Moonquarry), and describe the system's reservation and dimension-advisory outputs without naming their recipients."
+  },
+  {
+   "index": 4,
+   "heading": "Conveyance and Transfer Induction",
+   "topic": "Set out conveyor sequencing and transfer-point controls, introduce the Conveyor Line Controller (Brasshaven), and describe its transfer-ticket output and the North Aisle Stacker Crane's occupancy reporting without naming recipients."
+  },
+  {
+   "index": 5,
+   "heading": "Autonomous Forklift Operations and Dispatch",
+   "topic": "Define autonomous vehicle tasking and outbound wave preparation, introduce the Autonomous Forklift Fleet (Larkspur), and have Morrowglass issue a dispatch amendment while the fleet prepares handoff reporting."
+  },
+  {
+   "index": 6,
+   "heading": "System Coordination and Yard Exceptions",
+   "topic": "Explain cross-system coordination, introduce the Maintenance Release Terminal (Copperfield), describe the receiving exception's use by the Yard Gate Controller, and state that Morrowglass reconciles work across operating areas."
+  },
+  {
+   "index": 7,
+   "heading": "Inventory Exceptions and Maintenance Readiness",
+   "topic": "Describe exception handling and service readiness, with the North Aisle Stacker Crane receiving its reservation receipt and Morrowglass and the inbound desk consuming their respective later-stage advisories."
+  },
+  {
+   "index": 8,
+   "heading": "Safety, Recovery, and Operational Resilience",
+   "topic": "Set out safe recovery and zone isolation practices, with Morrowglass receiving the crane occupancy snapshot and Velvetrook applying the yard exception while the South Aisle Stacker Crane performs a recovery maneuver."
+  },
+  {
+   "index": 9,
+   "heading": "Performance, Safety Assurance, and Shift Controls",
+   "topic": "Define operating measures and shift checks, with the autonomous fleet receiving the transfer ticket, the safety controller applying the fire-panel notice, Juniperwake following the scanner advisory, and the East Transfer Conveyor demonstrating a controlled restart."
+  },
+  {
+   "index": 10,
+   "heading": "Commissioning, Governance, and Continuous Improvement",
+   "topic": "Specify acceptance and governance practices, with the shipping desk receiving the scale variance, the crane receiving its service release, and Morrowglass, Cinderbay, Brasshaven, Larkspur, and Copperfield each performing their assigned closing actions."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_WMS",
+   "canonical": "Warehouse Management System",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RECEIVING_DESK",
+   "canonical": "Inbound Inspection Desk",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_YARD_GATE",
+   "canonical": "Yard Gate Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_CRANE",
+   "canonical": "North Aisle Stacker Crane",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_CRANE",
+   "canonical": "South Aisle Stacker Crane",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CONVEYOR_CONTROLLER",
+   "canonical": "Conveyor Line Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FORKLIFT_FLEET",
+   "canonical": "Autonomous Forklift Fleet",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DIMENSION_SCANNER",
+   "canonical": "Pallet Dimension Scanner",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_MAINTENANCE_TERMINAL",
+   "canonical": "Maintenance Release Terminal",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DISPATCH_SORTER",
+   "canonical": "Outbound Dispatch Sorter",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SHIPPING_DESK",
+   "canonical": "Shipping Documentation Desk",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FIRE_PANEL",
+   "canonical": "Fire Alarm Panel",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SAFETY_CONTROLLER",
+   "canonical": "Safety Zone Controller",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_OUTBOUND_SCALE",
+   "canonical": "Outbound Checkweigh Scale",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PALLET_BUFFER",
+   "canonical": "Inbound Pallet Buffer",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_OPERATIONS_SUPERVISOR",
+   "canonical": "Warehouse Operations Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_EAST_TRANSFER_CONVEYOR",
+   "canonical": "East Transfer Conveyor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_TRANSFER_CONVEYOR",
+   "canonical": "West Transfer Conveyor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TRAILER_EXCEPTION_NOTE",
+   "canonical": "Trailer Seal Exception Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SLOT_RESERVATION_RECEIPT",
+   "canonical": "Slot Reservation Receipt",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_AISLE_OCCUPANCY_SNAPSHOT",
+   "canonical": "Aisle Occupancy Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TRANSFER_INDUCTION_TICKET",
+   "canonical": "Transfer Induction Ticket",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_FORKLIFT_HANDOFF_CONFIRMATION",
+   "canonical": "Forklift Handoff Confirmation",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DISPATCH_WAVE_AMENDMENT",
+   "canonical": "Dispatch Wave Amendment",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_OVERSIZE_LOAD_ADVISORY",
+   "canonical": "Oversize Load Advisory",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SPRINKLER_ZONE_INHIBIT_NOTICE",
+   "canonical": "Sprinkler Zone Inhibit Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CRANE_SERVICE_RELEASE_CARD",
+   "canonical": "Crane Service Release Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_GROSS_WEIGHT_VARIANCE_SLIP",
+   "canonical": "Gross Weight Variance Slip",
+   "kind": "item"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_WMS",
+   "alias": "Morrowglass",
+   "intro_section": 1
+  },
+  {
+   "entity_id": "E_RECEIVING_DESK",
+   "alias": "Cinderbay",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_YARD_GATE",
+   "alias": "Velvetrook",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_NORTH_CRANE",
+   "alias": "Juniperwake",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_CONVEYOR_CONTROLLER",
+   "alias": "Brasshaven",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_FORKLIFT_FLEET",
+   "alias": "Larkspur",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_DIMENSION_SCANNER",
+   "alias": "Moonquarry",
+   "intro_section": 3
+  },
+  {
+   "entity_id": "E_MAINTENANCE_TERMINAL",
+   "alias": "Copperfield",
+   "intro_section": 6
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_RECEIVING_DESK",
+   "item": "E_TRAILER_EXCEPTION_NOTE",
+   "consumer": "E_YARD_GATE",
+   "intro_section": 2,
+   "link_section": 6,
+   "link_ref": "short",
+   "short_ref": "the exception note"
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_WMS",
+   "item": "E_SLOT_RESERVATION_RECEIPT",
+   "consumer": "E_NORTH_CRANE",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_NORTH_CRANE",
+   "item": "E_AISLE_OCCUPANCY_SNAPSHOT",
+   "consumer": "E_WMS",
+   "intro_section": 4,
+   "link_section": 8,
+   "link_ref": "short",
+   "short_ref": "the occupancy snapshot"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_CONVEYOR_CONTROLLER",
+   "item": "E_TRANSFER_INDUCTION_TICKET",
+   "consumer": "E_FORKLIFT_FLEET",
+   "intro_section": 4,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_FORKLIFT_FLEET",
+   "item": "E_FORKLIFT_HANDOFF_CONFIRMATION",
+   "consumer": "E_WMS",
+   "intro_section": 5,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the handoff confirmation"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_WMS",
+   "item": "E_DISPATCH_WAVE_AMENDMENT",
+   "consumer": "E_DISPATCH_SORTER",
+   "intro_section": 2,
+   "link_section": 5,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_DIMENSION_SCANNER",
+   "item": "E_OVERSIZE_LOAD_ADVISORY",
+   "consumer": "E_WMS",
+   "intro_section": 3,
+   "link_section": 7,
+   "link_ref": "short",
+   "short_ref": "the load advisory"
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_FIRE_PANEL",
+   "item": "E_SPRINKLER_ZONE_INHIBIT_NOTICE",
+   "consumer": "E_SAFETY_CONTROLLER",
+   "intro_section": 5,
+   "link_section": 9,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_MAINTENANCE_TERMINAL",
+   "item": "E_CRANE_SERVICE_RELEASE_CARD",
+   "consumer": "E_NORTH_CRANE",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the release card"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_OUTBOUND_SCALE",
+   "item": "E_GROSS_WEIGHT_VARIANCE_SLIP",
+   "consumer": "E_SHIPPING_DESK",
+   "intro_section": 7,
+   "link_section": 10,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_WMS",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_RECEIVING_DESK",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_YARD_GATE",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_NORTH_CRANE",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_CONVEYOR_CONTROLLER",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_FORKLIFT_FLEET",
+   "link_section": 10
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_DIMENSION_SCANNER",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_MAINTENANCE_TERMINAL",
+   "link_section": 10
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_SOUTH_CRANE",
+   "confusable_entity_id": "E_NORTH_CRANE",
+   "shared_head": "Aisle Stacker Crane",
+   "link_section": 8
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_TRANSFER_CONVEYOR",
+   "confusable_entity_id": "E_WEST_TRANSFER_CONVEYOR",
+   "shared_head": "Transfer Conveyor",
+   "link_section": 9
+  }
+ ],
+ "writer": "gpt-6-luna",
+ "plan_sample": 0,
+ "domain": "an automated pallet warehouse with stacker cranes, conveyors, autonomous forklifts and a warehouse management system"
+}

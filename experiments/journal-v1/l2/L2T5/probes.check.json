@@ -1,0 +1,242 @@
+{
+ "kept": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_RAW_WATER_SCREEN_CHANNEL",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "item": "E_RAKE_TORQUE_SNAPSHOT",
+   "link_ref": "short",
+   "short_ref": "the snapshot",
+   "intro_unit": "S034",
+   "link_unit": "S105",
+   "distance_tokens": 1851,
+   "issues": []
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_SOUTH_FILTER_GALLERY",
+   "consumer": "E_CHIEF_OPERATOR",
+   "item": "E_FILTER_RUN_EXCEPTION_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S061",
+   "link_unit": "S153",
+   "distance_tokens": 2436,
+   "issues": []
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_COAGULANT_DOSING_SKID",
+   "consumer": "E_LAB_TECHNICIAN",
+   "item": "E_ALUM_BATCH_TICKET",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S056",
+   "link_unit": "S083",
+   "distance_tokens": 677,
+   "issues": []
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_LAB_TECHNICIAN",
+   "consumer": "E_SCADA_HISTORIAN_SERVER",
+   "item": "E_SAMPLE_CHAIN_SLIP",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S084",
+   "link_unit": "S188",
+   "distance_tokens": 2829,
+   "issues": []
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_CLEARWELL_LEVEL_CONTROLLER",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "item": "E_CLEARWELL_DIVER_ENTRY_PERMIT",
+   "link_ref": "short",
+   "short_ref": "the permit",
+   "intro_unit": "S134",
+   "link_unit": "S222",
+   "distance_tokens": 2533,
+   "issues": []
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_CHIEF_OPERATOR",
+   "consumer": "E_RESIDUALS_HAULER",
+   "item": "E_BACKWASH_SOLIDS_MANIFEST",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S173",
+   "link_unit": "S245",
+   "distance_tokens": 2025,
+   "issues": []
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_DISTRIBUTION_DISPATCHER",
+   "consumer": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "item": "E_PRESSURE_ZONE_HANDOFF_CARD",
+   "link_ref": "short",
+   "short_ref": "the card",
+   "intro_unit": "S189",
+   "link_unit": "S243",
+   "distance_tokens": 1525,
+   "issues": []
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_CHEMICAL_SUPPLIER_DRIVER",
+   "consumer": "E_DUTY_ENGINEER",
+   "item": "E_CHLORINE_CYLINDER_SEAL_LOG",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S112",
+   "link_unit": "S223",
+   "distance_tokens": 3167,
+   "issues": []
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_HIGH_SERVICE_PUMP_HEADER",
+   "consumer": "E_MAINTENANCE_PLANNER",
+   "item": "E_PUMP_BEARING_VIBRATION_CLIP",
+   "link_ref": "short",
+   "short_ref": "the clip",
+   "intro_unit": "S140",
+   "link_unit": "S239",
+   "distance_tokens": 2829,
+   "issues": []
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_RIVER_INTAKE_PUMP_STATION",
+   "alias": "Ironwood",
+   "intro_unit": "S004",
+   "link_unit": "S109",
+   "distance_tokens": 2762,
+   "issues": []
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_SCADA_HISTORIAN_SERVER",
+   "alias": "Lantern",
+   "intro_unit": "S012",
+   "link_unit": "S086",
+   "distance_tokens": 1935,
+   "issues": []
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_COAGULANT_DOSING_SKID",
+   "alias": "Marigold",
+   "intro_unit": "S055",
+   "link_unit": "S160",
+   "distance_tokens": 2796,
+   "issues": []
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "alias": "Cobalt",
+   "intro_unit": "S059",
+   "link_unit": "S186",
+   "distance_tokens": 3421,
+   "issues": []
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "alias": "Sparrow",
+   "intro_unit": "S079",
+   "link_unit": "S187",
+   "distance_tokens": 2939,
+   "issues": []
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_MAINTENANCE_PLANNER",
+   "alias": "Quarry",
+   "intro_unit": "S103",
+   "link_unit": "S204",
+   "distance_tokens": 2843,
+   "issues": []
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_HIGH_SERVICE_PUMP_HEADER",
+   "alias": "Juniper",
+   "intro_unit": "S136",
+   "link_unit": "S230",
+   "distance_tokens": 2701,
+   "issues": []
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_DISTRIBUTION_DISPATCHER",
+   "alias": "Falcon",
+   "intro_unit": "S143",
+   "link_unit": "S242",
+   "distance_tokens": 2834,
+   "issues": []
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_FILTER_GALLERY",
+   "confusable_entity_id": "E_SOUTH_FILTER_GALLERY",
+   "shared_head": "Filter Gallery",
+   "link_unit": "S060",
+   "distance_tokens": 0,
+   "issues": []
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_SOUTH_DISTRIBUTION_PRESSURE_STATION",
+   "confusable_entity_id": "E_NORTH_DISTRIBUTION_PRESSURE_STATION",
+   "shared_head": "Distribution Pressure Station",
+   "link_unit": "S180",
+   "distance_tokens": 0,
+   "issues": []
+  }
+ ],
+ "rejected": [
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_LAB_SAMPLE_RECEIVING_BENCH",
+   "consumer": "E_COAGULANT_DOSING_SKID",
+   "item": "E_JAR_TEST_PHOTOGRAPH_SET",
+   "link_ref": "short",
+   "short_ref": "the set",
+   "intro_unit": "S085",
+   "link_unit": "S159",
+   "distance_tokens": 2002,
+   "issues": [
+    "item mentioned elsewhere ['S091', 'S149']"
+   ]
+  }
+ ],
+ "n_units": 250,
+ "doc_tokens": 6905,
+ "far_share": 0.9411764705882353,
+ "budget": 1024
+}

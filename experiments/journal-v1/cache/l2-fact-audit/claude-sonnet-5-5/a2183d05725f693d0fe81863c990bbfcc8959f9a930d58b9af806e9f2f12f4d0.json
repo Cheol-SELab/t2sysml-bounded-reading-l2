@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Train Radio Modem, target=Atlas Onboard Controller, payload=loss of safe data connectivity)\n\nSource sentences (the last one is where the fact was extracted):\nS178: The Atlas Onboard Controller transitions to restricted manual operation when valid movement authority is unavailable or when onboard location confidence falls below the configured threshold.\nS179: The Revenue Train Operator remains responsible for speed control, stopping accuracy, door release discipline, and compliance with verbal movement limits during restricted manual operation.\nS180: The Dual Channel Odometer shall cause the train location to be treated as uncertain when its channels disagree beyond the permitted tolerance.\nS181: The Train Radio Modem shall report loss of safe data connectivity to the Atlas Onboard Controller and shall not mask intermittent communication failures from the cab display.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S181 states the Train Radio Modem shall report loss of safe data connectivity to the Atlas Onboard Controller, matching source, target, and payload.\"}",
+ "usage": {
+  "input_tokens": 741,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 67,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.779,
+ "created": "2026-10-14T12:52:09"
+}

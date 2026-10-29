@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Paramedic Crew provides \"critical location and destination details\" to Computer Aided Dispatch Console (an information or material flow).\n\nSource sentences:\nS062: Call Taker Mara produces the Caller Location Correction Slip when the caller's address needs documented clarification.\nS063: The Computer Aided Dispatch Console checks entered location details against available address and map data.\nS200: Radio Coordinator directs crews to approved fallback channels when the primary channel is unusable.\nS201: Crews acknowledge each fallback assignment and repeat critical location and destination details before moving.\n\nAnswer \"supported\" only if the sentences state that Paramedic Crew produces or sends this item AND that Computer Aided Dispatch Console receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S201 says crews repeat critical location and destination details during fallback radio coordination, apparently to the Radio Coordinator; no sentence says the Computer Aided Dispatch Console receives them, as S063 concerns location details entered by call-taking.\"}",
+ "usage": {
+  "input_tokens": 649,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 99,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.5,
+ "created": "2026-10-14T00:08:38"
+}

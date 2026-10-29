@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Protection Relay Engineer, label=records the approval status)\n\nSource sentences (the last one is where the fact was extracted):\nS063: Protection settings are not approved solely on the basis of copied values from another installation.\nS064: Engineering Workstation retains the approved configuration and its revision history for controlled access.\nS065: Configuration access is limited to personnel with assigned engineering responsibilities.\nS066: The Protection Relay Engineer records the approval status before any setting change is released for implementation.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S066 states that the Protection Relay Engineer records the approval status, matching both the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 617,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 50,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.353,
+ "created": "2026-10-14T12:52:34"
+}

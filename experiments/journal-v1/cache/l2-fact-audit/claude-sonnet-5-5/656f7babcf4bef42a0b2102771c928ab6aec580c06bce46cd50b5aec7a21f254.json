@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=align event timestamps)\n\nSource sentences (the last one is where the fact was extracted):\nS180: Station Gateway carries updated indications through the station interface using configured quality and timestamp attributes.\nS181: Station Supervisory Control System displays indication quality and stale-data status so operators can distinguish a current value from a retained value.\nS182: Sequence Event Archive retains time-tagged changes and control outcomes for event reconstruction and operational review.\nS183: Satellite Time Receiver supplies the station time reference used to align event timestamps, subject to configured quality checks.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S183 states the station time reference is used to align event timestamps, so an action labeled 'align event timestamps' is directly stated.\"}",
+ "usage": {
+  "input_tokens": 643,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 57,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.098,
+ "created": "2026-10-14T12:51:41"
+}

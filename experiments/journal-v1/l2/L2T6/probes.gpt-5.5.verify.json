@@ -1,0 +1,104 @@
+{
+ "verdicts": [
+  {
+   "probe_id": "F1",
+   "supported": true,
+   "reason": "S035 says the Pier 4 Bag-Drop Unit sends an Oversize Exception Ticket, and S141's 'the exception ticket' used by the Image Resolution Desk for an oversize bag unambiguously refers to that ticket."
+  },
+  {
+   "probe_id": "F2",
+   "supported": true,
+   "reason": "S011 states that the Flight Data Gateway sends the Flight Cutoff Advisory, and S113 states that the Baggage Control System receives the Flight Cutoff Advisory."
+  },
+  {
+   "probe_id": "F3",
+   "supported": true,
+   "reason": "S061 says the South Gate Scanner produces a Manual Rescan Receipt, and S159's 'the rescan receipt' used by the Image Resolution Desk clearly denotes that receipt."
+  },
+  {
+   "probe_id": "F4",
+   "supported": true,
+   "reason": "S085 states that the Primary Crossbelt Sorter sends a Chute Occupancy Note, and S184 says the Baggage Operations Supervisor uses 'the occupancy note.'"
+  },
+  {
+   "probe_id": "F5",
+   "supported": true,
+   "reason": "S038 states that the Transfer Bag Feeder sends a Late Transfer Bag Card, and S143 says the Bag Reconciliation Station uses the Late Transfer Bag Card."
+  },
+  {
+   "probe_id": "F6",
+   "supported": true,
+   "reason": "S120 says the Explosives Response Team produces the Custody Seal Log, and S213 says the Security Duty Manager uses 'the seal log.'"
+  },
+  {
+   "probe_id": "F7",
+   "supported": true,
+   "reason": "S013 states that the Concourse Zone Controller produces the Recovery Route Card, and S185 says the Maintenance Technician consults the Recovery Route Card."
+  },
+  {
+   "probe_id": "F8",
+   "supported": true,
+   "reason": "S074 says the Bag Tag Printer produces a Calibration Witness Tag, and S176's 'the witness tag' used by the Maintenance Technician refers to that item."
+  },
+  {
+   "probe_id": "F9",
+   "supported": true,
+   "reason": "S101 states that the Bag Reconciliation Station sends a Bag Match Query, and S219 says the Airline Ramp Coordinator uses the Bag Match Query."
+  },
+  {
+   "probe_id": "F10",
+   "supported": true,
+   "reason": "S052 says the Airline Ramp Coordinator sends a Carousel Release Slip, and S148 says the Carousel 7 Make-Up Unit receives the Carousel Release Slip."
+  },
+  {
+   "probe_id": "A1",
+   "supported": true,
+   "reason": "S010 establishes Mosslight as the alias for the Concourse Zone Controller, and the document does not use Mosslight for any other entity."
+  },
+  {
+   "probe_id": "A2",
+   "supported": true,
+   "reason": "S008 establishes Velvet as the alias for the Baggage Control System, and the document does not use Velvet for anything else."
+  },
+  {
+   "probe_id": "A3",
+   "supported": true,
+   "reason": "S050 establishes Juniper as the local name for the Primary Crossbelt Sorter, and S166 uses Juniper consistently with that entity."
+  },
+  {
+   "probe_id": "A4",
+   "supported": true,
+   "reason": "S047 establishes Kestrel as the local name for the North Gate Scanner, and S167 uses Kestrel consistently with that entity."
+  },
+  {
+   "probe_id": "A5",
+   "supported": true,
+   "reason": "S068 establishes Pebble as a name for the Explosives Response Team in local radio traffic, and S186 uses Pebble consistently with that entity."
+  },
+  {
+   "probe_id": "A6",
+   "supported": true,
+   "reason": "S075 establishes Orchard as the local name for the Carousel 7 Make-Up Unit, and S216 uses Orchard consistently with that entity."
+  },
+  {
+   "probe_id": "A7",
+   "supported": true,
+   "reason": "S080 establishes Lantern as the operational alias for the Flight Data Gateway, and S190 uses Lantern consistently with that entity."
+  },
+  {
+   "probe_id": "A8",
+   "supported": true,
+   "reason": "S091 establishes Tern as the operational alias for the Baggage Operations Supervisor, and S241 uses Tern consistently with that entity."
+  },
+  {
+   "probe_id": "H1",
+   "supported": true,
+   "reason": "S168 explicitly names the North Gate Scanner, not the South Gate Scanner, as recording the tag read and image data."
+  },
+  {
+   "probe_id": "H2",
+   "supported": true,
+   "reason": "S195 explicitly names the East Make-Up Conveyor, not the West Make-Up Conveyor, as running only after the stated guard and capacity conditions are met."
+  }
+ ]
+}

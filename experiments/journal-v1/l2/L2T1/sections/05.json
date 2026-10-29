@@ -1,0 +1,118 @@
+{
+ "sentences": [
+  {
+   "text": "The Operations Control Centre workflow begins with the Line Traffic Controller maintaining a live view of train positions, route status, alarms, and service performance across the Greenvale Metro line.",
+   "tags": []
+  },
+  {
+   "text": "The Metro Operations Control System presents regulating options based on timetable variance, platform dwell time, headway spacing, and the current availability of routes.",
+   "tags": []
+  },
+  {
+   "text": "The Line Traffic Controller selects holding, skip-stop, turnback, or run-through measures only after checking that passenger impact and downstream recovery have been assessed.",
+   "tags": []
+  },
+  {
+   "text": "Lantern displays the proposed regulating action, affected train identities, and predicted recovery time before the Line Traffic Controller confirms the command.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "text": "The North District Zone Controller applies movement authority constraints according to the confirmed operating state and reports any conflict or unavailable route condition for controller review.",
+   "tags": []
+  },
+  {
+   "text": "The South District Zone Controller applies the same operating principles for the southern section while preserving separation margins and route locking conditions.",
+   "tags": []
+  },
+  {
+   "text": "East Junction Interlocking holds the route locked until track section detection, point correspondence, and opposing route conditions meet the configured release criteria.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "West Junction Interlocking provides route state indications that allow the Operations Control Centre to distinguish an operational delay from a signalling equipment fault.",
+   "tags": []
+  },
+  {
+   "text": "When an engineering possession or field report requires a temporary operating constraint, the Line Traffic Controller produces the Temporary Speed Restriction Notice after confirming the limits, speed value, start time, and expected removal condition.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "text": "After a temporary operating constraint is active, the Line Traffic Controller monitors actual train performance against the expected delay allowance and adjusts regulation plans when recovery margins are exceeded.",
+   "tags": []
+  },
+  {
+   "text": "The Atlas Onboard Controller enforces the active movement profile on each equipped train and presents any onboard rejection or degraded mode indication for operational assessment.",
+   "tags": []
+  },
+  {
+   "text": "The Dual Channel Odometer supports train position confidence by providing independent distance measurement inputs that are considered during degraded operation review.",
+   "tags": []
+  },
+  {
+   "text": "The Train Radio Modem supports continuous operational messaging, and loss of radio availability is treated as a service risk that may require holding trains before constrained areas.",
+   "tags": []
+  },
+  {
+   "text": "The Wayside Radio Access Network is monitored for coverage alarms, handover irregularities, and capacity conditions that could affect the stability of train control communications.",
+   "tags": []
+  },
+  {
+   "text": "The Safety Data Communication Network is monitored as a safety-related bearer, and persistent communication faults are escalated before additional regulating actions are attempted in the affected area.",
+   "tags": []
+  },
+  {
+   "text": "For incident management, the Line Traffic Controller records the initial event time, train identifier, location, passenger impact, and the first safe operating instruction issued.",
+   "tags": []
+  },
+  {
+   "text": "The Voice Dispatch Console is used when direct verbal instruction is required, and the instruction is repeated back by the Revenue Train Operator before the action is treated as accepted.",
+   "tags": []
+  },
+  {
+   "text": "The Revenue Train Operator reports train condition, cab indications, passenger issues, and any local hazard that cannot be confirmed from the control room display alone.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Diagnostic Server provides non-vital trend data that helps the Signal Maintenance Engineer determine whether an incident has an equipment cause or an operational cause.",
+   "tags": []
+  },
+  {
+   "text": "The Signal Maintenance Engineer advises the Line Traffic Controller on equipment recovery options, but the Line Traffic Controller remains responsible for service regulation decisions during the event.",
+   "tags": []
+  },
+  {
+   "text": "The Service Timetable Server is updated only through an approved timetable change workflow, and the Line Traffic Controller verifies that the revised plan is visible before relying on it for regulation.",
+   "tags": []
+  },
+  {
+   "text": "The Passenger Information Gateway receives the operational service state needed to align platform messages and train destination information with the current regulating plan.",
+   "tags": []
+  },
+  {
+   "text": "The Cryptographic Key Management Appliance uses the sample report to verify that certificate validity windows and controller clocks remain within the permitted tolerance before operational use.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "The Cryptographic Key Management Appliance produces the Encryption Certificate Renewal Pack under an approved maintenance window and records the change reference for later security audit.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "text": "The Cyber Security Officer reviews certificate change records, access events, and unusual authentication failures before authorising normal operational reliance on the renewed security configuration.",
+   "tags": []
+  },
+  {
+   "text": "Authority review is performed after major incidents, degraded operations, and timetable interventions to confirm that each commanded movement remained consistent with interlocking state, controller intent, and recorded train response.",
+   "tags": []
+  }
+ ]
+}

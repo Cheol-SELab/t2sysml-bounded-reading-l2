@@ -1,0 +1,424 @@
+{
+ "doc_id": "L2T3",
+ "writer": "gpt-5.5",
+ "verifier": "gpt-6-luna",
+ "budget": 1024,
+ "doc_tokens": 7086,
+ "far_share": 1.0,
+ "entities": [
+  {
+   "entity_id": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "canonical": "Caldera Incident Command Portal",
+   "kind": "part",
+   "aliases": [
+    "Emberhall"
+   ]
+  },
+  {
+   "entity_id": "E_NORTH_LOOKOUT_CAMERA_MAST",
+   "canonical": "North Lookout Camera Mast",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_LOOKOUT_CAMERA_MAST",
+   "canonical": "South Lookout Camera Mast",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "canonical": "Horizon Ridge Drone Dock",
+   "kind": "part",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "entity_id": "E_DRONE_TASKING_SERVICE",
+   "canonical": "Drone Tasking Service",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "canonical": "Sentinel Fireline Analytics Engine",
+   "kind": "part",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "entity_id": "E_SMOKE_CLASSIFIER_MODULE",
+   "canonical": "Smoke Classifier Module",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "canonical": "Talon Air Tanker Dispatch Console",
+   "kind": "part",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "entity_id": "E_EAST_RETARDANT_LOADING_PUMP",
+   "canonical": "East Retardant Loading Pump",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WEST_RETARDANT_LOADING_PUMP",
+   "canonical": "West Retardant Loading Pump",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_VHF_RADIO_GATEWAY_REPEATER",
+   "canonical": "VHF Radio Gateway Repeater",
+   "kind": "part",
+   "aliases": [
+    "Badger"
+   ]
+  },
+  {
+   "entity_id": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "canonical": "MesoWest Weather Fusion Node",
+   "kind": "part",
+   "aliases": [
+    "Brindle"
+   ]
+  },
+  {
+   "entity_id": "E_CREWLINE_MOBILE_TABLET",
+   "canonical": "Crewline Mobile Tablet",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DUTY_DETECTION_OFFICER",
+   "canonical": "Duty Detection Officer",
+   "kind": "actor",
+   "aliases": [
+    "Orion"
+   ]
+  },
+  {
+   "entity_id": "E_AIR_ATTACK_SUPERVISOR",
+   "canonical": "Air Attack Supervisor",
+   "kind": "actor",
+   "aliases": [
+    "Redtail"
+   ]
+  },
+  {
+   "entity_id": "E_TANKER_BASE_MANAGER",
+   "canonical": "Tanker Base Manager",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_HELITACK_CREW_LEADER",
+   "canonical": "Helitack Crew Leader",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DRONE_PILOT_OPERATOR",
+   "canonical": "Drone Pilot Operator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_COUNTY_EMERGENCY_LIAISON",
+   "canonical": "County Emergency Liaison",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CONFIRMED_IGNITION_STATE",
+   "canonical": "Confirmed Ignition State",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AIRSPACE_RESTRICTED_STATE",
+   "canonical": "Airspace Restricted State",
+   "kind": "state",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_THERMAL_SPOT_SNIPPET",
+   "canonical": "Thermal Spot Snippet",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WIND_SHIFT_BULLETIN",
+   "canonical": "Wind Shift Bulletin",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DRONE_CORRIDOR_PERMIT",
+   "canonical": "Drone Corridor Permit",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RETARDANT_BATCH_SLIP",
+   "canonical": "Retardant Batch Slip",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CAMERA_CLEANING_LOG",
+   "canonical": "Camera Cleaning Log",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CREW_STAGING_PIN",
+   "canonical": "Crew Staging Pin",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RUNWAY_RELEASE_NOTE",
+   "canonical": "Runway Release Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BATTERY_SWAP_TICKET",
+   "canonical": "Battery Swap Ticket",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RIDGE_SHADOW_MASK",
+   "canonical": "Ridge Shadow Mask",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SUPPRESSION_DROP_RECEIPT",
+   "canonical": "Suppression Drop Receipt",
+   "kind": "item",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_NORTH_LOOKOUT_CAMERA_MAST",
+   "consumer": "E_DUTY_DETECTION_OFFICER",
+   "item": "E_THERMAL_SPOT_SNIPPET",
+   "link_ref": "short",
+   "short_ref": "the spot snippet",
+   "intro_unit": "S030",
+   "link_unit": "S106",
+   "distance_tokens": 2093
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "consumer": "E_AIR_ATTACK_SUPERVISOR",
+   "item": "E_WIND_SHIFT_BULLETIN",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S043",
+   "link_unit": "S136",
+   "distance_tokens": 2556
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_COUNTY_EMERGENCY_LIAISON",
+   "consumer": "E_DRONE_TASKING_SERVICE",
+   "item": "E_DRONE_CORRIDOR_PERMIT",
+   "link_ref": "short",
+   "short_ref": "the corridor permit",
+   "intro_unit": "S089",
+   "link_unit": "S192",
+   "distance_tokens": 2753
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_EAST_RETARDANT_LOADING_PUMP",
+   "consumer": "E_TANKER_BASE_MANAGER",
+   "item": "E_RETARDANT_BATCH_SLIP",
+   "link_ref": "short",
+   "short_ref": "the batch slip",
+   "intro_unit": "S073",
+   "link_unit": "S141",
+   "distance_tokens": 1851
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_SOUTH_LOOKOUT_CAMERA_MAST",
+   "consumer": "E_SMOKE_CLASSIFIER_MODULE",
+   "item": "E_CAMERA_CLEANING_LOG",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S095",
+   "link_unit": "S163",
+   "distance_tokens": 1802
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "consumer": "E_HELITACK_CREW_LEADER",
+   "item": "E_CREW_STAGING_PIN",
+   "link_ref": "short",
+   "short_ref": "the staging pin",
+   "intro_unit": "S120",
+   "link_unit": "S209",
+   "distance_tokens": 2418
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "consumer": "E_TANKER_BASE_MANAGER",
+   "item": "E_RUNWAY_RELEASE_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S140",
+   "link_unit": "S233",
+   "distance_tokens": 2660
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "consumer": "E_DRONE_PILOT_OPERATOR",
+   "item": "E_BATTERY_SWAP_TICKET",
+   "link_ref": "short",
+   "short_ref": "the swap ticket",
+   "intro_unit": "S034",
+   "link_unit": "S109",
+   "distance_tokens": 2066
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_SMOKE_CLASSIFIER_MODULE",
+   "consumer": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "item": "E_RIDGE_SHADOW_MASK",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S056",
+   "link_unit": "S162",
+   "distance_tokens": 2850
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "consumer": "E_COUNTY_EMERGENCY_LIAISON",
+   "item": "E_SUPPRESSION_DROP_RECEIPT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S148",
+   "link_unit": "S234",
+   "distance_tokens": 2484
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_CALDERA_INCIDENT_COMMAND_PORTAL",
+   "alias": "Emberhall",
+   "intro_unit": "S003",
+   "link_unit": "S119",
+   "distance_tokens": 3260
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_HORIZON_RIDGE_DRONE_DOCK",
+   "alias": "Kestrel",
+   "intro_unit": "S031",
+   "link_unit": "S131",
+   "distance_tokens": 2772
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_SENTINEL_FIRELINE_ANALYTICS_ENGINE",
+   "alias": "Lantern",
+   "intro_unit": "S037",
+   "link_unit": "S164",
+   "distance_tokens": 3428
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_TALON_AIR_TANKER_DISPATCH_CONSOLE",
+   "alias": "Marigold",
+   "intro_unit": "S066",
+   "link_unit": "S138",
+   "distance_tokens": 1962
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_VHF_RADIO_GATEWAY_REPEATER",
+   "alias": "Badger",
+   "intro_unit": "S083",
+   "link_unit": "S193",
+   "distance_tokens": 2922
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_MESOWEST_WEATHER_FUSION_NODE",
+   "alias": "Brindle",
+   "intro_unit": "S041",
+   "link_unit": "S114",
+   "distance_tokens": 2011
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_DUTY_DETECTION_OFFICER",
+   "alias": "Orion",
+   "intro_unit": "S011",
+   "link_unit": "S087",
+   "distance_tokens": 2131
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_AIR_ATTACK_SUPERVISOR",
+   "alias": "Redtail",
+   "intro_unit": "S065",
+   "link_unit": "S232",
+   "distance_tokens": 4714
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_LOOKOUT_CAMERA_MAST",
+   "confusable_entity_id": "E_SOUTH_LOOKOUT_CAMERA_MAST",
+   "shared_head": "Lookout Camera Mast",
+   "link_unit": "S103",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_EAST_RETARDANT_LOADING_PUMP",
+   "confusable_entity_id": "E_WEST_RETARDANT_LOADING_PUMP",
+   "shared_head": "Retardant Loading Pump",
+   "link_unit": "S194",
+   "distance_tokens": 0
+  }
+ ]
+}

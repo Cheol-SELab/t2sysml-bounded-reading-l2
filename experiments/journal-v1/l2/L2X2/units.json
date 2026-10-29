@@ -1,0 +1,6053 @@
+{
+ "doc_id": "L2X2",
+ "title": "Offshore Wind Farm Operations and Maintenance System Operational Concept",
+ "writer": "gpt-6-luna",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "This concept defines the operational scope and principal interfaces for operating and maintaining the offshore wind farm.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The operational boundary covers the wind farm assets, offshore support facilities, control functions, and maintenance activities required to deliver safe electrical generation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "The physical boundary begins at the turbine structures and includes the array of turbines and the Offshore Substation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "The electrical boundary extends through the farm’s export connection to the point where the Grid Interface Relay represents the interface with the external grid.",
+   "tags": []
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "The concept includes the Turbine Controller, Pitch System, Converter Cabinet, Nacelle Condition Monitor, Rotor Brake Unit, and Turbine Sensor Bus as representative turbine systems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "It also includes the Main Transformer, Export Cable Monitor, SCADA Gateway, and associated monitoring and control functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "The boundary ends at defined connections to shore-based control, grid operations, ports, suppliers, and emergency services.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "Public grid assets beyond the agreed connection point and port operations outside farm-related logistics are outside this concept.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The primary operational objective is to generate electricity reliably while maintaining personnel safety and asset integrity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "Availability objectives are pursued through condition monitoring, timely fault response, planned maintenance, and coordinated access to offshore assets.",
+   "tags": []
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "Safety objectives require work to be authorized, hazards to be controlled, and personnel and vessels to be accounted for throughout each operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "Environmental objectives include preventing pollution, minimizing disturbance to the marine environment, and responding promptly to environmental incidents.",
+   "tags": []
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The operating model assigns continuous monitoring and dispatch coordination to the Shore Control Room.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The lifecycle assumption is that the concept applies from commissioning and acceptance through routine operation, major refurbishment, and eventual decommissioning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "During commissioning, the system is assumed to transition from construction control to operations control through documented handover and verification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "During normal service, operating decisions are based on validated asset status, approved procedures, current forecasts, and applicable grid instructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "Planned maintenance is assumed to be scheduled around equipment condition, resource availability, access constraints, and production requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "Unplanned maintenance is assumed to use prioritized fault assessment and controlled mobilization appropriate to the severity of the failure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "At end of life, the concept supports safe isolation, removal planning, and transfer of residual operational records to the responsible organization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The control interface includes operational coordination with the Fleet Dispatch Console and Maintenance Planning Engine.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "Marine coordination covers the Crew Transfer Vessel, Daughter Craft, Service Operations Vessel, Helideck, and applicable vessel operating procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "Workforce interfaces include access management through the North Access Scanner, South Access Scanner, and Personnel Tracking Console.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "Supply interfaces cover inventory and replenishment coordination through the Warehouse System and Spares Hub.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "External interfaces include weather services, metocean observations, grid dispatch, port support, and emergency response organizations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 1,
+   "text": "Cybersecurity, communications, fire protection, and backup power are treated as enabling functions within the farm operations boundary.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 2,
+   "text": "This section establishes the operating context and naming convention for the offshore wind farm operations and maintenance system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "The system boundary covers offshore generation assets, supporting marine and shore facilities, operational personnel, and external organizations involved in farm activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "The farm operates in a variable marine environment where access, equipment condition, and grid requirements influence the timing and conduct of work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "Canonical entity names are used throughout this document to identify system parts, actors, operational states, and controlled items.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "In this document, Turbine Controller is referred to by the alias Glassfin.",
+   "tags": [
+    "ALIAS:E_TURBINE_CONTROLLER"
+   ]
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "In this document, Offshore Substation is referred to by the alias Morrowick.",
+   "tags": [
+    "ALIAS:E_OFFSHORE_SUBSTATION"
+   ]
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "In this document, Weather Service is referred to by the alias Pale Lantern.",
+   "tags": [
+    "ALIAS:E_WEATHER_SERVICE"
+   ]
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "The Turbine Controller represents the control function associated with an individual turbine.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "Pitch System and Rotor Brake Unit are turbine subsystems considered within the operational boundary.",
+   "tags": []
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "Converter Cabinet and Nacelle Condition Monitor are treated as distinct turbine equipment for maintenance planning and condition review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "The Blade Inspection Drone is an operational asset used for turbine blade assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "The Offshore Substation provides the farm's offshore electrical collection and switching environment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "Main Transformer and Export Cable Monitor are included as substation and export-system assets, respectively.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "SCADA Gateway is the supervisory interface associated with farm monitoring and control operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "Shore Control Room provides a shore-based operating location for authorized personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "Fleet Dispatch Console supports the coordination of operational resources across the farm.",
+   "tags": []
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "Maintenance Planning Engine supports the preparation and sequencing of maintenance activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "Weather Service represents the external weather information capability considered by farm operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "Metocean Buoy represents an offshore source of environmental observations within the operating context.",
+   "tags": []
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "Crew Transfer Vessel, Daughter Craft, and Service Operations Vessel represent marine resources that may support offshore work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "Helideck is included as an access facility for activities supported by helicopter operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "Personnel Tracking Console represents the personnel location and accountability function.",
+   "tags": []
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "Warehouse System and Spares Hub represent the inventory and logistics context for maintenance materials.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "Work Permit Portal and Cybersecurity Gateway represent enabling functions that support controlled and secure operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 2,
+   "text": "The operating concept also recognizes grid, emergency response, communications, and port support as external or enabling capabilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S051",
+   "section": 3,
+   "text": "The system architecture separates offshore equipment, operational services, and shore-based decision functions while preserving defined interfaces between them.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 3,
+   "text": "The SCADA Gateway provides a controlled boundary for supervisory data exchange between offshore assets and shore-based operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "For this concept, SCADA Gateway is designated Juniper Vale as its operational alias.",
+   "tags": [
+    "ALIAS:E_SCADA_GATEWAY"
+   ]
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "The Maintenance Planning Engine supports work preparation by organizing maintenance needs, resource considerations, and planning constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "For this concept, Maintenance Planning Engine is designated Thistle Crown as its operational alias.",
+   "tags": [
+    "ALIAS:E_MAINTENANCE_PLANNING_ENGINE"
+   ]
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "The Shore Control Room is the principal shore-based setting for monitoring and coordinating wind farm operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "For this concept, Shore Control Room is designated Amber Quay as its operational alias.",
+   "tags": [
+    "ALIAS:E_SHORE_CONTROL_ROOM"
+   ]
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "These three components have distinct responsibilities and are treated as cooperating parts of one operational system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "The SCADA Gateway mediates supervisory exchanges and supports consistent access to operational information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "The Turbine Controller performs local turbine control functions within the offshore equipment environment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "The Turbine Controller produces the Pitch Deviation Notice for operational handling.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "The SCADA Engineer maintains the configuration and technical integrity of supervisory interfaces.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "The Control Engineer uses the shore-based operational picture to assess equipment status and coordinate response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "The Shore Control Room provides a shared operational context for personnel responsible for offshore assets.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "The Duty Planner uses the Maintenance Planning Engine to prepare and review maintenance activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The Maintenance Planning Engine supports planning decisions without replacing the judgment of the Duty Planner.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "The Weather Service contributes environmental information to operational planning and coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "The Marine Coordinator considers offshore conditions and vessel availability when coordinating access to work sites.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "The Fleet Dispatch Console provides a fleet-level view of dispatch activity for operational coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "The Work Permit Portal supports authorization processes that govern work under controlled conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "The Cybersecurity Gateway provides a security boundary for connected operational services.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "The architecture assigns defined responsibilities to interfaces so that system changes can be assessed and managed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "Operational personnel retain authority for decisions that require procedural, safety, or engineering judgment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 3,
+   "text": "This arrangement supports maintainable operations while keeping supervisory functions distinct from planning and human coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S075",
+   "section": 4,
+   "text": "The operating organization combines shore-based planning, marine coordination, vessel crews, and technicians assigned to offshore work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 4,
+   "text": "The Duty Planner develops daily work priorities with input from the Field Supervisor and the Maintenance Planning Engine.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "The Marine Coordinator aligns vessel availability with crew readiness, port access, and the planned work locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "The Crew Transfer Vessel is identified in local procedures by the alias Kestrel Bay.",
+   "tags": [
+    "ALIAS:E_CREW_TRANSFER_VESSEL"
+   ]
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The Vessel Master retains authority for navigation, vessel safety, and decisions about whether a transfer can proceed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "The Fleet Dispatch Console is identified in local procedures by the alias Sable Orchard.",
+   "tags": [
+    "ALIAS:E_FLEET_DISPATCH_CONSOLE"
+   ]
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "The Fleet Dispatch Console gives the Marine Coordinator a shared view of vessel assignments, planned movements, and dispatch status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "The Marine Coordinator uses that view to coordinate the Crew Transfer Vessel, the Service Operations Vessel, and the Daughter Craft as conditions require.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "The Weather Service produces the Squall Window Bulletin for operational awareness.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "The Weather Analyst reviews available forecasts and advises the Marine Coordinator on conditions that may affect marine operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "The Vessel Master evaluates local conditions before departure and continues to reassess them during the voyage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "A Weather Hold pauses affected marine activity until the responsible personnel confirm that operations can resume safely.",
+   "tags": []
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "The Crew Transfer Vessel transports authorized personnel and routine tools between shore and offshore work locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "The Daughter Craft can support short-range transfers when the operating plan and conditions permit its use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "The Service Operations Vessel provides a platform for work that needs longer offshore presence or broader onboard support.",
+   "tags": []
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "The Warehouse System is identified in local procedures by the alias Mosslight.",
+   "tags": [
+    "ALIAS:E_WAREHOUSE_SYSTEM"
+   ]
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "The Warehouse System records stock status and supports preparation of equipment and consumables for scheduled work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "The Storekeeper checks requested materials against available stock and coordinates replenishment with the Spares Hub.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "The Port Agent supports shore-side arrangements for vessel calls, crew access, and staged cargo.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "The Personnel Tracking Console helps the organization maintain an accurate view of personnel assigned to offshore activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "The HSE Officer verifies that work arrangements account for applicable safety controls and personnel responsibilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "The Field Supervisor coordinates task execution offshore and keeps the Duty Planner informed of changes to work progress.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "The Shore Control Room maintains operational oversight and provides a point of coordination for shore-based personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "The operating organization uses defined handoffs so that dispatch, marine judgment, work supervision, and stores control remain accountable functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 5,
+   "text": "The Shore Control Room maintains operational oversight and provides a point of coordination for shore-based personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 5,
+   "text": "This section defines how offshore environmental observations and protected operational networks support safe farm operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "The Metocean Buoy is designated Copper Finch for operational reference.",
+   "tags": [
+    "ALIAS:E_METOCEAN_BUOY"
+   ]
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "The Metocean Buoy measures wind speed and direction, wave height and period, current, air temperature, and barometric pressure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "Sensors are selected and mounted to limit exposure to spray, icing, vibration, and corrosion.",
+   "tags": []
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "An onboard logger timestamps observations and retains a local history during intermittent communications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "The Vessel AIS Receiver produces a Position Quality Flag when position integrity checks fail or confidence falls below its configured threshold.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "The Weather Service uses validated environmental observations in forecast products for offshore planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "The Weather Analyst reviews forecast limitations and identifies conditions that may affect vessel access or turbine work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "Measurement intervals and alarm thresholds are configured to support both trend analysis and timely operational decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "Time synchronization and sensor health are checked as part of routine monitoring.",
+   "tags": []
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "The Cybersecurity Gateway is designated Quiet Harbor for operational reference.",
+   "tags": [
+    "ALIAS:E_CYBERSECURITY_GATEWAY"
+   ]
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "The Cybersecurity Gateway establishes a controlled boundary between authorized shore-side services and offshore operational networks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "The boundary permits only approved protocols, destinations, and service accounts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "External connectivity is denied by default and enabled only for documented operational needs.",
+   "tags": []
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "The SCADA Gateway remains responsible for supervisory communications within its defined control scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "Administrative access requires authenticated individual accounts and role-based authorization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "Privileged sessions are time limited, logged, and reviewed against approved maintenance activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "The Cybersecurity Analyst monitors gateway events for unusual access patterns and configuration changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "Loss of the security boundary places remote administrative functions in a restricted state without bypassing local protective controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "Security events are retained in protected logs for investigation and audit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "Network segmentation limits the effect of a compromised endpoint and supports controlled restoration of service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "Interfaces are tested after configuration changes to confirm that permitted functions remain available and prohibited paths remain blocked.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "Operational procedures identify the authority for approving access, responding to alarms, and returning affected services to normal operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 6,
+   "text": "This section describes turbine control and remote observation during offshore operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S124",
+   "section": 6,
+   "text": "Vessel AIS Receiver is designated Blue Granite for this operational concept.",
+   "tags": [
+    "ALIAS:E_VESSEL_AIS_RECEIVER"
+   ]
+  },
+  {
+   "unit_id": "S125",
+   "section": 6,
+   "text": "Blade Inspection Drone is designated Larkspur for this operational concept.",
+   "tags": [
+    "ALIAS:E_BLADE_INSPECTION_DRONE"
+   ]
+  },
+  {
+   "unit_id": "S126",
+   "section": 6,
+   "text": "Duty Planner prepares the Transfer Manifest Addendum to capture approved vessel deployment changes.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "Glassfin adjusts turbine output within approved operating limits and blocks commands that conflict with active protection conditions.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "Pale Lantern issues forecast updates that support timing decisions for remote observation and field work.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "Turbine Controller executes authorized control actions and reports its operating state through established control interfaces.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "Pitch System changes blade angle in response to turbine control commands and local protection logic.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "Converter Cabinet manages electrical conversion while observing equipment limits and protective interlocks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "Nacelle Condition Monitor provides equipment measurements for ongoing assessment of turbine health.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "SCADA Gateway presents turbine status and control availability to authorized shore personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "Shore Control Room provides a staffed location for supervisory control and operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "Control Engineer reviews alarms and operating conditions before issuing a remote command.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "Remote commands are subject to role-based authorization and are recorded for later operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "Local protection functions retain priority when remote requests conflict with safe operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "Control availability is checked before remote operation begins and after relevant configuration changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "Vessel AIS Receiver collects vessel position broadcasts to support marine traffic awareness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "The receiver maintains a time-stamped view of nearby vessel movements when broadcast coverage is available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "Marine Coordinator uses the available traffic picture to support coordination of offshore movements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "Blade Inspection Drone captures close-range visual observations of accessible blade surfaces.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "Blade Specialist plans inspection passes to provide consistent coverage of areas selected for examination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "Captured imagery is reviewed for visible surface changes and potential maintenance concerns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "Field Supervisor considers remote observations alongside site conditions before recommending follow-up work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "Drone operation is suspended when weather, visibility, or equipment status makes flight unsafe.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 6,
+   "text": "Remote observations supplement field assessment and do not replace required physical inspections.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 6,
+   "text": "Maintenance Planning Engine can use reviewed condition information when prioritizing future maintenance activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S149",
+   "section": 7,
+   "text": "Work Permit Portal is the controlled entry point for planning, reviewing, approving, and closing maintenance work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S150",
+   "section": 7,
+   "text": "Work Permit Portal is referred to as Redoubt in this section.",
+   "tags": [
+    "ALIAS:E_WORK_PERMIT_PORTAL"
+   ]
+  },
+  {
+   "unit_id": "S151",
+   "section": 7,
+   "text": "The authorization lifecycle begins when a work request is entered with its location, scope, planned duration, and responsible team.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "The requester identifies the equipment affected and describes the intended work in terms that can be checked against operating constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "Duty Planner reviews the request for completeness and assigns it to the appropriate planning queue.",
+   "tags": []
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "Maintenance Planning Engine can use reviewed condition information when prioritizing future maintenance activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "Work Permit Portal maintains the request record and its revision history throughout review and execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "The review identifies hazards, required controls, access arrangements, and any operating coordination needed before work can proceed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "HSE Officer reviews the proposed controls when the task presents a material personnel or environmental risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "Technical reviewers confirm that the work scope is compatible with equipment condition and the planned maintenance method.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "SCADA Gateway uses the deviation notice to flag work packages that may require technical review.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "Marine Coordinator checks that the planned access method and timing are practical for the work location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "Vessel Master confirms that the vessel plan can support the approved personnel and equipment transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "Work Permit Portal records review decisions and returns incomplete requests to the requester with the required corrections identified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "Warehouse System produces a Backorder Exception Slip when a requested component cannot be supplied by the planned issue date.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "The Duty Planner resolves outstanding supply and scheduling issues before submitting the request for authorization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "The designated authorizing role grants permission only after required reviews and controls are recorded in the portal.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "Approval is limited to the stated scope, work location, time window, and assigned personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "Field Supervisor verifies that the approved conditions remain valid before the crew starts work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "Any material change to scope, conditions, or timing requires reassessment and may suspend the current authorization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "Work Permit Portal records the start, pause, resumption, and completion of authorized work against the permit record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "The responsible team reports completion status and outstanding issues before the permit is closed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 7,
+   "text": "Juniper Vale shall provide current operational status to permit reviewers when requested as part of the authorization check.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S172",
+   "section": 7,
+   "text": "Closed records remain available for audit, incident review, and future planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 8,
+   "text": "During normal operation, station service transformers at the Offshore Substation supply the facility's auxiliary electrical loads from the medium-voltage collection system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 8,
+   "text": "The normal supply serves control systems, lighting, ventilation, communications, and equipment required for safe switching and maintenance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 8,
+   "text": "Essential loads are separated from nonessential loads so that backup capacity can be reserved for safety and control functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 8,
+   "text": "The Emergency Generator is assigned the operational alias Foxglove for maintenance and alarm references.",
+   "tags": [
+    "ALIAS:E_EMERGENCY_GENERATOR"
+   ]
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "On loss of the normal auxiliary supply, automatic controls initiate the Emergency Generator start sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "Transfer to the emergency bus occurs only after voltage and frequency are within the configured acceptance limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "The transfer arrangement prevents the normal and emergency sources from being connected in parallel unless an approved synchronizing function is provided.",
+   "tags": []
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "The Emergency Generator supplies the designated emergency distribution bus and is not intended to support turbine export production.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "Loads connected to the emergency distribution bus are prioritized according to their contribution to personnel safety, equipment protection, and controlled shutdown.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "Nonessential loads are shed automatically when generator capacity is insufficient or the measured load exceeds its operating limit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "If the Emergency Generator does not start or stabilize, the system raises an alarm and maintains any available uninterruptible control power.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "Operators use the approved recovery procedure to assess the fault, preserve essential services, and restore the normal supply when it is safe to do so.",
+   "tags": []
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "The Electrical Technician verifies protective device settings and transfer interlocks during planned maintenance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Scheduled exercising confirms that the Emergency Generator can start, accept its expected load, and operate for the required test duration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "Fuel condition, cooling, lubrication, battery readiness, and exhaust ventilation are checked as part of the generator readiness program.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "Maintenance Planning Engine schedules inspections and corrective work using equipment condition and operating history.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "Morrowick maintains the designated emergency distribution bus within its approved operating limits.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "The Grid Interface Relay provides status indications that support assessment of the normal supply and its protective state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "The Turbine Controller enters its configured safe operating mode when required auxiliary services are unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "The SCADA Gateway presents supply alarms and generator status to the Shore Control Room for remote awareness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "The Control Engineer reviews persistent alarms and coordinates electrical support with the Substation Operator.",
+   "tags": []
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "Metocean Buoy produces the Wave Burst Record at the configured sampling interval.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "Thistle Crown schedules periodic reviews of standby electrical maintenance requirements and outstanding corrective work.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "After normal supply is restored, transfer back is permitted only after stable conditions are confirmed and the emergency source can be unloaded safely.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 9,
+   "text": "The Grid Interface Relay defines the operational boundary between the offshore farm and the external transmission system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 9,
+   "text": "Grid Interface Relay is known operationally as Wildmere.",
+   "tags": [
+    "ALIAS:E_GRID_INTERFACE_RELAY"
+   ]
+  },
+  {
+   "unit_id": "S199",
+   "section": 9,
+   "text": "The farm exports electrical power through the Offshore Substation, Main Transformer, and export cable to the designated grid connection point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 9,
+   "text": "The Export Cable Monitor provides measurements that support assessment of the export path.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 9,
+   "text": "The Grid Interface Relay exchanges authorized operating signals with the transmission system at the agreed interface.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "The Grid Dispatcher sets external dispatch requirements within the applicable connection agreement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "The Fleet Dispatch Console allocates requested farm output among available generating units.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "Dispatch commands remain subject to equipment capability, protection settings, and approved operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "The farm reports measured active power at the grid boundary for operational monitoring and settlement processes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "Reactive power capability is managed in accordance with the connection agreement and current equipment conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "Frequency response functions are enabled only when the relevant operating mode is authorized and available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "Protection coordination prevents a fault on the external system from causing unnecessary disconnection of healthy farm equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "Loss of communications does not remove local electrical protection or equipment interlocks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "A Grid Constraint may require reduced export, revised dispatch, or temporary disconnection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "SCADA Gateway provides relay status and interface measurements to the farm monitoring environment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "SCADA Gateway produces the Session Revocation Receipt when an authenticated control session is terminated.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "Maintenance Planning Engine uses the Squall Window Bulletin when reviewing the timing of planned work.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "Amber Quay coordinates operational notices and control-room decisions affecting the farm interface.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "Kestrel Bay reports its approach and departure status in accordance with the approved marine coordination procedure.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "The Substation Operator confirms that switching actions affecting the export path are within the authorized work scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "The Control Engineer verifies that dispatch changes are reflected in the applicable control settings before implementation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "Interface alarms are prioritized according to their effect on safety, equipment protection, and continuity of export.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "Planned tests are coordinated to avoid conflicting with dispatch obligations or active maintenance work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "A return to normal export follows confirmation that the interface is stable and all required protections are available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 9,
+   "text": "The Grid Interface Relay maintains the farm's dispatch boundary while allowing local systems to manage turbine-level operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 10,
+   "text": "Marine coordination aligns vessel movements, personnel transfers, and shore-side support with the approved work schedule.",
+   "tags": []
+  },
+  {
+   "unit_id": "S223",
+   "section": 10,
+   "text": "The Marine Coordinator maintains the daily marine plan and resolves conflicts between planned activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 10,
+   "text": "The Duty Planner updates work priorities when access conditions or resource availability change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 10,
+   "text": "The Fleet Dispatch Console uses the quality flag to support movement planning.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S226",
+   "section": 10,
+   "text": "The Vessel Master confirms departure readiness and reports any change that could affect the passage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "The Crew Transfer Vessel is assigned to transfers that meet the approved operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "The Service Operations Vessel provides a stable offshore base when the work plan requires extended support.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "The Daughter Craft is used only when its task, route, and operating conditions have been reviewed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Weather Service provides forecast information for marine planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "Copper Finch reports local sea conditions for use in access planning.",
+   "tags": [
+    "A10:link"
+   ]
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "The Weather Analyst reviews forecast changes and advises the Marine Coordinator when conditions may affect the plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "Weather Hold is applied when environmental limits make a planned movement or transfer unsafe.",
+   "tags": []
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "The Personnel Tracking Console maintains the offshore personnel roster and expected return times.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "The North Access Scanner records authorized entry at the north access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "The South Access Scanner records authorized entry at the south access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "The HSE Officer produces the Harness Audit Card before the applicable transfer activity.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "The Shore Control Room maintains an overview of active marine operations and operational restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The Operations Radio Console supports routine communications and escalation during offshore activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "The Port Agent coordinates port services and confirms that planned departures can be supported.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "Mosslight records stock movements and makes current inventory information available for logistics planning.",
+   "tags": [
+    "A9:link"
+   ]
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "The Storekeeper prepares requested equipment for dispatch in accordance with the approved work plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "The Work Permit Portal is checked before personnel are released to perform controlled work offshore.",
+   "tags": []
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "The Rescue Coordinator maintains the response arrangements for incidents involving vessels or personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "The Marine Coordinator records changes to the movement plan and ensures that affected teams receive the update.",
+   "tags": []
+  },
+  {
+   "unit_id": "S246",
+   "section": 11,
+   "text": "The Maintenance Planning Engine ranks planned and corrective work using asset condition, safety exposure, production impact, access feasibility, and resource availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S247",
+   "section": 11,
+   "text": "The Duty Planner reviews the ranked queue and confirms that urgent work has a clear technical basis and a feasible execution path.",
+   "tags": []
+  },
+  {
+   "unit_id": "S248",
+   "section": 11,
+   "text": "Confirmed faults that threaten personnel safety or cause substantial generation loss receive priority over routine inspections.",
+   "tags": []
+  },
+  {
+   "unit_id": "S249",
+   "section": 11,
+   "text": "Planned work is advanced when its due date, condition evidence, and operational value justify the required outage or vessel time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S250",
+   "section": 11,
+   "text": "The Nacelle Condition Monitor provides condition data that helps distinguish developing degradation from transient alarms.",
+   "tags": []
+  },
+  {
+   "unit_id": "S251",
+   "section": 11,
+   "text": "The Turbine Sensor Bus provides operating measurements for work that depends on recent machine behavior.",
+   "tags": []
+  },
+  {
+   "unit_id": "S252",
+   "section": 11,
+   "text": "The Export Cable Monitor helps planners assess whether cable condition warrants inspection or corrective intervention.",
+   "tags": []
+  },
+  {
+   "unit_id": "S253",
+   "section": 11,
+   "text": "The Field Supervisor checks reported faults against available evidence and identifies work that requires an offshore visit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S254",
+   "section": 11,
+   "text": "The Blade Inspection Drone can support inspection planning when blade access from a vessel or by rope team is not justified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S255",
+   "section": 11,
+   "text": "The Weather Service supplies forecast information for evaluating marine and aviation access options.",
+   "tags": []
+  },
+  {
+   "unit_id": "S256",
+   "section": 11,
+   "text": "The Weather Analyst reviews forecast confidence and highlights conditions that could invalidate a planned access period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S257",
+   "section": 11,
+   "text": "The Marine Coordinator compares expected access conditions with vessel capability, transit time, and worksite limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S258",
+   "section": 11,
+   "text": "The Duty Planner considers Crew Transfer Vessel, Daughter Craft, Service Operations Vessel, and Helideck access when selecting a mobilization method.",
+   "tags": []
+  },
+  {
+   "unit_id": "S259",
+   "section": 11,
+   "text": "A Weather Hold prevents mobilization when forecast or observed conditions exceed the approved operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S260",
+   "section": 11,
+   "text": "Sable Orchard assigns vessel and crew resources to approved work packages after the Duty Planner confirms the operating priority.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S261",
+   "section": 11,
+   "text": "The Marine Coordinator coordinates resource changes with the Vessel Master and affected work teams.",
+   "tags": []
+  },
+  {
+   "unit_id": "S262",
+   "section": 11,
+   "text": "The Storekeeper uses the exception slip to validate an unavailable part before the work package is rescheduled.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S263",
+   "section": 11,
+   "text": "The Duty Planner accounts for part availability, technician competence, and estimated task duration before committing a work window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S264",
+   "section": 11,
+   "text": "Work packages with long lead requirements are scheduled early enough to avoid avoidable vessel standby and repeat mobilization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S265",
+   "section": 11,
+   "text": "The Work Permit Portal supports readiness checks for work requiring controlled access or electrical isolation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S266",
+   "section": 11,
+   "text": "The HSE Officer reviews hazards and confirms that proposed controls match the task scope and site conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S267",
+   "section": 11,
+   "text": "The Offshore Substation sends a Transformer Tap Snapshot when a transformer condition review is requested.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S268",
+   "section": 11,
+   "text": "The Substation Operator confirms local operating constraints before substation work is placed in the executable plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S269",
+   "section": 11,
+   "text": "The Duty Planner revises priorities when asset condition, access forecasts, or resource availability changes, and communicates the resulting plan to affected teams.",
+   "tags": []
+  },
+  {
+   "unit_id": "S270",
+   "section": 12,
+   "text": "Weather Service provides forecast conditions and confidence information for planned work areas and vessel routes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S271",
+   "section": 12,
+   "text": "Metocean Buoy observations give the team a local reference for checking forecast trends and current sea state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S272",
+   "section": 12,
+   "text": "Weather Analyst compares forecast data with recent observations before advising on the reliability of a work window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S273",
+   "section": 12,
+   "text": "Forecast confidence is considered alongside the predicted conditions rather than treated as a substitute for operational limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S274",
+   "section": 12,
+   "text": "The Duty Planner checks that the expected conditions remain within the limits for the task, transfer method, and vessel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S275",
+   "section": 12,
+   "text": "Low confidence near a limit leads to more conservative planning and a shorter review interval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S276",
+   "section": 12,
+   "text": "A Weather Hold is applied when conditions are outside the approved limits or the available evidence is insufficient to support safe work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S277",
+   "section": 12,
+   "text": "The Marine Coordinator reviews access options and vessel availability when a work window narrows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S278",
+   "section": 12,
+   "text": "The Vessel Master receives the Transfer Manifest Addendum before departure.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S279",
+   "section": 12,
+   "text": "The Crew Transfer Vessel proceeds only when the Vessel Master considers the approach and transfer conditions acceptable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S280",
+   "section": 12,
+   "text": "A forecast that improves does not by itself release a hold, because the team also checks current observations and the task-specific limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S281",
+   "section": 12,
+   "text": "The Service Operations Vessel may provide a more stable work platform, but its operating limits still govern whether work can proceed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S282",
+   "section": 12,
+   "text": "Vessel Standby is used when transit or station keeping remains possible but personnel transfer or task execution is not justified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S283",
+   "section": 12,
+   "text": "The Marine Coordinator reassesses the route when wind direction, wave conditions, or visibility changes materially.",
+   "tags": []
+  },
+  {
+   "unit_id": "S284",
+   "section": 12,
+   "text": "The Vessel Master can pause or abort an approach when observed conditions differ from the forecast or deteriorate during transit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S285",
+   "section": 12,
+   "text": "Maintenance Planning Engine produces the Deferred Task Rationale when weather prevents a planned task from proceeding.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S286",
+   "section": 12,
+   "text": "The rationale supports later reprioritization without implying that the task is safe under the current conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S287",
+   "section": 12,
+   "text": "Quiet Harbor blocks a route change when the required authorization is incomplete.",
+   "tags": [
+    "A11:link"
+   ]
+  },
+  {
+   "unit_id": "S288",
+   "section": 12,
+   "text": "Blue Granite provides vessel position information for review against the planned route and operating area.",
+   "tags": [
+    "A12:link"
+   ]
+  },
+  {
+   "unit_id": "S289",
+   "section": 12,
+   "text": "The team considers forecast uncertainty when deciding whether to commit crews, fuel, and vessel time to a remote work site.",
+   "tags": []
+  },
+  {
+   "unit_id": "S290",
+   "section": 12,
+   "text": "When conditions are changing rapidly, the Marine Coordinator seeks an updated forecast before confirming a departure or transfer plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S291",
+   "section": 12,
+   "text": "Work already in progress is reassessed if measured conditions approach a limit, and personnel are withdrawn when the safe margin is no longer adequate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S292",
+   "section": 12,
+   "text": "The Duty Planner adjusts the executable plan when a delay, cancellation, or alternative access method changes resource demand.",
+   "tags": []
+  },
+  {
+   "unit_id": "S293",
+   "section": 12,
+   "text": "Decision records capture the forecast basis, applicable limits, observed conditions, and the reason for proceeding, holding, or returning to port.",
+   "tags": []
+  },
+  {
+   "unit_id": "S294",
+   "section": 13,
+   "text": "The Turbine Sensor Bus collects operating measurements from the Turbine Controller, Pitch System, Converter Cabinet, and Nacelle Condition Monitor.",
+   "tags": []
+  },
+  {
+   "unit_id": "S295",
+   "section": 13,
+   "text": "The SCADA Gateway forwards time-stamped observations to the Shore Control Room for review against configured operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S296",
+   "section": 13,
+   "text": "The monitoring process retains the source, timestamp, and turbine identifier for each observation so that abnormal readings can be traced to their origin.",
+   "tags": []
+  },
+  {
+   "unit_id": "S297",
+   "section": 13,
+   "text": "The Control Engineer reviews alarms alongside recent operating trends rather than treating an isolated threshold crossing as a confirmed fault.",
+   "tags": []
+  },
+  {
+   "unit_id": "S298",
+   "section": 13,
+   "text": "Validation checks cover sensor range, signal freshness, timestamp alignment, and consistency with related measurements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S299",
+   "section": 13,
+   "text": "The Control Engineer compares disputed readings with independent signals from the Turbine Controller and Nacelle Condition Monitor where available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S300",
+   "section": 13,
+   "text": "A stale or implausible value is marked as unverified and is not used alone to justify an intrusive maintenance task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S301",
+   "section": 13,
+   "text": "Repeated or corroborated deviations are assessed for severity, persistence, and potential impact on safe turbine operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S302",
+   "section": 13,
+   "text": "The Control Engineer records the evidence considered and the basis for accepting, rejecting, or continuing to monitor an alert.",
+   "tags": []
+  },
+  {
+   "unit_id": "S303",
+   "section": 13,
+   "text": "The Shore Control Room escalates an alert when its severity exceeds the operating threshold or when the evidence indicates a developing hazard.",
+   "tags": []
+  },
+  {
+   "unit_id": "S304",
+   "section": 13,
+   "text": "The Duty Planner reviews accepted alerts for immediate response needs and for effects on the executable maintenance plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S305",
+   "section": 13,
+   "text": "Where a turbine response is required, the Control Engineer follows the approved operating procedure and confirms the resulting state through available indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S306",
+   "section": 13,
+   "text": "If an observation suggests a risk to personnel or equipment, the response prioritizes safe operation and restricts work until the condition is understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S307",
+   "section": 13,
+   "text": "The Offshore Substation is consulted when the event may affect electrical operation or require coordination beyond the turbine.",
+   "tags": []
+  },
+  {
+   "unit_id": "S308",
+   "section": 13,
+   "text": "The Maintenance Planning Engine receives validated condition information for prioritization and scheduling of follow-up work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S309",
+   "section": 13,
+   "text": "The Weather Service and Metocean Buoy provide contextual conditions that help reviewers distinguish environmental effects from equipment deterioration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S310",
+   "section": 13,
+   "text": "The Control Engineer requests an on-site inspection when remote evidence cannot resolve a material uncertainty.",
+   "tags": []
+  },
+  {
+   "unit_id": "S311",
+   "section": 13,
+   "text": "Inspection findings are compared with the original observations before the alert is closed or converted into corrective work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S312",
+   "section": 13,
+   "text": "The Crew Transfer Vessel uses the Harness Audit Card to verify the applicable equipment checks before personnel transfer.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S313",
+   "section": 13,
+   "text": "The Blade Inspection Drone produces the Leading Edge Tile Image during a close-range survey of the blade surface.",
+   "tags": [
+    "F11:intro"
+   ]
+  },
+  {
+   "unit_id": "S314",
+   "section": 13,
+   "text": "Larkspur shall repeat a close-range pass when image coverage is insufficient to assess the suspected surface condition.",
+   "tags": [
+    "A13:link"
+   ]
+  },
+  {
+   "unit_id": "S315",
+   "section": 13,
+   "text": "The Blade Specialist reviews available inspection evidence and reports whether further examination is warranted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S316",
+   "section": 13,
+   "text": "The Control Engineer reassesses the alert after field findings or corrected sensor data become available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S317",
+   "section": 13,
+   "text": "The Shore Control Room retains the decision record, supporting observations, and response outcome for operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S318",
+   "section": 14,
+   "text": "Permit controls coordinate approved work scope, electrical isolation, field execution, and return to service without treating authorization as proof of a safe electrical state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S319",
+   "section": 14,
+   "text": "The Duty Planner submits a defined task scope, work location, crew, and requested operating window for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S320",
+   "section": 14,
+   "text": "The Field Supervisor confirms that the proposed method, access arrangements, and work party are suitable for the task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S321",
+   "section": 14,
+   "text": "Redoubt shall block permit release until required risk reviews and isolation references are complete.",
+   "tags": [
+    "A14:link"
+   ]
+  },
+  {
+   "unit_id": "S322",
+   "section": 14,
+   "text": "The HSE Officer reviews task hazards and confirms that required controls are assigned before the permit is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S323",
+   "section": 14,
+   "text": "The Weather Analyst uses the Wave Burst Record to assess whether the planned access period remains suitable.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S324",
+   "section": 14,
+   "text": "The Port Agent issues the Berth Slot Confirmation for the planned work period.",
+   "tags": [
+    "F12:intro"
+   ]
+  },
+  {
+   "unit_id": "S325",
+   "section": 14,
+   "text": "The Electrical Technician identifies the electrical sources, isolation points, and verification steps required by the approved scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S326",
+   "section": 14,
+   "text": "The Substation Operator applies authorized switching actions and records the resulting equipment state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S327",
+   "section": 14,
+   "text": "For turbine work, the Electrical Technician verifies the relevant local isolation and secures the equipment against unintended energization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S328",
+   "section": 14,
+   "text": "Turbine Lockout is maintained while personnel are exposed to the identified hazards.",
+   "tags": []
+  },
+  {
+   "unit_id": "S329",
+   "section": 14,
+   "text": "Work begins only after the Field Supervisor confirms that the permit is active and the required isolations have been independently verified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S330",
+   "section": 14,
+   "text": "The Field Supervisor briefs the crew on the permit limits, isolation boundaries, communications, and conditions requiring work to stop.",
+   "tags": []
+  },
+  {
+   "unit_id": "S331",
+   "section": 14,
+   "text": "The Electrical Technician proves the test instrument, tests for absence of voltage, and proves the instrument again where the procedure requires it.",
+   "tags": []
+  },
+  {
+   "unit_id": "S332",
+   "section": 14,
+   "text": "The Personnel Tracking Console supports confirmation that personnel assigned to the task are accounted for at the work location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S333",
+   "section": 14,
+   "text": "A change in equipment condition, task scope, or operating constraint requires the Field Supervisor to pause work and reassess the authorization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S334",
+   "section": 14,
+   "text": "The Duty Planner coordinates any revised work window with the relevant operational roles before the permit is amended.",
+   "tags": []
+  },
+  {
+   "unit_id": "S335",
+   "section": 14,
+   "text": "The Field Supervisor confirms that tools, temporary connections, and personnel are clear before requesting isolation removal.",
+   "tags": []
+  },
+  {
+   "unit_id": "S336",
+   "section": 14,
+   "text": "The Electrical Technician checks that the work area is ready for restoration and reports any outstanding defects or restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S337",
+   "section": 14,
+   "text": "The Substation Operator removes isolations only under the approved switching process and records each restoration action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S338",
+   "section": 14,
+   "text": "The Control Engineer reviews the restored equipment state and confirms that required operational checks are complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S339",
+   "section": 14,
+   "text": "The Shore Control Room retains the permit status, isolation history, test results, and restoration decision for operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S340",
+   "section": 14,
+   "text": "The Duty Planner closes the work authorization after the Field Supervisor confirms completion or formally records any remaining work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S341",
+   "section": 14,
+   "text": "Equipment returns to service only when operating personnel accept the restored condition and any applicable restrictions are communicated.",
+   "tags": []
+  },
+  {
+   "unit_id": "S342",
+   "section": 15,
+   "text": "The Substation Operator maintains the Offshore Substation within approved operating limits and follows current switching instructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S343",
+   "section": 15,
+   "text": "At the start of each shift, the operator reviews alarms, active restrictions, equipment status, and handover notes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S344",
+   "section": 15,
+   "text": "Routine rounds cover room temperature, ventilation, water ingress, lighting, access control, and visible signs of damage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S345",
+   "section": 15,
+   "text": "The operator checks Main Transformer temperatures, cooling equipment, oil indications, and abnormal noise against established limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S346",
+   "section": 15,
+   "text": "The Export Cable Monitor is reviewed for trends or alarms that require escalation to the Control Engineer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S347",
+   "section": 15,
+   "text": "The Grid Interface Relay is checked for healthy indications and consistency with the approved grid operating state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S348",
+   "section": 15,
+   "text": "The SCADA Gateway displays are compared with local indications when equipment status is uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S349",
+   "section": 15,
+   "text": "The Control Engineer investigates unexplained discrepancies before operating personnel rely on remote indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S350",
+   "section": 15,
+   "text": "The Work Permit Portal is checked to confirm that active work authorizations and isolation boundaries remain current.",
+   "tags": []
+  },
+  {
+   "unit_id": "S351",
+   "section": 15,
+   "text": "The operator verifies that personnel access records are consistent with the planned work and current site occupancy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S352",
+   "section": 15,
+   "text": "The Fire Detection Panel is checked for healthy status, active faults, and unobstructed access to response equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S353",
+   "section": 15,
+   "text": "The Emergency Generator produces the Start Test Trace during its scheduled functional test.",
+   "tags": [
+    "F13:intro"
+   ]
+  },
+  {
+   "unit_id": "S354",
+   "section": 15,
+   "text": "The operator confirms fuel level, starting battery condition, ventilation, and readiness of the Emergency Generator for loss of normal supply.",
+   "tags": []
+  },
+  {
+   "unit_id": "S355",
+   "section": 15,
+   "text": "Foxglove is exercised under the approved test procedure to confirm reliable backup starting and stable output.",
+   "tags": [
+    "A15:link"
+   ]
+  },
+  {
+   "unit_id": "S356",
+   "section": 15,
+   "text": "The operator records test results and raises a defect promptly if the Emergency Generator fails to start or sustain its required load.",
+   "tags": []
+  },
+  {
+   "unit_id": "S357",
+   "section": 15,
+   "text": "The Cybersecurity Gateway uses the revocation receipt to support access control during routine account and session reviews.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S358",
+   "section": 15,
+   "text": "Switching is performed only by authorized personnel using approved instructions and positive confirmation of equipment identity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S359",
+   "section": 15,
+   "text": "Before operating a breaker or isolator, the operator verifies the required clearances and confirms that affected parties are informed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S360",
+   "section": 15,
+   "text": "If a protection alarm, abnormal electrical condition, or loss of critical monitoring occurs, the operator limits further switching and escalates the condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S361",
+   "section": 15,
+   "text": "The operator places the Offshore Substation in Substation Degraded when required by operating procedures and communicates the resulting restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S362",
+   "section": 15,
+   "text": "The Grid Dispatcher is notified when a condition could affect export capability or compliance with grid instructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S363",
+   "section": 15,
+   "text": "The Electrical Technician supports fault diagnosis and maintenance under the applicable work authorization and isolation controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S364",
+   "section": 15,
+   "text": "The Shore Control Room receives concise status updates, including operating limitations and the expected time of the next review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S365",
+   "section": 15,
+   "text": "Shift records capture inspections, alarms, tests, switching actions, defects, and handover items so that decisions remain traceable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S366",
+   "section": 16,
+   "text": "Grid export is coordinated against the dispatch instructions, equipment capability, and the agreed operating limits for the connection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S367",
+   "section": 16,
+   "text": "Grid Dispatcher issues active-power targets and ramp instructions through the established dispatch channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S368",
+   "section": 16,
+   "text": "Control Engineer reviews each instruction for consistency with current plant status before applying it.",
+   "tags": []
+  },
+  {
+   "unit_id": "S369",
+   "section": 16,
+   "text": "SCADA Gateway provides the operational measurements used to track delivered power and instruction response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S370",
+   "section": 16,
+   "text": "Fleet Dispatch Console compares the requested output with available turbine capability and known operating restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S371",
+   "section": 16,
+   "text": "The Shore Control Room maintains the current dispatch target, ramp rate, and next review time in the shift record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S372",
+   "section": 16,
+   "text": "Grid Interface Relay produces an Export Limit Advisory when available export capability falls below the active dispatch target.",
+   "tags": [
+    "F14:intro"
+   ]
+  },
+  {
+   "unit_id": "S373",
+   "section": 16,
+   "text": "Wildmere applies the accepted export ceiling to control outputs and records its effective time for audit.",
+   "tags": [
+    "A16:link"
+   ]
+  },
+  {
+   "unit_id": "S374",
+   "section": 16,
+   "text": "Shore Control Room uses the tap snapshot to check the recorded transformer position during export reviews.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S375",
+   "section": 16,
+   "text": "Control Engineer confirms that the control response follows the instruction and remains within the permitted ramp rate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S376",
+   "section": 16,
+   "text": "When a Grid Constraint is active, the operator records its scope, start time, and expected review point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S377",
+   "section": 16,
+   "text": "Turbine Controller adjusts output in accordance with validated plant commands and local equipment protections.",
+   "tags": []
+  },
+  {
+   "unit_id": "S378",
+   "section": 16,
+   "text": "Converter Cabinet status is reviewed for alarms or restrictions that could affect export capability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S379",
+   "section": 16,
+   "text": "Offshore Substation operating status is included in the assessment of the available export path.",
+   "tags": []
+  },
+  {
+   "unit_id": "S380",
+   "section": 16,
+   "text": "Main Transformer loading is monitored against its approved continuous and short-term limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S381",
+   "section": 16,
+   "text": "Export Cable Monitor indications are checked for conditions that require a reduced transfer level.",
+   "tags": []
+  },
+  {
+   "unit_id": "S382",
+   "section": 16,
+   "text": "Substation Operator coordinates switching activity that could alter the available export configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S383",
+   "section": 16,
+   "text": "Grid Dispatcher is notified when measured delivery differs materially from the instructed target or when an operating limit is approached.",
+   "tags": []
+  },
+  {
+   "unit_id": "S384",
+   "section": 16,
+   "text": "Control Engineer records the reason for any temporary deviation from the requested output and the action taken.",
+   "tags": []
+  },
+  {
+   "unit_id": "S385",
+   "section": 16,
+   "text": "Fleet Dispatch Console retains the instruction history and the corresponding plant response for later review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S386",
+   "section": 16,
+   "text": "If communications with the grid are interrupted, the Shore Control Room maintains the last validated operating limit while seeking clarification through the approved channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S387",
+   "section": 16,
+   "text": "Emergency Generator operation is not treated as a means of maintaining export unless the approved electrical configuration explicitly supports it.",
+   "tags": []
+  },
+  {
+   "unit_id": "S388",
+   "section": 16,
+   "text": "Duty Planner considers active dispatch constraints when scheduling work that would reduce generation or access to export equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S389",
+   "section": 16,
+   "text": "Shift records capture dispatch instructions, constraint decisions, measured response, and unresolved follow-up actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S390",
+   "section": 17,
+   "text": "Vessel Master produces the Crew Count Correction when a verified headcount differs from the departure record.",
+   "tags": [
+    "F15:intro"
+   ]
+  },
+  {
+   "unit_id": "S391",
+   "section": 17,
+   "text": "Crew accountability covers personnel movement between shore facilities, vessels, offshore structures, and the return journey.",
+   "tags": []
+  },
+  {
+   "unit_id": "S392",
+   "section": 17,
+   "text": "Personnel Tracking Console maintains the current accountability status for personnel assigned to offshore work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S393",
+   "section": 17,
+   "text": "Personnel confirm their identity before entering controlled shore access areas.",
+   "tags": []
+  },
+  {
+   "unit_id": "S394",
+   "section": 17,
+   "text": "North Access Scanner records identity checks at the north shore access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S395",
+   "section": 17,
+   "text": "South Access Scanner records identity checks at the south shore access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S396",
+   "section": 17,
+   "text": "Duty Planner verifies that planned crew assignments match the approved work schedule before mobilization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S397",
+   "section": 17,
+   "text": "Marine Coordinator reviews the intended crew movement against vessel capacity and operating conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S398",
+   "section": 17,
+   "text": "Vessel Master confirms the departure roster before the vessel leaves port.",
+   "tags": []
+  },
+  {
+   "unit_id": "S399",
+   "section": 17,
+   "text": "The departure headcount is reconciled against the crew manifest before the vessel gets underway.",
+   "tags": []
+  },
+  {
+   "unit_id": "S400",
+   "section": 17,
+   "text": "Marine Coordinator monitors reported vessel movements during transit to offshore locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S401",
+   "section": 17,
+   "text": "Vessel AIS Receiver provides vessel position information for movement monitoring.",
+   "tags": []
+  },
+  {
+   "unit_id": "S402",
+   "section": 17,
+   "text": "Personnel report any change in destination or transfer plan to the Vessel Master as soon as practicable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S403",
+   "section": 17,
+   "text": "The Vessel Master records crew changes that occur during transit or between offshore locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S404",
+   "section": 17,
+   "text": "Personnel are accounted for before a transfer from a vessel to an offshore structure begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S405",
+   "section": 17,
+   "text": "Field Supervisor confirms the work party is complete before personnel enter the work area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S406",
+   "section": 17,
+   "text": "Personnel report their arrival and departure at each active work location using the approved site process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S407",
+   "section": 17,
+   "text": "Work access is limited to personnel whose assignment and authorization are current.",
+   "tags": []
+  },
+  {
+   "unit_id": "S408",
+   "section": 17,
+   "text": "HSE Officer verifies that personnel expected at the work site are accounted for during scheduled checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S409",
+   "section": 17,
+   "text": "The Vessel Master maintains an onboard count while personnel are aboard the vessel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S410",
+   "section": 17,
+   "text": "Marine Coordinator reviews return movements so that shore personnel can anticipate vessel arrivals.",
+   "tags": []
+  },
+  {
+   "unit_id": "S411",
+   "section": 17,
+   "text": "Personnel are reconciled against the return roster when they disembark at shore.",
+   "tags": []
+  },
+  {
+   "unit_id": "S412",
+   "section": 17,
+   "text": "Field Supervisor escalates any unexplained absence or overdue check-in to Marine Coordinator without delay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S413",
+   "section": 17,
+   "text": "When communications are unavailable, the responsible supervisor keeps a local record and reports it when service is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S414",
+   "section": 17,
+   "text": "Accountability records retain the time, location, responsible role, and disposition of each material movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S415",
+   "section": 18,
+   "text": "Cybersecurity operations protect the wind farm control environment while supporting safe and reliable production.",
+   "tags": []
+  },
+  {
+   "unit_id": "S416",
+   "section": 18,
+   "text": "The Cybersecurity Gateway monitors traffic between operational networks and approved external connections.",
+   "tags": []
+  },
+  {
+   "unit_id": "S417",
+   "section": 18,
+   "text": "The SCADA Gateway records security-relevant access and control events for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S418",
+   "section": 18,
+   "text": "Monitoring rules identify unusual login patterns, unexpected configuration changes, and communications outside approved operating windows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S419",
+   "section": 18,
+   "text": "The Cybersecurity Analyst reviews alerts, assesses their operational significance, and escalates urgent concerns to the on-duty operations lead.",
+   "tags": []
+  },
+  {
+   "unit_id": "S420",
+   "section": 18,
+   "text": "The Shore Control Room maintains an operational view of affected systems and coordinates immediate protective actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S421",
+   "section": 18,
+   "text": "Security monitoring is continuous, with alert coverage maintained during both routine operations and planned maintenance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S422",
+   "section": 18,
+   "text": "Access is granted according to role, task need, and the current authorization of the individual or service account.",
+   "tags": []
+  },
+  {
+   "unit_id": "S423",
+   "section": 18,
+   "text": "The Control Engineer and SCADA Engineer use individually assigned accounts rather than shared credentials for interactive work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S424",
+   "section": 18,
+   "text": "Privileged access is limited to approved personnel and is recorded for subsequent review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S425",
+   "section": 18,
+   "text": "Access rights are reviewed at defined intervals and when a person changes duties or leaves the operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S426",
+   "section": 18,
+   "text": "Temporary access for maintenance is approved for a stated purpose and removed when the work is complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S427",
+   "section": 18,
+   "text": "Remote sessions require approved connection paths, strong authentication, and active supervision when they can affect live operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S428",
+   "section": 18,
+   "text": "Cybersecurity Analyst produces the Firmware Hash Attestation for controlled software releases.",
+   "tags": [
+    "F16:intro"
+   ]
+  },
+  {
+   "unit_id": "S429",
+   "section": 18,
+   "text": "Field Supervisor checks that cybersecurity requirements are included in the work briefing before technicians begin affected tasks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S430",
+   "section": 18,
+   "text": "Field Supervisor uses the Deferred Task Rationale when a cybersecurity-related work item must be postponed.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S431",
+   "section": 18,
+   "text": "Personnel report suspected compromise, lost credentials, and unexplained equipment behavior promptly through the established operations channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S432",
+   "section": 18,
+   "text": "The incident lead classifies each report, assigns an owner, and records its time, scope, and current status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S433",
+   "section": 18,
+   "text": "When containment is needed, technical teams isolate only the affected connection or service where this can be done without creating an unsafe operating condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S434",
+   "section": 18,
+   "text": "The Control Engineer and Electrical Technician coordinate any operational changes with the relevant duty role before implementation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S435",
+   "section": 18,
+   "text": "The Cybersecurity Analyst preserves relevant logs and technical evidence while limiting access to personnel assigned to the investigation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S436",
+   "section": 18,
+   "text": "Recovery begins only after the incident lead confirms that the threat is contained and the affected system is suitable for return to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S437",
+   "section": 18,
+   "text": "The SCADA Engineer validates restored configurations and communications before normal monitoring responsibilities resume.",
+   "tags": []
+  },
+  {
+   "unit_id": "S438",
+   "section": 18,
+   "text": "Material actions and decisions are documented with the time, location, responsible role, and disposition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S439",
+   "section": 18,
+   "text": "After significant incidents, the technical teams review causes, response effectiveness, and corrective actions with operations management.",
+   "tags": []
+  },
+  {
+   "unit_id": "S440",
+   "section": 19,
+   "text": "Blade inspection is initiated when scheduled surveillance, turbine alarms, or operational reports indicate that blade condition requires review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S441",
+   "section": 19,
+   "text": "The Maintenance Planning Engine combines inspection intervals, prior defect history, and turbine availability to propose survey dates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S442",
+   "section": 19,
+   "text": "The Duty Planner confirms the inspection priority and coordinates access with the Marine Coordinator or the Field Supervisor.",
+   "tags": []
+  },
+  {
+   "unit_id": "S443",
+   "section": 19,
+   "text": "The Weather Service and Metocean Buoy provide forecasts and measured conditions for assessing whether remote or close-access work is safe.",
+   "tags": []
+  },
+  {
+   "unit_id": "S444",
+   "section": 19,
+   "text": "Remote surveys use the Blade Inspection Drone to capture repeatable views of blade surfaces while the turbine is in an approved operating state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S445",
+   "section": 19,
+   "text": "The Blade Specialist reviews the tile image to classify visible damage and identify areas requiring closer assessment.",
+   "tags": [
+    "F11:link"
+   ]
+  },
+  {
+   "unit_id": "S446",
+   "section": 19,
+   "text": "Image records are linked to the turbine, blade, inspection date, viewing angle, and relevant operating conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S447",
+   "section": 19,
+   "text": "The SCADA Gateway provides operating data that helps distinguish persistent defects from transient changes in blade appearance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S448",
+   "section": 19,
+   "text": "The Shore Control Room monitors turbine status and records any operating restrictions required during the remote survey.",
+   "tags": []
+  },
+  {
+   "unit_id": "S449",
+   "section": 19,
+   "text": "A remote finding that is uncertain, growing, or potentially safety significant is referred for close-access inspection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S450",
+   "section": 19,
+   "text": "Close-access work is planned only after the responsible team verifies turbine isolation, rotor restraint, access arrangements, and rescue provisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S451",
+   "section": 19,
+   "text": "The HSE Officer reviews the work method, exposure controls, and emergency arrangements before personnel approach the rotor.",
+   "tags": []
+  },
+  {
+   "unit_id": "S452",
+   "section": 19,
+   "text": "The Blade Specialist examines the affected surface using suitable lighting, measurement tools, and nondestructive inspection methods.",
+   "tags": []
+  },
+  {
+   "unit_id": "S453",
+   "section": 19,
+   "text": "Defect records describe location, dimensions, orientation, suspected cause, confidence, and any change from earlier observations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S454",
+   "section": 19,
+   "text": "Cracks, erosion, coating loss, lightning damage, bond-line indications, and drainage concerns are assessed against approved engineering criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S455",
+   "section": 19,
+   "text": "The Blade Specialist distinguishes cosmetic damage from conditions that could affect structural integrity or safe turbine operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S456",
+   "section": 19,
+   "text": "When evidence is incomplete, the inspection record identifies the uncertainty and specifies additional measurements or imagery needed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S457",
+   "section": 19,
+   "text": "The Field Supervisor confirms that close-access findings are documented before personnel leave the work area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S458",
+   "section": 19,
+   "text": "The Maintenance Planning Engine uses the assessed severity, defect growth rate, weather exposure, and production impact to support repair prioritization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S459",
+   "section": 19,
+   "text": "The Duty Planner assigns a target repair window and coordinates required personnel, equipment, and vessel capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S460",
+   "section": 19,
+   "text": "The Storekeeper checks repair materials and tooling against the approved repair method before mobilization.",
+   "tags": []
+  },
+  {
+   "unit_id": "S461",
+   "section": 19,
+   "text": "The Service Operations Vessel prepares the Recovery Basket Load Sheet for the planned work activity.",
+   "tags": [
+    "F17:intro"
+   ]
+  },
+  {
+   "unit_id": "S462",
+   "section": 19,
+   "text": "Repair plans identify surface preparation, material application, cure requirements, inspection hold points, and acceptance criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S463",
+   "section": 19,
+   "text": "After repair, the Blade Specialist records the completed work and verifies that the repaired area meets the applicable acceptance criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S464",
+   "section": 19,
+   "text": "The Duty Planner updates the maintenance record and schedules follow-up inspection when residual uncertainty or defect history warrants it.",
+   "tags": []
+  },
+  {
+   "unit_id": "S465",
+   "section": 20,
+   "text": "Port and berth coordination aligns vessel access with the readiness of offshore work, people, equipment, and permits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S466",
+   "section": 20,
+   "text": "The Marine Coordinator maintains a rolling view of berth occupancy, planned arrivals, departure estimates, and vessel service requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S467",
+   "section": 20,
+   "text": "Berth capacity is assessed against usable quay length, water depth, access routes, lifting arrangements, and local safety clearances.",
+   "tags": []
+  },
+  {
+   "unit_id": "S468",
+   "section": 20,
+   "text": "The port schedule includes time for arrival checks, passenger movements, cargo handling, refueling, and routine vessel servicing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S469",
+   "section": 20,
+   "text": "The Duty Planner compares task readiness with the expected departure window before committing crews and equipment to a marine campaign.",
+   "tags": []
+  },
+  {
+   "unit_id": "S470",
+   "section": 20,
+   "text": "The Maintenance Planning Engine supports this review by presenting task duration, resource demand, and dependency status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S471",
+   "section": 20,
+   "text": "Weather Service forecasts are considered alongside berth availability because port conditions can delay loading or restrict vessel movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S472",
+   "section": 20,
+   "text": "The Weather Analyst produces the Visibility Confidence Note to summarize confidence in visibility conditions for near-term port and offshore planning.",
+   "tags": [
+    "F18:intro"
+   ]
+  },
+  {
+   "unit_id": "S473",
+   "section": 20,
+   "text": "The Marine Coordinator uses the Berth Slot Confirmation to align an approved vessel arrival with the assigned berth window.",
+   "tags": [
+    "F12:link"
+   ]
+  },
+  {
+   "unit_id": "S474",
+   "section": 20,
+   "text": "Crew Transfer Vessel calls are coordinated to avoid conflicts at passenger access points and shared loading areas.",
+   "tags": []
+  },
+  {
+   "unit_id": "S475",
+   "section": 20,
+   "text": "Service Operations Vessel calls are planned with regard to draft, mooring requirements, and the time needed to prepare offshore stores.",
+   "tags": []
+  },
+  {
+   "unit_id": "S476",
+   "section": 20,
+   "text": "The Vessel Master confirms practical arrival and departure estimates against the vessel's operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S477",
+   "section": 20,
+   "text": "Port staging areas are reserved for equipment that must be inspected, secured, or transferred before sailing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S478",
+   "section": 20,
+   "text": "The Warehouse System supports cargo preparation so that planned loads can be assembled before the vessel occupies the berth.",
+   "tags": []
+  },
+  {
+   "unit_id": "S479",
+   "section": 20,
+   "text": "The Storekeeper checks that critical spares are available and that packaging is suitable for marine transport.",
+   "tags": []
+  },
+  {
+   "unit_id": "S480",
+   "section": 20,
+   "text": "Work Permit Portal status is reviewed before departure so that required authorizations are not left unresolved at the port.",
+   "tags": []
+  },
+  {
+   "unit_id": "S481",
+   "section": 20,
+   "text": "The HSE Officer checks that access controls, emergency arrangements, and handling precautions are suitable for the planned activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S482",
+   "section": 20,
+   "text": "Personnel Tracking Console records are reconciled with the approved crew list before personnel board a vessel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S483",
+   "section": 20,
+   "text": "The Marine Coordinator resolves competing berth requests by considering task urgency, vessel compatibility, and the consequences of delay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S484",
+   "section": 20,
+   "text": "When berth capacity is constrained, lower-priority movements may be resequenced while preserving safe rest periods and required inspections.",
+   "tags": []
+  },
+  {
+   "unit_id": "S485",
+   "section": 20,
+   "text": "Fleet Dispatch Console schedules are updated to reflect confirmed changes to vessel availability and offshore task timing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S486",
+   "section": 20,
+   "text": "Turnaround allowances include time to secure returned equipment, report defects, and prepare the vessel for its next assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S487",
+   "section": 20,
+   "text": "Actual arrival, departure, and berth-occupancy times are recorded to improve future capacity estimates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S488",
+   "section": 20,
+   "text": "During disruption, the Marine Coordinator reviews safe alternatives such as a later slot, a different suitable berth, or vessel standby.",
+   "tags": []
+  },
+  {
+   "unit_id": "S489",
+   "section": 20,
+   "text": "Coordination decisions and unresolved constraints are retained for operational review and the next planning cycle.",
+   "tags": []
+  },
+  {
+   "unit_id": "S490",
+   "section": 21,
+   "text": "Maintenance begins only after the work scope, access route, and responsible supervisor have been confirmed for the shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S491",
+   "section": 21,
+   "text": "The Duty Planner checks that the planned task matches the approved work authorization and that required personnel and equipment are available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S492",
+   "section": 21,
+   "text": "The Work Permit Portal produces the Isolation Boundary Sketch.",
+   "tags": [
+    "F19:intro"
+   ]
+  },
+  {
+   "unit_id": "S493",
+   "section": 21,
+   "text": "The Field Supervisor reviews the worksite limits with the crew before anyone enters the controlled area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S494",
+   "section": 21,
+   "text": "Physical boundaries are marked so that the work area and any adjacent operating equipment are clearly distinguishable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S495",
+   "section": 21,
+   "text": "The crew confirms that the marked limits match the current isolation points and the approved maintenance scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S496",
+   "section": 21,
+   "text": "The Electrical Technician verifies electrical isolation at the work location before work on electrical equipment begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S497",
+   "section": 21,
+   "text": "The Substation Operator confirms that switching conditions affecting the worksite are understood by the relevant personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S498",
+   "section": 21,
+   "text": "The Vessel Master confirms that the vessel is safely positioned and that transfer conditions remain acceptable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S499",
+   "section": 21,
+   "text": "The Marine Coordinator suspends access when sea or weather conditions make transfer unsafe.",
+   "tags": []
+  },
+  {
+   "unit_id": "S500",
+   "section": 21,
+   "text": "A Weather Hold remains in effect until the responsible operational authority confirms that conditions permit work to proceed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S501",
+   "section": 21,
+   "text": "Personnel use the North Access Scanner or South Access Scanner at the designated entry point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S502",
+   "section": 21,
+   "text": "The Personnel Tracking Console is checked to confirm that people entering and leaving the site are accounted for.",
+   "tags": []
+  },
+  {
+   "unit_id": "S503",
+   "section": 21,
+   "text": "The Field Supervisor verifies each worker's authorization, competence, and fitness for the assigned task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S504",
+   "section": 21,
+   "text": "Before starting, the crew inspects personal protective equipment, communications equipment, and rescue equipment for serviceability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S505",
+   "section": 21,
+   "text": "The HSE Officer checks that emergency routes, muster points, and rescue arrangements are understood by everyone at the worksite.",
+   "tags": []
+  },
+  {
+   "unit_id": "S506",
+   "section": 21,
+   "text": "The crew tests the required radio channel with the Operations Radio Console before separating into work teams.",
+   "tags": []
+  },
+  {
+   "unit_id": "S507",
+   "section": 21,
+   "text": "Tools and loose materials are secured against dropped-object hazards and movement caused by vessel motion.",
+   "tags": []
+  },
+  {
+   "unit_id": "S508",
+   "section": 21,
+   "text": "Access to the worksite is restricted to personnel listed for the task, and visitors remain under escort.",
+   "tags": []
+  },
+  {
+   "unit_id": "S509",
+   "section": 21,
+   "text": "The Field Supervisor pauses the job if actual conditions differ from the approved method or the marked worksite boundaries.",
+   "tags": []
+  },
+  {
+   "unit_id": "S510",
+   "section": 21,
+   "text": "Any change to the work scope requires a renewed safety review before affected work resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S511",
+   "section": 21,
+   "text": "The crew maintains clear access to fire equipment, escape routes, and lifting areas throughout the task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S512",
+   "section": 21,
+   "text": "At shift handover, the outgoing supervisor briefs the incoming supervisor on site conditions, access status, and outstanding hazards.",
+   "tags": []
+  },
+  {
+   "unit_id": "S513",
+   "section": 21,
+   "text": "Work is closed out only after personnel are accounted for, equipment is removed or secured, and the worksite is left in a safe condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S514",
+   "section": 22,
+   "text": "Switching coordination begins with a defined operational need, a safe sequence, and an agreed period for execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S515",
+   "section": 22,
+   "text": "The Duty Planner develops the proposed sequence with the Control Engineer and identifies affected equipment and operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S516",
+   "section": 22,
+   "text": "The Control Engineer checks the current network configuration and confirms that the proposed sequence supports the approved work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S517",
+   "section": 22,
+   "text": "The Substation Operator verifies equipment status and switching points at the Offshore Substation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S518",
+   "section": 22,
+   "text": "The Grid Dispatcher confirms applicable grid requirements and any restrictions on changing the connection state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S519",
+   "section": 22,
+   "text": "A Grid Constraint requires the Duty Planner to reassess the sequence and obtain revised authorization before work proceeds.",
+   "tags": []
+  },
+  {
+   "unit_id": "S520",
+   "section": 22,
+   "text": "The Maintenance Planning Engine provides the planned work period and identifies dependencies with other scheduled tasks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S521",
+   "section": 22,
+   "text": "The Weather Service supplies forecast conditions relevant to access and safe execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S522",
+   "section": 22,
+   "text": "The Weather Analyst reviews the forecast and advises the Duty Planner if conditions could affect the planned sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S523",
+   "section": 22,
+   "text": "The Marine Coordinator aligns vessel movements with the approved access plan and operational constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S524",
+   "section": 22,
+   "text": "The Vessel Master confirms that the vessel can meet the agreed timing and maintain safe operating margins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S525",
+   "section": 22,
+   "text": "The Personnel Tracking Console and Work Permit Portal are checked to confirm that assigned personnel and permits are ready.",
+   "tags": []
+  },
+  {
+   "unit_id": "S526",
+   "section": 22,
+   "text": "The HSE Officer reviews task hazards and confirms that required controls are in place before switching is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S527",
+   "section": 22,
+   "text": "The Duty Planner records the proposed sequence, required approvals, execution roles, and planned communications in the operating record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S528",
+   "section": 22,
+   "text": "The Control Engineer prepares clear switching instructions with one action per step and an explicit hold point where needed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S529",
+   "section": 22,
+   "text": "The Electrical Technician verifies equipment labels and confirms the intended switching points before execution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S530",
+   "section": 22,
+   "text": "The Substation Operator accepts the instructions only after checking the equipment state and confirming authorization with the Control Engineer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S531",
+   "section": 22,
+   "text": "The Shore Control Room sends the Switching Window Acknowledgment after the approved switching period is entered in the operating log.",
+   "tags": [
+    "F20:intro"
+   ]
+  },
+  {
+   "unit_id": "S532",
+   "section": 22,
+   "text": "The Substation Operator uses the test trace to verify that the planned restoration checks have completed before requesting the next switching step.",
+   "tags": [
+    "F13:link"
+   ]
+  },
+  {
+   "unit_id": "S533",
+   "section": 22,
+   "text": "During execution, the switching operator performs each authorized action and reports completion before the next instruction is issued.",
+   "tags": []
+  },
+  {
+   "unit_id": "S534",
+   "section": 22,
+   "text": "The Control Engineer monitors available indications and confirms that each reported state change matches the approved sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S535",
+   "section": 22,
+   "text": "If an indication is ambiguous, communications fail, or conditions differ from the plan, the sequence is paused and the equipment is left in a safe state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S536",
+   "section": 22,
+   "text": "The Field Supervisor confirms personnel are clear of affected equipment before the Duty Planner authorizes restoration or release of the work area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S537",
+   "section": 22,
+   "text": "After completion, the Duty Planner records the final equipment state, approvals, deviations, and handover information for the incoming shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S538",
+   "section": 23,
+   "text": "An export restriction may arise from a grid instruction, a cable condition, or a substation operating limit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S539",
+   "section": 23,
+   "text": "The Duty Planner treats a confirmed restriction as a Grid Constraint until the applicable limit is clarified or withdrawn.",
+   "tags": []
+  },
+  {
+   "unit_id": "S540",
+   "section": 23,
+   "text": "The SCADA Gateway presents current generation, export, and equipment status to the operations team.",
+   "tags": []
+  },
+  {
+   "unit_id": "S541",
+   "section": 23,
+   "text": "Grid Dispatcher receives the Export Limit Advisory and uses it to set the permitted export level.",
+   "tags": [
+    "F14:link"
+   ]
+  },
+  {
+   "unit_id": "S542",
+   "section": 23,
+   "text": "The Control Engineer verifies the permitted level, its effective time, and any required ramp rate before changing operating targets.",
+   "tags": []
+  },
+  {
+   "unit_id": "S543",
+   "section": 23,
+   "text": "The Fleet Dispatch Console supports coordinated adjustment of turbine output across the affected operating area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S544",
+   "section": 23,
+   "text": "The Control Engineer reduces active power in controlled steps and checks that measured export follows the revised target.",
+   "tags": []
+  },
+  {
+   "unit_id": "S545",
+   "section": 23,
+   "text": "The Turbine Controller applies the accepted output target while retaining its protective control functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S546",
+   "section": 23,
+   "text": "The Pitch System adjusts blade angle within its operating envelope and does not override local protection limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S547",
+   "section": 23,
+   "text": "The Converter Cabinet remains within its electrical and thermal ratings throughout the reduction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S548",
+   "section": 23,
+   "text": "The Export Cable Monitor is checked for temperature, loading, and alarm status during the response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S549",
+   "section": 23,
+   "text": "The Offshore Substation operator confirms that export equipment remains within its approved operating range.",
+   "tags": []
+  },
+  {
+   "unit_id": "S550",
+   "section": 23,
+   "text": "The Main Transformer is monitored for loading and temperature, and any abnormal trend is escalated without delay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S551",
+   "section": 23,
+   "text": "The Grid Interface Relay retains its protection settings unless an authorized switching plan requires a controlled change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S552",
+   "section": 23,
+   "text": "The Control Engineer compares actual export with the permitted level and investigates any persistent mismatch.",
+   "tags": []
+  },
+  {
+   "unit_id": "S553",
+   "section": 23,
+   "text": "If the restriction changes, the Duty Planner records the revised operating basis and coordinates updated targets.",
+   "tags": []
+  },
+  {
+   "unit_id": "S554",
+   "section": 23,
+   "text": "The Maintenance Planning Engine is used to review whether the constraint affects planned work or equipment availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S555",
+   "section": 23,
+   "text": "Turbines are not repeatedly ramped to chase short-lived fluctuations that fall within the agreed control tolerance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S556",
+   "section": 23,
+   "text": "The Nacelle Condition Monitor and turbine alarms are reviewed for signs that curtailment or ramping is stressing equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S557",
+   "section": 23,
+   "text": "The Weather Service information is considered when weather conditions may affect operating margins or access decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S558",
+   "section": 23,
+   "text": "The SCADA Engineer investigates telemetry gaps or inconsistent measurements before the team relies on them for control decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S559",
+   "section": 23,
+   "text": "The Substation Operator reports any substation limitation that could require a lower export target or local equipment action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S560",
+   "section": 23,
+   "text": "The Control Engineer escalates any condition that threatens equipment limits, protection coordination, or safe operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S561",
+   "section": 23,
+   "text": "The Duty Planner maintains a clear record of the restriction, response actions, approvals, and outstanding checks for shift handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S562",
+   "section": 23,
+   "text": "When the restriction is released, the Control Engineer confirms authorization and restores output gradually while monitoring equipment response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S563",
+   "section": 24,
+   "text": "This section defines how personnel counts are reconciled during marine operations and how discrepancies are escalated.",
+   "tags": []
+  },
+  {
+   "unit_id": "S564",
+   "section": 24,
+   "text": "Reconciliation applies to each movement between shore, a vessel, and an offshore work location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S565",
+   "section": 24,
+   "text": "The Marine Coordinator establishes the expected personnel count and destination for each movement before transfer begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S566",
+   "section": 24,
+   "text": "Counts are maintained separately for each vessel and each work location to avoid combining unrelated movements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S567",
+   "section": 24,
+   "text": "The Vessel Master verifies the number of people physically aboard before departure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S568",
+   "section": 24,
+   "text": "The Crew Transfer Vessel and Daughter Craft are accounted for independently when they operate in the same transfer sequence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S569",
+   "section": 24,
+   "text": "The North Access Scanner records personnel access events at the north access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S570",
+   "section": 24,
+   "text": "The South Access Scanner records personnel access events at the south access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S571",
+   "section": 24,
+   "text": "The Personnel Tracking Console maintains the operational count for active marine movements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S572",
+   "section": 24,
+   "text": "Personnel are checked against the expected count at departure, arrival, and any intermediate transfer point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S573",
+   "section": 24,
+   "text": "The count correction is used by the Personnel Tracking Console to update a verified personnel total.",
+   "tags": [
+    "F15:link"
+   ]
+  },
+  {
+   "unit_id": "S574",
+   "section": 24,
+   "text": "A corrected total is accepted only after the reason for the discrepancy has been established and recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S575",
+   "section": 24,
+   "text": "Any difference between the expected and observed count remains unresolved until every person is accounted for.",
+   "tags": []
+  },
+  {
+   "unit_id": "S576",
+   "section": 24,
+   "text": "The Marine Coordinator pauses further personnel transfers when a discrepancy is identified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S577",
+   "section": 24,
+   "text": "The Vessel Master maintains a safe operating position while the discrepancy is investigated.",
+   "tags": []
+  },
+  {
+   "unit_id": "S578",
+   "section": 24,
+   "text": "The Marine Coordinator informs the Shore Control Room of the discrepancy and the immediate control actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S579",
+   "section": 24,
+   "text": "The HSE Officer assesses any safety implications and advises whether the affected activity can continue.",
+   "tags": []
+  },
+  {
+   "unit_id": "S580",
+   "section": 24,
+   "text": "If a person's location is uncertain, the Rescue Coordinator is notified without delay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S581",
+   "section": 24,
+   "text": "A discrepancy involving a transfer to an offshore work location is checked against the arrival count before work proceeds.",
+   "tags": []
+  },
+  {
+   "unit_id": "S582",
+   "section": 24,
+   "text": "A discrepancy involving a return movement is checked before the vessel departs the work location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S583",
+   "section": 24,
+   "text": "The Marine Coordinator escalates any unresolved discrepancy to the Duty Planner and records the time of escalation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S584",
+   "section": 24,
+   "text": "The record includes the expected count, observed count, persons still unaccounted for, actions taken, and current status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S585",
+   "section": 24,
+   "text": "Personnel movements do not resume until the Marine Coordinator confirms that the count is reconciled or an authorized response is in place.",
+   "tags": []
+  },
+  {
+   "unit_id": "S586",
+   "section": 24,
+   "text": "Any unresolved discrepancy and its control measures are included in the shift handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S587",
+   "section": 25,
+   "text": "Software changes are managed through a controlled lifecycle that protects the integrity and availability of operational systems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S588",
+   "section": 25,
+   "text": "Each operational software component has an identified owner, approved version, and documented configuration baseline.",
+   "tags": []
+  },
+  {
+   "unit_id": "S589",
+   "section": 25,
+   "text": "The baseline records software versions, configuration parameters, dependencies, and applicable hardware revisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S590",
+   "section": 25,
+   "text": "Source code and configuration files are held in access-controlled repositories with revision history enabled.",
+   "tags": []
+  },
+  {
+   "unit_id": "S591",
+   "section": 25,
+   "text": "Changes are developed and reviewed outside the live operational environment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S592",
+   "section": 25,
+   "text": "Release packages are built from approved source and checked for completeness, integrity, and compatibility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S593",
+   "section": 25,
+   "text": "The SCADA Engineer uses the Firmware Hash Attestation to verify the approved image before loading a release.",
+   "tags": [
+    "F16:link"
+   ]
+  },
+  {
+   "unit_id": "S594",
+   "section": 25,
+   "text": "The Control Engineer confirms that proposed changes have a clear operational purpose and defined scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S595",
+   "section": 25,
+   "text": "Technical approval is recorded before a change is scheduled for deployment to an operational system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S596",
+   "section": 25,
+   "text": "Reviewers assess safety effects, cybersecurity risks, interfaces, and the impact on ongoing maintenance activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S597",
+   "section": 25,
+   "text": "Changes affecting protection functions or control behavior receive additional engineering scrutiny.",
+   "tags": []
+  },
+  {
+   "unit_id": "S598",
+   "section": 25,
+   "text": "Testing is performed in a representative test environment before operational acceptance is considered.",
+   "tags": []
+  },
+  {
+   "unit_id": "S599",
+   "section": 25,
+   "text": "The SCADA Gateway is checked for compatibility with the approved software and configuration baseline.",
+   "tags": []
+  },
+  {
+   "unit_id": "S600",
+   "section": 25,
+   "text": "The Turbine Controller is tested against defined operating limits and expected fault responses.",
+   "tags": []
+  },
+  {
+   "unit_id": "S601",
+   "section": 25,
+   "text": "The Pitch System is verified to retain its approved control behavior after an applicable software change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S602",
+   "section": 25,
+   "text": "The Converter Cabinet is checked for expected communication and protection behavior during regression testing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S603",
+   "section": 25,
+   "text": "Changes affecting the Offshore Substation are reviewed for consequences to the safe operation of connected equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S604",
+   "section": 25,
+   "text": "The Main Transformer protection settings remain subject to their separate engineering approval process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S605",
+   "section": 25,
+   "text": "The Cybersecurity Gateway is assessed for continued compliance with access controls and security requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S606",
+   "section": 25,
+   "text": "The Shore Control Room confirms that monitoring and operator procedures remain suitable for the revised configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S607",
+   "section": 25,
+   "text": "Deployment is scheduled for an approved maintenance window with qualified personnel available to supervise the work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S608",
+   "section": 25,
+   "text": "A rollback method is documented and checked before deployment begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S609",
+   "section": 25,
+   "text": "If verification fails, the change is stopped and the affected system is returned to its last approved baseline where practicable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S610",
+   "section": 25,
+   "text": "Configuration records are updated after successful deployment, including the approval evidence, test results, and installed version.",
+   "tags": []
+  },
+  {
+   "unit_id": "S611",
+   "section": 25,
+   "text": "Operational handover records identify the deployed change, any outstanding limitations, and the responsible technical contact.",
+   "tags": []
+  },
+  {
+   "unit_id": "S612",
+   "section": 26,
+   "text": "Emergency arrangements define who may direct an incident, who supports rescue, and who may authorize a return to work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S613",
+   "section": 26,
+   "text": "The Shore Control Room maintains the incident log and provides a single operational point of contact for offshore teams.",
+   "tags": []
+  },
+  {
+   "unit_id": "S614",
+   "section": 26,
+   "text": "The Rescue Coordinator leads rescue planning and coordinates requests for external assistance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S615",
+   "section": 26,
+   "text": "The Field Supervisor directs personnel at the affected work site until control is formally transferred.",
+   "tags": []
+  },
+  {
+   "unit_id": "S616",
+   "section": 26,
+   "text": "The Vessel Master retains authority over vessel safety, navigation, and decisions to approach or withdraw from a casualty.",
+   "tags": []
+  },
+  {
+   "unit_id": "S617",
+   "section": 26,
+   "text": "The HSE Officer advises on personnel hazards, rescue procedures, and the use of emergency equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S618",
+   "section": 26,
+   "text": "The Marine Coordinator maintains awareness of vessel locations, access constraints, and available marine support.",
+   "tags": []
+  },
+  {
+   "unit_id": "S619",
+   "section": 26,
+   "text": "The Personnel Tracking Console supports personnel accounting, but the incident lead verifies headcounts with the teams involved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S620",
+   "section": 26,
+   "text": "Crew Transfer Vessel operations are suspended when sea conditions, visibility, or transfer arrangements exceed approved limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S621",
+   "section": 26,
+   "text": "A Daughter Craft may support a local response only when its crew, equipment, and launch conditions are suitable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S622",
+   "section": 26,
+   "text": "A Service Operations Vessel may provide accommodation, medical support, and a stable platform when its position and capability permit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S623",
+   "section": 26,
+   "text": "The Helideck is used for evacuation only when aviation conditions, deck readiness, and receiving arrangements are acceptable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S624",
+   "section": 26,
+   "text": "The Weather Service provides forecast information for planning, while operational decisions account for observed local conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S625",
+   "section": 26,
+   "text": "The Metocean Buoy provides site measurements that help assess whether a planned response remains feasible.",
+   "tags": []
+  },
+  {
+   "unit_id": "S626",
+   "section": 26,
+   "text": "The Weather Analyst interprets forecast uncertainty and communicates material changes to the Rescue Coordinator.",
+   "tags": []
+  },
+  {
+   "unit_id": "S627",
+   "section": 26,
+   "text": "The Operations Radio Console supports communications between the Shore Control Room, vessels, and offshore work teams.",
+   "tags": []
+  },
+  {
+   "unit_id": "S628",
+   "section": 26,
+   "text": "Emergency Generator readiness is checked as part of site emergency preparedness and restoration planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S629",
+   "section": 26,
+   "text": "The Fire Detection Panel provides alarm indications that responders use alongside direct reports from personnel on site.",
+   "tags": []
+  },
+  {
+   "unit_id": "S630",
+   "section": 26,
+   "text": "The Control Engineer supports remote shutdown actions when communications and equipment status allow safe intervention.",
+   "tags": []
+  },
+  {
+   "unit_id": "S631",
+   "section": 26,
+   "text": "Electrical recovery work requires qualified personnel, verified isolation, and a safe means of access before hands-on activity begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S632",
+   "section": 26,
+   "text": "Recovery of injured or incapacitated personnel may be delayed by vessel motion, limited access, lifting capacity, or deteriorating conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S633",
+   "section": 26,
+   "text": "Offshore recovery plans identify the point at which continued response would expose rescuers to unacceptable risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S634",
+   "section": 26,
+   "text": "If conditions exceed the approved operating envelope, the Vessel Master may withdraw and the Rescue Coordinator revises the response plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S635",
+   "section": 26,
+   "text": "After an incident, personnel are accounted for, hazards are reassessed, and restart authority is assigned before normal work resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S636",
+   "section": 27,
+   "text": "Vessel recovery support coordinates people, vessels, and handling equipment before any offshore recovery begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S637",
+   "section": 27,
+   "text": "The Rescue Coordinator establishes the recovery objective and confirms who has authority to suspend the operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S638",
+   "section": 27,
+   "text": "The Marine Coordinator assigns suitable vessels and maintains a common plan for their approach and departure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S639",
+   "section": 27,
+   "text": "The Duty Planner confirms that the recovery task does not conflict with other offshore work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S640",
+   "section": 27,
+   "text": "The Weather Service provides current forecasts for the recovery area and the planned transit route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S641",
+   "section": 27,
+   "text": "The Weather Analyst interprets forecast uncertainty and identifies conditions that could affect safe vessel handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S642",
+   "section": 27,
+   "text": "The Vessel Master retains authority over vessel movements and may decline a task that cannot be completed safely.",
+   "tags": []
+  },
+  {
+   "unit_id": "S643",
+   "section": 27,
+   "text": "The Crew Transfer Vessel transports personnel and small equipment only when sea conditions and transfer arrangements are acceptable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S644",
+   "section": 27,
+   "text": "The Daughter Craft may be assigned close-in support when its operating limits and communications coverage are adequate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S645",
+   "section": 27,
+   "text": "The Service Operations Vessel provides a stable working platform when the response requires additional deck space or lifting capability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S646",
+   "section": 27,
+   "text": "The Rescue Coordinator uses the load sheet to confirm that recovery baskets are secured and their contents are accounted for before transfer.",
+   "tags": [
+    "F17:link"
+   ]
+  },
+  {
+   "unit_id": "S647",
+   "section": 27,
+   "text": "The HSE Officer reviews the handling method, lifting points, and exclusion zones before loads are moved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S648",
+   "section": 27,
+   "text": "The Personnel Tracking Console supports confirmation that all assigned personnel have returned to a safe location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S649",
+   "section": 27,
+   "text": "The Field Supervisor maintains control of the work area and stops handling if personnel enter a restricted zone.",
+   "tags": []
+  },
+  {
+   "unit_id": "S650",
+   "section": 27,
+   "text": "The Electrical Technician isolates and protects recovered electrical equipment before it is placed in temporary storage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S651",
+   "section": 27,
+   "text": "The Blade Specialist identifies fragile blade components and specifies padding or restraints to prevent handling damage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S652",
+   "section": 27,
+   "text": "Recovered equipment is kept separated from loose debris and is secured against sliding, impact, and spray exposure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S653",
+   "section": 27,
+   "text": "Damaged or contaminated items are contained so that they cannot create hazards for personnel or other cargo.",
+   "tags": []
+  },
+  {
+   "unit_id": "S654",
+   "section": 27,
+   "text": "Lifting gear is inspected before use, and each lift is conducted within the rated capacity of the equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S655",
+   "section": 27,
+   "text": "The Warehouse System is used to arrange receiving space and preserve traceability for equipment returned ashore.",
+   "tags": []
+  },
+  {
+   "unit_id": "S656",
+   "section": 27,
+   "text": "The Spares Hub is consulted when recovered components may be needed to support repair planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S657",
+   "section": 27,
+   "text": "Turbine Lockout remains in force until the responsible authority confirms that the equipment and work area are safe for subsequent activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S658",
+   "section": 27,
+   "text": "The Control Engineer provides technical guidance when recovery handling could affect turbine systems or restart readiness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S659",
+   "section": 27,
+   "text": "If vessel capability, communications, or weather deteriorates, the Marine Coordinator pauses the recovery and agrees a safe holding position with the Vessel Master.",
+   "tags": []
+  },
+  {
+   "unit_id": "S660",
+   "section": 27,
+   "text": "After recovery, the Field Supervisor reports remaining hazards and confirms that temporary securing arrangements are adequate for transit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S661",
+   "section": 28,
+   "text": "Visibility assessments are estimates of the conditions expected along a route and at a work site, rather than guarantees of clear sightlines.",
+   "tags": []
+  },
+  {
+   "unit_id": "S662",
+   "section": 28,
+   "text": "Reported visibility can vary across the wind farm as fog banks, rain, spray, and low cloud move through the area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S663",
+   "section": 28,
+   "text": "Differences between observation times and locations can leave uncertainty even when individual reports are valid.",
+   "tags": []
+  },
+  {
+   "unit_id": "S664",
+   "section": 28,
+   "text": "The Weather Service forecast provides context for expected changes, but local conditions may develop sooner or differently than forecast.",
+   "tags": []
+  },
+  {
+   "unit_id": "S665",
+   "section": 28,
+   "text": "The Metocean Buoy provides a local reference that can help identify differences between forecast conditions and conditions at sea.",
+   "tags": []
+  },
+  {
+   "unit_id": "S666",
+   "section": 28,
+   "text": "A discrepancy between sources prompts review of the observation age, location, and surrounding weather conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S667",
+   "section": 28,
+   "text": "The operational assessment records both the estimated visibility and the confidence that the estimate represents conditions at the intended work location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S668",
+   "section": 28,
+   "text": "Low confidence is treated as an operational constraint even when the reported visibility appears adequate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S669",
+   "section": 28,
+   "text": "The Duty Planner uses the Visibility Confidence Note when considering task readiness and the conditions that would require a decision to pause or defer work.",
+   "tags": [
+    "F18:link"
+   ]
+  },
+  {
+   "unit_id": "S670",
+   "section": 28,
+   "text": "The Maintenance Planning Engine can help identify tasks that may be rescheduled when visibility is uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S671",
+   "section": 28,
+   "text": "Task selection favors work that can be performed safely under the assessed conditions without relying on precise visual identification or close-range observation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S672",
+   "section": 28,
+   "text": "Work requiring visual alignment, external inspection, or unobstructed observation is given a more conservative assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S673",
+   "section": 28,
+   "text": "Use of the Blade Inspection Drone is deferred when uncertain visibility could prevent reliable control or interpretation of inspection imagery.",
+   "tags": []
+  },
+  {
+   "unit_id": "S674",
+   "section": 28,
+   "text": "The go or no-go decision considers the task method, crew competence, vessel capability, and the confidence in the visibility assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S675",
+   "section": 28,
+   "text": "A favorable point estimate alone is not sufficient to authorize a task when the range of plausible conditions includes unsafe visibility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S676",
+   "section": 28,
+   "text": "The Marine Coordinator reviews how uncertainty affects the planned transit, transfer location, and available alternatives.",
+   "tags": []
+  },
+  {
+   "unit_id": "S677",
+   "section": 28,
+   "text": "The Vessel Master retains authority to proceed, slow, alter course, or hold position based on actual conditions and vessel limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S678",
+   "section": 28,
+   "text": "A Crew Transfer Vessel may be directed to remain clear of a transfer location until the crew and vessel can maintain adequate visual awareness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S679",
+   "section": 28,
+   "text": "A Daughter Craft operation requires particular caution where reduced visibility could compromise separation from other vessels or structures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S680",
+   "section": 28,
+   "text": "A Service Operations Vessel may maintain a safe stand-off while the visibility assessment is clarified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S681",
+   "section": 28,
+   "text": "Planned vessel movements account for reduced speed, increased separation, and the possibility of returning to a safe holding area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S682",
+   "section": 28,
+   "text": "When uncertainty increases during transit, the Marine Coordinator and Vessel Master reassess the route and the suitability of continuing toward the work site.",
+   "tags": []
+  },
+  {
+   "unit_id": "S683",
+   "section": 28,
+   "text": "The Shore Control Room maintains awareness of the decision and the operational restrictions associated with the assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S684",
+   "section": 28,
+   "text": "A no-go decision is appropriate when uncertainty prevents the team from demonstrating that the transfer or task can be completed within safe limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S685",
+   "section": 28,
+   "text": "Conditions are reassessed before work resumes, and authorization is based on current evidence rather than the earlier estimate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S686",
+   "section": 29,
+   "text": "The inventory record covers serviceable parts, consumables, repairable units, and their locations across shore and offshore stores.",
+   "tags": []
+  },
+  {
+   "unit_id": "S687",
+   "section": 29,
+   "text": "Warehouse System maintains the authoritative item catalogue, stock balances, and storage locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S688",
+   "section": 29,
+   "text": "Stock visibility includes quantities on hand, items reserved for approved work, and quantities already committed to transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S689",
+   "section": 29,
+   "text": "Spares Hub provides a separate view of stock held for regional replenishment and emergency support.",
+   "tags": []
+  },
+  {
+   "unit_id": "S690",
+   "section": 29,
+   "text": "The Storekeeper reconciles physical counts with recorded balances and records adjustments with a reason and timestamp.",
+   "tags": []
+  },
+  {
+   "unit_id": "S691",
+   "section": 29,
+   "text": "Each stocked item is identified by a controlled part number, description, unit of measure, and approved substitute status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S692",
+   "section": 29,
+   "text": "Serial-controlled parts retain traceability from receipt through installation, repair, return, or disposal.",
+   "tags": []
+  },
+  {
+   "unit_id": "S693",
+   "section": 29,
+   "text": "Reservations prevent the same available quantity from being assigned to multiple work packages.",
+   "tags": []
+  },
+  {
+   "unit_id": "S694",
+   "section": 29,
+   "text": "Maintenance Planning Engine uses planned work demand and part criticality to support replenishment forecasts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S695",
+   "section": 29,
+   "text": "The Duty Planner reviews forecast demand against current stock before confirming work readiness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S696",
+   "section": 29,
+   "text": "Priority is highest for safety-critical parts and parts required to restore a turbine or electrical system to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S697",
+   "section": 29,
+   "text": "Parts supporting scheduled maintenance receive priority when their delivery date is necessary to protect an approved work window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S698",
+   "section": 29,
+   "text": "Routine consumables are replenished according to agreed minimum and maximum stock levels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S699",
+   "section": 29,
+   "text": "Replenishment requests include the required quantity, need date, delivery location, and applicable handling requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S700",
+   "section": 29,
+   "text": "Supplier lead times are reviewed against recent delivery performance rather than relying solely on catalogue estimates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S701",
+   "section": 29,
+   "text": "Low-stock alerts identify items approaching their reorder point and show open purchase commitments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S702",
+   "section": 29,
+   "text": "A shortage that threatens a work window is escalated to the Duty Planner for a priority decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S703",
+   "section": 29,
+   "text": "The Storekeeper records unavailable quantities and the expected date of the next supply without presenting them as available stock.",
+   "tags": []
+  },
+  {
+   "unit_id": "S704",
+   "section": 29,
+   "text": "Substitutions require engineering acceptance and confirmation that the alternative meets the required interface and operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S705",
+   "section": 29,
+   "text": "Damaged, suspect, or expired parts are segregated from usable stock until their status is resolved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S706",
+   "section": 29,
+   "text": "A count discrepancy is investigated against receipts, issues, reservations, and recent movements before the balance is corrected.",
+   "tags": []
+  },
+  {
+   "unit_id": "S707",
+   "section": 29,
+   "text": "Urgent purchases require documented authorization and retain the same traceability and inspection controls as routine receipts.",
+   "tags": []
+  },
+  {
+   "unit_id": "S708",
+   "section": 29,
+   "text": "During transport, the dispatch record identifies the quantity, destination, handling conditions, and responsible receiving location.",
+   "tags": []
+  },
+  {
+   "unit_id": "S709",
+   "section": 29,
+   "text": "Returned parts are inspected and their condition is recorded before they are restored to available stock.",
+   "tags": []
+  },
+  {
+   "unit_id": "S710",
+   "section": 29,
+   "text": "Repeated delays, shortages, and count discrepancies are reviewed to adjust reorder levels and supplier priorities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S711",
+   "section": 30,
+   "text": "An isolation boundary defines the equipment and energy sources that must be made safe before field work begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S712",
+   "section": 30,
+   "text": "The boundary is approved against the task scope, current equipment configuration, and applicable operating constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S713",
+   "section": 30,
+   "text": "The Work Permit Portal makes the approved boundary available to the work party and the control team.",
+   "tags": []
+  },
+  {
+   "unit_id": "S714",
+   "section": 30,
+   "text": "The approval identifies each isolation point, the required device position, and the person responsible for applying the control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S715",
+   "section": 30,
+   "text": "It also records any adjacent equipment that must remain energized or available for service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S716",
+   "section": 30,
+   "text": "The Electrical Technician uses the boundary sketch to identify the approved isolation points before starting the work.",
+   "tags": [
+    "F19:link"
+   ]
+  },
+  {
+   "unit_id": "S717",
+   "section": 30,
+   "text": "The Field Supervisor briefs the crew on the boundary, access restrictions, and conditions that require work to stop.",
+   "tags": []
+  },
+  {
+   "unit_id": "S718",
+   "section": 30,
+   "text": "The Control Engineer checks that remote indications agree with the approved switching state before authorizing access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S719",
+   "section": 30,
+   "text": "Where local indication is required, a qualified technician checks the device at the point of isolation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S720",
+   "section": 30,
+   "text": "The work party confirms equipment identity using permanent labels and the current site designation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S721",
+   "section": 30,
+   "text": "A mismatch between the field label and the approved record prevents the crew from proceeding until it is resolved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S722",
+   "section": 30,
+   "text": "Each isolation device is secured against unintended operation using the site-approved locking and tagging method.",
+   "tags": []
+  },
+  {
+   "unit_id": "S723",
+   "section": 30,
+   "text": "Personal protection is applied in accordance with the permit and local electrical safety rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S724",
+   "section": 30,
+   "text": "Electrical absence-of-voltage checks are performed at the work location using suitable, tested equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S725",
+   "section": 30,
+   "text": "Stored energy, induced voltage, and other hazardous energy sources are assessed before hands-on work begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S726",
+   "section": 30,
+   "text": "The Field Supervisor confirms that every crew member understands the limits of the approved work area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S727",
+   "section": 30,
+   "text": "Changes to the task, equipment state, or work location require a review of the boundary before work continues.",
+   "tags": []
+  },
+  {
+   "unit_id": "S728",
+   "section": 30,
+   "text": "The Work Permit Portal retains the current approval and makes superseded versions unavailable for active work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S729",
+   "section": 30,
+   "text": "Control room staff and the field team use the same revision when confirming isolation status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S730",
+   "section": 30,
+   "text": "A shift handover records outstanding isolations, affected equipment, and any restrictions that remain in force.",
+   "tags": []
+  },
+  {
+   "unit_id": "S731",
+   "section": 30,
+   "text": "The incoming team independently checks the boundary status before accepting responsibility for ongoing work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S732",
+   "section": 30,
+   "text": "No isolation is removed until the work is complete, personnel and tools are accounted for, and the responsible authority approves restoration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S733",
+   "section": 30,
+   "text": "The person removing each control confirms that the associated work party is clear of the hazard area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S734",
+   "section": 30,
+   "text": "The Control Engineer verifies the restoration state and communicates any remaining operational limitation to affected personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S735",
+   "section": 30,
+   "text": "Boundary records are closed only after the equipment state has been confirmed and the permit has been updated.",
+   "tags": []
+  },
+  {
+   "unit_id": "S736",
+   "section": 31,
+   "text": "Substation switching windows are coordinated with planned maintenance so that equipment is available only when the required operating conditions can be maintained.",
+   "tags": []
+  },
+  {
+   "unit_id": "S737",
+   "section": 31,
+   "text": "The Duty Planner consolidates proposed work periods and identifies tasks that require a change to substation configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S738",
+   "section": 31,
+   "text": "The Maintenance Planning Engine checks task durations, dependencies, and resource assumptions before a window is proposed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S739",
+   "section": 31,
+   "text": "The Grid Dispatcher confirms that the requested period is compatible with export requirements and network operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S740",
+   "section": 31,
+   "text": "The approved window includes a start time, an end time, the affected equipment, and the expected operating state.",
+   "tags": []
+  },
+  {
+   "unit_id": "S741",
+   "section": 31,
+   "text": "The Substation Operator reviews the switching sequence and confirms that each step can be performed within the available interval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S742",
+   "section": 31,
+   "text": "The Control Engineer checks that turbine operations can be managed safely while the substation work is in progress.",
+   "tags": []
+  },
+  {
+   "unit_id": "S743",
+   "section": 31,
+   "text": "The Grid Interface Relay remains available for the required protection and control functions throughout the planned work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S744",
+   "section": 31,
+   "text": "Work on the Main Transformer is scheduled only after its expected loading and required isolation duration have been reviewed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S745",
+   "section": 31,
+   "text": "Export capacity is assessed before any planned outage that could restrict power transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S746",
+   "section": 31,
+   "text": "A Grid Constraint may require the requested window to be shortened, moved, or divided into separate periods.",
+   "tags": []
+  },
+  {
+   "unit_id": "S747",
+   "section": 31,
+   "text": "The final window allows time for switching, work execution, testing, and restoration without relying on unplanned extensions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S748",
+   "section": 31,
+   "text": "Weather Service forecasts are considered when marine access or external work affects the achievable start time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S749",
+   "section": 31,
+   "text": "The Marine Coordinator checks vessel movements and crew transfer timing against the proposed period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S750",
+   "section": 31,
+   "text": "The Electrical Technician confirms that the work scope and test requirements fit the approved duration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S751",
+   "section": 31,
+   "text": "The Work Permit Portal is updated to reflect the agreed timing and work boundaries before the activity begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S752",
+   "section": 31,
+   "text": "Offshore Substation uses the Switching Window Acknowledgment to confirm that the approved switching window is available for the planned work.",
+   "tags": [
+    "F20:link"
+   ]
+  },
+  {
+   "unit_id": "S753",
+   "section": 31,
+   "text": "The Substation Operator does not begin switching until the window is active and operational authority has been confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S754",
+   "section": 31,
+   "text": "Any delay that threatens the agreed end time is raised promptly for review by the responsible operations staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S755",
+   "section": 31,
+   "text": "Work is paused if actual conditions make the planned sequence unsafe or incompatible with grid requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S756",
+   "section": 31,
+   "text": "A revised window is agreed before deferred switching or additional maintenance is attempted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S757",
+   "section": 31,
+   "text": "Following completion, equipment is restored in the authorized sequence and its operating condition is checked.",
+   "tags": []
+  },
+  {
+   "unit_id": "S758",
+   "section": 31,
+   "text": "The Duty Planner records actual start and finish times to improve future estimates and coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S759",
+   "section": 31,
+   "text": "Substation availability is returned to the operating plan only after restoration checks are complete and any remaining limitations are understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S760",
+   "section": 32,
+   "text": "Operational communications support safe decisions by providing timely, clear, and traceable information to the people responsible for offshore work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S761",
+   "section": 32,
+   "text": "The Shore Control Room is the coordination point for routine operational messages between shore-based personnel and offshore teams.",
+   "tags": []
+  },
+  {
+   "unit_id": "S762",
+   "section": 32,
+   "text": "The Operations Radio Console supports voice communication with the Crew Transfer Vessel, Service Operations Vessel, and Daughter Craft when they are within radio coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S763",
+   "section": 32,
+   "text": "The Vessel Master confirms safety-critical instructions using the agreed read-back procedure before the vessel acts on them.",
+   "tags": []
+  },
+  {
+   "unit_id": "S764",
+   "section": 32,
+   "text": "The Marine Coordinator shares relevant marine and weather information with vessel personnel and the Duty Planner.",
+   "tags": []
+  },
+  {
+   "unit_id": "S765",
+   "section": 32,
+   "text": "The Weather Analyst assesses forecast uncertainty and communicates conditions that could affect access, lifting, or work at height.",
+   "tags": []
+  },
+  {
+   "unit_id": "S766",
+   "section": 32,
+   "text": "The Weather Service and Metocean Buoy provide inputs that are reviewed alongside direct observations from offshore personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S767",
+   "section": 32,
+   "text": "The SCADA Gateway carries operational data to the Shore Control Room and preserves source timestamps where available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S768",
+   "section": 32,
+   "text": "The Control Engineer reviews alarms and operating trends with the SCADA Engineer when an abnormal condition may require intervention.",
+   "tags": []
+  },
+  {
+   "unit_id": "S769",
+   "section": 32,
+   "text": "The Grid Dispatcher communicates external operating requirements to the Grid Interface Relay and the responsible control personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S770",
+   "section": 32,
+   "text": "Instructions that affect electrical safety are communicated through authorized channels and confirmed by the responsible Substation Operator or Electrical Technician.",
+   "tags": []
+  },
+  {
+   "unit_id": "S771",
+   "section": 32,
+   "text": "When a communication channel is unavailable, personnel use the approved fallback method and report the outage as soon as practicable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S772",
+   "section": 32,
+   "text": "Urgent messages identify the affected asset, the hazard or condition, the required action, and the person issuing the instruction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S773",
+   "section": 32,
+   "text": "The receiver repeats critical details, and the sender confirms that the read-back is accurate before the instruction is treated as understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S774",
+   "section": 32,
+   "text": "Operational records identify the originator, recipient, event time, recording time, relevant asset, and decision or action taken.",
+   "tags": []
+  },
+  {
+   "unit_id": "S775",
+   "section": 32,
+   "text": "Entries distinguish observed facts from estimates, assumptions, and recommendations so that later reviewers can assess their basis.",
+   "tags": []
+  },
+  {
+   "unit_id": "S776",
+   "section": 32,
+   "text": "Records use synchronized time sources where available, and any known clock discrepancy is noted for later reconciliation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S777",
+   "section": 32,
+   "text": "Corrections preserve the original entry, identify the person making the change, and state the reason for the correction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S778",
+   "section": 32,
+   "text": "The Field Supervisor ensures that field observations and work outcomes are entered promptly while the details remain verifiable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S779",
+   "section": 32,
+   "text": "The Duty Planner links relevant communications and work records to the applicable work package and operating plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S780",
+   "section": 32,
+   "text": "The Work Permit Portal retains permit decisions and associated approvals in a form that can be retrieved for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S781",
+   "section": 32,
+   "text": "The Cybersecurity Analyst protects access logs and communication records against unauthorized alteration or disclosure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S782",
+   "section": 32,
+   "text": "The organization retains voice recordings, system logs, and work records according to the approved retention schedule and applicable legal obligations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S783",
+   "section": 32,
+   "text": "Records subject to an investigation, claim, or safety review are preserved from routine deletion until the authorized release of the hold.",
+   "tags": []
+  },
+  {
+   "unit_id": "S784",
+   "section": 32,
+   "text": "The responsible manager reviews record completeness after significant events and assigns correction or follow-up actions where evidence is missing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S785",
+   "section": 33,
+   "text": "Fire protection is designed to detect smoke, heat, and flame early enough to support automatic equipment protection and a controlled personnel response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S786",
+   "section": 33,
+   "text": "The Fire Detection Panel supervises detection circuits and annunciates alarms with location and fault information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S787",
+   "section": 33,
+   "text": "Detection coverage includes electrical enclosures, machinery spaces, and other areas identified by the site fire risk assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S788",
+   "section": 33,
+   "text": "The Turbine Sensor Bus carries equipment status used by protective functions and operational monitoring.",
+   "tags": []
+  },
+  {
+   "unit_id": "S789",
+   "section": 33,
+   "text": "The Turbine Controller initiates the configured shutdown response when a confirmed fire condition requires turbine protection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S790",
+   "section": 33,
+   "text": "The Pitch System moves the blades to the defined safe position when commanded during an emergency shutdown.",
+   "tags": []
+  },
+  {
+   "unit_id": "S791",
+   "section": 33,
+   "text": "The Rotor Brake Unit applies braking only in accordance with the turbine protection sequence and operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S792",
+   "section": 33,
+   "text": "The Converter Cabinet is isolated when fire or overheating threatens electrical equipment or personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S793",
+   "section": 33,
+   "text": "The Nacelle Condition Monitor provides condition information that can help distinguish a developing equipment fault from a confirmed fire alarm.",
+   "tags": []
+  },
+  {
+   "unit_id": "S794",
+   "section": 33,
+   "text": "At the Offshore Substation, fire detection and equipment protection are coordinated with electrical isolation procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S795",
+   "section": 33,
+   "text": "The Main Transformer is protected by site-specific detection and trip settings that account for its design and operating conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S796",
+   "section": 33,
+   "text": "Alarm priorities distinguish immediate danger from supervisory faults that require assessment but do not indicate an active fire.",
+   "tags": []
+  },
+  {
+   "unit_id": "S797",
+   "section": 33,
+   "text": "An alarm is not cleared solely because a detector signal has returned to normal.",
+   "tags": []
+  },
+  {
+   "unit_id": "S798",
+   "section": 33,
+   "text": "The Shore Control Room assesses incoming alarms, confirms the affected asset, and initiates the response appropriate to the reported severity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S799",
+   "section": 33,
+   "text": "The Control Engineer verifies the equipment state and checks that protection actions have completed before authorizing any further operational action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S800",
+   "section": 33,
+   "text": "The SCADA Gateway supports alarm visibility at the shore operating position without replacing local emergency controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S801",
+   "section": 33,
+   "text": "The Electrical Technician performs local inspection only after the area has been assessed as safe and the required electrical isolations are in place.",
+   "tags": []
+  },
+  {
+   "unit_id": "S802",
+   "section": 33,
+   "text": "A Turbine Lockout prevents remote restart while personnel investigate a fire alarm or complete post-event checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S803",
+   "section": 33,
+   "text": "The Emergency Generator supports essential functions when normal electrical supplies are unavailable, subject to its designated load priorities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S804",
+   "section": 33,
+   "text": "Offshore personnel follow posted escape routes and muster at the designated assembly point when evacuation is ordered.",
+   "tags": []
+  },
+  {
+   "unit_id": "S805",
+   "section": 33,
+   "text": "The Personnel Tracking Console supports accountability checks for personnel assigned to the affected work area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S806",
+   "section": 33,
+   "text": "The Operations Radio Console provides a coordinated communications channel for response instructions and status reports.",
+   "tags": []
+  },
+  {
+   "unit_id": "S807",
+   "section": 33,
+   "text": "The Vessel Master maintains a safe position and readiness to support personnel recovery when directed by the response lead.",
+   "tags": []
+  },
+  {
+   "unit_id": "S808",
+   "section": 33,
+   "text": "The HSE Officer advises on exposure, evacuation, and re-entry criteria in coordination with the incident response team.",
+   "tags": []
+  },
+  {
+   "unit_id": "S809",
+   "section": 33,
+   "text": "The Field Supervisor confirms work party status and reports unresolved personnel or access concerns to the Shore Control Room.",
+   "tags": []
+  },
+  {
+   "unit_id": "S810",
+   "section": 34,
+   "text": "North Access Scanner validates each presented credential against current access authorization before enabling controlled entry.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S811",
+   "section": 34,
+   "text": "The scanner accepts only credentials that can be read reliably and associated with an identifiable person.",
+   "tags": []
+  },
+  {
+   "unit_id": "S812",
+   "section": 34,
+   "text": "The person presents the credential at the controlled entry point and waits for the scanner response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S813",
+   "section": 34,
+   "text": "The scanner checks that the authorization is active for the scheduled work period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S814",
+   "section": 34,
+   "text": "It also checks that the requested access area is within the person's approved scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S815",
+   "section": 34,
+   "text": "An authorization that is expired, suspended, or incomplete results in a denied entry decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S816",
+   "section": 34,
+   "text": "The gate remains secured when the scanner cannot verify a credential or retrieve the required authorization information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S817",
+   "section": 34,
+   "text": "A denial directs the person to contact the Field Supervisor or the HSE Officer for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S818",
+   "section": 34,
+   "text": "Neither a verbal request nor a manually presented credential image overrides a scanner denial.",
+   "tags": []
+  },
+  {
+   "unit_id": "S819",
+   "section": 34,
+   "text": "Approved entry is granted only after all configured identity and authorization checks pass.",
+   "tags": []
+  },
+  {
+   "unit_id": "S820",
+   "section": 34,
+   "text": "Each attempt receives a unique transaction identifier for later reference.",
+   "tags": []
+  },
+  {
+   "unit_id": "S821",
+   "section": 34,
+   "text": "The transaction records the credential identifier, decision time, access point, and decision outcome.",
+   "tags": []
+  },
+  {
+   "unit_id": "S822",
+   "section": 34,
+   "text": "It also records the authorization version and the rule that determined the outcome.",
+   "tags": []
+  },
+  {
+   "unit_id": "S823",
+   "section": 34,
+   "text": "The audit record distinguishes a rejected credential from an authorization that lacks the required scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S824",
+   "section": 34,
+   "text": "The system retains successful and unsuccessful attempts under the site's access record retention policy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S825",
+   "section": 34,
+   "text": "Access records are protected against unauthorized alteration and are available to authorized reviewers.",
+   "tags": []
+  },
+  {
+   "unit_id": "S826",
+   "section": 34,
+   "text": "The Field Supervisor reviews unusual denial patterns and unresolved access exceptions during the work shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S827",
+   "section": 34,
+   "text": "The HSE Officer can use the recorded entry history to support personnel accountability during an incident.",
+   "tags": []
+  },
+  {
+   "unit_id": "S828",
+   "section": 34,
+   "text": "If the scanner is unavailable, personnel follow the approved contingency process rather than bypassing the gate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S829",
+   "section": 34,
+   "text": "The contingency process requires a named approver and a recorded reason for any temporary access decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S830",
+   "section": 34,
+   "text": "Temporary decisions are reconciled against the normal access record when scanner service is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S831",
+   "section": 34,
+   "text": "The scanner displays a clear outcome without exposing unnecessary personal information to people nearby.",
+   "tags": []
+  },
+  {
+   "unit_id": "S832",
+   "section": 34,
+   "text": "Operators verify the scanner clock and connectivity during routine readiness checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S833",
+   "section": 34,
+   "text": "Changes to access rules are controlled and reviewed before they become effective at the entry point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S834",
+   "section": 34,
+   "text": "This control provides a consistent basis for admitting authorized personnel and explaining each access decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S835",
+   "section": 35,
+   "text": "South Access Scanner serves the designated southern entry route to the offshore wind farm.",
+   "tags": []
+  },
+  {
+   "unit_id": "S836",
+   "section": 35,
+   "text": "The route is intended for personnel arriving through the south-side access point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S837",
+   "section": 35,
+   "text": "Its location and operating hours are defined in the site access plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S838",
+   "section": 35,
+   "text": "The scanner applies the same identity verification standard used at other controlled entry points.",
+   "tags": []
+  },
+  {
+   "unit_id": "S839",
+   "section": 35,
+   "text": "Each entrant presents an individually assigned credential for validation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S840",
+   "section": 35,
+   "text": "The scanner checks that the credential is active and belongs to the person presenting it.",
+   "tags": []
+  },
+  {
+   "unit_id": "S841",
+   "section": 35,
+   "text": "Access is granted only when the person has current authorization for the requested area and time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S842",
+   "section": 35,
+   "text": "The route does not provide an alternate way to bypass work authorization or site restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S843",
+   "section": 35,
+   "text": "The scanner records each successful entry and each denied attempt with a time reference.",
+   "tags": []
+  },
+  {
+   "unit_id": "S844",
+   "section": 35,
+   "text": "The record supports routine review of access activity and investigation of anomalies.",
+   "tags": []
+  },
+  {
+   "unit_id": "S845",
+   "section": 35,
+   "text": "A local visual indicator communicates whether entry is permitted or denied.",
+   "tags": []
+  },
+  {
+   "unit_id": "S846",
+   "section": 35,
+   "text": "The entry barrier remains closed when validation fails or the scanner cannot complete a check.",
+   "tags": []
+  },
+  {
+   "unit_id": "S847",
+   "section": 35,
+   "text": "Personnel must not hold the barrier open for another entrant.",
+   "tags": []
+  },
+  {
+   "unit_id": "S848",
+   "section": 35,
+   "text": "Anti-tailgating measures are applied at the southern entry point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S849",
+   "section": 35,
+   "text": "Visitors and temporary personnel follow the same identity checks as other entrants.",
+   "tags": []
+  },
+  {
+   "unit_id": "S850",
+   "section": 35,
+   "text": "Any escort requirement is verified before access is granted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S851",
+   "section": 35,
+   "text": "The route is kept physically separated from areas that are not authorized for general access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S852",
+   "section": 35,
+   "text": "Signs identify the permitted approach and direct personnel to the controlled entry point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S853",
+   "section": 35,
+   "text": "The installation team verifies the scanner, barrier, and communications before the route is placed in service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S854",
+   "section": 35,
+   "text": "Routine checks confirm that credential readers, indicators, and barrier controls operate as intended.",
+   "tags": []
+  },
+  {
+   "unit_id": "S855",
+   "section": 35,
+   "text": "Faults are reported promptly, and the route is placed out of service if secure operation cannot be assured.",
+   "tags": []
+  },
+  {
+   "unit_id": "S856",
+   "section": 35,
+   "text": "When the scanner is unavailable, personnel use an approved alternative entry process rather than an uncontrolled bypass.",
+   "tags": []
+  },
+  {
+   "unit_id": "S857",
+   "section": 35,
+   "text": "Emergency egress remains available without requiring an access credential from the inside of the route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S858",
+   "section": 35,
+   "text": "Changes to the southern route are reviewed under the same change-control process as other access rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S859",
+   "section": 36,
+   "text": "East Service Lift runs a door-interlock and overload check before accepting a movement request.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S860",
+   "section": 36,
+   "text": "The Field Supervisor coordinates the inspection before the first planned movement of each operating shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S861",
+   "section": 36,
+   "text": "The inspection begins with a visual check of the car, landing doors, guide surfaces, and access barriers.",
+   "tags": []
+  },
+  {
+   "unit_id": "S862",
+   "section": 36,
+   "text": "The inspector confirms that the car floor and landing thresholds are clear of loose material and standing water.",
+   "tags": []
+  },
+  {
+   "unit_id": "S863",
+   "section": 36,
+   "text": "Door interlocks are tested at each served landing to confirm that the car cannot move while a door is open.",
+   "tags": []
+  },
+  {
+   "unit_id": "S864",
+   "section": 36,
+   "text": "The emergency stop and alarm are tested using the approved functional test procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S865",
+   "section": 36,
+   "text": "The inspector checks the operating controls for damage, legibility, and secure mounting.",
+   "tags": []
+  },
+  {
+   "unit_id": "S866",
+   "section": 36,
+   "text": "The hoist, suspension points, and visible cable sections are examined for wear, corrosion, or abnormal movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S867",
+   "section": 36,
+   "text": "The Electrical Technician verifies that the lift supply and protective devices show no active fault indication.",
+   "tags": []
+  },
+  {
+   "unit_id": "S868",
+   "section": 36,
+   "text": "The inspector confirms that the rated capacity and operating instructions remain legible at the car entrance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S869",
+   "section": 36,
+   "text": "The Field Supervisor records the inspection result and any observed defects in the maintenance system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S870",
+   "section": 36,
+   "text": "A defect affecting safe operation prevents release until the required repair and verification are complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S871",
+   "section": 36,
+   "text": "The Work Permit Portal is checked for active restrictions that could conflict with lift operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S872",
+   "section": 36,
+   "text": "The Duty Planner confirms that the planned work can proceed within the lift capacity and operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S873",
+   "section": 36,
+   "text": "Personnel are briefed on the permitted landings, maximum occupancy, and emergency actions before boarding.",
+   "tags": []
+  },
+  {
+   "unit_id": "S874",
+   "section": 36,
+   "text": "The Personnel Tracking Console is used to maintain an accurate record of personnel entering and leaving the route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S875",
+   "section": 36,
+   "text": "Equipment is inspected for dimensions, mass, and secure packaging before it is accepted for transport.",
+   "tags": []
+  },
+  {
+   "unit_id": "S876",
+   "section": 36,
+   "text": "The Storekeeper confirms that equipment intended for the lift is ready and properly identified for the work party.",
+   "tags": []
+  },
+  {
+   "unit_id": "S877",
+   "section": 36,
+   "text": "Long or unstable loads are not carried unless an approved handling arrangement keeps the load contained within the car.",
+   "tags": []
+  },
+  {
+   "unit_id": "S878",
+   "section": 36,
+   "text": "The operator positions each load to avoid obstructing doors, controls, and emergency access.",
+   "tags": []
+  },
+  {
+   "unit_id": "S879",
+   "section": 36,
+   "text": "The Field Supervisor confirms that no person is exposed to a suspended or shifting load during movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S880",
+   "section": 36,
+   "text": "The release decision is based on a satisfactory inspection, valid work authorization, and compliance with stated limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S881",
+   "section": 36,
+   "text": "The Field Supervisor communicates the release status to the work party and records the time that service is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S882",
+   "section": 36,
+   "text": "During operation, users report unusual noise, vibration, door behavior, or control response immediately.",
+   "tags": []
+  },
+  {
+   "unit_id": "S883",
+   "section": 36,
+   "text": "The lift is removed from service if a new condition could compromise safe movement, pending assessment and corrective action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S884",
+   "section": 37,
+   "text": "The West Service Lift provides vertical access along the west route between the designated service landings.",
+   "tags": []
+  },
+  {
+   "unit_id": "S885",
+   "section": 37,
+   "text": "Its use is limited to personnel and equipment authorized for the turbine work area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S886",
+   "section": 37,
+   "text": "Before boarding, the Field Supervisor confirms that the work authorization covers the intended landing and task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S887",
+   "section": 37,
+   "text": "The Field Supervisor also verifies that the landing is accessible and that the route is clear of obstructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S888",
+   "section": 37,
+   "text": "The operator checks the lift identification, rated capacity, and current service status before each operating period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S889",
+   "section": 37,
+   "text": "The west route landing doors are inspected for damage, secure closure, and unobstructed movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S890",
+   "section": 37,
+   "text": "The operator confirms that the car floor is level with the boarding landing before permitting entry or exit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S891",
+   "section": 37,
+   "text": "Lighting inside the car and at each landing must be adequate for safe movement and inspection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S892",
+   "section": 37,
+   "text": "The operator checks that the controls respond correctly and that the emergency stop is accessible.",
+   "tags": []
+  },
+  {
+   "unit_id": "S893",
+   "section": 37,
+   "text": "Door interlocks and other protective devices must be functional before the lift is placed in service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S894",
+   "section": 37,
+   "text": "Protective devices must not be bypassed to maintain access or avoid delay.",
+   "tags": []
+  },
+  {
+   "unit_id": "S895",
+   "section": 37,
+   "text": "The operator confirms that the expected load, including tools and carried equipment, remains within the rated capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S896",
+   "section": 37,
+   "text": "Passengers distribute themselves and their equipment to avoid obstructing the doors or control panel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S897",
+   "section": 37,
+   "text": "Loose tools and materials are secured against movement during travel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S898",
+   "section": 37,
+   "text": "The operator confirms that all occupants are ready and that the doors are fully closed before starting movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S899",
+   "section": 37,
+   "text": "During travel, occupants remain inside the car and avoid interfering with the controls or doors.",
+   "tags": []
+  },
+  {
+   "unit_id": "S900",
+   "section": 37,
+   "text": "The operator monitors lift movement for unusual noise, vibration, hesitation, or irregular stopping.",
+   "tags": []
+  },
+  {
+   "unit_id": "S901",
+   "section": 37,
+   "text": "Any unexpected movement or control response requires the operator to stop the lift at the nearest safe landing when practicable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S902",
+   "section": 37,
+   "text": "If the car stops between landings, occupants use the designated alarm or communication method and remain inside the car.",
+   "tags": []
+  },
+  {
+   "unit_id": "S903",
+   "section": 37,
+   "text": "Personnel do not attempt to open doors or climb out of a stopped car without direction from the response team.",
+   "tags": []
+  },
+  {
+   "unit_id": "S904",
+   "section": 37,
+   "text": "At the destination, the operator confirms that the car is level and stationary before opening the doors.",
+   "tags": []
+  },
+  {
+   "unit_id": "S905",
+   "section": 37,
+   "text": "Occupants exit without crowding, and the operator checks that tools and equipment have been removed from the car.",
+   "tags": []
+  },
+  {
+   "unit_id": "S906",
+   "section": 37,
+   "text": "The Field Supervisor ensures that the lift is left secure and that any irregularity is reported through the established site process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S907",
+   "section": 37,
+   "text": "The West Service Lift is removed from service if a condition could compromise safe movement, pending assessment and corrective action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S908",
+   "section": 38,
+   "text": "The system measures operational performance against approved service objectives and documented fleet baselines.",
+   "tags": []
+  },
+  {
+   "unit_id": "S909",
+   "section": 38,
+   "text": "Availability is reported for each turbine and for the fleet, with planned maintenance and forced outages classified separately.",
+   "tags": []
+  },
+  {
+   "unit_id": "S910",
+   "section": 38,
+   "text": "Energy production measures include delivered energy, production lost during downtime, and the duration of grid-related restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S911",
+   "section": 38,
+   "text": "Maintenance performance is assessed through work completion time, repeat work, overdue tasks, and the proportion of work completed as planned.",
+   "tags": []
+  },
+  {
+   "unit_id": "S912",
+   "section": 38,
+   "text": "Safety performance measures include reported events, completion of required controls, and timely closure of corrective actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S913",
+   "section": 38,
+   "text": "Performance definitions identify the source data, calculation method, reporting interval, and accountable owner for each measure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S914",
+   "section": 38,
+   "text": "The SCADA Gateway provides operational records used to assess turbine availability and production trends.",
+   "tags": []
+  },
+  {
+   "unit_id": "S915",
+   "section": 38,
+   "text": "The Nacelle Condition Monitor supports assessment of equipment condition and emerging degradation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S916",
+   "section": 38,
+   "text": "The Offshore Substation is reviewed for operational availability and the frequency and duration of equipment interruptions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S917",
+   "section": 38,
+   "text": "The Fleet Dispatch Console provides a fleet-level view of operating status and response to emerging constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S918",
+   "section": 38,
+   "text": "The Maintenance Planning Engine supports review of planned work, resource demand, and maintenance completion performance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S919",
+   "section": 38,
+   "text": "Performance results are reviewed at regular operational meetings and escalated when approved thresholds are exceeded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S920",
+   "section": 38,
+   "text": "The Control Engineer examines significant operational deviations and records the technical findings for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S921",
+   "section": 38,
+   "text": "Reliability reviews consider failure frequency, failure duration, recurrence, and the operational consequences of each event.",
+   "tags": []
+  },
+  {
+   "unit_id": "S922",
+   "section": 38,
+   "text": "Review teams distinguish equipment faults from external causes such as access limitations, weather conditions, and grid restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S923",
+   "section": 38,
+   "text": "Failure analyses use available operating history, inspection findings, and maintenance records to identify credible causes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S924",
+   "section": 38,
+   "text": "Corrective actions are assigned an owner, due date, and verification method before they are tracked to closure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S925",
+   "section": 38,
+   "text": "The Duty Planner uses reliability findings to adjust work priorities and planned maintenance intervals when justified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S926",
+   "section": 38,
+   "text": "Lessons learned from maintenance campaigns and significant events are captured in a form that can be applied across the fleet.",
+   "tags": []
+  },
+  {
+   "unit_id": "S927",
+   "section": 38,
+   "text": "The Field Supervisor provides feedback on whether revised procedures and controls are practical during offshore work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S928",
+   "section": 38,
+   "text": "The Warehouse System uses recurring failure and repair information to inform review of critical spares and replenishment assumptions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S929",
+   "section": 38,
+   "text": "The Cybersecurity Analyst reviews performance records for evidence that cybersecurity controls affect operational availability or recovery.",
+   "tags": []
+  },
+  {
+   "unit_id": "S930",
+   "section": 38,
+   "text": "Changes to performance definitions or reporting logic are controlled so that trends remain comparable over time.",
+   "tags": []
+  },
+  {
+   "unit_id": "S931",
+   "section": 38,
+   "text": "Proposed reliability improvements are assessed for safety, technical feasibility, resource needs, and expected operational benefit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S932",
+   "section": 38,
+   "text": "Approved improvements are monitored after implementation to confirm that they deliver the intended result and do not introduce adverse effects.",
+   "tags": []
+  },
+  {
+   "unit_id": "S933",
+   "section": 38,
+   "text": "The operational concept is reviewed periodically so that performance measures and lessons learned continue to reflect actual operating experience.",
+   "tags": []
+  },
+  {
+   "unit_id": "S934",
+   "section": 39,
+   "text": "A degraded mode is entered when a fault, communication loss, environmental limit, or external restriction prevents normal service without requiring immediate full-site shutdown.",
+   "tags": []
+  },
+  {
+   "unit_id": "S935",
+   "section": 39,
+   "text": "The system records the affected function, the detected condition, and the time of transition so that operators can assess the scope and duration of the impairment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S936",
+   "section": 39,
+   "text": "Safety functions take priority over energy production, maintenance throughput, and schedule recovery in every degraded mode.",
+   "tags": []
+  },
+  {
+   "unit_id": "S937",
+   "section": 39,
+   "text": "Turbine Controller retains protective control locally when the supervisory connection is unavailable, while the Shore Control Room monitors the loss of visibility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S938",
+   "section": 39,
+   "text": "If remote commands cannot be confirmed, the Control Engineer suspends those commands and uses approved local procedures until reliable control is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S939",
+   "section": 39,
+   "text": "The Weather Service and Weather Analyst support entry into Weather Hold when forecast or observed conditions exceed approved operating limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S940",
+   "section": 39,
+   "text": "A turbine with a safety-critical fault is placed in Turbine Lockout until the fault is assessed and the required work is authorized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S941",
+   "section": 39,
+   "text": "The Offshore Substation enters Substation Degraded when a protection, auxiliary supply, or monitoring impairment limits safe switching or export capability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S942",
+   "section": 39,
+   "text": "The Grid Interface Relay applies the configured response to a Grid Constraint, and the Grid Dispatcher is advised when generation capability changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S943",
+   "section": 39,
+   "text": "Marine activity is reduced or suspended in Vessel Standby when weather, visibility, communications, or vessel capability is insufficient for safe transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S944",
+   "section": 39,
+   "text": "The Marine Coordinator and Vessel Master confirm that personnel and vessels can remain safely accounted for during an extended interruption.",
+   "tags": []
+  },
+  {
+   "unit_id": "S945",
+   "section": 39,
+   "text": "The Fire Detection Panel and Emergency Generator remain essential services during degraded operation and are not bypassed to recover production.",
+   "tags": []
+  },
+  {
+   "unit_id": "S946",
+   "section": 39,
+   "text": "The SCADA Gateway preserves available status and alarm information, while the SCADA Engineer investigates missing or inconsistent indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S947",
+   "section": 39,
+   "text": "The Fleet Dispatch Console presents operational restrictions so that the Duty Planner can prioritize urgent safety work and maintainable generation capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S948",
+   "section": 39,
+   "text": "The Maintenance Planning Engine separates safety-critical work from tasks that can safely wait until normal access and support are available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S949",
+   "section": 39,
+   "text": "The HSE Officer reviews any proposed workaround that changes established access, isolation, or personnel-control arrangements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S950",
+   "section": 39,
+   "text": "A degraded condition is escalated when its duration, uncertainty, or effect on adjacent equipment increases beyond the approved operating envelope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S951",
+   "section": 39,
+   "text": "The Control Engineer coordinates technical recovery with the relevant field and shore roles before any protection or operating restriction is removed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S952",
+   "section": 39,
+   "text": "Recovery begins only after the initiating condition has been corrected or bounded and the responsible operator has confirmed that the equipment is stable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S953",
+   "section": 39,
+   "text": "Required inspections and functional checks are completed before affected equipment is returned to automatic control or normal duty.",
+   "tags": []
+  },
+  {
+   "unit_id": "S954",
+   "section": 39,
+   "text": "The SCADA Engineer verifies that status, alarms, and command feedback are consistent across the available control views.",
+   "tags": []
+  },
+  {
+   "unit_id": "S955",
+   "section": 39,
+   "text": "The Duty Planner updates operating priorities and deferred work after the recovery status is confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S956",
+   "section": 39,
+   "text": "Normal service is restored in stages so that a successful response at one level does not conceal a remaining restriction elsewhere.",
+   "tags": []
+  },
+  {
+   "unit_id": "S957",
+   "section": 39,
+   "text": "The system retains the event record and recovery decisions for review, trend analysis, and improvement of operating procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S958",
+   "section": 40,
+   "text": "The operating concept is governed as a controlled baseline for safe, reliable, and compliant offshore wind farm operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S959",
+   "section": 40,
+   "text": "The asset operator assigns an accountable owner to maintain the document and coordinate its approval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S960",
+   "section": 40,
+   "text": "Changes to operating assumptions, responsibilities, interfaces, or decision authority require documented impact assessment before approval.",
+   "tags": []
+  },
+  {
+   "unit_id": "S961",
+   "section": 40,
+   "text": "The assessment considers effects on personnel safety, marine coordination, electrical safety, availability, cybersecurity, and regulatory obligations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S962",
+   "section": 40,
+   "text": "The approved concept is consistent with applicable permits, grid requirements, safety cases, and company management systems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S963",
+   "section": 40,
+   "text": "The Shore Control Room applies the approved operating concept during routine operations and abnormal conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S964",
+   "section": 40,
+   "text": "The Control Engineer reviews control-room practices and confirms that operational procedures remain consistent with the concept.",
+   "tags": []
+  },
+  {
+   "unit_id": "S965",
+   "section": 40,
+   "text": "The Duty Planner checks that maintenance priorities, resource plans, and operational constraints are reflected in planned work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S966",
+   "section": 40,
+   "text": "The Marine Coordinator reviews vessel coordination arrangements and verifies that marine responsibilities are understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S967",
+   "section": 40,
+   "text": "The HSE Officer evaluates safety controls, emergency arrangements, and lessons from reported events.",
+   "tags": []
+  },
+  {
+   "unit_id": "S968",
+   "section": 40,
+   "text": "The SCADA Engineer reviews monitoring and control assumptions that affect operational decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S969",
+   "section": 40,
+   "text": "The Cybersecurity Analyst assesses changes that could affect access, communications, or the integrity of operational records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S970",
+   "section": 40,
+   "text": "The Field Supervisor confirms that field execution practices and escalation routes are workable for offshore personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S971",
+   "section": 40,
+   "text": "The Substation Operator reviews responsibilities and coordination arrangements for substation activities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S972",
+   "section": 40,
+   "text": "Assurance evidence includes approved procedures, competence records, maintenance records, risk assessments, audit findings, and event investigations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S973",
+   "section": 40,
+   "text": "Evidence is retained in controlled repositories with access permissions, revision history, and defined retention periods.",
+   "tags": []
+  },
+  {
+   "unit_id": "S974",
+   "section": 40,
+   "text": "Reviews distinguish verified evidence from assumptions, unresolved actions, and proposals that have not yet been approved.",
+   "tags": []
+  },
+  {
+   "unit_id": "S975",
+   "section": 40,
+   "text": "Nonconformances and operational lessons are assigned to an accountable owner with a due date and closure evidence.",
+   "tags": []
+  },
+  {
+   "unit_id": "S976",
+   "section": 40,
+   "text": "The document owner schedules periodic review and initiates an additional review after material operational, technical, or regulatory change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S977",
+   "section": 40,
+   "text": "Review findings are assessed for their effect on existing procedures, training, interfaces, and resource requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S978",
+   "section": 40,
+   "text": "Proposed revisions are checked by affected operational and technical representatives before submission to the designated approver.",
+   "tags": []
+  },
+  {
+   "unit_id": "S979",
+   "section": 40,
+   "text": "The approver confirms that comments are resolved or explicitly accepted before the revised baseline is released.",
+   "tags": []
+  },
+  {
+   "unit_id": "S980",
+   "section": 40,
+   "text": "Released revisions identify the change, rationale, approval, effective date, and superseded baseline.",
+   "tags": []
+  },
+  {
+   "unit_id": "S981",
+   "section": 40,
+   "text": "Personnel affected by a revision receive appropriate communication or training before the change takes effect.",
+   "tags": []
+  },
+  {
+   "unit_id": "S982",
+   "section": 40,
+   "text": "Unapproved local variations are not treated as changes to the operating concept and are escalated through established governance channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S983",
+   "section": 40,
+   "text": "The operator periodically evaluates whether assurance arrangements provide sufficient evidence that the concept remains effective.",
+   "tags": []
+  }
+ ]
+}

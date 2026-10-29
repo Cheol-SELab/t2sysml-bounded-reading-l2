@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Airport CDM Portal provides \"border and customs status\" to Gate Conflict Detector (an information or material flow).\n\nSource sentences:\nS571: When border release status is unknown, the Demand Prediction Service treats the turnaround milestone as uncertain rather than assuming that the planned connection interval is valid.\nS572: The Airport CDM Portal displays border and customs status in a controlled view so that only authorized operational users see the clearance condition needed for coordination.\nS581: The Ramp Movement Board presents apron sensor events as operational evidence for stand release, taxi lane availability, and vehicle conflict assessment.\nS582: The Gate Conflict Detector uses border status and apron occupancy evidence to distinguish a true gate conflict from a temporary clearance delay.\n\nAnswer \"supported\" only if the sentences state that Airport CDM Portal produces or sends this item AND that Gate Conflict Detector receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S572 says the Airport CDM Portal displays border and customs status, and S582 says the Gate Conflict Detector uses border status (a shorter name for the same item), though no sentence explicitly states a direct link between the two.\"}",
+ "usage": {
+  "input_tokens": 714,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 390,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 302
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.138,
+ "created": "2026-10-14T12:46:53"
+}

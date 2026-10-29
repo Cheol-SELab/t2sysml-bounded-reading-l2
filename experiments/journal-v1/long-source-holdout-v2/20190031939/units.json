@@ -1,0 +1,2090 @@
+{
+  "doc_id": "20190031939",
+  "title": "ATD-3 Dynamic Routes for Arrivals in Weather (DRAW) Operational Concept, V2.0",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "necessarily includes assessment of impacts at each involved facility, sector and on the arrival schedule."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "While metering points in XM/CS may be located within an adjacent facility’s airspace, the schedules are dictated by the TBFM system of the primary arrival airport (the ‘home’ TBFM system)."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "For example, the ZFW TBFM system schedules DFW arrivals both to metering fixes (MFs) within ZFW, as well as to any Extended Metering Points (XMPs) and Coupled Metering Points (CMPs), some of which may be located in adjacent ARTCCs (e.g., ZAB or ZME)."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "Schedules for all Metering Points (MFs, XMPs and CMPs) can be displayed on the TBFM Timeline Graphical User Interface (TGUI) for their associated TBFM ‘Group’: Metering Fixes are within the ‘Arrival Group,’ while XMPs and CMPs are within the ‘En Route/Departure Coordination Group’ (or EDC Group)."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "TBFM TGUIs for the Arrival or EDC Groups may be displayed in either the ‘home’ TBFM TMU or any adjacent facility TMU managing XMPs/CMPs."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "As with standard (single scheduler) TBFM operations, metering delays (for each MP) are determined based upon a flight’s frozen STA and its ETA."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "TBFM communicates delays for flights with frozen STAs (at each MP) to the En Route Automation Modernization (ERAM) system for display at the appropriate controller’s station."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "These delays are typically displayed as a 4-digit metering list that controllers use to achieve the desired delay (and thus time of arrival) at each MP en route to the destination."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "Any changes to flight route will most likely result in a significant ETA change; a significant ETA change for a flight with a frozen STA would result in a significant change in prescribed delay on the 4-digit metering list."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "Thus, weather avoidance reroute complexity is only exacerbated by the tiered scheduling paradigm of XM/CS. 3 PROBLEM DESCRIPTION The FAA’s Time-Based Flow Management (TBFM) system is currently used to manage arrival traffic demand into major airports."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "The TBFM systems provides scheduling, spacing, and sequencing guidance to Traffic Managers and Controllers to facilitate time-based metering operations that maximize use of available airport capacity."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "TBFM relies on accurate flight trajectory predictions to generate effective arrival schedules and to allocate metering delay for implementation by air traffic controllers."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "Convective weather in arrival airspace leads to route unavailability, tactical flight deviations for weather avoidance, and increases the difficulty of and uncertainty in flight trajectory prediction."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "Traffic managers often employ traffic management initiatives (TMIs) to mitigate these effects."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "The following sections briefly detail the challenges to arrival metering in the presence of convective weather under the current system. 3.1 INEFFICIENT OR OBSOLETE WEATHER AVOIDANCE ROUTES In order to preempt potential disruption in the arrival flow and metering, arrivals may be routed to a different, but often less efficient, arrival route to avoid forecasted weather hours before the flight would arrive (i.e., a time when weather forecasting error is high)."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "Even if weather does not impact the arrival route or fails to materialize as forecasted, arrivals will often continue to fly these less efficient arrival routes (e.g., Severe Weather Avoidance Plan, or SWAP, routes) because the current Traffic Flow Management System (TFMS) and TBFM systems lack automation to identify and alert TMCs about these routing inefficiencies. 3.2 DISCONTINUED ARRIVAL METERING DUE TO WEATHER Studies have shown that weather in the vicinity of an airport is one of the primary causes for time-based metering to be discontinued[2]."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "One reason for this is due to the current TBFM system’s inability to adjust its predicted times of arrival for aircraft that need to deviate around weather."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "In this situation, controllers will likely revert back to miles-in–trail (MIT) operations, a simpler but less efficient method of managing arrival traffic flow into a constrained airport. 3.3 LACK OF DECISION SUPPORT TOOLS FOR ARRIVAL TRAFFIC MANAGEMENT The TBFM system is designed for the metering of arrivals during periods of high demand."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "Meter times are based on the current position of aircraft, their assigned flight plan routes, and the estimated times of arrival (ETAs) at the runway."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "A change in the routing and ETA of a single flight will impact the metering STA and delay for that aircraft, and may potentially impact the STA and delays of other aircraft in the sequence."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "Tools for the Traffic Manager to evalaute the impact of arrival rerouting on STAs before the reroutes are implemented (i.e., a trial planner) are not currently available."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "TBFM is unable to determine the impact of such changes until they actually take place."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "This makes it very difficult for traffic managers to accurately evaluate the impact of any prospective change, especially when multiple flights are involved."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "XM/CS operations may exacerbate the impact of convective weather on arrival metering operations due to schedule interactions between Metering Points. 4 PROPOSED SOLUTION (DRAW) The Dynamic Routes for Arrivals in Weather (DRAW) system is a trajectory-based decision support capability for traffic managers, and is aimed at improving arrival traffic flow."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "DRAW aids Center Traffic Managers in identifying and evaluating route changes that improve arrival traffic flow efficiency and mitigate impact of weather constraints on their arrival metering operations [3]."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "DRAW combines the weather avoidance capability of NASA’s Dynamic Weather Routes (DWR) with arrival-specific rerouting algorithms [4]."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "The arrival-specific rerouting algorithm continuously searches for reroute opportunities as track and flight plan data are updated."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "The DRAW’s route trial planning capability is integrated with arrival scheduling components to allow the Traffic Management Coordinators (TMCs) at Centers to evaluate the impact of proposed DRAW reroutes on arrival scheduling before implementing them (see Figure 1)."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "This integrated route and schedule trial planner could also be used by traffic managers to manually build and trial plan a route of their own choosing."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "Figure 1: DRAW Operational Environment: Current Arrival Metering Operations 4.1 DRAW SYSTEM DESCRIPTION The DRAW system is intended to reside in Center Traffic Management Units (TMUs) as a decision support tool for TMCs."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "DRAW is capable of providing route advisories early enough to be implemented before the flight reaches the scheduling freeze horizon (Figure 2), or in the case of XM/CS operations, after crossing a MP and before the downstream freeze horizon."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "Rerouting a flight before the scheduling freeze horizon is operationally preferable because it allows the arrival scheduling system (e.g., TBFM) to adjust its STAs and resulting schedule delay before arrival controllers need to work the flight."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "However, DRAW may be configured to provide route advisories for flights with frozen STAs; manual STA assignment or schedule rippling by the TMC may be necessary to accommodate such advisories, or they may be acceptable if the resultant delay is manageable within the existing schedule."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "Due to the effect of weather uncertainty on trajectory predictions, this capability may be particularly useful in cases where the freeze horizon is especially long/distant."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "Figure 2: DRAW Operational Time Horizon The DRAW interface utilizes two displays, a planview map display (e.g., Planview Graphical User Interface, PGUI) and a scheduling timeline display (e.g., Timeline Graphical User Interface, TGUI)."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "An example of the current DRAW interface is shown in Figure 3."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "Key features include the DRAW Advisory List which displays proposed reroutes, and an integrated route and schedule trial planner that allows routes and corresponding schedule impact to be evaluated simultaneously."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "ETAs STAs Trial Plan Flight Schedule and Delays DRAW Advisory List Figure 3: DRAW System Interface DRAW’s trajectory-based route trial planner functionality is implemented on the PGUI, which provides TMCs the ability to initiate a trial plan by modifying either a DRAW-proposed route or the flight’s current flight plan route (including the assigned Standard Terminal Arrival Route or STAR)."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "Modifications can be made to the point at which the flight deviates from the flight plan route (maneuver start point or MSP), the point at which the flight returns to the original flight plan route (return capture fix or RCF), and additional auxiliary waypoints."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "The trial plan trajectory automatically updates the flight’s ETA, weather conflict status, and/or changes to the flight trajectory."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "The PGUI may be displayed in both the ‘home TBFM’ ARTCC TMU as well as adjacent facilities."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "DRAW trial planning functionality is available at each TBFM PGUI."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "The impact of the trial plan route and the updated ETA on the meter point(s) and runway ETAs/STAs for all impacted flights are calculated by the integrated trial scheduler (embedded in the TBFM system), and displayed on the TGUI(s), without actually implementing the reroute."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "TGUIs can be configured to display trial plan impacts on schedules to both Arrival Group (MFs, runways) and EDC Group (XMPs, CMPs) metering points and may reside in either the ‘home’ ARTCC TMU or the adjacent facility TMU (if desired and as needed)."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "The DRAW system utilizes current and forecasted convective weather data to calculate polygon-based weather avoidance fields."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "DRAW currently uses MIT Lincoln Labs developed Corridor Integrated Weather System (CIWS) and Convective Weather Avoidance Model (CWAM) for convective weather data and weather avoidance polygons, respectively[5]."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "However, other convective weather models could be used by DRAW so long as the resulting weather avoidance fields are represented by polygons."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "DRAW combines a Center-based trajectory to the meter fix with a TRACON trajectory, such as the one developed for Terminal Sequencing and Spacing (TSAS), to give full weather detection coverage from en route airspace to runway."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "An example of DRAW’s trajectory-based weather detection capability and forecasted convective weather models is shown in Figure 4."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "Two weather products are displayed: current weather and forecast weather."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "Figure 4 shows current weather (thin, nested contours indicating severity) provided by the CIWS."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "When the TMC uses the trial planner capability, DRAW detects and highlights forecasted weather conflicts and nearby convective weather avoidance polygons corresponding to the flight’s predicted time along the trajectory."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "Weather avoidance polygons are derived from weather forecasts to model regions that flights should avoid when considering a reroute."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "The weather avoidance fields (WAFs) in Figure 4 (bold yellow and cyan polygons) are derived from CIWS forecast data by CWAM and represent the regions that 70% of pilots are likely to avoid."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "Note: Weather polygons are only displayed during trial planning but not when DRAW’s rerouting algorithm is analyzing trajectories for conflicts internally."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "Figure 4: Trajectory-Based Weather Modeling 4.2 DRAW ROUTE ADVISORY TYPES The DRAW routing algorithm continuously analyzes flight trajectories for opportunities to improve arrival traffic flow."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "Arrival trajectories are analyzed to determine if they meet criteria that would trigger DRAW to generate one of two types of DRAW route advisories, time-saving routes to alternate meter fixes and route corrections to avoid weather."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "DRAW route advisories are calculated for individual flights and for groups of flights when the specified criteria are met."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "The trial planner may also be used to manually create a route at any point including inside of the freeze horizon. 4.2.1 Time-Saving Routes to Alternate Meter Fixes Section 2.1 describes the problem of inefficient or obsolete weather avoidance routes."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "In these situations, the weather may move or not materialize as predicted, thus providing an opportunity to reroute flights to save time."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "For each arrival flight, DRAW searches for time- savings opportunities by comparing the flight’s current flight plan trajectory with a series of trajectories along STARs to alternate meter fixes and STAR transitions."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "If time-savings is in excess of the user defined threshold (e.g., 5 minutes), a DRAW route advisory will be triggered."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "In the example shown in Figure 5, STARs to Meter Fix 1 (MF1) were originally blocked by weather, causing flights to file less efficient southerly routes to Meter Fix 2 (MF2, shown in green)."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "DRAW analyzes more direct routes available to MF1 and triggers route advisories for multiple flights (AC4 and AC5) that save 5 minutes or more in flight time due to weather movement away from Meter Fix 1."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "The proposed DRAW routes and their corresponding metering impacts are shown in magenta."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "Figure 5: DRAW Time-Saving Routes 4.2.2 Route Corrections to Avoid Weather DRAW provides reroutes advisories intended to help sustain metering operations in the presence of weather."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "A notional example illustrating a DRAW reroute for weather is shown in Figure 6."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "The current flight plan of AC1, shown on the left in green, is predicted to conflict with weather."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "A simplified TGUI timeline for Meter Fix 1 (MF1), on the right in Figure 6, shows the current times of arrival for AC1, as well as AC2, in green."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "These STAs are based on the current flight plans, and do not reflect the need to deviate around weather."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "As a result, these STAs are outdated and cannot be used for metering."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "DRAW’s dynamic weather avoidance function detects the weather conflict, which in turn triggers DRAW to calculate a route correction around the weather and post it on the DRAW Advisory List."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "The proposed reroute around the weather and the corresponding STA and delay are shown in magenta in Figure 6."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "DRAW calculates a reroute to avoid the conflict and return to the currently assigned STAR, if possible."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "If returning to the current STAR is not possible, DRAW will attempt to reroute the flight to the most efficient weather-free alternate STAR."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "The minimum user defined time-savings criteria described in 4.2.1 does not apply in this case because avoiding weather takes precedence over saving time."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "Figure 6: DRAW Route Correction for Weather 4.3 DRAW PROCEDURES The DRAW system is a decision support tool for TMCs and does not change the current procedures by which reroutes are implemented in the NAS."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Figure 7 depicts a notional coordination procedure for implementing a DRAW route advisory."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "Using the DRAW system, the TMC selects a DRAW route advisory from the DRAW Advisory List."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "In doing so, the advised DRAW route(s) is loaded into the integrated route and schedule trial planner so that the TMC can evaluate before implementing."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "The DRAW trial planner provides functionality for the user to modify and evaluate the route being trial planned as desired."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "The TMC would then coordinate (via adjacent Center TMU, if necessary) with the Area Supervisor who would in turn coordinate with the appropriate sector controller to implement the reroute."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "Figure 7 also shows alternate means of rerouting should Airborne Reroute (ABRR) and/or Data Comm become available: mechanisms that DRAW would employ to relay reroutes to the controller’s En Route Automation Modernization (ERAM) display and to digitally communicate reroutes to the flight crew, respectively."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "Figure 7: Notional Reroute Procedure for DRAW Advisories 4.3.1 Reroute Coordination While DRAW does not introduce new procedures for implementing reroutes, the way in which current procedures are utilized to coordinate reroutes may impact the viability of the DRAW tool and/or the extent of its use."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "The level and extent of required coordination is determined by the operational constraints on reroutes and the facilities involved in imposing those constraints."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "Three levels of required coordination are considered here: Intra-Facility Coordination, Tier-One Facility Precoordination, and Multi-facility Coordination."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "Intra-Facility Coordination: Some reroutes (e.g., those internal to the ‘home’ TBFM ARTCC) require no inter-facility coordination and can be coordinated with relative ease between the TMU, area supervisors and controllers within the same ARTCC (even for individual or small groups of flights)."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "Personnel within the same facility are likely to already be aware of key operational constraints on arrivals and be able to effectively assess/modify proposed weather avoidance reroutes."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "Such coordination could be achieved via telephone between TMCs and Area Supervisors and verbally between Area Supervisors and Controllers."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "Tier-One-Facility Precoordination: When flights are rerouted while located in an adjacent Center’s airspace, coordination with that facility is required since TMCs in the ‘home’ ARTCC may not be aware of operational constraints in the adjacent facility that would preclude a proposed reroute."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "A number of methods have been proposed by TMC participants for precoordinated DRAW reroutes across facility boundaries."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "For example, by precoordinating navaids/sectors and preferred arrival transition routing for flights arriving from a given flow (e.g., DFW arrivals from Chicago area), real-time inter-facility coordination for individual reroutes may be largely eliminated and replaced by perishable agreements that ‘grease the skids’ for near-term reroutes."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "This method of precoordination would require input from sectors/areas to the TMCs coordinating the reroute plan."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "This approach is analogous to a more tactical/dynamic playbook rerouting."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "Alternatively, each facility would be responsible for rerouting as necessary to avoid weather and meet internal operational constraints while meeting agreed-upon inter-facility boundary conditions."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "The extent to which boundary conditions can be precoordinated (e.g., telecon or Letter of Agreement) is a topic for further research."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "Multi-Facility Coordination: Coordination of reroutes across multiple facilities could be managed in real time (without precoordination) either manually or supported by electronic requests/approval."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "Manual coordination would employ the same methods currently used for reroutes, but would be informed by DRAW weather conflict prediction and integrated trial planning capability."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "Integrated trial planning would allow each facility to review both weather and schedule impact of proposed reroutes."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "Thus, the number of iterations on a viable reroute may be reduced and the efficacy of reroutes in actually avoiding convective weather would improve."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "Due to the complexity of manually coordinating operational constraints across multiple facilities in real-time, this method would be used primarily for groups of aircraft and be relatively infrequent for individual flights (likely limited to acute situations or at operator request, time permitting)."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "Electronic approval requests (APREQs) could replace many telephone calls to expedite the approval process and allow TMCs to conduct other tasks while awaiting approval for route modifications outside their airspace."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "Using APREQs, a TMC could build a trial plan reroute that includes changes beyond the boundaries of their airspace, and await electronic approval of those changes."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "If the proposed reroute was approved by the other involved TMU(s) without modification, the reroute would be implemented as originally proposed."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "If additional changes are required by other TMUs, those changes could be coordinated with additional APREQs or (if sufficiently complex) via telephone."
+    },
+    {
+      "unit_id": "U0106",
+      "text": "The APREQ approval chain for DRAW reroutes are only intended to facilitate coordination and is not intended as a safeguard against reroutes without proper coordination; the facility with track control of a flight may issue a reroute without proper coordination in the current system, and DRAW is not intended to change that capability. 4.3.2 Reroute Implementation Successful coordination of a DRAW trial plan results in a pending flight plan amendment (or group of amendments) that is either explicitly or implicitly approved by the proper authority within the TMU of each involved facility."
+    },
+    {
+      "unit_id": "U0107",
+      "text": "Implementation of this would be accomplished in one of three ways: 1) current practice (voice implementation), 2) Airborne Reroute (ABRR), or 3) a combination of 1) and 2)."
+    },
+    {
+      "unit_id": "U0108",
+      "text": "Lacking integrated ABRR capability (with TBFM or via a TFMS connection), a pending flight plan amendment would be communicated by voice to sector controller (directly or through the area supervisor) for clearance to the flight crew and entry into ERAM."
+    },
+    {
+      "unit_id": "U0109",
+      "text": "Because of the requirement for entry into ERAM and because of the potential for error in communication and readback of route amendments, it is desirable that reroutes are not overly complex (i.e., routes should avoid use of Fix-Radial-Distance waypoints if possible)."
+    },
+    {
+      "unit_id": "U0110",
+      "text": "In a more advanced implementation, TBFM could send a reroute directly to ERAM via the ABRR interface even across facilities since, presumably, a pending amendment has been fully coordinated and approved."
+    },
+    {
+      "unit_id": "U0111",
+      "text": "It is unclear, though, if this use of ABRR (direct to ERAM from a system other than TFMS) is envisioned or advisable at this point in time."
+    },
+    {
+      "unit_id": "U0112",
+      "text": "More likely in an ABRR environment is that some mix of voice communication of reroutes (or electronic log messages to those with access to intrafacility ABRR) and ABRR implementation of reroutes within a single facility will be employed."
+    },
+    {
+      "unit_id": "U0113",
+      "text": "This solution would reduce systems integration requirements, instead relying on telephone calls and electronic messages to employ existing reroute methods. 4.4 DRAW USE CASES DRAW assists traffic managers by continuously evaluating flights to identify opportunities to improve arrival traffic flow."
+    },
+    {
+      "unit_id": "U0114",
+      "text": "Use cases for the two types of DRAW route advisories are described below. 4.4.1 Time-Saving Route to Alternate Meter Fix Use Case Name: DRAW Advisory for Time-Saving Route to Alternate Meter Fix or STAR transition route Summary: The DRAW system receives current arrival flight plan trajectories and analyzes them for opportunities to save time."
+    },
+    {
+      "unit_id": "U0115",
+      "text": "Note: DRAW advisories are proposed for airborne arrival flights only."
+    },
+    {
+      "unit_id": "U0116",
+      "text": "Pre-conditions: Data from external sources must be acquired to define the constraints and the filed flight plans:  ERAM: Flight plan and tracks from home and first-tier adjacent Centers  (At least) hourly wind updates (e.g., NOAA Rapid Refresh)  Current and forecasted weather data (e.g., CIWS)  Polygon-based weather avoidance fields (e.g., CWAM)  TBFM: metering data such as metering status, scheduled times of arrival (STAs) for metered flights, schedule delay, metering constraint definitions (and rules for applying them) Trigger Events: New or periodically updated flight track information Nominal Actions: 1."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        0,
+        105
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        106,
+        294
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        295,
+        545
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        546,
+        843
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        844,
+        980
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        981,
+        1124
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1125,
+        1299
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1300,
+        1480
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1481,
+        1704
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1705,
+        1956
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        1957,
+        2157
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        2158,
+        2329
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        2330,
+        2530
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        2531,
+        2625
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        6
+      ],
+      "normalized_body_span": [
+        2626,
+        3089
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "normalized_body_span": [
+        3090,
+        3646
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        3647,
+        3803
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        3804,
+        4145
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        4146,
+        4296
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        4297,
+        4486
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        4487,
+        4657
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        4658,
+        4744
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        4745,
+        4902
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        4903,
+        5256
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        5257,
+        5464
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        5465,
+        5598
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        5599,
+        5730
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        5731,
+        5997
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        7
+      ],
+      "normalized_body_span": [
+        5998,
+        6149
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        6150,
+        6370
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        6371,
+        6613
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        6614,
+        6858
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        6859,
+        7144
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        7145,
+        7317
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        7318,
+        7553
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        7554,
+        7616
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        7617,
+        7830
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "normalized_body_span": [
+        7831,
+        8222
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8223,
+        8485
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8486,
+        8617
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8618,
+        8709
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8710,
+        8775
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8776,
+        9051
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9052,
+        9301
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9302,
+        9426
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9427,
+        9638
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9639,
+        9780
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9781,
+        10007
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10008,
+        10137
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10138,
+        10211
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10212,
+        10308
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10309,
+        10529
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10530,
+        10662
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10663,
+        10852
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        10853,
+        11008
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11009,
+        11202
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11203,
+        11434
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11435,
+        11557
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11558,
+        11809
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11810,
+        11947
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11948,
+        12164
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        12165,
+        12283
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        12284,
+        12474
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        12475,
+        12679
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        12680,
+        12767
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12768,
+        12949
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12950,
+        13030
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13031,
+        13129
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13130,
+        13275
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13276,
+        13380
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13381,
+        13450
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13451,
+        13640
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13641,
+        13750
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13751,
+        13854
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13855,
+        13995
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        13996,
+        14149
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14150,
+        14354
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14355,
+        14445
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14446,
+        14535
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14536,
+        14687
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14688,
+        14811
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14812,
+        15000
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15001,
+        15308
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        15309,
+        15608
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        15609,
+        15770
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        15771,
+        15926
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        15927,
+        16220
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16221,
+        16407
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16408,
+        16546
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        15
+      ],
+      "normalized_body_span": [
+        16547,
+        16839
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "normalized_body_span": [
+        16840,
+        16959
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16960,
+        17301
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17302,
+        17414
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17415,
+        17488
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17489,
+        17686
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17687,
+        17820
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17821,
+        18019
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18020,
+        18198
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18199,
+        18315
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18316,
+        18465
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18466,
+        18766
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18767,
+        18982
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18983,
+        19146
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19147,
+        19291
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19292,
+        19443
+      ]
+    },
+    {
+      "unit_id": "U0106",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        19444,
+        20036
+      ]
+    },
+    {
+      "unit_id": "U0107",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        20037,
+        20209
+      ]
+    },
+    {
+      "unit_id": "U0108",
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "normalized_body_span": [
+        20210,
+        20462
+      ]
+    },
+    {
+      "unit_id": "U0109",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20463,
+        20730
+      ]
+    },
+    {
+      "unit_id": "U0110",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20731,
+        20934
+      ]
+    },
+    {
+      "unit_id": "U0111",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        20935,
+        21074
+      ]
+    },
+    {
+      "unit_id": "U0112",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        21075,
+        21312
+      ]
+    },
+    {
+      "unit_id": "U0113",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        21313,
+        21611
+      ]
+    },
+    {
+      "unit_id": "U0114",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "normalized_body_span": [
+        21612,
+        21956
+      ]
+    },
+    {
+      "unit_id": "U0115",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21957,
+        22026
+      ]
+    },
+    {
+      "unit_id": "U0116",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        22027,
+        22647
+      ]
+    }
+  ],
+  "removed_blocks": [
+    {
+      "page": 6,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 6,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 6,
+      "block": 8,
+      "text": "6",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 7,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 7,
+      "block": 6,
+      "text": "7",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 4,
+      "text": "8",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 4,
+      "text": "9",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 1,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 7,
+      "text": "10",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 5,
+      "text": "11",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 5,
+      "text": "12",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 6,
+      "text": "13",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 3,
+      "text": "14",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 7,
+      "text": "15",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 7,
+      "text": "16",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 7,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 8,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 9,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 10,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 11,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 12,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 13,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 14,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 15,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 16,
+      "text": "17",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 14,
+      "text": "18",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 13,
+      "text": "19",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 7,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 8,
+      "text": "20",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 7,
+      "text": "21",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 5,
+      "text": "22",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 5,
+      "text": "23",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 10,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 11,
+      "text": "24",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 7,
+      "text": "25",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 5,
+      "text": "26",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 27,
+      "block": 6,
+      "text": "27",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 4,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 28,
+      "block": 5,
+      "text": "28",
+      "reason": "numeric_or_repeated_header"
+    }
+  ],
+  "source_only": true
+}

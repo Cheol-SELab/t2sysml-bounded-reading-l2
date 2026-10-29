@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=moving pallets between vehicle travel and outbound staging)\n\nSource sentences (the last one is where the fact was extracted):\nS116: Handoff reporting records the vehicle identifier, pallet identifier, transfer time, and any incomplete or deferred movement.\nS117: Fire Alarm Panel produces the Sprinkler Zone Inhibit Notice when the applicable fire-protection condition is detected.\nS118: Vehicles stop or reroute when active safety controls prevent entry to an assigned travel area.\nS119: East Transfer Conveyor and West Transfer Conveyor provide designated interfaces for moving pallets between vehicle travel and outbound staging.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S119 states that the transfer conveyors provide interfaces for moving pallets between vehicle travel and outbound staging, so the action label matches the sentence's wording.\"}",
+ "usage": {
+  "input_tokens": 680,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 70,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.017,
+ "created": "2026-10-14T12:51:56"
+}

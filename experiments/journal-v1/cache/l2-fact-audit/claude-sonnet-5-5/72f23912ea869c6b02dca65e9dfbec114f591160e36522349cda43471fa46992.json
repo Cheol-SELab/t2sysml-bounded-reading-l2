@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=can be observed)\n\nSource sentences (the last one is where the fact was extracted):\nS043: A pump is not permitted to start when the Raw Water Screen Channel downstream level is below the established low-level limit.\nS044: A pump start is also blocked when the associated drive reports a fault, when local control is selected, or when a safety interlock is not proven.\nS045: If a permissive is lost during operation, the control system either alarms the condition or stops the affected pump according to the severity of the signal.\nS046: The Chief Operator may authorize temporary manual operation only when the cause is understood, the equipment can be observed, and the risk to treatment continuity is acceptable.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S046 does say 'the equipment can be observed' as a condition for authorizing temporary manual operation, but this is a condition rather than an action, so modeling 'can be observed' as an action with that label is a poor fit.\"}",
+ "usage": {
+  "input_tokens": 669,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 89,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.578,
+ "created": "2026-10-14T12:51:48"
+}

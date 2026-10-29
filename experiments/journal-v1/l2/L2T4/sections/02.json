@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "The supervisory architecture separates station-wide observation from local bay and protection functions.",
+   "tags": []
+  },
+  {
+   "text": "The Station Supervisory Control System is named Glasswing in this document.",
+   "tags": [
+    "ALIAS:E_STATION_SUPERVISORY_CONTROL_SYSTEM"
+   ]
+  },
+  {
+   "text": "The Station Supervisory Control System presents available station and bay indications through a consolidated operator interface.",
+   "tags": []
+  },
+  {
+   "text": "Its displays show operating conditions and communication quality without replacing local equipment indications.",
+   "tags": []
+  },
+  {
+   "text": "The Station Gateway carries supervisory communications between station-level functions and remote operations interfaces.",
+   "tags": []
+  },
+  {
+   "text": "Supervisory visibility depends on the availability and quality of the underlying communications and status inputs.",
+   "tags": []
+  },
+  {
+   "text": "The supervisory layer does not perform the protective functions assigned to dedicated protection equipment.",
+   "tags": []
+  },
+  {
+   "text": "The Control Room Operator uses the supervisory displays to assess station conditions and coordinate operating actions.",
+   "tags": []
+  },
+  {
+   "text": "Any supervisory command remains subject to configured permissions and the applicable operating procedure.",
+   "tags": []
+  },
+  {
+   "text": "Local interlocks and equipment-level control logic remain authoritative for permitted switching actions.",
+   "tags": []
+  },
+  {
+   "text": "A communications interruption can leave displayed information stale or temporarily unavailable.",
+   "tags": []
+  },
+  {
+   "text": "After communications recover, operators confirm that indications are current before relying on them for decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Satellite Time Receiver is named Bluefin in this document.",
+   "tags": [
+    "ALIAS:E_SATELLITE_TIME_RECEIVER"
+   ]
+  },
+  {
+   "text": "The Satellite Time Receiver acquires a reference from supported satellite timing signals.",
+   "tags": []
+  },
+  {
+   "text": "It distributes time to station equipment over the configured time-distribution network.",
+   "tags": []
+  },
+  {
+   "text": "Time distribution supports consistent event timestamps across equipment that receives and applies the reference.",
+   "tags": []
+  },
+  {
+   "text": "Accurate timestamps assist event correlation but do not establish the validity of an electrical measurement or protection decision.",
+   "tags": []
+  },
+  {
+   "text": "If the external timing reference is lost, equipment behavior depends on its individual clock and holdover capabilities.",
+   "tags": []
+  },
+  {
+   "text": "Holdover performance varies by device and may degrade as the interval without a valid reference increases.",
+   "tags": []
+  },
+  {
+   "text": "The Satellite Time Receiver produces the Clock Drift Snapshot when its measured offset meets the configured reporting condition.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "Time-quality indications allow operators to distinguish synchronized operation from degraded or unavailable timing.",
+   "tags": []
+  },
+  {
+   "text": "The Station DC System supplies operating power to station automation equipment within its designed capacity.",
+   "tags": []
+  },
+  {
+   "text": "A loss of station power can interrupt supervisory visibility and time distribution until supported supplies are restored.",
+   "tags": []
+  },
+  {
+   "text": "The Station Supervisory Control System produces the Alarm Acknowledgement Slip for supervisory recordkeeping.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "The Substation Supervisor oversees operational use of the supervisory system and escalation of unresolved availability concerns.",
+   "tags": []
+  }
+ ]
+}

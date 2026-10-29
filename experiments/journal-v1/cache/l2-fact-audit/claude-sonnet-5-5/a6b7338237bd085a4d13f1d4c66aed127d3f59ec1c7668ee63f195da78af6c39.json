@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=is assigned a persistent identifier that remains stable across media migration, catalogue refresh, and later reprocessing campaigns)\n\nSource sentences (the last one is where the fact was extracted):\nS176: Recovery after suspension prioritizes products with contractual latency commitments, then processes remaining scenes in acquisition order unless mission management approves a different backlog rule.\nS177: Long Term Archive is the authoritative repository for Sentinel Vale raw downlink, auxiliary data, processing inputs, generated products, and operational metadata after routine production has completed.\nS178: Archive admission begins only after Payload Processing Facility has delivered the product package, associated quality metadata, and checksum evidence required by the configured acceptance rule.\nS179: Each accepted object is assigned a persistent identifier that remains stable across media migration, catalogue refresh, and later reprocessing campaigns.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S179 states that each accepted object is assigned a persistent identifier that remains stable across media migration, catalogue refresh, and later reprocessing campaigns, which matches the action label.\"}",
+ "usage": {
+  "input_tokens": 749,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 75,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.701,
+ "created": "2026-10-14T12:51:55"
+}

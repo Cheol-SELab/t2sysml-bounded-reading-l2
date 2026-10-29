@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "After final command approval, orbit state management remains under continuous control so that operations users work from a common predicted trajectory.",
+   "tags": []
+  },
+  {
+   "text": "The Orbit Determination Engine fits dynamic orbit solutions using radiometric tracking, spacecraft telemetry timing, force models, and the latest approved maneuver history.",
+   "tags": []
+  },
+  {
+   "text": "Tracking arcs include measurements associated with the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna when those data meet quality and timing criteria.",
+   "tags": []
+  },
+  {
+   "text": "The Product Quality Service checks each orbit solution for frame consistency, covariance reasonableness, time-tag continuity, and agreement with recent contact predictions.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team uses the residual report to separate station-related tracking biases from dynamic model errors before accepting an orbit solution.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "text": "The Flight Dynamics Facility maintains the authoritative orbit catalog for the ground segment and records the modeling assumptions applied to each accepted solution.",
+   "tags": []
+  },
+  {
+   "text": "Maneuver screening evaluates orbit maintenance options against fuel use, ground contact visibility, payload outage constraints, and post-burn tracking opportunities.",
+   "tags": []
+  },
+  {
+   "text": "For each candidate burn, the Flight Dynamics Team computes expected state change, execution tolerance, recovery strategy, and the earliest time when the solution can be declared stable.",
+   "tags": []
+  },
+  {
+   "text": "Collision assessment uses externally supplied conjunction data together with the current covariance to estimate miss distance, encounter geometry, and probability of collision.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team maintains screening rules that distinguish routine catalog monitoring from events requiring immediate operator notification.",
+   "tags": []
+  },
+  {
+   "text": "If the predicted risk exceeds the mission threshold, the Spacecraft Operations Team receives a maneuver recommendation package that includes timing constraints and operational impacts.",
+   "tags": []
+  },
+  {
+   "text": "Attitude geometry support translates the predicted orbit into Sun angle, Earth limb, lunar exclusion, target visibility, and antenna pointing information for daily operations.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Facility sends the Star Tracker Mask File after verifying predicted bright-object exclusions against the current attitude plan.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "text": "Bluebell requires that each flight dynamics delivery include a validity interval, coordinate frame, generation time, and operational use statement.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "text": "The Flight Dynamics Facility distributes routine ephemerides and event predictions through controlled interfaces used by the Mission Control Center, Mission Planning System, and Payload Processing Facility.",
+   "tags": []
+  },
+  {
+   "text": "The Mission Planning System uses accepted orbit files to align imaging requests, contact opportunities, recorder margins, and downlink windows.",
+   "tags": []
+  },
+  {
+   "text": "The Command Validation Gateway checks maneuver command parameters against the screened burn plan before allowing the command stack to proceed.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team produces the Ephemeris Delta Note when updated state vectors change predicted acquisition times or imaging geometry beyond agreed thresholds.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "text": "The Orbit Determination Engine produces the Laser Retroreflector Window from the refined orbit solution and the approved station geometry constraints.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "text": "The Spacecraft Operations Team receives maneuver recommendations with enough lead time to rehearse commanding, verify contingency actions, and coordinate contact coverage.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Calibration Team obtains predicted viewing geometry from flight dynamics products to interpret instrument trends and plan calibration activities.",
+   "tags": []
+  },
+  {
+   "text": "The Network Control System uses antenna pointing predictions derived from the accepted ephemeris to prepare scheduled contacts and verify tracking readiness.",
+   "tags": []
+  },
+  {
+   "text": "The Long Term Archive retains released orbit products, covariance data, maneuver records, and quality decisions so that later processing can reproduce the operational context.",
+   "tags": []
+  },
+  {
+   "text": "When the Primary Processing Cluster is unavailable, the Backup Processing Cluster supports product generation with the same validation checks and distribution rules.",
+   "tags": []
+  }
+ ]
+}

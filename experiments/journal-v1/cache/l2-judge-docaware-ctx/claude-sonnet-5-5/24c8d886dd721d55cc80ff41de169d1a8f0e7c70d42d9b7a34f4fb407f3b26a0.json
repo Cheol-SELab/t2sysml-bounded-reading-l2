@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Platform Screen Door Controller provides \"the Platform Door Status Snapshot\" to Metro Operations Control System (an information or material flow).\n\nSource sentences:\nS128: Platform equipment is treated as part of the movement-authority environment when its state can prevent a train from arriving, dwelling, or departing safely.\nS129: Platform Screen Door Controller produces the Platform Door Status Snapshot at each monitored platform face for operational use by the CBTC system.\nS232: Before any cutover stage, the Safety Data Communication Network and Wayside Radio Access Network shall be verified for coverage, latency, redundancy, and alarm presentation at the control center.\nS233: Metro Operations Control System uses the status snapshot to confirm that platform interface conditions are suitable before authorizing the associated commissioning scenario.\n\nAnswer \"supported\" only if the sentences state that Platform Screen Door Controller produces or sends this item AND that Metro Operations Control System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.\n\nOther sentences of the same document that mention this item or a similarly named item (for context only):\n(none found)",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S129 says the Platform Screen Door Controller produces the Platform Door Status Snapshot, and S233 says the Metro Operations Control System uses 'the status snapshot' to confirm platform interface conditions, which refers to the same item.\"}",
+ "usage": {
+  "input_tokens": 763,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 95,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.866,
+ "created": "2026-10-19T19:10:47"
+}

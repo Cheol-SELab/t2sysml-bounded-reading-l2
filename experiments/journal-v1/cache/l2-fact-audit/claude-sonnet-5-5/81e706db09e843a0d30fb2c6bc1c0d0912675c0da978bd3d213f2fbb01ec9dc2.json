@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(label=treated as an unsafe condition)\n\nSource sentences (the last one is where the fact was extracted):\nS084: The Substation Field Crew verifies equipment identity at the point of work against the approved work documentation.\nS085: Field personnel do not rely on screen indications alone to establish that equipment is safe to approach or handle.\nS086: Required checks of position, isolation, and absence of hazardous energy are performed using approved site procedures.\nS087: Any discrepancy between field observations and control-room indications is treated as an unsafe condition until resolved.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"The text says a discrepancy is 'treated as an unsafe condition until resolved', so the phrase is present, but it describes a classification or status rather than a discrete action, and the fact omits the actor and the 'until resolved' condition.\"}",
+ "usage": {
+  "input_tokens": 633,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 94,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.126,
+ "created": "2026-10-14T12:52:17"
+}

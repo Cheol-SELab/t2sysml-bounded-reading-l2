@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "Diagnostics and maintenance for the Greenvale Metro communications-based train control system are organised around prompt event collection, controlled remote access, and traceable engineering decisions.",
+   "tags": []
+  },
+  {
+   "text": "Each safety-related part records time-stamped events for state changes, command acceptance, rejected commands, communication loss, and local protective actions.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Diagnostic Server receives event streams from fixed and onboard equipment through monitored interfaces that do not allow maintenance traffic to alter train movement authority.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Diagnostic Server uses the checksum log to compare stored braking data identifiers against the expected maintenance baseline for the affected train.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "text": "Remote diagnostic sessions are initiated by a Signal Maintenance Engineer and are limited to read-only observation unless an approved maintenance window authorises a specific intervention.",
+   "tags": []
+  },
+  {
+   "text": "The Cyber Security Officer reviews privileged diagnostic access logs and confirms that remote connections use current credentials and approved encryption settings.",
+   "tags": []
+  },
+  {
+   "text": "The Line Traffic Controller receives the Route Release Exception List during incident triage and uses it to check whether a release anomaly could affect service recovery decisions.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "text": "Marble records controller health, interface state, and fallback mode transitions in a form that can be correlated with adjacent wayside and operations records.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "The South District Zone Controller maintains comparable diagnostic coverage so that boundary events can be reviewed without relying on a single source of evidence.",
+   "tags": []
+  },
+  {
+   "text": "The East Junction Interlocking and West Junction Interlocking report route command histories, point detection changes, and protective lock status to support failure localisation.",
+   "tags": []
+  },
+  {
+   "text": "The Atlas Onboard Controller stores onboard fault codes, movement authority acceptance records, propulsion cutback requests, and train interface exceptions for later retrieval.",
+   "tags": []
+  },
+  {
+   "text": "The Dual Channel Odometer provides distance and speed plausibility information that is retained with trainborne diagnostic records after any odometry disagreement.",
+   "tags": []
+  },
+  {
+   "text": "The Train Radio Modem records bearer loss, reconnection timing, signal quality indicators, and message retry counts needed to distinguish radio coverage issues from equipment faults.",
+   "tags": []
+  },
+  {
+   "text": "The Wayside Radio Access Network and Safety Data Communication Network provide communication performance records that are compared with controller logs during network-related investigations.",
+   "tags": []
+  },
+  {
+   "text": "The Metro Operations Control System displays selected fault summaries to the Line Traffic Controller but does not expose detailed maintenance commands at the traffic control workstation.",
+   "tags": []
+  },
+  {
+   "text": "A Revenue Train Operator reports observed cab indications, train handling effects, and passenger service impacts using the operational reporting channel defined for degraded service.",
+   "tags": []
+  },
+  {
+   "text": "Failure triage first establishes whether the condition is safety critical, service affecting, cyber security related, or a maintenance-only defect.",
+   "tags": []
+  },
+  {
+   "text": "Safety critical failures remain under traffic control coordination until the Line Traffic Controller confirms the operating restriction and a Signal Maintenance Engineer confirms the engineering status.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Diagnostic Server preserves raw events, normalised event records, diagnostic session notes, and file integrity values for post-incident analysis.",
+   "tags": []
+  },
+  {
+   "text": "Configuration records include software build identifiers, parameter set identifiers, radio configuration versions, interlocking data versions, and approved change references.",
+   "tags": []
+  },
+  {
+   "text": "The Cryptographic Key Management Appliance maintains certificate and key status records used to verify whether communications faults could be related to authentication or expiry conditions.",
+   "tags": []
+  },
+  {
+   "text": "The Service Timetable Server and Passenger Information Gateway are checked when reported symptoms involve timetable-driven routing assumptions or passenger-facing messages rather than train control protection.",
+   "tags": []
+  },
+  {
+   "text": "The Voice Dispatch Console is included in the evidence scope when verbal instructions, emergency calls, or manual coordination affected the response to an event.",
+   "tags": []
+  },
+  {
+   "text": "After a reportable incident, retained evidence is frozen under maintenance control, copied to a protected repository, and released only through the agreed engineering investigation process.",
+   "tags": []
+  }
+ ]
+}

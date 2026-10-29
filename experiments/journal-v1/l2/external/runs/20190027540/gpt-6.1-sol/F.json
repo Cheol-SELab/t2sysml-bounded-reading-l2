@@ -1,0 +1,3083 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "NASA human spaceflight programs",
+   "label": "moving beyond Low Earth Orbit (LEO)"
+  },
+  {
+   "unit_id": "U0001",
+   "type": "action",
+   "performer": "NASA human spaceflight programs",
+   "label": "implement missions in lunar space and ultimately Mars"
+  },
+  {
+   "unit_id": "U0002",
+   "type": "action",
+   "label": "integration of Human Systems requirements into the vehicle and mission architectures"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "label": "drive an increasing need for crew self-sufficiency in the maintenance and repair of both vehicle systems and human systems"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "crew",
+   "label": "maintenance and repair of both vehicle systems and human systems"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "requirement",
+   "text": "mission realities will drive an increasing need for crew self-sufficiency in the maintenance and repair of both vehicle systems and human systems"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "requirement",
+   "subject": "systematic, traceable, and repeatable approach",
+   "text": "a systematic, traceable, and repeatable approach to identifying, defining, and prioritizing medical capabilities is required"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "label": "meet these challenges"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "label": "identifying, defining, and prioritizing medical capabilities"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "requirement",
+   "subject": "clear process",
+   "text": "a clear process is required for delivering a list of prioritized medical capabilities to the Systems Engineering process"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "requirement",
+   "subject": "Systems Engineering process",
+   "text": "will delineate the mass, power, volume, and similar needs and the trade space analysis for a given space vehicle and mission architecture"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "label": "provide a systematic and repeatable approach to defining and prioritizing clinical capabilities for spaceflight medicine"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "label": "defining and prioritizing clinical capabilities for spaceflight medicine"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "clear process",
+   "label": "delivering a list of prioritized medical capabilities to the Systems Engineering process"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "flow",
+   "source": "clear process",
+   "target": "Systems Engineering process",
+   "payload": "list of prioritized medical capabilities"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "Systems Engineering process",
+   "label": "delineate the mass, power, volume, and similar needs and the trade space analysis for a given space vehicle and mission architecture"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "performer": "Figure 1",
+   "label": "shows the process and products needed to deliver a medical capabilities list to the Systems Engineering team responsible for Human Systems Requirements development"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "flow",
+   "source": "Figure 1",
+   "payload": "process and products needed to deliver a medical capabilities list"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "label": "deliver a medical capabilities list to the Systems Engineering team responsible for Human Systems Requirements development"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "flow",
+   "target": "Systems Engineering team",
+   "payload": "medical capabilities list"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "label": "defining clinical capabilities needed for interfacing with Systems Engineering Teams"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "label": "interfacing with Systems Engineering Teams"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "label": "highlighted in green"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "label": "is used to scope clinically desirable capabilities for inclusion in the Medical System in the exploration vehicle and mission design"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "label": "scope clinically desirable capabilities for inclusion in the Medical System in the exploration vehicle and mission design"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "label": "Starting with the Concept of Operations for the medical system"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "label": "Planned Activities and Unplanned Activities are considered"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "label": "be performed throughout a nominal mission"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "composition",
+   "whole": "Planned Activities",
+   "parts": [
+    "private medical conferences",
+    "periodic dental exams",
+    "self-examinations",
+    "psychological examinations",
+    "exercise sessions"
+   ]
+  },
+  {
+   "unit_id": "U0011",
+   "type": "action",
+   "performer": "crew",
+   "label": "self-examinations by crew"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "occur"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "requirement",
+   "subject": "Unplanned Activities",
+   "text": "require medical evaluation, diagnosis, monitoring, treatment, or long-term care to be implemented by the crew during the mission"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "label": "be implemented by the crew during the mission"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "allocation",
+   "action": "be implemented by the crew during the mission",
+   "to": "crew"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "may occur in-mission"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "label": "uses a list of the expected medical conditions [1], [2] as the starting point for assessment"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "requirement",
+   "subject": "NASA",
+   "text": "NASA will not be able to provide a full, Earth-like medical capability in flight to evaluate, monitor, diagnose, treat, or provide long-term management for all of the potential medical conditions that may occur"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "NASA",
+   "label": "will not be able to provide a full, Earth-like medical capability in flight"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "full, Earth-like medical capability",
+   "label": "evaluate, monitor, diagnose, treat, or provide long-term management for all of the potential medical conditions that may occur"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "may occur"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "label": "provide a process that allows for an evidence-based consensus position on what medical conditions mission planners should prioritize for the vehicle and mission design process"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "mission planners",
+   "label": "prioritize for the vehicle and mission design process"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "requirement",
+   "subject": "mission planners",
+   "text": "mission planners should prioritize for the vehicle and mission design process"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "label": "designed to provide a traceable, repeatable, evidence-based consensus process for scoping the medical capability needs for future design reference missions (DRMs) and upcoming programs"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "Accepted Medical Conditions List",
+   "label": "provide a traceable, repeatable, evidence-based consensus process for scoping the medical capability needs for future design reference missions (DRMs) and upcoming programs"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "label": "scoping the medical capability needs for future design reference missions (DRMs) and upcoming programs"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "composition",
+   "whole": "design reference missions",
+   "parts": [
+    "Mars transit DRM",
+    "shorter duration cis-lunar DRM"
+   ]
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element",
+   "label": "development of a baseline AMCL"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "requirement",
+   "text": "The development of a baseline AMCL by the Exploration Medical Capability (ExMC) Element will assist the effort to identify high priority medical capabilities for inclusion in mission and vehicle planning and provide traceable and documented clinical needs to the Systems Engineering teams tasked with requirements development and design work"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "label": "assist the effort to identify high priority medical capabilities for inclusion in mission and vehicle planning"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "label": "identify high priority medical capabilities for inclusion in mission and vehicle planning"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element",
+   "label": "provide traceable and documented clinical needs to the Systems Engineering teams tasked with requirements development and design work"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "flow",
+   "source": "Exploration Medical Capability Element",
+   "target": "Systems Engineering Teams",
+   "payload": "traceable and documented clinical needs"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "ExMC Clinician’s group",
+   "label": "developed a process to identify and prioritize potential medical conditions that a medical capability should plan to address during these DRMs"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "identify and prioritize potential medical conditions"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "medical capability",
+   "label": "plan to address during these DRMs"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "medical capability",
+   "label": "address during these DRMs"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "requirement",
+   "subject": "medical capability",
+   "text": "a medical capability should plan to address during these DRMs"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "label": "done in two separate iterations as described below"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "attribute",
+   "owner": "ExMC Clinician’s group",
+   "name": "process iterations",
+   "value": "2"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "label": "designed around a Mars transit DRM"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "label": "designed around a shorter duration cis-lunar DRM"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "succession",
+   "before": "designed around a Mars transit DRM",
+   "after": "designed around a shorter duration cis-lunar DRM"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "Defining an AMCL"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element",
+   "label": "better scope a potential exploration medical capability"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element",
+   "label": "identify the necessary resources for inclusion aboard future exploration vehicles within the context of known conditions, desired treatment capabilities, and limitations of vehicle and mission design"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "document",
+   "label": "explores the methodology used in pilot efforts toward development of an AMCL and results of the first and second iterations, as well as lessons learned that can be used for future refinement of these AMCLs, and development of new ones to address future DRMs"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "label": "used in pilot efforts toward development of an AMCL"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "label": "can be used for future refinement of these AMCLs, and development of new ones to address future DRMs"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "label": "address future DRMs"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "action",
+   "label": "identifying the medical conditions that pose a sufficient risk due to incidence, severity, morbidity, mortality, futility, or a combination of these factors during spaceflight missions"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "pose a sufficient risk due to incidence, severity, morbidity, mortality, futility, or a combination of these factors during spaceflight missions"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "label": "development of the Exploration Medical Condition List (EMCL) [3]"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "label": "derived from the International Space Station (ISS) Integrated Medical Group (IMG) Medical Checklist (JSC-48522) [4], the Flight Data File Medical Checklist (JSC-48031) [5], inflight medical incidence data in the Lifetime Surveillance of Astronaut Health (LSAH) repository, and NASA Flight Surgeon subject matter expertise"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "Exploration Medical Condition List",
+   "label": "has served as a foundation in determining which medical conditions might affect crewmembers during a given mission profile"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "label": "determining which medical conditions might affect crewmembers during a given mission profile"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "might affect crewmembers during a given mission profile"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "performer": "Exploration Medical Condition List",
+   "label": "helping to define which conditions might be of concern and require treatment"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "label": "define which conditions might be of concern and require treatment"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "conditions might be of concern and require treatment"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "label": "identify gaps in knowledge that should be addressed by dedicated research or technological advances for future mission development [6]"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "action",
+   "label": "be addressed by dedicated research or technological advances for future mission development [6]"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "requirement",
+   "subject": "gaps in knowledge",
+   "text": "gaps in knowledge that should be addressed by dedicated research or technological advances for future mission development [6]"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "performer": "NASA",
+   "label": "developed the Integrated Medical Model (IMM) condition list (IMCL)"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "label": "considered to be of concern for ISS- specific spaceflight [1], [2]"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "have been used to populate the IMM for probabilistic risk analysis calculations for ISS missions based on the makeup of a given crew and specific mission parameters"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "populate the IMM for probabilistic risk analysis calculations for ISS missions based on the makeup of a given crew and specific mission parameters"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "flow",
+   "source": "NASA",
+   "target": "Integrated Medical Model",
+   "payload": "Integrated Medical Model condition list"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "flow",
+   "source": "Integrated Medical Evidence Database",
+   "target": "Integrated Medical Model",
+   "payload": "data"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "label": "Use of the iMED database"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "label": "an evidence-based assessment of medical conditions’ probability of occurrence and an estimate of the number of occurrences that may occur throughout a given DRM"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "label": "may occur throughout a given DRM"
+  },
+  {
+   "unit_id": "U0030",
+   "type": "action",
+   "label": "faced at this time in human spaceflight"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "limit the ability to define an AMCL that will closely match what medical events occur in upcoming missions"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "define an AMCL"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "Accepted Medical Conditions List",
+   "label": "closely match what medical events occur in upcoming missions"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "requirement",
+   "subject": "Accepted Medical Conditions List",
+   "text": "an AMCL that will closely match what medical events occur in upcoming missions"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "medical events",
+   "label": "occur in upcoming missions"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "requirement",
+   "text": "This fact will not prevent human spaceflight missions from occurring"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "label": "will not prevent human spaceflight missions from occurring"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "human spaceflight missions",
+   "label": "occurring"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "Accepted Medical Conditions List",
+   "label": "can inform vehicle and mission design efforts"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "pilot effort",
+   "label": "attempts to identify the conditions that should, or should not, influence medical system planning for cis-lunar and Mars transit missions in the near-term future"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "pilot effort",
+   "label": "identify the conditions that should, or should not, influence medical system planning for cis-lunar and Mars transit missions in the near-term future"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "influence medical system planning for cis-lunar and Mars transit missions in the near-term future"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "conditions that should, or should not, influence medical system planning for cis-lunar and Mars transit missions in the near-term future"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "label": "is used correctly"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "are likely to occur"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "label": "is considered along with survey-based Subject Matter Expert (SME) interpretation of the complexity and futility involved in dealing with each of those conditions"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "Subject Matter Expert",
+   "label": "dealing with each of those conditions"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "composition",
+   "whole": "Subject Matter Expert",
+   "parts": [
+    "spaceflight support personnel with clinical experience in treating medical conditions"
+   ]
+  },
+  {
+   "unit_id": "U0036",
+   "type": "composition",
+   "whole": "spaceflight support personnel with clinical experience in treating medical conditions",
+   "parts": [
+    "operational flight surgeons",
+    "pharmacists",
+    "nurses"
+   ]
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "performer": "spaceflight support personnel with clinical experience in treating medical conditions",
+   "label": "treating medical conditions"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "was developed to generate a logical method for comparative analysis of various medical conditions that might be experienced during Mars exploration spaceflight"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "performer": "pilot effort",
+   "label": "generate a logical method for comparative analysis of various medical conditions that might be experienced during Mars exploration spaceflight"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "might be experienced during Mars exploration spaceflight"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "determine which conditions should or should not be accommodated by the medical system for such a mission"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "be accommodated by the medical system for such a mission"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "allocation",
+   "action": "be accommodated by the medical system for such a mission",
+   "to": "Medical System"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "conditions should or should not be accommodated by the medical system for such a mission"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "pilot effort",
+   "label": "led to an initial medical list"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "label": "was subsequently modified to a second list that was appropriate for a shorter duration cis-lunar mission profile"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "succession",
+   "before": "led to an initial medical list",
+   "after": "was subsequently modified to a second list that was appropriate for a shorter duration cis-lunar mission profile"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "label": "was used as a starting point for all discussion of potential medical conditions of concern"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "label": "preserve familiarity of language"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "label": "was considered in two scenarios, as in the iMED [1], [2]"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "state",
+   "owner": "medical conditions",
+   "label": "Best Case"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "state",
+   "owner": "medical conditions",
+   "label": "Worst Case"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "performer": "patient",
+   "label": "recovers in the best manner possible for a given condition"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "label": "is complicated by poor response to treatment and failed interventions"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "state",
+   "owner": "medical conditions",
+   "label": "Worst Care"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "are taken from the iMED list in the IMM definitions document (IMM Service Request number D-20160815-365)"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "were not altered for this process"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "label": "can be requested and tailored for specific applications and different mission needs"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "label": "were implemented for different IMM runs specific to each AMCL effort"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "label": "was identified based upon model output data from the NASA IMM Project at Johnson Space Center, Houston, TX (IMM Service Request number SR-20170306-376)"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "label": "using IMM version 3.0"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "label": "programmed in MatLab® version 8.3 (2014a, MathWorks, Natick, MA)"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "attribute",
+   "owner": "IMM version 3.0",
+   "name": "version",
+   "value": "3.0"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "attribute",
+   "owner": "MatLab® version 8.3",
+   "name": "version",
+   "value": "8.3 (2014a)"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "attribute",
+   "owner": "Mars transit DRM",
+   "name": "crew size",
+   "value": "4"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "attribute",
+   "owner": "Mars transit DRM",
+   "name": "male crew count",
+   "value": "2"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "attribute",
+   "owner": "Mars transit DRM",
+   "name": "female crew count",
+   "value": "2"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "attribute",
+   "owner": "Mars transit DRM",
+   "name": "duration",
+   "value": "16",
+   "unit": "month"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "attribute",
+   "owner": "Mars transit DRM",
+   "name": "extra-vehicular activity",
+   "value": "none"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "constraint",
+   "subject": "Mars transit DRM",
+   "expression": "a 16-month DRM"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "attribute",
+   "owner": "Integrated Medical Evidence Database",
+   "name": "Best and Worst Case condition count",
+   "value": "200"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "attribute",
+   "owner": "Mars transit version",
+   "name": "excluded condition count",
+   "value": "6"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "included in the iMED"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "were excluded from consideration in scoring because of their association with EVAs"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "their probabilities were assumed to be 0"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "constraint",
+   "subject": "probability of occurrence",
+   "expression": "their probabilities were assumed to be 0"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "EVA activity was removed from the DRM"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "label": "excluded from this effort"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "label": "data were extracted from an IMM run previously requested for another task"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "label": "previously requested for another task"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "label": "programmed in MatLab® version 8.3 (2014a, MathWorks, Natick, MA)"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "label": "excluded EVA conditions for a cis-lunar mission lasting 42 days"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "attribute",
+   "owner": "IMM version 4.1",
+   "name": "version",
+   "value": "4.1"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "attribute",
+   "owner": "shorter duration cis-lunar DRM",
+   "name": "crew size",
+   "value": "4"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "attribute",
+   "owner": "shorter duration cis-lunar DRM",
+   "name": "male crew count",
+   "value": "4"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "attribute",
+   "owner": "shorter duration cis-lunar DRM",
+   "name": "duration",
+   "value": "42",
+   "unit": "days"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "constraint",
+   "subject": "cis-lunar mission",
+   "expression": "a cis-lunar mission lasting 42 days"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "label": "was selected to demonstrate the process while limiting cost and schedule impacts"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "label": "demonstrate the process"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "label": "limiting cost and schedule impacts"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "label": "The medical conditions were provided to ExMC medical professionals for review"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "flow",
+   "target": "ExMC medical professionals",
+   "payload": "medical conditions"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "performer": "ExMC medical professionals",
+   "label": "review"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "composition",
+   "whole": "ExMC medical professionals",
+   "parts": [
+    "Aerospace-trained pharmacist",
+    "physicians"
+   ]
+  },
+  {
+   "unit_id": "U0048",
+   "type": "attribute",
+   "owner": "physicians",
+   "name": "count",
+   "value": "6"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "attribute",
+   "owner": "physicians",
+   "name": "training and certification",
+   "value": "Aerospace Medicine, Emergency Medicine, Internal Medicine, Family Medicine, and Physical Medicine and Rehabilitation"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "action",
+   "performer": "provider",
+   "label": "reviewed the conditions and Best/Worst Case scenarios"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "action",
+   "performer": "provider",
+   "label": "identifying whether management of each condition or scenario would be feasible for an exploration medical capability specific to the Mars transit Design Reference Mission"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "was asked to score the condition based on complexity (low, medium, high) and futility (low, medium, high) as defined in the tables below"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "provider",
+   "label": "score the condition based on complexity (low, medium, high) and futility (low, medium, high) as defined in the tables below"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "defined in the tables below"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "state",
+   "owner": "complexity",
+   "label": "Low"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "state",
+   "owner": "complexity",
+   "label": "Medium"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "state",
+   "owner": "complexity",
+   "label": "High"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "state",
+   "owner": "futility",
+   "label": "Low"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "state",
+   "owner": "futility",
+   "label": "Medium"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "state",
+   "owner": "futility",
+   "label": "High"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "label": "were translated to a logarithmic scale"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "label": "roughly estimate the likelihood of successful intervention and good clinical outcome"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "Table 1",
+   "label": "shows the definitions and scoring schema assigned to the Complexity category"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "source": "Table 1",
+   "payload": "definitions and scoring schema assigned to the Complexity category"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "label": "assigned to the Complexity category"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "Table 2",
+   "label": "shows the definitions and scoring schema assigned to the Futility category"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "flow",
+   "source": "Table 2",
+   "payload": "definitions and scoring schema assigned to the Futility category"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "label": "assigned to the Futility category"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "Clinical subject matter experts",
+   "label": "assigned scores on a logarithmic scale"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "High score",
+   "value": "1"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "High definition",
+   "value": "Large number of resources required to diagnose and treat, or difficult management."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "requirement",
+   "subject": "necessary resources",
+   "text": "Large number of resources required to diagnose and treat, or difficult management."
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "label": "diagnose and treat"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "Medium score",
+   "value": "0.1"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "Medium definition",
+   "value": "Moderate number of resources required"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "Low score",
+   "value": "0.01"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "Low definition",
+   "value": "Small number of resources required"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "requirement",
+   "subject": "necessary resources",
+   "text": "Moderate number of resources required"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "requirement",
+   "subject": "necessary resources",
+   "text": "Small number of resources required"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "action",
+   "performer": "Clinical subject matter experts",
+   "label": "assigned scores on a logarithmic scale"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "High score",
+   "value": "1"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "High definition",
+   "value": "Highly likely to result in death or disability despite treatment"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "Medium score",
+   "value": "0.1"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "Medium definition",
+   "value": "Somewhat likely to result in death or disability despite treatment"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "Low score",
+   "value": "0.01"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "Low definition",
+   "value": "Unlikely to result in death or disability"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "was multiplied by the score for complexity"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "then divided by the probability of occurrence"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "provide a final comparative ratio, the Exclusion Score (ES)"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "succession",
+   "before": "was multiplied by the score for complexity",
+   "after": "then divided by the probability of occurrence"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "constraint",
+   "subject": "Exclusion Score",
+   "expression": "𝐸𝑥𝑐𝑙𝑢𝑠𝑖𝑜𝑛 𝑆𝑐𝑜𝑟𝑒= 𝐶𝑜𝑚𝑝𝑙𝑒𝑥𝑖𝑡𝑦∗𝐹𝑢𝑡𝑖𝑙𝑖𝑡𝑦 𝑃𝑟𝑜𝑏𝑎𝑏𝑖𝑙𝑖𝑡𝑦"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "are unlikely to occur (probability)"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "label": "accommodate in light of resource and training constraints (complexity)"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "conditions that are unlikely to occur (probability), are unlikely to have a good outcome despite full treatment (futility), and are difficult to accommodate in light of resource and training constraints (complexity) will have a high ES"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "are likely to occur"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "Those conditions that are likely to occur, have good expected outcomes, and require minimal resources will have a low ES"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "require minimal resources"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "label": "a logical mathematical comparison of the viability of planning for conditions given a resource-limited exploration medical capability"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "label": "planning for conditions given a resource-limited exploration medical capability"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "requirement",
+   "text": "It should be noted that, while the probability of occurrence is an evidence-based output from the IMM, the other two variables are subjective clinical SME assessments and logarithmic scores according to the definitions above"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "label": "be noted that, while the probability of occurrence is an evidence-based output from the IMM, the other two variables are subjective clinical SME assessments and logarithmic scores according to the definitions above"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "flow",
+   "source": "Integrated Medical Model",
+   "payload": "probability of occurrence"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "attribute",
+   "owner": "probability of occurrence",
+   "name": "basis",
+   "value": "evidence-based output from the IMM"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "attribute",
+   "owner": "complexity",
+   "name": "basis",
+   "value": "subjective clinical SME assessments and logarithmic scores according to the definitions above"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "attribute",
+   "owner": "futility",
+   "name": "basis",
+   "value": "subjective clinical SME assessments and logarithmic scores according to the definitions above"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "label": "is discussed further in the Limitations and the Future Directions sections below"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "label": "consistent use of the same definition set and scoring algorithm"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "label": "Calculated ESs were reviewed by the Exploration Medical Capability Element Scientist"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "allocation",
+   "action": "Calculated ESs were reviewed by the Exploration Medical Capability Element Scientist",
+   "to": "Exploration Medical Capability Element Scientist"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "flow",
+   "target": "Exploration Medical Capability Element Scientist",
+   "payload": "Exclusion Score"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "guiding the science and research of ExMC"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "assess any inconsistencies"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "determine face validity"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "assessed each condition"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "considering whether to recommend “Should Plan to Treat” or “Should Not Plan to Treat” based upon the variables (probability, complexity, and futility), the ES, and clinical experience"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "recommend “Should Plan to Treat” or “Should Not Plan to Treat” based upon the variables (probability, complexity, and futility), the ES, and clinical experience"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "state",
+   "owner": "medical conditions",
+   "label": "Should Plan to Treat"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "state",
+   "owner": "medical conditions",
+   "label": "Should Not Plan to Treat"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "requirement",
+   "subject": "Should Not Plan to Treat",
+   "text": "designation of a condition as “Should Not Plan to Treat” should not be interpreted as an indication that there would be no attempt to help a crewmember experiencing such a condition"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "should not be interpreted as an indication that there would be no attempt to help a crewmember experiencing such a condition"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "help a crewmember experiencing such a condition"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "crewmembers",
+   "label": "experiencing such a condition"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "would not be specifically included in exploration medical planning and scoping for the purpose of anticipating and treating that specific illness or injury"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "label": "anticipating and treating that specific illness or injury"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "label": "the methodology for this modeling evolved"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "label": "was also incorporated to indicate a condition that might require certain additional resources that could be included in a medical capability"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "label": "indicate a condition that might require certain additional resources that could be included in a medical capability"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "label": "could be included in a medical capability"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "state",
+   "owner": "medical conditions",
+   "label": "Might Plan to Treat"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "a condition that might require certain additional resources that could be included in a medical capability if given the additional volume, mass, and training that would be required"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "label": "could then be discussed further by the SMEs regarding the risk/benefit of inclusion within the model, at a later date when vehicle and crew training limitations were better defined"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "allocation",
+   "action": "could then be discussed further by the SMEs regarding the risk/benefit of inclusion within the model, at a later date when vehicle and crew training limitations were better defined",
+   "to": "Subject Matter Expert"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "label": "vehicle and crew training limitations were better defined"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "action",
+   "label": "were reordered manually to reflect the likelihood of successful intervention and whether such conditions should be considered treatable during an exploration mission"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "action",
+   "label": "reflect the likelihood of successful intervention and whether such conditions should be considered treatable during an exploration mission"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "action",
+   "label": "be considered treatable during an exploration mission"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "whether such conditions should be considered treatable during an exploration mission"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "Element Scientist review"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "label": "the remaining medical experts were asked to agree or disagree with the Element Scientist’s assessments and any reorganization by the Element Scientist and to provide rationale for any disagreement"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "ExMC medical professionals",
+   "label": "agree or disagree with the Element Scientist’s assessments and any reorganization by the Element Scientist"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "ExMC medical professionals",
+   "label": "provide rationale for any disagreement"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "succession",
+   "before": "Element Scientist review",
+   "after": "the remaining medical experts were asked to agree or disagree with the Element Scientist’s assessments and any reorganization by the Element Scientist and to provide rationale for any disagreement"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "majority consensus was reached"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "conditions were again manually reordered to reflect SME consensus"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "reflect SME consensus"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "label": "consensus was not reached"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "provided the final designation based upon the interpretation of considerations presented by the SMEs queried"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "label": "presented by the SMEs queried"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "allocation",
+   "action": "presented by the SMEs queried",
+   "to": "Subject Matter Expert"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "label": "queried"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element",
+   "label": "further refined the medical condition list by attaching medical resources/capabilities to each of the conditions"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element",
+   "label": "attaching medical resources/capabilities to each of the conditions"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "Necessary capabilities for the prevention, diagnosis, and treatment for each of the conditions were identified"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "the resources were determined based on what would be considered terrestrial standards of best practice"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "would be considered terrestrial standards of best practice"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "were modified to account for assumed resource limitations of the flight environment"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "account for assumed resource limitations of the flight environment"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "use of such a capability"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "were modified to account for this limitation"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "account for this limitation"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "these resources/capabilities were determined for each of the conditions"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "this information was used by the SMEs to further order and refine which conditions would and would not be treated"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "allocation",
+   "action": "this information was used by the SMEs to further order and refine which conditions would and would not be treated",
+   "to": "Subject Matter Expert"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "performer": "Subject Matter Expert",
+   "label": "further order and refine which conditions would and would not be treated"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "label": "would and would not be treated"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "performer": "Subject Matter Expert",
+   "label": "incorporating a dimension of “resource requirements” to previous assessments of complexity, futility, and probability"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "succession",
+   "before": "these resources/capabilities were determined for each of the conditions",
+   "after": "this information was used by the SMEs to further order and refine which conditions would and would not be treated"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "was done subjectively"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "ExMC medical professionals",
+   "label": "providing an updated expert opinion on whether to treat or not treat each condition based on the initial exclusion scoring of the condition and the resources identified to manage them"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "ExMC medical professionals",
+   "label": "treat or not treat each condition"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "identified to manage them"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "manage them"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "the methodology established"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "a final list of medical conditions that should or should not be treated during an exploration mission was generated"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "be treated during an exploration mission"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "medical conditions that should or should not be treated during an exploration mission"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "final list of medical conditions",
+   "label": "represents the consensus views of queried experts"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "label": "queried experts"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "outcome categories",
+   "value": "Should Plan to Treat; Should Not Plan to Treat; each subcategorized by Best- and Worst-Case scenario"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "label": "subcategorized by Best- and Worst-Case scenario"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "referred to in the condition list as “Plan to Treat, with Conditions”"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "is included in the first list"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "Might Plan to Treat",
+   "label": "identifying medical scenarios that would require dedicated additions to an exploration medical capability"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "could be managed in part using medical capabilities included in the planned medical system"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "using medical capabilities included in the planned medical system"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "included in the planned medical system"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "would be used to manage other medical conditions"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "label": "manage other medical conditions"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "requirement",
+   "subject": "medical conditions",
+   "text": "medical scenarios that would require dedicated additions to an exploration medical capability"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "performer": "Might Plan to Treat",
+   "label": "could also encompass conditions where treatment would be initiated but may be limited in duration based upon limited quantities of available resources"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "label": "treatment would be initiated"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "label": "may be limited in duration based upon limited quantities of available resources"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "action",
+   "label": "Lists are provided in Appendix A"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "flow",
+   "target": "Appendix A",
+   "payload": "lists"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "Examples of calculations and comparative ratios are provided in Appendix B"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "flow",
+   "target": "Appendix B",
+   "payload": "Examples of calculations and comparative ratios"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "label": "were nearly universally accepted as “Should Plan to Treat” conditions"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "performer": "medical conditions",
+   "label": "most often generated consensus toward no intent to treat"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "label": "treat"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "label": "would likely progress to poor clinical outcome (most futile)"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "conditions considered",
+   "value": "194"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "Should Plan to Treat count without dissent",
+   "value": "135"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "label": "considered for the initial pilot project design"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "label": "135 were listed as “Should Plan to Treat” for medical system scoping with no dissent"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "Might Plan to Treat count",
+   "value": "22"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "Twenty-two conditions were listed as “Plan to Treat, with Conditions”"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "to be provisioned"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "label": "additional dedicated resources/capabilities would not be included for these specific conditions"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "Should Not Plan to Treat count",
+   "value": "34"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "label": "Thirty-four conditions were excluded from consideration for system scoping by consensus"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "label": "designated as Should Not Plan to Treat"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "Figure 2",
+   "label": "shows relevant proportions for condition inclusion and level of disagreement encountered among the SMEs"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "flow",
+   "source": "Figure 2",
+   "payload": "relevant proportions for condition inclusion and level of disagreement encountered among the SMEs"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "label": "encountered among the SMEs"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "label": "Disagreement was noted in the recommendation regarding 14 of the conditions"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "provided final disposition"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "conditions with disagreement",
+   "value": "14"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "attribute",
+   "owner": "initial pilot project",
+   "name": "conditions with disagreement percentage",
+   "value": "7",
+   "unit": "%"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "action",
+   "label": "recommended for inclusion (“Should Plan to Treat”), inclusion with clarification (“Plan to Treat, with Conditions”), and exclusion (“Should Not Plan to Treat”) for medical system scoping from this approach"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "action",
+   "label": "disagreement was encountered"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "requirement",
+   "text": "final designations for these conditions required single voice disposition by the Element Scientist"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "action",
+   "performer": "Exploration Medical Capability Element Scientist",
+   "label": "single voice disposition by the Element Scientist"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "developed in response to the shift to a shorter duration cis-lunar DRM"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "consolidated the initial 194 conditions (plus the six EVA conditions) into a 100-condition list"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "removing the “Best Case” and “Worst Case” definitions"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "looking at requirements for treating the condition as a whole"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "label": "treating the condition as a whole"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "attribute",
+   "owner": "100-condition list",
+   "name": "condition count",
+   "value": "100"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "action",
+   "label": "was done by taking the previously developed mathematical calculations of probability, futility, and complexity and incorporating a “resource requirement” dimension"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "action",
+   "label": "taking the previously developed mathematical calculations of probability, futility, and complexity"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "action",
+   "label": "incorporating a “resource requirement” dimension"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "the conditions were re-ranked"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "again organized into categories of “Should Plan to Treat,” “Might Plan to Treat,” and “Should Not Plan to Treat”"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "label": "was again done based on expert opinion of the previously described panel of SMEs"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "succession",
+   "before": "was done by taking the previously developed mathematical calculations of probability, futility, and complexity and incorporating a “resource requirement” dimension",
+   "after": "the conditions were re-ranked"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "succession",
+   "before": "was done by taking the previously developed mathematical calculations of probability, futility, and complexity and incorporating a “resource requirement” dimension",
+   "after": "again organized into categories of “Should Plan to Treat,” “Might Plan to Treat,” and “Should Not Plan to Treat”"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "label": "reaching consensus in the first iteration of the model"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "label": "the second iteration utilized an alternative methodology"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "label": "developing a comprehensive approach to spaceflight-specific diagnosis and treatment of each condition"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "label": "this comprehensive approach had been developed"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "label": "identify futility and complexity"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "label": "reach consensus regarding “Should Plan to Treat,” “Plan to Treat with Conditions,” and “Should not Plan to Treat” categorization"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "succession",
+   "before": "this comprehensive approach had been developed",
+   "after": "identify futility and complexity"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "succession",
+   "before": "this comprehensive approach had been developed",
+   "after": "reach consensus regarding “Should Plan to Treat,” “Plan to Treat with Conditions,” and “Should not Plan to Treat” categorization"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "label": "the condition list was re-expanded to include Best Case and Worst Case definitions"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "succession",
+   "before": "reach consensus regarding “Should Plan to Treat,” “Plan to Treat with Conditions,” and “Should not Plan to Treat” categorization",
+   "after": "the condition list was re-expanded to include Best Case and Worst Case definitions"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "Clinicians were asked to reevaluate the cases in light of the determined diagnostic and treatment plan and identify whether either case altered the resources needed or management plans"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "performer": "Clinicians",
+   "label": "reevaluate the cases in light of the determined diagnostic and treatment plan"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "performer": "Clinicians",
+   "label": "identify whether either case altered the resources needed or management plans"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "label": "altered the resources needed or management plans"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "performer": "Clinicians",
+   "label": "expanded the final list back to 200 total conditions considered"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "attribute",
+   "owner": "final list of medical conditions",
+   "name": "second-iteration condition count",
+   "value": "200"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "attribute",
+   "owner": "final list of medical conditions",
+   "name": "second-iteration Should Plan to Treat count without dissent",
+   "value": "92"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "attribute",
+   "owner": "final list of medical conditions",
+   "name": "second-iteration Might Plan to Treat count",
+   "value": "89"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "attribute",
+   "owner": "final list of medical conditions",
+   "name": "second-iteration Should Not Plan to Treat count",
+   "value": "19"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "attribute",
+   "owner": "final list of medical conditions",
+   "name": "second-iteration categorization consensus",
+   "value": "100",
+   "unit": "%"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "label": "92 were listed as “Should Plan to Treat” for medical system scoping with no dissent"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "label": "89 conditions were listed as “Plan to Treat, with Conditions”"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "label": "19 conditions were excluded from consideration for system scoping by consensus"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "label": "designated as “Should Not Plan to Treat”"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "performer": "provider",
+   "label": "Using this adjusted approach"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "performer": "provider",
+   "label": "reached 100% consensus for categorization of the medical conditions for a shorter duration cis-lunar DRM"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "Examples of calculations and comparative ratios are provided in Appendix C"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "flow",
+   "target": "Appendix C",
+   "payload": "Examples of calculations and comparative ratios"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "Classification of medical conditions for comparative review"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "label": "determining reasonable vs. unreasonable medical management"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "performer": "pilot effort",
+   "label": "attempted to provide some framework for approaching the problem with mathematical and logarithmic designations of complexity, futility, and a calculation of probability generated by evidence-based modeling tools"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "performer": "pilot effort",
+   "label": "provide some framework for approaching the problem with mathematical and logarithmic designations of complexity, futility, and a calculation of probability generated by evidence-based modeling tools"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "label": "approaching the problem with mathematical and logarithmic designations of complexity, futility, and a calculation of probability generated by evidence-based modeling tools"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "label": "generated by evidence-based modeling tools"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "allocation",
+   "action": "generated by evidence-based modeling tools",
+   "to": "evidence-based modeling tools"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "flow",
+   "source": "evidence-based modeling tools",
+   "payload": "calculation of probability"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "attempted to quantify a “resource requirement” dimension for each medical condition, based on terrestrial standards adapted for spaceflight"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "quantify a “resource requirement” dimension for each medical condition, based on terrestrial standards adapted for spaceflight"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "label": "adapted for spaceflight"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "label": "find a starting point to generate discussion"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "label": "generate discussion"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "label": "allow for refinement of technique through iteration"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "succession",
+   "before": "generate discussion",
+   "after": "allow for refinement of technique through iteration"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "provider",
+   "label": "identified unresolved disagreement in 7% of conditions for the initial design and no disagreement in the second-round design of the process"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "requirement",
+   "subject": "program-level planning and approval processes",
+   "text": "program-level planning and approval processes often require multiple levels of decision-making"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "label": "limiting the discussion to small areas of SME disagreement"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "label": "may streamline review, deliberation, and the need for dedicated SME time for these approval efforts"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "label": "disagreement in the pilot effort most often occurred with conditions where complexity or futility is considered to be high"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "label": "complexity or futility is considered to be high"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "performer": "provider",
+   "label": "expressed disagreement"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "performer": "provider",
+   "label": "struggled to reach consensus regarding two types of conditions"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "performer": "provider",
+   "label": "reach consensus regarding two types of conditions"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "label": "were considered rare but likely to be successfully managed with the addition of few resources to a medical capability"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "label": "be successfully managed with the addition of few resources to a medical capability"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "label": "successful treatment"
+  },
+  {
+   "unit_id": "U0114",
+   "type": "action",
+   "performer": "medical events",
+   "label": "occur"
+  },
+  {
+   "unit_id": "U0115",
+   "type": "action",
+   "label": "were interpreted differently by providers of differing medical backgrounds regarding the likelihood of successful intervention, likelihood of poor clinical outcome despite intervention, or definition of what a “Worst Case” scenario might entail"
+  },
+  {
+   "unit_id": "U0115",
+   "type": "allocation",
+   "action": "were interpreted differently by providers of differing medical backgrounds regarding the likelihood of successful intervention, likelihood of poor clinical outcome despite intervention, or definition of what a “Worst Case” scenario might entail",
+   "to": "provider"
+  },
+  {
+   "unit_id": "U0115",
+   "type": "action",
+   "performer": "Worst Case",
+   "label": "might entail"
+  }
+ ],
+ "entities": [
+  {
+   "name": "NASA",
+   "aliases": []
+  },
+  {
+   "name": "NASA human spaceflight programs",
+   "aliases": []
+  },
+  {
+   "name": "Low Earth Orbit",
+   "aliases": [
+    "LEO"
+   ]
+  },
+  {
+   "name": "lunar space",
+   "aliases": []
+  },
+  {
+   "name": "Mars",
+   "aliases": []
+  },
+  {
+   "name": "Human Systems requirements",
+   "aliases": []
+  },
+  {
+   "name": "vehicle",
+   "aliases": []
+  },
+  {
+   "name": "mission architectures",
+   "aliases": []
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "vehicle systems",
+   "aliases": []
+  },
+  {
+   "name": "human systems",
+   "aliases": []
+  },
+  {
+   "name": "systematic, traceable, and repeatable approach",
+   "aliases": []
+  },
+  {
+   "name": "medical capabilities",
+   "aliases": []
+  },
+  {
+   "name": "clear process",
+   "aliases": []
+  },
+  {
+   "name": "list of prioritized medical capabilities",
+   "aliases": []
+  },
+  {
+   "name": "Systems Engineering process",
+   "aliases": []
+  },
+  {
+   "name": "space vehicle",
+   "aliases": []
+  },
+  {
+   "name": "mission architecture",
+   "aliases": []
+  },
+  {
+   "name": "Figure 1",
+   "aliases": []
+  },
+  {
+   "name": "medical capabilities list",
+   "aliases": []
+  },
+  {
+   "name": "Systems Engineering team",
+   "aliases": []
+  },
+  {
+   "name": "Human Systems Requirements development",
+   "aliases": []
+  },
+  {
+   "name": "Concept of Operations",
+   "aliases": []
+  },
+  {
+   "name": "clinical capabilities",
+   "aliases": []
+  },
+  {
+   "name": "Systems Engineering Teams",
+   "aliases": []
+  },
+  {
+   "name": "Accepted Medical Conditions List",
+   "aliases": [
+    "AMCL"
+   ]
+  },
+  {
+   "name": "Medical System",
+   "aliases": []
+  },
+  {
+   "name": "exploration vehicle",
+   "aliases": []
+  },
+  {
+   "name": "mission design",
+   "aliases": []
+  },
+  {
+   "name": "Planned Activities",
+   "aliases": []
+  },
+  {
+   "name": "Unplanned Activities",
+   "aliases": []
+  },
+  {
+   "name": "private medical conferences",
+   "aliases": []
+  },
+  {
+   "name": "periodic dental exams",
+   "aliases": []
+  },
+  {
+   "name": "self-examinations",
+   "aliases": []
+  },
+  {
+   "name": "psychological examinations",
+   "aliases": []
+  },
+  {
+   "name": "exercise sessions",
+   "aliases": []
+  },
+  {
+   "name": "medical conditions",
+   "aliases": []
+  },
+  {
+   "name": "medical evaluation",
+   "aliases": []
+  },
+  {
+   "name": "diagnosis",
+   "aliases": []
+  },
+  {
+   "name": "monitoring",
+   "aliases": []
+  },
+  {
+   "name": "treatment",
+   "aliases": []
+  },
+  {
+   "name": "long-term care",
+   "aliases": []
+  },
+  {
+   "name": "list of the expected medical conditions",
+   "aliases": []
+  },
+  {
+   "name": "full, Earth-like medical capability",
+   "aliases": []
+  },
+  {
+   "name": "mission planners",
+   "aliases": []
+  },
+  {
+   "name": "design reference missions",
+   "aliases": [
+    "DRMs"
+   ]
+  },
+  {
+   "name": "Mars transit DRM",
+   "aliases": []
+  },
+  {
+   "name": "shorter duration cis-lunar DRM",
+   "aliases": []
+  },
+  {
+   "name": "baseline AMCL",
+   "aliases": []
+  },
+  {
+   "name": "Exploration Medical Capability Element",
+   "aliases": [
+    "ExMC"
+   ]
+  },
+  {
+   "name": "traceable and documented clinical needs",
+   "aliases": []
+  },
+  {
+   "name": "ExMC Clinician’s group",
+   "aliases": []
+  },
+  {
+   "name": "medical capability",
+   "aliases": []
+  },
+  {
+   "name": "AMCL Version 1.0",
+   "aliases": []
+  },
+  {
+   "name": "AMCL Version 2.0",
+   "aliases": []
+  },
+  {
+   "name": "potential exploration medical capability",
+   "aliases": []
+  },
+  {
+   "name": "necessary resources",
+   "aliases": []
+  },
+  {
+   "name": "future exploration vehicles",
+   "aliases": []
+  },
+  {
+   "name": "document",
+   "aliases": []
+  },
+  {
+   "name": "pilot efforts",
+   "aliases": []
+  },
+  {
+   "name": "lessons learned",
+   "aliases": []
+  },
+  {
+   "name": "Exploration Medical Condition List",
+   "aliases": [
+    "EMCL"
+   ]
+  },
+  {
+   "name": "International Space Station",
+   "aliases": [
+    "ISS"
+   ]
+  },
+  {
+   "name": "Integrated Medical Group",
+   "aliases": [
+    "IMG"
+   ]
+  },
+  {
+   "name": "International Space Station Integrated Medical Group Medical Checklist",
+   "aliases": [
+    "JSC-48522"
+   ]
+  },
+  {
+   "name": "Flight Data File Medical Checklist",
+   "aliases": [
+    "JSC-48031"
+   ]
+  },
+  {
+   "name": "inflight medical incidence data",
+   "aliases": []
+  },
+  {
+   "name": "Lifetime Surveillance of Astronaut Health repository",
+   "aliases": [
+    "LSAH"
+   ]
+  },
+  {
+   "name": "NASA Flight Surgeon",
+   "aliases": []
+  },
+  {
+   "name": "NASA Flight Surgeon subject matter expertise",
+   "aliases": []
+  },
+  {
+   "name": "crewmembers",
+   "aliases": []
+  },
+  {
+   "name": "gaps in knowledge",
+   "aliases": []
+  },
+  {
+   "name": "dedicated research",
+   "aliases": []
+  },
+  {
+   "name": "technological advances",
+   "aliases": []
+  },
+  {
+   "name": "Integrated Medical Model",
+   "aliases": [
+    "IMM"
+   ]
+  },
+  {
+   "name": "Integrated Medical Model condition list",
+   "aliases": [
+    "IMCL"
+   ]
+  },
+  {
+   "name": "Integrated Medical Evidence Database",
+   "aliases": [
+    "iMED"
+   ]
+  },
+  {
+   "name": "probabilistic risk analysis calculations",
+   "aliases": []
+  },
+  {
+   "name": "medical events",
+   "aliases": []
+  },
+  {
+   "name": "human spaceflight missions",
+   "aliases": []
+  },
+  {
+   "name": "cis-lunar missions",
+   "aliases": []
+  },
+  {
+   "name": "Mars transit missions",
+   "aliases": []
+  },
+  {
+   "name": "pilot effort",
+   "aliases": []
+  },
+  {
+   "name": "best available evidence-based information",
+   "aliases": []
+  },
+  {
+   "name": "Subject Matter Expert",
+   "aliases": [
+    "SME"
+   ]
+  },
+  {
+   "name": "spaceflight support personnel with clinical experience in treating medical conditions",
+   "aliases": []
+  },
+  {
+   "name": "operational flight surgeons",
+   "aliases": []
+  },
+  {
+   "name": "pharmacists",
+   "aliases": []
+  },
+  {
+   "name": "nurses",
+   "aliases": []
+  },
+  {
+   "name": "initial medical list",
+   "aliases": []
+  },
+  {
+   "name": "second list",
+   "aliases": []
+  },
+  {
+   "name": "Best Case",
+   "aliases": []
+  },
+  {
+   "name": "Worst Case",
+   "aliases": []
+  },
+  {
+   "name": "patient",
+   "aliases": []
+  },
+  {
+   "name": "Worst Care",
+   "aliases": []
+  },
+  {
+   "name": "IMM definitions document",
+   "aliases": []
+  },
+  {
+   "name": "IMM Service Request number D-20160815-365",
+   "aliases": []
+  },
+  {
+   "name": "IMM simulations",
+   "aliases": []
+  },
+  {
+   "name": "mission parameters",
+   "aliases": []
+  },
+  {
+   "name": "IMM runs",
+   "aliases": []
+  },
+  {
+   "name": "probability of occurrence",
+   "aliases": []
+  },
+  {
+   "name": "model output data",
+   "aliases": []
+  },
+  {
+   "name": "NASA IMM Project",
+   "aliases": []
+  },
+  {
+   "name": "Johnson Space Center",
+   "aliases": []
+  },
+  {
+   "name": "Houston, TX",
+   "aliases": []
+  },
+  {
+   "name": "IMM Service Request number SR-20170306-376",
+   "aliases": []
+  },
+  {
+   "name": "IMM version 3.0",
+   "aliases": []
+  },
+  {
+   "name": "MatLab® version 8.3",
+   "aliases": []
+  },
+  {
+   "name": "MathWorks",
+   "aliases": []
+  },
+  {
+   "name": "Natick, MA",
+   "aliases": []
+  },
+  {
+   "name": "Mars transit version",
+   "aliases": []
+  },
+  {
+   "name": "extra-vehicular activity",
+   "aliases": [
+    "EVA"
+   ]
+  },
+  {
+   "name": "Decompression Sickness",
+   "aliases": []
+  },
+  {
+   "name": "Fingernail Delamination",
+   "aliases": []
+  },
+  {
+   "name": "Paresthesias",
+   "aliases": []
+  },
+  {
+   "name": "IMM Service Request number 201710623-384",
+   "aliases": []
+  },
+  {
+   "name": "IMM version 4.1",
+   "aliases": []
+  },
+  {
+   "name": "cis-lunar mission",
+   "aliases": []
+  },
+  {
+   "name": "ExMC medical professionals",
+   "aliases": []
+  },
+  {
+   "name": "Aerospace-trained pharmacist",
+   "aliases": []
+  },
+  {
+   "name": "physicians",
+   "aliases": []
+  },
+  {
+   "name": "Aerospace Medicine",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Medicine",
+   "aliases": []
+  },
+  {
+   "name": "Internal Medicine",
+   "aliases": []
+  },
+  {
+   "name": "Family Medicine",
+   "aliases": []
+  },
+  {
+   "name": "Physical Medicine and Rehabilitation",
+   "aliases": []
+  },
+  {
+   "name": "provider",
+   "aliases": []
+  },
+  {
+   "name": "complexity",
+   "aliases": []
+  },
+  {
+   "name": "futility",
+   "aliases": []
+  },
+  {
+   "name": "scores",
+   "aliases": []
+  },
+  {
+   "name": "Table 1",
+   "aliases": []
+  },
+  {
+   "name": "Table 2",
+   "aliases": []
+  },
+  {
+   "name": "Clinical subject matter experts",
+   "aliases": []
+  },
+  {
+   "name": "High",
+   "aliases": []
+  },
+  {
+   "name": "Medium",
+   "aliases": []
+  },
+  {
+   "name": "Low",
+   "aliases": []
+  },
+  {
+   "name": "Worst Case sepsis",
+   "aliases": []
+  },
+  {
+   "name": "Best Case mild headache",
+   "aliases": []
+  },
+  {
+   "name": "logarithmic score for futility",
+   "aliases": []
+  },
+  {
+   "name": "score for complexity",
+   "aliases": []
+  },
+  {
+   "name": "Exclusion Score",
+   "aliases": [
+    "ES"
+   ]
+  },
+  {
+   "name": "Exploration Medical Capability Element Scientist",
+   "aliases": []
+  },
+  {
+   "name": "Should Plan to Treat",
+   "aliases": []
+  },
+  {
+   "name": "Should Not Plan to Treat",
+   "aliases": []
+  },
+  {
+   "name": "Might Plan to Treat",
+   "aliases": [
+    "Plan to Treat, with Conditions"
+   ]
+  },
+  {
+   "name": "medical resources/capabilities",
+   "aliases": []
+  },
+  {
+   "name": "terrestrial standards of best practice",
+   "aliases": []
+  },
+  {
+   "name": "best practices",
+   "aliases": []
+  },
+  {
+   "name": "robust surgical capability",
+   "aliases": []
+  },
+  {
+   "name": "resource requirements",
+   "aliases": []
+  },
+  {
+   "name": "updated expert opinion",
+   "aliases": []
+  },
+  {
+   "name": "final list of medical conditions",
+   "aliases": []
+  },
+  {
+   "name": "initial pilot project",
+   "aliases": []
+  },
+  {
+   "name": "Appendix A",
+   "aliases": []
+  },
+  {
+   "name": "Appendix B",
+   "aliases": []
+  },
+  {
+   "name": "Figure 2",
+   "aliases": []
+  },
+  {
+   "name": "100-condition list",
+   "aliases": []
+  },
+  {
+   "name": "comprehensive approach to spaceflight-specific diagnosis and treatment",
+   "aliases": []
+  },
+  {
+   "name": "Clinicians",
+   "aliases": []
+  },
+  {
+   "name": "diagnostic and treatment plan",
+   "aliases": []
+  },
+  {
+   "name": "Appendix C",
+   "aliases": []
+  },
+  {
+   "name": "evidence-based modeling tools",
+   "aliases": []
+  },
+  {
+   "name": "program-level planning and approval processes",
+   "aliases": []
+  },
+  {
+   "name": "Acute Radiation Syndrome",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0116"
+   ],
+   "chunk_tokens": 4526,
+   "memory_tokens": 0,
+   "prompt_tokens": 5653,
+   "input": 5859,
+   "output": 20463,
+   "reasoning": 322,
+   "cached": false
+  }
+ ]
+}

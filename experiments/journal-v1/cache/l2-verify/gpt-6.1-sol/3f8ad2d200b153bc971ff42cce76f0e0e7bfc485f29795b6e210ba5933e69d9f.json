@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Station Supervisory Control System provides \"the Alarm Acknowledgement Slip\" to Control Room Operator (an information or material flow).\n\nSource sentences:\nS047: A loss of station power can interrupt supervisory visibility and time distribution until supported supplies are restored.\nS048: The Station Supervisory Control System produces the Alarm Acknowledgement Slip for supervisory recordkeeping.\nS151: The Control Room Operator acknowledges alarms only after reviewing the indication and retains awareness of any condition that remains unresolved.\nS152: The Control Room Operator uses the acknowledgement slip to record the alarm response and any outstanding action.\n\nAnswer \"supported\" only if the sentences state that Station Supervisory Control System produces or sends this item AND that Control Room Operator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S048 states that the Station Supervisory Control System produces the Alarm Acknowledgement Slip, and S152 states that the Control Room Operator uses the acknowledgement slip to record the alarm response and outstanding action.\"}",
+ "usage": {
+  "input_tokens": 296,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 57,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 353
+ },
+ "attempts": 1,
+ "wall_s": 4.201,
+ "created": "2026-10-14T12:38:41"
+}

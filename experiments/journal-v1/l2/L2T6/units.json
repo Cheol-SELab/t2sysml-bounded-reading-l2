@@ -1,0 +1,1601 @@
+{
+ "doc_id": "L2T6",
+ "title": "Airport Checked-Baggage Handling and Screening Operational Concept",
+ "writer": "gpt-6-luna",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "The operational concept covers checked baggage from acceptance at airport bag-drop or transfer induction through screening, sorting, make-up, and handoff for aircraft loading.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The system boundary includes the airport equipment and control functions that convey, screen, route, reconcile, and stage checked baggage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "The boundary excludes airline aircraft loading activities beyond the handoff at the outbound load control point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "At the passenger interface, the Pier 4 Bag-Drop Unit captures bag identification and accepts baggage for processing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "The Transfer Bag Feeder provides a separate induction interface for eligible transfer baggage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "The Induction Tray Conveyor presents bags in a controlled manner to the screening and sorting equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "The Baggage Control System coordinates bag status, routing decisions, and operational visibility across connected equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "The Baggage Control System is also known by the alias Velvet.",
+   "tags": [
+    "ALIAS:E_BAGGAGE_CONTROL_SYSTEM"
+   ],
+   "repairs": [
+    "The Baggage Control System is also known by the alias Mosslight."
+   ]
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The Concourse Zone Controller coordinates local equipment and conveyance within its assigned operating area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "The Concourse Zone Controller is also known by the alias Mosslight.",
+   "tags": [
+    "ALIAS:E_ZONE_CONTROLLER"
+   ],
+   "repairs": [
+    "The Concourse Zone Controller is also known by the alias Velvet."
+   ]
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Flight Data Gateway sends the Flight Cutoff Advisory.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The Baggage Control System uses current flight and operating data to support routing decisions and maintain alignment with scheduled departures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The Concourse Zone Controller produces the Recovery Route Card.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The Primary Crossbelt Sorter routes cleared bags toward the applicable make-up areas.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "The North Gate Scanner and South Gate Scanner provide screening interfaces for baggage moving through the system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The Image Resolution Desk supports review of screening images when automated processing requires operator assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "The Secondary Inspection Chute provides a controlled path for bags selected for additional examination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "The Explosives Response Team and Security Duty Manager coordinate security response and disposition for escalated screening events.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The Bag Reconciliation Station supports verification of bag identity and processing status when system records or physical handling require reconciliation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The East Make-Up Conveyor and West Make-Up Conveyor convey routed baggage toward the relevant loading areas.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "The Carousel 7 Make-Up Unit supports staging of baggage for its assigned departure operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "The Outbound Load Control Desk provides the operational interface for confirming baggage readiness at the aircraft-loading handoff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "The Airline Ramp Coordinator coordinates acceptance of staged baggage for ramp operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "The Baggage Operations Supervisor oversees routine flow, responds to service interruptions, and coordinates operational recovery with the Security Duty Manager and Maintenance Technician.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 1,
+   "text": "Service objectives are to maintain safe screening, accurate bag-to-flight association, predictable throughput, and timely delivery within applicable departure cutoffs.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 1,
+   "text": "Equipment status, bag identity, routing state, and operating restrictions are exchanged through defined interfaces, with local staff responsible for resolving conditions that automated controls cannot clear.",
+   "tags": []
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "Check-in acceptance begins when staff confirm that the bag is eligible for carriage under the applicable airline rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "Staff verify the passenger and flight details before accepting the bag into the checked-baggage process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "The Pier 4 Bag-Drop Unit records the accepted bag and initiates its processing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "The Bag Tag Printer produces a durable tag with a unique identifier for each accepted bag.",
+   "tags": []
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "The tag identifier is associated with the passenger and flight record in the Baggage Control System.",
+   "tags": []
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "The Baggage Control System checks that the flight is open for bag acceptance and that the bag record is complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "Bags with missing, unreadable, or conflicting acceptance data are held for staff resolution before induction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "Staff check bag dimensions and weight against the configured limits for standard conveyor handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "The Pier 4 Bag-Drop Unit sends an Oversize Exception Ticket when a checked bag exceeds the configured size envelope.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "Oversized bags remain in a designated holding area until staff confirm an approved handling route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "The Transfer Bag Feeder identifies each inbound transfer bag and records its arrival into the local handling process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "The Transfer Bag Feeder sends a Late Transfer Bag Card when a bag enters from an inbound transfer stream.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "Staff confirm that transfer-bag identifiers are legible and correspond to a valid onward flight record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "The Baggage Control System compares transfer-bag data with the current routing information before the bag is released for induction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "The Flight Data Gateway supplies flight and routing records used for acceptance and induction decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "Before induction, the bag record must be valid, the selected route must be available, and the receiving equipment must be ready.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "The Concourse Zone Controller grants an induction permissive only when local equipment status and operating restrictions allow movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "The Induction Tray Conveyor accepts bags through controlled feed points and maintains separation between successive bags.",
+   "tags": []
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "Interlocks stop feed movement when a jam, access-door opening, or loss of downstream readiness is detected.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "The North Gate Scanner reads the bag identifier as the bag enters the screening and sorting network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "The North Gate Scanner is also known locally as Kestrel.",
+   "tags": [
+    "ALIAS:E_NORTH_GATE_SCANNER"
+   ]
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "The South Gate Scanner provides an independent read point for bags routed through its assigned entry path.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "The Primary Crossbelt Sorter receives inducted bags and directs them according to the active routing data.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 2,
+   "text": "The Primary Crossbelt Sorter is also known locally as Juniper.",
+   "tags": [
+    "ALIAS:E_PRIMARY_SORTER"
+   ]
+  },
+  {
+   "unit_id": "S051",
+   "section": 2,
+   "text": "When automated image review cannot resolve a bag image, staff at the Image Resolution Desk assess the available image and record a disposition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 2,
+   "text": "The Airline Ramp Coordinator sends a Carousel Release Slip when the outbound build is authorized.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "The Baggage Control System applies the approved screening profile to each bag using its tag data and the current operating configuration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "The Induction Tray Conveyor presents bags to the screening equipment at a controlled spacing that supports reliable image capture.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "The Primary Crossbelt Sorter maintains bag identity and routes each bag according to the screening disposition available at the time of sorting.",
+   "tags": []
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "The North Gate Scanner and South Gate Scanner acquire screening images and return a disposition for each bag that passes through them.",
+   "tags": []
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "Screening equipment records image quality and alarm status so that an incomplete examination is not treated as a clear result.",
+   "tags": []
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "When automated image review cannot resolve a bag image, staff at the Image Resolution Desk assess the available image and record a disposition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "The reviewer considers the full image, bag identification, and any system prompts before assigning a disposition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "A bag remains under controlled routing while its image is awaiting review, and the system prevents it from entering an outbound make-up path prematurely.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "The South Gate Scanner produces a Manual Rescan Receipt when a manual rescan is required.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "A clear disposition permits normal routing only when the bag identity and screening record agree.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "An alarm, an unresolved image, or a missing screening record places the bag into an exception status for additional examination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "The Baggage Control System routes exception-status bags to the Secondary Inspection Chute through a path that avoids normal outbound flows.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "The chute is monitored for occupancy so that a bag is not released into a blocked or unavailable inspection position.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "Access to the Secondary Inspection Chute and its associated work area is limited to personnel with authorized duties.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "Explosives Response Team responds to escalated alarms and coordinates any required safety controls with airport security personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "In local radio traffic, Explosives Response Team is also called Pebble.",
+   "tags": [
+    "ALIAS:E_EXPLOSIVES_RESPONSE_TEAM"
+   ]
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "Inspection staff maintain physical control of an alarmed bag and do not return it to the sorter until an authorized disposition is recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "The Bag Reconciliation Station verifies that the bag presented for examination matches the screening record before further handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "If an examination requires the bag to remain isolated, staff secure the area and notify the Baggage Operations Supervisor.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "The Baggage Operations Supervisor coordinates decisions that affect flight readiness, staffing, or continued operation of a screening lane.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "The Security Duty Manager is notified when an alarm response requires a security decision beyond routine screening procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 3,
+   "text": "The Bag Tag Printer produces a Calibration Witness Tag when a calibration witness record is required.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S075",
+   "section": 3,
+   "text": "The Carousel 7 Make-Up Unit is also known locally as Orchard.",
+   "tags": [
+    "ALIAS:E_MAKEUP_CAROUSEL"
+   ]
+  },
+  {
+   "unit_id": "S076",
+   "section": 3,
+   "text": "The Carousel 7 Make-Up Unit accepts only bags with a valid screening disposition and an authorized routing instruction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 3,
+   "text": "The Transfer Bag Feeder holds transfer bags from release until their screening status and intended onward handling are confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 3,
+   "text": "Staff return a bag to normal handling only after its identity, examination outcome, and routing authorization are consistent in the operating record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The Baggage Control System loads the approved sort plan and applies its effective time window before bags enter sortation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "Lantern is the operational alias used for the Flight Data Gateway in sortation coordination.",
+   "tags": [
+    "ALIAS:E_FLIGHT_DATA_GATEWAY"
+   ]
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "The Baggage Control System checks the plan against current flight and handling records before assigning a route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "The Concourse Zone Controller coordinates local conveyor availability with the active sort plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "The Induction Tray Conveyor presents bags at controlled spacing so each bag can be identified before route selection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "The Primary Crossbelt Sorter applies the assigned destination and screening status to each identified bag.",
+   "tags": []
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "The Primary Crossbelt Sorter sends a Chute Occupancy Note when a destination lane approaches its configured limit.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "Route selection favors the approved path with adequate capacity and sufficient time for the planned handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "The North Gate Scanner and South Gate Scanner verify bag identity at their respective route decision points.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "A scan mismatch prevents the bag from continuing on a route that depends on the unresolved identity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "Congestion awareness uses current lane availability, conveyor stops, and the observed rate of incoming bags.",
+   "tags": []
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "The Baggage Operations Supervisor sets local congestion thresholds and confirms the authorized response to sustained overload.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "Tern is the operational alias used for the Baggage Operations Supervisor in sortation coordination.",
+   "tags": [
+    "ALIAS:E_OPERATIONS_SUPERVISOR"
+   ]
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "When a planned lane is unavailable, the Baggage Control System selects an approved alternate route only if screening status and flight timing remain valid.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "Bags with an unresolved destination or a route outside their handling limits are diverted to the Secondary Inspection Chute.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "The Image Resolution Desk resolves image-related holds before affected bags are returned to normal sortation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "The Explosives Response Team manages security holds under the applicable response procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "A bag returns to normal handling only after its identity, examination outcome, and routing authorization agree.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "The East Make-Up Conveyor and West Make-Up Conveyor are selected according to the active plan and available capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "The Carousel 7 Make-Up Unit operates within its assigned flight window and reports when its usable capacity is constrained.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 4,
+   "text": "The Transfer Bag Feeder continues to hold transfer bags until screening status and intended onward handling are confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 4,
+   "text": "The Bag Reconciliation Station compares bag identity with the active handling record and flags unresolved discrepancies.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 4,
+   "text": "The Bag Reconciliation Station sends a Bag Match Query when bag identity cannot be reconciled with the active handling record.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S102",
+   "section": 4,
+   "text": "Bags found on a stopped or misdirected path are held from onward movement until their location and identity are established.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 4,
+   "text": "The Maintenance Technician isolates a failed conveyor section and confirms that the route is safe before service resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S104",
+   "section": 4,
+   "text": "The Baggage Operations Supervisor authorizes recovery to the approved sort plan after the cause of the abnormal path has been addressed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "Flight Data Gateway maintains scheduled flight identifiers, destinations, planned departure times, and revisions needed for baggage planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "Flight schedules include airline-specific dispatch targets and connection windows, and changes are time-stamped for operational use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "Baggage Control System evaluates flight assignments against current schedule data before accepting bag routing instructions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "The planned dispatch time is the reference for prioritizing bags, while the published departure time remains the passenger-facing schedule value.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "Baggage Control System applies cutoff profiles configured for each carrier, flight, and operating condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "A bag accepted before cutoff retains its assigned flight unless a subsequent schedule or operational change requires reassessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "When schedule revisions move a departure earlier, Baggage Operations Supervisor reviews affected flights and directs priority adjustments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "Cutoff values account for screening, sortation, make-up, and transfer handling allowances rather than only aircraft departure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "Baggage Control System receives the Flight Cutoff Advisory.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "Baggage Control System compares remaining processing time with route-specific handling estimates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "Bags with confirmed screening clearance may proceed to flight-specific sort destinations when capacity is available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "Bags awaiting screening are held from final flight induction even when their scheduled departure is near.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "North Gate Scanner and South Gate Scanner record screening outcomes for inducted bags.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "The Image Resolution Desk reviews unresolved images, and final routing remains withheld until disposition is recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "A positive threat indication suspends ordinary routing until the authorized security disposition is entered.",
+   "tags": []
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "Explosives Response Team produces the Custody Seal Log.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "When screening disposition is pending, Baggage Control System preserves a recoverable bag-to-flight association rather than releasing the bag to make-up.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "Primary Crossbelt Sorter routes eligible bags according to flight assignment and current cutoff priority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 5,
+   "text": "Concourse Zone Controller coordinates induction demand with available conveyor capacity across the operating area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S124",
+   "section": 5,
+   "text": "Induction Tray Conveyor admits bags in priority order, subject to scan confirmation and safe spacing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S125",
+   "section": 5,
+   "text": "East Make-Up Conveyor and West Make-Up Conveyor receive flight groups according to active allocation rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 5,
+   "text": "Carousel 7 Make-Up Unit presents bags for outbound loading only after flight grouping and screening status are confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S127",
+   "section": 5,
+   "text": "Outbound Load Control Desk uses planned dispatch time and load-close targets to monitor whether assigned bags can be accepted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S128",
+   "section": 5,
+   "text": "Airline Ramp Coordinator reports changes to loading readiness that could alter the usable cutoff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S129",
+   "section": 5,
+   "text": "Baggage Operations Supervisor may defer lower-priority bags when a flight's remaining processing window is insufficient.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 5,
+   "text": "Bags missing the active flight cutoff are held for reassignment or recovery rather than routed into an unavailable departure build.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "Make-up allocation begins when the active flight assignment and available build positions are confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "Baggage Operations Supervisor authorizes release to a make-up position only when the flight remains within its processing window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "Flight Data Gateway maintains the flight identity and departure timing used for make-up planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "Mosslight assigns bags to active make-up lanes using current zone status.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "Velvet records each bag's screening disposition and release state against its flight assignment.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "Pier 4 Bag-Drop Unit stages accepted bags for onward processing without changing their flight association.",
+   "tags": []
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "Induction Tray Conveyor meters bags into the handling stream at a rate that avoids accumulation at the make-up interface.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "Primary Crossbelt Sorter separates bags according to their authorized destination and current operating status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "North Gate Scanner verifies readable bag identification before bags proceed toward their assigned build.",
+   "tags": []
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "South Gate Scanner provides the corresponding verification for bags processed in its coverage area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "Image Resolution Desk uses the exception ticket to confirm an authorized make-up position for an oversize bag.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "Secondary Inspection Chute retains bags requiring further examination until the applicable disposition is recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "Bag Reconciliation Station uses the Late Transfer Bag Card to reconcile a transfer bag against its intended flight.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "Transfer Bag Feeder meters accepted transfer bags into the active handling sequence without bypassing required checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "East Make-Up Conveyor delivers assigned bags to the designated make-up position at a controlled rate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "West Make-Up Conveyor provides the equivalent delivery function for positions in its operating area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 6,
+   "text": "Carousel 7 Make-Up Unit maintains bag order and position information for its active flight build.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 6,
+   "text": "Carousel 7 Make-Up Unit receives the Carousel Release Slip only after its position and flight assignment have been checked.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S149",
+   "section": 6,
+   "text": "Airline Ramp Coordinator confirms staffing, equipment availability, and the planned loading sequence before accepting a build for loading.",
+   "tags": []
+  },
+  {
+   "unit_id": "S150",
+   "section": 6,
+   "text": "Outbound Load Control Desk reconciles the completed build against the permitted flight load before departure closeout.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 6,
+   "text": "Bag Tag Printer produces replacement identification only when authorized personnel have confirmed the required bag details.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 6,
+   "text": "Security Duty Manager resolves release holds that require a security decision before bags can enter a departure build.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 6,
+   "text": "Maintenance Technician reports equipment restrictions that affect lane availability or safe bag delivery.",
+   "tags": []
+  },
+  {
+   "unit_id": "S154",
+   "section": 6,
+   "text": "Baggage Operations Supervisor coordinates changes to build priority with airline ground operations and communicates any resulting delivery constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "Manual resolution begins when an image or identity exception prevents automatic processing from establishing a reliable disposition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "Image Resolution Desk presents the available bag image and exception details to the operator for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "The operator compares visible bag features with the recorded tag number and the handling data associated with the bag.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "The operator confirms that the image is legible enough to support a decision and does not rely on an uncertain visual match.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "Image Resolution Desk uses the rescan receipt to confirm that a second image was captured under the approved procedure.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "When the image remains inconclusive, the operator requests a physical inspection through the established inspection process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "The identity check verifies that the physical tag is attached to the inspected bag and that its number agrees with the recorded bag identity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "Baggage Control System checks the recorded bag identity against the current routing data before any disposition is committed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "Flight Data Gateway provides the flight data used to validate the bag's assigned destination and service date.",
+   "tags": []
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "Bag Reconciliation Station records whether the inspected bag matches the expected flight assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "A mismatch places the bag on hold until an authorized operator resolves the discrepancy or escalates it.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "Juniper holds the affected bag from automatic sorting while the manual disposition remains unresolved.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "Kestrel captures a readable tag image when the bag is presented for a permitted scan.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "North Gate Scanner records the tag read and image data needed to support an operator's identity check.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "Secondary Inspection Chute provides a controlled location for bags requiring physical examination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "Explosives Response Team conducts any security examination assigned under applicable procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 7,
+   "text": "Baggage Operations Supervisor approves the operational disposition when the case exceeds the operator's authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S172",
+   "section": 7,
+   "text": "After the identity and flight checks pass, Baggage Control System authorizes the bag to rejoin its previously assigned screening and sort path.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 7,
+   "text": "Outbound Load Control Desk confirms that the bag remains eligible for inclusion in the planned flight load.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 7,
+   "text": "Airline Ramp Coordinator confirms any flight-side constraint that could prevent the reconciled bag from being accepted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 7,
+   "text": "Concourse Zone Controller applies the authorized routing state without bypassing required screening controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 7,
+   "text": "Maintenance Technician uses the witness tag to verify that the applicable calibration status was witnessed before equipment returns to service.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S177",
+   "section": 7,
+   "text": "If a route or flight assignment has changed, the operator obtains approval before the bag is released into the revised process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 7,
+   "text": "The final disposition and supporting checks are recorded so that later review can trace why the bag returned to the planned process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "Safe operation depends on keeping people clear of moving equipment and maintaining a controlled path for every bag.",
+   "tags": []
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "The Baggage Operations Supervisor may stop induction when an unsafe condition, uncertain bag location, or loss of control is reported.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "A stop command places the affected equipment in a defined safe state without disabling unrelated routes that remain safe to operate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "Before entering a conveyor or sorter hazard zone, the Maintenance Technician isolates the relevant energy sources and verifies that movement has stopped.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "Guards and access panels remain in place during operation, and bypasses are permitted only under an approved maintenance procedure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "The Baggage Operations Supervisor uses the occupancy note to confirm that a chute can safely accept bags.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "The Maintenance Technician consults the Recovery Route Card before returning equipment to service after a route change.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Pebble secures the response area and directs handling of any bag referred for explosives assessment.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "The Security Duty Manager coordinates access control when a security response affects equipment or staff movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "A scanner fault requires the affected feed to be held until the fault is assessed and the bag disposition is known.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "The Maintenance Technician checks for jammed bags, damaged belts, sensor obstruction, and signs of mechanical wear before clearing a fault.",
+   "tags": []
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "Lantern supplies current flight data so that operating routes can be checked against active assignments.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "The Baggage Control System records equipment alarms and presents the affected route for review by authorized personnel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "When the Induction Tray Conveyor stops unexpectedly, staff prevent further bag entry and keep the approach area clear.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "The Maintenance Technician removes a jam only after confirming isolation and arranging safe access to the blockage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "The Bag Reconciliation Station supports verification when a bag's location or identity is uncertain after an interruption.",
+   "tags": []
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "East Make-Up Conveyor runs only after its guards are confirmed closed and its downstream capacity is available.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "The Carousel 7 Make-Up Unit is held from receiving bags when its discharge area is obstructed or its operating status is uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 8,
+   "text": "The Maintenance Technician performs corrective work and reports any condition that prevents safe restart.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 8,
+   "text": "The Baggage Operations Supervisor controls the operational hold, communicates its scope, and confirms that affected staff understand the restriction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S199",
+   "section": 8,
+   "text": "A recovery begins with a controlled inspection of the affected equipment and confirmation that bags in the area have been accounted for.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 8,
+   "text": "If a route or flight assignment has changed, the operator obtains approval before the bag is released into the revised process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 8,
+   "text": "The final disposition and supporting checks are recorded so that later review can trace why the bag returned to the planned process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 8,
+   "text": "Restart requires confirmation that personnel are clear, guards are restored, alarms are understood, and the intended route is available.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "Each bag remains under controlled custody from screening release until an authorized loading handoff is confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "The Baggage Control System maintains the bag identity, assigned flight, screening disposition, and current handling status as the authoritative record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "Staff keep bags in monitored areas and prevent access by personnel who are not assigned to the active handling task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "The Induction Tray Conveyor carries only bags with readable identity data and a valid route assignment into the screening process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "The Primary Crossbelt Sorter directs cleared bags to their assigned make-up destination and diverts unresolved items from normal handling.",
+   "tags": []
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "The North Gate Scanner and South Gate Scanner must report healthy status before their screening results are relied upon for release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "The Image Resolution Desk reviews images that require operator assessment and records a disposition before the bag can continue.",
+   "tags": []
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "Any unresolved screening result places the bag in a controlled hold area until the required review is complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "The Explosives Response Team assesses security events referred for specialist action and communicates the resulting disposition through approved operational channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "The Secondary Inspection Chute is kept clear of unrelated bags so that identity and custody remain unambiguous during inspection.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "The Security Duty Manager uses the seal log to verify that recorded custody seals remain accounted for and that any discrepancy has been escalated.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "A Maintenance Technician reports equipment faults that could affect bag identity, screening integrity, or controlled access before the equipment is returned to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "The Baggage Operations Supervisor confirms that outstanding holds and route exceptions have an assigned owner before authorizing continuation of processing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "Orchard shall release a bag to the next handling stage only when the recorded screening disposition and assigned destination are valid.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "The Flight Data Gateway provides the flight and destination data used to check that the bag remains assigned to an operating departure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "The Bag Reconciliation Station compares scanned bag identities against the expected flight population and flags missing or duplicate records for resolution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "The Airline Ramp Coordinator uses the Bag Match Query to review unresolved bag-to-flight mismatches before loading authorization is granted.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "The East Make-Up Conveyor moves reconciled bags toward the correct flight position without bypassing required identity checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 9,
+   "text": "The West Make-Up Conveyor remains subject to the same controlled access and reconciliation rules as other make-up equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 9,
+   "text": "The Transfer Bag Feeder accepts transfer bags only when their identity and intended onward flight can be verified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S223",
+   "section": 9,
+   "text": "The Outbound Load Control Desk confirms that the flight assignment, reconciled bag count, and operational status are consistent before accepting the loading record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 9,
+   "text": "Before aircraft loading, the Airline Ramp Coordinator verifies that the bag identity is readable, the flight assignment is current, and the security disposition permits loading.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 9,
+   "text": "The physical bags presented for loading must agree with the reconciled records, and every unexplained count or identity difference blocks acceptance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 9,
+   "text": "A bag is ready for departure only after screening release, custody continuity, final reconciliation, and loading checks are all complete and recorded.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "Operational monitoring provides a continuous view of baggage throughput, equipment availability, queue growth, screening status, and reconciliation exceptions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "The Baggage Control System records bag events and reports missing, duplicate, or delayed event sequences for operational review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "The Concourse Zone Controller reports equipment state changes and alarm conditions to the operations monitoring function.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Induction Tray Conveyor is monitored for stops, accumulation, and sustained operation below its approved rate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The Primary Crossbelt Sorter is monitored for availability, recirculation, fault frequency, and output rate against the approved operating plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "North Gate Scanner performance is assessed using availability, image capture quality, alarm frequency, and screening completion records.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "South Gate Scanner performance is assessed using the same approved service measures and screening completion criteria.",
+   "tags": []
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "The Image Resolution Desk reports unresolved images, review backlog, and processing time against the locally approved service target.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "The Bag Reconciliation Station reports unmatched records and count differences, which remain subject to resolution before acceptance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "The Flight Data Gateway is monitored for message timeliness, completeness, and interface errors affecting flight assignment data.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "The Pier 4 Bag-Drop Unit is monitored for service availability, transaction completion, and accumulation at its entry point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "The Transfer Bag Feeder is monitored for feed rate, interruptions, and backlog against its scheduled demand.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The Carousel 7 Make-Up Unit is monitored for operating state, accumulation, and the time required to clear assigned work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "The East Make-Up Conveyor and the West Make-Up Conveyor are assessed separately so that a local fault does not obscure the condition of the other conveyor.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "Tern reviews the operating dashboard and confirms that material service degradation has been assigned an owner and response priority.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "The Maintenance Technician investigates equipment faults that exceed the approved recovery interval and records the corrective action taken.",
+   "tags": []
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "The Security Duty Manager assesses any condition that could compromise screening coverage, security controls, or custody continuity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "The Explosives Response Team is escalated to when an unresolved security condition requires its response under airport procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "Service measures include availability, bags processed per operating interval, queue age, screening completion, and unresolved reconciliation differences.",
+   "tags": []
+  },
+  {
+   "unit_id": "S246",
+   "section": 10,
+   "text": "Thresholds and reporting intervals are established in the approved operating plan and reviewed against demand, flight schedules, and safety constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S247",
+   "section": 10,
+   "text": "A degraded mode may be used only when the remaining equipment and procedures preserve required screening, traceability, custody, and reconciliation controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S248",
+   "section": 10,
+   "text": "Operations must suspend the affected activity when required controls cannot be maintained or when an unverified equipment state could misroute baggage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S249",
+   "section": 10,
+   "text": "The Baggage Operations Supervisor coordinates escalation to maintenance, security, and airline operations according to the severity and operational impact of the condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S250",
+   "section": 10,
+   "text": "Return to service requires the fault to be corrected, required functional checks to pass, alarms to clear, and affected records to be reconciled.",
+   "tags": []
+  },
+  {
+   "unit_id": "S251",
+   "section": 10,
+   "text": "The responsible operational and technical personnel confirm that screening and custody controls are effective before normal routing resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S252",
+   "section": 10,
+   "text": "The recovery is monitored at increased frequency until performance is stable and outstanding exceptions have been resolved or formally assigned.",
+   "tags": []
+  }
+ ]
+}

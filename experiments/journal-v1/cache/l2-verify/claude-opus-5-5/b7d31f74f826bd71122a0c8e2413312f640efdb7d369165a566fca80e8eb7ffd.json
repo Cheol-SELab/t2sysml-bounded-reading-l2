@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ground Delay Program provides \"excessive departure congestion\" to Regional Flow Manager (an information or material flow).\n\nSource sentences:\nS841: The principal delay absorption indicator shall report minutes absorbed at origin, minutes remaining in the arrival stream, and minutes transferred to surface queues within the region.\nS842: The Regional Flow Manager shall use this indicator to verify that a Ground Delay Program reduced airborne holding without creating excessive departure congestion at constrained airports.\n\nAnswer \"supported\" only if the sentences state that Ground Delay Program produces or sends this item AND that Regional Flow Manager receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S842 only says the Regional Flow Manager uses the delay absorption indicator to check that a Ground Delay Program did not create excessive departure congestion; congestion is an outcome being avoided, not an item the program sends to the manager.\"}",
+ "usage": {
+  "input_tokens": 621,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 94,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.862,
+ "created": "2026-10-14T12:47:46"
+}

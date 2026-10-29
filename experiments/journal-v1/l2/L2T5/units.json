@@ -1,0 +1,1593 @@
+{
+ "doc_id": "L2T5",
+ "title": "Operational Concept for the Cedar Falls Municipal Drinking Water Treatment Plant Control System",
+ "writer": "gpt-5.5",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "The mission of the Cedar Falls Municipal Drinking Water Treatment Plant control system is to support continuous production of potable water that meets regulatory requirements, utility operating targets, and customer demand.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "The control system is intended to give operators timely visibility, dependable automatic control, and clear manual intervention points for the intake, treatment, laboratory, and distribution functions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "The operational boundary begins at the River Intake Pump Station and Raw Water Screen Channel and extends through treatment, disinfection, finished-water storage control, and discharge to the High Service Pump Header.",
+   "tags": []
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "The River Intake Pump Station is known locally as Ironwood, but this document uses River Intake Pump Station as the canonical name.",
+   "tags": [
+    "ALIAS:E_RIVER_INTAKE_PUMP_STATION"
+   ]
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "The River Intake Pump Station provides the first controlled pumping function and is operated to maintain reliable raw-water availability within approved withdrawal limits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "The Raw Water Screen Channel is treated as part of the controlled intake process because debris loading, screen condition, and inlet restrictions directly affect downstream stability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "Storm Intake Mode is an expected operating state used when river conditions require more conservative intake operation, closer operator review, or modified treatment readiness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "The treatment scope includes the Coagulant Dosing Skid, North Filter Gallery, South Filter Gallery, Chlorine Contact Basin, Clearwell Level Controller, Backwash Recovery Tank, and related instrumentation needed for routine control decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The Coagulant Dosing Skid supports chemical feed control based on approved setpoints, observed raw-water conditions, and operator direction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "The North Filter Gallery and South Filter Gallery are operated as parallel treatment assets with local equipment status, headloss indication, turbidity monitoring, and backwash control presented to plant staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Chlorine Contact Basin and Clearwell Level Controller provide the principal control points for disinfection contact management and finished-water storage coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The SCADA Historian Server is known locally as Lantern, but this document uses SCADA Historian Server as the canonical name.",
+   "tags": [
+    "ALIAS:E_SCADA_HISTORIAN_SERVER"
+   ]
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The SCADA Historian Server stores operating data needed for trend review, compliance support, incident reconstruction, and performance evaluation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The control architecture assumes that programmable controllers, local panels, operator workstations, analytical instruments, and the SCADA Historian Server remain synchronized to plant time standards.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "Major external interfaces include electric power service, chemical delivery coordination, laboratory information handling, residuals removal scheduling, and distribution system communications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The Chemical Supplier Driver interacts with the plant through controlled delivery procedures that allow chemical inventory changes to be checked before operating setpoints are affected.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "The Laboratory Sample Receiving Bench is the normal receiving point for process and compliance samples that support treatment decisions and regulatory documentation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "The Laboratory Technician provides analytical confirmation, communicates unusual results to operations, and helps determine whether process adjustments require additional verification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The Chief Operator has overall operating authority for plant mode selection, production targets, treatment response, and coordination of abnormal condition response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The Duty Engineer supports configuration control, evaluates control-system problems, and approves engineering changes that affect operating behavior or documented boundaries.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "The Maintenance Planner converts equipment condition information into planned work while coordinating with operations to avoid unnecessary treatment or distribution risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "The Distribution Dispatcher coordinates finished-water delivery expectations with the plant and communicates demand changes that may affect pumping and storage strategy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "The North Distribution Pressure Station and South Distribution Pressure Station are treated as distribution interfaces because their operating needs influence finished-water pumping decisions without placing the entire distribution network inside the plant control-system scope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "The Residuals Hauler is considered an operational interface for removal activities associated with treatment residuals and backwash recovery operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 1,
+   "text": "A Chlorine Residual Alarm is treated as a high-priority condition because it may indicate a public-health risk, an analyzer fault, or a process condition requiring immediate operator assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 1,
+   "text": "Routine operation assumes trained staff are available to supervise automatic control, place equipment in safe manual operation when needed, and document deviations through approved plant procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "The River Intake Pump Station normally operates in automatic service, with pump starts governed by raw-water demand and available channel depth.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "Reduced-capacity service is used when river level, equipment condition, or downstream process demand does not support full intake operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "Storm Intake Mode is used when rainfall, river rise, debris loading, or upstream runoff creates conditions that require closer supervision of the intake.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "The Chief Operator authorizes entry into Storm Intake Mode when field observations or instrument trends show that normal assumptions are no longer reliable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "During Storm Intake Mode, plant staff increase observation of river level, screen loading, turbidity, and pump cycling frequency.",
+   "tags": []
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "The Raw Water Screen Channel is monitored for upstream level, downstream level, differential level, rake run status, and high-debris indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "A rising differential level across the Raw Water Screen Channel is treated as an early indication of screen blinding or heavy floating debris.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "The Raw Water Screen Channel sends the Rake Torque Snapshot at the end of each cleaning cycle to preserve the recorded loading condition.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "If the Raw Water Screen Channel shows rapid level change, plant staff verify that the cleaning mechanism is running and that the River Intake Pump Station is not drawing the channel down too quickly.",
+   "tags": []
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "A high-high level condition at the Raw Water Screen Channel requires immediate field confirmation because it may indicate restricted passage, failed cleaning, or abnormal river backwater.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "Raw-water quality triggers include high turbidity, unusual color, odor complaints from field staff, visible sheen, algae accumulation, and rapid temperature change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "When a raw-water quality trigger occurs, the Chief Operator determines whether to adjust pumping rate, request additional laboratory testing, or increase downstream process monitoring.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "The Laboratory Technician supports intake decisions by prioritizing raw-water checks when storm runoff or an abnormal visual condition is reported.",
+   "tags": []
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "The Coagulant Dosing Skid is placed under closer observation when intake turbidity changes faster than the normal control response can stabilize.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "The North Filter Gallery and South Filter Gallery are advised when incoming water quality is expected to shorten filter run time or increase solids loading.",
+   "tags": []
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "Pump permissives at the River Intake Pump Station include adequate suction level, available discharge path, healthy motor status, open isolation valves, and absence of active protective trips.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "A pump is not permitted to start when the Raw Water Screen Channel downstream level is below the established low-level limit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "A pump start is also blocked when the associated drive reports a fault, when local control is selected, or when a safety interlock is not proven.",
+   "tags": []
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "If a permissive is lost during operation, the control system either alarms the condition or stops the affected pump according to the severity of the signal.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "The Chief Operator may authorize temporary manual operation only when the cause is understood, the equipment can be observed, and the risk to treatment continuity is acceptable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "The SCADA Historian Server retains river level, screen differential, pump status, and raw-water quality trends for operating review and event reconstruction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "The Duty Engineer reviews storm forecasts and river-stage information when a prolonged debris event or high-flow period is expected.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "The Distribution Dispatcher is notified when intake limitations could reduce the ability of the High Service Pump Header to meet planned system demand.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 2,
+   "text": "The Clearwell Level Controller is watched during intake restrictions because storage level provides the main buffer between reduced raw-water supply and treated-water delivery.",
+   "tags": []
+  },
+  {
+   "unit_id": "S051",
+   "section": 2,
+   "text": "Return to normal service occurs after river level, screen differential, raw-water quality, and pump cycling have stabilized for a period accepted by the Chief Operator.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 2,
+   "text": "After a storm event, the Maintenance Planner reviews intake equipment condition and schedules cleaning or inspection work needed to restore reliable operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "Following a storm-related recovery, control of coagulation and filtration returns to normal only after raw-water quality trends support stable chemical feed and predictable filter loading.",
+   "tags": []
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "The Chief Operator establishes the starting coagulant dose from recent turbidity, color, alkalinity, pH, temperature, and bench-scale treatment observations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "The Coagulant Dosing Skid, known locally as Marigold, meters the primary coagulant under automatic control during routine operation.",
+   "tags": [
+    "ALIAS:E_COAGULANT_DOSING_SKID"
+   ]
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "The Coagulant Dosing Skid sends the Alum Batch Ticket when a new chemical lot is placed into service.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "Automatic dose trimming is based on analyzer feedback, operator-entered targets, and verified process response rather than on a single instrument value.",
+   "tags": []
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "When raw-water turbidity changes quickly, the Duty Engineer may authorize a temporary dose adjustment while the Chief Operator confirms the sustained control point.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "The North Filter Gallery, known locally as Cobalt, contains a bank of gravity filters operated from the plant control system.",
+   "tags": [
+    "ALIAS:E_NORTH_FILTER_GALLERY"
+   ]
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "North Filter Gallery records individual filter effluent turbidity and headloss at the end of each control scan.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "South Filter Gallery sends the Filter Run Exception Note when a filter run ends outside the normal operating limits.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "Filter run management is based on run time, terminal headloss, effluent turbidity, prior backwash quality, and the current condition of upstream treatment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "A filter is not returned to service after washing until rinse-to-waste quality meets the operating target and the turbidity trend is stable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "If a filter shows an unusual turbidity rise, operating staff compare the analyzer trend with nearby sample results before declaring a process upset.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "The Laboratory Technician provides confirmation testing when online analyzers disagree with observed filter performance or with routine process samples.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The Laboratory Sample Receiving Bench is used for custody-controlled receipt of compliance and process samples collected from treatment locations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "The SCADA Historian Server retains dose changes, analyzer values, filter status changes, wash sequences, and operator comments for later review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "Manual override is permitted for chemical feed, valve sequencing, and filter start or stop actions only when automatic control is unavailable or inappropriate for the condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "An operator placing equipment in manual control is expected to state the reason, monitor the affected process variable closely, and restore automatic control as soon as practicable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "Manual chemical feed changes are made in small increments unless an immediate water-quality risk requires a larger correction approved by the Chief Operator.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "If analyzer feedback is lost, operating staff hold the last verified safe dose or revert to an approved fixed dose while collecting additional grab samples.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "A sustained loss of coagulation effectiveness is treated as a process deviation and prompts review of chemical strength, feed pump status, mixing energy, and raw-water characteristics.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "The Chlorine Contact Basin is considered in the response because excessive particulate carryover can affect downstream disinfectant demand and contact performance.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 3,
+   "text": "The Clearwell Level Controller remains coordinated with filter production so that filter shutdowns, backwashes, and return-to-service decisions do not create avoidable storage swings.",
+   "tags": []
+  },
+  {
+   "unit_id": "S075",
+   "section": 3,
+   "text": "When filter capacity is reduced, the Distribution Dispatcher is advised of expected production limits before changes affect the High Service Pump Header.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 3,
+   "text": "After any significant deviation, the Chief Operator reviews trends from the affected operating period and confirms that corrective actions restored stable clarified and filtered water quality.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "Following operating deviations, laboratory sampling provides independent confirmation that treatment targets have returned to acceptable control ranges.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "The Chief Operator establishes daily sampling priorities based on plant conditions, regulatory monitoring requirements, and recent process adjustments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "The Laboratory Sample Receiving Bench is also known as Sparrow for local bench labeling during sample receipt.",
+   "tags": [
+    "ALIAS:E_LAB_SAMPLE_RECEIVING_BENCH"
+   ]
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "Field samples are labeled at collection with location, time, collector initials, preservation method, and requested analyses before they leave operating areas.",
+   "tags": []
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "The Laboratory Technician checks container type, holding time, temperature, preservative status, and seal condition before logging a sample for analysis.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "Samples from the River Intake Pump Station, Raw Water Screen Channel, North Filter Gallery, South Filter Gallery, Chlorine Contact Basin, and High Service Pump Header are verified against the current sampling schedule before testing begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "The Laboratory Technician uses the Alum Batch Ticket to verify chemical lot identity before recording related laboratory observations.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "The Laboratory Technician prepares and sends the Sample Chain Slip after verifying that custody entries are complete and legible.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "The Laboratory Sample Receiving Bench sends the Jar Test Photograph Set after the comparison images have been checked for date, time, and sample identifiers.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "Lantern must retain accepted laboratory result timestamps with the associated process trend interval so that reconciliation can be repeated during audits.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "Field meter readings used for immediate control are treated as provisional until they are compared with laboratory results collected from the same location and time window.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "The Laboratory Technician records any mismatch between bottle labels, bench log entries, and operator notes before assigning an acceptance status to the sample.",
+   "tags": []
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "If a sample is received outside the approved holding time or temperature range, the result may be used for troubleshooting but is not accepted for compliance reporting.",
+   "tags": []
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "Calibration checks, method blanks, duplicate measurements, and control standards are reviewed before process measurements are released to operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "Results associated with failed quality checks are flagged, investigated, and either corrected with documented justification or rejected from the accepted data set.",
+   "tags": [],
+   "repairs": [
+    "Results associated with failed quality checks are flagged, investigated, and either corrected with documented justification or rejected from the accepted data set.",
+    "Results associated with failed quality checks are flagged, investigated, and either corrected with documented justification or rejected from the accepted data set.",
+    "Results associated with failed quality checks are flagged, investigated, and either corrected with documented justification or rejected from the accepted data set."
+   ]
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "The Duty Engineer reviews significant differences between field readings and laboratory values when those differences could affect chemical feed, filter loading, or disinfection decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "For turbidity and particle-related analyses, the Laboratory Technician confirms that sample mixing, settling time, and instrument range are appropriate for the expected raw or filtered water condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "For disinfectant residual analyses, the Laboratory Technician confirms reagent condition, sample contact time, and measurement timing before accepting the result.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "When a Chlorine Residual Alarm is active, related grab samples receive priority handling so that alarm response can be checked against an independent measurement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "The Chief Operator is notified when laboratory confirmation does not support the field indication that caused an operating adjustment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "Accepted laboratory results are reconciled to operating trends by matching collection time, sample point, process state, and recent manual observations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "If Storm Intake Mode changes the character of incoming water, the sampling frequency is increased until raw and settled water measurements show stable behavior.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 4,
+   "text": "The Backwash Recovery Tank is sampled after return-to-process events when recovered water quality could influence filter performance or finished water stability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 4,
+   "text": "The Laboratory Technician preserves all custody and acceptance records for review by the Chief Operator, Duty Engineer, and regulatory auditors.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "Planned maintenance is controlled through a work order process that ties each task to an approved operating window, a named responsible person, and a defined return-to-service condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "The Chief Operator reviews the next-day schedule with operations staff so that treatment capacity, water quality risk, and distribution demand are understood before work is released.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "The Maintenance Planner is also known as Quarry for internal radio coordination during maintenance planning discussions.",
+   "tags": [
+    "ALIAS:E_MAINTENANCE_PLANNER"
+   ]
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "The Maintenance Planner verifies that each work order identifies affected equipment, required isolations, parts staging, and the evidence needed to close the work.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "The Maintenance Planner uses the snapshot to compare planned rake work against recent mechanical loading before releasing the task package.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "The Duty Engineer checks proposed work against current operating constraints and may defer nonessential activity when treatment margin is limited.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "Lockout planning identifies electrical, hydraulic, pneumatic, chemical, and stored-energy hazards before personnel enter or service plant equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "Field isolation is verified locally by the assigned craft worker and then acknowledged by operations before the equipment is opened, adjusted, or tested.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "Ironwood shall remain unavailable for routine maintenance release until isolation points are tagged, verified locally, and acknowledged in the shift turnover record.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "Work in the North Filter Gallery and South Filter Gallery is scheduled to keep enough filtration capacity available for expected demand and wash cycles.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "Any planned change affecting the Clearwell Level Controller requires coordination with the High Service Pump Header operating plan before the change is applied.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "The Chemical Supplier Driver sends the Chlorine Cylinder Seal Log before unloading any replacement cylinders at the plant.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "Supplier access is limited to approved routes, assigned unloading areas, and times when an operator is available to observe chemical connections and vehicle movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "Deliveries for the Coagulant Dosing Skid are staged so that hoses, containment, and emergency washdown equipment are inspected before transfer begins.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "Chemical work near the Chlorine Contact Basin is coordinated with operating staff so that ventilation, gas monitoring, and communications are available during the task.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "Shift communication includes the status of open isolations, temporary operating limits, unavailable equipment, and any abnormal condition that could affect the next crew.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "The Distribution Dispatcher is informed before maintenance changes the availability of the High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "When Storm Intake Mode is active, discretionary work is reviewed again because debris loading, chemical demand, and operator workload may change quickly.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "A Chlorine Residual Alarm during maintenance causes the affected task to pause until operations confirms whether the alarm is process-related or maintenance-induced.",
+   "tags": []
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "The Laboratory Technician supports work control by confirming sampling needs and by reporting any acceptance concern that could delay equipment return.",
+   "tags": []
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "The Laboratory Sample Receiving Bench remains available for maintenance-related samples when water quality confirmation is required before a unit is returned to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "Evidence for return to service may include local inspection results, functional test readings, instrument response checks, sample results, and operator acceptance comments.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 5,
+   "text": "Equipment is returned to service only after temporary jumpers, bypasses, tools, spare parts, and barriers have been removed or formally accepted for continued use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S124",
+   "section": 5,
+   "text": "If a post-maintenance test fails, the work order stays open and the Chief Operator determines whether the equipment remains isolated or can be operated under restriction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S125",
+   "section": 5,
+   "text": "The SCADA Historian Server retains operating data needed to compare pre-work and post-work performance for pumps, dosing systems, filters, and level controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 6,
+   "text": "Following maintenance closeout, disinfection control is returned to normal service only after the Chief Operator confirms that the chlorine feed controls, residual instruments, and level indications are responding consistently in the SCADA Historian Server.",
+   "tags": []
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "The Chlorine Contact Basin is operated to maintain the required contact time under the current production rate, basin level, and measured disinfectant residual.",
+   "tags": []
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "Operators adjust chlorine feed gradually so that changes in residual do not outrun mixing and contact time through the Chlorine Contact Basin.",
+   "tags": []
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "When a Chlorine Residual Alarm occurs, the control room verifies analyzer sample flow, compares the reading with a grab sample result, and holds any planned production increase until the condition is understood.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "The Laboratory Technician provides confirmatory residual results when analyzer drift, sample line fouling, or an unexpected residual trend is suspected.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "The Clearwell Level Controller maintains normal storage within established operating limits that protect disinfectant contact, reserve volume, and high-service pump suction conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "Low clearwell level interlocks are configured to prevent pump operation from drawing the storage volume below the minimum level needed for safe hydraulic operation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "High clearwell level alarms give operators time to reduce production or adjust downstream pumping before overflow conditions develop.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "The Clearwell Level Controller sends the Clearwell Diver Entry Permit when level and isolation prerequisites have been verified by the control system.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "Clearwell level changes are trended against filter production and high-service demand so that slow instrumentation errors can be distinguished from actual storage changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "The High Service Pump Header is identified in voice radio traffic by the alias Juniper when operators need a short confirmation name.",
+   "tags": [
+    "ALIAS:E_HIGH_SERVICE_PUMP_HEADER"
+   ]
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "The High Service Pump Header sequences available pumps to meet distribution demand while avoiding unnecessary starts, short cycling, and operation near unstable portions of the pump curves.",
+   "tags": []
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "Lead and lag pump assignments are rotated according to runtime, availability, and any operating restriction entered by the Chief Operator.",
+   "tags": []
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "Header pressure control uses a paced response so that pump starts, pump speed changes, and valve movements do not create avoidable pressure transients in the distribution system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "The High Service Pump Header produces the Pump Bearing Vibration Clip after a configured vibration threshold is exceeded during pump operation.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "If a high-service pump trips, the remaining available pumps are evaluated automatically against the current pressure setpoint before another unit is started.",
+   "tags": []
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "The North Distribution Pressure Station and South Distribution Pressure Station receive pressure support through coordinated setpoints that reflect system demand and storage conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "The Distribution Dispatcher is identified by the alias Falcon during pressure coordination calls with plant staff.",
+   "tags": [
+    "ALIAS:E_DISTRIBUTION_DISPATCHER"
+   ]
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "The Distribution Dispatcher communicates expected demand changes, main break impacts, and pressure complaints so that plant pumping decisions match field conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "During Storm Intake Mode, operators watch the relationship between raw water quality, filter loading, disinfectant demand, and high-service pumping to avoid forcing production beyond treatment capability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "Abnormal clearwell level, loss of residual, loss of pump header pressure, or conflicting instrument readings require the Duty Engineer to review the operating condition before setpoints are changed outside normal ranges.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 6,
+   "text": "The SCADA Historian Server stores residual, level, pressure, and pump status data at sufficient resolution to support event reconstruction after alarms or customer pressure complaints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 6,
+   "text": "Manual operation is allowed only when the operator can maintain residual targets, clearwell limits, and distribution pressure with direct observation of the affected indications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S149",
+   "section": 6,
+   "text": "Return to automatic control requires stable chlorine residual, stable clearwell level response, and confirmed high-service pressure control for a period set by the Chief Operator.",
+   "tags": [],
+   "repairs": [
+    "Return to automatic control requires stable chlorine residual, stable clearwell level response, and confirmed high-service pressure control for a period set by the Chief Operator.",
+    "Return to automatic control requires stable chlorine residual, stable clearwell level response, and confirmed high-service pressure control for a period set by the Chief Operator.",
+    "Return to automatic control requires stable chlorine residual, stable clearwell level response, and confirmed high-service pressure control for a period set by the Chief Operator."
+   ]
+  },
+  {
+   "unit_id": "S150",
+   "section": 7,
+   "text": "Backwash recovery operation begins when the North Filter Gallery or South Filter Gallery completes a backwash cycle and the control system confirms that turbidity, valve position, and flow indications are within the expected recovery range.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 7,
+   "text": "The Backwash Recovery Tank receives spent washwater under controlled conditions so that recovered water can be returned only after solids have settled and the operator has verified acceptable clarity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "The SCADA Historian Server records recovery volume, tank level, turbidity trend, and return timing for each backwash recovery event.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "The Chief Operator uses the Filter Run Exception Note to determine whether a shortened run, high headloss, or abnormal turbidity response requires follow-up before the next wash sequence.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "When recovery water quality is outside the operating band, the Chief Operator holds the return path out of service and keeps the Backwash Recovery Tank in a settle-and-decant condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "The Duty Engineer reviews repeated abnormal wash recovery trends to determine whether the condition is hydraulic, chemical, instrumentation related, or caused by rapid source water change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "Storm Intake Mode is used when runoff or river disturbance is expected to increase solids loading at the River Intake Pump Station and Raw Water Screen Channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "During Storm Intake Mode, operators monitor influent turbidity, screen differential level, coagulant demand, and filter headloss more frequently than during normal raw water conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "The Coagulant Dosing Skid adjusts feed response only within approved operating limits and does not substitute automatic changes for required operator review during a significant upset.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "The Coagulant Dosing Skid uses the set to confirm the selected dose response during an event with rapidly changing raw water quality.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "Marigold shall hold the last operator-approved dose if the supporting process quality indications become inconsistent or unavailable.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "The Laboratory Technician prioritizes turbidity, apparent color, alkalinity, and disinfectant residual checks when filtration performance changes during a storm-driven event.",
+   "tags": []
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "Results from the Laboratory Technician are compared with online readings before operators make a sustained change to coagulation or filter loading strategy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "If the North Filter Gallery shows rapid headloss growth after a verified chemical adjustment, the operator may stagger wash timing to avoid simultaneous recovery surges.",
+   "tags": []
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "If the South Filter Gallery shows turbidity breakthrough or delayed ripening, the affected unit is kept out of normal production until the Chief Operator approves return to service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "The Chief Operator classifies upsets as advisory, controlled, or critical based on finished water risk, remaining treatment capacity, alarm persistence, and distribution service impact.",
+   "tags": []
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "An advisory upset requires closer monitoring and documented operator awareness but does not require immediate removal of treatment capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "A controlled upset requires an operator-directed change, such as reducing filter loading, extending filter-to-waste operation, increasing verification sampling, or holding recovered washwater.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "A critical upset requires immediate protection of treated water quality, and the Duty Engineer is notified when automatic control cannot maintain the required operating envelope.",
+   "tags": []
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "A Chlorine Residual Alarm during a filtration upset is treated as a finished water protection issue rather than as an isolated chemical feed condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "The Chlorine Contact Basin and Clearwell Level Controller are monitored together so that residual contact time, storage stability, and downstream pumping demand remain aligned.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 7,
+   "text": "The High Service Pump Header is operated to maintain stable delivery while avoiding unnecessary pressure swings during recovery from a major wash or storm response action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S172",
+   "section": 7,
+   "text": "The Distribution Dispatcher is notified when treatment changes could affect operating reserves at the North Distribution Pressure Station or South Distribution Pressure Station.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 7,
+   "text": "The Chief Operator produces the Backwash Solids Manifest after solids removal quantities and handling conditions have been verified for the completed residuals event.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S174",
+   "section": 7,
+   "text": "The Maintenance Planner is informed when repeated solids handling problems indicate a need for inspection of tank mixing, decant valves, sludge transfer equipment, or instrumentation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 7,
+   "text": "Normal operation resumes when recovered water quality is stable, residuals handling is complete, alarms have cleared, and the Chief Operator confirms that the upset classification can be closed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 8,
+   "text": "Distribution monitoring begins at the High Service Pump Header, where discharge pressure, total flow, and pump status provide the control room with the first indication of system demand changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "The Distribution Dispatcher watches each pressure zone for sustained deviations rather than reacting to every short pressure fluctuation caused by hydrant use, valve movement, or customer demand changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "Normal control-room practice is to compare pressure trends with reservoir level trends, pump starts, and recent field activity before changing a setpoint.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "The North Distribution Pressure Station is monitored as a separate zone asset with its own suction pressure, discharge pressure, pump availability, and communication status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "The South Distribution Pressure Station starts its lead booster pump when discharge pressure remains below the configured start band for the required delay period.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "When a distribution station is in automatic operation, local controls are expected to sequence pumps within approved limits and report abnormal starts, failures, or valve positions to the control system.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "When a distribution station is in local or manual operation, the Distribution Dispatcher records the reason, the expected duration, and the field contact responsible for the change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "The Clearwell Level Controller is checked before large distribution adjustments so that high service pumping does not create avoidable level instability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "The Chief Operator may direct a conservative pumping posture during unusual demand, main repair activity, or recovery from a treatment upset.",
+   "tags": []
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "The Duty Engineer reviews persistent low-pressure complaints, repeated station alarms, or mismatches between observed pressure and modeled expectations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Cobalt shall provide a reliable filter service status indication before the control room treats increased distribution demand as available finished-water capacity.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "Sparrow records incoming distribution check samples with the pressure zone, collection point, and time needed for control-room review.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "The SCADA Historian Server uses the Sample Chain Slip to associate distribution water-quality entries with the operating period shown in the electronic log.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "The Distribution Dispatcher sends the Pressure Zone Handoff Card after verifying current pressure-zone setpoints, active alarms, and open field work.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "Shift handoff includes any disabled alarms, temporary operating limits, pending station inspections, and customer complaint trends that may affect dispatch decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "If communication to a distribution station is lost, the control room assumes the last confirmed operating mode remains in effect until field verification or telemetry restoration proves otherwise.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "Field crews notify the control room before opening or closing major distribution valves so that pressure changes can be distinguished from pump or instrumentation problems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "The Distribution Dispatcher coordinates planned hydrant flushing, valve exercising, and main isolation work with pumping schedules to limit avoidable pressure swings.",
+   "tags": []
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "When a Chlorine Residual Alarm is active, distribution pressure decisions remain coordinated with water-quality response actions rather than being treated as a purely hydraulic issue.",
+   "tags": []
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "The Laboratory Sample Receiving Bench provides analytical status through normal plant reporting channels, and the control room uses that status to interpret pressure-zone complaints involving taste, odor, or disinfectant concerns.",
+   "tags": []
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "The SCADA Historian Server retains pressure, flow, pump status, and alarm data needed to reconstruct dispatch decisions after an event.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 8,
+   "text": "During Storm Intake Mode, the Distribution Dispatcher avoids unnecessary zone changes unless demand, storage, or public-safety conditions require action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 8,
+   "text": "Control-room coordination with field crews is conducted by radio or phone using clear station names, valve identifiers, expected direction of pressure change, and confirmation when work is complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S199",
+   "section": 8,
+   "text": "Normal distribution operation is restored when pressure zones are stable, station alarms are cleared or assigned, field work is accounted for, and the Chief Operator has no remaining operating restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 9,
+   "text": "The control system for the Cedar Falls Municipal Drinking Water Treatment Plant shall use role-based access control with named accounts for operators, engineering users, maintenance users, and read-only review users.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 9,
+   "text": "Shared credentials are not acceptable for routine operation of the River Intake Pump Station, North Filter Gallery, South Filter Gallery, Coagulant Dosing Skid, Chlorine Contact Basin, Clearwell Level Controller, High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "Operator privileges shall be limited to the actions needed to run assigned plant areas, and engineering privileges shall require separate approval before setpoints, control logic, alarm limits, or historian configuration are changed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "Remote access to the control network shall require multi-factor authentication, encrypted connectivity, a recorded business reason, and approval by the Chief Operator or Duty Engineer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "Quarry maintains the weekly access review for maintenance accounts and disables privileges after reassignment.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "The SCADA Historian Server shall be protected as a critical asset because it supports compliance review, alarm analysis, operational trending, and event reconstruction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "The control network shall be segmented from administrative networks, and only documented pathways shall be allowed between the SCADA Historian Server, operator workstations, controllers, and approved support systems.",
+   "tags": []
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "Security patches, firmware updates, and antivirus changes shall be tested in a controlled manner before deployment to equipment that affects water production or distribution pressure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "The Chief Operator owns alarm governance for process alarms, and the Duty Engineer supports alarm limit review when control changes or recurring nuisance alarms are identified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "Alarm priorities shall reflect consequence, response time, operator action, and the risk of losing treatment, storage, or distribution capability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "A Chlorine Residual Alarm shall remain configured as a high-priority condition when residual concentration indicates a potential treatment compliance or public health concern.",
+   "tags": []
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "Alarm shelving, suppression, and disabling shall require a documented reason, a time limit, and review at the end of the operating shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "Standing alarms shall be reviewed during each shift turnover so that unresolved equipment failures are not hidden by routine acknowledgement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "During Storm Intake Mode, alarm response expectations shall account for higher debris load, faster raw water quality changes, and increased dependence on intake screening and chemical dose verification.",
+   "tags": []
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "Backup power shall support safe operation or controlled shutdown of the River Intake Pump Station, Raw Water Screen Channel, Chlorine Contact Basin, Clearwell Level Controller, SCADA Historian Server, High Service Pump Header, and essential control-room equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "The plant shall maintain written expectations for generator start time, automatic transfer performance, fuel availability, and operator checks during extended utility outages.",
+   "tags": []
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "Uninterruptible power supplies shall be sized to bridge transfer events and allow orderly shutdown of servers, network switches, control processors, and communication equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "Loss of both normal and standby power to a critical service shall be treated as an emergency operating condition requiring immediate notification of the Chief Operator and Duty Engineer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "The Chief Operator has authority to direct emergency operating priorities when treatment, storage, distribution pressure, or personnel safety is at risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "The Duty Engineer may authorize temporary control workarounds during an emergency, but the workaround shall be logged, bounded by time or condition, and removed when normal control is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "The Distribution Dispatcher shall be informed when failures at the High Service Pump Header, North Distribution Pressure Station, or South Distribution Pressure Station may affect pressure zones or fire-flow readiness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 9,
+   "text": "The Laboratory Technician shall retain access needed for sample status review and reporting, but laboratory accounts shall not allow control actions on plant equipment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 9,
+   "text": "The Maintenance Planner uses the permit to verify isolation boundaries before confined-space work is released.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S223",
+   "section": 9,
+   "text": "The Duty Engineer reviews the Chlorine Cylinder Seal Log before accepting a change in chlorine storage status.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S224",
+   "section": 9,
+   "text": "Reliability targets for critical plant services shall include prompt detection of failed sensors, redundant communication paths where practical, recoverable configuration backups, and periodic restoration testing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 9,
+   "text": "After any cybersecurity event, major alarm failure, or emergency control action, the Chief Operator shall require a brief operational review that identifies the cause, affected services, corrective actions, and any needed procedure changes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 10,
+   "text": "Commissioning shall be planned as a controlled sequence that proves each control function before the plant relies on it for normal service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "Each commissioning test shall have defined starting conditions, expected responses, acceptance limits, and a responsible reviewer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "Before wet commissioning begins, the Duty Engineer shall confirm that temporary controls, bypasses, and manual operating instructions are understood by the affected staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "Functional testing shall verify that the River Intake Pump Station, Raw Water Screen Channel, North Filter Gallery, South Filter Gallery, and Coagulant Dosing Skid respond correctly to local and supervisory commands.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "During integrated testing, Juniper shall demonstrate stable pressure control through startup, lead-lag transfer, and controlled shutdown.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The SCADA Historian Server shall be checked for correct time synchronization, tag naming, data retention, and retrieval of key commissioning trends.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "The Chlorine Contact Basin and Clearwell Level Controller shall be tested under representative level, flow, and residual control conditions before treated water is released for routine distribution.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "Storm Intake Mode shall be exercised in a planned drill that confirms operator prompts, intake constraints, and return-to-normal steps.",
+   "tags": []
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "A Chlorine Residual Alarm test shall verify annunciation, operator response guidance, acknowledgement behavior, and escalation to the appropriate duty staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "The Chief Operator shall coordinate training so that operators understand the control concept, normal sequencing, manual fallback methods, and alarm response expectations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "Operator training shall include classroom review, simulator or dry-run practice where practical, field walkdowns, and supervised operation during early service.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "The Laboratory Technician shall be trained on sample timing, result entry, data review responsibilities, and communication of unusual water quality findings.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "The Maintenance Planner shall review commissioning defects, recurring nuisance alarms, calibration drift, and equipment access problems before preventive maintenance intervals are finalized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The Maintenance Planner shall use the clip to compare observed pump condition with planned inspection intervals and corrective work priorities.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "Feedback from maintenance work orders shall be reviewed with operations so that control changes do not mask equipment degradation or create avoidable field effort.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "Distribution readiness shall be declared only after pressure control, reservoir or clearwell constraints, communications, and emergency contact paths have been verified.",
+   "tags": []
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "Falcon shall confirm that distribution readiness messages are acknowledged before any planned change in pressure zone operating status.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "Before distribution readiness is declared, the South Distribution Pressure Station shall use the card to confirm zone status, valve lineup, and communication checks.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "The North Distribution Pressure Station shall be included in readiness checks for telemetry validity, pump permissives, local alarm indication, and operator communications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "During commissioning of residuals handling, the Residuals Hauler shall use the Backwash Solids Manifest to confirm load identity, destination, and acceptance requirements.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S246",
+   "section": 10,
+   "text": "The Chemical Supplier Driver shall follow site access, unloading, verification, and communication procedures established during commissioning and confirmed during training.",
+   "tags": []
+  },
+  {
+   "unit_id": "S247",
+   "section": 10,
+   "text": "Records generated during commissioning and early operation shall be complete enough to support troubleshooting, regulatory review, warranty claims, and future operator training.",
+   "tags": []
+  },
+  {
+   "unit_id": "S248",
+   "section": 10,
+   "text": "Records retention shall follow municipal policy and applicable drinking water requirements, with electronic records protected against unauthorized change and accidental loss.",
+   "tags": []
+  },
+  {
+   "unit_id": "S249",
+   "section": 10,
+   "text": "Periodic performance reviews shall compare actual plant operation with the control concept, including alarm burden, manual interventions, water quality stability, chemical use, and energy use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S250",
+   "section": 10,
+   "text": "Continuous improvement actions shall be prioritized by risk, reviewed by the Chief Operator and Duty Engineer, tested before release, and incorporated into updated procedures and training materials.",
+   "tags": []
+  }
+ ]
+}

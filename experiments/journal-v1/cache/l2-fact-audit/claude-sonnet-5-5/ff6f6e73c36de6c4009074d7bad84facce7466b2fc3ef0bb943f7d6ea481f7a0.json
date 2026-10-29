@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: requirement(subject=deployment governance board, text=The board shall approve each seasonal rollout only after reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period.)\n\nSource sentences (the last one is where the fact was extracted):\nS223: Personnel who do not meet proficiency requirements shall complete remedial training and a repeat evaluation before performing unsupervised duties in the Caldera Wildfire Detection and Suppression Support System.\nS224: Deployment governance for the Caldera Wildfire Detection and Suppression Support System shall be managed as a staged release process that follows completion of seasonal readiness activities.\nS225: The deployment governance board shall include operational leadership, maintenance representation, information security representation, and designated representatives for detection, aviation, ground crew, and county coordination functions.\nS226: The board shall approve each seasonal rollout only after reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S226 states that the board (the deployment governance board from S225) shall approve each seasonal rollout only after reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period, matching the fact's subject and text.\"}",
+ "usage": {
+  "input_tokens": 790,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 99,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.282,
+ "created": "2026-10-14T12:52:17"
+}

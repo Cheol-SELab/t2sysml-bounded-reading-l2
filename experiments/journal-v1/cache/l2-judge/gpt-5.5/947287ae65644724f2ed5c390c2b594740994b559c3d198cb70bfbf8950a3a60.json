@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-5.5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Integrated Medical Model condition list provides \"medical condition list\" to Systems Engineering team (an information or material flow).\n\nSource sentences:\nU0005: To provide a systematic and repeatable approach to defining and prioritizing clinical capabilities for spaceflight medicine, a clear process is required for delivering a list of prioritized medical capabilities to the Systems Engineering process that will delineate the mass, power, volume, and similar needs and the trade space analysis for a given space vehicle and mission architecture.\nU0006: Figure 1 shows the process and products needed to deliver a medical capabilities list to the Systems Engineering team responsible for Human Systems Requirements development.\nU0026: Similarly, NASA developed the Integrated Medical Model (IMM) condition list (IMCL), a list of medical conditions considered to be of concern for ISS- specific spaceflight [1], [2].\nU0027: This list, along with data from the Integrated Medical Evidence Database (iMED) have been used to populate the IMM for probabilistic risk analysis calculations for ISS missions based on the makeup of a given crew and specific mission parameters.\n\nAnswer \"supported\" only if the sentences state that Integrated Medical Model condition list produces or sends this item AND that Systems Engineering team receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"The source states that a medical capabilities list is delivered to the Systems Engineering team, while the Integrated Medical Model condition list is a separate list of medical conditions used to populate the IMM, with no stated delivery to Systems Engineering.\"}",
+ "usage": {
+  "input_tokens": 399,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 179,
+  "output_tokens_details": {
+   "reasoning_tokens": 116
+  },
+  "total_tokens": 578
+ },
+ "attempts": 1,
+ "wall_s": 7.122,
+ "created": "2026-10-14T00:27:42"
+}

@@ -1,0 +1,50 @@
+{
+ "created": "2026-10-14T00:10:04",
+ "note": "after L2DEV tuning rounds 1-3; primary C1/RNV; extractors gpt-6.1-sol, claude-opus-5-5; judge gpt-5.5",
+ "files": {
+  "scripts/journal/run_l2.py": "bd5adc199b5cfb4db9589a12741eb9aa3309db839cbfb32dd3d677339275e136",
+  "scripts/journal/analyze_l2.py": "c43c72db10a1baaa2572f412ee8be38d8f80b5f6c260d6e858054b3606288b83",
+  "scripts/journal/build_l2_corpus.py": "f1f231fdb858ffb457e79ac9d510d59bebb72e54b32f39da8584995b798697bb",
+  "src/t2m_eval/l2_ledger.py": "33bb930465edcb2520f6825aa0619a9e036cd72410793e78332e08bcbe0cc1d4",
+  "src/t2m_eval/l2_sysml.py": "bbc0354c48755ee1e4eadf335b3e65098e4488034bd8611ab4defb06318e38fd",
+  "src/t2m_eval/long_memory.py": "8f88fb48d9c7976e209ad516f81514c499dac1cbbf0b4ed473a251e55b4cb5a9",
+  "src/t2m_eval/long_doc.py": "6c0b007ac1b0038240a35fa2341a17beecba26268fc7c3774fe91187d2d677d9",
+  "src/t2m_eval/adapters.py": "284c0c73470a10aa6621df6191056440785a9d7cf31e109649f2f656a2b01a8f",
+  "src/t2m_eval/normalize.py": "6580687968d6e853df5d81d0330172dbc91c23859d62e8d718788bd3347550c6",
+  "src/t2m_eval/dc_gt.py": "618df0392a292e29e32a91cb3e2b8b5f4c1ec5e2971e8bcc2bdf605dbc7cb0ec",
+  "src/t2m_pipeline/llm_clients.py": "76c5f8e10f0e359ef7d81e7dd80554d1a71e625256041469eda75ec5a23603b7",
+  "experiments/journal-v1/models-l2.json": "affdca6679ed331cf2f212bf8f864bd3a58bebc1e5e0f1dd3cfc45662d363c0f",
+  "experiments/journal-v1/l2/L2T1/units.json": "3712efd3e50261dd528d703596c8c3a815ef24a0a1b9433e3a33a1f0b0a3a805",
+  "experiments/journal-v1/l2/L2T1/probes.gt.json": "80a189fdc417acb60bc1de0ff514a64a37cd61bee1791b49207362ccc71c00d7",
+  "experiments/journal-v1/l2/L2T2/units.json": "51f71e7986f75d81d37b047daee5c7bc1069559597c5d800e6a97dbe5ca623fb",
+  "experiments/journal-v1/l2/L2T2/probes.gt.json": "35f0fee4697e91ed66b470d651af2500acaf5c9295225c809864c6525ed75702",
+  "experiments/journal-v1/l2/L2T3/units.json": "e3c2387485c88b537777ce5c6eda3389ee63234af8918b50c1ddee135e0be463",
+  "experiments/journal-v1/l2/L2T3/probes.gt.json": "a79a6bcdfe7745a18448000d5402aeefe4335f1d1d7185a0955eef697c5a9ffc",
+  "experiments/journal-v1/l2/L2T4/units.json": "1971e76e09fbf2a26fa34ded2dbca60a26c3aa1523c57013752b2b5f614771a7",
+  "experiments/journal-v1/l2/L2T4/probes.gt.json": "f52e9450ad832a2ed30f5a4cfe69efef3a13daa740e640b454a3ace49b2830e9",
+  "experiments/journal-v1/l2/L2T5/units.json": "a0455c8e5852c6cb1c52ef87add0f182349532c9ee27f55df567dd9905c74575",
+  "experiments/journal-v1/l2/L2T5/probes.gt.json": "6ceccd32a24adbed0aef05fb3551e92f4a3a942109796b8e59571c35f12604d8",
+  "experiments/journal-v1/l2/L2T6/units.json": "f6f07e9c777381edf631b9983bba18d1563298311cc3c96170534273f9718234",
+  "experiments/journal-v1/l2/L2T6/probes.gt.json": "207d8be17289497aff0f922ecdb901a92f720a148a3baff3525037bc61f0f05c",
+  "experiments/journal-v1/l2/L2T7/units.json": "735dbf3701f4ea9e912f8c17667701a0af1a3264af238cd53dfc9ec79d4f6acf",
+  "experiments/journal-v1/l2/L2T7/probes.gt.json": "14aa5255449da1625637fadf72fdda06e13507d36073176b28a55fdf8a0f0d1e",
+  "experiments/journal-v1/l2/L2T8/units.json": "3dbf9484498c719ba9330524e1b865cd08e68831ee33b55a582366ddb75c7382",
+  "experiments/journal-v1/l2/L2T8/probes.gt.json": "88c3f81b75e6abe370ee0bc95fdf84f19c426264390d7a45f8bdb100fd7d3672"
+ },
+ "amendments": [
+  {
+   "created": "2026-10-14T11:05:24",
+   "note": "2026-10-14 user banned new gpt-5.5 calls; gpt-6-tera confirmed inaccessible; user chose a Claude-family judge. JUDGE gpt-5.5 -> claude-sonnet-5-5 (not an extractor or join verifier); registry gains claude-sonnet-5-5. Extraction, join, verification code unchanged. Made before any test judge call and before test-main report.",
+   "files": {
+    "scripts/journal/run_l2.py": {
+     "old": "bd5adc199b5cfb4db9589a12741eb9aa3309db839cbfb32dd3d677339275e136",
+     "new": "6a31576a4664c3729282a456a01c17f24462f2f9ade5d66e254423b6405499bc"
+    },
+    "experiments/journal-v1/models-l2.json": {
+     "old": "affdca6679ed331cf2f212bf8f864bd3a58bebc1e5e0f1dd3cfc45662d363c0f",
+     "new": "294d0bc9e62a91976a6fa3e244143b7e5abb64b7ada9661e13b671efd7b8e6c8"
+    }
+   }
+  }
+ ]
+}

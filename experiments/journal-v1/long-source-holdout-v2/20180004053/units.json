@@ -1,0 +1,2066 @@
+{
+  "doc_id": "20180004053",
+  "title": "Air Traffic Management Technology Demonstration - 3 (ATD-3) Multi-Flight Common Route (MFCR) Concept of Operations Version 1.0",
+  "units": [
+    {
+      "unit_id": "U0001",
+      "text": "1 INTRODUCTION Increasing the capacity and efficiency of the National Airspace System (NAS) is a primary goal of the Federal Aviation Administration’s (FAA) NextGen program."
+    },
+    {
+      "unit_id": "U0002",
+      "text": "The advent of area navigation capability and direct routing automation upgrades over the past decade has improved en route capacity and efficiency during fair-weather conditions."
+    },
+    {
+      "unit_id": "U0003",
+      "text": "However, improvements have not been as great during adverse weather."
+    },
+    {
+      "unit_id": "U0004",
+      "text": "Automation system limitations and the associated policies and procedures continue to present challenges during adverse weather, leading to excessive delays, fuel consumption, and adverse environmental impacts."
+    },
+    {
+      "unit_id": "U0005",
+      "text": "Adverse weather, in the form of convective storms, high winds, turbulence, snow and ice, low visibility, and low ceilings, is responsible for roughly 70% of the delays in U.S. operations."
+    },
+    {
+      "unit_id": "U0006",
+      "text": "Weather-related delays were responsible for 32,000 minutes of average delay in the NAS during the summer of 2014 [1]."
+    },
+    {
+      "unit_id": "U0007",
+      "text": "During significant convective activity, FAA traffic managers use playbook routes as part of severe weather avoidance plans to safely divert traffic around weather-impacted regions."
+    },
+    {
+      "unit_id": "U0008",
+      "text": "These strategic plans, devised two or more hours in advance of departure, provide predictability, but they introduce large deviations from nominal routes and may be very inefficient if the weather develops differently than predicted."
+    },
+    {
+      "unit_id": "U0009",
+      "text": "Currently, traffic managers are able to reroute limited numbers of these flights using manual procedures, but they lack the automation tools necessary to manage routing changes for all the impacted flights."
+    },
+    {
+      "unit_id": "U0010",
+      "text": "The National Aeronautics and Space Administration (NASA) has been developing automation that can identify flights in need of rerouting, suggest more efficient routes, and simplify coordination with airspace users and downstream air traffic facilities, providing greater operational efficiency, reduced delays, lower operating costs, and increased Air Traffic Management (ATM) productivity. 2 SCOPE Convective storms continue to be one of the most challenging obstacles for en route operations."
+    },
+    {
+      "unit_id": "U0011",
+      "text": "They are difficult to predict more than one hour in advance, and traffic managers lack the tools necessary to quickly respond to outdated routes when storm systems develop differently than predicted."
+    },
+    {
+      "unit_id": "U0012",
+      "text": "This often results in inefficient routes, unnecessary flight delays, and increased operating costs – negative impacts that will become worse as traffic demand increases."
+    },
+    {
+      "unit_id": "U0013",
+      "text": "A suite of integrated ground-based technologies and decision-making aids being developed under NASA’s Airspace Technology Demonstration - 3 (ATD-3) Project continuously search for more efficient weather-avoidance routes and help traffic managers, controllers, and airspace users to respond rapidly to weather changes and associated traffic management initiatives."
+    },
+    {
+      "unit_id": "U0014",
+      "text": "These route-efficiency enhancements, targeted at en route airspace, will enable continued use of en route and arrival metering in the presence of weather."
+    },
+    {
+      "unit_id": "U0015",
+      "text": "NASA’s Multi-Flight Common Route (MFCR) automation represents one element of those technologies focusing primarily on delay recovery in the en route phase of flight."
+    },
+    {
+      "unit_id": "U0016",
+      "text": "Delay recovery is an attenuation of flight-time delay, accomplished by periodically revising weather-avoidance routing as the convective weather system evolves."
+    },
+    {
+      "unit_id": "U0017",
+      "text": "MFCR is intended for use by Traffic Management Coordinators (TMCs) in Air Route Traffic Control Centers (ARTCCs, or Centers) and traffic management specialists (TMSs) in the Air Traffic Control System Command Center (ATCSCC)."
+    },
+    {
+      "unit_id": "U0018",
+      "text": "MFCR leverages existing weather, airspace, and traffic data, as well as improvements in navigation, surveillance, communication, and digital information technologies, to build on existing ATM automation and address some of the shortcomings associated with strategic traffic flow management initiatives and weather forecasting uncertainties."
+    },
+    {
+      "unit_id": "U0019",
+      "text": "These capabilities provide significant potential benefits in the form of time, fuel, and cost savings."
+    },
+    {
+      "unit_id": "U0020",
+      "text": "The concept of operations described in this document describes MFCR functionality as delivered by NASA to the FAA in December 2017, including a list of potential enhancements that may be realized when the system is fielded. 3 CURRENT SYSTEM SHORTFALLS In today’s operations, Traffic Management Initiatives, or TMIs, are necessary to ensure that aircraft safely avoid areas of adverse weather and to meter traffic when demand in a given area exceeds air traffic control’s capacity to safely separate aircraft."
+    },
+    {
+      "unit_id": "U0021",
+      "text": "Although necessary for safety, route diversions and metering can be overly conservative due to uncertainty in weather forecasts and to airspace capacity limitations predicted to occur in sectors adjacent to the weather."
+    },
+    {
+      "unit_id": "U0022",
+      "text": "When significant convective activity is forecasted to develop in an area of the NAS, FAA traffic managers identify those areas as Flow Constrained Areas (FCAs), and they may implement a Severe Weather Avoidance Plan (SWAP) (e.g., playbook routes), to safely divert traffic around those weather-impacted regions."
+    },
+    {
+      "unit_id": "U0023",
+      "text": "In order to provide traffic managers and aircraft operators with ample time to prepare and allocate the necessary resources where needed, playbook routes are identified two to six hours prior to the time the constraint is predicted to develop."
+    },
+    {
+      "unit_id": "U0024",
+      "text": "This lead time and the associated uncertainties in weather forecasts often result in the selection of overly conservative playbook routes to ensure safety and to help avoid widespread route changes."
+    },
+    {
+      "unit_id": "U0025",
+      "text": "The current system lacks automation tools to enable traffic managers to quickly identify and coordinate workable reroutes."
+    },
+    {
+      "unit_id": "U0026",
+      "text": "Traffic managers and airspace users can manually identify and request more efficient routes, but the associated workload required to coordinate numerous reroutes is very high at a time when these managers are very busy."
+    },
+    {
+      "unit_id": "U0027",
+      "text": "When large-scale reroutes are made, the revised routes generally yield a suboptimal compromise among weather avoidance, throughput, and route efficiency."
+    },
+    {
+      "unit_id": "U0028",
+      "text": "Recent efforts have provided more flexible operational tools to account for dynamic changes."
+    },
+    {
+      "unit_id": "U0029",
+      "text": "A notable example is the Collaborative Trajectory Options Program (CTOP), which allows operators to file multiple routes based on the amount of delay to which the flight is subjected and the operators’ associated preferences for that flight."
+    },
+    {
+      "unit_id": "U0030",
+      "text": "Although this capability provides a level of improvement over traditional single-route flight plans and rerouting procedures, it is not available for airborne flights."
+    },
+    {
+      "unit_id": "U0031",
+      "text": "Automation tools for traffic managers and controllers can continuously monitor weather development and movement, determine the efficacy of associated flow constraints, and dynamically identify workable opportunities for time- and fuel-saving corrections to weather-avoidance routes, providing the potential to significantly improve efficiency in en route airspace operations. 4 MULTI-FLIGHT COMMON ROUTE (MFCR) CAPABILITY Over the past several years, NASA has developed and tested a ground-based automation application called Multi-Flight Common Route (MFCR) to support en route delay recovery."
+    },
+    {
+      "unit_id": "U0032",
+      "text": "This application is designed to assist traffic flow managers in efficiently rerouting airborne traffic after the original weather-avoidance routes have become outdated due to evolving convective weather systems [2]."
+    },
+    {
+      "unit_id": "U0033",
+      "text": "MFCR is an extension of NASA’s Dynamic Weather Routes (DWR) capability, which in turn is based on the Direct-To tool developed and tested at NASA from 1998 through 2001 [3][4][5]."
+    },
+    {
+      "unit_id": "U0034",
+      "text": "DWR is a dispatcher tool that identifies dynamic time-saving reroutes for individual flights within a Center to avoid convective weather."
+    },
+    {
+      "unit_id": "U0035",
+      "text": "MFCR is a traffic manager tool that builds on DWR by simultaneously monitoring and evaluating flight trajectories in all 20 Centers to identify common reroutes that provide the greatest overall time savings for multiple flights on similar routes."
+    },
+    {
+      "unit_id": "U0036",
+      "text": "Although capable of identifying individual reroute opportunities, MFCR’s primary function is to identify common routes that can be flown by a group of flights operating in the same vicinity."
+    },
+    {
+      "unit_id": "U0037",
+      "text": "Grouping flights on a common reroute makes more efficient use of constrained airspace, such as gaps in convective weather, and reduces the number of reroute recommendations that need to be evaluated and coordinated by a traffic manager."
+    },
+    {
+      "unit_id": "U0038",
+      "text": "Thus, more flights are able to benefit from timely reroutes when airspace constraints or traffic manager workload would otherwise prevent individual reroutes."
+    },
+    {
+      "unit_id": "U0039",
+      "text": "MFCR currently avoids convective weather, active Special Use Airspaces (SUAs), and Temporary Flight Restrictions (TFRs), but it could avoid any constraint that is defined by polygons, such as overloaded airspace sectors and turbulence."
+    },
+    {
+      "unit_id": "U0040",
+      "text": "The better the constraint information provided to MFCR, the better the MFCR reroute recommendations and the lower the traffic manager effort needed to implement those recommendations. 4.1 CAPABILITY DESCRIPTION MFCR processes flights in all 20 Centers across the NAS."
+    },
+    {
+      "unit_id": "U0041",
+      "text": "It begins to monitor and analyze trajectories once flights climb to 15,000 feet, and it will recommend time-saving weather-avoidance reroutes for groups of flights operating above FL250 within the same Center."
+    },
+    {
+      "unit_id": "U0042",
+      "text": "The time savings predicted for each group account for the effects of winds."
+    },
+    {
+      "unit_id": "U0043",
+      "text": "The default minimum savings threshold for a group of flights is 10 minutes, with each individual flight saving at least 3 minutes, but these parameters may be adjusted by the user to best address the current operational conditions."
+    },
+    {
+      "unit_id": "U0044",
+      "text": "Figure 1: Structure of MFCR solution Figure 1 shows the basic structure of an MFCR solution consisting of a Maneuver Start Point (MSP), a Merge Point (MP), and a Return Capture Fix (RCF)."
+    },
+    {
+      "unit_id": "U0045",
+      "text": "Up to two auxiliary waypoints for weather avoidance may be added between the MSP and MP, as well as between the MP and RCF."
+    },
+    {
+      "unit_id": "U0046",
+      "text": "The MSP is unique to each flight in the group and is located at a point five minutes (user adjustable) downstream of the flight’s current position."
+    },
+    {
+      "unit_id": "U0047",
+      "text": "This lead time allows enough time for traffic managers to evaluate, modify, and coordinate the reroute, and for controllers to issue clearances and deconflict flights prior to the merge point."
+    },
+    {
+      "unit_id": "U0048",
+      "text": "MFCR selects an RCF waypoint that is as far downstream as typically acceptable in local Center operations and is common to the original flight plan routes for all the flights in the group."
+    },
+    {
+      "unit_id": "U0049",
+      "text": "This point represents the flight plan fix at which the flights return to their original flight plan route."
+    },
+    {
+      "unit_id": "U0050",
+      "text": "Reroutes avoid convective weather, SUAs, and TFRs scheduled to be active at the time the reroute transits the airspace."
+    },
+    {
+      "unit_id": "U0051",
+      "text": "Due to the number and variety of other constraints that may impact a direct route, the MFCR algorithm does not avoid all operational constraints, such as congested sectors, sector traversal restrictions (e.g., crossing arrival/departure sectors, proximity to sector boundaries), fix- crossing restrictions, or other restrictions imposed by letters of agreement."
+    },
+    {
+      "unit_id": "U0052",
+      "text": "The variables and complex factors associated with these types of constraints are extremely difficult to implement effectively in automation tools without imposing requirements on a multitude of other systems."
+    },
+    {
+      "unit_id": "U0053",
+      "text": "Instead, MFCR provides the user with constraint information and a user-friendly trial planning function that allows the user to tailor reroutes to fit the operational scenario."
+    },
+    {
+      "unit_id": "U0054",
+      "text": "Named fixes are used for all waypoints for ease of use where available; otherwise, waypoints are defined by fix, radial, and distance (FRD)."
+    },
+    {
+      "unit_id": "U0055",
+      "text": "A snap-to named fix capability automatically replaces any auxiliary waypoints with nearby named fixes for ease of use in voice-based operations, but traffic managers may still opt to use a FRD fix."
+    },
+    {
+      "unit_id": "U0056",
+      "text": "The current flight plan trajectory and the MFCR reroute trajectories are both analyzed for sector loading and conflicts with active SUAs or TFRs."
+    },
+    {
+      "unit_id": "U0057",
+      "text": "All conflicts are displayed on the user interface, thereby providing immediate feedback to the user about the suitability of a MFCR recommended reroute or a user modification of a recommended reroute."
+    },
+    {
+      "unit_id": "U0058",
+      "text": "Recommended reroutes and all the associated data are also updated every minute with traffic updates."
+    },
+    {
+      "unit_id": "U0059",
+      "text": "Figure 2: Example of MFCR Direct Route Limit Regions The default location of the RCF is intended to approximate an operationally acceptable route clearance based on direct routes historically approved for flights in the Center."
+    },
+    {
+      "unit_id": "U0060",
+      "text": "Direct route clearance data collected for the previous one-year period are used to create “limit polygons” for each Center, as denoted by the cyan colored polygons in the example shown in Figure 2."
+    },
+    {
+      "unit_id": "U0061",
+      "text": "The three limit polygons shown in Figure 2 are for Minneapolis Center (top), Fort Worth Center (bottom-left), and Atlanta Center (bottom-right)."
+    },
+    {
+      "unit_id": "U0062",
+      "text": "Each limit polygon spans multiple Centers."
+    },
+    {
+      "unit_id": "U0063",
+      "text": "MFCR will select a waypoint, common to all the flight plan routes within the group, which is on or close to the downstream boundary of the limit polygon of the Center in which the flights are currently located."
+    },
+    {
+      "unit_id": "U0064",
+      "text": "This method indirectly accounts for Center preferences and routine constraints."
+    },
+    {
+      "unit_id": "U0065",
+      "text": "A more complete set of Traffic Flow Management (TFM) and Air Traffic Control (ATC) constraints may enable use of other methods to extend the range within which RCFs may be selected."
+    },
+    {
+      "unit_id": "U0066",
+      "text": "MFCR checks downstream Time-Based Flow Management (TBFM) arrival metering constraints for each flight before including it in the recommended reroute."
+    },
+    {
+      "unit_id": "U0067",
+      "text": "The MFCR research prototype uses a simple proxy for this check, based on distance to destination."
+    },
+    {
+      "unit_id": "U0068",
+      "text": "As long as a flight is outside its destination’s TBFM planning horizon, it will be considered for inclusion in time-saving reroutes."
+    },
+    {
+      "unit_id": "U0069",
+      "text": "Future integration between MFCR and TBFM could enable the negotiation of a revised scheduled time of arrival (STA) for flights inside the TBFM planning horizon based on reroute savings and permit these flights to benefit from MFCR’s en route delay recovery."
+    },
+    {
+      "unit_id": "U0070",
+      "text": "Flights inside the TBFM freeze horizon would still be excluded from MFCR reroutes. 4.2 USER INTERFACE AND PROCEDURES MFCR reroute recommendations are presented to the appropriate TMC, who evaluates and modifies it as needed."
+    },
+    {
+      "unit_id": "U0071",
+      "text": "Figure 3 shows an example of the user interface."
+    },
+    {
+      "unit_id": "U0072",
+      "text": "The bottom left portion of the display lists recommended group reroutes, showing overall savings for the group and the number of flights in the group."
+    },
+    {
+      "unit_id": "U0073",
+      "text": "Selecting a group in this pane highlights the line in yellow and brings up a list of flights for that group in the lower right portion of the display with a breakdown of individual flight savings, the Center in which the flight is currently located, inclusion of the flight in a TMI, conflicts with congested sectors and SUA, and waypoints for each flight’s new route."
+    },
+    {
+      "unit_id": "U0074",
+      "text": "Individual flights can be omitted from the group by checking the “remove” box on this list."
+    },
+    {
+      "unit_id": "U0075",
+      "text": "The upper portion of the Graphical User Interface (GUI) includes a trial planner interface in the left pane, with active flight plan and trial-plan (recommended reroute) sector loading maps in the right panes."
+    },
+    {
+      "unit_id": "U0076",
+      "text": "As the trial plan modifications are made, all information related to the reroute is updated accordingly, providing the user with immediate feedback and enhanced situational awareness."
+    },
+    {
+      "unit_id": "U0077",
+      "text": "Yellow-colored sectors indicate that demand is predicted to exceed sector capacity, but some of the flights are not yet airborne."
+    },
+    {
+      "unit_id": "U0078",
+      "text": "Red-colored sectors indicate that demand is predicted to exceed sector capacity and all of the flights are currently airborne, which implies a higher level of confidence in the prediction."
+    },
+    {
+      "unit_id": "U0079",
+      "text": "Various factors impact sector capacity, but not all of those are known to automation systems."
+    },
+    {
+      "unit_id": "U0080",
+      "text": "Rather than routing around congested sectors, MFCR presents sector congestion information in the GUI, allowing the user to evaluate and modify the routing based on operational need."
+    },
+    {
+      "unit_id": "U0081",
+      "text": "Figure 3: MFCR Display Once the traffic managers find a recommendation to be operationally suitable, they coordinate with Area Supervisors for the sectors that currently control the flights in the group, as well as with traffic managers in other facilities that would be affected by the recommended reroute."
+    },
+    {
+      "unit_id": "U0082",
+      "text": "Coordination with the Air Traffic Control System Command Center (ATCSCC) may also be necessary."
+    },
+    {
+      "unit_id": "U0083",
+      "text": "This coordination could take place via customary voice communication or by integrating automation, such as the Advanced Flight-Specific Trajectories (AFST, formerly Strategic Traffic Flow Management Application (SFMA)), and/or the MFCR interface itself [6]."
+    },
+    {
+      "unit_id": "U0084",
+      "text": "When the traffic manager accepts the MFCR recommendation via the GUI, the corresponding flight plan amendments are sent to the air traffic displays of the appropriate sector controllers by using the AirBorne ReRoute (ABRR) capability."
+    },
+    {
+      "unit_id": "U0085",
+      "text": "The sector controllers then offer the reroute to the pilots of the affected flights via Data Comm or voice communications."
+    },
+    {
+      "unit_id": "U0086",
+      "text": "The flight crews coordinate their proposed reroutes with their dispatchers, if necessary, and once the flight crews accept the new routes, the sector controller(s) implement the corresponding flight plan amendment in the automation system."
+    },
+    {
+      "unit_id": "U0087",
+      "text": "In Figure 3, the green routes depict the current flight plan routes."
+    },
+    {
+      "unit_id": "U0088",
+      "text": "In this example, these routes represent “LEV West Partial” playbook routes, which are typically used when a large weather system in the south-central U.S. blocks transcontinental traffic."
+    },
+    {
+      "unit_id": "U0089",
+      "text": "These playbook routes merge westbound traffic from the southeastern U.S. at Three Rivers, TX (THX) and send the traffic via intermediate waypoints to El Paso, TX (ELP), after which traffic follows standard jet routes to destinations in the western U.S."
+    },
+    {
+      "unit_id": "U0090",
+      "text": "In the illustration, these routes are still in effect even though the weather has moved to the north, as depicted by yellow, orange, and red contours in the large map on the left of the figure."
+    },
+    {
+      "unit_id": "U0091",
+      "text": "This capability presents an opportunity for time-saving, constraint-free MFCR reroute recommendations, shown by yellow lines."
+    },
+    {
+      "unit_id": "U0092",
+      "text": "The MFCR recommendation in Figure 3 identifies nine flights in Houston Center that are recommended to be merged at fix LEJON, the Merge Point, and then sent direct to ELP, the Return Capture Fix."
+    },
+    {
+      "unit_id": "U0093",
+      "text": "The new routes of these nine flights are estimated to provide a total time savings of 53 minutes at an average of about 6 min per flight."
+    },
+    {
+      "unit_id": "U0094",
+      "text": "These flights have been organized into a new flow along the common route segment from LEJON to ELP."
+    },
+    {
+      "unit_id": "U0095",
+      "text": "If this new flow continues to be free of weather, there is also an opportunity to update the playbook routes assigned to other flights and provide time savings to aircraft that are currently upstream of this route modification."
+    },
+    {
+      "unit_id": "U0096",
+      "text": "This option would provide a beneficial intermediate routing solution prior to lifting the playbook restriction entirely when the weather dissipates fully."
+    },
+    {
+      "unit_id": "U0097",
+      "text": "Traffic managers may also access the MFCR savings decay feature that shows approximately how the overall savings of a recommended reroute group would decline as the implementation of a recommended reroute is delayed; Figure 4 shows an example."
+    },
+    {
+      "unit_id": "U0098",
+      "text": "One reason for delaying the issuance of a reroute would be the need to perform other, more urgent traffic management tasks."
+    },
+    {
+      "unit_id": "U0099",
+      "text": "The savings decay graph provides TMCs with a decision aid to determine how long they have to respond to the reroute recommendation before significant potential savings are lost."
+    },
+    {
+      "unit_id": "U0100",
+      "text": "Another reason to delay responding to a recommended reroute would be to wait for additional flights that will soon enter the Center to join the reroute group."
+    },
+    {
+      "unit_id": "U0101",
+      "text": "MFCR currently identifies these flights by highlighting them in red, as shown in Figure 3 (see close to KCLT at the top right of the large pane), and it provides the TMC with the means to identify estimated time savings for each flight if it were to be rerouted once within the Center’s airspace."
+    },
+    {
+      "unit_id": "U0102",
+      "text": "In some cases, waiting for MFCR to add more flights in the reroute group will increase total flight-time savings and avoid the need to coordinate multiple groups."
+    },
+    {
+      "unit_id": "U0103",
+      "text": "TMCs can use this information in combination with the estimate in the savings-decay graph to decide when to start coordinating the reroute recommendation."
+    },
+    {
+      "unit_id": "U0104",
+      "text": "Figure 4: Reroute Savings Decay Over Time 4.3 CONVECTIVE WEATHER MODEL MFCR uses outputs from FAA’s Corridor Integrated Weather System (CIWS) and Convective Weather Avoidance Model (CWAM) to identify routes that will avoid convective cells."
+    },
+    {
+      "unit_id": "U0105",
+      "text": "CIWS forecasts the growth, decay, and movement of convective weather (see Figure 5)."
+    },
+    {
+      "unit_id": "U0106",
+      "text": "Forecasts are updated every five minutes with a two-hour look-ahead time in five-minute increments."
+    },
+    {
+      "unit_id": "U0107",
+      "text": "This allows MFCR to identify alternative routes that remain clear of predicted weather between the MSP and RCF."
+    },
+    {
+      "unit_id": "U0108",
+      "text": "Figure 5: CIWS and CWAM Forecast Sample CWAM provides polygons, from FL250 to FL450 in 1,000 foot increments, around convective cells that pilots are predicted to deviate around, based on storm intensity, echo tops, and look-ahead time."
+    },
+    {
+      "unit_id": "U0109",
+      "text": "A CWAM polygon is identified by the percentage of pilots who would deviate around the storm at that distance based on extensive historical data."
+    },
+    {
+      "unit_id": "U0110",
+      "text": "For example, a 70% CWAM polygon represents a region that 70% of pilots would avoid."
+    },
+    {
+      "unit_id": "U0111",
+      "text": "A 70% CWAM polygon will be smaller (or sometimes the same), with boundaries closer to the weather cells, than a 60% CWAM polygon."
+    },
+    {
+      "unit_id": "U0112",
+      "text": "Figure 6: CIWS Cell and Corresponding 60, 70, & 80% CWAM Polygons Figure 6 shows an example of the difference between 60%, 70%, and 80% CWAM polygons."
+    },
+    {
+      "unit_id": "U0113",
+      "text": "CWAM polygons are updated with the CIWS forecast."
+    },
+    {
+      "unit_id": "U0114",
+      "text": "MFCR currently uses 70% CWAM polygons for weather avoidance when generating reroute recommendations, but it can be adapted to use polygon-based convective weather model outputs from other sources, if desired."
+    },
+    {
+      "unit_id": "U0115",
+      "text": "MFCR logic includes gap detection and rejection logic to ensure that a gap between CWAM polygons is large enough to safely route aircraft."
+    },
+    {
+      "unit_id": "U0116",
+      "text": "This function includes a distance buffer that will reject a route amendment if it will go through a gap that is narrower than 50 nautical miles laterally on either side of the route to the predicted cells at the time the aircraft reaches the point closest to the cells (see Figure 7)."
+    },
+    {
+      "unit_id": "U0117",
+      "text": "The gap-width parameter is user adjustable."
+    },
+    {
+      "unit_id": "U0118",
+      "text": "If convective cells are predicted to encroach on one side of a trajectory but not on the other (blue polygons in left graphic in Figure 7), it is generally not considered an operational problem because there is room for flight crews to maneuver around the cell."
+    },
+    {
+      "unit_id": "U0119",
+      "text": "MFCR avoids narrow gaps, which are defined as a condition where cells are predicted to be on both sides of the trajectory at points within 50 nautical miles along-track distance of one another (pair of yellow polygons in right graphic of Figure 7)."
+    },
+    {
+      "unit_id": "U0120",
+      "text": "Figure 7: MFCR Gap Detection 50 nm 4.4 MFCR USE CASE The table below summarizes the process to implement a reroute using MFCR."
+    },
+    {
+      "unit_id": "U0121",
+      "text": "Step 1: Traffic Management Coordinator (TMC) Evaluation, Approval, and Dissemination • The MFCR display and interface resides in the TMU and continually runs in the background."
+    },
+    {
+      "unit_id": "U0122",
+      "text": "The adjustable parameters (e.g., savings threshold, convective cell buffers) are set by the user. • When MFCR identifies reroutes that could save more time than the minimum savings threshold, it posts a list of each flight grouping and a list of those flights in order of greatest flight time savings."
+    },
+    {
+      "unit_id": "U0123",
+      "text": "Each new MFCR group posted to the list triggers an audible alert. • The traffic managers on duty hear the alert and review and modify the proposed MFCR route(s) as needed."
+    }
+  ],
+  "provenance": [
+    {
+      "unit_id": "U0001",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        0,
+        173
+      ]
+    },
+    {
+      "unit_id": "U0002",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        174,
+        352
+      ]
+    },
+    {
+      "unit_id": "U0003",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        353,
+        421
+      ]
+    },
+    {
+      "unit_id": "U0004",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        422,
+        631
+      ]
+    },
+    {
+      "unit_id": "U0005",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        632,
+        819
+      ]
+    },
+    {
+      "unit_id": "U0006",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        820,
+        937
+      ]
+    },
+    {
+      "unit_id": "U0007",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        938,
+        1118
+      ]
+    },
+    {
+      "unit_id": "U0008",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1119,
+        1352
+      ]
+    },
+    {
+      "unit_id": "U0009",
+      "pdf_pages": [
+        8
+      ],
+      "normalized_body_span": [
+        1353,
+        1559
+      ]
+    },
+    {
+      "unit_id": "U0010",
+      "pdf_pages": [
+        8,
+        9
+      ],
+      "normalized_body_span": [
+        1560,
+        2053
+      ]
+    },
+    {
+      "unit_id": "U0011",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2054,
+        2253
+      ]
+    },
+    {
+      "unit_id": "U0012",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2254,
+        2423
+      ]
+    },
+    {
+      "unit_id": "U0013",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2424,
+        2787
+      ]
+    },
+    {
+      "unit_id": "U0014",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2788,
+        2942
+      ]
+    },
+    {
+      "unit_id": "U0015",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        2943,
+        3108
+      ]
+    },
+    {
+      "unit_id": "U0016",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3109,
+        3269
+      ]
+    },
+    {
+      "unit_id": "U0017",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3270,
+        3495
+      ]
+    },
+    {
+      "unit_id": "U0018",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3496,
+        3836
+      ]
+    },
+    {
+      "unit_id": "U0019",
+      "pdf_pages": [
+        9
+      ],
+      "normalized_body_span": [
+        3837,
+        3939
+      ]
+    },
+    {
+      "unit_id": "U0020",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "normalized_body_span": [
+        3940,
+        4448
+      ]
+    },
+    {
+      "unit_id": "U0021",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4449,
+        4668
+      ]
+    },
+    {
+      "unit_id": "U0022",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4669,
+        4980
+      ]
+    },
+    {
+      "unit_id": "U0023",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        4981,
+        5224
+      ]
+    },
+    {
+      "unit_id": "U0024",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5225,
+        5423
+      ]
+    },
+    {
+      "unit_id": "U0025",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5424,
+        5546
+      ]
+    },
+    {
+      "unit_id": "U0026",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5547,
+        5766
+      ]
+    },
+    {
+      "unit_id": "U0027",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5767,
+        5920
+      ]
+    },
+    {
+      "unit_id": "U0028",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        5921,
+        6013
+      ]
+    },
+    {
+      "unit_id": "U0029",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6014,
+        6255
+      ]
+    },
+    {
+      "unit_id": "U0030",
+      "pdf_pages": [
+        10
+      ],
+      "normalized_body_span": [
+        6256,
+        6423
+      ]
+    },
+    {
+      "unit_id": "U0031",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "normalized_body_span": [
+        6424,
+        7018
+      ]
+    },
+    {
+      "unit_id": "U0032",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7019,
+        7234
+      ]
+    },
+    {
+      "unit_id": "U0033",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7235,
+        7414
+      ]
+    },
+    {
+      "unit_id": "U0034",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7415,
+        7552
+      ]
+    },
+    {
+      "unit_id": "U0035",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7553,
+        7799
+      ]
+    },
+    {
+      "unit_id": "U0036",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7800,
+        7990
+      ]
+    },
+    {
+      "unit_id": "U0037",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        7991,
+        8227
+      ]
+    },
+    {
+      "unit_id": "U0038",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8228,
+        8386
+      ]
+    },
+    {
+      "unit_id": "U0039",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8387,
+        8622
+      ]
+    },
+    {
+      "unit_id": "U0040",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8623,
+        8890
+      ]
+    },
+    {
+      "unit_id": "U0041",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        8891,
+        9100
+      ]
+    },
+    {
+      "unit_id": "U0042",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9101,
+        9176
+      ]
+    },
+    {
+      "unit_id": "U0043",
+      "pdf_pages": [
+        11
+      ],
+      "normalized_body_span": [
+        9177,
+        9408
+      ]
+    },
+    {
+      "unit_id": "U0044",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        9409,
+        9596
+      ]
+    },
+    {
+      "unit_id": "U0045",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        9597,
+        9720
+      ]
+    },
+    {
+      "unit_id": "U0046",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        9721,
+        9868
+      ]
+    },
+    {
+      "unit_id": "U0047",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        9869,
+        10061
+      ]
+    },
+    {
+      "unit_id": "U0048",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10062,
+        10250
+      ]
+    },
+    {
+      "unit_id": "U0049",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10251,
+        10357
+      ]
+    },
+    {
+      "unit_id": "U0050",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10358,
+        10477
+      ]
+    },
+    {
+      "unit_id": "U0051",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10478,
+        10839
+      ]
+    },
+    {
+      "unit_id": "U0052",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        10840,
+        11048
+      ]
+    },
+    {
+      "unit_id": "U0053",
+      "pdf_pages": [
+        12
+      ],
+      "normalized_body_span": [
+        11049,
+        11225
+      ]
+    },
+    {
+      "unit_id": "U0054",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        11226,
+        11366
+      ]
+    },
+    {
+      "unit_id": "U0055",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        11367,
+        11564
+      ]
+    },
+    {
+      "unit_id": "U0056",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        11565,
+        11710
+      ]
+    },
+    {
+      "unit_id": "U0057",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        11711,
+        11911
+      ]
+    },
+    {
+      "unit_id": "U0058",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        11912,
+        12012
+      ]
+    },
+    {
+      "unit_id": "U0059",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12013,
+        12240
+      ]
+    },
+    {
+      "unit_id": "U0060",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12241,
+        12438
+      ]
+    },
+    {
+      "unit_id": "U0061",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12439,
+        12583
+      ]
+    },
+    {
+      "unit_id": "U0062",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12584,
+        12626
+      ]
+    },
+    {
+      "unit_id": "U0063",
+      "pdf_pages": [
+        13
+      ],
+      "normalized_body_span": [
+        12627,
+        12837
+      ]
+    },
+    {
+      "unit_id": "U0064",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "normalized_body_span": [
+        12838,
+        12917
+      ]
+    },
+    {
+      "unit_id": "U0065",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        12918,
+        13099
+      ]
+    },
+    {
+      "unit_id": "U0066",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13100,
+        13249
+      ]
+    },
+    {
+      "unit_id": "U0067",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13250,
+        13347
+      ]
+    },
+    {
+      "unit_id": "U0068",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13348,
+        13480
+      ]
+    },
+    {
+      "unit_id": "U0069",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13481,
+        13738
+      ]
+    },
+    {
+      "unit_id": "U0070",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13739,
+        13963
+      ]
+    },
+    {
+      "unit_id": "U0071",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        13964,
+        14012
+      ]
+    },
+    {
+      "unit_id": "U0072",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14013,
+        14163
+      ]
+    },
+    {
+      "unit_id": "U0073",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14164,
+        14532
+      ]
+    },
+    {
+      "unit_id": "U0074",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14533,
+        14624
+      ]
+    },
+    {
+      "unit_id": "U0075",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14625,
+        14834
+      ]
+    },
+    {
+      "unit_id": "U0076",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        14835,
+        15018
+      ]
+    },
+    {
+      "unit_id": "U0077",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15019,
+        15148
+      ]
+    },
+    {
+      "unit_id": "U0078",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15149,
+        15337
+      ]
+    },
+    {
+      "unit_id": "U0079",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15338,
+        15431
+      ]
+    },
+    {
+      "unit_id": "U0080",
+      "pdf_pages": [
+        14
+      ],
+      "normalized_body_span": [
+        15432,
+        15613
+      ]
+    },
+    {
+      "unit_id": "U0081",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "normalized_body_span": [
+        15614,
+        15921
+      ]
+    },
+    {
+      "unit_id": "U0082",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        15922,
+        16017
+      ]
+    },
+    {
+      "unit_id": "U0083",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16018,
+        16275
+      ]
+    },
+    {
+      "unit_id": "U0084",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16276,
+        16510
+      ]
+    },
+    {
+      "unit_id": "U0085",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16511,
+        16633
+      ]
+    },
+    {
+      "unit_id": "U0086",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16634,
+        16873
+      ]
+    },
+    {
+      "unit_id": "U0087",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16874,
+        16942
+      ]
+    },
+    {
+      "unit_id": "U0088",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        16943,
+        17130
+      ]
+    },
+    {
+      "unit_id": "U0089",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17131,
+        17383
+      ]
+    },
+    {
+      "unit_id": "U0090",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17384,
+        17577
+      ]
+    },
+    {
+      "unit_id": "U0091",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17578,
+        17703
+      ]
+    },
+    {
+      "unit_id": "U0092",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17704,
+        17899
+      ]
+    },
+    {
+      "unit_id": "U0093",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        17900,
+        18037
+      ]
+    },
+    {
+      "unit_id": "U0094",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18038,
+        18137
+      ]
+    },
+    {
+      "unit_id": "U0095",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18138,
+        18365
+      ]
+    },
+    {
+      "unit_id": "U0096",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18366,
+        18520
+      ]
+    },
+    {
+      "unit_id": "U0097",
+      "pdf_pages": [
+        16
+      ],
+      "normalized_body_span": [
+        18521,
+        18764
+      ]
+    },
+    {
+      "unit_id": "U0098",
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "normalized_body_span": [
+        18765,
+        18888
+      ]
+    },
+    {
+      "unit_id": "U0099",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        18889,
+        19066
+      ]
+    },
+    {
+      "unit_id": "U0100",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19067,
+        19225
+      ]
+    },
+    {
+      "unit_id": "U0101",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19226,
+        19522
+      ]
+    },
+    {
+      "unit_id": "U0102",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19523,
+        19685
+      ]
+    },
+    {
+      "unit_id": "U0103",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19686,
+        19840
+      ]
+    },
+    {
+      "unit_id": "U0104",
+      "pdf_pages": [
+        17
+      ],
+      "normalized_body_span": [
+        19841,
+        20081
+      ]
+    },
+    {
+      "unit_id": "U0105",
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "normalized_body_span": [
+        20082,
+        20166
+      ]
+    },
+    {
+      "unit_id": "U0106",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20167,
+        20266
+      ]
+    },
+    {
+      "unit_id": "U0107",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20267,
+        20378
+      ]
+    },
+    {
+      "unit_id": "U0108",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20379,
+        20615
+      ]
+    },
+    {
+      "unit_id": "U0109",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20616,
+        20760
+      ]
+    },
+    {
+      "unit_id": "U0110",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20761,
+        20844
+      ]
+    },
+    {
+      "unit_id": "U0111",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20845,
+        20974
+      ]
+    },
+    {
+      "unit_id": "U0112",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        20975,
+        21125
+      ]
+    },
+    {
+      "unit_id": "U0113",
+      "pdf_pages": [
+        18
+      ],
+      "normalized_body_span": [
+        21126,
+        21175
+      ]
+    },
+    {
+      "unit_id": "U0114",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "normalized_body_span": [
+        21176,
+        21384
+      ]
+    },
+    {
+      "unit_id": "U0115",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        21385,
+        21523
+      ]
+    },
+    {
+      "unit_id": "U0116",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        21524,
+        21808
+      ]
+    },
+    {
+      "unit_id": "U0117",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        21809,
+        21852
+      ]
+    },
+    {
+      "unit_id": "U0118",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        21853,
+        22114
+      ]
+    },
+    {
+      "unit_id": "U0119",
+      "pdf_pages": [
+        19
+      ],
+      "normalized_body_span": [
+        22115,
+        22363
+      ]
+    },
+    {
+      "unit_id": "U0120",
+      "pdf_pages": [
+        19,
+        20
+      ],
+      "normalized_body_span": [
+        22364,
+        22490
+      ]
+    },
+    {
+      "unit_id": "U0121",
+      "pdf_pages": [
+        20
+      ],
+      "normalized_body_span": [
+        22491,
+        22667
+      ]
+    },
+    {
+      "unit_id": "U0122",
+      "pdf_pages": [
+        20
+      ],
+      "normalized_body_span": [
+        22668,
+        22969
+      ]
+    },
+    {
+      "unit_id": "U0123",
+      "pdf_pages": [
+        20
+      ],
+      "normalized_body_span": [
+        22970,
+        23141
+      ]
+    }
+  ],
+  "removed_blocks": [
+    {
+      "page": 8,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 22,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 8,
+      "block": 23,
+      "text": "6",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 25,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 9,
+      "block": 26,
+      "text": "7",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 29,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 10,
+      "block": 30,
+      "text": "8",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 11,
+      "block": 30,
+      "text": "9",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 3,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 12,
+      "block": 22,
+      "text": "10",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 9,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 13,
+      "block": 19,
+      "text": "11",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 31,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 14,
+      "block": 32,
+      "text": "12",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 2,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 15,
+      "block": 3,
+      "text": "13",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 16,
+      "block": 34,
+      "text": "14",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 13,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 17,
+      "block": 17,
+      "text": "15",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 13,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 18,
+      "block": 16,
+      "text": "16",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 15,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 16,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 19,
+      "block": 17,
+      "text": "17",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 6,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 20,
+      "block": 7,
+      "text": "18",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 21,
+      "block": 28,
+      "text": "19",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 22,
+      "block": 6,
+      "text": "20",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 23,
+      "block": 31,
+      "text": "21",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 24,
+      "block": 32,
+      "text": "22",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 5,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 25,
+      "block": 6,
+      "text": "23",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 0,
+      "text": "",
+      "reason": "numeric_or_repeated_header"
+    },
+    {
+      "page": 26,
+      "block": 12,
+      "text": "24",
+      "reason": "numeric_or_repeated_header"
+    }
+  ],
+  "source_only": true
+}

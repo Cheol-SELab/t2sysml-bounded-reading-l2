@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=North District Zone Controller, label=do not enter service with degraded trust)\n\nSource sentences (the last one is where the fact was extracted):\nS206: The Cyber Security Officer uses the audit file to investigate radio session continuity and to confirm that security monitoring records are complete.\nS207: The Cryptographic Key Management Appliance shall be the controlled source for operational certificates used by trainborne, wayside, control center, and maintenance components.\nS208: Certificate issuance shall require approved asset identity, recorded software baseline, assigned operating domain, and confirmation that the requesting component is authorized for service.\nS209: Certificate renewal shall be planned before expiry so that the Atlas Onboard Controller, Train Radio Modem, North District Zone Controller, South District Zone Controller, and West Junction Interlocking do not enter service with degraded trust.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S209 says the North District Zone Controller, among others, should not enter service with degraded trust, so the performer and label match. But the sentence states a requirement on certificate renewal planning, not an action the controller performs, so modeling it as a performed action is over-specific.\"}",
+ "usage": {
+  "input_tokens": 740,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 102,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.198,
+ "created": "2026-10-14T12:51:40"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: South Lookout Camera Mast provides \"the Camera Cleaning Log\" to Smoke Classifier Module (an information or material flow).\n\nSource sentences:\nS094: The North Lookout Camera Mast and the South Lookout Camera Mast provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility.\nS095: The South Lookout Camera Mast produces the Camera Cleaning Log as part of its maintenance reporting.\nS162: The Sentinel Fireline Analytics Engine applies the Ridge Shadow Mask when estimating crew-visible fire edge confidence in steep terrain.\nS163: The Smoke Classifier Module uses the Camera Cleaning Log to suppress confidence changes caused by lens contamination and service timing.\n\nAnswer \"supported\" only if the sentences state that South Lookout Camera Mast produces or sends this item AND that Smoke Classifier Module receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S095 states the South Lookout Camera Mast produces the Camera Cleaning Log, and S163 states the Smoke Classifier Module uses that same log, so the flow from mast to classifier is supported.\"}",
+ "usage": {
+  "input_tokens": 728,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.344,
+ "created": "2026-10-14T12:36:23"
+}

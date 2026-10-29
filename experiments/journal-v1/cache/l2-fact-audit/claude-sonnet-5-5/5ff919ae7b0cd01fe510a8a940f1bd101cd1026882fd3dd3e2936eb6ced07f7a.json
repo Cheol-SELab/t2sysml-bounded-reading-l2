@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: allocation(action=supported by Cryptographic Key Management Appliance, to=Cryptographic Key Management Appliance)\n\nSource sentences (the last one is where the fact was extracted):\nS020: Loss of train location confidence, loss of communications, or disagreement between vital functions results in protective restriction of movement until the condition is resolved or an approved degraded procedure is invoked.\nS021: Signal Maintenance Engineer is assigned the alias Maple for maintenance shorthand in this document.\nS022: Signal Maintenance Engineer uses Maintenance Diagnostic Server to review equipment health, correlate alarms, and support restoration without bypassing required operational authority.\nS023: Cyber Security Officer oversees access controls, key-management processes supported by Cryptographic Key Management Appliance, and the response to security events that could affect train control availability or integrity.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"unsupported\",\"reason\":\"S023 says key-management processes are supported by the Cryptographic Key Management Appliance, but it does not describe allocating an action to the appliance, and the fact allocates the appliance to itself, so the relation and its slots are not stated.\"}",
+ "usage": {
+  "input_tokens": 739,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.727,
+ "created": "2026-10-14T12:51:57"
+}

@@ -1,0 +1,100 @@
+{
+ "sentences": [
+  {
+   "text": "A degraded mode is entered when a fault, communication loss, environmental limit, or external restriction prevents normal service without requiring immediate full-site shutdown.",
+   "tags": []
+  },
+  {
+   "text": "The system records the affected function, the detected condition, and the time of transition so that operators can assess the scope and duration of the impairment.",
+   "tags": []
+  },
+  {
+   "text": "Safety functions take priority over energy production, maintenance throughput, and schedule recovery in every degraded mode.",
+   "tags": []
+  },
+  {
+   "text": "Turbine Controller retains protective control locally when the supervisory connection is unavailable, while the Shore Control Room monitors the loss of visibility.",
+   "tags": []
+  },
+  {
+   "text": "If remote commands cannot be confirmed, the Control Engineer suspends those commands and uses approved local procedures until reliable control is restored.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Service and Weather Analyst support entry into Weather Hold when forecast or observed conditions exceed approved operating limits.",
+   "tags": []
+  },
+  {
+   "text": "A turbine with a safety-critical fault is placed in Turbine Lockout until the fault is assessed and the required work is authorized.",
+   "tags": []
+  },
+  {
+   "text": "The Offshore Substation enters Substation Degraded when a protection, auxiliary supply, or monitoring impairment limits safe switching or export capability.",
+   "tags": []
+  },
+  {
+   "text": "The Grid Interface Relay applies the configured response to a Grid Constraint, and the Grid Dispatcher is advised when generation capability changes.",
+   "tags": []
+  },
+  {
+   "text": "Marine activity is reduced or suspended in Vessel Standby when weather, visibility, communications, or vessel capability is insufficient for safe transfer.",
+   "tags": []
+  },
+  {
+   "text": "The Marine Coordinator and Vessel Master confirm that personnel and vessels can remain safely accounted for during an extended interruption.",
+   "tags": []
+  },
+  {
+   "text": "The Fire Detection Panel and Emergency Generator remain essential services during degraded operation and are not bypassed to recover production.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Gateway preserves available status and alarm information, while the SCADA Engineer investigates missing or inconsistent indications.",
+   "tags": []
+  },
+  {
+   "text": "The Fleet Dispatch Console presents operational restrictions so that the Duty Planner can prioritize urgent safety work and maintainable generation capacity.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Planning Engine separates safety-critical work from tasks that can safely wait until normal access and support are available.",
+   "tags": []
+  },
+  {
+   "text": "The HSE Officer reviews any proposed workaround that changes established access, isolation, or personnel-control arrangements.",
+   "tags": []
+  },
+  {
+   "text": "A degraded condition is escalated when its duration, uncertainty, or effect on adjacent equipment increases beyond the approved operating envelope.",
+   "tags": []
+  },
+  {
+   "text": "The Control Engineer coordinates technical recovery with the relevant field and shore roles before any protection or operating restriction is removed.",
+   "tags": []
+  },
+  {
+   "text": "Recovery begins only after the initiating condition has been corrected or bounded and the responsible operator has confirmed that the equipment is stable.",
+   "tags": []
+  },
+  {
+   "text": "Required inspections and functional checks are completed before affected equipment is returned to automatic control or normal duty.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Engineer verifies that status, alarms, and command feedback are consistent across the available control views.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Planner updates operating priorities and deferred work after the recovery status is confirmed.",
+   "tags": []
+  },
+  {
+   "text": "Normal service is restored in stages so that a successful response at one level does not conceal a remaining restriction elsewhere.",
+   "tags": []
+  },
+  {
+   "text": "The system retains the event record and recovery decisions for review, trend analysis, and improvement of operating procedures.",
+   "tags": []
+  }
+ ]
+}

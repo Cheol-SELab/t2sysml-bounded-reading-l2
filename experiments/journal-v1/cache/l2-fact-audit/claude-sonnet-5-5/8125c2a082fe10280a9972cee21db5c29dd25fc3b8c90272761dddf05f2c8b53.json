@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(source=Substation Field Crew, payload=discrepancies)\n\nSource sentences (the last one is where the fact was extracted):\nS213: The Breaker Control Unit is tested using controlled commands that cannot bypass local interlocks or approved operating authority.\nS214: Remote commands are inhibited when equipment status is uncertain or when required permissives are unavailable.\nS215: If communications are degraded, the Control Room Operator treats remote indications as unavailable until their reliability is established.\nS216: Substation Field Crew verifies equipment indications locally when remote status is uncertain and reports discrepancies through established operating channels.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S216 says the Substation Field Crew reports discrepancies, so the source and payload are right, but no receiving element is named (only 'established operating channels'), so the flow's target is missing or unsupported.\"}",
+ "usage": {
+  "input_tokens": 660,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.887,
+ "created": "2026-10-14T12:52:17"
+}

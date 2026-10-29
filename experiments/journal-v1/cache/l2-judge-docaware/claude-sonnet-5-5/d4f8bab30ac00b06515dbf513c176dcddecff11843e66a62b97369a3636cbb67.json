@@ -1,0 +1,25 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against sentences of a long engineering document. Unit ids show the order of the sentences in the document; the sentences come from different places.\n\nCandidate: Warehouse Management System provides \"Slot Reservation Receipt\" to North Aisle Stacker Crane (an information or material flow).\n\nEvidence sentences used to propose the candidate:\nS056: A position is excluded when its capacity, status, or operating restrictions conflict with the pallet profile.\nS057: The Warehouse Management System produces the Slot Reservation Receipt.\nS153: Inbound Pallet Buffer provides temporary staging without implying that a held load has been accepted into inventory.\nS154: North Aisle Stacker Crane uses the Slot Reservation Receipt to confirm that its assigned destination remains reserved.\n\nOther sentences of the same document that mention this item, a similarly named item, or another element that produces or sends such an item:\nS003: Inbound acceptance is conditional on a valid receipt instruction and a pallet that can be safely handled within the facility.\n\nAnswer \"supported\" only if the document states that Warehouse Management System produces or sends this item AND that North Aisle Stacker Crane receives or uses the same item (it may be named more briefly in one sentence), and no other sentence shows that the item North Aisle Stacker Crane uses comes from a different producer or is a different item with a similar name. Answer \"unsupported\" if the sentences describe different items, the wrong elements, the opposite direction, or if another producer of the item the consumer uses is stated. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S057 states the Warehouse Management System produces the Slot Reservation Receipt and S154 states the North Aisle Stacker Crane uses that same receipt, with no sentence naming a different producer or a similarly named different item.\"}",
+ "usage": {
+  "input_tokens": 820,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 90,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.062,
+ "created": "2026-10-19T19:04:56"
+}

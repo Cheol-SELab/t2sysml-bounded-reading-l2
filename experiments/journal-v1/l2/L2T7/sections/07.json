@@ -1,0 +1,120 @@
+{
+ "sentences": [
+  {
+   "text": "The Payload Processing Facility is responsible for transforming downlinked payload telemetry into image products that are traceable to the source telemetry and to the processing configuration used at execution time.",
+   "tags": []
+  },
+  {
+   "text": "Raw transfer starts when station delivery files arrive with an accompanying manifest, and the ingest workflow verifies file size, sequence continuity, checksum, and acquisition time before processing is scheduled.",
+   "tags": []
+  },
+  {
+   "text": "The Telemetry Ingest Service writes accepted raw data to immutable staging storage and records the session identifier used by downstream processors.",
+   "tags": []
+  },
+  {
+   "text": "Corrupted or incomplete raw segments are isolated from the nominal queue, and the operator display shows whether recovery, retransmission, or discard is required.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Processing Cluster generates Level 0 products by removing transfer framing, ordering source packets, and preserving instrument time tags without radiometric or geometric correction.",
+   "tags": []
+  },
+  {
+   "text": "Level 1A processing reconstructs detector samples and appends engineering context, while Level 1B processing applies radiometric calibration and sensor model parameters.",
+   "tags": []
+  },
+  {
+   "text": "Level 2 processing applies geolocation, atmospheric screening where applicable, and gridding rules defined in the active product specification.",
+   "tags": []
+  },
+  {
+   "text": "Each processing level records software build identifiers, calibration baseline identifiers, and ancillary input versions so that a product can be regenerated under audit.",
+   "tags": []
+  },
+  {
+   "text": "The Long Term Archive is also known as Granite in operator procedures for storage capacity and retrieval coordination.",
+   "tags": [
+    "ALIAS:E_LONG_TERM_ARCHIVE"
+   ]
+  },
+  {
+   "text": "Released products are stored in the Long Term Archive with metadata that distinguish operational output from test output and reprocessed output.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Calibration Team maintains the approved calibration baseline and reviews trend evidence before a new baseline is made eligible for operational use.",
+   "tags": []
+  },
+  {
+   "text": "The Product Quality Service uses the patch bundle to update calibration applicability checks before the next product assessment cycle.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "text": "Calibration changes are first applied to a controlled sample of recent scenes, and the resulting metrics are compared with the current operational baseline.",
+   "tags": []
+  },
+  {
+   "text": "If a calibration change alters radiometric scale, geometric alignment, or saturation behavior, affected product specifications are updated before general release resumes.",
+   "tags": []
+  },
+  {
+   "text": "The Product Quality Service assigns quality flags for missing source packets, timing discontinuity, saturation, cloud screening uncertainty, geolocation residuals, and processing fallback.",
+   "tags": []
+  },
+  {
+   "text": "Quality flags are encoded in product metadata and summary records so that automated consumers can reject, warn, or accept data consistently.",
+   "tags": []
+  },
+  {
+   "text": "A product is placed in a delivery hold state when mandatory checks fail, required ancillary data are missing, or an operator opens a blocking review.",
+   "tags": []
+  },
+  {
+   "text": "The Product Quality Service produces the Product Hold List when release blocking defects must be tracked across scenes and processing levels.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "text": "Held products remain reproducible in staging storage, but they are not promoted for user delivery until the blocking condition has been cleared.",
+   "tags": []
+  },
+  {
+   "text": "The Network Control System uses the Security Exception Ticket to restrict affected transfer paths until approved containment actions are complete.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "text": "Lantern shall preserve the last validated routing configuration and reject unreviewed changes while payload product transfers are active.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "text": "When the Primary Processing Cluster cannot meet the processing window, the scheduling service assigns eligible jobs to the Backup Processing Cluster using the same container image and rule set.",
+   "tags": []
+  },
+  {
+   "text": "The Backup Processing Cluster writes provenance that identifies the fallback execution path, and the Product Quality Service treats that marker as an input to its quality decision.",
+   "tags": []
+  },
+  {
+   "text": "The Long Term Archive sends the Storage Watermark Snapshot after each daily storage assessment.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "text": "If both clusters are unavailable, processing is suspended, raw data are preserved in staging, and Mission Control Center is notified through the normal operational event channel.",
+   "tags": []
+  },
+  {
+   "text": "Recovery after suspension prioritizes products with contractual latency commitments, then processes remaining scenes in acquisition order unless mission management approves a different backlog rule.",
+   "tags": []
+  }
+ ]
+}

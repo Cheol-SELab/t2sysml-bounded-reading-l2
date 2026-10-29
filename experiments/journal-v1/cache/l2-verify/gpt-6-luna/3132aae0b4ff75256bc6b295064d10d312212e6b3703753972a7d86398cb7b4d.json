@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6-luna",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Data Quality Officer provides \"the duplicate incident audit memo\" to Triage Supervisor (an information or material flow).\n\nSource sentences:\nS087: Data Quality Officer monitors incident records for missing, inconsistent, or duplicated information that could impair triage or dispatch.\nS088: Data Quality Officer sends the Duplicate Incident Audit Memo.\nS192: Fleet Maintenance Cell reports a vehicle restriction promptly so dispatch does not count an unavailable unit toward operational coverage.\nS193: Triage Supervisor reviews the audit memo before closing a suspected duplicate incident.\n\nAnswer \"supported\" only if the sentences state that Data Quality Officer produces or sends this item AND that Triage Supervisor receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"The Data Quality Officer sends the Duplicate Incident Audit Memo, and the Triage Supervisor reviews the audit memo, indicating use of the same item.\"}",
+ "usage": {
+  "input_tokens": 282,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 160,
+  "output_tokens_details": {
+   "reasoning_tokens": 113
+  },
+  "total_tokens": 442
+ },
+ "attempts": 1,
+ "wall_s": 2.627,
+ "created": "2026-10-13T23:52:31"
+}

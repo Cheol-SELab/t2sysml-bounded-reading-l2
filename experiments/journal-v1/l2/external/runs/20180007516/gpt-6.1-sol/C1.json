@@ -1,0 +1,4821 @@
+{
+ "facts": [
+  {
+   "unit_id": "U0002",
+   "type": "attribute",
+   "owner": "air traffic management system",
+   "name": "predicted trajectory",
+   "value": "based on the approved flight plan and a scheduled or controlled departure time"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "starts to move"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "controllers",
+   "label": "tactically manage the aircraft"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "controllers",
+   "label": "using “open trajectory” vectors, altitude changes, and speed clearances"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "controllers",
+   "label": "implement traffic management restrictions"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "controllers",
+   "label": "separate otherwise conflicting aircraft"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "action",
+   "performer": "controllers",
+   "label": "address arising NAS constraints"
+  },
+  {
+   "unit_id": "U0003",
+   "type": "succession",
+   "before": "starts to move",
+   "after": "tactically manage the aircraft"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "performer": "air traffic management system",
+   "label": "tends to be conservative in the strategic time frame"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "label": "are implemented via flight plan changes"
+  },
+  {
+   "unit_id": "U0004",
+   "type": "action",
+   "performer": "air traffic management system",
+   "label": "avoid delaying aircraft more than necessary"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "label": "are left to the controller to solve tactically"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "controllers",
+   "label": "solve tactically"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "controllers",
+   "label": "routing an aircraft around weather"
+  },
+  {
+   "unit_id": "U0005",
+   "type": "action",
+   "performer": "controllers",
+   "label": "complying with a new Traffic Flow Management [TFM] restriction"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "action",
+   "label": "are not directly communicated to the automation systems or other stakeholders"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "flow",
+   "source": "controllers",
+   "target": "automation systems",
+   "payload": "Tactical controller actions"
+  },
+  {
+   "unit_id": "U0006",
+   "type": "flow",
+   "source": "controllers",
+   "target": "other stakeholders",
+   "payload": "Tactical controller actions"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "air traffic management system",
+   "label": "impede the ability to predict how NAS constraints will influence a flight’s trajectory"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "label": "predict how NAS constraints will influence a flight’s trajectory"
+  },
+  {
+   "unit_id": "U0007",
+   "type": "action",
+   "performer": "NAS constraints",
+   "label": "will influence a flight’s trajectory"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "Ground Delay Programs",
+   "label": "assign departure times designed to comply with a Controlled Time of Arrival (CTA) at a NAS constraint"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "Airspace Flow Programs",
+   "label": "assign departure times designed to comply with a Controlled Time of Arrival (CTA) at a NAS constraint"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "label": "designed to comply with a Controlled Time of Arrival (CTA) at a NAS constraint"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "departure times",
+   "label": "comply with a Controlled Time of Arrival (CTA) at a NAS constraint"
+  },
+  {
+   "unit_id": "U0008",
+   "type": "action",
+   "performer": "controllers",
+   "label": "address other constraints"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "performer": "Time Based Flow Management",
+   "label": "makes a similar assumption that the estimated times of arrival (ETAs) to the constraint are correct"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "performer": "disruptions",
+   "label": "can introduce unexpected delays that affect the flight’s ETA"
+  },
+  {
+   "unit_id": "U0009",
+   "type": "action",
+   "performer": "unexpected delays",
+   "label": "affect the flight’s ETA"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "label": "is affected"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "label": "is not known"
+  },
+  {
+   "unit_id": "U0010",
+   "type": "action",
+   "performer": "flight",
+   "label": "may encounter several such disruptions en route to its destination"
+  },
+  {
+   "unit_id": "U0011",
+   "type": "action",
+   "performer": "flight",
+   "label": "makes NAS demand predictions at each NAS resource less accurate"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "Federal Aviation Administration",
+   "label": "negotiate four-dimensional trajectories (4DTs) for all flights that respect the airspace user’s goals while complying with NAS constraints"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "airspace user",
+   "label": "negotiate four-dimensional trajectories (4DTs) for all flights that respect the airspace user’s goals while complying with NAS constraints"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "four-dimensional trajectories",
+   "label": "respect the airspace user’s goals"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "four-dimensional trajectories",
+   "label": "complying with NAS constraints"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "considering both airspace user and FAA objectives"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "utilizing negotiated 4DTs to communicate the traffic management plan"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "communicate the traffic management plan"
+  },
+  {
+   "unit_id": "U0012",
+   "type": "flow",
+   "source": "Management by Trajectory",
+   "payload": "traffic management plan"
+  },
+  {
+   "unit_id": "U0013",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "accommodates a broad and expanding spectrum of current and anticipated airspace operations"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "Pilots",
+   "label": "use automation"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "air traffic controllers",
+   "label": "use automation"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "Pilots",
+   "label": "keep the aircraft on its assigned trajectory"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "air traffic controllers",
+   "label": "keep the aircraft on its assigned trajectory"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "Pilots",
+   "label": "complying with temporal or speed constraints"
+  },
+  {
+   "unit_id": "U0014",
+   "type": "action",
+   "performer": "air traffic controllers",
+   "label": "complying with temporal or speed constraints"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "action",
+   "performer": "Equipped aircraft",
+   "label": "complying with the assigned trajectory without controller intervention"
+  },
+  {
+   "unit_id": "U0015",
+   "type": "attribute",
+   "owner": "Equipped aircraft",
+   "name": "responsibility",
+   "value": "substantial responsibility for complying with the assigned trajectory without controller intervention"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "label": "are constructed to respect all of the known constraints from the aircraft’s current location to its destination"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "assigned trajectory",
+   "label": "respect all of the known constraints from the aircraft’s current location to its destination"
+  },
+  {
+   "unit_id": "U0016",
+   "type": "action",
+   "performer": "assigned trajectory",
+   "label": "making the flight’s entire trajectory much more predictable than it is today"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "uncertainty",
+   "label": "occur"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "performer": "disruptions",
+   "label": "occur"
+  },
+  {
+   "unit_id": "U0017",
+   "type": "action",
+   "label": "handled through trajectory modifications as far in advance as possible"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "ground-based automation",
+   "label": "make the MBT concept possible"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "aircraft automation",
+   "label": "make the MBT concept possible"
+  },
+  {
+   "unit_id": "U0018",
+   "type": "action",
+   "performer": "data communications",
+   "label": "make the MBT concept possible"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "eliminates most local, reactive control actions being applied to aircraft"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "being applied to aircraft"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "cannot be predicted in advance"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "local, reactive control actions",
+   "label": "have impacts on the downstream trajectory"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "label": "cannot be known until they happen"
+  },
+  {
+   "unit_id": "U0019",
+   "type": "action",
+   "performer": "local, reactive control actions",
+   "label": "happen"
+  },
+  {
+   "unit_id": "U0020",
+   "type": "action",
+   "performer": "Management by Trajectory",
+   "label": "inserting the impact of all NAS constraints into the assigned trajectory in the form of trajectory constraints"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "uncertainty",
+   "label": "remains"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "are made proactively"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "maximizing trajectory predictability"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "label": "delivering associated benefits"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "flow",
+   "payload": "associated benefits"
+  },
+  {
+   "unit_id": "U0021",
+   "type": "action",
+   "performer": "Trajectory Based Operations",
+   "label": "employ a 4D contract"
+  },
+  {
+   "unit_id": "U0022",
+   "type": "action",
+   "performer": "Comparison with ICAO TBO Concept",
+   "label": "compares MBT with the International Civil Aviation Organization (ICAO) TBO concept"
+  },
+  {
+   "unit_id": "U0023",
+   "type": "action",
+   "label": "has been used widely"
+  },
+  {
+   "unit_id": "U0024",
+   "type": "action",
+   "label": "has come to be used in two distinct ways"
+  },
+  {
+   "unit_id": "U0025",
+   "type": "attribute",
+   "owner": "Trajectory Based Operations",
+   "name": "one meaning",
+   "value": "a high-level vision for the future of the NAS in which 4DTs are the core of air traffic control and air traffic management"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "attribute",
+   "owner": "Trajectory Based Operations",
+   "name": "second meaning",
+   "value": "an evolving set of specific endeavors intended to advance the NAS toward the future vision"
+  },
+  {
+   "unit_id": "U0026",
+   "type": "action",
+   "performer": "specific endeavors",
+   "label": "advance the NAS toward the future vision"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "attribute",
+   "owner": "MBT",
+   "name": "interpretation",
+   "value": "one specific interpretation of the high-level TBO vision"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "performer": "MBT",
+   "label": "contributing to the refinement of the MBT concept and the overall body of knowledge related to TBO"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "performer": "MBT",
+   "label": "addressed by MBT"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "can be identified"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "studied"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "summarizes the shortfalls in the current NAS that are addressed by MBT"
+  },
+  {
+   "unit_id": "U0027",
+   "type": "action",
+   "label": "shown in Table 1"
+  },
+  {
+   "unit_id": "U0028",
+   "type": "action",
+   "label": "identified in the International Civil Aviation Organization (ICAO) TBO Concept Document [1]"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "ICAO TBO Concept Document",
+   "label": "provides high-level guidance for resolving these shortfalls"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "flow",
+   "source": "ICAO TBO Concept Document",
+   "payload": "high-level guidance"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "label": "resolving these shortfalls"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "performer": "MBT",
+   "label": "provides a specific vision for resolving the shortfalls"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "flow",
+   "source": "MBT",
+   "payload": "specific vision"
+  },
+  {
+   "unit_id": "U0029",
+   "type": "action",
+   "label": "resolving the shortfalls"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "label": "exchanged between airspace users and the FAA"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "flow",
+   "source": "airspace users",
+   "target": "FAA",
+   "payload": "Data"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "flow",
+   "source": "FAA",
+   "target": "airspace users",
+   "payload": "Data"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "attribute",
+   "owner": "Data",
+   "name": "sparsity",
+   "value": "too sparse to support accurate trajectory prediction across all phases of flight and trajectory synchronization across automation systems"
+  },
+  {
+   "unit_id": "U0031",
+   "type": "action",
+   "performer": "Data",
+   "label": "support accurate trajectory prediction across all phases of flight and trajectory synchronization across automation systems"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "label": "needed by all relevant airspace users, aircraft, and FAA automation systems"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "airspace users",
+   "label": "develop accurate, consistent 4DT predictions"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "develop accurate, consistent 4DT predictions"
+  },
+  {
+   "unit_id": "U0032",
+   "type": "action",
+   "performer": "FAA automation systems",
+   "label": "develop accurate, consistent 4DT predictions"
+  },
+  {
+   "unit_id": "U0033",
+   "type": "action",
+   "label": "causes poor trajectory predictability"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "operate on closed trajectories to the extent possible"
+  },
+  {
+   "unit_id": "U0034",
+   "type": "action",
+   "label": "improves trajectory predictability"
+  },
+  {
+   "unit_id": "U0035",
+   "type": "action",
+   "label": "result in poor trajectory predictability"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "flow",
+   "payload": "trajectory changes"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "flow",
+   "source": "ground automation systems",
+   "target": "aircraft",
+   "payload": "trajectory information"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "flow",
+   "source": "aircraft",
+   "target": "ground automation systems",
+   "payload": "trajectory information"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "allow for trajectory synchronization across systems"
+  },
+  {
+   "unit_id": "U0036",
+   "type": "action",
+   "label": "resulting in consistent trajectory predictions across systems"
+  },
+  {
+   "unit_id": "U0037",
+   "type": "action",
+   "performer": "trajectory predictability",
+   "label": "inhibits strategic (longer look ahead) trajectory management"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "label": "enable controllers to use strategic, closed clearances"
+  },
+  {
+   "unit_id": "U0038",
+   "type": "action",
+   "performer": "controllers",
+   "label": "use strategic, closed clearances"
+  },
+  {
+   "unit_id": "U0039",
+   "type": "action",
+   "performer": "trajectory predictability",
+   "label": "becomes the new norm"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "requirement",
+   "subject": "trajectory predictability",
+   "text": "Enhanced predictability will improve TFM performance and provide a more consistent flow of air traffic, where demand will more accurately meet available capacity, reducing or eliminating delay."
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "performer": "trajectory predictability",
+   "label": "will improve TFM performance"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "performer": "trajectory predictability",
+   "label": "provide a more consistent flow of air traffic"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "performer": "demand",
+   "label": "will more accurately meet available capacity"
+  },
+  {
+   "unit_id": "U0040",
+   "type": "action",
+   "label": "reducing or eliminating delay"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "label": "are published"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "flow",
+   "source": "NAS Constraint Service",
+   "target": "airspace users",
+   "payload": "NAS constraints"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "flow",
+   "source": "NAS Constraint Service",
+   "target": "automation systems",
+   "payload": "NAS constraints"
+  },
+  {
+   "unit_id": "U0041",
+   "type": "action",
+   "label": "can be known by all airspace users and relevant automation systems"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "performer": "NAS constraints",
+   "label": "affecting a given aircraft"
+  },
+  {
+   "unit_id": "U0042",
+   "type": "action",
+   "label": "are reflected in the 4DT"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "label": "prevents airspace users from planning business-efficient, acceptable trajectories"
+  },
+  {
+   "unit_id": "U0043",
+   "type": "action",
+   "performer": "airspace users",
+   "label": "planning business-efficient, acceptable trajectories"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "performer": "NAS constraints",
+   "label": "causing aircraft to be handled with an open- ended clearance when the constraints are encountered"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "be handled with an open- ended clearance"
+  },
+  {
+   "unit_id": "U0044",
+   "type": "action",
+   "label": "are encountered"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "label": "allow traffic managers and controllers to efficiently and effectively amend flights’ routes"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "efficiently and effectively amend flights’ routes"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "performer": "controllers",
+   "label": "efficiently and effectively amend flights’ routes"
+  },
+  {
+   "unit_id": "U0045",
+   "type": "action",
+   "label": "cause route amendment backlogs during disruptive NAS events"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "apply constraints"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "efficiently amend trajectories"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "NAS events",
+   "label": "evolve"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "label": "enabling a more flexible and responsive ATM system"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "ATM system",
+   "label": "can take full advantage of available airspace"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "ATM system",
+   "label": "drastically reduce delay"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "label": "allows controllers and traffic managers to predict the downstream consequences of an action or decision on specific aircrafts’ trajectories"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "controllers",
+   "label": "predict the downstream consequences of an action or decision on specific aircrafts’ trajectories"
+  },
+  {
+   "unit_id": "U0046",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "predict the downstream consequences of an action or decision on specific aircrafts’ trajectories"
+  },
+  {
+   "unit_id": "U0047",
+   "type": "action",
+   "label": "are considered in decision making associated with a given trajectory, including tactical control actions"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "label": "quantifying time-based performance as a metric that complements existing PBN metrics"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "performer": "time-based performance",
+   "label": "complements existing PBN metrics"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "label": "may be managed by a single ATM concept"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "performer": "ATM concept",
+   "label": "maximizes efficiency"
+  },
+  {
+   "unit_id": "U0048",
+   "type": "action",
+   "performer": "ATM concept",
+   "label": "maintaining an acceptable level of safety risk"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "action",
+   "performer": "time of arrival control (TOAC) standards",
+   "label": "establish a minimum performance requirement that some aircraft will be certified for while others will not"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "action",
+   "label": "will be certified for"
+  },
+  {
+   "unit_id": "U0049",
+   "type": "requirement",
+   "subject": "aircraft",
+   "text": "Current time of arrival control (TOAC) standards establish a minimum performance requirement that some aircraft will be certified for while others will not."
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "time of arrival control (TOAC) standards",
+   "label": "may inadvertently introduce unacceptable safety risk into the NAS"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "time of arrival control (TOAC) standards",
+   "label": "creates a mixed equipage environment in which one ATM concept applies to those who meet the standard while another concept must be applied to those who do not"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "ATM concept",
+   "label": "applies to those who meet the standard"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "meet the standard"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "must be applied to those who do not"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "requirement",
+   "text": "another concept must be applied to those who do not"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "can be summarized by the following key points"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "MBT",
+   "label": "applies to all aircraft operating according to Instrument Flight Rules (IFR)"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "operating according to Instrument Flight Rules (IFR)"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "are assigned 4DTs"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "attribute",
+   "owner": "4DTs",
+   "name": "trajectory type",
+   "value": "negotiated, closed trajectories"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "attribute",
+   "owner": "4DTs",
+   "name": "extent",
+   "value": "from their current state to their destination"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "NAS Constraint Service",
+   "label": "publishes common information about NAS constraints to all stakeholders"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "flow",
+   "source": "NAS Constraint Service",
+   "target": "stakeholders",
+   "payload": "common information about NAS constraints"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "can be mapped to NAS constraints"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "facilitate identifying affected aircraft when NAS constraints change"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "identifying affected aircraft"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "NAS constraints",
+   "label": "change"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "follow their negotiated, assigned trajectories"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "complying with trajectory constraints"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "are defined based on the flight’s individual performance capabilities and the situational need for the constraint"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "label": "does not describe the details of how traffic managers or traffic management automation determines what trajectory constraints to impose on each flight"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "determines what trajectory constraints to impose on each flight"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "traffic management automation",
+   "label": "determines what trajectory constraints to impose on each flight"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "traffic managers",
+   "label": "impose on each flight"
+  },
+  {
+   "unit_id": "U0050",
+   "type": "action",
+   "performer": "traffic management automation",
+   "label": "impose on each flight"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "requirement",
+   "subject": "Traffic management automation",
+   "text": "Traffic management automation will identify which flights are affected by each TMI and translate that TMI into one or more trajectory constraints specific to the flight."
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "Traffic management automation",
+   "label": "identify which flights are affected by each TMI"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "",
+   "label": "are affected by each TMI"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "Traffic management automation",
+   "label": "translate that TMI into one or more trajectory constraints specific to the flight"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "provide detailed information about their predicted 4DT (a.k.a. intent data)"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "action",
+   "performer": "",
+   "label": "is shared across stakeholders"
+  },
+  {
+   "unit_id": "U0051",
+   "type": "flow",
+   "source": "Aircraft",
+   "target": "stakeholders",
+   "payload": "detailed information about their predicted 4DT"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "provide updates when intent data change"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "source": "Aircraft",
+   "target": "",
+   "payload": "updates"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "predicted 4DT",
+   "label": "change"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "can be detected further in advance due to improved predictability"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "can be accomplished through adding or modifying constraints in the assigned 4DT"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "adding or modifying constraints in the assigned 4DT"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "are minimized"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "MBT",
+   "label": "follows two paths to eliminating open trajectories"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "MBT",
+   "label": "eliminating open trajectories"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "MBT",
+   "label": "introducing methods for planning tactical maneuvers as closed trajectory modifications"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "planning tactical maneuvers as closed trajectory modifications"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "MBT",
+   "label": "eliminating the need for tactical maneuvers through improved predictability"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "is used to deliver 4DTs to aircraft cockpits for easy loading and execution in the Flight Management System (FMS)"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "Digital air-ground communication",
+   "label": "deliver 4DTs to aircraft cockpits"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "flow",
+   "source": "Digital air-ground communication",
+   "target": "aircraft cockpits",
+   "payload": "predicted 4DT"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "",
+   "label": "are used to include the flight crew in the trajectory negotiation process"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "Broadband air-ground communications",
+   "label": "include the flight crew in the trajectory negotiation process"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "advanced electronic flight bag applications",
+   "label": "include the flight crew in the trajectory negotiation process"
+  },
+  {
+   "unit_id": "U0052",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "subsumes the responsibilities of the D-side controller"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "proactively intervene to avoid conflicts and achieve TFM objectives"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "traffic management coordinators",
+   "label": "proactively intervene to avoid conflicts and achieve TFM objectives"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "avoid conflicts"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "traffic management coordinators",
+   "label": "avoid conflicts"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "achieve TFM objectives"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "traffic management coordinators",
+   "label": "achieve TFM objectives"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "negotiating controller",
+   "label": "using automation enhancements that facilitate coordinating 4DT changes across multiple sectors"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "traffic management coordinators",
+   "label": "using automation enhancements that facilitate coordinating 4DT changes across multiple sectors"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "automation enhancements",
+   "label": "facilitate coordinating 4DT changes across multiple sectors"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "",
+   "label": "coordinating 4DT changes across multiple sectors"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "",
+   "label": "is intended to describe a far-term MBT concept"
+  },
+  {
+   "unit_id": "U0053",
+   "type": "action",
+   "performer": "document",
+   "label": "describe a far-term MBT concept"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "performer": "",
+   "label": "is not precisely defined"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "performer": "",
+   "label": "targets an operational environment in which the NAS, and the vast majority of aircraft, are capable of the advanced data exchange and automation capabilities associated with the Aeronautical Telecommunications Network-Baseline 2 (ATN-B2)"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "performer": "NAS",
+   "label": "are capable of the advanced data exchange and automation capabilities associated with the Aeronautical Telecommunications Network-Baseline 2 (ATN-B2)"
+  },
+  {
+   "unit_id": "U0054",
+   "type": "action",
+   "performer": "Aircraft",
+   "label": "are capable of the advanced data exchange and automation capabilities associated with the Aeronautical Telecommunications Network-Baseline 2 (ATN-B2)"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "document",
+   "label": "provide a vector to guide research"
+  },
+  {
+   "unit_id": "U0055",
+   "type": "action",
+   "performer": "",
+   "label": "guide research"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "MBT Concept of Operations",
+   "label": "presents an end-state vision for MBT"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "flow",
+   "source": "MBT Concept of Operations",
+   "target": "",
+   "payload": "end-state vision for MBT"
+  },
+  {
+   "unit_id": "U0056",
+   "type": "action",
+   "performer": "MBT Concept of Operations",
+   "label": "beginning to identify what could be feasible in the more near-term timeframe"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "constraint",
+   "subject": "near-term concept",
+   "expression": "constrained by the current NAS and currently planned changes to the NAS"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "action",
+   "performer": "FAA",
+   "label": "plans"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "action",
+   "performer": "",
+   "label": "are documented within the NAS Enterprise Architecture [EA] evolution within the NextGen timeframe"
+  },
+  {
+   "unit_id": "U0058",
+   "type": "action",
+   "performer": "far-term MBT concept",
+   "label": "may make assumptions about future enabling changes"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "performer": "far-term MBT concept",
+   "label": "encompasses the entirety of air traffic control (ATC) within the NAS"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "performer": "section",
+   "label": "summarizes key assumptions about the near-term and far-term environments in which MBT would operate"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "performer": "MBT",
+   "label": "would operate"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "requirement",
+   "subject": "Air traffic controllers",
+   "text": "Air traffic controllers will still be responsible for separation management and conflict avoidance"
+  },
+  {
+   "unit_id": "U0059",
+   "type": "requirement",
+   "subject": "IFR aircraft",
+   "text": "self-separation of IFR aircraft will not be the norm in the far-term MBT environment."
+  },
+  {
+   "unit_id": "U0059",
+   "type": "requirement",
+   "subject": "Air vehicle capabilities and equipage",
+   "text": "Air vehicle capabilities and equipage will be consistent with the current progression of safety and performance standards."
+  },
+  {
+   "unit_id": "U0059",
+   "type": "requirement",
+   "subject": "highly equipped aircraft",
+   "text": "The capabilities of highly equipped aircraft will not change."
+  },
+  {
+   "unit_id": "U0059",
+   "type": "action",
+   "performer": "highly equipped aircraft",
+   "label": "will not change"
+  },
+  {
+   "unit_id": "U0060",
+   "type": "composition",
+   "whole": "Flight Management System",
+   "parts": [
+    "Required Time of Arrival functionality"
+   ]
+  },
+  {
+   "unit_id": "U0060",
+   "type": "requirement",
+   "subject": "Flight Management System",
+   "text": "aircraft FMS that include Required Time of Arrival (RTA) functionality will remain limited to a single active RTA constraint at a time."
+  },
+  {
+   "unit_id": "U0060",
+   "type": "constraint",
+   "subject": "Flight Management System",
+   "expression": "limited to a single active RTA constraint at a time"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "requirement",
+   "subject": "Controller-pilot data link communications",
+   "text": "Controller-pilot data link communications (CPDLC) with route clearances and trajectory intent output will be standard services supported by avionics."
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "",
+   "label": "supported by avionics"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "requirement",
+   "subject": "MBT",
+   "text": "MBT will slowly seep into NAS operations"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "action",
+   "performer": "MBT",
+   "label": "slowly seep into NAS operations"
+  },
+  {
+   "unit_id": "U0061",
+   "type": "requirement",
+   "subject": "procedures",
+   "text": "there will not be a step change in procedures."
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "MBT",
+   "label": "will allow equipped aircraft to experience some benefit while operating among unequipped aircraft, and allow controllers with different perspectives on changing technologies and procedures to adapt to MBT at different paces"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "equipped aircraft",
+   "label": "experience some benefit"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "equipped aircraft",
+   "label": "operating among unequipped aircraft"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "controllers",
+   "label": "adapt to MBT at different paces"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "requirement",
+   "subject": "MBT tools",
+   "text": "MBT tools will be introduced incrementally through upgrades to existing automation platforms and extensions to the information shared via System Wide Information Management (SWIM)."
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "",
+   "label": "will be introduced incrementally through upgrades to existing automation platforms and extensions to the information shared via System Wide Information Management (SWIM)"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "action",
+   "performer": "",
+   "label": "shared via System Wide Information Management (SWIM)"
+  },
+  {
+   "unit_id": "U0062",
+   "type": "flow",
+   "source": "",
+   "target": "",
+   "payload": "information shared via System Wide Information Management"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "requirement",
+   "subject": "MBT",
+   "text": "Adoption of MBT will be varied around the NAS with some facilities and controllers more willing and able to adopt new capabilities than others."
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "facilities",
+   "label": "adopt new capabilities"
+  },
+  {
+   "unit_id": "U0063",
+   "type": "action",
+   "performer": "controllers",
+   "label": "adopt new capabilities"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "performer": "Benefits",
+   "label": "will initially be slow to accumulate"
+  },
+  {
+   "unit_id": "U0064",
+   "type": "action",
+   "performer": "controllers",
+   "label": "become more comfortable with the technologies"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "Experience",
+   "label": "will allow the tools to be refined to improve performance and increase user acceptance"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "",
+   "label": "be refined"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "MBT tools",
+   "label": "improve performance"
+  },
+  {
+   "unit_id": "U0065",
+   "type": "action",
+   "performer": "MBT tools",
+   "label": "increase user acceptance"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "",
+   "label": "will be reached"
+  },
+  {
+   "unit_id": "U0066",
+   "type": "requirement",
+   "subject": "airspace users",
+   "text": "Adoption of supporting technologies by airspace users will continue at its current pace."
+  },
+  {
+   "unit_id": "U0066",
+   "type": "action",
+   "performer": "airspace users",
+   "label": "will continue at its current pace"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Equipped aircraft",
+   "label": "will benefit from the ability to negotiate their trajectories"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Equipped aircraft",
+   "label": "negotiate their trajectories"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "label": "be left alone to follow the assigned trajectory"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Equipped aircraft",
+   "label": "follow the assigned trajectory"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "requirement",
+   "subject": "Current structured airspace",
+   "text": "Current structured airspace will remain in use, although increased use of direct routing will be allowed in regions of low-to-medium operational density."
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Current structured airspace",
+   "label": "will remain in use"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "label": "will be allowed in regions of low-to-medium operational density"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "requirement",
+   "subject": "Controllers",
+   "text": "Controllers will use automation support to define and issue closed trajectories in advance, rather than reverting to open-trajectory vectors issued via voice."
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Controllers",
+   "label": "will use automation support to define and issue closed trajectories in advance"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Controllers",
+   "label": "define and issue closed trajectories in advance"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "flow",
+   "source": "Controllers",
+   "payload": "closed trajectories"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "Controllers",
+   "label": "reverting to open-trajectory vectors issued via voice"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "label": "issued via voice"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "flow",
+   "payload": "open-trajectory vectors"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "requirement",
+   "subject": "EFBs",
+   "text": "EFBs will become much more capable and will have reliable, high-speed connectivity to ground-based systems."
+  },
+  {
+   "unit_id": "U0067",
+   "type": "action",
+   "performer": "EFBs",
+   "label": "will become much more capable"
+  },
+  {
+   "unit_id": "U0067",
+   "type": "attribute",
+   "owner": "EFBs",
+   "name": "connectivity to ground-based systems",
+   "value": "reliable, high-speed"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "EFBs",
+   "label": "will enable a rapid advance in air vehicle capabilities without requiring all of the changes to occur within legacy FMS architectures"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "legacy FMS architectures",
+   "label": "enter the fleet"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "requirement",
+   "subject": "aircraft",
+   "text": "All aircraft will be capable of receiving assigned trajectories via digital communication and flying these trajectories with known accuracies."
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "receiving assigned trajectories via digital communication"
+  },
+  {
+   "unit_id": "U0068",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "flying these trajectories with known accuracies"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "voice",
+   "text": "Voice will continue to exist for cases when immediate feedback and action are required."
+  },
+  {
+   "unit_id": "U0069",
+   "type": "action",
+   "performer": "voice",
+   "label": "will continue to exist for cases when immediate feedback and action are required"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "immediate feedback",
+   "text": "immediate feedback and action are required"
+  },
+  {
+   "unit_id": "U0069",
+   "type": "requirement",
+   "subject": "action",
+   "text": "immediate feedback and action are required"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "requirement",
+   "subject": "aircraft",
+   "text": "While many aircraft will be capable of digitally receiving trajectories and automatically loading them into the FMS, others will require pilots to manually load trajectory data into the FMS or otherwise fly the assigned trajectory."
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "digitally receiving trajectories"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "automatically loading them into the FMS"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "flow",
+   "source": "aircraft",
+   "target": "FMS",
+   "payload": "trajectories"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "will require pilots to manually load trajectory data into the FMS or otherwise fly the assigned trajectory"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "pilots",
+   "label": "manually load trajectory data into the FMS"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "flow",
+   "source": "pilots",
+   "target": "FMS",
+   "payload": "trajectory data"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "pilots",
+   "label": "otherwise fly the assigned trajectory"
+  },
+  {
+   "unit_id": "U0070",
+   "type": "requirement",
+   "subject": "technologies and applications for unmanned aircraft systems (UAS) operations",
+   "text": "The rapid advance of technologies and applications for unmanned aircraft systems (UAS) operations in the NAS will overflow into other categories of aviation operations."
+  },
+  {
+   "unit_id": "U0070",
+   "type": "action",
+   "performer": "technologies and applications for unmanned aircraft systems (UAS) operations",
+   "label": "will overflow into other categories of aviation operations"
+  },
+  {
+   "unit_id": "U0071",
+   "type": "requirement",
+   "subject": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology",
+   "text": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology will experience a substantial evolution based on emerging UAS detect and avoid capabilities."
+  },
+  {
+   "unit_id": "U0071",
+   "type": "action",
+   "performer": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology",
+   "label": "will experience a substantial evolution based on emerging UAS detect and avoid capabilities"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "requirement",
+   "subject": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology",
+   "text": "This technology change will converge with technologies that support self-separation between aircraft (e.g., Advanced Interval Management [A-IM])."
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology",
+   "label": "will converge with technologies that support self-separation between aircraft (e.g., Advanced Interval Management [A-IM])"
+  },
+  {
+   "unit_id": "U0072",
+   "type": "action",
+   "performer": "technologies that support self-separation between aircraft",
+   "label": "support self-separation between aircraft"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "requirement",
+   "subject": "long-term environment",
+   "text": "As a result, the long-term environment will be characterized by all IFR aircraft being equipped with coordinated tactical conflict avoidance capabilities that can detect and safely avoid complex conflict scenarios involving multiple aircraft of all types, while providing the planned avoidance maneuvers to ground automation via broadband communication."
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "label": "being equipped with coordinated tactical conflict avoidance capabilities"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "performer": "coordinated tactical conflict avoidance capabilities",
+   "label": "detect and safely avoid complex conflict scenarios involving multiple aircraft of all types"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "action",
+   "performer": "coordinated tactical conflict avoidance capabilities",
+   "label": "providing the planned avoidance maneuvers to ground automation via broadband communication"
+  },
+  {
+   "unit_id": "U0073",
+   "type": "flow",
+   "source": "coordinated tactical conflict avoidance capabilities",
+   "target": "ground automation",
+   "payload": "planned avoidance maneuvers"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "performer": "coordinated tactical conflict avoidance capabilities",
+   "label": "will provide the final layer of safety in the MBT concept"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "flow",
+   "source": "coordinated tactical conflict avoidance capabilities",
+   "payload": "final layer of safety"
+  },
+  {
+   "unit_id": "U0074",
+   "type": "requirement",
+   "subject": "TFM",
+   "text": "TFM will evolve considerably."
+  },
+  {
+   "unit_id": "U0074",
+   "type": "action",
+   "performer": "TFM",
+   "label": "will evolve considerably"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "requirement",
+   "subject": "GDPs",
+   "text": "GDPs and AFPs will move toward controlling by CTA at the constrained NAS resource rather than departure time."
+  },
+  {
+   "unit_id": "U0075",
+   "type": "requirement",
+   "subject": "AFPs",
+   "text": "GDPs and AFPs will move toward controlling by CTA at the constrained NAS resource rather than departure time."
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "GDPs",
+   "label": "will move toward controlling by CTA at the constrained NAS resource rather than departure time"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "AFPs",
+   "label": "will move toward controlling by CTA at the constrained NAS resource rather than departure time"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "GDPs",
+   "label": "controlling by CTA at the constrained NAS resource rather than departure time"
+  },
+  {
+   "unit_id": "U0075",
+   "type": "action",
+   "performer": "AFPs",
+   "label": "controlling by CTA at the constrained NAS resource rather than departure time"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "requirement",
+   "subject": "time horizon",
+   "text": "The time horizon over which TBFM is applied will expand further into the en route environment"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "is applied"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "performer": "time horizon",
+   "label": "will expand further into the en route environment"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "requirement",
+   "subject": "TBFM",
+   "text": "TBFM will be used to address airspace constraints as well as airport capacity constraints."
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "will be used to address airspace constraints as well as airport capacity constraints"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "performer": "TBFM",
+   "label": "address airspace constraints as well as airport capacity constraints"
+  },
+  {
+   "unit_id": "U0076",
+   "type": "requirement",
+   "subject": "generic miles-in-trail (MIT) restrictions",
+   "text": "Use of generic miles-in-trail (MIT) restrictions (i.e., the same restriction across many aircraft) will be eliminated."
+  },
+  {
+   "unit_id": "U0076",
+   "type": "action",
+   "label": "will be eliminated"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "requirement",
+   "subject": "aircraft",
+   "text": "When metering is not required, aircraft will be spaced for safety and efficiency using either time-based management or A-IM."
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "will be spaced for safety and efficiency using either time-based management or A-IM"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "label": "using either time-based management or A-IM"
+  },
+  {
+   "unit_id": "U0077",
+   "type": "action",
+   "performer": "MBT",
+   "label": "facilitates a transition to time-based separation standards"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "performer": "NAS",
+   "label": "uses distance-based or time-based separation requirements, or a combination of both, to define minimum separation standards"
+  },
+  {
+   "unit_id": "U0078",
+   "type": "action",
+   "performer": "NAS",
+   "label": "define minimum separation standards"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "MBT",
+   "label": "is able to function for any type of separation requirements"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "meet TOAC constraints"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "is described using a Required Time Performance (RTP) metric that serves as a complement to existing standards used to describe Required Navigation Performance (RNP)"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "Required Time Performance",
+   "label": "serves as a complement to existing standards used to describe Required Navigation Performance (RNP)"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "label": "used to describe Required Navigation Performance (RNP)"
+  },
+  {
+   "unit_id": "U0079",
+   "type": "action",
+   "performer": "existing standards",
+   "label": "describe Required Navigation Performance (RNP)"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "label": "is denoted by RTP-Y"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "attribute",
+   "owner": "aircraft",
+   "name": "time-based performance",
+   "value": "RTP-Y"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "action",
+   "performer": "Y",
+   "label": "describes the 95% confidence interval of the expected crossing time error distribution, in seconds, regardless of its shape"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "attribute",
+   "owner": "Y",
+   "name": "confidence interval",
+   "value": "95% confidence interval of the expected crossing time error distribution",
+   "unit": "seconds"
+  },
+  {
+   "unit_id": "U0080",
+   "type": "constraint",
+   "subject": "Y",
+   "expression": "95% confidence interval of the expected crossing time error distribution, in seconds, regardless of its shape"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "requirement",
+   "subject": "aircraft",
+   "text": "In an MBT environment, all aircraft will be certified to operate at some RTP level, including aircraft that are not equipped with automation systems that include RTA functionality."
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "label": "will be certified to operate at some RTP level"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "operate at some RTP level"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "label": "are not equipped with automation systems that include RTA functionality"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "composition",
+   "whole": "automation systems",
+   "parts": [
+    "RTA functionality"
+   ]
+  },
+  {
+   "unit_id": "U0081",
+   "type": "requirement",
+   "subject": "Airspace users’ flight operations centers",
+   "text": "Airspace users’ flight operations centers will develop advanced capabilities to fully participate in MBT."
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "Airspace users’ flight operations centers",
+   "label": "will develop advanced capabilities to fully participate in MBT"
+  },
+  {
+   "unit_id": "U0081",
+   "type": "action",
+   "performer": "Airspace users’ flight operations centers",
+   "label": "fully participate in MBT"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "requirement",
+   "subject": "Software applications",
+   "text": "Software applications and private service providers will enable non- airline flights to fully participate in MBT."
+  },
+  {
+   "unit_id": "U0082",
+   "type": "requirement",
+   "subject": "private service providers",
+   "text": "Software applications and private service providers will enable non- airline flights to fully participate in MBT."
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "Software applications",
+   "label": "will enable non- airline flights to fully participate in MBT"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "private service providers",
+   "label": "will enable non- airline flights to fully participate in MBT"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "non- airline flights",
+   "label": "fully participate in MBT"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "requirement",
+   "subject": "NAS",
+   "text": "The NAS will accommodate new aircraft classes, including on-demand travel, personal mobility, UAS, space vehicle launch and return operations, airships, and loitering operations (e.g., to provide communication or ground surveillance services)."
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "NAS",
+   "label": "will accommodate new aircraft classes, including on-demand travel, personal mobility, UAS, space vehicle launch and return operations, airships, and loitering operations (e.g., to provide communication or ground surveillance services)"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "action",
+   "performer": "loitering operations",
+   "label": "provide communication or ground surveillance services"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "flow",
+   "source": "loitering operations",
+   "payload": "communication"
+  },
+  {
+   "unit_id": "U0082",
+   "type": "flow",
+   "source": "loitering operations",
+   "payload": "ground surveillance services"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "label": "are expected to have the necessary capabilities to be fully compliant with MBT"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "attribute",
+   "owner": "newer, emerging users",
+   "name": "expected capabilities",
+   "value": "necessary capabilities to be fully compliant with MBT"
+  },
+  {
+   "unit_id": "U0083",
+   "type": "action",
+   "performer": "ConOps document",
+   "label": "focuses on the airborne phases of flight"
+  },
+  {
+   "unit_id": "U0084",
+   "type": "attribute",
+   "owner": "MBT",
+   "name": "applicability",
+   "value": "all phases of flight"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "composition",
+   "whole": "aircraft’s 4DT",
+   "parts": [
+    "surface trajectory"
+   ]
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "including a surface trajectory as part of the aircraft’s 4DT"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "defining the surface trajectory"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "following it"
+  },
+  {
+   "unit_id": "U0085",
+   "type": "action",
+   "label": "would require new ground and aircraft automation capabilities, distinct from those required for airborne MBT trajectories"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "requirement",
+   "subject": "application of MBT to surface operations",
+   "text": "Therefore, the application of MBT to surface operations will not be pursued in this effort unless the incremental benefits of including management of surface operations within the MBT concept is justified."
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "label": "will not be pursued in this effort"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "label": "including management of surface operations within the MBT concept"
+  },
+  {
+   "unit_id": "U0086",
+   "type": "action",
+   "label": "is justified"
+  },
+  {
+   "unit_id": "U0087",
+   "type": "action",
+   "label": "Application of TBO elements"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "performer": "ATM system",
+   "label": "can plan and control pushback times based on scheduled takeoff times and with consideration of runway queue management"
+  },
+  {
+   "unit_id": "U0088",
+   "type": "action",
+   "performer": "ATM system",
+   "label": "provide a closed trajectory on the surface"
+  },
+  {
+   "unit_id": "U0089",
+   "type": "action",
+   "performer": "TBO concepts",
+   "label": "do envision a closed trajectory on the surface"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "performer": "MBT",
+   "label": "provide an interface between surface and en route operations and an assigned trajectory that is consistent with a surface management plan"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "performer": "surface management plan",
+   "label": "delivers expected surface event times"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "flow",
+   "source": "surface management plan",
+   "target": "airborne operations",
+   "payload": "expected surface event times"
+  },
+  {
+   "unit_id": "U0090",
+   "type": "action",
+   "performer": "expected surface event times",
+   "label": "impact airborne operations"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "takeoff and landing time predictions",
+   "label": "support coordination between en route and surface environments"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "runway assignments",
+   "label": "support coordination between en route and surface environments"
+  },
+  {
+   "unit_id": "U0091",
+   "type": "action",
+   "performer": "departure and arrival transitions",
+   "label": "support coordination between en route and surface environments"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "requirement",
+   "subject": "surface operations",
+   "text": "Surface operations will be very diverse for different types of users, further motivating treating MBT ground operations as a separate research topic."
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "performer": "surface operations",
+   "label": "motivating treating MBT ground operations as a separate research topic"
+  },
+  {
+   "unit_id": "U0092",
+   "type": "action",
+   "performer": "surface operations",
+   "label": "treating MBT ground operations as a separate research topic"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "performer": "Emergent users",
+   "label": "may share traditional airports"
+  },
+  {
+   "unit_id": "U0093",
+   "type": "action",
+   "performer": "Emergent users",
+   "label": "operate to/from alternative sites"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "action",
+   "performer": "Space vehicles",
+   "label": "operate from special launch and recovery sites"
+  },
+  {
+   "unit_id": "U0094",
+   "type": "action",
+   "performer": "Space vehicles",
+   "label": "often have no surface movements"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "performer": "Rotorcraft",
+   "label": "are able to “air taxi”"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "performer": "null",
+   "label": "are not constrained by taxiways"
+  },
+  {
+   "unit_id": "U0095",
+   "type": "action",
+   "performer": "Rotorcraft",
+   "label": "do not require runways"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "selecting traffic management initiatives (TMIs)"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "action",
+   "performer": "traffic management initiatives",
+   "label": "impose constraints on trajectories"
+  },
+  {
+   "unit_id": "U0096",
+   "type": "constraint",
+   "subject": "trajectories",
+   "expression": "traffic management initiatives (TMIs), which impose constraints on trajectories"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "performer": "MBT concept",
+   "label": "addresses the assignment of trajectories that are compliant with all TMIs, the modification of assigned trajectories as constraints change, and the satisfaction of the constraints as aircraft follow the assigned trajectories"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "constraint",
+   "subject": "trajectories",
+   "expression": "compliant with all TMIs"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "performer": "constraints",
+   "label": "change"
+  },
+  {
+   "unit_id": "U0097",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "follow the assigned trajectories"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "select more-effective TMIs"
+  },
+  {
+   "unit_id": "U0098",
+   "type": "requirement",
+   "subject": "MBT",
+   "text": "Improved predictability resulting from MBT will allow TFM to select more-effective TMIs."
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "performer": "GDPs",
+   "label": "will continue to function as they presently do"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "action",
+   "performer": "AFPs",
+   "label": "will continue to function as they presently do"
+  },
+  {
+   "unit_id": "U0099",
+   "type": "requirement",
+   "subject": "GDPs",
+   "text": "In the near-term, GDPs and AFPs will continue to function as they presently do."
+  },
+  {
+   "unit_id": "U0099",
+   "type": "requirement",
+   "subject": "AFPs",
+   "text": "In the near-term, GDPs and AFPs will continue to function as they presently do."
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "performer": "GDPs",
+   "label": "will move from controlling through the use of an Expect Departure Clearance Time (EDCT) constraining the departure time to enforcement of the CTA at the limited resource as a time constraint on the assigned trajectory"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "performer": "AFPs",
+   "label": "will move from controlling through the use of an Expect Departure Clearance Time (EDCT) constraining the departure time to enforcement of the CTA at the limited resource as a time constraint on the assigned trajectory"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "performer": "GDPs",
+   "label": "controlling through the use of an Expect Departure Clearance Time (EDCT)"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "performer": "AFPs",
+   "label": "controlling through the use of an Expect Departure Clearance Time (EDCT)"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "action",
+   "performer": "Expect Departure Clearance Time",
+   "label": "constraining the departure time"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "requirement",
+   "subject": "GDPs",
+   "text": "In the longer-term environment, GDPs/AFPs will move from controlling through the use of an Expect Departure Clearance Time (EDCT) constraining the departure time to enforcement of the CTA at the limited resource as a time constraint on the assigned trajectory."
+  },
+  {
+   "unit_id": "U0100",
+   "type": "requirement",
+   "subject": "AFPs",
+   "text": "In the longer-term environment, GDPs/AFPs will move from controlling through the use of an Expect Departure Clearance Time (EDCT) constraining the departure time to enforcement of the CTA at the limited resource as a time constraint on the assigned trajectory."
+  },
+  {
+   "unit_id": "U0100",
+   "type": "constraint",
+   "subject": "departure time",
+   "expression": "an Expect Departure Clearance Time (EDCT) constraining the departure time"
+  },
+  {
+   "unit_id": "U0100",
+   "type": "constraint",
+   "subject": "assigned trajectory",
+   "expression": "enforcement of the CTA at the limited resource as a time constraint on the assigned trajectory"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "requirement",
+   "subject": "operator",
+   "text": "The operator will have flexibility to determine when the aircraft takes off, depending on how fast or slow it wants to fly to conform with the CTA and how the takeoff time will affect other constraints."
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "operator",
+   "label": "determine when the aircraft takes off"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "takes off"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "operator",
+   "label": "wants to fly"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "operator",
+   "label": "fly to conform with the CTA"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "operator",
+   "label": "conform with the CTA"
+  },
+  {
+   "unit_id": "U0101",
+   "type": "action",
+   "performer": "takeoff time",
+   "label": "will affect other constraints"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "requirement",
+   "subject": "Mile-in-trail restrictions",
+   "text": "Mile-in-trail and minute-in-trail (MINIT) restrictions will be reduced in the near term and eventually eliminated as unnecessary when flights are following 4DTs that include time-based constraints where necessary."
+  },
+  {
+   "unit_id": "U0102",
+   "type": "requirement",
+   "subject": "minute-in-trail restrictions",
+   "text": "Mile-in-trail and minute-in-trail (MINIT) restrictions will be reduced in the near term and eventually eliminated as unnecessary when flights are following 4DTs that include time-based constraints where necessary."
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "performer": "null",
+   "label": "will be reduced in the near term"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "performer": "null",
+   "label": "eventually eliminated as unnecessary"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "action",
+   "performer": "flights",
+   "label": "are following 4DTs"
+  },
+  {
+   "unit_id": "U0102",
+   "type": "composition",
+   "whole": "4DTs",
+   "parts": [
+    "time-based constraints"
+   ]
+  },
+  {
+   "unit_id": "U0103",
+   "type": "requirement",
+   "subject": "self-separation techniques",
+   "text": "Increased use of self-separation techniques (e.g., A-IM) will allow efficient management of aircraft merging to a runway or other constrained airspace resource, without needing to repeatedly update time constraints in the assigned trajectories in response to residual uncertainty."
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "merging to a runway or other constrained airspace resource"
+  },
+  {
+   "unit_id": "U0103",
+   "type": "action",
+   "performer": "null",
+   "label": "repeatedly update time constraints in the assigned trajectories in response to residual uncertainty"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "performer": "MBT",
+   "label": "keeping all flights on closed trajectories that are de-conflicted over at least the next 30 minutes"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "performer": "null",
+   "label": "are de-conflicted over at least the next 30 minutes"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "constraint",
+   "subject": "closed trajectories",
+   "expression": "over at least the next 30 minutes"
+  },
+  {
+   "unit_id": "U0104",
+   "type": "action",
+   "performer": "MBT",
+   "label": "may increase sector capacities"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "performer": "MBT",
+   "label": "will reduce"
+  },
+  {
+   "unit_id": "U0105",
+   "type": "requirement",
+   "subject": "MBT",
+   "text": "Uncertainty, which MBT will reduce, hampers current TFM performance."
+  },
+  {
+   "unit_id": "U0105",
+   "type": "action",
+   "performer": "Uncertainty",
+   "label": "hampers current TFM performance"
+  },
+  {
+   "unit_id": "U0106",
+   "type": "action",
+   "performer": "TFM processes",
+   "label": "take advantage of the flexibility in current operations"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "performer": "null",
+   "label": "are scheduled accordingly"
+  },
+  {
+   "unit_id": "U0107",
+   "type": "action",
+   "performer": "null",
+   "label": "may be accompanied by a reduction in flexibility"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "performer": "residual uncertainty",
+   "label": "will persist"
+  },
+  {
+   "unit_id": "U0108",
+   "type": "requirement",
+   "subject": "residual uncertainty",
+   "text": "However, some residual uncertainty will persist, creating the possibility that the TFM system might be more fragile to the remaining uncertainty."
+  },
+  {
+   "unit_id": "U0108",
+   "type": "action",
+   "performer": "residual uncertainty",
+   "label": "creating the possibility that the TFM system might be more fragile to the remaining uncertainty"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "requirement",
+   "subject": "research",
+   "text": "One area in which research will be required to validate the MBT concept is how TFM must adjust to the tradeoff between uncertainty and flexibility to achieve the anticipated TFM benefits."
+  },
+  {
+   "unit_id": "U0109",
+   "type": "requirement",
+   "subject": "Traffic Flow Management",
+   "text": "TFM must adjust to the tradeoff between uncertainty and flexibility to achieve the anticipated TFM benefits"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "null",
+   "label": "will be required to validate the MBT concept"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "research",
+   "label": "validate the MBT concept"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "must adjust to the tradeoff between uncertainty and flexibility"
+  },
+  {
+   "unit_id": "U0109",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "achieve the anticipated TFM benefits"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "continues to be conservative"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "initially absorb less delay than it expects will be required"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "expects will be required"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "null",
+   "label": "will be required"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "leave flexibility to fill an empty slot caused by another flight being late"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "Traffic Flow Management",
+   "label": "fill an empty slot caused by another flight being late"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "null",
+   "label": "caused by another flight being late"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "requirement",
+   "subject": "flights",
+   "text": "For example, if TFM continues to be conservative and initially absorb less delay than it expects will be required, to leave flexibility to fill an empty slot caused by another flight being late, then most flights will need their assigned trajectories to be updated, potentially multiple times, as the TFM system “releases” more and more of the expected necessary delay to the flights."
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "flights",
+   "label": "will need their assigned trajectories to be updated, potentially multiple times"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "null",
+   "label": "be updated, potentially multiple times"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "action",
+   "performer": "TFM system",
+   "label": "“releases” more and more of the expected necessary delay to the flights"
+  },
+  {
+   "unit_id": "U0110",
+   "type": "flow",
+   "source": "TFM system",
+   "target": "flights",
+   "payload": "delay"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "TFM system",
+   "label": "affect predictability and MBT benefits"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "null",
+   "label": "is organized as follows"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "composition",
+   "whole": "document",
+   "parts": [
+    "Section 2",
+    "Section 3",
+    "Section 4",
+    "Section 5",
+    "Section 6",
+    "Section 7",
+    "Section 8",
+    "Section 9"
+   ]
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 2",
+   "label": "defines several terms that are key to the MBT ConOps"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 3",
+   "label": "describes the trajectory negotiation process"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 4",
+   "label": "presents the trajectory constraint language"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 5",
+   "label": "describes several elements of the MBT concept"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 6",
+   "label": "provides use cases that illustrate the MBT concept"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "use cases",
+   "label": "illustrate the MBT concept"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 7",
+   "label": "summarizes the MBT benefit mechanisms"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 8",
+   "label": "summarizes expected changes in roles and responsibilities in the NAS due to MBT"
+  },
+  {
+   "unit_id": "U0111",
+   "type": "action",
+   "performer": "Section 9",
+   "label": "provides a summary of the MBT concept"
+  },
+  {
+   "unit_id": "U0112",
+   "type": "action",
+   "performer": "chapter",
+   "label": "presents definitions and discussions of key terminology and concepts"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "performer": "null",
+   "label": "is often visualized as a string or tube through space"
+  },
+  {
+   "unit_id": "U0113",
+   "type": "action",
+   "performer": "null",
+   "label": "described by two dimensions in a horizontal plane (e.g., longitude and latitude) and one vertical dimension (the aircraft’s altitude)"
+  }
+ ],
+ "entities": [
+  {
+   "name": "National Airspace System",
+   "aliases": [
+    "NAS"
+   ]
+  },
+  {
+   "name": "air traffic management system",
+   "aliases": [
+    "ATM"
+   ]
+  },
+  {
+   "name": "predicted trajectory",
+   "aliases": []
+  },
+  {
+   "name": "flight",
+   "aliases": []
+  },
+  {
+   "name": "approved flight plan",
+   "aliases": []
+  },
+  {
+   "name": "scheduled or controlled departure time",
+   "aliases": []
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "controllers",
+   "aliases": []
+  },
+  {
+   "name": "“open trajectory” vectors",
+   "aliases": []
+  },
+  {
+   "name": "altitude changes",
+   "aliases": []
+  },
+  {
+   "name": "speed clearances",
+   "aliases": []
+  },
+  {
+   "name": "traffic management restrictions",
+   "aliases": []
+  },
+  {
+   "name": "NAS constraints",
+   "aliases": []
+  },
+  {
+   "name": "flight plan changes",
+   "aliases": []
+  },
+  {
+   "name": "problems",
+   "aliases": []
+  },
+  {
+   "name": "weather",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Flow Management restriction",
+   "aliases": [
+    "TFM restriction"
+   ]
+  },
+  {
+   "name": "Tactical controller actions",
+   "aliases": []
+  },
+  {
+   "name": "automation systems",
+   "aliases": []
+  },
+  {
+   "name": "other stakeholders",
+   "aliases": []
+  },
+  {
+   "name": "trajectory prediction data",
+   "aliases": []
+  },
+  {
+   "name": "trajectory prediction models",
+   "aliases": []
+  },
+  {
+   "name": "flight’s trajectory",
+   "aliases": []
+  },
+  {
+   "name": "Ground Delay Programs",
+   "aliases": [
+    "GDPs"
+   ]
+  },
+  {
+   "name": "Airspace Flow Programs",
+   "aliases": [
+    "AFPs"
+   ]
+  },
+  {
+   "name": "departure times",
+   "aliases": []
+  },
+  {
+   "name": "Controlled Time of Arrival",
+   "aliases": [
+    "CTA"
+   ]
+  },
+  {
+   "name": "NAS constraint",
+   "aliases": []
+  },
+  {
+   "name": "airspace user",
+   "aliases": []
+  },
+  {
+   "name": "airspace user’s estimated time en route",
+   "aliases": []
+  },
+  {
+   "name": "controller actions",
+   "aliases": []
+  },
+  {
+   "name": "Time Based Flow Management",
+   "aliases": [
+    "TBFM"
+   ]
+  },
+  {
+   "name": "estimated times of arrival",
+   "aliases": [
+    "ETAs"
+   ]
+  },
+  {
+   "name": "disruptions",
+   "aliases": []
+  },
+  {
+   "name": "unexpected delays",
+   "aliases": []
+  },
+  {
+   "name": "flight’s ETA",
+   "aliases": []
+  },
+  {
+   "name": "local traffic management decisions",
+   "aliases": []
+  },
+  {
+   "name": "destination",
+   "aliases": []
+  },
+  {
+   "name": "NAS demand predictions",
+   "aliases": []
+  },
+  {
+   "name": "NAS resource",
+   "aliases": []
+  },
+  {
+   "name": "Management by Trajectory",
+   "aliases": [
+    "MBT"
+   ]
+  },
+  {
+   "name": "Federal Aviation Administration",
+   "aliases": [
+    "FAA"
+   ]
+  },
+  {
+   "name": "four-dimensional trajectories",
+   "aliases": [
+    "4DTs"
+   ]
+  },
+  {
+   "name": "airspace user’s goals",
+   "aliases": []
+  },
+  {
+   "name": "airspace user objectives",
+   "aliases": []
+  },
+  {
+   "name": "FAA objectives",
+   "aliases": []
+  },
+  {
+   "name": "traffic management plan",
+   "aliases": []
+  },
+  {
+   "name": "airspace operations",
+   "aliases": []
+  },
+  {
+   "name": "traditional commercial aviation",
+   "aliases": []
+  },
+  {
+   "name": "Unmanned Aircraft Systems",
+   "aliases": []
+  },
+  {
+   "name": "space vehicles",
+   "aliases": []
+  },
+  {
+   "name": "on-demand air transportation vehicles",
+   "aliases": []
+  },
+  {
+   "name": "Pilots",
+   "aliases": []
+  },
+  {
+   "name": "air traffic controllers",
+   "aliases": []
+  },
+  {
+   "name": "automation",
+   "aliases": []
+  },
+  {
+   "name": "assigned trajectory",
+   "aliases": []
+  },
+  {
+   "name": "temporal constraints",
+   "aliases": []
+  },
+  {
+   "name": "speed constraints",
+   "aliases": []
+  },
+  {
+   "name": "Equipped aircraft",
+   "aliases": []
+  },
+  {
+   "name": "controller intervention",
+   "aliases": []
+  },
+  {
+   "name": "known constraints",
+   "aliases": []
+  },
+  {
+   "name": "aircraft’s current location",
+   "aliases": []
+  },
+  {
+   "name": "uncertainty",
+   "aliases": []
+  },
+  {
+   "name": "resolutions",
+   "aliases": []
+  },
+  {
+   "name": "trajectory modifications",
+   "aliases": []
+  },
+  {
+   "name": "ground-based automation",
+   "aliases": []
+  },
+  {
+   "name": "aircraft automation",
+   "aliases": []
+  },
+  {
+   "name": "data communications",
+   "aliases": []
+  },
+  {
+   "name": "stakeholders on the ground",
+   "aliases": []
+  },
+  {
+   "name": "local, reactive control actions",
+   "aliases": []
+  },
+  {
+   "name": "downstream trajectory",
+   "aliases": []
+  },
+  {
+   "name": "trajectory constraints",
+   "aliases": []
+  },
+  {
+   "name": "adjustments to the trajectory constraints",
+   "aliases": []
+  },
+  {
+   "name": "trajectory predictability",
+   "aliases": []
+  },
+  {
+   "name": "associated benefits",
+   "aliases": []
+  },
+  {
+   "name": "Trajectory Based Operations",
+   "aliases": [
+    "TBO"
+   ]
+  },
+  {
+   "name": "4D contract",
+   "aliases": []
+  },
+  {
+   "name": "Comparison with ICAO TBO Concept",
+   "aliases": []
+  },
+  {
+   "name": "International Civil Aviation Organization",
+   "aliases": [
+    "ICAO"
+   ]
+  },
+  {
+   "name": "International Civil Aviation Organization TBO concept",
+   "aliases": []
+  },
+  {
+   "name": "air traffic control",
+   "aliases": []
+  },
+  {
+   "name": "air traffic management",
+   "aliases": []
+  },
+  {
+   "name": "specific endeavors",
+   "aliases": []
+  },
+  {
+   "name": "future vision",
+   "aliases": []
+  },
+  {
+   "name": "MBT",
+   "aliases": []
+  },
+  {
+   "name": "TBO vision",
+   "aliases": []
+  },
+  {
+   "name": "TBO",
+   "aliases": []
+  },
+  {
+   "name": "specific challenges",
+   "aliases": []
+  },
+  {
+   "name": "NAS",
+   "aliases": []
+  },
+  {
+   "name": "shortfalls",
+   "aliases": []
+  },
+  {
+   "name": "International Civil Aviation Organization",
+   "aliases": [
+    "ICAO"
+   ]
+  },
+  {
+   "name": "ICAO TBO Concept Document",
+   "aliases": []
+  },
+  {
+   "name": "high-level guidance",
+   "aliases": []
+  },
+  {
+   "name": "specific vision",
+   "aliases": []
+  },
+  {
+   "name": "airspace users",
+   "aliases": []
+  },
+  {
+   "name": "FAA",
+   "aliases": []
+  },
+  {
+   "name": "Data",
+   "aliases": []
+  },
+  {
+   "name": "trajectory prediction",
+   "aliases": []
+  },
+  {
+   "name": "trajectory synchronization",
+   "aliases": []
+  },
+  {
+   "name": "automation systems",
+   "aliases": []
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "FAA automation systems",
+   "aliases": []
+  },
+  {
+   "name": "4DT predictions",
+   "aliases": []
+  },
+  {
+   "name": "open trajectories",
+   "aliases": []
+  },
+  {
+   "name": "tactical maneuvers",
+   "aliases": []
+  },
+  {
+   "name": "trajectory predictability",
+   "aliases": []
+  },
+  {
+   "name": "closed trajectories",
+   "aliases": []
+  },
+  {
+   "name": "trajectory changes",
+   "aliases": []
+  },
+  {
+   "name": "trajectory information",
+   "aliases": []
+  },
+  {
+   "name": "ground automation systems",
+   "aliases": []
+  },
+  {
+   "name": "trajectory predictions",
+   "aliases": []
+  },
+  {
+   "name": "trajectory management",
+   "aliases": []
+  },
+  {
+   "name": "coordination capabilities",
+   "aliases": []
+  },
+  {
+   "name": "4DTs",
+   "aliases": []
+  },
+  {
+   "name": "controllers",
+   "aliases": []
+  },
+  {
+   "name": "strategic, closed clearances",
+   "aliases": []
+  },
+  {
+   "name": "TFM",
+   "aliases": []
+  },
+  {
+   "name": "TFM performance",
+   "aliases": []
+  },
+  {
+   "name": "air traffic",
+   "aliases": []
+  },
+  {
+   "name": "demand",
+   "aliases": []
+  },
+  {
+   "name": "available capacity",
+   "aliases": []
+  },
+  {
+   "name": "delay",
+   "aliases": []
+  },
+  {
+   "name": "NAS constraints",
+   "aliases": []
+  },
+  {
+   "name": "crossing restrictions",
+   "aliases": []
+  },
+  {
+   "name": "business-efficient, acceptable trajectories",
+   "aliases": []
+  },
+  {
+   "name": "open- ended clearance",
+   "aliases": []
+  },
+  {
+   "name": "traffic managers",
+   "aliases": []
+  },
+  {
+   "name": "flights",
+   "aliases": []
+  },
+  {
+   "name": "routes",
+   "aliases": []
+  },
+  {
+   "name": "route amendment backlogs",
+   "aliases": []
+  },
+  {
+   "name": "NAS events",
+   "aliases": []
+  },
+  {
+   "name": "trajectories",
+   "aliases": []
+  },
+  {
+   "name": "ATM system",
+   "aliases": []
+  },
+  {
+   "name": "available airspace",
+   "aliases": []
+  },
+  {
+   "name": "downstream consequences",
+   "aliases": []
+  },
+  {
+   "name": "downstream effects",
+   "aliases": []
+  },
+  {
+   "name": "tactical control actions",
+   "aliases": []
+  },
+  {
+   "name": "time-based performance",
+   "aliases": []
+  },
+  {
+   "name": "PBN metrics",
+   "aliases": []
+  },
+  {
+   "name": "IFR aircraft",
+   "aliases": []
+  },
+  {
+   "name": "ATM concept",
+   "aliases": []
+  },
+  {
+   "name": "efficiency",
+   "aliases": []
+  },
+  {
+   "name": "safety risk",
+   "aliases": []
+  },
+  {
+   "name": "time of arrival control",
+   "aliases": [
+    "TOAC"
+   ]
+  },
+  {
+   "name": "time of arrival control (TOAC) standards",
+   "aliases": []
+  },
+  {
+   "name": "minimum performance requirement",
+   "aliases": []
+  },
+  {
+   "name": "mixed equipage environment",
+   "aliases": []
+  },
+  {
+   "name": "Instrument Flight Rules",
+   "aliases": [
+    "IFR"
+   ]
+  },
+  {
+   "name": "current state",
+   "aliases": []
+  },
+  {
+   "name": "destination",
+   "aliases": []
+  },
+  {
+   "name": "NAS Constraint Service",
+   "aliases": []
+  },
+  {
+   "name": "common information about NAS constraints",
+   "aliases": []
+  },
+  {
+   "name": "stakeholders",
+   "aliases": []
+  },
+  {
+   "name": "Trajectory constraints",
+   "aliases": []
+  },
+  {
+   "name": "tolerances",
+   "aliases": []
+  },
+  {
+   "name": "individual performance capabilities",
+   "aliases": []
+  },
+  {
+   "name": "traffic management automation",
+   "aliases": []
+  },
+  {
+   "name": "Traffic management automation",
+   "aliases": []
+  },
+  {
+   "name": "flights",
+   "aliases": []
+  },
+  {
+   "name": "TMI",
+   "aliases": []
+  },
+  {
+   "name": "trajectory constraints specific to the flight",
+   "aliases": []
+  },
+  {
+   "name": "Aircraft",
+   "aliases": []
+  },
+  {
+   "name": "detailed information about their predicted 4DT",
+   "aliases": []
+  },
+  {
+   "name": "predicted 4DT",
+   "aliases": [
+    "intent data"
+   ]
+  },
+  {
+   "name": "stakeholders",
+   "aliases": []
+  },
+  {
+   "name": "updates",
+   "aliases": []
+  },
+  {
+   "name": "Conflicts",
+   "aliases": []
+  },
+  {
+   "name": "intervention",
+   "aliases": []
+  },
+  {
+   "name": "constraints",
+   "aliases": []
+  },
+  {
+   "name": "assigned 4DT",
+   "aliases": []
+  },
+  {
+   "name": "Open trajectories",
+   "aliases": [
+    "tactical vectoring by controllers"
+   ]
+  },
+  {
+   "name": "controllers",
+   "aliases": []
+  },
+  {
+   "name": "pilot",
+   "aliases": []
+  },
+  {
+   "name": "other actors",
+   "aliases": []
+  },
+  {
+   "name": "system",
+   "aliases": []
+  },
+  {
+   "name": "MBT",
+   "aliases": []
+  },
+  {
+   "name": "methods for planning tactical maneuvers as closed trajectory modifications",
+   "aliases": []
+  },
+  {
+   "name": "tactical maneuvers",
+   "aliases": []
+  },
+  {
+   "name": "closed trajectory modifications",
+   "aliases": []
+  },
+  {
+   "name": "Digital air-ground communication",
+   "aliases": []
+  },
+  {
+   "name": "aircraft cockpits",
+   "aliases": []
+  },
+  {
+   "name": "Flight Management System",
+   "aliases": [
+    "FMS"
+   ]
+  },
+  {
+   "name": "Broadband air-ground communications",
+   "aliases": []
+  },
+  {
+   "name": "advanced electronic flight bag applications",
+   "aliases": [
+    "EFB applications"
+   ]
+  },
+  {
+   "name": "flight crew",
+   "aliases": []
+  },
+  {
+   "name": "trajectory negotiation process",
+   "aliases": []
+  },
+  {
+   "name": "negotiating controller",
+   "aliases": []
+  },
+  {
+   "name": "D-side controller",
+   "aliases": []
+  },
+  {
+   "name": "traffic management coordinators",
+   "aliases": [
+    "TMCs"
+   ]
+  },
+  {
+   "name": "TFM objectives",
+   "aliases": []
+  },
+  {
+   "name": "automation enhancements",
+   "aliases": []
+  },
+  {
+   "name": "4DT changes",
+   "aliases": []
+  },
+  {
+   "name": "sectors",
+   "aliases": []
+  },
+  {
+   "name": "document",
+   "aliases": []
+  },
+  {
+   "name": "far-term MBT concept",
+   "aliases": []
+  },
+  {
+   "name": "operational environment",
+   "aliases": []
+  },
+  {
+   "name": "NAS",
+   "aliases": []
+  },
+  {
+   "name": "Aeronautical Telecommunications Network-Baseline 2",
+   "aliases": [
+    "ATN-B2"
+   ]
+  },
+  {
+   "name": "advanced data exchange and automation capabilities",
+   "aliases": []
+  },
+  {
+   "name": "research",
+   "aliases": []
+  },
+  {
+   "name": "MBT Concept of Operations",
+   "aliases": [
+    "ConOps"
+   ]
+  },
+  {
+   "name": "end-state vision for MBT",
+   "aliases": []
+  },
+  {
+   "name": "near-term concept",
+   "aliases": []
+  },
+  {
+   "name": "currently planned changes to the NAS",
+   "aliases": []
+  },
+  {
+   "name": "FAA",
+   "aliases": []
+  },
+  {
+   "name": "NAS Enterprise Architecture",
+   "aliases": [
+    "EA"
+   ]
+  },
+  {
+   "name": "NextGen timeframe",
+   "aliases": []
+  },
+  {
+   "name": "future enabling changes",
+   "aliases": []
+  },
+  {
+   "name": "air traffic control",
+   "aliases": [
+    "ATC"
+   ]
+  },
+  {
+   "name": "TBO operations",
+   "aliases": []
+  },
+  {
+   "name": "section",
+   "aliases": []
+  },
+  {
+   "name": "key assumptions about the near-term and far-term environments",
+   "aliases": []
+  },
+  {
+   "name": "Air traffic controllers",
+   "aliases": []
+  },
+  {
+   "name": "separation management",
+   "aliases": []
+  },
+  {
+   "name": "conflict avoidance",
+   "aliases": []
+  },
+  {
+   "name": "IFR aircraft",
+   "aliases": []
+  },
+  {
+   "name": "far-term MBT environment",
+   "aliases": []
+  },
+  {
+   "name": "Air vehicle capabilities and equipage",
+   "aliases": []
+  },
+  {
+   "name": "safety and performance standards",
+   "aliases": []
+  },
+  {
+   "name": "highly equipped aircraft",
+   "aliases": []
+  },
+  {
+   "name": "Required Time of Arrival functionality",
+   "aliases": [
+    "RTA functionality"
+   ]
+  },
+  {
+   "name": "active RTA constraint",
+   "aliases": []
+  },
+  {
+   "name": "Controller-pilot data link communications",
+   "aliases": [
+    "CPDLC"
+   ]
+  },
+  {
+   "name": "route clearances",
+   "aliases": []
+  },
+  {
+   "name": "trajectory intent output",
+   "aliases": []
+  },
+  {
+   "name": "avionics",
+   "aliases": []
+  },
+  {
+   "name": "NAS operations",
+   "aliases": []
+  },
+  {
+   "name": "procedures",
+   "aliases": []
+  },
+  {
+   "name": "equipped aircraft",
+   "aliases": []
+  },
+  {
+   "name": "unequipped aircraft",
+   "aliases": []
+  },
+  {
+   "name": "changing technologies and procedures",
+   "aliases": []
+  },
+  {
+   "name": "MBT tools",
+   "aliases": []
+  },
+  {
+   "name": "existing automation platforms",
+   "aliases": []
+  },
+  {
+   "name": "information shared via System Wide Information Management",
+   "aliases": []
+  },
+  {
+   "name": "System Wide Information Management",
+   "aliases": [
+    "SWIM"
+   ]
+  },
+  {
+   "name": "facilities",
+   "aliases": []
+  },
+  {
+   "name": "new capabilities",
+   "aliases": []
+  },
+  {
+   "name": "Benefits",
+   "aliases": []
+  },
+  {
+   "name": "technologies",
+   "aliases": []
+  },
+  {
+   "name": "Experience",
+   "aliases": []
+  },
+  {
+   "name": "user acceptance",
+   "aliases": []
+  },
+  {
+   "name": "supporting technologies",
+   "aliases": []
+  },
+  {
+   "name": "airspace users",
+   "aliases": []
+  },
+  {
+   "name": "Equipped aircraft",
+   "aliases": []
+  },
+  {
+   "name": "participating operators",
+   "aliases": []
+  },
+  {
+   "name": "trajectories",
+   "aliases": []
+  },
+  {
+   "name": "assigned trajectory",
+   "aliases": []
+  },
+  {
+   "name": "Current structured airspace",
+   "aliases": []
+  },
+  {
+   "name": "direct routing",
+   "aliases": []
+  },
+  {
+   "name": "regions of low-to-medium operational density",
+   "aliases": []
+  },
+  {
+   "name": "Controllers",
+   "aliases": []
+  },
+  {
+   "name": "automation support",
+   "aliases": []
+  },
+  {
+   "name": "closed trajectories",
+   "aliases": []
+  },
+  {
+   "name": "open-trajectory vectors",
+   "aliases": []
+  },
+  {
+   "name": "voice",
+   "aliases": []
+  },
+  {
+   "name": "Far-Term MBT Environment",
+   "aliases": []
+  },
+  {
+   "name": "EFBs",
+   "aliases": []
+  },
+  {
+   "name": "ground-based systems",
+   "aliases": []
+  },
+  {
+   "name": "air vehicle capabilities",
+   "aliases": []
+  },
+  {
+   "name": "legacy FMS architectures",
+   "aliases": []
+  },
+  {
+   "name": "fleet",
+   "aliases": []
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "assigned trajectories",
+   "aliases": []
+  },
+  {
+   "name": "digital communication",
+   "aliases": []
+  },
+  {
+   "name": "immediate feedback",
+   "aliases": []
+  },
+  {
+   "name": "action",
+   "aliases": []
+  },
+  {
+   "name": "FMS",
+   "aliases": []
+  },
+  {
+   "name": "pilots",
+   "aliases": []
+  },
+  {
+   "name": "trajectory data",
+   "aliases": []
+  },
+  {
+   "name": "technologies and applications for unmanned aircraft systems (UAS) operations",
+   "aliases": []
+  },
+  {
+   "name": "unmanned aircraft systems",
+   "aliases": [
+    "UAS"
+   ]
+  },
+  {
+   "name": "NAS",
+   "aliases": []
+  },
+  {
+   "name": "other categories of aviation operations",
+   "aliases": []
+  },
+  {
+   "name": "Current Traffic Collision Avoidance System/Airborne Collision Avoidance System (TCAS/ACAS) technology",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Collision Avoidance System/Airborne Collision Avoidance System",
+   "aliases": [
+    "TCAS/ACAS"
+   ]
+  },
+  {
+   "name": "UAS detect and avoid capabilities",
+   "aliases": []
+  },
+  {
+   "name": "technologies that support self-separation between aircraft",
+   "aliases": []
+  },
+  {
+   "name": "Advanced Interval Management",
+   "aliases": [
+    "A-IM"
+   ]
+  },
+  {
+   "name": "long-term environment",
+   "aliases": []
+  },
+  {
+   "name": "IFR aircraft",
+   "aliases": []
+  },
+  {
+   "name": "coordinated tactical conflict avoidance capabilities",
+   "aliases": []
+  },
+  {
+   "name": "complex conflict scenarios",
+   "aliases": []
+  },
+  {
+   "name": "planned avoidance maneuvers",
+   "aliases": []
+  },
+  {
+   "name": "ground automation",
+   "aliases": []
+  },
+  {
+   "name": "broadband communication",
+   "aliases": []
+  },
+  {
+   "name": "final layer of safety",
+   "aliases": []
+  },
+  {
+   "name": "MBT concept",
+   "aliases": []
+  },
+  {
+   "name": "MBT",
+   "aliases": []
+  },
+  {
+   "name": "TFM",
+   "aliases": []
+  },
+  {
+   "name": "GDPs",
+   "aliases": []
+  },
+  {
+   "name": "AFPs",
+   "aliases": []
+  },
+  {
+   "name": "CTA",
+   "aliases": []
+  },
+  {
+   "name": "constrained NAS resource",
+   "aliases": []
+  },
+  {
+   "name": "departure time",
+   "aliases": []
+  },
+  {
+   "name": "time horizon",
+   "aliases": []
+  },
+  {
+   "name": "TBFM",
+   "aliases": []
+  },
+  {
+   "name": "en route environment",
+   "aliases": []
+  },
+  {
+   "name": "airspace constraints",
+   "aliases": []
+  },
+  {
+   "name": "airport capacity constraints",
+   "aliases": []
+  },
+  {
+   "name": "generic miles-in-trail (MIT) restrictions",
+   "aliases": []
+  },
+  {
+   "name": "miles-in-trail",
+   "aliases": [
+    "MIT"
+   ]
+  },
+  {
+   "name": "metering",
+   "aliases": []
+  },
+  {
+   "name": "time-based management",
+   "aliases": []
+  },
+  {
+   "name": "time-based separation standards",
+   "aliases": []
+  },
+  {
+   "name": "distance-based separation requirements",
+   "aliases": []
+  },
+  {
+   "name": "time-based separation requirements",
+   "aliases": []
+  },
+  {
+   "name": "minimum separation standards",
+   "aliases": []
+  },
+  {
+   "name": "separation requirements",
+   "aliases": []
+  },
+  {
+   "name": "TOAC constraints",
+   "aliases": []
+  },
+  {
+   "name": "Required Time Performance",
+   "aliases": [
+    "RTP"
+   ]
+  },
+  {
+   "name": "existing standards",
+   "aliases": []
+  },
+  {
+   "name": "Required Navigation Performance",
+   "aliases": [
+    "RNP"
+   ]
+  },
+  {
+   "name": "aircraft’s time-based performance",
+   "aliases": []
+  },
+  {
+   "name": "RTP-Y",
+   "aliases": []
+  },
+  {
+   "name": "Y",
+   "aliases": []
+  },
+  {
+   "name": "expected crossing time error distribution",
+   "aliases": []
+  },
+  {
+   "name": "MBT environment",
+   "aliases": []
+  },
+  {
+   "name": "RTP level",
+   "aliases": []
+  },
+  {
+   "name": "automation systems",
+   "aliases": []
+  },
+  {
+   "name": "RTA functionality",
+   "aliases": []
+  },
+  {
+   "name": "Airspace users",
+   "aliases": []
+  },
+  {
+   "name": "Airspace users’ flight operations centers",
+   "aliases": []
+  },
+  {
+   "name": "advanced capabilities",
+   "aliases": []
+  },
+  {
+   "name": "Software applications",
+   "aliases": []
+  },
+  {
+   "name": "private service providers",
+   "aliases": []
+  },
+  {
+   "name": "non- airline flights",
+   "aliases": []
+  },
+  {
+   "name": "new aircraft classes",
+   "aliases": []
+  },
+  {
+   "name": "on-demand travel",
+   "aliases": []
+  },
+  {
+   "name": "personal mobility",
+   "aliases": []
+  },
+  {
+   "name": "space vehicle launch and return operations",
+   "aliases": []
+  },
+  {
+   "name": "airships",
+   "aliases": []
+  },
+  {
+   "name": "loitering operations",
+   "aliases": []
+  },
+  {
+   "name": "communication",
+   "aliases": []
+  },
+  {
+   "name": "ground surveillance services",
+   "aliases": []
+  },
+  {
+   "name": "newer, emerging users",
+   "aliases": []
+  },
+  {
+   "name": "ConOps document",
+   "aliases": []
+  },
+  {
+   "name": "airborne phases of flight",
+   "aliases": []
+  },
+  {
+   "name": "phases of flight",
+   "aliases": []
+  },
+  {
+   "name": "surface trajectory",
+   "aliases": []
+  },
+  {
+   "name": "aircraft’s 4DT",
+   "aliases": []
+  },
+  {
+   "name": "new ground and aircraft automation capabilities",
+   "aliases": []
+  },
+  {
+   "name": "airborne MBT trajectories",
+   "aliases": []
+  },
+  {
+   "name": "surface operations",
+   "aliases": []
+  },
+  {
+   "name": "application of MBT to surface operations",
+   "aliases": []
+  },
+  {
+   "name": "incremental benefits of including management of surface operations within the MBT concept",
+   "aliases": []
+  },
+  {
+   "name": "TBO elements",
+   "aliases": []
+  },
+  {
+   "name": "ATM system",
+   "aliases": []
+  },
+  {
+   "name": "pushback times",
+   "aliases": []
+  },
+  {
+   "name": "scheduled takeoff times",
+   "aliases": []
+  },
+  {
+   "name": "runway queue management",
+   "aliases": []
+  },
+  {
+   "name": "closed trajectory on the surface",
+   "aliases": []
+  },
+  {
+   "name": "MBT",
+   "aliases": []
+  },
+  {
+   "name": "TBO concepts",
+   "aliases": []
+  },
+  {
+   "name": "necessary data",
+   "aliases": []
+  },
+  {
+   "name": "interface between surface and en route operations",
+   "aliases": []
+  },
+  {
+   "name": "surface operations",
+   "aliases": []
+  },
+  {
+   "name": "en route operations",
+   "aliases": []
+  },
+  {
+   "name": "assigned trajectory",
+   "aliases": []
+  },
+  {
+   "name": "surface management plan",
+   "aliases": []
+  },
+  {
+   "name": "expected surface event times",
+   "aliases": []
+  },
+  {
+   "name": "airborne operations",
+   "aliases": []
+  },
+  {
+   "name": "takeoff and landing time predictions",
+   "aliases": []
+  },
+  {
+   "name": "runway assignments",
+   "aliases": []
+  },
+  {
+   "name": "departure and arrival transitions",
+   "aliases": []
+  },
+  {
+   "name": "en route and surface environments",
+   "aliases": []
+  },
+  {
+   "name": "users",
+   "aliases": []
+  },
+  {
+   "name": "MBT ground operations",
+   "aliases": []
+  },
+  {
+   "name": "Emergent users",
+   "aliases": []
+  },
+  {
+   "name": "traditional airports",
+   "aliases": []
+  },
+  {
+   "name": "alternative sites",
+   "aliases": []
+  },
+  {
+   "name": "Space vehicles",
+   "aliases": []
+  },
+  {
+   "name": "special launch and recovery sites",
+   "aliases": []
+  },
+  {
+   "name": "surface movements",
+   "aliases": []
+  },
+  {
+   "name": "Rotorcraft",
+   "aliases": []
+  },
+  {
+   "name": "taxiways",
+   "aliases": []
+  },
+  {
+   "name": "runways",
+   "aliases": []
+  },
+  {
+   "name": "Traffic Flow Management",
+   "aliases": []
+  },
+  {
+   "name": "MBT concept",
+   "aliases": []
+  },
+  {
+   "name": "traffic management initiatives",
+   "aliases": [
+    "TMIs"
+   ]
+  },
+  {
+   "name": "trajectories",
+   "aliases": []
+  },
+  {
+   "name": "constraints",
+   "aliases": []
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "GDPs",
+   "aliases": []
+  },
+  {
+   "name": "AFPs",
+   "aliases": []
+  },
+  {
+   "name": "Expect Departure Clearance Time",
+   "aliases": [
+    "EDCT"
+   ]
+  },
+  {
+   "name": "departure time",
+   "aliases": []
+  },
+  {
+   "name": "CTA",
+   "aliases": []
+  },
+  {
+   "name": "limited resource",
+   "aliases": []
+  },
+  {
+   "name": "operator",
+   "aliases": []
+  },
+  {
+   "name": "takeoff time",
+   "aliases": []
+  },
+  {
+   "name": "Mile-in-trail restrictions",
+   "aliases": []
+  },
+  {
+   "name": "minute-in-trail restrictions",
+   "aliases": [
+    "MINIT"
+   ]
+  },
+  {
+   "name": "flights",
+   "aliases": []
+  },
+  {
+   "name": "4DTs",
+   "aliases": []
+  },
+  {
+   "name": "time-based constraints",
+   "aliases": []
+  },
+  {
+   "name": "self-separation techniques",
+   "aliases": []
+  },
+  {
+   "name": "A-IM",
+   "aliases": []
+  },
+  {
+   "name": "runway",
+   "aliases": []
+  },
+  {
+   "name": "constrained airspace resource",
+   "aliases": []
+  },
+  {
+   "name": "time constraints",
+   "aliases": []
+  },
+  {
+   "name": "residual uncertainty",
+   "aliases": []
+  },
+  {
+   "name": "closed trajectories",
+   "aliases": []
+  },
+  {
+   "name": "sector capacities",
+   "aliases": []
+  },
+  {
+   "name": "Uncertainty",
+   "aliases": []
+  },
+  {
+   "name": "TFM processes",
+   "aliases": []
+  },
+  {
+   "name": "current operations",
+   "aliases": []
+  },
+  {
+   "name": "TBO environment",
+   "aliases": []
+  },
+  {
+   "name": "TFM system",
+   "aliases": []
+  },
+  {
+   "name": "research",
+   "aliases": []
+  },
+  {
+   "name": "anticipated TFM benefits",
+   "aliases": []
+  },
+  {
+   "name": "delay",
+   "aliases": []
+  },
+  {
+   "name": "empty slot",
+   "aliases": []
+  },
+  {
+   "name": "MBT benefits",
+   "aliases": []
+  },
+  {
+   "name": "document",
+   "aliases": []
+  },
+  {
+   "name": "Section 2",
+   "aliases": []
+  },
+  {
+   "name": "terms",
+   "aliases": []
+  },
+  {
+   "name": "MBT ConOps",
+   "aliases": []
+  },
+  {
+   "name": "Section 3",
+   "aliases": []
+  },
+  {
+   "name": "trajectory negotiation process",
+   "aliases": []
+  },
+  {
+   "name": "Section 4",
+   "aliases": []
+  },
+  {
+   "name": "trajectory constraint language",
+   "aliases": []
+  },
+  {
+   "name": "Section 5",
+   "aliases": []
+  },
+  {
+   "name": "Section 6",
+   "aliases": []
+  },
+  {
+   "name": "use cases",
+   "aliases": []
+  },
+  {
+   "name": "Section 7",
+   "aliases": []
+  },
+  {
+   "name": "MBT benefit mechanisms",
+   "aliases": []
+  },
+  {
+   "name": "Section 8",
+   "aliases": []
+  },
+  {
+   "name": "roles and responsibilities",
+   "aliases": []
+  },
+  {
+   "name": "NAS",
+   "aliases": []
+  },
+  {
+   "name": "Section 9",
+   "aliases": []
+  },
+  {
+   "name": "summary of the MBT concept",
+   "aliases": []
+  },
+  {
+   "name": "chapter",
+   "aliases": []
+  },
+  {
+   "name": "definitions",
+   "aliases": []
+  },
+  {
+   "name": "discussions",
+   "aliases": []
+  },
+  {
+   "name": "key terminology",
+   "aliases": []
+  },
+  {
+   "name": "concepts",
+   "aliases": []
+  },
+  {
+   "name": "MBT",
+   "aliases": []
+  },
+  {
+   "name": "three-dimensional trajectory",
+   "aliases": [
+    "3DT"
+   ]
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "aircraft’s path",
+   "aliases": []
+  },
+  {
+   "name": "space",
+   "aliases": []
+  },
+  {
+   "name": "string",
+   "aliases": []
+  },
+  {
+   "name": "tube",
+   "aliases": []
+  },
+  {
+   "name": "horizontal plane",
+   "aliases": []
+  },
+  {
+   "name": "longitude",
+   "aliases": []
+  },
+  {
+   "name": "latitude",
+   "aliases": []
+  },
+  {
+   "name": "vertical dimension",
+   "aliases": []
+  },
+  {
+   "name": "aircraft’s altitude",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "U0001",
+    "U0026"
+   ],
+   "chunk_tokens": 853,
+   "memory_tokens": 0,
+   "prompt_tokens": 1621,
+   "input": 1827,
+   "output": 5745,
+   "reasoning": 502,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0027",
+    "U0050"
+   ],
+   "chunk_tokens": 897,
+   "memory_tokens": 0,
+   "prompt_tokens": 1656,
+   "input": 1862,
+   "output": 8546,
+   "reasoning": 1552,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0051",
+    "U0066"
+   ],
+   "chunk_tokens": 884,
+   "memory_tokens": 0,
+   "prompt_tokens": 1612,
+   "input": 1818,
+   "output": 6540,
+   "reasoning": 516,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0067",
+    "U0087"
+   ],
+   "chunk_tokens": 933,
+   "memory_tokens": 0,
+   "prompt_tokens": 1681,
+   "input": 1887,
+   "output": 9476,
+   "reasoning": 305,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0088",
+    "U0111"
+   ],
+   "chunk_tokens": 891,
+   "memory_tokens": 0,
+   "prompt_tokens": 1649,
+   "input": 1855,
+   "output": 6011,
+   "reasoning": 181,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "U0112",
+    "U0113"
+   ],
+   "chunk_tokens": 88,
+   "memory_tokens": 0,
+   "prompt_tokens": 761,
+   "input": 967,
+   "output": 901,
+   "reasoning": 440,
+   "cached": false
+  }
+ ]
+}

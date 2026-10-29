@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: flow(target=Autonomous Forklift Fleet, payload=hold instruction)\n\nSource sentences (the last one is where the fact was extracted):\nS187: Safety Zone Controller maintains the boundary until the cause of the stop has been understood and the recovery plan has been checked again.\nS188: Inbound Pallet Buffer remains unavailable to new receipts when its access path intersects the isolated area.\nS189: East Transfer Conveyor and West Transfer Conveyor remain stopped where their movement could compromise the boundary.\nS190: Autonomous Forklift Fleet receives a hold instruction for routes that approach the recovery area.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S190 states that Autonomous Forklift Fleet receives a hold instruction, so the target and payload both match; the source is unspecified in the fact and the sentence does not name one.\"}",
+ "usage": {
+  "input_tokens": 666,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 74,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.743,
+ "created": "2026-10-14T12:52:30"
+}

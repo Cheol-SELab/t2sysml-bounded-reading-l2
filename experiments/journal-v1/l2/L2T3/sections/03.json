@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "The detection workflow begins when the North Lookout Camera Mast, South Lookout Camera Mast, or Horizon Ridge Drone Dock provides an observation that may indicate a new ignition.",
+   "tags": []
+  },
+  {
+   "text": "Each observation is time stamped, georeferenced, and associated with equipment status before it is evaluated as operational evidence.",
+   "tags": []
+  },
+  {
+   "text": "The Sentinel Fireline Analytics Engine receives the observation context and normalizes image, thermal, and weather attributes into a common event record.",
+   "tags": []
+  },
+  {
+   "text": "Smoke indications are initially assessed for plume texture, persistence, motion, and contrast against the background terrain.",
+   "tags": []
+  },
+  {
+   "text": "Thermal cues are treated as supporting evidence unless they persist across sequential frames or align with a visible smoke indication.",
+   "tags": []
+  },
+  {
+   "text": "The Smoke Classifier Module produces the Ridge Shadow Mask when terrain-shadow conditions could otherwise inflate a smoke confidence score.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "text": "The analytics score is not considered a declaration of fire, because atmospheric glare, dust, vehicle exhaust, and cloud shadow can produce similar signatures.",
+   "tags": []
+  },
+  {
+   "text": "MesoWest Weather Fusion Node provides local wind, humidity, temperature, and stability context that helps determine whether an indication is plausible for active combustion.",
+   "tags": []
+  },
+  {
+   "text": "When the automated confidence level exceeds the screening threshold, the Caldera Incident Command Portal opens a triage case for human review.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Detection Officer reviews the triage case, compares current imagery with recent frames, and checks whether the indication is growing, drifting, or disappearing.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Detection Officer may request a fresh pan, tilt, or zoom view from the nearest fixed camera when the initial frame is ambiguous.",
+   "tags": []
+  },
+  {
+   "text": "If terrain, smoke column height, or occlusion prevents a clear fixed-camera view, the Drone Tasking Service may prepare a verification task for the Horizon Ridge Drone Dock.",
+   "tags": []
+  },
+  {
+   "text": "The Drone Pilot Operator confirms that the proposed verification task is safe for launch conditions and consistent with current operating constraints.",
+   "tags": []
+  },
+  {
+   "text": "The VHF Radio Gateway Repeater supports voice coordination when field observers or aviation personnel can provide independent confirmation from their location.",
+   "tags": []
+  },
+  {
+   "text": "The Air Attack Supervisor may be referred to by the alias Redtail during radio coordination, but the operational record uses Air Attack Supervisor.",
+   "tags": [
+    "ALIAS:E_AIR_ATTACK_SUPERVISOR"
+   ]
+  },
+  {
+   "text": "The Talon Air Tanker Dispatch Console may be referred to by the alias Marigold during dispatch coordination, but the operational record uses Talon Air Tanker Dispatch Console.",
+   "tags": [
+    "ALIAS:E_TALON_AIR_TANKER_DISPATCH_CONSOLE"
+   ]
+  },
+  {
+   "text": "Confirmation requires at least one persistent smoke indication or thermal cue, plus either independent sensor corroboration, field report corroboration, or a direct human visual judgment recorded by an authorized reviewer.",
+   "tags": []
+  },
+  {
+   "text": "A suspected ignition remains in triage when evidence is inconsistent, stale, or limited to a single low-confidence source.",
+   "tags": []
+  },
+  {
+   "text": "The Caldera Incident Command Portal records the reason for each triage decision so later operators can understand whether the case was advanced, held, or dismissed.",
+   "tags": []
+  },
+  {
+   "text": "When the confirmation rule is satisfied, the incident record is advanced to the Confirmed Ignition State and becomes available for suppression planning.",
+   "tags": []
+  },
+  {
+   "text": "The Confirmed Ignition State includes the best known location, confidence basis, observation history, reviewer identity, and current recommended coordination posture.",
+   "tags": []
+  },
+  {
+   "text": "Crewline Mobile Tablet users receive only the confirmed incident context that has been released for field distribution by the command workflow.",
+   "tags": []
+  },
+  {
+   "text": "East Retardant Loading Pump sends the Retardant Batch Slip after a load cycle is metered and sealed.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "If air operations are constrained, the Caldera Incident Command Portal can associate the incident with the Airspace Restricted State before aircraft tasking is attempted.",
+   "tags": []
+  },
+  {
+   "text": "Dismissed cases remain searchable for audit and model improvement, but they do not create a suppression assignment or public incident notification.",
+   "tags": []
+  }
+ ]
+}

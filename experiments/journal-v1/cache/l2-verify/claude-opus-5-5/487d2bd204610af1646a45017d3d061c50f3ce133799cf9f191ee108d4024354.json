@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Switching Desk Coordinator provides \"the Isolation Boundary Card\" to Substation Field Crew (an information or material flow).\n\nSource sentences:\nS140: The Sequence Event Archive receives the Clock Drift Snapshot for event-time correlation.\nS141: The Switching Desk Coordinator produces the Isolation Boundary Card for the planned work.\nS232: The Breaker Control Unit shall reject commands that do not satisfy its configured permissive conditions.\nS233: Substation Field Crew uses the Isolation Boundary Card to verify the approved work boundary before entering the controlled area.\n\nAnswer \"supported\" only if the sentences state that Switching Desk Coordinator produces or sends this item AND that Substation Field Crew receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S141 states that the Switching Desk Coordinator produces the Isolation Boundary Card, and S233 states that the Substation Field Crew uses that same card to verify the work boundary.\"}",
+ "usage": {
+  "input_tokens": 661,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 77,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.633,
+ "created": "2026-10-14T01:38:16"
+}

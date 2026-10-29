@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: composition(whole=end-to-end figure, parts=['encryption overhead', 'firewall inspection time'])\n\nSource sentences (the last one is where the fact was extracted):\nS060: Critical contact paths are pinned before acquisition of signal when the Ground Network Manager determines that a maintenance condition could cause route oscillation.\nS061: Management access to routers, firewalls, time servers, and monitoring probes is restricted to dedicated administration networks that are not advertised to mission data enclaves.\nS062: Latency budgets are assigned by service class so that command validation, real-time telemetry display, orbit determination support, processing transfers, and archive replication can be measured against different expectations.\nS063: The budget for real-time command and telemetry traffic between the Mission Control Center, the Command Validation Gateway, and the Telemetry Ingest Service is managed as an end-to-end figure that includes encryption overhead and firewall inspection time.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S063 says the end-to-end figure includes encryption overhead and firewall inspection time, which directly matches the composition of those two parts in the whole.\"}",
+ "usage": {
+  "input_tokens": 760,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 64,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.626,
+ "created": "2026-10-14T12:51:49"
+}

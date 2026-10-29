@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Flight Dynamics Team provides \"the Ephemeris Delta Note\" to Mission Planning System (an information or material flow).\n\nSource sentences:\nS143: The Command Validation Gateway checks maneuver command parameters against the screened burn plan before allowing the command stack to proceed.\nS144: The Flight Dynamics Team produces the Ephemeris Delta Note when updated state vectors change predicted acquisition times or imaging geometry beyond agreed thresholds.\nS239: The User Services Portal uses the Product Hold List to prevent release of affected products until the applicable hold condition has been cleared.\nS240: The Mission Planning System applies the delta note during schedule validation to ensure that contact and activity timing remains consistent with the latest operational constraint.\n\nAnswer \"supported\" only if the sentences state that Flight Dynamics Team produces or sends this item AND that Mission Planning System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S144 states that the Flight Dynamics Team produces the Ephemeris Delta Note, and S240 states that the Mission Planning System applies the same item, referred to as the delta note, during schedule validation.\"}",
+ "usage": {
+  "input_tokens": 314,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 58,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 372
+ },
+ "attempts": 1,
+ "wall_s": 4.565,
+ "created": "2026-10-14T12:41:48"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=East Tube Dispatch Console, label=alerts a Pharmacy Technician)\n\nSource sentences (the last one is where the fact was extracted):\nS189: If route status is stale or incomplete, the console holds the capsule and displays the condition for operator review.\nS190: A loss of communication with a route sensor prevents the console from treating the affected segment as available.\nS191: An interruption during transit is recorded with the capsule identifier, last confirmed location, and time of the interruption.\nS192: The console alerts a Pharmacy Technician when a transfer stops progressing or cannot be confirmed at its destination.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S192 states that the console alerts a Pharmacy Technician when a transfer stops progressing or cannot be confirmed, and the console is the East Tube Dispatch Console, so the performer and action label both match.\"}",
+ "usage": {
+  "input_tokens": 655,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.951,
+ "created": "2026-10-14T12:52:27"
+}

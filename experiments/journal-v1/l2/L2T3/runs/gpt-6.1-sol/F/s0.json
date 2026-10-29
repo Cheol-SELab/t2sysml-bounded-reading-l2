@@ -1,0 +1,5544 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "operates in a wildfire threat environment shaped by dry fuels, steep terrain, variable winds, lightning, human-caused ignitions, and expanding wildland-urban interface exposure"
+  },
+  {
+   "unit_id": "S002",
+   "type": "composition",
+   "whole": "operational area",
+   "parts": [
+    "ridgelines",
+    "drainages",
+    "access roads",
+    "utility corridors",
+    "remote recreation areas",
+    "communities"
+   ]
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "small ignition",
+   "label": "can become a life-safety incident within minutes"
+  },
+  {
+   "unit_id": "S003",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "presenting incident information, recommended actions, and operational status to authorized wildfire personnel"
+  },
+  {
+   "unit_id": "S003",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "target": "authorized wildfire personnel",
+   "payload": "incident information, recommended actions, and operational status"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "provide fixed observation coverage over high-risk sectors"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "provide fixed observation coverage over high-risk sectors"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "label": "must be assessed quickly"
+  },
+  {
+   "unit_id": "S004",
+   "type": "requirement",
+   "subject": "smoke columns, flame growth, and visibility changes",
+   "text": "smoke columns, flame growth, and visibility changes must be assessed quickly"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock",
+   "label": "support directed aerial observation"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "support directed aerial observation"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "terrain",
+   "label": "blocks line of sight"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "assist in screening imagery and other observations for potential fire activity"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "assist in screening imagery and other observations for potential fire activity"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "contributes localized weather context"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "label": "evaluate spread potential, aviation feasibility, firefighter exposure, and the timing of field operations"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "supports continuity between digital coordination and field radio practices"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "crews",
+   "label": "operate beyond reliable broadband coverage"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "aircraft",
+   "label": "operate beyond reliable broadband coverage"
+  },
+  {
+   "unit_id": "S009",
+   "type": "composition",
+   "whole": "participating organizations",
+   "parts": [
+    "local fire agencies",
+    "county emergency management",
+    "state wildland fire resources",
+    "aviation support units",
+    "cooperating public safety partners"
+   ]
+  },
+  {
+   "unit_id": "S010",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "represents county coordination needs related to public warning, road impacts, shelter considerations, and integration with emergency operations procedures"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "monitoring detection cues"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "requesting verification"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "recommending whether a suspected ignition should be escalated"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "label": "should be escalated"
+  },
+  {
+   "unit_id": "S011",
+   "type": "requirement",
+   "subject": "suspected ignition",
+   "text": "whether a suspected ignition should be escalated"
+  },
+  {
+   "unit_id": "S012",
+   "type": "state",
+   "owner": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "Confirmed Ignition State"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "may recommend a Confirmed Ignition State"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "available observations and operating procedures",
+   "label": "support that status"
+  },
+  {
+   "unit_id": "S012",
+   "type": "succession",
+   "before": "support that status",
+   "after": "may recommend a Confirmed Ignition State"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "uses the system to understand fire location, smoke behavior, aircraft constraints, and resource priorities"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "understand fire location, smoke behavior, aircraft constraints, and resource priorities"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "advising on aerial tactics"
+  },
+  {
+   "unit_id": "S013",
+   "type": "succession",
+   "before": "uses the system to understand fire location, smoke behavior, aircraft constraints, and resource priorities",
+   "after": "advising on aerial tactics"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "uses the system to understand mission demand, loading status, and operational tempo associated with the Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "understand mission demand, loading status, and operational tempo associated with the Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "use the system to maintain shared awareness of field conditions, mission timing, and hazards that could affect crew safety"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "use the system to maintain shared awareness of field conditions, mission timing, and hazards that could affect crew safety"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "maintain shared awareness of field conditions, mission timing, and hazards"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "maintain shared awareness of field conditions, mission timing, and hazards"
+  },
+  {
+   "unit_id": "S016",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "provides mobile access to approved operational information"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "smoke report",
+   "label": "warrants verification"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "label": "should be treated as confirmed"
+  },
+  {
+   "unit_id": "S017",
+   "type": "requirement",
+   "subject": "ignition",
+   "text": "whether an ignition should be treated as confirmed"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "changing conditions",
+   "label": "require adjusted priorities"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "label": "focus initial attack planning"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "label": "request aviation coordination"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "operations",
+   "label": "should pause for safety reasons"
+  },
+  {
+   "unit_id": "S018",
+   "type": "requirement",
+   "subject": "operations",
+   "text": "whether operations should pause for safety reasons"
+  },
+  {
+   "unit_id": "S019",
+   "type": "state",
+   "owner": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "Airspace Restricted State"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "supports recognition of an Airspace Restricted State"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "label": "can be coordinated under the applicable incident rules"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "detection support",
+   "label": "begins with observation, automated screening, operator review, and presentation of confidence, location, and context for suspected fire activity"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "detection support",
+   "label": "ends at the point where an authorized role accepts, rejects, or requests further verification of a suspected ignition under agency procedure"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "authorized role",
+   "label": "accepts, rejects, or requests further verification of a suspected ignition under agency procedure"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "suppression support",
+   "label": "begins after incident staff need coordinated information for resource movement, aviation planning, field safety, and ongoing assessment of fire behavior"
+  },
+  {
+   "unit_id": "S023",
+   "type": "constraint",
+   "subject": "suppression support",
+   "expression": "does not include autonomous dispatch, independent command decisions, or direct control of aircraft, vehicles, pumps, cameras, drones, or field crews"
+  },
+  {
+   "unit_id": "S024",
+   "type": "constraint",
+   "subject": "Caldera Wildfire Detection and Suppression Support System",
+   "expression": "is limited to timely information presentation, procedural support, traceable recommendations, and operational coordination aids"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "label": "is organized around fixed ridge sensors, a staffed operations portal, advisory analytics services, and communications paths that preserve incident command authority"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "communications paths",
+   "label": "preserve incident command authority"
+  },
+  {
+   "unit_id": "S026",
+   "type": "attribute",
+   "owner": "North Lookout Camera Mast",
+   "name": "location",
+   "value": "northern rim of the operating area"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "label": "is positioned on the northern rim of the operating area"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "provide long-range visual coverage of drainages, access roads, and known ignition corridors"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "covers the opposing viewshed"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "provides overlapping observation"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "terrain",
+   "label": "breaks line of sight from the northern site"
+  },
+  {
+   "unit_id": "S028",
+   "type": "composition",
+   "whole": "North Lookout Camera Mast",
+   "parts": [
+    "hardened power distribution",
+    "local equipment cabinets",
+    "lightning protection",
+    "service access"
+   ]
+  },
+  {
+   "unit_id": "S028",
+   "type": "composition",
+   "whole": "South Lookout Camera Mast",
+   "parts": [
+    "hardened power distribution",
+    "local equipment cabinets",
+    "lightning protection",
+    "service access"
+   ]
+  },
+  {
+   "unit_id": "S028",
+   "type": "action",
+   "label": "is installed with hardened power distribution, local equipment cabinets, lightning protection, and service access suitable for seasonal maintenance windows"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "label": "are backhauled through licensed wireless links to the operations network"
+  },
+  {
+   "unit_id": "S029",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "target": "operations network",
+   "payload": "camera mast video paths"
+  },
+  {
+   "unit_id": "S029",
+   "type": "flow",
+   "source": "South Lookout Camera Mast",
+   "target": "operations network",
+   "payload": "camera mast video paths"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "sends the Thermal Spot Snippet"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "local sensor processing",
+   "label": "identifies a candidate heat signature"
+  },
+  {
+   "unit_id": "S030",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "target": "Duty Detection Officer",
+   "payload": "Thermal Spot Snippet"
+  },
+  {
+   "unit_id": "S030",
+   "type": "succession",
+   "before": "identifies a candidate heat signature",
+   "after": "sends the Thermal Spot Snippet"
+  },
+  {
+   "unit_id": "S031",
+   "type": "attribute",
+   "owner": "Horizon Ridge Drone Dock",
+   "name": "site engineering alias",
+   "value": "Kestrel"
+  },
+  {
+   "unit_id": "S032",
+   "type": "attribute",
+   "owner": "Horizon Ridge Drone Dock",
+   "name": "location",
+   "value": "graded pad near the central ridge road"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "label": "is located on a graded pad near the central ridge road"
+  },
+  {
+   "unit_id": "S033",
+   "type": "composition",
+   "whole": "Horizon Ridge Drone Dock",
+   "parts": [
+    "weather-rated enclosures",
+    "charging interfaces",
+    "local health monitoring",
+    "secure network termination"
+   ]
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock",
+   "label": "produces the Battery Swap Ticket"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "maintenance controller",
+   "label": "records that a flight battery has reached the configured replacement threshold"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "flight battery",
+   "label": "has reached the configured replacement threshold"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "manages approved unmanned flight requests"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "records mission constraints"
+  },
+  {
+   "unit_id": "S035",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "presents task status without acting as an independent authority for flight release"
+  },
+  {
+   "unit_id": "S035",
+   "type": "flow",
+   "source": "Drone Tasking Service",
+   "payload": "task status"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "uses Drone Tasking Service to review proposed routes, current dock status, and operational constraints"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "review proposed routes, current dock status, and operational constraints"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "coordinating any field action through established procedures"
+  },
+  {
+   "unit_id": "S036",
+   "type": "succession",
+   "before": "review proposed routes, current dock status, and operational constraints",
+   "after": "coordinating any field action through established procedures"
+  },
+  {
+   "unit_id": "S037",
+   "type": "attribute",
+   "owner": "Sentinel Fireline Analytics Engine",
+   "name": "site engineering alias",
+   "value": "Lantern"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "aggregates camera detections, weather inputs, geospatial context, and operator feedback into traceable recommendations for fire detection and suppression support"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "runs as a bounded analytics component"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "scores visual observations for plume likelihood"
+  },
+  {
+   "unit_id": "S039",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "passes confidence values to the broader analytics workflow"
+  },
+  {
+   "unit_id": "S039",
+   "type": "flow",
+   "source": "Smoke Classifier Module",
+   "target": "broader analytics workflow",
+   "payload": "confidence values"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "analytics services",
+   "label": "retain event timing, source identifiers, model version information, and operator acknowledgments"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "later review",
+   "label": "can reconstruct how a recommendation was presented"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "label": "was presented"
+  },
+  {
+   "unit_id": "S041",
+   "type": "attribute",
+   "owner": "MesoWest Weather Fusion Node",
+   "name": "site engineering alias",
+   "value": "Brindle"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "ingests station observations, forecast grids, and configured quality checks"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "provide a consistent weather picture for the operating area"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "sends the Wind Shift Bulletin"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "configured weather rules",
+   "label": "identify a significant change in local wind behavior"
+  },
+  {
+   "unit_id": "S043",
+   "type": "flow",
+   "source": "MesoWest Weather Fusion Node",
+   "target": "Air Attack Supervisor",
+   "payload": "Wind Shift Bulletin"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "provides a monitored bridge between selected radio traffic and operator workstations"
+  },
+  {
+   "unit_id": "S045",
+   "type": "attribute",
+   "owner": "Caldera Incident Command Portal",
+   "name": "role",
+   "value": "primary operator interface for the Duty Detection Officer, County Emergency Liaison, and other command staff"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "displays camera views, detection history, weather context, map layers, and status transitions such as Confirmed Ignition State and Airspace Restricted State"
+  },
+  {
+   "unit_id": "S046",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "payload": "camera views, detection history, weather context, map layers, and status transitions such as Confirmed Ignition State and Airspace Restricted State"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "supports the Air Attack Supervisor and Tanker Base Manager"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "presenting aircraft coordination data, loading status, and mission notes relevant to suppression support"
+  },
+  {
+   "unit_id": "S047",
+   "type": "flow",
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "Air Attack Supervisor",
+   "payload": "aircraft coordination data, loading status, and mission notes"
+  },
+  {
+   "unit_id": "S047",
+   "type": "flow",
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "Tanker Base Manager",
+   "payload": "aircraft coordination data, loading status, and mission notes"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "label": "are represented in the site layout as monitored ground assets"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "provides the Helitack Crew Leader with field access to assigned incident context, map references, and updates that have been approved for mobile distribution"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "label": "have been approved for mobile distribution"
+  },
+  {
+   "unit_id": "S049",
+   "type": "flow",
+   "source": "Crewline Mobile Tablet",
+   "target": "Helitack Crew Leader",
+   "payload": "assigned incident context, map references, and updates"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "label": "are treated as baseline infrastructure rather than optional add-ons"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "detection workflow",
+   "label": "begins when the North Lookout Camera Mast, South Lookout Camera Mast, or Horizon Ridge Drone Dock provides an observation that may indicate a new ignition"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "provides an observation that may indicate a new ignition"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "provides an observation that may indicate a new ignition"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock",
+   "label": "provides an observation that may indicate a new ignition"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "observation",
+   "label": "may indicate a new ignition"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "label": "is time stamped"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "label": "georeferenced"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "label": "associated with equipment status"
+  },
+  {
+   "unit_id": "S052",
+   "type": "action",
+   "label": "is evaluated as operational evidence"
+  },
+  {
+   "unit_id": "S052",
+   "type": "succession",
+   "before": "is time stamped",
+   "after": "is evaluated as operational evidence"
+  },
+  {
+   "unit_id": "S052",
+   "type": "succession",
+   "before": "georeferenced",
+   "after": "is evaluated as operational evidence"
+  },
+  {
+   "unit_id": "S052",
+   "type": "succession",
+   "before": "associated with equipment status",
+   "after": "is evaluated as operational evidence"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "receives the observation context"
+  },
+  {
+   "unit_id": "S053",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "normalizes image, thermal, and weather attributes into a common event record"
+  },
+  {
+   "unit_id": "S053",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "target": "Sentinel Fireline Analytics Engine",
+   "payload": "observation context"
+  },
+  {
+   "unit_id": "S053",
+   "type": "flow",
+   "source": "South Lookout Camera Mast",
+   "target": "Sentinel Fireline Analytics Engine",
+   "payload": "observation context"
+  },
+  {
+   "unit_id": "S053",
+   "type": "flow",
+   "source": "Horizon Ridge Drone Dock",
+   "target": "Sentinel Fireline Analytics Engine",
+   "payload": "observation context"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "label": "are initially assessed for plume texture, persistence, motion, and contrast against the background terrain"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "label": "are treated as supporting evidence"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "thermal cues",
+   "label": "persist across sequential frames"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "thermal cues",
+   "label": "align with a visible smoke indication"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "produces the Ridge Shadow Mask"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "terrain-shadow conditions",
+   "label": "could otherwise inflate a smoke confidence score"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "label": "is not considered a declaration of fire"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "atmospheric glare, dust, vehicle exhaust, and cloud shadow",
+   "label": "can produce similar signatures"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "provides local wind, humidity, temperature, and stability context"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "local wind, humidity, temperature, and stability context",
+   "label": "helps determine whether an indication is plausible for active combustion"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "automated confidence level",
+   "label": "exceeds the screening threshold"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "opens a triage case for human review"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "reviews the triage case"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "compares current imagery with recent frames"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "checks whether the indication is growing, drifting, or disappearing"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "indication",
+   "label": "is growing, drifting, or disappearing"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "may request a fresh pan, tilt, or zoom view from the nearest fixed camera"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "terrain, smoke column height, or occlusion",
+   "label": "prevents a clear fixed-camera view"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "may prepare a verification task for the Horizon Ridge Drone Dock"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "confirms that the proposed verification task is safe for launch conditions and consistent with current operating constraints"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "supports voice coordination"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "field observers",
+   "label": "can provide independent confirmation from their location"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "aviation personnel",
+   "label": "can provide independent confirmation from their location"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "operational record",
+   "label": "uses Air Attack Supervisor"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "operational record",
+   "label": "uses Talon Air Tanker Dispatch Console"
+  },
+  {
+   "unit_id": "S067",
+   "type": "requirement",
+   "subject": "confirmation",
+   "text": "Confirmation requires at least one persistent smoke indication or thermal cue, plus either independent sensor corroboration, field report corroboration, or a direct human visual judgment recorded by an authorized reviewer."
+  },
+  {
+   "unit_id": "S067",
+   "type": "constraint",
+   "subject": "confirmation",
+   "expression": "at least one persistent smoke indication or thermal cue"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "label": "recorded by an authorized reviewer"
+  },
+  {
+   "unit_id": "S067",
+   "type": "allocation",
+   "action": "recorded by an authorized reviewer",
+   "to": "authorized reviewer"
+  },
+  {
+   "unit_id": "S068",
+   "type": "state",
+   "owner": "suspected ignition",
+   "label": "triage"
+  },
+  {
+   "unit_id": "S068",
+   "type": "constraint",
+   "subject": "suspected ignition",
+   "expression": "remains in triage when evidence is inconsistent, stale, or limited to a single low-confidence source"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "records the reason for each triage decision"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "later operators",
+   "label": "can understand whether the case was advanced, held, or dismissed"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "label": "was advanced, held, or dismissed"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "label": "is satisfied"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "label": "is advanced to the Confirmed Ignition State"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "incident record",
+   "label": "becomes available for suppression planning"
+  },
+  {
+   "unit_id": "S070",
+   "type": "transition",
+   "to": "Confirmed Ignition State",
+   "trigger": "the confirmation rule is satisfied"
+  },
+  {
+   "unit_id": "S071",
+   "type": "composition",
+   "whole": "Confirmed Ignition State",
+   "parts": [
+    "best known location",
+    "confidence basis",
+    "observation history",
+    "reviewer identity",
+    "current recommended coordination posture"
+   ]
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet users",
+   "label": "receive only the confirmed incident context that has been released for field distribution by the command workflow"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "label": "has been released for field distribution by the command workflow"
+  },
+  {
+   "unit_id": "S072",
+   "type": "flow",
+   "source": "command workflow",
+   "target": "Crewline Mobile Tablet users",
+   "payload": "confirmed incident context"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "East Retardant Loading Pump",
+   "label": "sends the Retardant Batch Slip"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "is metered"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "label": "sealed"
+  },
+  {
+   "unit_id": "S073",
+   "type": "flow",
+   "source": "East Retardant Loading Pump",
+   "target": "Tanker Base Manager",
+   "payload": "Retardant Batch Slip"
+  },
+  {
+   "unit_id": "S073",
+   "type": "succession",
+   "before": "is metered",
+   "after": "sends the Retardant Batch Slip"
+  },
+  {
+   "unit_id": "S073",
+   "type": "succession",
+   "before": "sealed",
+   "after": "sends the Retardant Batch Slip"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "label": "are constrained"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "can associate the incident with the Airspace Restricted State"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "label": "is attempted"
+  },
+  {
+   "unit_id": "S074",
+   "type": "transition",
+   "to": "Airspace Restricted State",
+   "trigger": "air operations are constrained"
+  },
+  {
+   "unit_id": "S074",
+   "type": "succession",
+   "before": "can associate the incident with the Airspace Restricted State",
+   "after": "is attempted"
+  },
+  {
+   "unit_id": "S075",
+   "type": "state",
+   "owner": "triage case",
+   "label": "dismissed"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "dismissed cases",
+   "label": "do not create a suppression assignment or public incident notification"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "supports coordinated air and ground operations"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "incident",
+   "label": "enters a managed response posture"
+  },
+  {
+   "unit_id": "S076",
+   "type": "succession",
+   "before": "enters a managed response posture",
+   "after": "supports coordinated air and ground operations"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "shows the Airspace Restricted State"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "label": "is treated as conditional"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "confirms the active operating window"
+  },
+  {
+   "unit_id": "S077",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "payload": "Airspace Restricted State"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "records the restriction basis in the Caldera Incident Command Portal"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "label": "can be traced to the operational condition in effect at the time"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "deconflicting fixed-wing, rotary-wing, and uncrewed routes"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "launches from the Horizon Ridge Drone Dock"
+  },
+  {
+   "unit_id": "S079",
+   "type": "succession",
+   "before": "deconflicting fixed-wing, rotary-wing, and uncrewed routes",
+   "after": "launches from the Horizon Ridge Drone Dock"
+  },
+  {
+   "unit_id": "S080",
+   "type": "requirement",
+   "subject": "Drone Tasking Service",
+   "text": "The Drone Tasking Service shall not issue a launch task that conflicts with an active aviation lane maintained by the Talon Air Tanker Dispatch Console."
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "shall not issue a launch task that conflicts with an active aviation lane maintained by the Talon Air Tanker Dispatch Console"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "label": "maintained by the Talon Air Tanker Dispatch Console"
+  },
+  {
+   "unit_id": "S080",
+   "type": "allocation",
+   "action": "maintained by the Talon Air Tanker Dispatch Console",
+   "to": "Talon Air Tanker Dispatch Console"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "provides the aviation status view used by the Tanker Base Manager to sequence retardant aircraft availability"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "label": "used by the Tanker Base Manager"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "sequence retardant aircraft availability"
+  },
+  {
+   "unit_id": "S081",
+   "type": "flow",
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "Tanker Base Manager",
+   "payload": "aviation status view"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "coordinates pump readiness for the East Retardant Loading Pump and the West Retardant Loading Pump"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "confirming that a tanker can accept an assignment"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "tanker",
+   "label": "can accept an assignment"
+  },
+  {
+   "unit_id": "S082",
+   "type": "succession",
+   "before": "coordinates pump readiness for the East Retardant Loading Pump and the West Retardant Loading Pump",
+   "after": "confirming that a tanker can accept an assignment"
+  },
+  {
+   "unit_id": "S083",
+   "type": "attribute",
+   "owner": "VHF Radio Gateway Repeater",
+   "name": "call sign",
+   "value": "Badger"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "bridges command, air-to-ground, and county liaison talk paths"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "label": "is degraded by terrain"
+  },
+  {
+   "unit_id": "S084",
+   "type": "flow",
+   "source": "VHF Radio Gateway Repeater",
+   "payload": "command, air-to-ground, and county liaison talk paths"
+  },
+  {
+   "unit_id": "S085",
+   "type": "requirement",
+   "subject": "radio bridging",
+   "text": "Radio bridging shall preserve the original speaker identity when the source channel provides it, because aviation supervisors use that identity to validate tasking and hazard reports."
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "radio bridging",
+   "label": "shall preserve the original speaker identity"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "source channel",
+   "label": "provides it"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "aviation supervisors",
+   "label": "use that identity to validate tasking and hazard reports"
+  },
+  {
+   "unit_id": "S085",
+   "type": "action",
+   "performer": "aviation supervisors",
+   "label": "validate tasking and hazard reports"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "bridge path",
+   "label": "fails"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "marks the affected radio route as impaired"
+  },
+  {
+   "unit_id": "S086",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "requires manual acknowledgement by the Duty Detection Officer"
+  },
+  {
+   "unit_id": "S086",
+   "type": "requirement",
+   "subject": "Duty Detection Officer",
+   "text": "If a bridge path fails, the Caldera Incident Command Portal marks the affected radio route as impaired and requires manual acknowledgement by the Duty Detection Officer."
+  },
+  {
+   "unit_id": "S086",
+   "type": "state",
+   "owner": "radio route",
+   "label": "impaired"
+  },
+  {
+   "unit_id": "S086",
+   "type": "transition",
+   "to": "impaired",
+   "trigger": "a bridge path fails"
+  },
+  {
+   "unit_id": "S087",
+   "type": "requirement",
+   "subject": "Duty Detection Officer",
+   "text": "Orion must verify that the impaired route has an alternate contact method before any new aviation coordination message is accepted."
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "must verify that the impaired route has an alternate contact method"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "label": "is accepted"
+  },
+  {
+   "unit_id": "S087",
+   "type": "succession",
+   "before": "must verify that the impaired route has an alternate contact method",
+   "after": "is accepted"
+  },
+  {
+   "unit_id": "S088",
+   "type": "attribute",
+   "owner": "County Emergency Liaison",
+   "name": "role",
+   "value": "primary contact for county dispatch, road control, evacuation support, and local public safety notifications"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "sends the Drone Corridor Permit"
+  },
+  {
+   "unit_id": "S089",
+   "type": "flow",
+   "source": "County Emergency Liaison",
+   "target": "Drone Tasking Service",
+   "payload": "Drone Corridor Permit"
+  },
+  {
+   "unit_id": "S090",
+   "type": "requirement",
+   "subject": "county liaison procedures",
+   "text": "County liaison procedures require that jurisdictional constraints be entered in the Caldera Incident Command Portal before the Drone Pilot Operator receives a route briefing."
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "label": "be entered in the Caldera Incident Command Portal"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "receives a route briefing"
+  },
+  {
+   "unit_id": "S090",
+   "type": "succession",
+   "before": "be entered in the Caldera Incident Command Portal",
+   "after": "receives a route briefing"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "are requested through the established incident aviation chain"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "label": "are represented internally by the Airspace Restricted State only after acceptance by the responsible authority"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "reviews each temporary restriction against current fire perimeter intelligence from the Sentinel Fireline Analytics Engine"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "approving a release of air assets"
+  },
+  {
+   "unit_id": "S092",
+   "type": "flow",
+   "source": "Sentinel Fireline Analytics Engine",
+   "target": "Air Attack Supervisor",
+   "payload": "fire perimeter intelligence"
+  },
+  {
+   "unit_id": "S092",
+   "type": "succession",
+   "before": "reviews each temporary restriction against current fire perimeter intelligence from the Sentinel Fireline Analytics Engine",
+   "after": "approving a release of air assets"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "supplies wind and visibility context used by aviation supervisors during route selection and holding-area planning"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "label": "used by aviation supervisors during route selection and holding-area planning"
+  },
+  {
+   "unit_id": "S093",
+   "type": "flow",
+   "source": "MesoWest Weather Fusion Node",
+   "target": "aviation supervisors",
+   "payload": "wind and visibility context"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "provide observation context that helps the Air Attack Supervisor assess whether smoke columns may reduce route visibility"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "assess whether smoke columns may reduce route visibility"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "smoke columns",
+   "label": "may reduce route visibility"
+  },
+  {
+   "unit_id": "S094",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "target": "Air Attack Supervisor",
+   "payload": "observation context"
+  },
+  {
+   "unit_id": "S094",
+   "type": "flow",
+   "source": "South Lookout Camera Mast",
+   "target": "Air Attack Supervisor",
+   "payload": "observation context"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "produces the Camera Cleaning Log as part of its maintenance reporting"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "may be temporarily down-weighted by the Sentinel Fireline Analytics Engine"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "label": "is suspected to be degraded"
+  },
+  {
+   "unit_id": "S096",
+   "type": "allocation",
+   "action": "may be temporarily down-weighted by the Sentinel Fireline Analytics Engine",
+   "to": "Sentinel Fireline Analytics Engine"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "uses the Crewline Mobile Tablet to acknowledge air-to-ground instructions and report whether crews are inside any planned drop or reconnaissance area"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "acknowledge air-to-ground instructions"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "report whether crews are inside any planned drop or reconnaissance area"
+  },
+  {
+   "unit_id": "S097",
+   "type": "flow",
+   "source": "Helitack Crew Leader",
+   "payload": "whether crews are inside any planned drop or reconnaissance area"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "displays crew acknowledgements beside aviation tasks"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "can verify that ground resources are clear"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "authorizing flight activity"
+  },
+  {
+   "unit_id": "S098",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "target": "Air Attack Supervisor",
+   "payload": "crew acknowledgements"
+  },
+  {
+   "unit_id": "S098",
+   "type": "succession",
+   "before": "can verify that ground resources are clear",
+   "after": "authorizing flight activity"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "label": "is delayed"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "keeps suppression planning visible"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "preventing premature aircraft dispatch"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "label": "are retained with timestamps, participant identities, and radio path status"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "post-incident review",
+   "label": "can reconstruct both aviation decisions and interagency notifications"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "converts detection observations, aerial imagery, weather updates, and geospatial overlays into a shared fire behavior assessment for operational use"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "assessment",
+   "label": "begins when visual detections are correlated with incident geometry, terrain, fuel type, and current resource locations in the mapping workspace"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "label": "are correlated with incident geometry, terrain, fuel type, and current resource locations in the mapping workspace"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "captures a time-stamped smoke column bearing"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "reports the pan, tilt, zoom, and confidence values needed to project the observation onto terrain"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "label": "project the observation onto terrain"
+  },
+  {
+   "unit_id": "S103",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "payload": "pan, tilt, zoom, and confidence values"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "supplies a separate bearing track"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "mapping workflow",
+   "label": "can triangulate a probable origin area"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "mapping workflow",
+   "label": "bound the uncertainty ellipse"
+  },
+  {
+   "unit_id": "S104",
+   "type": "flow",
+   "source": "South Lookout Camera Mast",
+   "target": "mapping workflow",
+   "payload": "separate bearing track"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "assigns each observation a smoke likelihood, growth trend, and obscuration flag"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "label": "is made available for analyst review"
+  },
+  {
+   "unit_id": "S105",
+   "type": "succession",
+   "before": "assigns each observation a smoke likelihood, growth trend, and obscuration flag",
+   "after": "is made available for analyst review"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "uses the spot snippet to compare the automated classification with visible flame, smoke color, and terrain context"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "compare the automated classification with visible flame, smoke color, and terrain context"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "accepting the observation into the assessment queue"
+  },
+  {
+   "unit_id": "S106",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "target": "Duty Detection Officer",
+   "payload": "Thermal Spot Snippet"
+  },
+  {
+   "unit_id": "S106",
+   "type": "succession",
+   "before": "compare the automated classification with visible flame, smoke color, and terrain context",
+   "after": "accepting the observation into the assessment queue"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "label": "is treated as a higher-resolution confirmation layer"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "weather, airspace, and communications conditions",
+   "label": "permit flight operations"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "packages approved imaging objectives as map footprints, altitude bands, and revisit intervals"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "label": "can be compared with the active perimeter model"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "uses the swap ticket to keep imaging sorties aligned with available aircraft endurance and expected return time"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "keep imaging sorties aligned with available aircraft endurance and expected return time"
+  },
+  {
+   "unit_id": "S109",
+   "type": "flow",
+   "source": "Horizon Ridge Drone Dock",
+   "target": "Drone Pilot Operator",
+   "payload": "Battery Swap Ticket"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "label": "collected during a sortie"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "label": "are orthorectified against the terrain model"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "label": "registered to the incident grid"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "label": "are used for perimeter adjustment"
+  },
+  {
+   "unit_id": "S110",
+   "type": "succession",
+   "before": "are orthorectified against the terrain model",
+   "after": "are used for perimeter adjustment"
+  },
+  {
+   "unit_id": "S110",
+   "type": "succession",
+   "before": "registered to the incident grid",
+   "after": "are used for perimeter adjustment"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "identifies heat signatures, smoke edges, flame fronts, and potential spot fire indicators in the registered imagery"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "label": "are not displayed as final fireline"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "label": "are applied as explicit map attributes"
+  },
+  {
+   "unit_id": "S112",
+   "type": "flow",
+   "payload": "analytic results"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "ingests station observations, forecast grids, and local quality checks"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "maintain the wind, humidity, temperature, and stability fields used by the spread model"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "label": "used by the spread model"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "publishes a time-indexed weather update that marks significant forecast changes and identifies which map products require recomputation"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "weather update",
+   "label": "marks significant forecast changes"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "weather update",
+   "label": "identifies which map products require recomputation"
+  },
+  {
+   "unit_id": "S114",
+   "type": "flow",
+   "source": "MesoWest Weather Fusion Node",
+   "payload": "weather update"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "are interpolated across the incident area with terrain-aware weighting"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "label": "are represented at operational map scale"
+  },
+  {
+   "unit_id": "S116",
+   "type": "composition",
+   "whole": "geospatial overlays",
+   "parts": [
+    "fuels",
+    "slope",
+    "aspect",
+    "roads",
+    "structures",
+    "water sources",
+    "jurisdiction boundaries",
+    "evacuation zones",
+    "known communications coverage"
+   ]
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "fire behavior model",
+   "label": "combines the accepted perimeter, recent growth vectors, weather fields, and fuel conditions"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "fire behavior model",
+   "label": "estimate short-term spread direction and rate"
+  },
+  {
+   "unit_id": "S117",
+   "type": "flow",
+   "source": "MesoWest Weather Fusion Node",
+   "target": "fire behavior model",
+   "payload": "weather fields"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "label": "is expressed as probability bands rather than a single line"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "supervisors",
+   "label": "can see both the most likely path and the practical planning margin"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "renders the current perimeter, projected spread, resource positions, and decision annotations into a common operating picture with role-based symbology"
+  },
+  {
+   "unit_id": "S119",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "payload": "current perimeter, projected spread, resource positions, and decision annotations"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "produces the Crew Staging Pin from the approved map layer"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "assigns it an effective time, location accuracy, and incident identifier"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "label": "are generated from rule checks"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "rule checks",
+   "label": "compare projected fire arrival times with values at risk, road access, crew travel time, and aircraft availability"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "label": "confirming an ignition"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "label": "increasing camera monitoring"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "label": "requesting drone coverage"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "label": "preparing aviation options"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "label": "repositioning ground crews"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "label": "notifying county partners"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "receives map products that emphasize projected columns, flight hazards, target areas, and timing constraints without obscuring ground resource information"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "map products",
+   "label": "emphasize projected columns, flight hazards, target areas, and timing constraints without obscuring ground resource information"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "receives a simplified view that preserves perimeter confidence, threatened areas, and recommended public safety coordination actions while hiding tactical details not needed for civil coordination"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "simplified view",
+   "label": "preserves perimeter confidence, threatened areas, and recommended public safety coordination actions"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "simplified view",
+   "label": "hiding tactical details not needed for civil coordination"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "map product",
+   "label": "records source time, processing time, model version, analyst acceptance, and supersession status"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "users",
+   "label": "can distinguish current guidance from archived assessments"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "inputs",
+   "label": "conflict"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "common operating picture",
+   "label": "shows the conflict explicitly"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "common operating picture",
+   "label": "requires review"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "label": "is promoted for command use"
+  },
+  {
+   "unit_id": "S126",
+   "type": "requirement",
+   "subject": "common operating picture",
+   "text": "When inputs conflict, the common operating picture shows the conflict explicitly and requires review before the affected recommendation is promoted for command use."
+  },
+  {
+   "unit_id": "S126",
+   "type": "flow",
+   "source": "common operating picture",
+   "payload": "conflict"
+  },
+  {
+   "unit_id": "S126",
+   "type": "succession",
+   "before": "requires review",
+   "after": "is promoted for command use"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "suppression planning",
+   "label": "begins after the Caldera Incident Command Portal promotes an accepted fire location into the operational map and marks it available for aviation review"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "promotes an accepted fire location into the operational map"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "marks it available for aviation review"
+  },
+  {
+   "unit_id": "S127",
+   "type": "succession",
+   "before": "promotes an accepted fire location into the operational map",
+   "after": "begins after the Caldera Incident Command Portal promotes an accepted fire location into the operational map and marks it available for aviation review"
+  },
+  {
+   "unit_id": "S127",
+   "type": "succession",
+   "before": "marks it available for aviation review",
+   "after": "begins after the Caldera Incident Command Portal promotes an accepted fire location into the operational map and marks it available for aviation review"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "reviews the promoted location, the confidence history, and the current airspace status"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "authorizing reconnaissance or retardant planning"
+  },
+  {
+   "unit_id": "S128",
+   "type": "succession",
+   "before": "reviews the promoted location, the confidence history, and the current airspace status",
+   "after": "authorizing reconnaissance or retardant planning"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "converts reconnaissance objectives into trackable missions with launch windows, image requirements, altitude limits, and abort criteria"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock",
+   "label": "supports initial attack"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock",
+   "label": "keeping assigned aircraft charged, positioned, and ready for rapid launch"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "label": "is granted"
+  },
+  {
+   "unit_id": "S131",
+   "type": "requirement",
+   "subject": "Horizon Ridge Drone Dock",
+   "text": "Kestrel is required to report launch readiness, aircraft health, and recovery availability before a reconnaissance task can be released."
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock",
+   "label": "report launch readiness, aircraft health, and recovery availability"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "label": "can be released"
+  },
+  {
+   "unit_id": "S131",
+   "type": "flow",
+   "source": "Horizon Ridge Drone Dock",
+   "payload": "launch readiness, aircraft health, and recovery availability"
+  },
+  {
+   "unit_id": "S131",
+   "type": "succession",
+   "before": "report launch readiness, aircraft health, and recovery availability",
+   "after": "can be released"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "confirms that the proposed route is consistent with field conditions and can be flown without interfering with suppression aircraft"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "label": "can be flown without interfering with suppression aircraft"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "is used to verify access, flame spread direction, and exposure to structures"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "verify access, flame spread direction, and exposure to structures"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "label": "are committed to a line assignment"
+  },
+  {
+   "unit_id": "S133",
+   "type": "succession",
+   "before": "verify access, flame spread direction, and exposure to structures",
+   "after": "are committed to a line assignment"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "compares recent reconnaissance observations with camera detections and weather-driven projections"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "support tactical recommendations"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "label": "is not treated as the sole basis for aircraft commitment"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "uses the Wind Shift Bulletin to reassess aircraft sequencing, holding areas, and drop approach direction"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "reassess aircraft sequencing, holding areas, and drop approach direction"
+  },
+  {
+   "unit_id": "S136",
+   "type": "flow",
+   "source": "MesoWest Weather Fusion Node",
+   "target": "Air Attack Supervisor",
+   "payload": "Wind Shift Bulletin"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "maintains a planning view of tanker availability, estimated time to target, base turnaround time, and assigned incident priority"
+  },
+  {
+   "unit_id": "S138",
+   "type": "requirement",
+   "subject": "Talon Air Tanker Dispatch Console",
+   "text": "Marigold must prevent a dispatch plan from being released when required aviation approvals, airspace status, or tanker readiness fields are incomplete."
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "must prevent a dispatch plan from being released"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "label": "being released"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Airspace Restricted State",
+   "label": "limits dispatch options"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "confirms that the planned route and working altitude are acceptable"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "produces the Runway Release Note"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "label": "has been validated against runway constraints"
+  },
+  {
+   "unit_id": "S140",
+   "type": "succession",
+   "before": "has been validated against runway constraints",
+   "after": "produces the Runway Release Note"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "uses the batch slip to confirm that the loading record matches the aircraft assignment and planned retardant quantity"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "confirm that the loading record matches the aircraft assignment and planned retardant quantity"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "loading record",
+   "label": "matches the aircraft assignment and planned retardant quantity"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "East Retardant Loading Pump",
+   "target": "Tanker Base Manager",
+   "payload": "Retardant Batch Slip"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "East Retardant Loading Pump",
+   "label": "report equipment state, flow readiness, and out-of-service conditions"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "West Retardant Loading Pump",
+   "label": "report equipment state, flow readiness, and out-of-service conditions"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "East Retardant Loading Pump",
+   "label": "support base capacity estimates"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "West Retardant Loading Pump",
+   "label": "support base capacity estimates"
+  },
+  {
+   "unit_id": "S142",
+   "type": "flow",
+   "source": "East Retardant Loading Pump",
+   "payload": "equipment state, flow readiness, and out-of-service conditions"
+  },
+  {
+   "unit_id": "S142",
+   "type": "flow",
+   "source": "West Retardant Loading Pump",
+   "payload": "equipment state, flow readiness, and out-of-service conditions"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "label": "is displayed as operational information rather than as an approval"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "label": "are committed"
+  },
+  {
+   "unit_id": "S143",
+   "type": "requirement",
+   "subject": "supervisor decision",
+   "text": "a supervisor decision is still required before aircraft are committed"
+  },
+  {
+   "unit_id": "S143",
+   "type": "flow",
+   "payload": "loading status"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "resolves discrepancies in loading status"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "label": "is presented as ready for release"
+  },
+  {
+   "unit_id": "S144",
+   "type": "succession",
+   "before": "resolves discrepancies in loading status",
+   "after": "is presented as ready for release"
+  },
+  {
+   "unit_id": "S144",
+   "type": "flow",
+   "payload": "dispatch plan"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "provides an operational fallback for relaying approved aviation instructions"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "relaying approved aviation instructions"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "label": "is degraded"
+  },
+  {
+   "unit_id": "S145",
+   "type": "flow",
+   "source": "VHF Radio Gateway Repeater",
+   "payload": "approved aviation instructions"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "shows approved suppression objectives, aircraft caution areas, and current assignment notes"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "crews",
+   "label": "operating near the incident"
+  },
+  {
+   "unit_id": "S146",
+   "type": "flow",
+   "source": "Crewline Mobile Tablet",
+   "target": "crews",
+   "payload": "approved suppression objectives, aircraft caution areas, and current assignment notes"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "acknowledges nearby aircraft activity"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "label": "are moved into a drop zone or a reconnaissance overflight area"
+  },
+  {
+   "unit_id": "S147",
+   "type": "succession",
+   "before": "acknowledges nearby aircraft activity",
+   "after": "are moved into a drop zone or a reconnaissance overflight area"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "sends the Suppression Drop Receipt"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "label": "has been recorded"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "label": "checked for required timing fields"
+  },
+  {
+   "unit_id": "S148",
+   "type": "flow",
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "County Emergency Liaison",
+   "payload": "Suppression Drop Receipt"
+  },
+  {
+   "unit_id": "S148",
+   "type": "succession",
+   "before": "has been recorded",
+   "after": "sends the Suppression Drop Receipt"
+  },
+  {
+   "unit_id": "S148",
+   "type": "succession",
+   "before": "checked for required timing fields",
+   "after": "sends the Suppression Drop Receipt"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "preserves each aviation decision with the approving supervisor, operational period, and reason for change"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "can view approved aviation status and public safety implications without gaining authority to alter dispatch or suppression records"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "reconnaissance, loading status, or weather guidance",
+   "label": "conflicts with an active plan"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "holds the affected recommendation for Air Attack Supervisor review"
+  },
+  {
+   "unit_id": "S151",
+   "type": "state",
+   "owner": "recommendation",
+   "label": "held"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "helitack and ground crews",
+   "label": "receive assignments, staging information, hazards, and updated intelligence from the support system during active wildfire operations"
+  },
+  {
+   "unit_id": "S152",
+   "type": "flow",
+   "source": "Caldera Wildfire Detection and Suppression Support System",
+   "target": "helitack and ground crews",
+   "payload": "assignments, staging information, hazards, and updated intelligence"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "label": "is cleared"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "selects the operational intent in the Caldera Incident Command Portal"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "records each assignment package with an objective, time validity, confirmation status, and required acknowledgments"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "displays the current division assignment, route guidance, rally location, and assigned communications channel for the logged-in crew"
+  },
+  {
+   "unit_id": "S155",
+   "type": "flow",
+   "source": "Crewline Mobile Tablet",
+   "target": "logged-in crew",
+   "payload": "current division assignment, route guidance, rally location, and assigned communications channel"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "receives the same operational package with aviation constraints and landing zone notes after Air Attack Supervisor approval"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "label": "are formatted for field execution"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "ground crew assignments",
+   "label": "avoid analytic scores that are not needed for tactical movement"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "label": "is maintained as georeferenced areas and route descriptions"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "crews",
+   "label": "can confirm location without relying on informal landmarks"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "caches the latest accepted staging information"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "marks any expired package as unavailable for execution"
+  },
+  {
+   "unit_id": "S159",
+   "type": "state",
+   "owner": "assignment package",
+   "label": "unavailable for execution"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Confirmed Ignition State",
+   "label": "changes the perimeter or priority area"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "marks affected crew assignments for review before release"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "updates hazard summaries"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "fire spread estimates, access constraints, or field observations",
+   "label": "change"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "applies the Ridge Shadow Mask"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "estimating crew-visible fire edge confidence in steep terrain"
+  },
+  {
+   "unit_id": "S162",
+   "type": "flow",
+   "source": "Smoke Classifier Module",
+   "target": "Sentinel Fireline Analytics Engine",
+   "payload": "Ridge Shadow Mask"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "uses the Camera Cleaning Log to suppress confidence changes caused by lens contamination and service timing"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "suppress confidence changes caused by lens contamination and service timing"
+  },
+  {
+   "unit_id": "S163",
+   "type": "flow",
+   "source": "South Lookout Camera Mast",
+   "target": "Smoke Classifier Module",
+   "payload": "Camera Cleaning Log"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "issues a crew exposure refresh only after the current reconnaissance confidence and weather timing fields are both valid"
+  },
+  {
+   "unit_id": "S164",
+   "type": "flow",
+   "source": "Sentinel Fireline Analytics Engine",
+   "payload": "crew exposure refresh"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "label": "shown to crews"
+  },
+  {
+   "unit_id": "S165",
+   "type": "flow",
+   "target": "crews",
+   "payload": "unstable snags, limited access, steep slope exposure, utility conflicts, and escape route degradation"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "provides weather-derived exposure flags"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "weather-derived exposure flags",
+   "label": "support staging decisions near ridgelines and drainages"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "enters the Airspace Restricted State"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "helitack assignments",
+   "label": "show the restriction boundary"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "helitack assignments",
+   "label": "require confirmation"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "label": "is planned"
+  },
+  {
+   "unit_id": "S167",
+   "type": "transition",
+   "to": "Airspace Restricted State"
+  },
+  {
+   "unit_id": "S167",
+   "type": "requirement",
+   "subject": "helitack assignments",
+   "text": "When the system enters the Airspace Restricted State, helitack assignments show the restriction boundary and require confirmation before aircraft-dependent movement is planned."
+  },
+  {
+   "unit_id": "S167",
+   "type": "flow",
+   "source": "helitack assignments",
+   "payload": "restriction boundary"
+  },
+  {
+   "unit_id": "S167",
+   "type": "succession",
+   "before": "require confirmation",
+   "after": "is planned"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "maintains reconnaissance task status"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "ground teams",
+   "label": "can see whether requested intelligence is pending, active, or complete"
+  },
+  {
+   "unit_id": "S168",
+   "type": "state",
+   "owner": "requested intelligence",
+   "label": "pending"
+  },
+  {
+   "unit_id": "S168",
+   "type": "state",
+   "owner": "requested intelligence",
+   "label": "active"
+  },
+  {
+   "unit_id": "S168",
+   "type": "state",
+   "owner": "requested intelligence",
+   "label": "complete"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "label": "is shown as an availability input only"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Horizon Ridge Drone Dock status",
+   "label": "does not by itself authorize crew movement into a new area"
+  },
+  {
+   "unit_id": "S169",
+   "type": "flow",
+   "payload": "Horizon Ridge Drone Dock status"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "confirms launch readiness separately from crew assignment acceptance"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "keep reconnaissance execution independent from ground deployment"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "mirrors priority assignment summaries"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "crews",
+   "label": "cannot maintain a data session in canyon or timbered terrain"
+  },
+  {
+   "unit_id": "S171",
+   "type": "flow",
+   "source": "VHF Radio Gateway Repeater",
+   "target": "crews",
+   "payload": "priority assignment summaries"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "label": "is degraded"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "presents the last verified assignment package"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet",
+   "label": "clearly identifies the time of last update"
+  },
+  {
+   "unit_id": "S172",
+   "type": "flow",
+   "source": "Crewline Mobile Tablet",
+   "payload": "last verified assignment package"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "acknowledges assignment receipt"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "reports readiness"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "records any exception that prevents safe execution"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "exception",
+   "label": "prevents safe execution"
+  },
+  {
+   "unit_id": "S173",
+   "type": "flow",
+   "source": "Helitack Crew Leader",
+   "payload": "readiness"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "can view staging posture and public safety implications without gaining authority to alter crew assignments or hazard records"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "assignment and staging changes",
+   "label": "preserve an audit trail"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "later reviews",
+   "label": "can reconstruct what information was available to each crew at the time of action"
+  },
+  {
+   "unit_id": "S176",
+   "type": "requirement",
+   "subject": "Caldera Wildfire Detection and Suppression Support System",
+   "text": "During prolonged wildfire operations, the system shall favor continuity of command decisions over full automation when communications, power, or sensor coverage is impaired."
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "shall favor continuity of command decisions over full automation"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "label": "is impaired"
+  },
+  {
+   "unit_id": "S177",
+   "type": "state",
+   "owner": "Caldera Incident Command Portal",
+   "label": "disconnected operating mode"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "enters a disconnected operating mode"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "clearly marks all displayed information with the last synchronization time"
+  },
+  {
+   "unit_id": "S177",
+   "type": "transition",
+   "to": "disconnected operating mode",
+   "trigger": "its primary network path is unavailable"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "allows authorized users to review cached incident data and create queued updates"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "authorized users",
+   "label": "review cached incident data"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "authorized users",
+   "label": "create queued updates"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "prevents irreversible releases"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "label": "is restored"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "receives a visible warning"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "label": "is based on stale data or partial sensor coverage"
+  },
+  {
+   "unit_id": "S180",
+   "type": "requirement",
+   "subject": "Sentinel Fireline Analytics Engine",
+   "text": "The Sentinel Fireline Analytics Engine shall continue using the last approved model configuration after a repository outage and shall reject unversioned rules or unsigned analytic packages."
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "shall continue using the last approved model configuration after a repository outage"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "shall reject unversioned rules or unsigned analytic packages"
+  },
+  {
+   "unit_id": "S181",
+   "type": "requirement",
+   "subject": "Smoke Classifier Module",
+   "text": "The Smoke Classifier Module shall label detections as advisory when either camera mast is unavailable or when image quality falls below the validated threshold."
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "shall label detections as advisory"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "image quality",
+   "label": "falls below the validated threshold"
+  },
+  {
+   "unit_id": "S182",
+   "type": "requirement",
+   "subject": "North Lookout Camera Mast",
+   "text": "The North Lookout Camera Mast and the South Lookout Camera Mast shall report heartbeat, temperature, storage, and pointing-status telemetry so that maintenance staff can distinguish sensor failure from environmental obscuration."
+  },
+  {
+   "unit_id": "S182",
+   "type": "requirement",
+   "subject": "South Lookout Camera Mast",
+   "text": "The North Lookout Camera Mast and the South Lookout Camera Mast shall report heartbeat, temperature, storage, and pointing-status telemetry so that maintenance staff can distinguish sensor failure from environmental obscuration."
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "shall report heartbeat, temperature, storage, and pointing-status telemetry"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "shall report heartbeat, temperature, storage, and pointing-status telemetry"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "maintenance staff",
+   "label": "can distinguish sensor failure from environmental obscuration"
+  },
+  {
+   "unit_id": "S182",
+   "type": "flow",
+   "source": "North Lookout Camera Mast",
+   "target": "maintenance staff",
+   "payload": "heartbeat, temperature, storage, and pointing-status telemetry"
+  },
+  {
+   "unit_id": "S182",
+   "type": "flow",
+   "source": "South Lookout Camera Mast",
+   "target": "maintenance staff",
+   "payload": "heartbeat, temperature, storage, and pointing-status telemetry"
+  },
+  {
+   "unit_id": "S183",
+   "type": "requirement",
+   "subject": "MesoWest Weather Fusion Node",
+   "text": "The MesoWest Weather Fusion Node shall retain a local weather cache sufficient to support near-term fire behavior review when upstream feeds are intermittent."
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "shall retain a local weather cache sufficient to support near-term fire behavior review"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "local weather cache",
+   "label": "support near-term fire behavior review"
+  },
+  {
+   "unit_id": "S184",
+   "type": "requirement",
+   "subject": "Crewline Mobile Tablet clients",
+   "text": "Crewline Mobile Tablet clients shall queue field updates locally, encrypt the queue at rest, and reconcile conflicts by preserving the original author, device time, and server acceptance time."
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet clients",
+   "label": "shall queue field updates locally"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet clients",
+   "label": "encrypt the queue at rest"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet clients",
+   "label": "reconcile conflicts by preserving the original author, device time, and server acceptance time"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Crewline Mobile Tablet clients",
+   "label": "preserving the original author, device time, and server acceptance time"
+  },
+  {
+   "unit_id": "S185",
+   "type": "requirement",
+   "subject": "interactive access to the Caldera Incident Command Portal",
+   "text": "All interactive access to the Caldera Incident Command Portal requires named accounts, role-based authorization, and multifactor authentication when the authentication service is reachable."
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "emergency access",
+   "label": "uses pre-issued signed credentials that expire automatically and require supervisor review after restoration"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "pre-issued signed credentials",
+   "label": "expire automatically"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "pre-issued signed credentials",
+   "label": "require supervisor review after restoration"
+  },
+  {
+   "unit_id": "S186",
+   "type": "requirement",
+   "subject": "pre-issued signed credentials",
+   "text": "pre-issued signed credentials that expire automatically and require supervisor review after restoration"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "receive only the permissions required for their operational responsibilities"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "receive only the permissions required for their operational responsibilities"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "receive only the permissions required for their operational responsibilities"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "Drone Pilot Operator",
+   "label": "receive only the permissions required for their operational responsibilities"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "receive only the permissions required for their operational responsibilities"
+  },
+  {
+   "unit_id": "S188",
+   "type": "requirement",
+   "subject": "administrative privileges for production configuration changes",
+   "text": "Administrative privileges for production configuration changes require separate approval from operational command roles and are not granted through field user accounts."
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "label": "are not granted through field user accounts"
+  },
+  {
+   "unit_id": "S189",
+   "type": "requirement",
+   "subject": "security-relevant events",
+   "text": "Security-relevant events, including failed logons, role changes, queued update releases, model changes, and maintenance overrides, shall be written to an append-only audit store."
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "label": "shall be written to an append-only audit store"
+  },
+  {
+   "unit_id": "S189",
+   "type": "flow",
+   "target": "append-only audit store",
+   "payload": "security-relevant events"
+  },
+  {
+   "unit_id": "S190",
+   "type": "requirement",
+   "subject": "audit records",
+   "text": "Audit records shall include synchronized time, user identity, device identity, source network, affected record, and outcome so that incident reconstruction remains possible after the event."
+  },
+  {
+   "unit_id": "S190",
+   "type": "composition",
+   "whole": "audit records",
+   "parts": [
+    "synchronized time",
+    "user identity",
+    "device identity",
+    "source network",
+    "affected record",
+    "outcome"
+   ]
+  },
+  {
+   "unit_id": "S191",
+   "type": "requirement",
+   "subject": "field component",
+   "text": "If central audit storage is unavailable, each field component shall buffer signed audit records locally and forward them without modification when connectivity returns."
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "field component",
+   "label": "shall buffer signed audit records locally"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "field component",
+   "label": "forward them without modification"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "connectivity",
+   "label": "returns"
+  },
+  {
+   "unit_id": "S191",
+   "type": "flow",
+   "source": "field component",
+   "payload": "signed audit records"
+  },
+  {
+   "unit_id": "S192",
+   "type": "state",
+   "owner": "Drone Tasking Service",
+   "label": "degraded communications mode"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "validates the corridor permit"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Drone Tasking Service",
+   "label": "releasing an automated flight task in degraded communications mode"
+  },
+  {
+   "unit_id": "S192",
+   "type": "flow",
+   "source": "County Emergency Liaison",
+   "target": "Drone Tasking Service",
+   "payload": "Drone Corridor Permit"
+  },
+  {
+   "unit_id": "S192",
+   "type": "succession",
+   "before": "validates the corridor permit",
+   "after": "releasing an automated flight task in degraded communications mode"
+  },
+  {
+   "unit_id": "S193",
+   "type": "requirement",
+   "subject": "VHF Radio Gateway Repeater",
+   "text": "Badger shall queue outbound voice-to-data acknowledgments for at least fifteen minutes during backhaul loss and forward them when the link is restored."
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "shall queue outbound voice-to-data acknowledgments for at least fifteen minutes during backhaul loss"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "VHF Radio Gateway Repeater",
+   "label": "forward them when the link is restored"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "label": "is restored"
+  },
+  {
+   "unit_id": "S193",
+   "type": "constraint",
+   "subject": "VHF Radio Gateway Repeater",
+   "expression": "for at least fifteen minutes during backhaul loss"
+  },
+  {
+   "unit_id": "S193",
+   "type": "flow",
+   "source": "VHF Radio Gateway Repeater",
+   "payload": "outbound voice-to-data acknowledgments"
+  },
+  {
+   "unit_id": "S194",
+   "type": "requirement",
+   "subject": "East Retardant Loading Pump",
+   "text": "East Retardant Loading Pump shall enter a metered recirculation mode when pressure variance exceeds the calibrated maintenance limit."
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "East Retardant Loading Pump",
+   "label": "shall enter a metered recirculation mode"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "pressure variance",
+   "label": "exceeds the calibrated maintenance limit"
+  },
+  {
+   "unit_id": "S194",
+   "type": "state",
+   "owner": "East Retardant Loading Pump",
+   "label": "metered recirculation mode"
+  },
+  {
+   "unit_id": "S194",
+   "type": "transition",
+   "to": "metered recirculation mode",
+   "trigger": "pressure variance exceeds the calibrated maintenance limit"
+  },
+  {
+   "unit_id": "S195",
+   "type": "requirement",
+   "subject": "West Retardant Loading Pump",
+   "text": "The West Retardant Loading Pump shall be inspected at shift change for hose wear, valve position, controller alarms, and leakage before it is returned to operational availability."
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "label": "shall be inspected at shift change for hose wear, valve position, controller alarms, and leakage"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "label": "is returned to operational availability"
+  },
+  {
+   "unit_id": "S195",
+   "type": "state",
+   "owner": "West Retardant Loading Pump",
+   "label": "operational availability"
+  },
+  {
+   "unit_id": "S195",
+   "type": "transition",
+   "to": "operational availability",
+   "trigger": "inspection at shift change"
+  },
+  {
+   "unit_id": "S195",
+   "type": "succession",
+   "before": "shall be inspected at shift change for hose wear, valve position, controller alarms, and leakage",
+   "after": "is returned to operational availability"
+  },
+  {
+   "unit_id": "S196",
+   "type": "requirement",
+   "subject": "maintenance actions",
+   "text": "Maintenance actions on field equipment shall be recorded with technician identity, time, observed condition, corrective action, and verification result before the equipment status is changed."
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "shall be recorded with technician identity, time, observed condition, corrective action, and verification result"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "label": "is changed"
+  },
+  {
+   "unit_id": "S196",
+   "type": "succession",
+   "before": "shall be recorded with technician identity, time, observed condition, corrective action, and verification result",
+   "after": "is changed"
+  },
+  {
+   "unit_id": "S197",
+   "type": "requirement",
+   "subject": "operational records",
+   "text": "Operational records that support command decisions and safety reviews shall be retained for the incident record period defined by agency policy, while high-volume raw sensor data may follow a shorter approved retention schedule."
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "operational records",
+   "label": "support command decisions and safety reviews"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "label": "shall be retained for the incident record period defined by agency policy"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "raw sensor data",
+   "label": "may follow a shorter approved retention schedule"
+  },
+  {
+   "unit_id": "S198",
+   "type": "requirement",
+   "subject": "Caldera Wildfire Detection and Suppression Support System",
+   "text": "The system shall protect retained data with encryption at rest, controlled export procedures, and deletion workflows that require documented authorization."
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Caldera Wildfire Detection and Suppression Support System",
+   "label": "shall protect retained data with encryption at rest, controlled export procedures, and deletion workflows that require documented authorization"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "deletion workflows",
+   "label": "require documented authorization"
+  },
+  {
+   "unit_id": "S198",
+   "type": "requirement",
+   "subject": "deletion workflows",
+   "text": "deletion workflows that require documented authorization"
+  },
+  {
+   "unit_id": "S199",
+   "type": "requirement",
+   "subject": "spare power, replacement network equipment, field cleaning supplies, and documented recovery procedures",
+   "text": "For incidents lasting multiple operational periods, spare power, replacement network equipment, field cleaning supplies, and documented recovery procedures shall be staged so that no single equipment fault stops detection or suppression-support operations."
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "label": "shall be staged"
+  },
+  {
+   "unit_id": "S199",
+   "type": "constraint",
+   "subject": "Caldera Wildfire Detection and Suppression Support System",
+   "expression": "no single equipment fault stops detection or suppression-support operations"
+  },
+  {
+   "unit_id": "S200",
+   "type": "requirement",
+   "subject": "training",
+   "text": "Training for the Caldera Wildfire Detection and Suppression Support System shall be completed before each fire season and refreshed whenever operating procedures or field configurations change."
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "label": "shall be completed before each fire season"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "label": "refreshed whenever operating procedures or field configurations change"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "operating procedures or field configurations",
+   "label": "change"
+  },
+  {
+   "unit_id": "S201",
+   "type": "requirement",
+   "subject": "training program",
+   "text": "The training program shall be role based so that each participant practices the decisions, system functions, communications, and safety constraints that apply to the assigned position."
+  },
+  {
+   "unit_id": "S201",
+   "type": "attribute",
+   "owner": "training program",
+   "name": "basis",
+   "value": "role based"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "participant",
+   "label": "practices the decisions, system functions, communications, and safety constraints that apply to the assigned position"
+  },
+  {
+   "unit_id": "S202",
+   "type": "requirement",
+   "subject": "Duty Detection Officer",
+   "text": "The Duty Detection Officer shall be trained to operate the Caldera Incident Command Portal, review detections, validate confidence indicators, and escalate suspected ignitions according to the approved incident workflow."
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "label": "shall be trained to operate the Caldera Incident Command Portal, review detections, validate confidence indicators, and escalate suspected ignitions according to the approved incident workflow"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "operate the Caldera Incident Command Portal"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "review detections"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "validate confidence indicators"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "escalate suspected ignitions according to the approved incident workflow"
+  },
+  {
+   "unit_id": "S203",
+   "type": "requirement",
+   "subject": "camera familiarization",
+   "text": "Camera familiarization shall cover the North Lookout Camera Mast and the South Lookout Camera Mast, including normal image behavior, degraded visibility conditions, routine inspection cues, and reporting of equipment faults."
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "camera familiarization",
+   "label": "shall cover the North Lookout Camera Mast and the South Lookout Camera Mast, including normal image behavior, degraded visibility conditions, routine inspection cues, and reporting of equipment faults"
+  },
+  {
+   "unit_id": "S204",
+   "type": "requirement",
+   "subject": "Duty Detection Officer",
+   "text": "The Duty Detection Officer shall also learn how the Sentinel Fireline Analytics Engine and the Smoke Classifier Module present uncertainty so that human confirmation remains part of every operational decision."
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Duty Detection Officer",
+   "label": "shall also learn how the Sentinel Fireline Analytics Engine and the Smoke Classifier Module present uncertainty"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "present uncertainty"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "present uncertainty"
+  },
+  {
+   "unit_id": "S204",
+   "type": "flow",
+   "source": "Sentinel Fireline Analytics Engine",
+   "target": "Duty Detection Officer",
+   "payload": "uncertainty"
+  },
+  {
+   "unit_id": "S204",
+   "type": "flow",
+   "source": "Smoke Classifier Module",
+   "target": "Duty Detection Officer",
+   "payload": "uncertainty"
+  },
+  {
+   "unit_id": "S205",
+   "type": "requirement",
+   "subject": "Drone Pilot Operator",
+   "text": "The Drone Pilot Operator shall be trained on Horizon Ridge Drone Dock procedures, Drone Tasking Service mission controls, safe launch checks, recovery actions, and loss-of-link coordination."
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "label": "shall be trained on Horizon Ridge Drone Dock procedures, Drone Tasking Service mission controls, safe launch checks, recovery actions, and loss-of-link coordination"
+  },
+  {
+   "unit_id": "S206",
+   "type": "requirement",
+   "subject": "Air Attack Supervisor",
+   "text": "The Air Attack Supervisor shall be trained to interpret system status during aerial operations and to coordinate with the Talon Air Tanker Dispatch Console without bypassing airspace safety requirements."
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "label": "shall be trained to interpret system status during aerial operations and to coordinate with the Talon Air Tanker Dispatch Console without bypassing airspace safety requirements"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "interpret system status during aerial operations"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "coordinate with the Talon Air Tanker Dispatch Console without bypassing airspace safety requirements"
+  },
+  {
+   "unit_id": "S207",
+   "type": "requirement",
+   "subject": "Tanker Base Manager",
+   "text": "The Tanker Base Manager shall receive practical instruction on status entry, loading coordination, and abnormal-condition reporting for the East Retardant Loading Pump and the West Retardant Loading Pump."
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "shall receive practical instruction on status entry, loading coordination, and abnormal-condition reporting for the East Retardant Loading Pump and the West Retardant Loading Pump"
+  },
+  {
+   "unit_id": "S208",
+   "type": "requirement",
+   "subject": "Helitack Crew Leader",
+   "text": "The Helitack Crew Leader shall be trained on use of the Crewline Mobile Tablet, field acknowledgments, location updates, and communication discipline during changing fire behavior."
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "label": "shall be trained on use of the Crewline Mobile Tablet, field acknowledgments, location updates, and communication discipline during changing fire behavior"
+  },
+  {
+   "unit_id": "S209",
+   "type": "requirement",
+   "subject": "Helitack Crew Leader",
+   "text": "During field mobilization drills, the Helitack Crew Leader shall use the staging pin to confirm that the assigned crew is positioned at the exercise location."
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "shall use the staging pin to confirm that the assigned crew is positioned at the exercise location"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Helitack Crew Leader",
+   "label": "confirm that the assigned crew is positioned at the exercise location"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "label": "is positioned at the exercise location"
+  },
+  {
+   "unit_id": "S209",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "target": "Helitack Crew Leader",
+   "payload": "Crew Staging Pin"
+  },
+  {
+   "unit_id": "S210",
+   "type": "requirement",
+   "subject": "County Emergency Liaison",
+   "text": "The County Emergency Liaison shall be trained to interpret public-safety information from the Caldera Incident Command Portal and to coordinate notifications with county procedures."
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "label": "shall be trained to interpret public-safety information from the Caldera Incident Command Portal and to coordinate notifications with county procedures"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "interpret public-safety information from the Caldera Incident Command Portal"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "coordinate notifications with county procedures"
+  },
+  {
+   "unit_id": "S210",
+   "type": "flow",
+   "source": "Caldera Incident Command Portal",
+   "target": "County Emergency Liaison",
+   "payload": "public-safety information"
+  },
+  {
+   "unit_id": "S211",
+   "type": "requirement",
+   "subject": "operational users",
+   "text": "All operational users shall receive communications training that includes VHF Radio Gateway Repeater failure modes, alternate contact paths, call signs, message brevity, and confirmation readbacks."
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "operational users",
+   "label": "shall receive communications training that includes VHF Radio Gateway Repeater failure modes, alternate contact paths, call signs, message brevity, and confirmation readbacks"
+  },
+  {
+   "unit_id": "S211",
+   "type": "composition",
+   "whole": "communications training",
+   "parts": [
+    "VHF Radio Gateway Repeater failure modes",
+    "alternate contact paths",
+    "call signs",
+    "message brevity",
+    "confirmation readbacks"
+   ]
+  },
+  {
+   "unit_id": "S212",
+   "type": "requirement",
+   "subject": "weather training",
+   "text": "Weather training shall explain how the MesoWest Weather Fusion Node supports situational awareness and how operators should treat weather inputs when local observations conflict with displayed values."
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "weather training",
+   "label": "shall explain how the MesoWest Weather Fusion Node supports situational awareness and how operators should treat weather inputs when local observations conflict with displayed values"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "supports situational awareness"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "operators",
+   "label": "should treat weather inputs when local observations conflict with displayed values"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "local observations",
+   "label": "conflict with displayed values"
+  },
+  {
+   "unit_id": "S213",
+   "type": "requirement",
+   "subject": "initial qualification",
+   "text": "Initial qualification shall include supervised console practice, scenario walkthroughs, and a documented check by an instructor who is authorized by the operations lead."
+  },
+  {
+   "unit_id": "S213",
+   "type": "composition",
+   "whole": "initial qualification",
+   "parts": [
+    "supervised console practice",
+    "scenario walkthroughs",
+    "documented check"
+   ]
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "label": "is authorized by the operations lead"
+  },
+  {
+   "unit_id": "S213",
+   "type": "allocation",
+   "action": "is authorized by the operations lead",
+   "to": "operations lead"
+  },
+  {
+   "unit_id": "S214",
+   "type": "requirement",
+   "subject": "annual refresher training",
+   "text": "Annual refresher training shall include changes to software screens, revised thresholds, updated contact rosters, seasonal hazard briefings, and lessons learned from prior incidents."
+  },
+  {
+   "unit_id": "S214",
+   "type": "composition",
+   "whole": "annual refresher training",
+   "parts": [
+    "changes to software screens",
+    "revised thresholds",
+    "updated contact rosters",
+    "seasonal hazard briefings",
+    "lessons learned from prior incidents"
+   ]
+  },
+  {
+   "unit_id": "S215",
+   "type": "requirement",
+   "subject": "tabletop exercises",
+   "text": "Tabletop exercises shall be conducted before the expected peak fire period and shall test detection triage, command notification, airspace coordination, tanker-base coordination, crew deployment, and public-agency liaison actions."
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "label": "shall be conducted before the expected peak fire period"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "tabletop exercises",
+   "label": "shall test detection triage, command notification, airspace coordination, tanker-base coordination, crew deployment, and public-agency liaison actions"
+  },
+  {
+   "unit_id": "S216",
+   "type": "requirement",
+   "subject": "live exercises",
+   "text": "Live exercises shall be scheduled at least once per season when conditions permit and shall include field crews, aircraft coordination staff, drone operations staff, and command-center personnel."
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "label": "shall be scheduled at least once per season when conditions permit"
+  },
+  {
+   "unit_id": "S216",
+   "type": "constraint",
+   "subject": "live exercises",
+   "expression": "at least once per season"
+  },
+  {
+   "unit_id": "S216",
+   "type": "composition",
+   "whole": "live exercises",
+   "parts": [
+    "field crews",
+    "aircraft coordination staff",
+    "drone operations staff",
+    "command-center personnel"
+   ]
+  },
+  {
+   "unit_id": "S217",
+   "type": "requirement",
+   "subject": "exercise controllers",
+   "text": "Exercise controllers shall inject realistic complications such as intermittent network service, obscured camera views, delayed field confirmation, resource conflicts, and conflicting reports from external observers."
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "exercise controllers",
+   "label": "shall inject realistic complications such as intermittent network service, obscured camera views, delayed field confirmation, resource conflicts, and conflicting reports from external observers"
+  },
+  {
+   "unit_id": "S218",
+   "type": "requirement",
+   "subject": "performance measures",
+   "text": "Performance measures shall include time from automated detection to human review, time from review to command notification, time to resource assignment, communication completion rate, and accuracy of incident status updates."
+  },
+  {
+   "unit_id": "S218",
+   "type": "composition",
+   "whole": "performance measures",
+   "parts": [
+    "time from automated detection to human review",
+    "time from review to command notification",
+    "time to resource assignment",
+    "communication completion rate",
+    "accuracy of incident status updates"
+   ]
+  },
+  {
+   "unit_id": "S219",
+   "type": "requirement",
+   "subject": "detection quality",
+   "text": "Detection quality shall be evaluated using confirmed events, benign smoke sources, weather-related artifacts, and operator notes so that both missed detections and false alarms are visible to program management."
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "label": "shall be evaluated using confirmed events, benign smoke sources, weather-related artifacts, and operator notes"
+  },
+  {
+   "unit_id": "S220",
+   "type": "requirement",
+   "subject": "false-alarm review",
+   "text": "Every false-alarm review shall identify the apparent cause, affected sensors or analytic outputs, operator actions, dispatch consequences, and any recommended tuning or training change."
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "false-alarm review",
+   "label": "shall identify the apparent cause, affected sensors or analytic outputs, operator actions, dispatch consequences, and any recommended tuning or training change"
+  },
+  {
+   "unit_id": "S221",
+   "type": "requirement",
+   "subject": "review board",
+   "text": "The review board shall include operations, aviation, field crew, maintenance, and county liaison representatives when the event affected more than one operational function."
+  },
+  {
+   "unit_id": "S221",
+   "type": "composition",
+   "whole": "review board",
+   "parts": [
+    "operations representatives",
+    "aviation representatives",
+    "field crew representatives",
+    "maintenance representatives",
+    "county liaison representatives"
+   ]
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "event",
+   "label": "affected more than one operational function"
+  },
+  {
+   "unit_id": "S221",
+   "type": "constraint",
+   "subject": "review board",
+   "expression": "when the event affected more than one operational function"
+  },
+  {
+   "unit_id": "S222",
+   "type": "requirement",
+   "subject": "active user",
+   "text": "Seasonal readiness shall require each active user to demonstrate current proficiency, complete required safety briefings, and acknowledge the current operating procedures before receiving operational access."
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "active user",
+   "label": "demonstrate current proficiency"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "active user",
+   "label": "complete required safety briefings"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "active user",
+   "label": "acknowledge the current operating procedures"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "active user",
+   "label": "receiving operational access"
+  },
+  {
+   "unit_id": "S222",
+   "type": "succession",
+   "before": "demonstrate current proficiency",
+   "after": "receiving operational access"
+  },
+  {
+   "unit_id": "S222",
+   "type": "succession",
+   "before": "complete required safety briefings",
+   "after": "receiving operational access"
+  },
+  {
+   "unit_id": "S222",
+   "type": "succession",
+   "before": "acknowledge the current operating procedures",
+   "after": "receiving operational access"
+  },
+  {
+   "unit_id": "S223",
+   "type": "requirement",
+   "subject": "personnel",
+   "text": "Personnel who do not meet proficiency requirements shall complete remedial training and a repeat evaluation before performing unsupervised duties in the Caldera Wildfire Detection and Suppression Support System."
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "personnel",
+   "label": "do not meet proficiency requirements"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "personnel",
+   "label": "shall complete remedial training and a repeat evaluation"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "personnel",
+   "label": "performing unsupervised duties in the Caldera Wildfire Detection and Suppression Support System"
+  },
+  {
+   "unit_id": "S223",
+   "type": "succession",
+   "before": "shall complete remedial training and a repeat evaluation",
+   "after": "performing unsupervised duties in the Caldera Wildfire Detection and Suppression Support System"
+  },
+  {
+   "unit_id": "S224",
+   "type": "requirement",
+   "subject": "deployment governance",
+   "text": "Deployment governance for the Caldera Wildfire Detection and Suppression Support System shall be managed as a staged release process that follows completion of seasonal readiness activities."
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "label": "shall be managed as a staged release process that follows completion of seasonal readiness activities"
+  },
+  {
+   "unit_id": "S225",
+   "type": "requirement",
+   "subject": "deployment governance board",
+   "text": "The deployment governance board shall include operational leadership, maintenance representation, information security representation, and designated representatives for detection, aviation, ground crew, and county coordination functions."
+  },
+  {
+   "unit_id": "S225",
+   "type": "composition",
+   "whole": "deployment governance board",
+   "parts": [
+    "operational leadership",
+    "maintenance representation",
+    "information security representation",
+    "designated representatives for detection",
+    "designated representatives for aviation",
+    "designated representatives for ground crew",
+    "designated representatives for county coordination"
+   ]
+  },
+  {
+   "unit_id": "S226",
+   "type": "requirement",
+   "subject": "deployment governance board",
+   "text": "The board shall approve each seasonal rollout only after reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period."
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "deployment governance board",
+   "label": "shall approve each seasonal rollout"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "deployment governance board",
+   "label": "reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period"
+  },
+  {
+   "unit_id": "S226",
+   "type": "succession",
+   "before": "reviewing residual risk, staffing readiness, configuration baselines, and open corrective actions from the prior operating period",
+   "after": "shall approve each seasonal rollout"
+  },
+  {
+   "unit_id": "S227",
+   "type": "requirement",
+   "subject": "release candidate",
+   "text": "A release candidate shall not enter operational service until the Caldera Incident Command Portal, Sentinel Fireline Analytics Engine, and Smoke Classifier Module complete documented functional testing against the approved mission scenarios."
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "release candidate",
+   "label": "shall not enter operational service"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Caldera Incident Command Portal",
+   "label": "complete documented functional testing against the approved mission scenarios"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Sentinel Fireline Analytics Engine",
+   "label": "complete documented functional testing against the approved mission scenarios"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Smoke Classifier Module",
+   "label": "complete documented functional testing against the approved mission scenarios"
+  },
+  {
+   "unit_id": "S228",
+   "type": "requirement",
+   "subject": "acceptance criteria",
+   "text": "Acceptance criteria shall require the North Lookout Camera Mast, South Lookout Camera Mast, and MesoWest Weather Fusion Node to meet agreed availability, timing, and data-quality thresholds during the readiness window."
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "North Lookout Camera Mast",
+   "label": "meet agreed availability, timing, and data-quality thresholds during the readiness window"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "South Lookout Camera Mast",
+   "label": "meet agreed availability, timing, and data-quality thresholds during the readiness window"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "MesoWest Weather Fusion Node",
+   "label": "meet agreed availability, timing, and data-quality thresholds during the readiness window"
+  },
+  {
+   "unit_id": "S229",
+   "type": "requirement",
+   "subject": "Drone Tasking Service",
+   "text": "The Drone Tasking Service and Horizon Ridge Drone Dock shall be accepted only after controlled field validation shows that task execution, abort behavior, and status reporting remain stable under expected seasonal conditions."
+  },
+  {
+   "unit_id": "S229",
+   "type": "requirement",
+   "subject": "Horizon Ridge Drone Dock",
+   "text": "The Drone Tasking Service and Horizon Ridge Drone Dock shall be accepted only after controlled field validation shows that task execution, abort behavior, and status reporting remain stable under expected seasonal conditions."
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "label": "shall be accepted"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "controlled field validation",
+   "label": "shows that task execution, abort behavior, and status reporting remain stable under expected seasonal conditions"
+  },
+  {
+   "unit_id": "S229",
+   "type": "succession",
+   "before": "shows that task execution, abort behavior, and status reporting remain stable under expected seasonal conditions",
+   "after": "shall be accepted"
+  },
+  {
+   "unit_id": "S230",
+   "type": "requirement",
+   "subject": "Talon Air Tanker Dispatch Console",
+   "text": "The Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump shall pass integration checks that verify operator controls, fault handling, and audit capture before activation."
+  },
+  {
+   "unit_id": "S230",
+   "type": "requirement",
+   "subject": "East Retardant Loading Pump",
+   "text": "The Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump shall pass integration checks that verify operator controls, fault handling, and audit capture before activation."
+  },
+  {
+   "unit_id": "S230",
+   "type": "requirement",
+   "subject": "West Retardant Loading Pump",
+   "text": "The Talon Air Tanker Dispatch Console, East Retardant Loading Pump, and West Retardant Loading Pump shall pass integration checks that verify operator controls, fault handling, and audit capture before activation."
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Talon Air Tanker Dispatch Console",
+   "label": "shall pass integration checks that verify operator controls, fault handling, and audit capture before activation"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "East Retardant Loading Pump",
+   "label": "shall pass integration checks that verify operator controls, fault handling, and audit capture before activation"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "West Retardant Loading Pump",
+   "label": "shall pass integration checks that verify operator controls, fault handling, and audit capture before activation"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "integration checks",
+   "label": "verify operator controls, fault handling, and audit capture"
+  },
+  {
+   "unit_id": "S231",
+   "type": "requirement",
+   "subject": "VHF Radio Gateway Repeater",
+   "text": "The VHF Radio Gateway Repeater and Crewline Mobile Tablet shall be validated for coverage, message persistence, authentication behavior, and degraded-network operation before release approval."
+  },
+  {
+   "unit_id": "S231",
+   "type": "requirement",
+   "subject": "Crewline Mobile Tablet",
+   "text": "The VHF Radio Gateway Repeater and Crewline Mobile Tablet shall be validated for coverage, message persistence, authentication behavior, and degraded-network operation before release approval."
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "label": "shall be validated for coverage, message persistence, authentication behavior, and degraded-network operation before release approval"
+  },
+  {
+   "unit_id": "S232",
+   "type": "requirement",
+   "subject": "Air Attack Supervisor",
+   "text": "Redtail shall confirm that deployment readiness evidence is sufficient before air operations functionality is enabled for the season."
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "Air Attack Supervisor",
+   "label": "shall confirm that deployment readiness evidence is sufficient"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "label": "is enabled for the season"
+  },
+  {
+   "unit_id": "S232",
+   "type": "succession",
+   "before": "shall confirm that deployment readiness evidence is sufficient",
+   "after": "is enabled for the season"
+  },
+  {
+   "unit_id": "S233",
+   "type": "requirement",
+   "subject": "Tanker Base Manager",
+   "text": "The Tanker Base Manager shall use the Runway Release Note during acceptance review to verify that tanker-base operating constraints are documented before seasonal activation."
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "shall use the Runway Release Note during acceptance review to verify that tanker-base operating constraints are documented before seasonal activation"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "Tanker Base Manager",
+   "label": "verify that tanker-base operating constraints are documented before seasonal activation"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "label": "are documented before seasonal activation"
+  },
+  {
+   "unit_id": "S233",
+   "type": "flow",
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "Tanker Base Manager",
+   "payload": "Runway Release Note"
+  },
+  {
+   "unit_id": "S234",
+   "type": "requirement",
+   "subject": "County Emergency Liaison",
+   "text": "The County Emergency Liaison shall use the Suppression Drop Receipt during post-incident reconciliation to verify that reported suppression activity can be traced to county situation reporting."
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "shall use the Suppression Drop Receipt during post-incident reconciliation to verify that reported suppression activity can be traced to county situation reporting"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "County Emergency Liaison",
+   "label": "verify that reported suppression activity can be traced to county situation reporting"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "label": "can be traced to county situation reporting"
+  },
+  {
+   "unit_id": "S234",
+   "type": "flow",
+   "source": "Talon Air Tanker Dispatch Console",
+   "target": "County Emergency Liaison",
+   "payload": "Suppression Drop Receipt"
+  },
+  {
+   "unit_id": "S235",
+   "type": "requirement",
+   "subject": "Confirmed Ignition State workflow",
+   "text": "Acceptance of the Confirmed Ignition State workflow shall require traceable evidence that operator acknowledgement, escalation timing, and command visibility meet the approved concept of operations."
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "operator acknowledgement, escalation timing, and command visibility",
+   "label": "meet the approved concept of operations"
+  },
+  {
+   "unit_id": "S236",
+   "type": "requirement",
+   "subject": "Airspace Restricted State workflow",
+   "text": "Acceptance of the Airspace Restricted State workflow shall require evidence that operational users can recognize restrictions, apply required controls, and recover normal coordination when restrictions are lifted."
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "operational users",
+   "label": "can recognize restrictions"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "operational users",
+   "label": "apply required controls"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "operational users",
+   "label": "recover normal coordination"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "label": "are lifted"
+  },
+  {
+   "unit_id": "S237",
+   "type": "requirement",
+   "subject": "waiver to acceptance criteria",
+   "text": "Any waiver to acceptance criteria shall identify the operational impact, compensating procedure, expiration date, and accountable owner before the board may authorize limited use."
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "waiver to acceptance criteria",
+   "label": "shall identify the operational impact, compensating procedure, expiration date, and accountable owner"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "deployment governance board",
+   "label": "may authorize limited use"
+  },
+  {
+   "unit_id": "S237",
+   "type": "succession",
+   "before": "shall identify the operational impact, compensating procedure, expiration date, and accountable owner",
+   "after": "may authorize limited use"
+  },
+  {
+   "unit_id": "S238",
+   "type": "requirement",
+   "subject": "after-action reviews",
+   "text": "After-action reviews shall be held after major incidents, readiness exercises, significant false alarms, missed detections, and any event that exposes a gap in operational coordination."
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "label": "shall be held after major incidents, readiness exercises, significant false alarms, missed detections, and any event that exposes a gap in operational coordination"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "event",
+   "label": "exposes a gap in operational coordination"
+  },
+  {
+   "unit_id": "S239",
+   "type": "requirement",
+   "subject": "after-action review",
+   "text": "Each after-action review shall reconstruct the timeline from system logs, user accounts, communications records, and maintenance notes without assigning blame to individual operators."
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "after-action review",
+   "label": "shall reconstruct the timeline from system logs, user accounts, communications records, and maintenance notes without assigning blame to individual operators"
+  },
+  {
+   "unit_id": "S240",
+   "type": "requirement",
+   "subject": "review facilitators",
+   "text": "Review facilitators shall document what was expected to happen, what actually happened, why differences occurred, and which corrective actions are necessary before the next readiness cycle."
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "performer": "review facilitators",
+   "label": "shall document what was expected to happen, what actually happened, why differences occurred, and which corrective actions are necessary before the next readiness cycle"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "label": "was expected to happen"
+  },
+  {
+   "unit_id": "S241",
+   "type": "requirement",
+   "subject": "corrective actions",
+   "text": "Corrective actions shall be entered into a controlled improvement backlog with assigned ownership, target completion dates, verification methods, and linkage to the originating event."
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "label": "shall be entered into a controlled improvement backlog with assigned ownership, target completion dates, verification methods, and linkage to the originating event"
+  },
+  {
+   "unit_id": "S242",
+   "type": "requirement",
+   "subject": "data stewardship",
+   "text": "Data stewardship shall define retention, access control, quality review, and disposition rules for operational records, sensor data, model outputs, configuration records, and user activity records."
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "data stewardship",
+   "label": "shall define retention, access control, quality review, and disposition rules for operational records, sensor data, model outputs, configuration records, and user activity records"
+  },
+  {
+   "unit_id": "S243",
+   "type": "requirement",
+   "subject": "operational data",
+   "text": "Operational data used for model evaluation shall be protected from unauthorized alteration and shall preserve enough context to support later engineering review and regulatory inquiry."
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "label": "used for model evaluation"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "label": "shall be protected from unauthorized alteration"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "operational data",
+   "label": "shall preserve enough context to support later engineering review and regulatory inquiry"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "context",
+   "label": "support later engineering review and regulatory inquiry"
+  },
+  {
+   "unit_id": "S244",
+   "type": "requirement",
+   "subject": "changes to the Sentinel Fireline Analytics Engine or Smoke Classifier Module",
+   "text": "Changes to the Sentinel Fireline Analytics Engine or Smoke Classifier Module shall be evaluated with representative seasonal data before deployment to confirm that detection performance improves without unacceptable increases in false alerts."
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "label": "shall be evaluated with representative seasonal data before deployment"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "label": "confirm that detection performance improves without unacceptable increases in false alerts"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "detection performance",
+   "label": "improves without unacceptable increases in false alerts"
+  },
+  {
+   "unit_id": "S245",
+   "type": "requirement",
+   "subject": "configuration changes",
+   "text": "Configuration changes to field equipment shall be versioned, reviewed, and tested in a nonoperational environment before being promoted into the seasonal baseline."
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "label": "shall be versioned"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "label": "reviewed"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "label": "tested in a nonoperational environment"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "label": "being promoted into the seasonal baseline"
+  },
+  {
+   "unit_id": "S245",
+   "type": "succession",
+   "before": "shall be versioned",
+   "after": "being promoted into the seasonal baseline"
+  },
+  {
+   "unit_id": "S245",
+   "type": "succession",
+   "before": "reviewed",
+   "after": "being promoted into the seasonal baseline"
+  },
+  {
+   "unit_id": "S245",
+   "type": "succession",
+   "before": "tested in a nonoperational environment",
+   "after": "being promoted into the seasonal baseline"
+  },
+  {
+   "unit_id": "S246",
+   "type": "requirement",
+   "subject": "governance board",
+   "text": "At the end of each fire season, the governance board shall compare system performance, operational workload, maintenance burden, and user feedback against the acceptance criteria approved for that season."
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "governance board",
+   "label": "shall compare system performance, operational workload, maintenance burden, and user feedback against the acceptance criteria approved for that season"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "label": "approved for that season"
+  },
+  {
+   "unit_id": "S247",
+   "type": "requirement",
+   "subject": "improvement plan",
+   "text": "The resulting improvement plan shall define which procedures, training materials, interfaces, algorithms, and support arrangements will be revised before the next seasonal readiness campaign begins."
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "improvement plan",
+   "label": "shall define which procedures, training materials, interfaces, algorithms, and support arrangements will be revised before the next seasonal readiness campaign begins"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "label": "will be revised"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "next seasonal readiness campaign",
+   "label": "begins"
+  },
+  {
+   "unit_id": "S247",
+   "type": "succession",
+   "before": "will be revised",
+   "after": "begins"
+  }
+ ],
+ "entities": [
+  {
+   "name": "Caldera Wildfire Detection and Suppression Support System",
+   "aliases": []
+  },
+  {
+   "name": "Caldera Incident Command Portal",
+   "aliases": [
+    "Emberhall"
+   ]
+  },
+  {
+   "name": "North Lookout Camera Mast",
+   "aliases": []
+  },
+  {
+   "name": "South Lookout Camera Mast",
+   "aliases": []
+  },
+  {
+   "name": "Horizon Ridge Drone Dock",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Drone Tasking Service",
+   "aliases": []
+  },
+  {
+   "name": "Sentinel Fireline Analytics Engine",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "name": "Smoke Classifier Module",
+   "aliases": []
+  },
+  {
+   "name": "MesoWest Weather Fusion Node",
+   "aliases": [
+    "Brindle"
+   ]
+  },
+  {
+   "name": "VHF Radio Gateway Repeater",
+   "aliases": [
+    "Badger"
+   ]
+  },
+  {
+   "name": "County Emergency Liaison",
+   "aliases": []
+  },
+  {
+   "name": "Duty Detection Officer",
+   "aliases": [
+    "Orion"
+   ]
+  },
+  {
+   "name": "Air Attack Supervisor",
+   "aliases": [
+    "Redtail"
+   ]
+  },
+  {
+   "name": "Tanker Base Manager",
+   "aliases": []
+  },
+  {
+   "name": "Talon Air Tanker Dispatch Console",
+   "aliases": [
+    "Marigold"
+   ]
+  },
+  {
+   "name": "East Retardant Loading Pump",
+   "aliases": []
+  },
+  {
+   "name": "West Retardant Loading Pump",
+   "aliases": []
+  },
+  {
+   "name": "Helitack Crew Leader",
+   "aliases": []
+  },
+  {
+   "name": "Drone Pilot Operator",
+   "aliases": []
+  },
+  {
+   "name": "Crewline Mobile Tablet",
+   "aliases": []
+  },
+  {
+   "name": "Confirmed Ignition State",
+   "aliases": []
+  },
+  {
+   "name": "Airspace Restricted State",
+   "aliases": []
+  },
+  {
+   "name": "Thermal Spot Snippet",
+   "aliases": []
+  },
+  {
+   "name": "Battery Swap Ticket",
+   "aliases": []
+  },
+  {
+   "name": "Wind Shift Bulletin",
+   "aliases": []
+  },
+  {
+   "name": "Ridge Shadow Mask",
+   "aliases": []
+  },
+  {
+   "name": "Retardant Batch Slip",
+   "aliases": []
+  },
+  {
+   "name": "Drone Corridor Permit",
+   "aliases": []
+  },
+  {
+   "name": "Camera Cleaning Log",
+   "aliases": []
+  },
+  {
+   "name": "Crew Staging Pin",
+   "aliases": []
+  },
+  {
+   "name": "Runway Release Note",
+   "aliases": []
+  },
+  {
+   "name": "Suppression Drop Receipt",
+   "aliases": []
+  },
+  {
+   "name": "local fire agencies",
+   "aliases": []
+  },
+  {
+   "name": "county emergency management",
+   "aliases": []
+  },
+  {
+   "name": "state wildland fire resources",
+   "aliases": []
+  },
+  {
+   "name": "aviation support units",
+   "aliases": []
+  },
+  {
+   "name": "cooperating public safety partners",
+   "aliases": []
+  },
+  {
+   "name": "authorized wildfire personnel",
+   "aliases": []
+  },
+  {
+   "name": "incident staff",
+   "aliases": []
+  },
+  {
+   "name": "crews",
+   "aliases": []
+  },
+  {
+   "name": "aircraft",
+   "aliases": []
+  },
+  {
+   "name": "personnel",
+   "aliases": []
+  },
+  {
+   "name": "designated incident command structure",
+   "aliases": []
+  },
+  {
+   "name": "field crews",
+   "aliases": []
+  },
+  {
+   "name": "vehicles",
+   "aliases": []
+  },
+  {
+   "name": "drones",
+   "aliases": []
+  },
+  {
+   "name": "fixed ridge sensors",
+   "aliases": []
+  },
+  {
+   "name": "advisory analytics services",
+   "aliases": []
+  },
+  {
+   "name": "communications paths",
+   "aliases": []
+  },
+  {
+   "name": "hardened power distribution",
+   "aliases": []
+  },
+  {
+   "name": "local equipment cabinets",
+   "aliases": []
+  },
+  {
+   "name": "lightning protection",
+   "aliases": []
+  },
+  {
+   "name": "service access",
+   "aliases": []
+  },
+  {
+   "name": "camera mast video paths",
+   "aliases": []
+  },
+  {
+   "name": "licensed wireless links",
+   "aliases": []
+  },
+  {
+   "name": "operations network",
+   "aliases": []
+  },
+  {
+   "name": "cellular service",
+   "aliases": []
+  },
+  {
+   "name": "local sensor processing",
+   "aliases": []
+  },
+  {
+   "name": "maintenance personnel",
+   "aliases": []
+  },
+  {
+   "name": "weather-rated enclosures",
+   "aliases": []
+  },
+  {
+   "name": "charging interfaces",
+   "aliases": []
+  },
+  {
+   "name": "local health monitoring",
+   "aliases": []
+  },
+  {
+   "name": "secure network termination",
+   "aliases": []
+  },
+  {
+   "name": "maintenance controller",
+   "aliases": []
+  },
+  {
+   "name": "flight battery",
+   "aliases": []
+  },
+  {
+   "name": "analytics services",
+   "aliases": []
+  },
+  {
+   "name": "broader analytics workflow",
+   "aliases": []
+  },
+  {
+   "name": "operator workstations",
+   "aliases": []
+  },
+  {
+   "name": "command staff",
+   "aliases": []
+  },
+  {
+   "name": "authorized operations staff",
+   "aliases": []
+  },
+  {
+   "name": "observation",
+   "aliases": []
+  },
+  {
+   "name": "observation context",
+   "aliases": []
+  },
+  {
+   "name": "common event record",
+   "aliases": []
+  },
+  {
+   "name": "triage case",
+   "aliases": []
+  },
+  {
+   "name": "verification task",
+   "aliases": []
+  },
+  {
+   "name": "field observers",
+   "aliases": []
+  },
+  {
+   "name": "aviation personnel",
+   "aliases": []
+  },
+  {
+   "name": "authorized reviewer",
+   "aliases": []
+  },
+  {
+   "name": "incident record",
+   "aliases": []
+  },
+  {
+   "name": "Crewline Mobile Tablet users",
+   "aliases": []
+  },
+  {
+   "name": "command workflow",
+   "aliases": []
+  },
+  {
+   "name": "load cycle",
+   "aliases": []
+  },
+  {
+   "name": "aircraft tasking",
+   "aliases": []
+  },
+  {
+   "name": "aviation lane",
+   "aliases": []
+  },
+  {
+   "name": "aviation status view",
+   "aliases": []
+  },
+  {
+   "name": "aviation supervisors",
+   "aliases": []
+  },
+  {
+   "name": "radio route",
+   "aliases": []
+  },
+  {
+   "name": "aviation coordination message",
+   "aliases": []
+  },
+  {
+   "name": "county dispatch",
+   "aliases": []
+  },
+  {
+   "name": "road control",
+   "aliases": []
+  },
+  {
+   "name": "evacuation support",
+   "aliases": []
+  },
+  {
+   "name": "local public safety notifications",
+   "aliases": []
+  },
+  {
+   "name": "county liaison procedures",
+   "aliases": []
+  },
+  {
+   "name": "route briefing",
+   "aliases": []
+  },
+  {
+   "name": "temporary flight restrictions",
+   "aliases": []
+  },
+  {
+   "name": "established incident aviation chain",
+   "aliases": []
+  },
+  {
+   "name": "responsible authority",
+   "aliases": []
+  },
+  {
+   "name": "fire perimeter intelligence",
+   "aliases": []
+  },
+  {
+   "name": "crew acknowledgements",
+   "aliases": []
+  },
+  {
+   "name": "coordination records",
+   "aliases": []
+  },
+  {
+   "name": "mapping workspace",
+   "aliases": []
+  },
+  {
+   "name": "mapping workflow",
+   "aliases": []
+  },
+  {
+   "name": "frames",
+   "aliases": []
+  },
+  {
+   "name": "terrain model",
+   "aliases": []
+  },
+  {
+   "name": "incident grid",
+   "aliases": []
+  },
+  {
+   "name": "registered imagery",
+   "aliases": []
+  },
+  {
+   "name": "analytic results",
+   "aliases": []
+  },
+  {
+   "name": "weather update",
+   "aliases": []
+  },
+  {
+   "name": "weather fields",
+   "aliases": []
+  },
+  {
+   "name": "geospatial overlays",
+   "aliases": []
+  },
+  {
+   "name": "fire behavior model",
+   "aliases": []
+  },
+  {
+   "name": "model output",
+   "aliases": []
+  },
+  {
+   "name": "supervisors",
+   "aliases": []
+  },
+  {
+   "name": "common operating picture",
+   "aliases": []
+  },
+  {
+   "name": "approved map layer",
+   "aliases": []
+  },
+  {
+   "name": "operational recommendations",
+   "aliases": []
+  },
+  {
+   "name": "recommendations",
+   "aliases": []
+  },
+  {
+   "name": "map products",
+   "aliases": []
+  },
+  {
+   "name": "simplified view",
+   "aliases": []
+  },
+  {
+   "name": "map product",
+   "aliases": []
+  },
+  {
+   "name": "operational map",
+   "aliases": []
+  },
+  {
+   "name": "trackable missions",
+   "aliases": []
+  },
+  {
+   "name": "reconnaissance imagery",
+   "aliases": []
+  },
+  {
+   "name": "dispatch plan",
+   "aliases": []
+  },
+  {
+   "name": "loading status",
+   "aliases": []
+  },
+  {
+   "name": "personnel",
+   "aliases": []
+  },
+  {
+   "name": "helitack and ground crews",
+   "aliases": []
+  },
+  {
+   "name": "assignment package",
+   "aliases": []
+  },
+  {
+   "name": "operational package",
+   "aliases": []
+  },
+  {
+   "name": "ground crew assignments",
+   "aliases": []
+  },
+  {
+   "name": "staging information",
+   "aliases": []
+  },
+  {
+   "name": "crew assignments",
+   "aliases": []
+  },
+  {
+   "name": "hazard summaries",
+   "aliases": []
+  },
+  {
+   "name": "crew exposure refresh",
+   "aliases": []
+  },
+  {
+   "name": "weather-derived exposure flags",
+   "aliases": []
+  },
+  {
+   "name": "helitack assignments",
+   "aliases": []
+  },
+  {
+   "name": "ground teams",
+   "aliases": []
+  },
+  {
+   "name": "reconnaissance task status",
+   "aliases": []
+  },
+  {
+   "name": "priority assignment summaries",
+   "aliases": []
+  },
+  {
+   "name": "data link",
+   "aliases": []
+  },
+  {
+   "name": "disconnected operating mode",
+   "aliases": []
+  },
+  {
+   "name": "authorized users",
+   "aliases": []
+  },
+  {
+   "name": "cached incident data",
+   "aliases": []
+  },
+  {
+   "name": "queued updates",
+   "aliases": []
+  },
+  {
+   "name": "visible warning",
+   "aliases": []
+  },
+  {
+   "name": "model configuration",
+   "aliases": []
+  },
+  {
+   "name": "repository",
+   "aliases": []
+  },
+  {
+   "name": "unversioned rules",
+   "aliases": []
+  },
+  {
+   "name": "unsigned analytic packages",
+   "aliases": []
+  },
+  {
+   "name": "maintenance staff",
+   "aliases": []
+  },
+  {
+   "name": "local weather cache",
+   "aliases": []
+  },
+  {
+   "name": "Crewline Mobile Tablet clients",
+   "aliases": []
+  },
+  {
+   "name": "field updates",
+   "aliases": []
+  },
+  {
+   "name": "authentication service",
+   "aliases": []
+  },
+  {
+   "name": "emergency access",
+   "aliases": []
+  },
+  {
+   "name": "pre-issued signed credentials",
+   "aliases": []
+  },
+  {
+   "name": "operational command roles",
+   "aliases": []
+  },
+  {
+   "name": "field user accounts",
+   "aliases": []
+  },
+  {
+   "name": "security-relevant events",
+   "aliases": []
+  },
+  {
+   "name": "append-only audit store",
+   "aliases": []
+  },
+  {
+   "name": "audit records",
+   "aliases": []
+  },
+  {
+   "name": "central audit storage",
+   "aliases": []
+  },
+  {
+   "name": "field component",
+   "aliases": []
+  },
+  {
+   "name": "automated flight task",
+   "aliases": []
+  },
+  {
+   "name": "degraded communications mode",
+   "aliases": []
+  },
+  {
+   "name": "outbound voice-to-data acknowledgments",
+   "aliases": []
+  },
+  {
+   "name": "metered recirculation mode",
+   "aliases": []
+  },
+  {
+   "name": "operational availability",
+   "aliases": []
+  },
+  {
+   "name": "maintenance actions",
+   "aliases": []
+  },
+  {
+   "name": "field equipment",
+   "aliases": []
+  },
+  {
+   "name": "operational records",
+   "aliases": []
+  },
+  {
+   "name": "raw sensor data",
+   "aliases": []
+  },
+  {
+   "name": "retained data",
+   "aliases": []
+  },
+  {
+   "name": "spare power",
+   "aliases": []
+  },
+  {
+   "name": "replacement network equipment",
+   "aliases": []
+  },
+  {
+   "name": "field cleaning supplies",
+   "aliases": []
+  },
+  {
+   "name": "documented recovery procedures",
+   "aliases": []
+  },
+  {
+   "name": "training",
+   "aliases": []
+  },
+  {
+   "name": "training program",
+   "aliases": []
+  },
+  {
+   "name": "participant",
+   "aliases": []
+  },
+  {
+   "name": "camera familiarization",
+   "aliases": []
+  },
+  {
+   "name": "operational users",
+   "aliases": []
+  },
+  {
+   "name": "communications training",
+   "aliases": []
+  },
+  {
+   "name": "weather training",
+   "aliases": []
+  },
+  {
+   "name": "operators",
+   "aliases": []
+  },
+  {
+   "name": "initial qualification",
+   "aliases": []
+  },
+  {
+   "name": "instructor",
+   "aliases": []
+  },
+  {
+   "name": "operations lead",
+   "aliases": []
+  },
+  {
+   "name": "annual refresher training",
+   "aliases": []
+  },
+  {
+   "name": "tabletop exercises",
+   "aliases": []
+  },
+  {
+   "name": "live exercises",
+   "aliases": []
+  },
+  {
+   "name": "aircraft coordination staff",
+   "aliases": []
+  },
+  {
+   "name": "drone operations staff",
+   "aliases": []
+  },
+  {
+   "name": "command-center personnel",
+   "aliases": []
+  },
+  {
+   "name": "exercise controllers",
+   "aliases": []
+  },
+  {
+   "name": "external observers",
+   "aliases": []
+  },
+  {
+   "name": "performance measures",
+   "aliases": []
+  },
+  {
+   "name": "detection quality",
+   "aliases": []
+  },
+  {
+   "name": "program management",
+   "aliases": []
+  },
+  {
+   "name": "false-alarm review",
+   "aliases": []
+  },
+  {
+   "name": "review board",
+   "aliases": []
+  },
+  {
+   "name": "seasonal readiness",
+   "aliases": []
+  },
+  {
+   "name": "active user",
+   "aliases": []
+  },
+  {
+   "name": "deployment governance",
+   "aliases": []
+  },
+  {
+   "name": "deployment governance board",
+   "aliases": []
+  },
+  {
+   "name": "operational leadership",
+   "aliases": []
+  },
+  {
+   "name": "maintenance representation",
+   "aliases": []
+  },
+  {
+   "name": "information security representation",
+   "aliases": []
+  },
+  {
+   "name": "release candidate",
+   "aliases": []
+  },
+  {
+   "name": "acceptance criteria",
+   "aliases": []
+  },
+  {
+   "name": "waiver to acceptance criteria",
+   "aliases": []
+  },
+  {
+   "name": "after-action reviews",
+   "aliases": []
+  },
+  {
+   "name": "after-action review",
+   "aliases": []
+  },
+  {
+   "name": "review facilitators",
+   "aliases": []
+  },
+  {
+   "name": "corrective actions",
+   "aliases": []
+  },
+  {
+   "name": "controlled improvement backlog",
+   "aliases": []
+  },
+  {
+   "name": "data stewardship",
+   "aliases": []
+  },
+  {
+   "name": "operational data",
+   "aliases": []
+  },
+  {
+   "name": "sensor data",
+   "aliases": []
+  },
+  {
+   "name": "model outputs",
+   "aliases": []
+  },
+  {
+   "name": "configuration records",
+   "aliases": []
+  },
+  {
+   "name": "user activity records",
+   "aliases": []
+  },
+  {
+   "name": "configuration changes",
+   "aliases": []
+  },
+  {
+   "name": "governance board",
+   "aliases": []
+  },
+  {
+   "name": "improvement plan",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S247"
+   ],
+   "chunk_tokens": 7086,
+   "memory_tokens": 0,
+   "prompt_tokens": 8480,
+   "input": 8686,
+   "output": 36915,
+   "reasoning": 359,
+   "cached": false
+  }
+ ],
+ "wall_s": 1176.4
+}

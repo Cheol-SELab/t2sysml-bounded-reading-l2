@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: support system provides \"staging information\" to helitack (an information or material flow).\n\nSource sentences:\nS151: If reconnaissance, loading status, or weather guidance conflicts with an active plan, the system holds the affected recommendation for Air Attack Supervisor review before further action.\nS152: This section describes how helitack and ground crews receive assignments, staging information, hazards, and updated intelligence from the support system during active wildfire operations.\nS158: Staging information is maintained as georeferenced areas and route descriptions so that crews can confirm location without relying on informal landmarks.\nS159: The Crewline Mobile Tablet caches the latest accepted staging information and marks any expired package as unavailable for execution.\n\nAnswer \"supported\" only if the sentences state that support system produces or sends this item AND that helitack receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S152 states that helitack and ground crews receive assignments, staging information, hazards, and updated intelligence from the support system, so the support system provides staging information to helitack.\"}",
+ "usage": {
+  "input_tokens": 673,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 70,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.574,
+ "created": "2026-10-14T12:36:22"
+}

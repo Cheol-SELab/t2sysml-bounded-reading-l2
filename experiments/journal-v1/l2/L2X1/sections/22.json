@@ -1,0 +1,114 @@
+{
+ "sentences": [
+  {
+   "text": "Exception processing for baggage, towbar availability, and ground handling constraints is designed to preserve a usable common operating picture while still exposing conditions that can change the departure plan.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Platform treats these conditions as operational exceptions rather than routine status messages, so they are filtered, grouped, and escalated before they reach shared displays.",
+   "tags": []
+  },
+  {
+   "text": "Each exception record carries the affected flight, stand, readiness milestone, estimated recovery time, confidence level, and accountable operational role.",
+   "tags": []
+  },
+  {
+   "text": "Ground Handling Dispatcher uses the tag list to confirm which flights require baggage reconciliation before off-block readiness is updated.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "text": "Late baggage information is first assessed against connection criticality, aircraft loading closure time, and the current Target Off Block Time.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator confirms whether the aircraft can remain on plan, accept a short readiness deferral, or require a revised departure intent.",
+   "tags": []
+  },
+  {
+   "text": "The Handling Resource Planner assigns a severity level to the handler exception and suppresses duplicate updates while the accountable party is still working the same recovery action.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher sends the Towbar Shortage Report when towbar availability cannot support the agreed pushback sequence.",
+   "tags": [
+    "F13:intro"
+   ]
+  },
+  {
+   "text": "Towbar availability is escalated only when the missing equipment affects a flight inside the active departure planning horizon or blocks a higher-priority aircraft movement.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Movement Board displays the resulting constraint as a stand-level exception with a time band rather than as a continuous stream of equipment messages.",
+   "tags": []
+  },
+  {
+   "text": "Handler exceptions include staffing gaps, equipment unserviceability, access limitations, and service sequencing conflicts that could invalidate a readiness milestone.",
+   "tags": []
+  },
+  {
+   "text": "The Airport CDM Portal keeps detailed handler notes available to authorized users while the Common Situation Display shows only the flight impact, severity, and expected recovery window.",
+   "tags": []
+  },
+  {
+   "text": "This separation prevents local troubleshooting details from crowding the regional view used by the Regional Flow Manager, Tower Supervisor, and Slot Coordinator.",
+   "tags": []
+  },
+  {
+   "text": "The Alert Distribution Hub routes notifications according to severity, time to milestone, and subscribed operational role, rather than broadcasting every exception to all users.",
+   "tags": []
+  },
+  {
+   "text": "A baggage or handler exception becomes a coordination issue when it threatens the Target Off Block Time, the Calculated Takeoff Time, or an agreed runway metering sequence.",
+   "tags": []
+  },
+  {
+   "text": "At that point, the Airport CDM Portal prompts the accountable role to record the proposed mitigation in the Collaborative Decision Log.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager sees aggregated impact by departure bank, runway stream, and airline group instead of individual baggage or handler work items.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Allocation Engine uses the sanitized readiness state when evaluating whether a regulated flight can keep its allocated departure opportunity.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service applies exception status only after the Business Rules Registry threshold confirms that the condition is operationally material.",
+   "tags": []
+  },
+  {
+   "text": "Nightjar shall suppress handler-exception annotations for arriving flights unless the exception changes the Airport Acceptance Rate or a regulated arrival sequence.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "text": "The Tower Sequence Manager receives a stable readiness indicator and an escalation flag, which allows tower planning to continue without interpreting ramp work details.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger records who raised, changed, acknowledged, or closed each escalated exception so that later review can distinguish data noise from operational decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Performance Analytics Warehouse compares escalated exceptions with actual off-block performance to tune severity thresholds and reduce nuisance alerts over time.",
+   "tags": []
+  },
+  {
+   "text": "During Adverse Weather Mode or Capacity Reduction State, the Business Rules Registry can tighten escalation thresholds for flights close to departure while continuing to suppress low-impact local issues.",
+   "tags": []
+  },
+  {
+   "text": "If the Regional Flow Platform enters Contingency Fallback State, exception summaries remain available through the Contingency Operations Console with the same role-based visibility rules.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward ensures that baggage and handler data exposed outside the local operation is limited to operational necessity and does not disclose unnecessary passenger or workforce details.",
+   "tags": []
+  }
+ ]
+}

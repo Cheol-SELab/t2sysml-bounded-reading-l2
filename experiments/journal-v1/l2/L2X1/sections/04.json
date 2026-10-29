@@ -1,0 +1,108 @@
+{
+ "sentences": [
+  {
+   "text": "Section 4 defines the accountable roles used after the approved morning baseline is distributed through the Regional Flow Platform.",
+   "tags": []
+  },
+  {
+   "text": "For role-call clarity, the Regional Flow Manager is also known as Copperfin during this deployment.",
+   "tags": [
+    "ALIAS:E_REGIONAL_FLOW_MANAGER"
+   ]
+  },
+  {
+   "text": "During pre-tactical operations, the Regional Flow Manager owns the regional operating intent and confirms that planned demand, declared capacity, and coordination milestones are aligned.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager reviews the Airport Capacity Plan, the Ground Delay Program status, and any Tactical Regulation Proposal before they are presented for collaborative agreement.",
+   "tags": []
+  },
+  {
+   "text": "The Airspace Sector Planner supports the Regional Flow Manager by validating sector constraints in the Sector Load Monitor and by advising whether demand smoothing is required before tactical execution.",
+   "tags": []
+  },
+  {
+   "text": "The Slot Coordinator maintains accountability for Calculated Takeoff Time allocation policy and confirms that the Slot Allocation Engine applies the current Business Rules Registry parameters.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator represents carrier operating priorities and confirms that Flight Intent Message updates are complete, timely, and traceable.",
+   "tags": []
+  },
+  {
+   "text": "The Aircraft Operator Representative provides aircraft-specific constraints when requested and is responsible for ensuring that operator commitments entered in the Airport CDM Portal are operationally achievable.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison coordinates with adjacent network units and confirms that regional measures remain compatible with upstream and downstream flow constraints.",
+   "tags": []
+  },
+  {
+   "text": "The Network Operations Liaison also records external coordination outcomes in the Collaborative Decision Log so that later decisions can be reconstructed without relying on informal communications.",
+   "tags": []
+  },
+  {
+   "text": "The Meteorology Briefing Officer produces the Storm Cell Snapshot before the pre-tactical capacity review begins.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "text": "The Meteorology Briefing Officer briefs forecast confidence, timing risk, and expected operational impact in the Digital Briefing Room using data supplied through the Weather Ingest Gateway.",
+   "tags": []
+  },
+  {
+   "text": "When forecast uncertainty is material, the Meteorology Briefing Officer states the trigger conditions that would justify moving from Normal Operations to Adverse Weather Mode.",
+   "tags": []
+  },
+  {
+   "text": "The Airport Duty Manager is the primary airport escalation contact and confirms that airport-side constraints are reflected consistently across the Airport CDM Portal and the Common Situation Display.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor is accountable for tactical runway sequencing decisions and confirms that the Tower Sequence Manager reflects the current runway configuration.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead is accountable for apron movement coordination and maintains the Ramp Movement Board in a state that supports reliable departure metering.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Handling Dispatcher confirms that handling resource assumptions are current in the Handling Resource Planner and escalates material deviations through the Airport Duty Manager.",
+   "tags": []
+  },
+  {
+   "text": "The Deicing Coordinator provides pre-tactical and tactical advice when winter operations affect departure readiness, metering stability, or achievable throughput.",
+   "tags": []
+  },
+  {
+   "text": "The Military Airspace Liaison confirms military airspace availability assumptions and alerts the Regional Flow Manager when civil routing options may be constrained.",
+   "tags": []
+  },
+  {
+   "text": "During tactical operations, the Regional Flow Manager chairs decision checkpoints and authorizes changes to flow measures when the Capacity Assessment Module indicates that declared capacity no longer matches observed conditions.",
+   "tags": []
+  },
+  {
+   "text": "The Departure Metering Service and Arrival Regulation Console are used only under the authority of the accountable flow roles, and their outputs must remain visible on the Common Situation Display.",
+   "tags": []
+  },
+  {
+   "text": "Escalation to the Emergency Response Coordinator is required when a safety event, security event, or emergency response activity may affect airport acceptance, surface movement, or airspace availability.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer is the technical escalation contact for degraded Regional Flow Platform functions, interface outages, or abnormal behavior in the Flight Data Exchange.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward verifies that operational decisions, role acknowledgements, and exception handling are captured in the Audit Event Ledger with synchronized timestamps from the Time Synchronization Service.",
+   "tags": []
+  },
+  {
+   "text": "At the end of each tactical period, accountable roles confirm that decisions and unresolved issues are available to the Performance Analytics Warehouse for later inclusion in the Post Operations Report.",
+   "tags": []
+  }
+ ]
+}

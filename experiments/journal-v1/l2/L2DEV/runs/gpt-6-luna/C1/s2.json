@@ -1,0 +1,6311 @@
+{
+ "facts": [
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "provides continuous intake"
+  },
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "provides triage support"
+  },
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "provides ambulance dispatch"
+  },
+  {
+   "unit_id": "S001",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "provides regional coordination for emergency medical requests across participating jurisdictions"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "translate reported emergencies into prioritized incidents"
+  },
+  {
+   "unit_id": "S002",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "coordinate an appropriate response under approved clinical and jurisdictional protocols"
+  },
+  {
+   "unit_id": "S003",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "serves as the region’s primary dispatch and coordination point"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "operates continuously"
+  },
+  {
+   "unit_id": "S004",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "maintains a shared operational picture of incidents, available units, and known access constraints"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "obtains essential incident details"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "confirms the reported location"
+  },
+  {
+   "unit_id": "S005",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "enters the request for assessment"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "reviews incident information"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "assigns priority"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "confirms priority"
+  },
+  {
+   "unit_id": "S006",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "directs cases requiring additional clinical review"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "establishes clinical triage policies"
+  },
+  {
+   "unit_id": "S007",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "defines the limits of protocol-based decision making"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "apply approved protocols"
+  },
+  {
+   "unit_id": "S008",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "seek clinical guidance when a case falls outside their delegated authority"
+  },
+  {
+   "unit_id": "S009",
+   "type": "attribute",
+   "owner": "Shift Commander",
+   "name": "operational authority",
+   "value": "on-duty authority for dispatch-center coordination and service continuity"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "resolves operational conflicts"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "sets response priorities during surges"
+  },
+  {
+   "unit_id": "S011",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "escalates decisions beyond the center’s authority to the appropriate jurisdictional leadership"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "does not replace the Regional Medical Director’s authority over clinical policy"
+  },
+  {
+   "unit_id": "S012",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "does not replace a Paramedic Crew’s clinical judgment at the scene"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "manages operational radio traffic"
+  },
+  {
+   "unit_id": "S013",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "maintains communications discipline on the Regional Radio Network"
+  },
+  {
+   "unit_id": "S014",
+   "type": "action",
+   "performer": "Regional Radio Network",
+   "label": "carries dispatch and coordination communications among authorized responders"
+  },
+  {
+   "unit_id": "S014",
+   "type": "flow",
+   "source": "Regional Radio Network",
+   "target": "authorized responders",
+   "payload": "dispatch and coordination communications"
+  },
+  {
+   "unit_id": "S015",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "supports a current view of incidents, unit assignments, and regional resource status"
+  },
+  {
+   "unit_id": "S016",
+   "type": "attribute",
+   "owner": "Computer Aided Dispatch Console",
+   "name": "role",
+   "value": "primary workstation for incident entry, assessment, and dispatch operations"
+  },
+  {
+   "unit_id": "S017",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "retains responsibility for immediate patient assessment and care within its professional scope and applicable protocols"
+  },
+  {
+   "unit_id": "S018",
+   "type": "action",
+   "performer": "",
+   "label": "is managed as part of the regional response pool when assigned to an incident"
+  },
+  {
+   "unit_id": "S019",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "coordinates operational awareness of receiving capacity and destination constraints"
+  },
+  {
+   "unit_id": "S020",
+   "type": "action",
+   "performer": "Emergency Department",
+   "label": "communicates receiving considerations through established regional coordination procedures"
+  },
+  {
+   "unit_id": "S020",
+   "type": "flow",
+   "source": "Emergency Department",
+   "target": "",
+   "payload": "receiving considerations"
+  },
+  {
+   "unit_id": "S021",
+   "type": "action",
+   "performer": "",
+   "label": "availability and suitability are considered under regional protocols"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "North Gate Status Board",
+   "label": "provides visible status information relevant to access and movement planning"
+  },
+  {
+   "unit_id": "S022",
+   "type": "action",
+   "performer": "South Gate Status Board",
+   "label": "provides visible status information relevant to access and movement planning"
+  },
+  {
+   "unit_id": "S023",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "provides operational awareness of vehicle serviceability and maintenance constraints"
+  },
+  {
+   "unit_id": "S024",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "reviews dispatch records for completeness, consistency, and compliance with applicable information-handling rules"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "participating jurisdictions",
+   "label": "retain ownership of their resources"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "participating jurisdictions",
+   "label": "remain responsible for local policy"
+  },
+  {
+   "unit_id": "S025",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "coordinates agreed response activity"
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "divides its operating area into defined response zones"
+  },
+  {
+   "unit_id": "S026",
+   "type": "composition",
+   "whole": "operating area",
+   "parts": [
+    "response zones"
+   ]
+  },
+  {
+   "unit_id": "S026",
+   "type": "action",
+   "performer": "dispatch decisions",
+   "label": "reflect distance, road access, and available ambulance capacity"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "",
+   "label": "zone boundaries are maintained with participating jurisdictions"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "",
+   "label": "zone boundaries are reviewed when road networks, population patterns, or service agreements change"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "road networks",
+   "label": "change"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "population patterns",
+   "label": "change"
+  },
+  {
+   "unit_id": "S027",
+   "type": "action",
+   "performer": "service agreements",
+   "label": "change"
+  },
+  {
+   "unit_id": "S028",
+   "type": "attribute",
+   "owner": "response zones",
+   "name": "routes",
+   "value": "primary and alternate routes to the Emergency Department and Riverside Trauma Center, subject to clinical direction and current access conditions"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "consider travel time, road restrictions, weather, and known closures when selecting a route or estimating arrival times"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "select a route"
+  },
+  {
+   "unit_id": "S029",
+   "type": "action",
+   "performer": "Dispatch personnel",
+   "label": "estimate arrival times"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "access conditions",
+   "label": "can change rapidly around hospitals, bridge approaches, and controlled entry points"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "crews",
+   "label": "verify conditions before committing to a constrained route"
+  },
+  {
+   "unit_id": "S030",
+   "type": "action",
+   "performer": "crews",
+   "label": "commit to a constrained route"
+  },
+  {
+   "unit_id": "S031",
+   "type": "action",
+   "performer": "North Gate Status Board",
+   "label": "presents current access and queue conditions for the northern approach"
+  },
+  {
+   "unit_id": "S031",
+   "type": "flow",
+   "source": "North Gate Status Board",
+   "target": "",
+   "payload": "current access and queue conditions"
+  },
+  {
+   "unit_id": "S032",
+   "type": "action",
+   "performer": "South Gate Status Board",
+   "label": "presents current access conditions for the southern approach, including restrictions that may affect ambulance entry"
+  },
+  {
+   "unit_id": "S032",
+   "type": "flow",
+   "source": "South Gate Status Board",
+   "target": "",
+   "payload": "current access conditions for the southern approach, including restrictions that may affect ambulance entry"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "",
+   "label": "Both gate boards are checked at shift start"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "",
+   "label": "Both gate boards are checked whenever a reported access change could affect response or hospital arrival"
+  },
+  {
+   "unit_id": "S033",
+   "type": "action",
+   "performer": "reported access change",
+   "label": "could affect response or hospital arrival"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "North Gate Status Board",
+   "label": "produces the North Approach Queue Snapshot"
+  },
+  {
+   "unit_id": "S034",
+   "type": "flow",
+   "source": "North Gate Status Board",
+   "target": "",
+   "payload": "North Approach Queue Snapshot"
+  },
+  {
+   "unit_id": "S034",
+   "type": "action",
+   "performer": "",
+   "label": "maintaining an up-to-date view of northern approach congestion"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "monitors the Regional Radio Network"
+  },
+  {
+   "unit_id": "S036",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "helps maintain clear communications among dispatch personnel and ambulance crews"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "confirms that assigned channels are available at the start of each shift"
+  },
+  {
+   "unit_id": "S037",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "confirms that backup communications procedures are understood at the start of each shift"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Radio checks",
+   "label": "verify coverage in known weak-signal areas"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "Radio checks",
+   "label": "identify equipment or network problems before demand rises"
+  },
+  {
+   "unit_id": "S038",
+   "type": "action",
+   "performer": "demand",
+   "label": "rises"
+  },
+  {
+   "unit_id": "S038",
+   "type": "succession",
+   "before": "identify equipment or network problems before demand rises",
+   "after": "rises"
+  },
+  {
+   "unit_id": "S040",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "monitors vehicle availability, scheduled servicing, and reported defects that could reduce zone coverage"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "produces the Battery Swap Voucher to document an authorized battery replacement"
+  },
+  {
+   "unit_id": "S041",
+   "type": "flow",
+   "source": "Fleet Maintenance Cell",
+   "target": "",
+   "payload": "Battery Swap Voucher"
+  },
+  {
+   "unit_id": "S041",
+   "type": "action",
+   "performer": "Battery Swap Voucher",
+   "label": "document an authorized battery replacement"
+  },
+  {
+   "unit_id": "S042",
+   "type": "action",
+   "performer": "readiness checks",
+   "label": "confirm that each available ambulance has suitable staffing, functioning communications equipment, and required clinical supplies"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "readiness checks",
+   "label": "confirm fuel status, vehicle condition, and any maintenance restrictions recorded for the unit"
+  },
+  {
+   "unit_id": "S043",
+   "type": "action",
+   "performer": "",
+   "label": "maintenance restrictions are recorded for the unit"
+  },
+  {
+   "unit_id": "S044",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "provides a shared operational view of zone coverage and unit availability"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "label": "supports dispatch work"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "operational staff",
+   "label": "remain responsible for verifying that displayed information is current"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "",
+   "label": "displayed information"
+  },
+  {
+   "unit_id": "S045",
+   "type": "action",
+   "performer": "operational staff",
+   "label": "verifying that displayed information is current"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "reviews readiness concerns"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "readiness concerns",
+   "label": "may require repositioning resources"
+  },
+  {
+   "unit_id": "S046",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "adjusting local coverage plans"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "coordinates clinical prioritization with dispatch operations"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "demand",
+   "label": "demand changes"
+  },
+  {
+   "unit_id": "S047",
+   "type": "action",
+   "performer": "access conditions",
+   "label": "access conditions change"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "reports new access barriers"
+  },
+  {
+   "unit_id": "S048",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "",
+   "payload": "new access barriers"
+  },
+  {
+   "unit_id": "S048",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "reports vehicle readiness concerns"
+  },
+  {
+   "unit_id": "S048",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "",
+   "payload": "vehicle readiness concerns"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "compares reported conditions with current zone coverage"
+  },
+  {
+   "unit_id": "S049",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "escalates unresolved readiness gaps to the appropriate operational lead"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "performer": "",
+   "label": "Readiness status is reassessed"
+  },
+  {
+   "unit_id": "S050",
+   "type": "action",
+   "performer": "",
+   "label": "changes to routes and access conditions"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "handles incoming emergency calls"
+  },
+  {
+   "unit_id": "S051",
+   "type": "action",
+   "performer": "controlled intake process",
+   "label": "creates an incident record for coordination"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "establishes the caller's location"
+  },
+  {
+   "unit_id": "S054",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "collecting medical details"
+  },
+  {
+   "unit_id": "S054",
+   "type": "succession",
+   "before": "establishes the caller's location",
+   "after": "collecting medical details"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "asks for the street address, municipality, and any building, floor, or entrance information"
+  },
+  {
+   "unit_id": "S055",
+   "type": "action",
+   "performer": "",
+   "label": "find the patient"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "confirms the location"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "repeating the address"
+  },
+  {
+   "unit_id": "S056",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "checking it against the caller's description of nearby landmarks"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "asks whether the caller can provide a callback number"
+  },
+  {
+   "unit_id": "S057",
+   "type": "action",
+   "performer": "caller",
+   "label": "provide a callback number"
+  },
+  {
+   "unit_id": "S058",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "gathers the patient's age, level of consciousness, breathing status, and the main reason emergency help is needed"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "uses direct questions to distinguish observed symptoms from information reported by someone else"
+  },
+  {
+   "unit_id": "S059",
+   "type": "action",
+   "performer": "someone else",
+   "label": "reported information"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "records the time symptoms began"
+  },
+  {
+   "unit_id": "S060",
+   "type": "action",
+   "performer": "caller",
+   "label": "provide a reliable estimate"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "notes access barriers such as locked entrances, restricted roads, or difficulty reaching the patient"
+  },
+  {
+   "unit_id": "S061",
+   "type": "action",
+   "performer": "",
+   "label": "reaching the patient"
+  },
+  {
+   "unit_id": "S062",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "produces the Caller Location Correction Slip"
+  },
+  {
+   "unit_id": "S063",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "label": "checks entered location details against available address and map data"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "location",
+   "label": "does not resolve cleanly"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "asks focused follow-up questions"
+  },
+  {
+   "unit_id": "S064",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "updates the incident record"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "remains engaged with the caller"
+  },
+  {
+   "unit_id": "S065",
+   "type": "action",
+   "performer": "further information",
+   "label": "could change the response priority or access plan"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "supports intake coordination"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "confirming facility capabilities"
+  },
+  {
+   "unit_id": "S066",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "clarifying hospital contact pathways"
+  },
+  {
+   "unit_id": "S067",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "checks whether a reported destination preference is compatible with current facility capabilities"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "facility constraint",
+   "label": "affects coordination"
+  },
+  {
+   "unit_id": "S068",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "records the constraint in the incident notes"
+  },
+  {
+   "unit_id": "S068",
+   "type": "succession",
+   "before": "affects coordination",
+   "after": "records the constraint in the incident notes"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "",
+   "label": "an ambulance arrival has been confirmed"
+  },
+  {
+   "unit_id": "S069",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "produces the Bedside Arrival Receipt"
+  },
+  {
+   "unit_id": "S069",
+   "type": "succession",
+   "before": "an ambulance arrival has been confirmed",
+   "after": "produces the Bedside Arrival Receipt"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "provides current facility information through established coordination channels"
+  },
+  {
+   "unit_id": "S070",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "delaying emergency call intake"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "reviews incidents"
+  },
+  {
+   "unit_id": "S071",
+   "type": "action",
+   "performer": "reported symptoms or uncertainty",
+   "label": "warrant clinical escalation"
+  },
+  {
+   "unit_id": "S072",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "monitors intake records for recurring gaps in location or medical detail"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "updates the incident record"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "caller",
+   "label": "provides new information"
+  },
+  {
+   "unit_id": "S073",
+   "type": "action",
+   "performer": "",
+   "label": "dispatch decisions are finalized"
+  },
+  {
+   "unit_id": "S073",
+   "type": "succession",
+   "before": "provides new information",
+   "after": "updates the incident record"
+  },
+  {
+   "unit_id": "S073",
+   "type": "succession",
+   "before": "updates the incident record",
+   "after": "dispatch decisions are finalized"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "preserves the original caller report alongside subsequent clarifications"
+  },
+  {
+   "unit_id": "S074",
+   "type": "action",
+   "performer": "responders",
+   "label": "distinguish confirmed details from estimates"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Clinical triage",
+   "label": "begins"
+  },
+  {
+   "unit_id": "S075",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "has captured the caller's reported symptoms, location, and immediate hazards"
+  },
+  {
+   "unit_id": "S075",
+   "type": "succession",
+   "before": "has captured the caller's reported symptoms, location, and immediate hazards",
+   "after": "begins"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "recorded information",
+   "label": "provides an initial basis for assigning urgency"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "",
+   "label": "assigning urgency"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "recorded information",
+   "label": "does not replace clinical reassessment"
+  },
+  {
+   "unit_id": "S076",
+   "type": "action",
+   "performer": "",
+   "label": "new information arrives"
+  },
+  {
+   "unit_id": "S077",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "reviews incidents with uncertain severity, conflicting reports, or signs of rapid deterioration"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "priority",
+   "label": "is based on the immediacy of threat to life, the likely time sensitivity of care, and the risk of deterioration while awaiting response"
+  },
+  {
+   "unit_id": "S078",
+   "type": "action",
+   "performer": "",
+   "label": "awaiting response"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "incidents",
+   "label": "indicating an immediate threat"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "incidents indicating an immediate threat",
+   "label": "receive the highest available response priority"
+  },
+  {
+   "unit_id": "S079",
+   "type": "action",
+   "performer": "incidents indicating an immediate threat",
+   "label": "prompt dispatch action"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "incidents without an immediate threat",
+   "label": "are prioritized according to the expected harm from delay and the patient's reported condition"
+  },
+  {
+   "unit_id": "S080",
+   "type": "action",
+   "performer": "",
+   "label": "awaiting response"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "essential information",
+   "label": "is missing"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "directs focused clarification"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "ensuring that information gathering does not delay an urgent response"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "",
+   "label": "information gathering"
+  },
+  {
+   "unit_id": "S081",
+   "type": "action",
+   "performer": "information gathering",
+   "label": "does not delay an urgent response"
+  },
+  {
+   "unit_id": "S082",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "escalates clinically ambiguous or unusually severe cases to Regional Medical Director for guidance"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "provides clinical policy guidance"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "clinical policy guidance",
+   "label": "does not replace the operational authority responsible for dispatch decisions"
+  },
+  {
+   "unit_id": "S083",
+   "type": "action",
+   "performer": "operational authority",
+   "label": "responsible for dispatch decisions"
+  },
+  {
+   "unit_id": "S084",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "sends the Pediatric Acuity Note"
+  },
+  {
+   "unit_id": "S084",
+   "type": "flow",
+   "source": "Triage Supervisor",
+   "target": "",
+   "payload": "Pediatric Acuity Note"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "monitors incident records for missing, inconsistent, or duplicated information"
+  },
+  {
+   "unit_id": "S087",
+   "type": "action",
+   "performer": "missing, inconsistent, or duplicated information",
+   "label": "could impair triage or dispatch"
+  },
+  {
+   "unit_id": "S088",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "sends the Duplicate Incident Audit Memo"
+  },
+  {
+   "unit_id": "S088",
+   "type": "flow",
+   "source": "Data Quality Officer",
+   "target": "",
+   "payload": "Duplicate Incident Audit Memo"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "flags data defects for review"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "data defects",
+   "label": "review"
+  },
+  {
+   "unit_id": "S089",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "does not independently change a clinical priority"
+  },
+  {
+   "unit_id": "S090",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "label": "presents the current incident details and assigned priority to authorized dispatch staff"
+  },
+  {
+   "unit_id": "S090",
+   "type": "flow",
+   "source": "Computer Aided Dispatch Console",
+   "target": "authorized dispatch staff",
+   "payload": "current incident details"
+  },
+  {
+   "unit_id": "S090",
+   "type": "flow",
+   "source": "Computer Aided Dispatch Console",
+   "target": "authorized dispatch staff",
+   "payload": "assigned priority"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "action": "uses the recorded priority alongside unit availability and operational constraints when coordinating response resources"
+  },
+  {
+   "unit_id": "S091",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "action": "coordinating response resources"
+  },
+  {
+   "unit_id": "S092",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "communicates dispatch instructions and priority changes over Regional Radio Network"
+  },
+  {
+   "unit_id": "S092",
+   "type": "flow",
+   "source": "Radio Coordinator",
+   "target": "Regional Radio Network",
+   "payload": "dispatch instructions and priority changes"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "action": "reports material changes in patient condition"
+  },
+  {
+   "unit_id": "S093",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "null",
+   "payload": "material changes in patient condition"
+  },
+  {
+   "unit_id": "S093",
+   "type": "action",
+   "performer": "null",
+   "action": "the incident can be reassessed promptly"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "action": "follows the active dispatch instructions"
+  },
+  {
+   "unit_id": "S094",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "action": "requests clarification when the incident details do not support safe response"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "Emergency Department",
+   "action": "may provide operationally relevant capacity information"
+  },
+  {
+   "unit_id": "S095",
+   "type": "action",
+   "performer": "null",
+   "action": "clinical triage remains governed by approved regional protocols"
+  },
+  {
+   "unit_id": "S096",
+   "type": "action",
+   "performer": "null",
+   "action": "Riverside Trauma Center is considered for destination coordination"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "null",
+   "action": "Shift Commander is notified"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "null",
+   "action": "competing high-priority incidents exceed available response capacity"
+  },
+  {
+   "unit_id": "S097",
+   "type": "action",
+   "performer": "null",
+   "action": "incidents require an operational exception"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "action": "reviews whether priority changes and their supporting rationale are recorded consistently for later assessment"
+  },
+  {
+   "unit_id": "S098",
+   "type": "action",
+   "performer": "null",
+   "action": "priority changes and their supporting rationale are recorded consistently for later assessment"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "action": "preserves the original caller report alongside subsequent clarifications"
+  },
+  {
+   "unit_id": "S099",
+   "type": "action",
+   "performer": "responders",
+   "action": "distinguish confirmed details from estimates"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "action": "reviews significant disagreements about urgency"
+  },
+  {
+   "unit_id": "S100",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "action": "records the basis for the final operational priority"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "null",
+   "action": "Resource selection begins"
+  },
+  {
+   "unit_id": "S101",
+   "type": "action",
+   "performer": "null",
+   "action": "the operational priority and essential response requirements have been confirmed"
+  },
+  {
+   "unit_id": "S101",
+   "type": "succession",
+   "before": "the operational priority and essential response requirements have been confirmed",
+   "after": "Resource selection begins"
+  },
+  {
+   "unit_id": "S102",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "action": "presents units whose reported status and capabilities match the incident requirements"
+  },
+  {
+   "unit_id": "S102",
+   "type": "flow",
+   "source": "Ambulance Coordination Platform",
+   "target": "null",
+   "payload": "units whose reported status and capabilities match the incident requirements"
+  },
+  {
+   "unit_id": "S103",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "action": "displays estimated travel times, unit availability, and relevant access constraints"
+  },
+  {
+   "unit_id": "S103",
+   "type": "flow",
+   "source": "Computer Aided Dispatch Console",
+   "target": "null",
+   "payload": "estimated travel times, unit availability, and relevant access constraints"
+  },
+  {
+   "unit_id": "S104",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "action": "confirms that the selected response level remains consistent with the caller information"
+  },
+  {
+   "unit_id": "S105",
+   "type": "action",
+   "performer": "null",
+   "action": "The selection decision weighs clinical need, travel time, vehicle capability, crew readiness, and regional coverage"
+  },
+  {
+   "unit_id": "S106",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "action": "provides current information about vehicles that are unavailable or restricted"
+  },
+  {
+   "unit_id": "S107",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "checks that the proposed unit can be reached on the Regional Radio Network"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "dispatcher",
+   "action": "may recommend a unit"
+  },
+  {
+   "unit_id": "S108",
+   "type": "action",
+   "performer": "null",
+   "action": "dispatch authorization must follow the current regional approval rules"
+  },
+  {
+   "unit_id": "S108",
+   "type": "requirement",
+   "subject": "dispatch authorization",
+   "text": "dispatch authorization must follow the current regional approval rules"
+  },
+  {
+   "unit_id": "S109",
+   "type": "action",
+   "performer": "Shift Commander",
+   "action": "approves exceptions that would materially reduce local coverage or require a nonstandard response"
+  },
+  {
+   "unit_id": "S110",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "action": "may advise on clinical resource requirements when the incident presents an unusual care need"
+  },
+  {
+   "unit_id": "S111",
+   "type": "action",
+   "performer": "dispatcher",
+   "action": "records the authorized unit and any conditions attached to its assignment"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "action": "produces the Unit Staging Change Card when a previously selected unit must be repositioned"
+  },
+  {
+   "unit_id": "S112",
+   "type": "action",
+   "performer": "null",
+   "action": "a previously selected unit must be repositioned"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "selects the appropriate talkgroup"
+  },
+  {
+   "unit_id": "S113",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "confirms that it is available"
+  },
+  {
+   "unit_id": "S113",
+   "type": "succession",
+   "before": "confirms that the appropriate talkgroup is available",
+   "after": "transmitting"
+  },
+  {
+   "unit_id": "S114",
+   "type": "action",
+   "performer": "null",
+   "action": "The dispatch transmission states the incident identifier, location, priority, response assignment, and any immediate hazard information"
+  },
+  {
+   "unit_id": "S114",
+   "type": "flow",
+   "source": "null",
+   "target": "null",
+   "payload": "incident identifier, location, priority, response assignment, and any immediate hazard information"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "action": "acknowledges the assignment"
+  },
+  {
+   "unit_id": "S115",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "action": "repeats the location and priority for confirmation"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "dispatcher",
+   "action": "corrects any discrepancy through a fresh transmission"
+  },
+  {
+   "unit_id": "S116",
+   "type": "flow",
+   "source": "dispatcher",
+   "target": "null",
+   "payload": "any discrepancy"
+  },
+  {
+   "unit_id": "S116",
+   "type": "action",
+   "performer": "dispatcher",
+   "action": "relying on an unclear acknowledgment"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "attempts contact again"
+  },
+  {
+   "unit_id": "S117",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "alerts the dispatch supervisor"
+  },
+  {
+   "unit_id": "S118",
+   "type": "action",
+   "performer": "North Gate Status Board and South Gate Status Board",
+   "action": "support routing decisions when access conditions are changing"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Dispatchers",
+   "action": "state a confirmed gate or approach constraint explicitly"
+  },
+  {
+   "unit_id": "S119",
+   "type": "action",
+   "performer": "Dispatchers",
+   "action": "identify any uncertainty in the information"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "null",
+   "action": "The controlled handoff occurs"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "action": "has acknowledged the assignment"
+  },
+  {
+   "unit_id": "S120",
+   "type": "action",
+   "performer": "dispatch floor",
+   "action": "has confirmed the essential details"
+  },
+  {
+   "unit_id": "S120",
+   "type": "succession",
+   "before": "Paramedic Crew has acknowledged the assignment",
+   "after": "The controlled handoff occurs"
+  },
+  {
+   "unit_id": "S120",
+   "type": "succession",
+   "before": "dispatch floor has confirmed the essential details",
+   "after": "The controlled handoff occurs"
+  },
+  {
+   "unit_id": "S121",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "action": "reports any material conflict between the transmitted route and conditions observed in the field"
+  },
+  {
+   "unit_id": "S121",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "null",
+   "payload": "material conflict between the transmitted route and conditions observed in the field"
+  },
+  {
+   "unit_id": "S122",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "action": "coordinates destination information with the receiving Emergency Department when required"
+  },
+  {
+   "unit_id": "S123",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "action": "sends the Coverage Gap Bulletin when available ambulance coverage falls below the regional threshold"
+  },
+  {
+   "unit_id": "S123",
+   "type": "flow",
+   "source": "Radio Coordinator",
+   "target": "null",
+   "payload": "Coverage Gap Bulletin"
+  },
+  {
+   "unit_id": "S124",
+   "type": "action",
+   "performer": "Juniper",
+   "action": "records the authorization time and the reason for selecting the assigned unit"
+  },
+  {
+   "unit_id": "S125",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "action": "maintains a regional coverage picture from current unit locations, crew reports, and readiness information"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "action": "consolidates unit position and status"
+  },
+  {
+   "unit_id": "S126",
+   "type": "action",
+   "performer": "dispatchers",
+   "action": "can compare available coverage across the region"
+  },
+  {
+   "unit_id": "S127",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "action": "presents staging options that account for response demand, travel time, and access constraints"
+  },
+  {
+   "unit_id": "S127",
+   "type": "flow",
+   "source": "Computer Aided Dispatch Console",
+   "target": "null",
+   "payload": "staging options"
+  },
+  {
+   "unit_id": "S128",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "action": "reports when a unit is available, responding, on scene, transporting, or temporarily unavailable"
+  },
+  {
+   "unit_id": "S128",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "null",
+   "payload": "unit status: available, responding, on scene, transporting, or temporarily unavailable"
+  },
+  {
+   "unit_id": "S128",
+   "type": "state",
+   "owner": "unit",
+   "label": "available"
+  },
+  {
+   "unit_id": "S128",
+   "type": "state",
+   "owner": "unit",
+   "label": "responding"
+  },
+  {
+   "unit_id": "S128",
+   "type": "state",
+   "owner": "unit",
+   "label": "on scene"
+  },
+  {
+   "unit_id": "S128",
+   "type": "state",
+   "owner": "unit",
+   "label": "transporting"
+  },
+  {
+   "unit_id": "S128",
+   "type": "state",
+   "owner": "unit",
+   "label": "temporarily unavailable"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "Crews",
+   "action": "update their status promptly after a material change"
+  },
+  {
+   "unit_id": "S129",
+   "type": "action",
+   "performer": "dispatch decisions",
+   "action": "reflect the unit's actual condition"
+  },
+  {
+   "unit_id": "S130",
+   "type": "action",
+   "performer": "Regional Radio Network",
+   "action": "carries route instructions and crew acknowledgments between dispatch and field units"
+  },
+  {
+   "unit_id": "S130",
+   "type": "flow",
+   "source": "Regional Radio Network",
+   "target": "dispatch",
+   "payload": "route instructions and crew acknowledgments"
+  },
+  {
+   "unit_id": "S130",
+   "type": "flow",
+   "source": "Regional Radio Network",
+   "target": "field units",
+   "payload": "route instructions and crew acknowledgments"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "Mistral",
+   "action": "confirms approved route changes over the Regional Radio Network"
+  },
+  {
+   "unit_id": "S131",
+   "type": "flow",
+   "source": "Mistral",
+   "target": "Regional Radio Network",
+   "payload": "approved route changes"
+  },
+  {
+   "unit_id": "S131",
+   "type": "action",
+   "performer": "crew",
+   "action": "diverts"
+  },
+  {
+   "unit_id": "S131",
+   "type": "succession",
+   "before": "confirms approved route changes over the Regional Radio Network",
+   "after": "crew diverts"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "Bluejay",
+   "action": "verifies maintenance clearance"
+  },
+  {
+   "unit_id": "S132",
+   "type": "action",
+   "performer": "unit",
+   "action": "returns to available status"
+  },
+  {
+   "unit_id": "S132",
+   "type": "succession",
+   "before": "verifies maintenance clearance",
+   "after": "unit returns to available status"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "action": "reports its position and operating status"
+  },
+  {
+   "unit_id": "S133",
+   "type": "flow",
+   "source": "Ambulance Unit 417",
+   "target": "null",
+   "payload": "its position and operating status"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "action": "enters a staging area"
+  },
+  {
+   "unit_id": "S133",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "action": "leaves a staging area"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "crew",
+   "action": "remains at its assigned staging point"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "dispatch",
+   "action": "confirms a new location"
+  },
+  {
+   "unit_id": "S134",
+   "type": "action",
+   "performer": "dispatch",
+   "action": "confirms a direct response assignment"
+  },
+  {
+   "unit_id": "S135",
+   "type": "action",
+   "performer": "South Gate Status Board",
+   "action": "displays current access conditions for units approaching the southern entry"
+  },
+  {
+   "unit_id": "S135",
+   "type": "flow",
+   "source": "South Gate Status Board",
+   "target": "null",
+   "payload": "current access conditions"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Sundial",
+   "action": "reviews the regional coverage picture"
+  },
+  {
+   "unit_id": "S136",
+   "type": "action",
+   "performer": "Sundial",
+   "action": "approves a staging move"
+  },
+  {
+   "unit_id": "S136",
+   "type": "succession",
+   "before": "reviews the regional coverage picture",
+   "after": "approves a staging move"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "Shift Commander",
+   "action": "sends the Mutual Aid Release Form when a neighboring service is released from regional coverage"
+  },
+  {
+   "unit_id": "S137",
+   "type": "flow",
+   "source": "Shift Commander",
+   "target": "null",
+   "payload": "Mutual Aid Release Form"
+  },
+  {
+   "unit_id": "S137",
+   "type": "action",
+   "performer": "null",
+   "action": "a neighboring service is released from regional coverage"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "uses the swap voucher"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "confirm that a unit's battery readiness is current"
+  },
+  {
+   "unit_id": "S138",
+   "type": "action",
+   "performer": "null",
+   "label": "is placed in service"
+  },
+  {
+   "unit_id": "S138",
+   "type": "succession",
+   "before": "confirm that a unit's battery readiness is current",
+   "after": "is placed in service"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "uses the queue snapshot"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "account for congestion approaching the northern entry"
+  },
+  {
+   "unit_id": "S139",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "assigning a route"
+  },
+  {
+   "unit_id": "S139",
+   "type": "succession",
+   "before": "account for congestion approaching the northern entry",
+   "after": "assigning a route"
+  },
+  {
+   "unit_id": "S140",
+   "type": "action",
+   "performer": "North Gate Status Board",
+   "label": "displays the latest queue condition and access restriction for units approaching the northern entry"
+  },
+  {
+   "unit_id": "S140",
+   "type": "flow",
+   "source": "North Gate Status Board",
+   "target": "unit",
+   "payload": "the latest queue condition and access restriction"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "advises dispatch"
+  },
+  {
+   "unit_id": "S141",
+   "type": "flow",
+   "source": "Triage Supervisor",
+   "target": "dispatch",
+   "payload": "changes in clinical demand"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "changes in clinical demand",
+   "label": "may require repositioning available units"
+  },
+  {
+   "unit_id": "S141",
+   "type": "action",
+   "performer": "dispatch",
+   "label": "repositioning available units"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "establishes clinical priorities"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "dispatch",
+   "label": "applies clinical priorities"
+  },
+  {
+   "unit_id": "S142",
+   "type": "action",
+   "performer": "dispatch",
+   "label": "assigning units during elevated demand"
+  },
+  {
+   "unit_id": "S143",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "provides receiving-facility capacity information for consideration during transport planning"
+  },
+  {
+   "unit_id": "S143",
+   "type": "flow",
+   "source": "Hospital Liaison Desk",
+   "target": "null",
+   "payload": "receiving-facility capacity information"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "dispatchers",
+   "label": "compare projected response times with remaining coverage"
+  },
+  {
+   "unit_id": "S144",
+   "type": "action",
+   "performer": "dispatchers",
+   "label": "moving a unit away from its current area"
+  },
+  {
+   "unit_id": "S144",
+   "type": "succession",
+   "before": "compare projected response times with remaining coverage",
+   "after": "moving a unit away from its current area"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "reviews inconsistent location or status reports"
+  },
+  {
+   "unit_id": "S145",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "routes corrections through the established operational process"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "retains time-stamped status changes"
+  },
+  {
+   "unit_id": "S146",
+   "type": "action",
+   "performer": "supervisor",
+   "label": "review the sequence of unit movement"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "crew",
+   "label": "advises dispatch"
+  },
+  {
+   "unit_id": "S147",
+   "type": "flow",
+   "source": "crew",
+   "target": "dispatch",
+   "payload": "a road closure, unsafe condition, or unexpected delay"
+  },
+  {
+   "unit_id": "S147",
+   "type": "action",
+   "performer": "road closure, unsafe condition, or unexpected delay",
+   "label": "makes the assigned route unsuitable"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "records the approved alternative route"
+  },
+  {
+   "unit_id": "S148",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "checks that the change does not leave a critical area without reasonable coverage"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "coordinates destination consultation"
+  },
+  {
+   "unit_id": "S149",
+   "type": "action",
+   "performer": "patient condition or operating status of a facility",
+   "label": "may affect the assignment"
+  },
+  {
+   "unit_id": "S150",
+   "type": "action",
+   "performer": "consultation",
+   "label": "uses the patient's reported condition, transport estimate, and current facility acceptance information"
+  },
+  {
+   "unit_id": "S151",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "provides clinical guidance"
+  },
+  {
+   "unit_id": "S151",
+   "type": "flow",
+   "source": "Regional Medical Director",
+   "target": "null",
+   "payload": "clinical guidance"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "contacts the Emergency Department"
+  },
+  {
+   "unit_id": "S152",
+   "type": "action",
+   "performer": "Emergency Department",
+   "label": "confirm whether the proposed destination can receive the patient"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "uses the correction slip"
+  },
+  {
+   "unit_id": "S153",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "reconcile a reported destination change with the active incident record"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "Larkspur",
+   "label": "confirms the incident identifier and intended receiving facility"
+  },
+  {
+   "unit_id": "S154",
+   "type": "action",
+   "performer": "null",
+   "label": "the destination request is transmitted"
+  },
+  {
+   "unit_id": "S154",
+   "type": "succession",
+   "before": "confirms the incident identifier and intended receiving facility",
+   "after": "the destination request is transmitted"
+  },
+  {
+   "unit_id": "S154",
+   "type": "flow",
+   "source": "null",
+   "target": "null",
+   "payload": "destination request"
+  },
+  {
+   "unit_id": "S155",
+   "type": "action",
+   "performer": "Emergency Department",
+   "label": "advises the Hospital Liaison Desk of relevant capacity limits, access constraints, or changes to its receiving status"
+  },
+  {
+   "unit_id": "S155",
+   "type": "flow",
+   "source": "Emergency Department",
+   "target": "Hospital Liaison Desk",
+   "payload": "relevant capacity limits, access constraints, or changes to its receiving status"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "records the consultation outcome"
+  },
+  {
+   "unit_id": "S156",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "communicates any destination restriction to the Regional Dispatch Center"
+  },
+  {
+   "unit_id": "S156",
+   "type": "flow",
+   "source": "Hospital Liaison Desk",
+   "target": "Regional Dispatch Center",
+   "payload": "any destination restriction"
+  },
+  {
+   "unit_id": "S157",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "evaluates the consultation outcome against patient acuity, transport time, and available ambulance coverage"
+  },
+  {
+   "unit_id": "S158",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "presents the approved destination and any associated operational instructions to dispatch staff"
+  },
+  {
+   "unit_id": "S158",
+   "type": "flow",
+   "source": "Ambulance Coordination Platform",
+   "target": "dispatch staff",
+   "payload": "the approved destination and any associated operational instructions"
+  },
+  {
+   "unit_id": "S159",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "relays destination instructions to the Paramedic Crew over the Regional Radio Network"
+  },
+  {
+   "unit_id": "S159",
+   "type": "flow",
+   "source": "Radio Coordinator",
+   "target": "Paramedic Crew",
+   "payload": "destination instructions"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "acknowledges the destination"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "advises dispatch if conditions require renewed consultation"
+  },
+  {
+   "unit_id": "S160",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "dispatch",
+   "payload": "conditions requiring renewed consultation"
+  },
+  {
+   "unit_id": "S160",
+   "type": "action",
+   "performer": "conditions",
+   "label": "require renewed consultation"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "South Gate Status Board",
+   "label": "produces the South Access Lane Notice when the south approach has a material access constraint"
+  },
+  {
+   "unit_id": "S161",
+   "type": "flow",
+   "source": "South Gate Status Board",
+   "target": "null",
+   "payload": "South Access Lane Notice"
+  },
+  {
+   "unit_id": "S161",
+   "type": "action",
+   "performer": "south approach",
+   "label": "has a material access constraint"
+  },
+  {
+   "unit_id": "S162",
+   "type": "action",
+   "performer": "South Gate Status Board",
+   "label": "displays current access information for crews approaching the receiving facility through the south entrance"
+  },
+  {
+   "unit_id": "S162",
+   "type": "flow",
+   "source": "South Gate Status Board",
+   "target": "crew",
+   "payload": "current access information"
+  },
+  {
+   "unit_id": "S163",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "reviews access constraints that could affect arrival timing or safe patient transfer"
+  },
+  {
+   "unit_id": "S164",
+   "type": "action",
+   "performer": "Regional Radio Network",
+   "label": "supports updates between dispatch and the Paramedic Crew while the ambulance is en route"
+  },
+  {
+   "unit_id": "S164",
+   "type": "flow",
+   "source": "dispatch",
+   "target": "Paramedic Crew",
+   "payload": "updates"
+  },
+  {
+   "unit_id": "S164",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "dispatch",
+   "payload": "updates"
+  },
+  {
+   "unit_id": "S165",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "receives the Bedside Arrival Receipt"
+  },
+  {
+   "unit_id": "S165",
+   "type": "flow",
+   "source": "null",
+   "target": "Call Taker Mara",
+   "payload": "Bedside Arrival Receipt"
+  },
+  {
+   "unit_id": "S166",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "verifies that the recorded arrival time is consistent with the dispatch timeline and crew communications"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "label": "reports arrival at the receiving facility"
+  },
+  {
+   "unit_id": "S167",
+   "type": "flow",
+   "source": "Ambulance Unit 417",
+   "target": "receiving facility",
+   "payload": "arrival"
+  },
+  {
+   "unit_id": "S167",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "label": "confirms when patient handover is complete"
+  },
+  {
+   "unit_id": "S167",
+   "type": "succession",
+   "before": "reports arrival at the receiving facility",
+   "after": "confirms when patient handover is complete"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Emergency Department and Paramedic Crew",
+   "label": "clarify any discrepancy in patient identity or transfer documentation"
+  },
+  {
+   "unit_id": "S168",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "clears the facility"
+  },
+  {
+   "unit_id": "S168",
+   "type": "succession",
+   "before": "clarify any discrepancy in patient identity or transfer documentation",
+   "after": "clears the facility"
+  },
+  {
+   "unit_id": "S169",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "reviews incomplete arrival or handover fields during routine record-quality checks"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "updates the incident status"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "null",
+   "label": "receiving confirmation that the patient has been transferred to facility care"
+  },
+  {
+   "unit_id": "S170",
+   "type": "action",
+   "performer": "patient",
+   "label": "has been transferred to facility care"
+  },
+  {
+   "unit_id": "S170",
+   "type": "succession",
+   "before": "receiving confirmation that the patient has been transferred to facility care",
+   "after": "updates the incident status"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "remains available to resolve facility-level questions that arise during or immediately after handover"
+  },
+  {
+   "unit_id": "S171",
+   "type": "action",
+   "performer": "facility-level questions",
+   "label": "arise during or immediately after handover"
+  },
+  {
+   "unit_id": "S172",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "escalates unresolved destination or access issues through established regional coordination procedures"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "Surge operations",
+   "label": "begin when queue age, simultaneous high-priority calls, or staffed unit availability crosses thresholds approved by regional policy"
+  },
+  {
+   "unit_id": "S173",
+   "type": "action",
+   "performer": "queue age, simultaneous high-priority calls, or staffed unit availability",
+   "label": "crosses thresholds approved by regional policy"
+  },
+  {
+   "unit_id": "S173",
+   "type": "transition",
+   "from": "null",
+   "to": "Surge operations",
+   "trigger": "queue age, simultaneous high-priority calls, or staffed unit availability crosses thresholds approved by regional policy"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "monitors these indicators continuously"
+  },
+  {
+   "unit_id": "S174",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "declares the applicable surge level when a threshold is met"
+  },
+  {
+   "unit_id": "S175",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "label": "displays the current surge level and the operational constraints reported by field and facility staff"
+  },
+  {
+   "unit_id": "S175",
+   "type": "flow",
+   "source": "Computer Aided Dispatch Console",
+   "target": "null",
+   "payload": "the current surge level and the operational constraints reported by field and facility staff"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "validates the declaration"
+  },
+  {
+   "unit_id": "S176",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "confirms that call prioritization remains consistent with clinical protocols"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "assigns coordination responsibilities"
+  },
+  {
+   "unit_id": "S177",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "reviews whether normal coverage can be maintained during the surge"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "provides clinical direction"
+  },
+  {
+   "unit_id": "S178",
+   "type": "flow",
+   "source": "Regional Medical Director",
+   "target": "null",
+   "payload": "clinical direction"
+  },
+  {
+   "unit_id": "S178",
+   "type": "action",
+   "performer": "demand",
+   "label": "exceeds routine triage guidance or requires a regional protocol adjustment"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "uses the Pediatric Acuity Note"
+  },
+  {
+   "unit_id": "S179",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "convey pediatric monitoring and destination considerations to receiving staff"
+  },
+  {
+   "unit_id": "S179",
+   "type": "flow",
+   "source": "Hospital Liaison Desk",
+   "target": "receiving staff",
+   "payload": "pediatric monitoring and destination considerations"
+  },
+  {
+   "unit_id": "S180",
+   "type": "action",
+   "performer": "Pediatric calls with concerning airway, breathing, circulation, or mental status findings",
+   "label": "receive prompt clinical escalation under approved protocols"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "obtains the age, weight when available, and caregiver observations needed to support pediatric triage"
+  },
+  {
+   "unit_id": "S181",
+   "type": "action",
+   "performer": "age, weight, and caregiver observations",
+   "label": "support pediatric triage"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "reassesses pediatric patients during transport"
+  },
+  {
+   "unit_id": "S182",
+   "type": "action",
+   "performer": "Paramedic Crew",
+   "label": "reports material changes to the receiving facility"
+  },
+  {
+   "unit_id": "S182",
+   "type": "flow",
+   "source": "Paramedic Crew",
+   "target": "receiving facility",
+   "payload": "material changes"
+  },
+  {
+   "unit_id": "S183",
+   "type": "requirement",
+   "subject": "Kestrel",
+   "text": "shall confirm that facility capacity and pediatric service limitations are communicated to dispatch before a destination is finalized."
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "Kestrel",
+   "label": "confirm that facility capacity and pediatric service limitations are communicated to dispatch"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "",
+   "label": "facility capacity and pediatric service limitations are communicated to dispatch"
+  },
+  {
+   "unit_id": "S183",
+   "type": "flow",
+   "source": "",
+   "target": "dispatch",
+   "payload": "facility capacity and pediatric service limitations"
+  },
+  {
+   "unit_id": "S183",
+   "type": "action",
+   "performer": "",
+   "label": "a destination is finalized"
+  },
+  {
+   "unit_id": "S183",
+   "type": "succession",
+   "before": "facility capacity and pediatric service limitations are communicated to dispatch",
+   "after": "a destination is finalized"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "Riverside Trauma Center",
+   "label": "advises Hospital Liaison Desk when trauma intake conditions may affect the suitability of an otherwise appropriate destination"
+  },
+  {
+   "unit_id": "S184",
+   "type": "flow",
+   "source": "Riverside Trauma Center",
+   "target": "Hospital Liaison Desk",
+   "payload": "trauma intake conditions that may affect destination suitability"
+  },
+  {
+   "unit_id": "S184",
+   "type": "action",
+   "performer": "trauma intake conditions",
+   "label": "may affect the suitability of an otherwise appropriate destination"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Emergency Department staff",
+   "label": "acknowledge destination changes through the established coordination channel"
+  },
+  {
+   "unit_id": "S185",
+   "type": "action",
+   "performer": "Emergency Department staff",
+   "label": "identify any immediate access restrictions"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "records facility responses in the regional coordination record"
+  },
+  {
+   "unit_id": "S186",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "keeps dispatch informed of unresolved constraints"
+  },
+  {
+   "unit_id": "S186",
+   "type": "flow",
+   "source": "Hospital Liaison Desk",
+   "target": "dispatch",
+   "payload": "unresolved constraints"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "",
+   "label": "Mutual aid is requested"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "local staffed units",
+   "label": "cannot meet the declared response objectives"
+  },
+  {
+   "unit_id": "S187",
+   "type": "action",
+   "performer": "specialized resource",
+   "label": "is unavailable"
+  },
+  {
+   "unit_id": "S187",
+   "type": "flow",
+   "source": "",
+   "target": "",
+   "payload": "Mutual aid request"
+  },
+  {
+   "unit_id": "S188",
+   "type": "action",
+   "performer": "Regional Radio Network",
+   "label": "carries mutual-aid requests, acceptance confirmations, and operational updates using the agreed regional call signs"
+  },
+  {
+   "unit_id": "S188",
+   "type": "flow",
+   "source": "Regional Radio Network",
+   "target": "",
+   "payload": "mutual-aid requests, acceptance confirmations, and operational updates"
+  },
+  {
+   "unit_id": "S189",
+   "type": "requirement",
+   "subject": "Copperfield",
+   "text": "shall approve any temporary triage override and document its rationale before the override is applied."
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Copperfield",
+   "label": "approve any temporary triage override"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "Copperfield",
+   "label": "document its rationale"
+  },
+  {
+   "unit_id": "S189",
+   "type": "action",
+   "performer": "",
+   "label": "the override is applied"
+  },
+  {
+   "unit_id": "S189",
+   "type": "succession",
+   "before": "approve any temporary triage override",
+   "after": "the override is applied"
+  },
+  {
+   "unit_id": "S189",
+   "type": "succession",
+   "before": "document its rationale",
+   "after": "the override is applied"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "tracks accepted mutual-aid assignments separately from locally staffed resources"
+  },
+  {
+   "unit_id": "S190",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "preserve an accurate coverage view"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "label": "may be reassigned"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "dispatch",
+   "label": "confirms that its current patient-care and transport obligations permit the change"
+  },
+  {
+   "unit_id": "S191",
+   "type": "action",
+   "performer": "patient-care and transport obligations",
+   "label": "permit the change"
+  },
+  {
+   "unit_id": "S191",
+   "type": "succession",
+   "before": "confirms that its current patient-care and transport obligations permit the change",
+   "after": "may be reassigned"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "reports a vehicle restriction promptly"
+  },
+  {
+   "unit_id": "S192",
+   "type": "flow",
+   "source": "Fleet Maintenance Cell",
+   "target": "dispatch",
+   "payload": "vehicle restriction"
+  },
+  {
+   "unit_id": "S192",
+   "type": "action",
+   "performer": "dispatch",
+   "label": "does not count an unavailable unit toward operational coverage"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "reviews the audit memo"
+  },
+  {
+   "unit_id": "S193",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "closing a suspected duplicate incident"
+  },
+  {
+   "unit_id": "S193",
+   "type": "succession",
+   "before": "reviews the audit memo",
+   "after": "closing a suspected duplicate incident"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "reviews unresolved record discrepancies through the established quality process"
+  },
+  {
+   "unit_id": "S194",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "delaying active patient care"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "North Gate Status Board",
+   "label": "provides a current view of access conditions that may affect ambulance approach or handover timing"
+  },
+  {
+   "unit_id": "S195",
+   "type": "flow",
+   "source": "North Gate Status Board",
+   "target": "",
+   "payload": "current view of access conditions"
+  },
+  {
+   "unit_id": "S195",
+   "type": "action",
+   "performer": "access conditions",
+   "label": "may affect ambulance approach or handover timing"
+  },
+  {
+   "unit_id": "S196",
+   "type": "action",
+   "performer": "South Gate Status Board",
+   "label": "provides the equivalent access view for routes and entry points on the southern side of the region"
+  },
+  {
+   "unit_id": "S196",
+   "type": "flow",
+   "source": "South Gate Status Board",
+   "target": "",
+   "payload": "equivalent access view for routes and entry points on the southern side of the region"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "surge conditions",
+   "label": "ease"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "confirms that outstanding assignments, destination constraints, and staffing gaps have been handed over to the next operational period"
+  },
+  {
+   "unit_id": "S197",
+   "type": "action",
+   "performer": "",
+   "label": "outstanding assignments, destination constraints, and staffing gaps have been handed over to the next operational period"
+  },
+  {
+   "unit_id": "S197",
+   "type": "succession",
+   "before": "surge conditions ease",
+   "after": "confirms that outstanding assignments, destination constraints, and staffing gaps have been handed over to the next operational period"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "maintains a degraded-radio procedure"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "degraded-radio procedure",
+   "label": "prioritizes emergency traffic"
+  },
+  {
+   "unit_id": "S198",
+   "type": "action",
+   "performer": "degraded-radio procedure",
+   "label": "preserves a common operating picture"
+  },
+  {
+   "unit_id": "S199",
+   "type": "action",
+   "performer": "Regional Radio Network operators",
+   "label": "announce channel outages, affected areas, and expected restoration times over the remaining service channels"
+  },
+  {
+   "unit_id": "S199",
+   "type": "flow",
+   "source": "Regional Radio Network operators",
+   "target": "",
+   "payload": "channel outages, affected areas, and expected restoration times"
+  },
+  {
+   "unit_id": "S200",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "directs crews to approved fallback channels when the primary channel is unusable"
+  },
+  {
+   "unit_id": "S200",
+   "type": "flow",
+   "source": "Radio Coordinator",
+   "target": "crews",
+   "payload": "approved fallback channels"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "crews",
+   "label": "acknowledge each fallback assignment"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "crews",
+   "label": "repeat critical location and destination details"
+  },
+  {
+   "unit_id": "S201",
+   "type": "action",
+   "performer": "crews",
+   "label": "moving"
+  },
+  {
+   "unit_id": "S201",
+   "type": "succession",
+   "before": "repeat critical location and destination details",
+   "after": "moving"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "voice contact",
+   "label": "fails"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "dispatchers",
+   "label": "use the approved data channel when available"
+  },
+  {
+   "unit_id": "S202",
+   "type": "action",
+   "performer": "dispatchers",
+   "label": "record the time of each attempted contact"
+  },
+  {
+   "unit_id": "S203",
+   "type": "action",
+   "performer": "Computer Aided Dispatch Console",
+   "label": "displays the latest confirmed unit status alongside the time and source of that confirmation"
+  },
+  {
+   "unit_id": "S203",
+   "type": "flow",
+   "source": "Computer Aided Dispatch Console",
+   "target": "",
+   "payload": "latest confirmed unit status, time, and source of that confirmation"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "preserves queued status updates during brief connection interruptions"
+  },
+  {
+   "unit_id": "S204",
+   "type": "action",
+   "performer": "Ambulance Coordination Platform",
+   "label": "flags records that require reconciliation"
+  },
+  {
+   "unit_id": "S205",
+   "type": "action",
+   "performer": "Coverage monitoring",
+   "label": "compares successful radio checks with the planned check interval for each operating area"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "North Gate Status Board and South Gate Status Board",
+   "label": "provide separate views of access conditions that may affect radio reach or ambulance movement"
+  },
+  {
+   "unit_id": "S206",
+   "type": "flow",
+   "source": "North Gate Status Board and South Gate Status Board",
+   "target": "",
+   "payload": "separate views of access conditions"
+  },
+  {
+   "unit_id": "S206",
+   "type": "action",
+   "performer": "access conditions",
+   "label": "may affect radio reach or ambulance movement"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "uses the change card"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "adjust channel assignments"
+  },
+  {
+   "unit_id": "S207",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "record the effective time of each change"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "receives the Coverage Gap Bulletin"
+  },
+  {
+   "unit_id": "S208",
+   "type": "flow",
+   "source": "",
+   "target": "Shift Commander",
+   "payload": "Coverage Gap Bulletin"
+  },
+  {
+   "unit_id": "S208",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "decides whether staffing or deployment adjustments are needed"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "reviews Pebble for conflicting timestamps"
+  },
+  {
+   "unit_id": "S209",
+   "type": "action",
+   "performer": "",
+   "label": "interrupted communications are reconciled"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "identifies calls whose clinical priority requires immediate radio access"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "clinical priority",
+   "label": "requires immediate radio access"
+  },
+  {
+   "unit_id": "S210",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "communicates that priority to dispatch staff"
+  },
+  {
+   "unit_id": "S210",
+   "type": "flow",
+   "source": "Triage Supervisor",
+   "target": "dispatch staff",
+   "payload": "clinical priority"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "Call Taker Mara",
+   "label": "keeps the caller connected when feasible"
+  },
+  {
+   "unit_id": "S211",
+   "type": "action",
+   "performer": "dispatch staff",
+   "label": "attempt to reach the assigned crew through an approved alternate channel"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "Ambulance Unit 417",
+   "label": "reports its last confirmed position and safe operating status as soon as contact is restored"
+  },
+  {
+   "unit_id": "S212",
+   "type": "flow",
+   "source": "Ambulance Unit 417",
+   "target": "",
+   "payload": "last confirmed position and safe operating status"
+  },
+  {
+   "unit_id": "S212",
+   "type": "action",
+   "performer": "",
+   "label": "contact is restored"
+  },
+  {
+   "unit_id": "S213",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "reports radio equipment faults through the established maintenance escalation path"
+  },
+  {
+   "unit_id": "S213",
+   "type": "flow",
+   "source": "Fleet Maintenance Cell",
+   "target": "",
+   "payload": "radio equipment faults"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "uses available telephone channels"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "confirms whether receiving facilities can accept arrivals during a network disruption"
+  },
+  {
+   "unit_id": "S214",
+   "type": "flow",
+   "source": "Hospital Liaison Desk",
+   "target": "receiving facilities",
+   "payload": "confirmation whether they can accept arrivals during a network disruption"
+  },
+  {
+   "unit_id": "S214",
+   "type": "action",
+   "performer": "receiving facilities",
+   "label": "can accept arrivals"
+  },
+  {
+   "unit_id": "S215",
+   "type": "action",
+   "performer": "Emergency Department staff",
+   "label": "receive concise arrival updates through the approved backup contact method when radio delivery is unavailable"
+  },
+  {
+   "unit_id": "S215",
+   "type": "flow",
+   "source": "",
+   "target": "Emergency Department staff",
+   "payload": "concise arrival updates"
+  },
+  {
+   "unit_id": "S216",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "may advise on clinical prioritization when communication limits materially affect response choices"
+  },
+  {
+   "unit_id": "S217",
+   "type": "requirement",
+   "subject": "Paramedic Crew members",
+   "text": "follow local safety procedures and do not enter an area where dispatch instructions cannot be confirmed if conditions are uncertain."
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "Paramedic Crew members",
+   "label": "follow local safety procedures"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "Paramedic Crew members",
+   "label": "do not enter an area where dispatch instructions cannot be confirmed if conditions are uncertain"
+  },
+  {
+   "unit_id": "S217",
+   "type": "action",
+   "performer": "dispatch instructions",
+   "label": "cannot be confirmed"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "retains operational authority"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "named successor",
+   "label": "acknowledges the handover"
+  },
+  {
+   "unit_id": "S218",
+   "type": "action",
+   "performer": "higher-level incident command arrangement",
+   "label": "takes effect"
+  },
+  {
+   "unit_id": "S219",
+   "type": "action",
+   "performer": "outgoing shift",
+   "label": "records active incidents, communication failures, temporary channel assignments, and decisions awaiting review"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "verifies open assignments"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "confirms which communication paths remain available"
+  },
+  {
+   "unit_id": "S220",
+   "type": "action",
+   "performer": "incoming shift",
+   "label": "accepting control"
+  },
+  {
+   "unit_id": "S220",
+   "type": "succession",
+   "before": "confirms which communication paths remain available",
+   "after": "accepting control"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "",
+   "label": "service is restored"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "dispatch staff",
+   "label": "reconcile delayed status reports against their recorded timestamps"
+  },
+  {
+   "unit_id": "S221",
+   "type": "action",
+   "performer": "dispatch staff",
+   "label": "preserve any unresolved discrepancy for review"
+  },
+  {
+   "unit_id": "S221",
+   "type": "succession",
+   "before": "service is restored",
+   "after": "reconcile delayed status reports against their recorded timestamps"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "maintains controlled procedures for reviewing operational records, approving system changes, and documenting corrective actions"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "",
+   "label": "reviewing operational records"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "",
+   "label": "approving system changes"
+  },
+  {
+   "unit_id": "S222",
+   "type": "action",
+   "performer": "",
+   "label": "documenting corrective actions"
+  },
+  {
+   "unit_id": "S223",
+   "type": "action",
+   "performer": "Data Quality Officer",
+   "label": "samples incident records for completeness, timestamp consistency, and alignment between dispatch decisions and recorded outcomes"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "performer": "Triage Supervisor",
+   "label": "reviews cases in which acuity decisions or escalation timing may have affected patient risk"
+  },
+  {
+   "unit_id": "S224",
+   "type": "action",
+   "performer": "acuity decisions or escalation timing",
+   "label": "may have affected patient risk"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "reviews clinical findings"
+  },
+  {
+   "unit_id": "S225",
+   "type": "action",
+   "performer": "Regional Medical Director",
+   "label": "approves changes to clinical guidance within the scope of regional authority"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "Audit findings",
+   "label": "identify the records examined, the criteria applied, and any limitations that affect interpretation"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "null",
+   "label": "records examined"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "null",
+   "label": "criteria applied"
+  },
+  {
+   "unit_id": "S226",
+   "type": "action",
+   "performer": "limitations",
+   "label": "affect interpretation"
+  },
+  {
+   "unit_id": "S227",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "retains audit evidence"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "uses the Mutual Aid Release Form"
+  },
+  {
+   "unit_id": "S228",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "support accountable maintenance and availability records"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "null",
+   "label": "Material findings are assigned to a responsible role with a due date and a documented method for verifying closure"
+  },
+  {
+   "unit_id": "S229",
+   "type": "action",
+   "performer": "null",
+   "label": "verifying closure"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "Shift Commander",
+   "label": "restrict an operational capability"
+  },
+  {
+   "unit_id": "S230",
+   "type": "action",
+   "performer": "unresolved defect",
+   "label": "creates unacceptable risk"
+  },
+  {
+   "unit_id": "S231",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "records the rationale, scope, and duration of each such restriction"
+  },
+  {
+   "unit_id": "S232",
+   "type": "action",
+   "performer": "null",
+   "label": "Changes to the Ambulance Coordination Platform are assessed for operational, clinical, security, and continuity impacts before release"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "null",
+   "label": "The Computer Aided Dispatch Console is tested against approved scenarios"
+  },
+  {
+   "unit_id": "S233",
+   "type": "action",
+   "performer": "null",
+   "label": "a change is authorized for regional use"
+  },
+  {
+   "unit_id": "S233",
+   "type": "succession",
+   "before": "The Computer Aided Dispatch Console is tested against approved scenarios",
+   "after": "a change is authorized for regional use"
+  },
+  {
+   "unit_id": "S234",
+   "type": "action",
+   "performer": "Release approval records",
+   "label": "identify the change owner, test evidence, known limitations, and rollback approach"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "uses the South Access Lane Notice"
+  },
+  {
+   "unit_id": "S235",
+   "type": "action",
+   "performer": "Radio Coordinator",
+   "label": "support accountable operational review"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "null",
+   "label": "The Regional Radio Network and its interfaces are checked after maintenance or configuration changes"
+  },
+  {
+   "unit_id": "S236",
+   "type": "action",
+   "performer": "normal use",
+   "label": "resumes"
+  },
+  {
+   "unit_id": "S236",
+   "type": "succession",
+   "before": "The Regional Radio Network and its interfaces are checked after maintenance or configuration changes",
+   "after": "resumes"
+  },
+  {
+   "unit_id": "S237",
+   "type": "action",
+   "performer": "Fleet Maintenance Cell",
+   "label": "schedules preventive work according to manufacturer guidance, service history, and regional operating requirements"
+  },
+  {
+   "unit_id": "S238",
+   "type": "action",
+   "performer": "maintenance records",
+   "label": "include the asset identifier, work performed, parts used, and return-to-service decision"
+  },
+  {
+   "unit_id": "S239",
+   "type": "action",
+   "performer": "null",
+   "label": "The Ambulance Coordination Platform is monitored for availability, response time, data integrity, and interface failures"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "reviews service measures at a defined cadence"
+  },
+  {
+   "unit_id": "S240",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "compares results with approved operating thresholds"
+  },
+  {
+   "unit_id": "S241",
+   "type": "action",
+   "performer": "Performance reviews",
+   "label": "consider demand, coverage, dispatch delay, communications availability, and unresolved data quality issues"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "contributes relevant operational observations"
+  },
+  {
+   "unit_id": "S242",
+   "type": "action",
+   "performer": "Hospital Liaison Desk",
+   "label": "protecting information that is not required for the review"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "Regional Medical Director and Shift Commander",
+   "label": "review significant events"
+  },
+  {
+   "unit_id": "S243",
+   "type": "action",
+   "performer": "significant events",
+   "label": "may indicate a need for clinical or operational improvement"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "null",
+   "label": "Corrective actions are tracked through verification"
+  },
+  {
+   "unit_id": "S244",
+   "type": "action",
+   "performer": "null",
+   "label": "completion is distinguished from demonstrated effectiveness"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "performer": "null",
+   "label": "Recurring issues are evaluated for systemic causes"
+  },
+  {
+   "unit_id": "S245",
+   "type": "action",
+   "performer": "null",
+   "label": "closed solely through local workarounds"
+  },
+  {
+   "unit_id": "S246",
+   "type": "action",
+   "performer": "null",
+   "label": "Approved lessons are incorporated into procedures, training, maintenance plans, or release criteria as appropriate"
+  },
+  {
+   "unit_id": "S247",
+   "type": "action",
+   "performer": "Regional Dispatch Center",
+   "label": "provides a periodic summary of assurance activities, open risks, and improvement progress to regional oversight"
+  },
+  {
+   "unit_id": "S247",
+   "type": "flow",
+   "source": "Regional Dispatch Center",
+   "target": "regional oversight",
+   "payload": "periodic summary of assurance activities, open risks, and improvement progress"
+  }
+ ],
+ "entities": [
+  {
+   "name": "Regional Dispatch Center",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "name": "emergency medical requests",
+   "aliases": []
+  },
+  {
+   "name": "reported emergencies",
+   "aliases": []
+  },
+  {
+   "name": "prioritized incidents",
+   "aliases": []
+  },
+  {
+   "name": "response",
+   "aliases": []
+  },
+  {
+   "name": "approved clinical and jurisdictional protocols",
+   "aliases": []
+  },
+  {
+   "name": "Call Taker Mara",
+   "aliases": []
+  },
+  {
+   "name": "incident details",
+   "aliases": []
+  },
+  {
+   "name": "reported location",
+   "aliases": []
+  },
+  {
+   "name": "request",
+   "aliases": []
+  },
+  {
+   "name": "Triage Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "incident information",
+   "aliases": []
+  },
+  {
+   "name": "priority",
+   "aliases": []
+  },
+  {
+   "name": "cases",
+   "aliases": []
+  },
+  {
+   "name": "additional clinical review",
+   "aliases": []
+  },
+  {
+   "name": "Regional Medical Director",
+   "aliases": []
+  },
+  {
+   "name": "clinical triage policies",
+   "aliases": []
+  },
+  {
+   "name": "protocol-based decision making",
+   "aliases": []
+  },
+  {
+   "name": "Dispatch personnel",
+   "aliases": []
+  },
+  {
+   "name": "clinical guidance",
+   "aliases": []
+  },
+  {
+   "name": "Shift Commander",
+   "aliases": [
+    "Sundial"
+   ]
+  },
+  {
+   "name": "operational conflicts",
+   "aliases": []
+  },
+  {
+   "name": "response priorities",
+   "aliases": []
+  },
+  {
+   "name": "decisions",
+   "aliases": []
+  },
+  {
+   "name": "jurisdictional leadership",
+   "aliases": []
+  },
+  {
+   "name": "clinical policy",
+   "aliases": []
+  },
+  {
+   "name": "Paramedic Crew",
+   "aliases": []
+  },
+  {
+   "name": "clinical judgment",
+   "aliases": []
+  },
+  {
+   "name": "Radio Coordinator",
+   "aliases": [
+    "Mistral"
+   ]
+  },
+  {
+   "name": "operational radio traffic",
+   "aliases": []
+  },
+  {
+   "name": "communications discipline",
+   "aliases": []
+  },
+  {
+   "name": "Regional Radio Network",
+   "aliases": []
+  },
+  {
+   "name": "authorized responders",
+   "aliases": []
+  },
+  {
+   "name": "dispatch and coordination communications",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Coordination Platform",
+   "aliases": []
+  },
+  {
+   "name": "incidents",
+   "aliases": []
+  },
+  {
+   "name": "unit assignments",
+   "aliases": []
+  },
+  {
+   "name": "regional resource status",
+   "aliases": []
+  },
+  {
+   "name": "Computer Aided Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "incident entry",
+   "aliases": []
+  },
+  {
+   "name": "assessment",
+   "aliases": []
+  },
+  {
+   "name": "dispatch operations",
+   "aliases": []
+  },
+  {
+   "name": "patient assessment",
+   "aliases": []
+  },
+  {
+   "name": "patient care",
+   "aliases": []
+  },
+  {
+   "name": "professional scope",
+   "aliases": []
+  },
+  {
+   "name": "applicable protocols",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Unit 417",
+   "aliases": []
+  },
+  {
+   "name": "regional response pool",
+   "aliases": []
+  },
+  {
+   "name": "incident",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Liaison Desk",
+   "aliases": []
+  },
+  {
+   "name": "receiving capacity",
+   "aliases": []
+  },
+  {
+   "name": "destination constraints",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Department",
+   "aliases": []
+  },
+  {
+   "name": "receiving considerations",
+   "aliases": []
+  },
+  {
+   "name": "regional coordination procedures",
+   "aliases": []
+  },
+  {
+   "name": "Riverside Trauma Center",
+   "aliases": []
+  },
+  {
+   "name": "availability",
+   "aliases": []
+  },
+  {
+   "name": "suitability",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "status information",
+   "aliases": []
+  },
+  {
+   "name": "access",
+   "aliases": []
+  },
+  {
+   "name": "movement planning",
+   "aliases": []
+  },
+  {
+   "name": "Fleet Maintenance Cell",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "name": "vehicle serviceability",
+   "aliases": []
+  },
+  {
+   "name": "maintenance constraints",
+   "aliases": []
+  },
+  {
+   "name": "Data Quality Officer",
+   "aliases": []
+  },
+  {
+   "name": "dispatch records",
+   "aliases": []
+  },
+  {
+   "name": "information-handling rules",
+   "aliases": []
+  },
+  {
+   "name": "participating jurisdictions",
+   "aliases": []
+  },
+  {
+   "name": "resources",
+   "aliases": []
+  },
+  {
+   "name": "local policy",
+   "aliases": []
+  },
+  {
+   "name": "agreed response activity",
+   "aliases": []
+  },
+  {
+   "name": "operating area",
+   "aliases": []
+  },
+  {
+   "name": "response zones",
+   "aliases": []
+  },
+  {
+   "name": "distance",
+   "aliases": []
+  },
+  {
+   "name": "road access",
+   "aliases": []
+  },
+  {
+   "name": "available ambulance capacity",
+   "aliases": []
+  },
+  {
+   "name": "zone boundaries",
+   "aliases": []
+  },
+  {
+   "name": "road networks",
+   "aliases": []
+  },
+  {
+   "name": "population patterns",
+   "aliases": []
+  },
+  {
+   "name": "service agreements",
+   "aliases": []
+  },
+  {
+   "name": "primary routes",
+   "aliases": []
+  },
+  {
+   "name": "alternate routes",
+   "aliases": []
+  },
+  {
+   "name": "travel time",
+   "aliases": []
+  },
+  {
+   "name": "road restrictions",
+   "aliases": []
+  },
+  {
+   "name": "weather",
+   "aliases": []
+  },
+  {
+   "name": "known closures",
+   "aliases": []
+  },
+  {
+   "name": "arrival times",
+   "aliases": []
+  },
+  {
+   "name": "access conditions",
+   "aliases": []
+  },
+  {
+   "name": "hospitals",
+   "aliases": []
+  },
+  {
+   "name": "bridge approaches",
+   "aliases": []
+  },
+  {
+   "name": "controlled entry points",
+   "aliases": []
+  },
+  {
+   "name": "crews",
+   "aliases": []
+  },
+  {
+   "name": "constrained route",
+   "aliases": []
+  },
+  {
+   "name": "current access and queue conditions",
+   "aliases": []
+  },
+  {
+   "name": "northern approach",
+   "aliases": []
+  },
+  {
+   "name": "current access conditions",
+   "aliases": []
+  },
+  {
+   "name": "southern approach",
+   "aliases": []
+  },
+  {
+   "name": "ambulance entry",
+   "aliases": []
+  },
+  {
+   "name": "reported access change",
+   "aliases": []
+  },
+  {
+   "name": "hospital arrival",
+   "aliases": []
+  },
+  {
+   "name": "North Approach Queue Snapshot",
+   "aliases": []
+  },
+  {
+   "name": "northern approach congestion",
+   "aliases": []
+  },
+  {
+   "name": "assigned channels",
+   "aliases": []
+  },
+  {
+   "name": "backup communications procedures",
+   "aliases": []
+  },
+  {
+   "name": "shift",
+   "aliases": []
+  },
+  {
+   "name": "Radio checks",
+   "aliases": []
+  },
+  {
+   "name": "coverage",
+   "aliases": []
+  },
+  {
+   "name": "known weak-signal areas",
+   "aliases": []
+  },
+  {
+   "name": "equipment or network problems",
+   "aliases": []
+  },
+  {
+   "name": "demand",
+   "aliases": []
+  },
+  {
+   "name": "vehicle availability",
+   "aliases": []
+  },
+  {
+   "name": "scheduled servicing",
+   "aliases": []
+  },
+  {
+   "name": "reported defects",
+   "aliases": []
+  },
+  {
+   "name": "zone coverage",
+   "aliases": []
+  },
+  {
+   "name": "Battery Swap Voucher",
+   "aliases": []
+  },
+  {
+   "name": "authorized battery replacement",
+   "aliases": []
+  },
+  {
+   "name": "readiness checks",
+   "aliases": []
+  },
+  {
+   "name": "available ambulance",
+   "aliases": []
+  },
+  {
+   "name": "staffing",
+   "aliases": []
+  },
+  {
+   "name": "functioning communications equipment",
+   "aliases": []
+  },
+  {
+   "name": "required clinical supplies",
+   "aliases": []
+  },
+  {
+   "name": "fuel status",
+   "aliases": []
+  },
+  {
+   "name": "vehicle condition",
+   "aliases": []
+  },
+  {
+   "name": "maintenance restrictions",
+   "aliases": []
+  },
+  {
+   "name": "unit",
+   "aliases": []
+  },
+  {
+   "name": "shared operational view",
+   "aliases": []
+  },
+  {
+   "name": "unit availability",
+   "aliases": []
+  },
+  {
+   "name": "Computer Aided Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "operational staff",
+   "aliases": []
+  },
+  {
+   "name": "Shift Commander",
+   "aliases": []
+  },
+  {
+   "name": "Triage Supervisor",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "name": "dispatch operations",
+   "aliases": []
+  },
+  {
+   "name": "Paramedic Crew",
+   "aliases": []
+  },
+  {
+   "name": "Regional Dispatch Center",
+   "aliases": []
+  },
+  {
+   "name": "Call Taker Mara",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "name": "Hospital Liaison Desk",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "name": "Data Quality Officer",
+   "aliases": [
+    "Pebble"
+   ]
+  },
+  {
+   "name": "Regional Medical Director",
+   "aliases": []
+  },
+  {
+   "name": "authorized dispatch staff",
+   "aliases": []
+  },
+  {
+   "name": "responders",
+   "aliases": []
+  },
+  {
+   "name": "caller",
+   "aliases": []
+  },
+  {
+   "name": "patient",
+   "aliases": []
+  },
+  {
+   "name": "ambulance",
+   "aliases": []
+  },
+  {
+   "name": "dispatch work",
+   "aliases": []
+  },
+  {
+   "name": "displayed information",
+   "aliases": []
+  },
+  {
+   "name": "readiness concerns",
+   "aliases": []
+  },
+  {
+   "name": "resources",
+   "aliases": []
+  },
+  {
+   "name": "local coverage plans",
+   "aliases": []
+  },
+  {
+   "name": "clinical prioritization",
+   "aliases": []
+  },
+  {
+   "name": "demand",
+   "aliases": []
+  },
+  {
+   "name": "access conditions",
+   "aliases": []
+  },
+  {
+   "name": "new access barriers",
+   "aliases": []
+  },
+  {
+   "name": "vehicle readiness concerns",
+   "aliases": []
+  },
+  {
+   "name": "communications procedures",
+   "aliases": []
+  },
+  {
+   "name": "reported conditions",
+   "aliases": []
+  },
+  {
+   "name": "current zone coverage",
+   "aliases": []
+  },
+  {
+   "name": "readiness gaps",
+   "aliases": []
+  },
+  {
+   "name": "significant incidents",
+   "aliases": []
+  },
+  {
+   "name": "service interruptions",
+   "aliases": []
+  },
+  {
+   "name": "routes",
+   "aliases": []
+  },
+  {
+   "name": "emergency calls",
+   "aliases": []
+  },
+  {
+   "name": "controlled intake process",
+   "aliases": []
+  },
+  {
+   "name": "incident record",
+   "aliases": []
+  },
+  {
+   "name": "caller location",
+   "aliases": []
+  },
+  {
+   "name": "medical details",
+   "aliases": []
+  },
+  {
+   "name": "street address",
+   "aliases": []
+  },
+  {
+   "name": "municipality",
+   "aliases": []
+  },
+  {
+   "name": "building information",
+   "aliases": []
+  },
+  {
+   "name": "floor information",
+   "aliases": []
+  },
+  {
+   "name": "entrance information",
+   "aliases": []
+  },
+  {
+   "name": "callback number",
+   "aliases": []
+  },
+  {
+   "name": "patient's age",
+   "aliases": []
+  },
+  {
+   "name": "level of consciousness",
+   "aliases": []
+  },
+  {
+   "name": "breathing status",
+   "aliases": []
+  },
+  {
+   "name": "main reason emergency help is needed",
+   "aliases": []
+  },
+  {
+   "name": "observed symptoms",
+   "aliases": []
+  },
+  {
+   "name": "information reported by someone else",
+   "aliases": []
+  },
+  {
+   "name": "time symptoms began",
+   "aliases": []
+  },
+  {
+   "name": "reliable estimate",
+   "aliases": []
+  },
+  {
+   "name": "access barriers",
+   "aliases": []
+  },
+  {
+   "name": "locked entrances",
+   "aliases": []
+  },
+  {
+   "name": "restricted roads",
+   "aliases": []
+  },
+  {
+   "name": "Caller Location Correction Slip",
+   "aliases": []
+  },
+  {
+   "name": "location details",
+   "aliases": []
+  },
+  {
+   "name": "address and map data",
+   "aliases": []
+  },
+  {
+   "name": "follow-up questions",
+   "aliases": []
+  },
+  {
+   "name": "facility capabilities",
+   "aliases": []
+  },
+  {
+   "name": "hospital contact pathways",
+   "aliases": []
+  },
+  {
+   "name": "reported destination preference",
+   "aliases": []
+  },
+  {
+   "name": "facility constraint",
+   "aliases": []
+  },
+  {
+   "name": "incident notes",
+   "aliases": []
+  },
+  {
+   "name": "Bedside Arrival Receipt",
+   "aliases": []
+  },
+  {
+   "name": "current facility information",
+   "aliases": []
+  },
+  {
+   "name": "coordination channels",
+   "aliases": []
+  },
+  {
+   "name": "reported symptoms",
+   "aliases": []
+  },
+  {
+   "name": "uncertainty",
+   "aliases": []
+  },
+  {
+   "name": "intake records",
+   "aliases": []
+  },
+  {
+   "name": "location or medical detail gaps",
+   "aliases": []
+  },
+  {
+   "name": "original caller report",
+   "aliases": []
+  },
+  {
+   "name": "subsequent clarifications",
+   "aliases": []
+  },
+  {
+   "name": "confirmed details",
+   "aliases": []
+  },
+  {
+   "name": "estimates",
+   "aliases": []
+  },
+  {
+   "name": "recorded information",
+   "aliases": []
+  },
+  {
+   "name": "urgency",
+   "aliases": []
+  },
+  {
+   "name": "clinical reassessment",
+   "aliases": []
+  },
+  {
+   "name": "uncertain severity",
+   "aliases": []
+  },
+  {
+   "name": "conflicting reports",
+   "aliases": []
+  },
+  {
+   "name": "signs of rapid deterioration",
+   "aliases": []
+  },
+  {
+   "name": "priority",
+   "aliases": []
+  },
+  {
+   "name": "immediate threat",
+   "aliases": []
+  },
+  {
+   "name": "response priority",
+   "aliases": []
+  },
+  {
+   "name": "dispatch action",
+   "aliases": []
+  },
+  {
+   "name": "expected harm from delay",
+   "aliases": []
+  },
+  {
+   "name": "essential information",
+   "aliases": []
+  },
+  {
+   "name": "focused clarification",
+   "aliases": []
+  },
+  {
+   "name": "urgent response",
+   "aliases": []
+  },
+  {
+   "name": "clinically ambiguous cases",
+   "aliases": []
+  },
+  {
+   "name": "unusually severe cases",
+   "aliases": []
+  },
+  {
+   "name": "clinical policy guidance",
+   "aliases": []
+  },
+  {
+   "name": "operational authority",
+   "aliases": []
+  },
+  {
+   "name": "dispatch decisions",
+   "aliases": []
+  },
+  {
+   "name": "Pediatric Acuity Note",
+   "aliases": []
+  },
+  {
+   "name": "incident records",
+   "aliases": []
+  },
+  {
+   "name": "missing information",
+   "aliases": []
+  },
+  {
+   "name": "inconsistent information",
+   "aliases": []
+  },
+  {
+   "name": "duplicated information",
+   "aliases": []
+  },
+  {
+   "name": "Duplicate Incident Audit Memo",
+   "aliases": []
+  },
+  {
+   "name": "data defects",
+   "aliases": []
+  },
+  {
+   "name": "clinical priority",
+   "aliases": []
+  },
+  {
+   "name": "current incident details",
+   "aliases": []
+  },
+  {
+   "name": "assigned priority",
+   "aliases": []
+  },
+  {
+   "name": "significant incidents",
+   "aliases": []
+  },
+  {
+   "name": "service interruptions",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Coordination Platform",
+   "aliases": []
+  },
+  {
+   "name": "Radio Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Regional Radio Network",
+   "aliases": []
+  },
+  {
+   "name": "Paramedic Crew",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Unit 417",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Department",
+   "aliases": []
+  },
+  {
+   "name": "Riverside Trauma Center",
+   "aliases": []
+  },
+  {
+   "name": "Shift Commander",
+   "aliases": []
+  },
+  {
+   "name": "Data Quality Officer",
+   "aliases": []
+  },
+  {
+   "name": "Regional Dispatch Center",
+   "aliases": []
+  },
+  {
+   "name": "Triage Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "Computer Aided Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "Fleet Maintenance Cell",
+   "aliases": []
+  },
+  {
+   "name": "dispatcher",
+   "aliases": []
+  },
+  {
+   "name": "Regional Medical Director",
+   "aliases": []
+  },
+  {
+   "name": "Unit Staging Change Card",
+   "aliases": []
+  },
+  {
+   "name": "dispatch supervisor",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "dispatch floor",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Liaison Desk",
+   "aliases": []
+  },
+  {
+   "name": "Coverage Gap Bulletin",
+   "aliases": []
+  },
+  {
+   "name": "Juniper",
+   "aliases": []
+  },
+  {
+   "name": "Mistral",
+   "aliases": []
+  },
+  {
+   "name": "Bluejay",
+   "aliases": []
+  },
+  {
+   "name": "Mutual Aid Release Form",
+   "aliases": []
+  },
+  {
+   "name": "neighboring service",
+   "aliases": []
+  },
+  {
+   "name": "dispatchers",
+   "aliases": []
+  },
+  {
+   "name": "dispatch",
+   "aliases": []
+  },
+  {
+   "name": "field units",
+   "aliases": []
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "resource selection",
+   "aliases": []
+  },
+  {
+   "name": "response resources",
+   "aliases": []
+  },
+  {
+   "name": "dispatch instructions",
+   "aliases": []
+  },
+  {
+   "name": "priority changes",
+   "aliases": []
+  },
+  {
+   "name": "material changes in patient condition",
+   "aliases": []
+  },
+  {
+   "name": "operationally relevant capacity information",
+   "aliases": []
+  },
+  {
+   "name": "approved regional protocols",
+   "aliases": []
+  },
+  {
+   "name": "destination coordination",
+   "aliases": []
+  },
+  {
+   "name": "competing high-priority incidents",
+   "aliases": []
+  },
+  {
+   "name": "supporting rationale",
+   "aliases": []
+  },
+  {
+   "name": "original caller report",
+   "aliases": []
+  },
+  {
+   "name": "subsequent clarifications",
+   "aliases": []
+  },
+  {
+   "name": "operational priority",
+   "aliases": []
+  },
+  {
+   "name": "units",
+   "aliases": []
+  },
+  {
+   "name": "estimated travel times",
+   "aliases": []
+  },
+  {
+   "name": "unit availability",
+   "aliases": []
+  },
+  {
+   "name": "access constraints",
+   "aliases": []
+  },
+  {
+   "name": "selection decision",
+   "aliases": []
+  },
+  {
+   "name": "current information about vehicles that are unavailable or restricted",
+   "aliases": []
+  },
+  {
+   "name": "proposed unit",
+   "aliases": []
+  },
+  {
+   "name": "current regional approval rules",
+   "aliases": []
+  },
+  {
+   "name": "exceptions",
+   "aliases": []
+  },
+  {
+   "name": "clinical resource requirements",
+   "aliases": []
+  },
+  {
+   "name": "authorized unit",
+   "aliases": []
+  },
+  {
+   "name": "conditions attached to its assignment",
+   "aliases": []
+  },
+  {
+   "name": "talkgroup",
+   "aliases": []
+  },
+  {
+   "name": "dispatch transmission",
+   "aliases": []
+  },
+  {
+   "name": "incident identifier",
+   "aliases": []
+  },
+  {
+   "name": "location",
+   "aliases": []
+  },
+  {
+   "name": "priority",
+   "aliases": []
+  },
+  {
+   "name": "response assignment",
+   "aliases": []
+  },
+  {
+   "name": "immediate hazard information",
+   "aliases": []
+  },
+  {
+   "name": "assignment",
+   "aliases": []
+  },
+  {
+   "name": "discrepancy",
+   "aliases": []
+  },
+  {
+   "name": "fresh transmission",
+   "aliases": []
+  },
+  {
+   "name": "contact",
+   "aliases": []
+  },
+  {
+   "name": "routing decisions",
+   "aliases": []
+  },
+  {
+   "name": "gate or approach constraint",
+   "aliases": []
+  },
+  {
+   "name": "uncertainty",
+   "aliases": []
+  },
+  {
+   "name": "controlled handoff",
+   "aliases": []
+  },
+  {
+   "name": "transmitted route",
+   "aliases": []
+  },
+  {
+   "name": "conditions observed in the field",
+   "aliases": []
+  },
+  {
+   "name": "destination information",
+   "aliases": []
+  },
+  {
+   "name": "authorization time",
+   "aliases": []
+  },
+  {
+   "name": "reason for selecting the assigned unit",
+   "aliases": []
+  },
+  {
+   "name": "regional coverage picture",
+   "aliases": []
+  },
+  {
+   "name": "current unit locations",
+   "aliases": []
+  },
+  {
+   "name": "crew reports",
+   "aliases": []
+  },
+  {
+   "name": "readiness information",
+   "aliases": []
+  },
+  {
+   "name": "unit position and status",
+   "aliases": []
+  },
+  {
+   "name": "staging options",
+   "aliases": []
+  },
+  {
+   "name": "response demand",
+   "aliases": []
+  },
+  {
+   "name": "staging area",
+   "aliases": []
+  },
+  {
+   "name": "staging point",
+   "aliases": []
+  },
+  {
+   "name": "route instructions",
+   "aliases": []
+  },
+  {
+   "name": "crew acknowledgments",
+   "aliases": []
+  },
+  {
+   "name": "approved route changes",
+   "aliases": []
+  },
+  {
+   "name": "maintenance clearance",
+   "aliases": []
+  },
+  {
+   "name": "operating status",
+   "aliases": []
+  },
+  {
+   "name": "direct response assignment",
+   "aliases": []
+  },
+  {
+   "name": "staging move",
+   "aliases": []
+  },
+  {
+   "name": "available",
+   "aliases": []
+  },
+  {
+   "name": "responding",
+   "aliases": []
+  },
+  {
+   "name": "on scene",
+   "aliases": []
+  },
+  {
+   "name": "transporting",
+   "aliases": []
+  },
+  {
+   "name": "temporarily unavailable",
+   "aliases": []
+  },
+  {
+   "name": "incident",
+   "aliases": []
+  },
+  {
+   "name": "caller information",
+   "aliases": []
+  },
+  {
+   "name": "clinical need",
+   "aliases": []
+  },
+  {
+   "name": "vehicle capability",
+   "aliases": []
+  },
+  {
+   "name": "crew readiness",
+   "aliases": []
+  },
+  {
+   "name": "regional coverage",
+   "aliases": []
+  },
+  {
+   "name": "local coverage",
+   "aliases": []
+  },
+  {
+   "name": "nonstandard response",
+   "aliases": []
+  },
+  {
+   "name": "receiving Emergency Department",
+   "aliases": []
+  },
+  {
+   "name": "southern entry",
+   "aliases": []
+  },
+  {
+   "name": "access conditions",
+   "aliases": []
+  },
+  {
+   "name": "operational exception",
+   "aliases": []
+  },
+  {
+   "name": "essential response requirements",
+   "aliases": []
+  },
+  {
+   "name": "unit",
+   "aliases": []
+  },
+  {
+   "name": "Regional Dispatch Center",
+   "aliases": []
+  },
+  {
+   "name": "swap voucher",
+   "aliases": []
+  },
+  {
+   "name": "unit",
+   "aliases": []
+  },
+  {
+   "name": "battery readiness",
+   "aliases": []
+  },
+  {
+   "name": "queue snapshot",
+   "aliases": []
+  },
+  {
+   "name": "congestion",
+   "aliases": []
+  },
+  {
+   "name": "northern entry",
+   "aliases": []
+  },
+  {
+   "name": "route",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "queue condition",
+   "aliases": []
+  },
+  {
+   "name": "access restriction",
+   "aliases": []
+  },
+  {
+   "name": "Triage Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "dispatch",
+   "aliases": []
+  },
+  {
+   "name": "clinical demand",
+   "aliases": []
+  },
+  {
+   "name": "available unit",
+   "aliases": []
+  },
+  {
+   "name": "Regional Medical Director",
+   "aliases": []
+  },
+  {
+   "name": "clinical priorities",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Liaison Desk",
+   "aliases": []
+  },
+  {
+   "name": "receiving-facility capacity information",
+   "aliases": []
+  },
+  {
+   "name": "Data Quality Officer",
+   "aliases": []
+  },
+  {
+   "name": "location report",
+   "aliases": []
+  },
+  {
+   "name": "status report",
+   "aliases": []
+  },
+  {
+   "name": "correction",
+   "aliases": []
+  },
+  {
+   "name": "operational process",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Coordination Platform",
+   "aliases": []
+  },
+  {
+   "name": "time-stamped status change",
+   "aliases": []
+  },
+  {
+   "name": "supervisor",
+   "aliases": []
+  },
+  {
+   "name": "unit movement",
+   "aliases": []
+  },
+  {
+   "name": "crew",
+   "aliases": []
+  },
+  {
+   "name": "road closure",
+   "aliases": []
+  },
+  {
+   "name": "unsafe condition",
+   "aliases": []
+  },
+  {
+   "name": "delay",
+   "aliases": []
+  },
+  {
+   "name": "assigned route",
+   "aliases": []
+  },
+  {
+   "name": "alternative route",
+   "aliases": []
+  },
+  {
+   "name": "critical area",
+   "aliases": []
+  },
+  {
+   "name": "patient",
+   "aliases": []
+  },
+  {
+   "name": "facility",
+   "aliases": []
+  },
+  {
+   "name": "consultation",
+   "aliases": []
+  },
+  {
+   "name": "patient condition",
+   "aliases": []
+  },
+  {
+   "name": "operating status",
+   "aliases": []
+  },
+  {
+   "name": "transport planning",
+   "aliases": []
+  },
+  {
+   "name": "transport estimate",
+   "aliases": []
+  },
+  {
+   "name": "facility acceptance information",
+   "aliases": []
+  },
+  {
+   "name": "specialized capability",
+   "aliases": []
+  },
+  {
+   "name": "regional care protocol",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Department",
+   "aliases": []
+  },
+  {
+   "name": "correction slip",
+   "aliases": []
+  },
+  {
+   "name": "active incident record",
+   "aliases": []
+  },
+  {
+   "name": "Larkspur",
+   "aliases": []
+  },
+  {
+   "name": "incident identifier",
+   "aliases": []
+  },
+  {
+   "name": "receiving facility",
+   "aliases": []
+  },
+  {
+   "name": "destination request",
+   "aliases": []
+  },
+  {
+   "name": "capacity limit",
+   "aliases": []
+  },
+  {
+   "name": "access constraint",
+   "aliases": []
+  },
+  {
+   "name": "receiving status",
+   "aliases": []
+  },
+  {
+   "name": "consultation outcome",
+   "aliases": []
+  },
+  {
+   "name": "destination restriction",
+   "aliases": []
+  },
+  {
+   "name": "patient acuity",
+   "aliases": []
+  },
+  {
+   "name": "transport time",
+   "aliases": []
+  },
+  {
+   "name": "ambulance coverage",
+   "aliases": []
+  },
+  {
+   "name": "approved destination",
+   "aliases": []
+  },
+  {
+   "name": "operational instruction",
+   "aliases": []
+  },
+  {
+   "name": "dispatch staff",
+   "aliases": []
+  },
+  {
+   "name": "Radio Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "Paramedic Crew",
+   "aliases": []
+  },
+  {
+   "name": "Regional Radio Network",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "South Access Lane Notice",
+   "aliases": []
+  },
+  {
+   "name": "south approach",
+   "aliases": []
+  },
+  {
+   "name": "Shift Commander",
+   "aliases": []
+  },
+  {
+   "name": "arrival timing",
+   "aliases": []
+  },
+  {
+   "name": "patient transfer",
+   "aliases": []
+  },
+  {
+   "name": "Call Taker Mara",
+   "aliases": []
+  },
+  {
+   "name": "Bedside Arrival Receipt",
+   "aliases": []
+  },
+  {
+   "name": "incident record",
+   "aliases": []
+  },
+  {
+   "name": "arrival time",
+   "aliases": []
+  },
+  {
+   "name": "dispatch timeline",
+   "aliases": []
+  },
+  {
+   "name": "crew communication",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Unit 417",
+   "aliases": []
+  },
+  {
+   "name": "patient handover",
+   "aliases": []
+  },
+  {
+   "name": "patient identity",
+   "aliases": []
+  },
+  {
+   "name": "transfer documentation",
+   "aliases": []
+  },
+  {
+   "name": "facility clearance",
+   "aliases": []
+  },
+  {
+   "name": "arrival field",
+   "aliases": []
+  },
+  {
+   "name": "handover field",
+   "aliases": []
+  },
+  {
+   "name": "incident status",
+   "aliases": []
+  },
+  {
+   "name": "facility care",
+   "aliases": []
+  },
+  {
+   "name": "facility-level question",
+   "aliases": []
+  },
+  {
+   "name": "destination issue",
+   "aliases": []
+  },
+  {
+   "name": "regional coordination procedure",
+   "aliases": []
+  },
+  {
+   "name": "Surge operations",
+   "aliases": []
+  },
+  {
+   "name": "queue age",
+   "aliases": []
+  },
+  {
+   "name": "high-priority call",
+   "aliases": []
+  },
+  {
+   "name": "staffed unit availability",
+   "aliases": []
+  },
+  {
+   "name": "regional policy",
+   "aliases": []
+  },
+  {
+   "name": "surge indicator",
+   "aliases": []
+  },
+  {
+   "name": "surge level",
+   "aliases": []
+  },
+  {
+   "name": "Computer Aided Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "operational constraint",
+   "aliases": []
+  },
+  {
+   "name": "field staff",
+   "aliases": []
+  },
+  {
+   "name": "facility staff",
+   "aliases": []
+  },
+  {
+   "name": "surge declaration",
+   "aliases": []
+  },
+  {
+   "name": "call prioritization",
+   "aliases": []
+  },
+  {
+   "name": "clinical protocol",
+   "aliases": []
+  },
+  {
+   "name": "coordination responsibility",
+   "aliases": []
+  },
+  {
+   "name": "normal coverage",
+   "aliases": []
+  },
+  {
+   "name": "routine triage guidance",
+   "aliases": []
+  },
+  {
+   "name": "regional protocol adjustment",
+   "aliases": []
+  },
+  {
+   "name": "Pediatric Acuity Note",
+   "aliases": []
+  },
+  {
+   "name": "pediatric monitoring consideration",
+   "aliases": []
+  },
+  {
+   "name": "destination consideration",
+   "aliases": []
+  },
+  {
+   "name": "receiving staff",
+   "aliases": []
+  },
+  {
+   "name": "pediatric call",
+   "aliases": []
+  },
+  {
+   "name": "airway finding",
+   "aliases": []
+  },
+  {
+   "name": "breathing finding",
+   "aliases": []
+  },
+  {
+   "name": "circulation finding",
+   "aliases": []
+  },
+  {
+   "name": "mental status finding",
+   "aliases": []
+  },
+  {
+   "name": "age",
+   "aliases": []
+  },
+  {
+   "name": "weight",
+   "aliases": []
+  },
+  {
+   "name": "caregiver observation",
+   "aliases": []
+  },
+  {
+   "name": "pediatric triage",
+   "aliases": []
+  },
+  {
+   "name": "Paramedic Crew",
+   "aliases": []
+  },
+  {
+   "name": "pediatric patients",
+   "aliases": []
+  },
+  {
+   "name": "receiving facility",
+   "aliases": []
+  },
+  {
+   "name": "material changes",
+   "aliases": []
+  },
+  {
+   "name": "Kestrel",
+   "aliases": []
+  },
+  {
+   "name": "facility capacity",
+   "aliases": []
+  },
+  {
+   "name": "pediatric service limitations",
+   "aliases": []
+  },
+  {
+   "name": "dispatch",
+   "aliases": []
+  },
+  {
+   "name": "destination",
+   "aliases": []
+  },
+  {
+   "name": "Riverside Trauma Center",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Liaison Desk",
+   "aliases": []
+  },
+  {
+   "name": "trauma intake conditions",
+   "aliases": []
+  },
+  {
+   "name": "Emergency Department staff",
+   "aliases": []
+  },
+  {
+   "name": "destination changes",
+   "aliases": []
+  },
+  {
+   "name": "coordination channel",
+   "aliases": []
+  },
+  {
+   "name": "immediate access restrictions",
+   "aliases": []
+  },
+  {
+   "name": "facility responses",
+   "aliases": []
+  },
+  {
+   "name": "regional coordination record",
+   "aliases": []
+  },
+  {
+   "name": "unresolved constraints",
+   "aliases": []
+  },
+  {
+   "name": "Mutual aid",
+   "aliases": []
+  },
+  {
+   "name": "local staffed units",
+   "aliases": []
+  },
+  {
+   "name": "declared response objectives",
+   "aliases": []
+  },
+  {
+   "name": "specialized resource",
+   "aliases": []
+  },
+  {
+   "name": "Regional Radio Network",
+   "aliases": []
+  },
+  {
+   "name": "mutual-aid requests",
+   "aliases": []
+  },
+  {
+   "name": "acceptance confirmations",
+   "aliases": []
+  },
+  {
+   "name": "operational updates",
+   "aliases": []
+  },
+  {
+   "name": "regional call signs",
+   "aliases": []
+  },
+  {
+   "name": "Copperfield",
+   "aliases": []
+  },
+  {
+   "name": "temporary triage override",
+   "aliases": []
+  },
+  {
+   "name": "override rationale",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Coordination Platform",
+   "aliases": []
+  },
+  {
+   "name": "accepted mutual-aid assignments",
+   "aliases": []
+  },
+  {
+   "name": "locally staffed resources",
+   "aliases": []
+  },
+  {
+   "name": "coverage view",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Unit 417",
+   "aliases": []
+  },
+  {
+   "name": "patient-care obligations",
+   "aliases": []
+  },
+  {
+   "name": "transport obligations",
+   "aliases": []
+  },
+  {
+   "name": "Fleet Maintenance Cell",
+   "aliases": []
+  },
+  {
+   "name": "vehicle restriction",
+   "aliases": []
+  },
+  {
+   "name": "operational coverage",
+   "aliases": []
+  },
+  {
+   "name": "Triage Supervisor",
+   "aliases": []
+  },
+  {
+   "name": "audit memo",
+   "aliases": []
+  },
+  {
+   "name": "suspected duplicate incident",
+   "aliases": []
+  },
+  {
+   "name": "Data Quality Officer",
+   "aliases": []
+  },
+  {
+   "name": "record discrepancies",
+   "aliases": []
+  },
+  {
+   "name": "quality process",
+   "aliases": []
+  },
+  {
+   "name": "North Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "access conditions",
+   "aliases": []
+  },
+  {
+   "name": "ambulance approach",
+   "aliases": []
+  },
+  {
+   "name": "handover timing",
+   "aliases": []
+  },
+  {
+   "name": "South Gate Status Board",
+   "aliases": []
+  },
+  {
+   "name": "routes",
+   "aliases": []
+  },
+  {
+   "name": "entry points",
+   "aliases": []
+  },
+  {
+   "name": "Shift Commander",
+   "aliases": []
+  },
+  {
+   "name": "surge conditions",
+   "aliases": []
+  },
+  {
+   "name": "outstanding assignments",
+   "aliases": []
+  },
+  {
+   "name": "destination constraints",
+   "aliases": []
+  },
+  {
+   "name": "staffing gaps",
+   "aliases": []
+  },
+  {
+   "name": "next operational period",
+   "aliases": []
+  },
+  {
+   "name": "Regional Dispatch Center",
+   "aliases": []
+  },
+  {
+   "name": "degraded-radio procedure",
+   "aliases": []
+  },
+  {
+   "name": "emergency traffic",
+   "aliases": []
+  },
+  {
+   "name": "common operating picture",
+   "aliases": []
+  },
+  {
+   "name": "Regional Radio Network operators",
+   "aliases": []
+  },
+  {
+   "name": "channel outages",
+   "aliases": []
+  },
+  {
+   "name": "affected areas",
+   "aliases": []
+  },
+  {
+   "name": "expected restoration times",
+   "aliases": []
+  },
+  {
+   "name": "service channels",
+   "aliases": []
+  },
+  {
+   "name": "Radio Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "crews",
+   "aliases": []
+  },
+  {
+   "name": "fallback channels",
+   "aliases": []
+  },
+  {
+   "name": "primary channel",
+   "aliases": []
+  },
+  {
+   "name": "fallback assignment",
+   "aliases": []
+  },
+  {
+   "name": "critical location and destination details",
+   "aliases": []
+  },
+  {
+   "name": "dispatchers",
+   "aliases": []
+  },
+  {
+   "name": "approved data channel",
+   "aliases": []
+  },
+  {
+   "name": "attempted contact",
+   "aliases": []
+  },
+  {
+   "name": "Computer Aided Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "unit status",
+   "aliases": []
+  },
+  {
+   "name": "time and source of that confirmation",
+   "aliases": []
+  },
+  {
+   "name": "queued status updates",
+   "aliases": []
+  },
+  {
+   "name": "connection interruptions",
+   "aliases": []
+  },
+  {
+   "name": "records that require reconciliation",
+   "aliases": []
+  },
+  {
+   "name": "Coverage monitoring",
+   "aliases": []
+  },
+  {
+   "name": "successful radio checks",
+   "aliases": []
+  },
+  {
+   "name": "planned check interval",
+   "aliases": []
+  },
+  {
+   "name": "operating area",
+   "aliases": []
+  },
+  {
+   "name": "radio reach",
+   "aliases": []
+  },
+  {
+   "name": "ambulance movement",
+   "aliases": []
+  },
+  {
+   "name": "change card",
+   "aliases": []
+  },
+  {
+   "name": "channel assignments",
+   "aliases": []
+  },
+  {
+   "name": "effective time of each change",
+   "aliases": []
+  },
+  {
+   "name": "Coverage Gap Bulletin",
+   "aliases": []
+  },
+  {
+   "name": "staffing or deployment adjustments",
+   "aliases": []
+  },
+  {
+   "name": "Pebble",
+   "aliases": []
+  },
+  {
+   "name": "conflicting timestamps",
+   "aliases": []
+  },
+  {
+   "name": "interrupted communications",
+   "aliases": []
+  },
+  {
+   "name": "calls",
+   "aliases": []
+  },
+  {
+   "name": "clinical priority",
+   "aliases": []
+  },
+  {
+   "name": "radio access",
+   "aliases": []
+  },
+  {
+   "name": "dispatch staff",
+   "aliases": []
+  },
+  {
+   "name": "Call Taker Mara",
+   "aliases": []
+  },
+  {
+   "name": "caller",
+   "aliases": []
+  },
+  {
+   "name": "assigned crew",
+   "aliases": []
+  },
+  {
+   "name": "approved alternate channel",
+   "aliases": []
+  },
+  {
+   "name": "last confirmed position",
+   "aliases": []
+  },
+  {
+   "name": "safe operating status",
+   "aliases": []
+  },
+  {
+   "name": "contact",
+   "aliases": []
+  },
+  {
+   "name": "radio equipment faults",
+   "aliases": []
+  },
+  {
+   "name": "maintenance escalation path",
+   "aliases": []
+  },
+  {
+   "name": "available telephone channels",
+   "aliases": []
+  },
+  {
+   "name": "receiving facilities",
+   "aliases": []
+  },
+  {
+   "name": "arrivals",
+   "aliases": []
+  },
+  {
+   "name": "network disruption",
+   "aliases": []
+  },
+  {
+   "name": "arrival updates",
+   "aliases": []
+  },
+  {
+   "name": "approved backup contact method",
+   "aliases": []
+  },
+  {
+   "name": "radio delivery",
+   "aliases": []
+  },
+  {
+   "name": "Regional Medical Director",
+   "aliases": []
+  },
+  {
+   "name": "clinical prioritization",
+   "aliases": []
+  },
+  {
+   "name": "communication limits",
+   "aliases": []
+  },
+  {
+   "name": "response choices",
+   "aliases": []
+  },
+  {
+   "name": "Paramedic Crew members",
+   "aliases": []
+  },
+  {
+   "name": "local safety procedures",
+   "aliases": []
+  },
+  {
+   "name": "area",
+   "aliases": []
+  },
+  {
+   "name": "dispatch instructions",
+   "aliases": []
+  },
+  {
+   "name": "conditions",
+   "aliases": []
+  },
+  {
+   "name": "named successor",
+   "aliases": []
+  },
+  {
+   "name": "handover",
+   "aliases": []
+  },
+  {
+   "name": "higher-level incident command arrangement",
+   "aliases": []
+  },
+  {
+   "name": "outgoing shift",
+   "aliases": []
+  },
+  {
+   "name": "active incidents",
+   "aliases": []
+  },
+  {
+   "name": "communication failures",
+   "aliases": []
+  },
+  {
+   "name": "temporary channel assignments",
+   "aliases": []
+  },
+  {
+   "name": "decisions awaiting review",
+   "aliases": []
+  },
+  {
+   "name": "incoming shift",
+   "aliases": []
+  },
+  {
+   "name": "open assignments",
+   "aliases": []
+  },
+  {
+   "name": "communication paths",
+   "aliases": []
+  },
+  {
+   "name": "control",
+   "aliases": []
+  },
+  {
+   "name": "dispatch staff",
+   "aliases": []
+  },
+  {
+   "name": "delayed status reports",
+   "aliases": []
+  },
+  {
+   "name": "recorded timestamps",
+   "aliases": []
+  },
+  {
+   "name": "unresolved discrepancy",
+   "aliases": []
+  },
+  {
+   "name": "operational records",
+   "aliases": []
+  },
+  {
+   "name": "controlled procedures",
+   "aliases": []
+  },
+  {
+   "name": "system changes",
+   "aliases": []
+  },
+  {
+   "name": "corrective actions",
+   "aliases": []
+  },
+  {
+   "name": "incident records",
+   "aliases": []
+  },
+  {
+   "name": "timestamp consistency",
+   "aliases": []
+  },
+  {
+   "name": "dispatch decisions",
+   "aliases": []
+  },
+  {
+   "name": "recorded outcomes",
+   "aliases": []
+  },
+  {
+   "name": "cases",
+   "aliases": []
+  },
+  {
+   "name": "acuity decisions",
+   "aliases": []
+  },
+  {
+   "name": "escalation timing",
+   "aliases": []
+  },
+  {
+   "name": "patient risk",
+   "aliases": []
+  },
+  {
+   "name": "clinical findings",
+   "aliases": []
+  },
+  {
+   "name": "clinical guidance",
+   "aliases": []
+  },
+  {
+   "name": "regional authority",
+   "aliases": []
+  },
+  {
+   "name": "Audit findings",
+   "aliases": []
+  },
+  {
+   "name": "records",
+   "aliases": []
+  },
+  {
+   "name": "criteria",
+   "aliases": []
+  },
+  {
+   "name": "limitations",
+   "aliases": []
+  },
+  {
+   "name": "Regional Dispatch Center",
+   "aliases": []
+  },
+  {
+   "name": "audit evidence",
+   "aliases": []
+  },
+  {
+   "name": "approved access controls",
+   "aliases": []
+  },
+  {
+   "name": "retention controls",
+   "aliases": []
+  },
+  {
+   "name": "Fleet Maintenance Cell",
+   "aliases": []
+  },
+  {
+   "name": "Mutual Aid Release Form",
+   "aliases": []
+  },
+  {
+   "name": "maintenance and availability records",
+   "aliases": []
+  },
+  {
+   "name": "Material findings",
+   "aliases": []
+  },
+  {
+   "name": "responsible role",
+   "aliases": []
+  },
+  {
+   "name": "Shift Commander",
+   "aliases": []
+  },
+  {
+   "name": "operational capability",
+   "aliases": []
+  },
+  {
+   "name": "unresolved defect",
+   "aliases": []
+  },
+  {
+   "name": "rationale",
+   "aliases": []
+  },
+  {
+   "name": "scope",
+   "aliases": []
+  },
+  {
+   "name": "duration",
+   "aliases": []
+  },
+  {
+   "name": "Ambulance Coordination Platform",
+   "aliases": []
+  },
+  {
+   "name": "Computer Aided Dispatch Console",
+   "aliases": []
+  },
+  {
+   "name": "approved scenarios",
+   "aliases": []
+  },
+  {
+   "name": "change owner",
+   "aliases": []
+  },
+  {
+   "name": "test evidence",
+   "aliases": []
+  },
+  {
+   "name": "known limitations",
+   "aliases": []
+  },
+  {
+   "name": "rollback approach",
+   "aliases": []
+  },
+  {
+   "name": "Radio Coordinator",
+   "aliases": []
+  },
+  {
+   "name": "South Access Lane Notice",
+   "aliases": []
+  },
+  {
+   "name": "Regional Radio Network",
+   "aliases": []
+  },
+  {
+   "name": "interfaces",
+   "aliases": []
+  },
+  {
+   "name": "preventive work",
+   "aliases": []
+  },
+  {
+   "name": "manufacturer guidance",
+   "aliases": []
+  },
+  {
+   "name": "service history",
+   "aliases": []
+  },
+  {
+   "name": "regional operating requirements",
+   "aliases": []
+  },
+  {
+   "name": "maintenance records",
+   "aliases": []
+  },
+  {
+   "name": "asset identifier",
+   "aliases": []
+  },
+  {
+   "name": "work performed",
+   "aliases": []
+  },
+  {
+   "name": "parts used",
+   "aliases": []
+  },
+  {
+   "name": "return-to-service decision",
+   "aliases": []
+  },
+  {
+   "name": "service measures",
+   "aliases": []
+  },
+  {
+   "name": "approved operating thresholds",
+   "aliases": []
+  },
+  {
+   "name": "demand",
+   "aliases": []
+  },
+  {
+   "name": "coverage",
+   "aliases": []
+  },
+  {
+   "name": "dispatch delay",
+   "aliases": []
+  },
+  {
+   "name": "communications availability",
+   "aliases": []
+  },
+  {
+   "name": "unresolved data quality issues",
+   "aliases": []
+  },
+  {
+   "name": "Hospital Liaison Desk",
+   "aliases": []
+  },
+  {
+   "name": "operational observations",
+   "aliases": []
+  },
+  {
+   "name": "information",
+   "aliases": []
+  },
+  {
+   "name": "Regional Medical Director",
+   "aliases": []
+  },
+  {
+   "name": "significant events",
+   "aliases": []
+  },
+  {
+   "name": "corrective actions",
+   "aliases": []
+  },
+  {
+   "name": "completion",
+   "aliases": []
+  },
+  {
+   "name": "demonstrated effectiveness",
+   "aliases": []
+  },
+  {
+   "name": "Recurring issues",
+   "aliases": []
+  },
+  {
+   "name": "systemic causes",
+   "aliases": []
+  },
+  {
+   "name": "local workarounds",
+   "aliases": []
+  },
+  {
+   "name": "Approved lessons",
+   "aliases": []
+  },
+  {
+   "name": "procedures",
+   "aliases": []
+  },
+  {
+   "name": "training",
+   "aliases": []
+  },
+  {
+   "name": "maintenance plans",
+   "aliases": []
+  },
+  {
+   "name": "release criteria",
+   "aliases": []
+  },
+  {
+   "name": "periodic summary of assurance activities, open risks, and improvement progress",
+   "aliases": []
+  },
+  {
+   "name": "regional oversight",
+   "aliases": []
+  }
+ ],
+ "calls": [
+  {
+   "kind": "extract",
+   "units": [
+    "S001",
+    "S044"
+   ],
+   "chunk_tokens": 892,
+   "memory_tokens": 0,
+   "prompt_tokens": 1686,
+   "input": 1892,
+   "output": 6499,
+   "reasoning": 1740,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S045",
+    "S090"
+   ],
+   "chunk_tokens": 882,
+   "memory_tokens": 0,
+   "prompt_tokens": 1685,
+   "input": 1891,
+   "output": 8122,
+   "reasoning": 3072,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S091",
+    "S137"
+   ],
+   "chunk_tokens": 865,
+   "memory_tokens": 0,
+   "prompt_tokens": 1666,
+   "input": 1872,
+   "output": 7777,
+   "reasoning": 2372,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S138",
+    "S181"
+   ],
+   "chunk_tokens": 884,
+   "memory_tokens": 0,
+   "prompt_tokens": 1677,
+   "input": 1883,
+   "output": 7522,
+   "reasoning": 1934,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S182",
+    "S225"
+   ],
+   "chunk_tokens": 894,
+   "memory_tokens": 0,
+   "prompt_tokens": 1686,
+   "input": 1892,
+   "output": 8684,
+   "reasoning": 1992,
+   "cached": false
+  },
+  {
+   "kind": "extract",
+   "units": [
+    "S226",
+    "S247"
+   ],
+   "chunk_tokens": 408,
+   "memory_tokens": 0,
+   "prompt_tokens": 1140,
+   "input": 1346,
+   "output": 5147,
+   "reasoning": 2941,
+   "cached": false
+  }
+ ],
+ "wall_s": 265.4
+}

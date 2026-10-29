@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "Cybersecurity for the Regional Flow Platform is based on centrally managed identities, explicit authorization, and traceable operational actions.",
+   "tags": []
+  },
+  {
+   "text": "The Identity Access Service is the authoritative source for user accounts, service accounts, role memberships, authentication policies, and session lifecycle controls.",
+   "tags": []
+  },
+  {
+   "text": "Each named operational user shall authenticate with an individually assigned identity before accessing the Airport CDM Portal, Digital Briefing Room, or any operational console.",
+   "tags": []
+  },
+  {
+   "text": "Shared operational accounts are not permitted for routine use because they prevent reliable attribution during time-critical flow management decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager, Tower Supervisor, Ramp Control Lead, Slot Coordinator, and Airline Operations Coordinator receive role profiles that reflect their normal operational responsibilities.",
+   "tags": []
+  },
+  {
+   "text": "Role profiles shall grant the minimum access needed to view, propose, approve, or administer operational data within the Regional Flow Platform.",
+   "tags": []
+  },
+  {
+   "text": "The Regional Flow Manager may authorize regional traffic management measures, while the Slot Coordinator may administer slot allocation functions within boundaries defined by the Business Rules Registry.",
+   "tags": []
+  },
+  {
+   "text": "The Tower Supervisor may operate the Tower Sequence Manager and view runway metering information, but may not modify airline recovery priorities or user entitlement records.",
+   "tags": []
+  },
+  {
+   "text": "The Ramp Control Lead may update ramp movement status through the Ramp Movement Board, but may not change airport acceptance parameters or sector capacity assumptions.",
+   "tags": []
+  },
+  {
+   "text": "The Airline Operations Coordinator and Aircraft Operator Representative may view airline-relevant planning data and submit coordination inputs without receiving administrative access to system configuration.",
+   "tags": []
+  },
+  {
+   "text": "The System Support Engineer may maintain infrastructure components and investigate technical faults, but operational approval privileges shall remain separated from technical administration privileges.",
+   "tags": []
+  },
+  {
+   "text": "The Data Governance Steward may manage data retention rules, reference data ownership, and audit review processes without being able to issue operational traffic flow instructions.",
+   "tags": []
+  },
+  {
+   "text": "Operational segregation shall prevent a single user from creating, approving, and technically concealing a material change to a Ground Delay Program, Airport Acceptance Rate, or Tactical Regulation Proposal.",
+   "tags": []
+  },
+  {
+   "text": "Where dual control is required, the Regional Flow Platform shall record the initiating user, the approving user, the affected operational object, and the effective time of the decision.",
+   "tags": []
+  },
+  {
+   "text": "Access to the Performance Analytics Warehouse shall be restricted to authorized analytical roles and shall not allow retrospective alteration of operational records held in the Audit Event Ledger.",
+   "tags": []
+  },
+  {
+   "text": "The Audit Event Ledger shall capture successful and failed authentication attempts, role changes, privilege elevations, operational approvals, configuration changes, data exports, and emergency access activations.",
+   "tags": []
+  },
+  {
+   "text": "All audit records shall use time derived from the Time Synchronization Service so that investigations can reconstruct event order across the Airport CDM Portal, Slot Allocation Engine, and Alert Distribution Hub.",
+   "tags": []
+  },
+  {
+   "text": "Audit records shall be protected against ordinary user modification and retained for a period agreed by the airport operator, regional authority, and participating aircraft operators.",
+   "tags": []
+  },
+  {
+   "text": "Security monitoring shall alert the System Support Engineer and Data Governance Steward when unusual access patterns indicate possible credential compromise or inappropriate privilege use.",
+   "tags": []
+  },
+  {
+   "text": "The Identity Access Service shall support rapid suspension of accounts when a user changes role, leaves an organization, or becomes subject to an operational integrity concern.",
+   "tags": []
+  },
+  {
+   "text": "Temporary access shall have a defined sponsor, purpose, role scope, and expiry time, and shall be reviewed after the operational need has ended.",
+   "tags": []
+  },
+  {
+   "text": "Silverpine shall accept emergency access activations only after the Identity Access Service records the authorizing incident reference and expiry time.",
+   "tags": [
+    "A16:link"
+   ]
+  },
+  {
+   "text": "Emergency access may be granted to the Emergency Response Coordinator, Airport Duty Manager, or System Support Engineer when life safety, airport continuity, or critical system recovery requires immediate action.",
+   "tags": []
+  },
+  {
+   "text": "Use of emergency access shall generate prominent audit events and shall require post-event review by the Data Governance Steward and the responsible operational authority.",
+   "tags": []
+  },
+  {
+   "text": "During Contingency Fallback State, access control shall continue to enforce role separation even when some integrations are unavailable and manual coordination becomes necessary.",
+   "tags": []
+  },
+  {
+   "text": "When normal connectivity is restored, the Regional Flow Platform shall reconcile contingency actions with the Collaborative Decision Log so that accountability is preserved across the full incident timeline.",
+   "tags": []
+  }
+ ]
+}

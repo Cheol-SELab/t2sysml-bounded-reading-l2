@@ -1,0 +1,430 @@
+{
+ "doc_id": "L2T6",
+ "writer": "gpt-6-luna",
+ "verifier": "gpt-5.5",
+ "budget": 1024,
+ "doc_tokens": 5108,
+ "far_share": 1.0,
+ "entities": [
+  {
+   "entity_id": "E_BAG_DROP_UNIT",
+   "canonical": "Pier 4 Bag-Drop Unit",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BAGGAGE_CONTROL_SYSTEM",
+   "canonical": "Baggage Control System",
+   "kind": "part",
+   "aliases": [
+    "Velvet"
+   ]
+  },
+  {
+   "entity_id": "E_ZONE_CONTROLLER",
+   "canonical": "Concourse Zone Controller",
+   "kind": "part",
+   "aliases": [
+    "Mosslight"
+   ]
+  },
+  {
+   "entity_id": "E_INDUCTION_CONVEYOR",
+   "canonical": "Induction Tray Conveyor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PRIMARY_SORTER",
+   "canonical": "Primary Crossbelt Sorter",
+   "kind": "part",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "canonical": "North Gate Scanner",
+   "kind": "part",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "entity_id": "E_SOUTH_GATE_SCANNER",
+   "canonical": "South Gate Scanner",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_IMAGE_RESOLUTION_DESK",
+   "canonical": "Image Resolution Desk",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "canonical": "Explosives Response Team",
+   "kind": "actor",
+   "aliases": [
+    "Pebble"
+   ]
+  },
+  {
+   "entity_id": "E_MAKEUP_CAROUSEL",
+   "canonical": "Carousel 7 Make-Up Unit",
+   "kind": "part",
+   "aliases": [
+    "Orchard"
+   ]
+  },
+  {
+   "entity_id": "E_TRANSFER_BAG_FEEDER",
+   "canonical": "Transfer Bag Feeder",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RAMP_COORDINATOR",
+   "canonical": "Airline Ramp Coordinator",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_OPERATIONS_SUPERVISOR",
+   "canonical": "Baggage Operations Supervisor",
+   "kind": "actor",
+   "aliases": [
+    "Tern"
+   ]
+  },
+  {
+   "entity_id": "E_MAINTENANCE_TECHNICIAN",
+   "canonical": "Maintenance Technician",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SECURITY_DUTY_MANAGER",
+   "canonical": "Security Duty Manager",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_INSPECTION_CHUTE",
+   "canonical": "Secondary Inspection Chute",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RECONCILIATION_STATION",
+   "canonical": "Bag Reconciliation Station",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FLIGHT_DATA_GATEWAY",
+   "canonical": "Flight Data Gateway",
+   "kind": "part",
+   "aliases": [
+    "Lantern"
+   ]
+  },
+  {
+   "entity_id": "E_BAG_TAG_PRINTER",
+   "canonical": "Bag Tag Printer",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LOAD_CONTROL_DESK",
+   "canonical": "Outbound Load Control Desk",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EAST_MAKEUP_CONVEYOR",
+   "canonical": "East Make-Up Conveyor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_WEST_MAKEUP_CONVEYOR",
+   "canonical": "West Make-Up Conveyor",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_OVERSIZE_EXCEPTION_TICKET",
+   "canonical": "Oversize Exception Ticket",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_FLIGHT_CUTOFF_ADVISORY",
+   "canonical": "Flight Cutoff Advisory",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MANUAL_RESCAN_RECEIPT",
+   "canonical": "Manual Rescan Receipt",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CHUTE_OCCUPANCY_NOTE",
+   "canonical": "Chute Occupancy Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_LATE_TRANSFER_BAG_CARD",
+   "canonical": "Late Transfer Bag Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CUSTODY_SEAL_LOG",
+   "canonical": "Custody Seal Log",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_RECOVERY_ROUTE_CARD",
+   "canonical": "Recovery Route Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CALIBRATION_WITNESS_TAG",
+   "canonical": "Calibration Witness Tag",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BAG_MATCH_QUERY",
+   "canonical": "Bag Match Query",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CAROUSEL_RELEASE_SLIP",
+   "canonical": "Carousel Release Slip",
+   "kind": "item",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_BAG_DROP_UNIT",
+   "consumer": "E_IMAGE_RESOLUTION_DESK",
+   "item": "E_OVERSIZE_EXCEPTION_TICKET",
+   "link_ref": "short",
+   "short_ref": "the exception ticket",
+   "intro_unit": "S035",
+   "link_unit": "S141",
+   "distance_tokens": 2061
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_FLIGHT_DATA_GATEWAY",
+   "consumer": "E_BAGGAGE_CONTROL_SYSTEM",
+   "item": "E_FLIGHT_CUTOFF_ADVISORY",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S011",
+   "link_unit": "S113",
+   "distance_tokens": 2038
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_SOUTH_GATE_SCANNER",
+   "consumer": "E_IMAGE_RESOLUTION_DESK",
+   "item": "E_MANUAL_RESCAN_RECEIPT",
+   "link_ref": "short",
+   "short_ref": "the rescan receipt",
+   "intro_unit": "S061",
+   "link_unit": "S159",
+   "distance_tokens": 1872
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_PRIMARY_SORTER",
+   "consumer": "E_OPERATIONS_SUPERVISOR",
+   "item": "E_CHUTE_OCCUPANCY_NOTE",
+   "link_ref": "short",
+   "short_ref": "the occupancy note",
+   "intro_unit": "S085",
+   "link_unit": "S184",
+   "distance_tokens": 1887
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_TRANSFER_BAG_FEEDER",
+   "consumer": "E_RECONCILIATION_STATION",
+   "item": "E_LATE_TRANSFER_BAG_CARD",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S038",
+   "link_unit": "S143",
+   "distance_tokens": 2039
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "consumer": "E_SECURITY_DUTY_MANAGER",
+   "item": "E_CUSTODY_SEAL_LOG",
+   "link_ref": "short",
+   "short_ref": "the seal log",
+   "intro_unit": "S120",
+   "link_unit": "S213",
+   "distance_tokens": 1824
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_ZONE_CONTROLLER",
+   "consumer": "E_MAINTENANCE_TECHNICIAN",
+   "item": "E_RECOVERY_ROUTE_CARD",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S013",
+   "link_unit": "S185",
+   "distance_tokens": 3360
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_BAG_TAG_PRINTER",
+   "consumer": "E_MAINTENANCE_TECHNICIAN",
+   "item": "E_CALIBRATION_WITNESS_TAG",
+   "link_ref": "short",
+   "short_ref": "the witness tag",
+   "intro_unit": "S074",
+   "link_unit": "S176",
+   "distance_tokens": 1923
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_RECONCILIATION_STATION",
+   "consumer": "E_RAMP_COORDINATOR",
+   "item": "E_BAG_MATCH_QUERY",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S101",
+   "link_unit": "S219",
+   "distance_tokens": 2328
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_RAMP_COORDINATOR",
+   "consumer": "E_MAKEUP_CAROUSEL",
+   "item": "E_CAROUSEL_RELEASE_SLIP",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S052",
+   "link_unit": "S148",
+   "distance_tokens": 1863
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_ZONE_CONTROLLER",
+   "alias": "Mosslight",
+   "intro_unit": "S010",
+   "link_unit": "S134",
+   "distance_tokens": 2426
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_BAGGAGE_CONTROL_SYSTEM",
+   "alias": "Velvet",
+   "intro_unit": "S008",
+   "link_unit": "S135",
+   "distance_tokens": 2472
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_PRIMARY_SORTER",
+   "alias": "Juniper",
+   "intro_unit": "S050",
+   "link_unit": "S166",
+   "distance_tokens": 2256
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "alias": "Kestrel",
+   "intro_unit": "S047",
+   "link_unit": "S167",
+   "distance_tokens": 2323
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_EXPLOSIVES_RESPONSE_TEAM",
+   "alias": "Pebble",
+   "intro_unit": "S068",
+   "link_unit": "S186",
+   "distance_tokens": 2269
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_MAKEUP_CAROUSEL",
+   "alias": "Orchard",
+   "intro_unit": "S075",
+   "link_unit": "S216",
+   "distance_tokens": 2776
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_FLIGHT_DATA_GATEWAY",
+   "alias": "Lantern",
+   "intro_unit": "S080",
+   "link_unit": "S190",
+   "distance_tokens": 2103
+  },
+  {
+   "probe_id": "A8",
+   "type": "alias_ref",
+   "entity_id": "E_OPERATIONS_SUPERVISOR",
+   "alias": "Tern",
+   "intro_unit": "S091",
+   "link_unit": "S241",
+   "distance_tokens": 3035
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_GATE_SCANNER",
+   "confusable_entity_id": "E_SOUTH_GATE_SCANNER",
+   "shared_head": "Gate Scanner",
+   "link_unit": "S168",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_EAST_MAKEUP_CONVEYOR",
+   "confusable_entity_id": "E_WEST_MAKEUP_CONVEYOR",
+   "shared_head": "Make-Up Conveyor",
+   "link_unit": "S195",
+   "distance_tokens": 0
+  }
+ ]
+}

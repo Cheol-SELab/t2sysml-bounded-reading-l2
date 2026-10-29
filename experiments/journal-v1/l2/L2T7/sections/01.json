@@ -1,0 +1,110 @@
+{
+ "sentences": [
+  {
+   "text": "Sentinel Vale is an Earth-observation mission intended to provide routine land, coastal, and cryosphere imaging products with predictable latency and documented data quality.",
+   "tags": []
+  },
+  {
+   "text": "The ground segment exists to plan spacecraft activities, acquire mission data, maintain safe spacecraft operations, generate user products, preserve mission records, and provide controlled access to services.",
+   "tags": []
+  },
+  {
+   "text": "This operational concept treats the spacecraft, launch segment, and external user processing environments as outside the ground segment boundary except where interfaces are required for operations.",
+   "tags": []
+  },
+  {
+   "text": "The ground segment boundary includes the Mission Control Center, Flight Dynamics Facility, Payload Processing Facility, Network Control System, Long Term Archive, User Services Portal, Mission Planning System, Command Validation Gateway, Telemetry Ingest Service, Orbit Determination Engine, Product Quality Service, Primary Processing Cluster, and Backup Processing Cluster.",
+   "tags": []
+  },
+  {
+   "text": "The boundary also includes the North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna as controlled operational assets.",
+   "tags": []
+  },
+  {
+   "text": "For local voice coordination only, Mission Control Center is introduced in this document with the alias Bluebell.",
+   "tags": [
+    "ALIAS:E_MISSION_CONTROL_CENTER"
+   ]
+  },
+  {
+   "text": "The Mission Control Center is the authority for real-time spacecraft operations, pass supervision, anomaly response, and release of validated command activities.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Facility provides orbit analysis, maneuver planning support, access prediction, and navigation products required by other ground functions.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Processing Facility provides the operational environment for payload data processing, calibration control, product assessment, and distribution staging.",
+   "tags": []
+  },
+  {
+   "text": "The Network Control System monitors communications availability, routes operational traffic, and provides status awareness for ground connectivity supporting the mission.",
+   "tags": []
+  },
+  {
+   "text": "The Mission Planning System converts approved imaging demand and spacecraft constraints into executable activity plans for routine operations.",
+   "tags": []
+  },
+  {
+   "text": "The Command Validation Gateway provides the formal barrier between planning outputs and command release, and it enforces rule checks before commands are made available for uplink.",
+   "tags": []
+  },
+  {
+   "text": "The Telemetry Ingest Service receives spacecraft telemetry from scheduled contacts and makes it available to operations, engineering analysis, and downstream processing functions.",
+   "tags": []
+  },
+  {
+   "text": "The Orbit Determination Engine supports routine orbit maintenance by processing tracking inputs and producing controlled orbit knowledge for planning and product generation.",
+   "tags": []
+  },
+  {
+   "text": "The Product Quality Service performs automated and analyst-supported checks on generated products before they are exposed through operational dissemination channels.",
+   "tags": []
+  },
+  {
+   "text": "The Primary Processing Cluster is the nominal production environment for standard mission products, while the Backup Processing Cluster is maintained for resilience and controlled failover.",
+   "tags": []
+  },
+  {
+   "text": "The Long Term Archive is the authoritative repository for preserved mission data, generated products, processing records, and operational evidence required for traceability.",
+   "tags": []
+  },
+  {
+   "text": "The User Services Portal provides the controlled external interface for product search, ordering, status communication, and user support workflows.",
+   "tags": []
+  },
+  {
+   "text": "The Ground Network Manager coordinates availability of the antenna assets and confirms that scheduled contact opportunities are compatible with station readiness and maintenance constraints.",
+   "tags": []
+  },
+  {
+   "text": "The Spacecraft Operations Team owns spacecraft safety execution, contact conduct, command authorization support, and operational decision making during nominal and contingency conditions.",
+   "tags": []
+  },
+  {
+   "text": "The Flight Dynamics Team owns flight dynamics analysis, orbit maintenance recommendations, and operational coordination for navigation-related constraints.",
+   "tags": []
+  },
+  {
+   "text": "The Payload Calibration Team owns payload performance monitoring, calibration parameter stewardship, and the technical assessment of product quality trends.",
+   "tags": []
+  },
+  {
+   "text": "The Cybersecurity Desk provides continuous security monitoring, operational security guidance, and escalation support for events that could affect mission services.",
+   "tags": []
+  },
+  {
+   "text": "The baseline service assumption is continuous monitoring for safety-critical functions, scheduled contact support for every planned pass, and business-hours engineering support augmented by on-call coverage for urgent conditions.",
+   "tags": []
+  },
+  {
+   "text": "Routine autonomy is assumed for monitoring, routing, ingestion, processing, archiving, and user service transactions, but human authorization remains required for spacecraft commanding and major configuration changes.",
+   "tags": []
+  },
+  {
+   "text": "Mission assurance is based on controlled procedures, configuration management, segregation of duties, evidence retention, rehearsed contingency response, and periodic verification that redundant capabilities can support the required mission service levels.",
+   "tags": []
+  }
+ ]
+}

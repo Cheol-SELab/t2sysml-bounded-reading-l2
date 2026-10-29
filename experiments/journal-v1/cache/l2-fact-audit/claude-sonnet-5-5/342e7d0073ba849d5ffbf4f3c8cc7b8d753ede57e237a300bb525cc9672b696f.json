@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: succession(before=confirms that outstanding holds and route exceptions have an assigned owner, after=authorizing continuation of processing)\n\nSource sentences (the last one is where the fact was extracted):\nS212: The Secondary Inspection Chute is kept clear of unrelated bags so that identity and custody remain unambiguous during inspection.\nS213: The Security Duty Manager uses the seal log to verify that recorded custody seals remain accounted for and that any discrepancy has been escalated.\nS214: A Maintenance Technician reports equipment faults that could affect bag identity, screening integrity, or controlled access before the equipment is returned to service.\nS215: The Baggage Operations Supervisor confirms that outstanding holds and route exceptions have an assigned owner before authorizing continuation of processing.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S215 states the supervisor confirms holds and route exceptions have an owner before authorizing continuation of processing, which directly gives the ordering of the two actions.\"}",
+ "usage": {
+  "input_tokens": 715,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 68,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.792,
+ "created": "2026-10-14T12:52:18"
+}

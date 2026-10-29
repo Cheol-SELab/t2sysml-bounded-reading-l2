@@ -1,0 +1,992 @@
+{
+ "title": "Operational Concept for the Meridian Regional Air Traffic Flow Management and Airport Collaborative Decision-Making System",
+ "sections": [
+  {
+   "index": 1,
+   "heading": "Regional Operating Context and Mission Need",
+   "topic": "Describe the Meridian region, its congested airport network, recurring flow constraints, and the operational mission for a shared ATFM and A-CDM capability."
+  },
+  {
+   "index": 2,
+   "heading": "System Boundary and Stakeholder Participation",
+   "topic": "Define the system boundary, participating airports, service providers, airlines, handlers, and the initial naming of the core regional platform used throughout the concept."
+  },
+  {
+   "index": 3,
+   "heading": "Daily Planning Cycle and Pre-Tactical Baseline",
+   "topic": "Explain how the morning plan is built from schedules, weather outlooks, capacity declarations, and early runway and stand readiness information."
+  },
+  {
+   "index": 4,
+   "heading": "Flow Management Roles and Accountability",
+   "topic": "Set out the responsibilities of regional flow staff, network liaisons, meteorological briefers, and escalation contacts during pre-tactical and tactical operations."
+  },
+  {
+   "index": 5,
+   "heading": "Demand, Weather, and Capacity Inputs",
+   "topic": "Describe the forecast services and weather gateways that feed the capacity picture and explain how forecast confidence is recorded."
+  },
+  {
+   "index": 6,
+   "heading": "Airline Operations Centre Integration",
+   "topic": "Explain how airline operations centres submit intents, receive constraints, and coordinate crew, aircraft, and passenger recovery actions."
+  },
+  {
+   "index": 7,
+   "heading": "Airport Collaborative Decision Portal Concept",
+   "topic": "Describe the shared A-CDM portal, user workspaces, milestone views, and the obligations for timely update by each airport participant."
+  },
+  {
+   "index": 8,
+   "heading": "Tower and Airport Duty Coordination",
+   "topic": "Describe the coordination between the tower, airport duty desk, surface surveillance feeds, and operational safety checks."
+  },
+  {
+   "index": 9,
+   "heading": "Ramp Control and Apron Movement Management",
+   "topic": "Explain ramp control responsibilities for pushback sequencing, towing priorities, apron occupancy, and coordination with handling planners."
+  },
+  {
+   "index": 10,
+   "heading": "Slot Allocation Principles and Governance",
+   "topic": "Define slot allocation priorities, fairness rules, exemption handling, and the engine that proposes regulated departure and arrival opportunities."
+  },
+  {
+   "index": 11,
+   "heading": "Collaborative Target Time Management",
+   "topic": "Explain how target off-block times, calculated takeoff times, and milestone timestamps are proposed, negotiated, frozen, and audited."
+  },
+  {
+   "index": 12,
+   "heading": "Tower Sequencing and Departure Readiness",
+   "topic": "Describe the tower sequence workflow, runway queue management, departure readiness checks, and deicing interface points."
+  },
+  {
+   "index": 13,
+   "heading": "Ground Handling and Resource Constraints",
+   "topic": "Explain how handler dispatch, tow teams, buses, loaders, and stand equipment shortages influence feasible off-block times."
+  },
+  {
+   "index": 14,
+   "heading": "Airspace Restrictions and Alerting",
+   "topic": "Describe military coordination, temporary restricted areas, alert routing, and the treatment of late airspace capacity changes."
+  },
+  {
+   "index": 15,
+   "heading": "Departure Metering and Queue Absorption",
+   "topic": "Explain how metering absorbs delay at stands, coordinates pushback windows, and prevents runway queues from exceeding agreed thresholds."
+  },
+  {
+   "index": 16,
+   "heading": "Deicing, Winter Operations, and Pad Coordination",
+   "topic": "Describe the winter operating mode, deicing pad queue controls, fluid status updates, and ramp-tower coordination under freezing conditions."
+  },
+  {
+   "index": 17,
+   "heading": "Arrival Regulation and Holding Avoidance",
+   "topic": "Explain arrival regulation options, airborne holding prevention, diversion triggers, and tactical landing-rate adjustments."
+  },
+  {
+   "index": 18,
+   "heading": "Integrated Tactical Management Position",
+   "topic": "Describe the combined tactical display where departure, arrival, airport, and airspace measures are monitored and adjusted in real time."
+  },
+  {
+   "index": 19,
+   "heading": "Surface Constraints and Equipment Advisories",
+   "topic": "Explain how surface equipment conditions, fuel vehicle holds, runway metering, and apron congestion advisories affect the tactical plan."
+  },
+  {
+   "index": 20,
+   "heading": "Stand, Gate, and Passenger Connection Recovery",
+   "topic": "Describe how gate conflicts, stand reopening, passenger connection pressure, and aircraft turnaround recovery are coordinated."
+  },
+  {
+   "index": 21,
+   "heading": "Diversion and Irregular Operations Handling",
+   "topic": "Define diversion decision support, medical and technical priority cases, communication sequencing, and recovery coordination."
+  },
+  {
+   "index": 22,
+   "heading": "Baggage, Towbar, and Handler Exception Processing",
+   "topic": "Explain how late baggage, towbar availability, and handler exceptions are escalated without overwhelming the common operating picture."
+  },
+  {
+   "index": 23,
+   "heading": "Remote Stands and Landside Interface",
+   "topic": "Describe remote stand use, shuttle availability, passenger bus constraints, and the linkage between landside service limits and airside timing."
+  },
+  {
+   "index": 24,
+   "heading": "Border, Customs, and Apron Sensor Inputs",
+   "topic": "Explain how border release status, customs holds, and apron sensing data are represented in operational decisions."
+  },
+  {
+   "index": 25,
+   "heading": "Sector Load and En-Route Constraint Management",
+   "topic": "Describe how sector load monitors, departure fix saturation, and en-route constraints are converted into airport-level measures."
+  },
+  {
+   "index": 26,
+   "heading": "Crew Legality and Operator Recovery Choices",
+   "topic": "Explain how crew duty limits, aircraft operator preferences, and recovery options are represented without disclosing unnecessary commercial information."
+  },
+  {
+   "index": 27,
+   "heading": "Apron Cleanliness, Safety, and Readiness Checks",
+   "topic": "Describe apron sweeps, foreign object debris checks, stand readiness confirmation, and the timing of safety-related releases."
+  },
+  {
+   "index": 28,
+   "heading": "Slot Swaps and Collaborative Substitution",
+   "topic": "Define the controlled process for slot swaps, substitutions, customs releases, and airline-to-airline coordination under governance rules."
+  },
+  {
+   "index": 29,
+   "heading": "Lighting, Navaid, and Aerodrome Infrastructure Events",
+   "topic": "Describe how aerodrome infrastructure outages, lighting limits, and declared service reductions are published into the flow process."
+  },
+  {
+   "index": 30,
+   "heading": "Contingency Operations and Fallback Modes",
+   "topic": "Define degraded operations, contingency consoles, manual slot procedures, and the transition criteria into and out of fallback states."
+  },
+  {
+   "index": 31,
+   "heading": "Passenger Disruption Indicators and Service Recovery",
+   "topic": "Explain how passenger misconnection information and airline recovery actions inform metering choices without making passenger handling the primary system function."
+  },
+  {
+   "index": 32,
+   "heading": "Cybersecurity, Identity, and Access Control",
+   "topic": "Describe identity management, role-based access, operational segregation, audit expectations, and contingency access for emergency users."
+  },
+  {
+   "index": 33,
+   "heading": "Audit, Compliance, and Slot Performance Review",
+   "topic": "Explain how slot compliance, user decisions, substitutions, and late operational changes are audited for post-operations review."
+  },
+  {
+   "index": 34,
+   "heading": "Data Governance and Information Quality",
+   "topic": "Define data ownership, freshness indicators, validation rules, discrepancy resolution, and stewardship responsibilities."
+  },
+  {
+   "index": 35,
+   "heading": "Performance Measurement and Regional Benefits",
+   "topic": "Describe the operational metrics for delay absorption, queue length, slot adherence, cancellation avoidance, emissions reduction, and stakeholder benefit tracking."
+  },
+  {
+   "index": 36,
+   "heading": "Training, Exercises, and Human Factors",
+   "topic": "Explain controller, tower, ramp, airline, and handler training requirements, including simulation exercises and human factors safeguards."
+  },
+  {
+   "index": 37,
+   "heading": "Implementation Phasing and Airport Onboarding",
+   "topic": "Describe phased deployment, pilot airport selection, stakeholder readiness gates, interface certification, and migration from local tools."
+  },
+  {
+   "index": 38,
+   "heading": "Operational Service Management",
+   "topic": "Define support hours, incident handling, change windows, service level targets, and the relationship between system support and operational supervisors."
+  },
+  {
+   "index": 39,
+   "heading": "Future Enhancements and Regional Expansion",
+   "topic": "Identify future capabilities such as cross-border flow exchange, richer trajectory prediction, advanced turnaround prediction, and machine-assisted recovery options."
+  },
+  {
+   "index": 40,
+   "heading": "Summary of Operating Commitments",
+   "topic": "Summarize the commitments, decision rights, information-sharing duties, and governance principles required for sustained regional ATFM and A-CDM operation."
+  }
+ ],
+ "entities": [
+  {
+   "entity_id": "E_REGIONAL_FLOW_MANAGER",
+   "canonical": "Regional Flow Manager",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "canonical": "Airline Operations Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_TOWER_SUPERVISOR",
+   "canonical": "Tower Supervisor",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_RAMP_CONTROL_LEAD",
+   "canonical": "Ramp Control Lead",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SLOT_COORDINATOR",
+   "canonical": "Slot Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_NETWORK_OPERATIONS_LIAISON",
+   "canonical": "Network Operations Liaison",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_AIRPORT_DUTY_MANAGER",
+   "canonical": "Airport Duty Manager",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_METEOROLOGY_BRIEFING_OFFICER",
+   "canonical": "Meteorology Briefing Officer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_AIRSPACE_SECTOR_PLANNER",
+   "canonical": "Airspace Sector Planner",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_GROUND_HANDLING_DISPATCHER",
+   "canonical": "Ground Handling Dispatcher",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_AIRCRAFT_OPERATOR_REPRESENTATIVE",
+   "canonical": "Aircraft Operator Representative",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_EMERGENCY_RESPONSE_COORDINATOR",
+   "canonical": "Emergency Response Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_MILITARY_AIRSPACE_LIAISON",
+   "canonical": "Military Airspace Liaison",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DEICING_COORDINATOR",
+   "canonical": "Deicing Coordinator",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_DATA_GOVERNANCE_STEWARD",
+   "canonical": "Data Governance Steward",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_SYSTEM_SUPPORT_ENGINEER",
+   "canonical": "System Support Engineer",
+   "kind": "actor"
+  },
+  {
+   "entity_id": "E_REGIONAL_FLOW_PLATFORM",
+   "canonical": "Regional Flow Platform",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DEMAND_PREDICTION_SERVICE",
+   "canonical": "Demand Prediction Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CAPACITY_ASSESSMENT_MODULE",
+   "canonical": "Capacity Assessment Module",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SLOT_ALLOCATION_ENGINE",
+   "canonical": "Slot Allocation Engine",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_AIRPORT_CDM_PORTAL",
+   "canonical": "Airport CDM Portal",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TOWER_SEQUENCE_MANAGER",
+   "canonical": "Tower Sequence Manager",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RAMP_MOVEMENT_BOARD",
+   "canonical": "Ramp Movement Board",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DEPARTURE_METERING_SERVICE",
+   "canonical": "Departure Metering Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ARRIVAL_REGULATION_CONSOLE",
+   "canonical": "Arrival Regulation Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEATHER_INGEST_GATEWAY",
+   "canonical": "Weather Ingest Gateway",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_FLIGHT_DATA_EXCHANGE",
+   "canonical": "Flight Data Exchange",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SURFACE_SURVEILLANCE_ADAPTER",
+   "canonical": "Surface Surveillance Adapter",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_AIRLINE_INTERFACE_ADAPTER",
+   "canonical": "Airline Interface Adapter",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_HANDLING_RESOURCE_PLANNER",
+   "canonical": "Handling Resource Planner",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_ALERT_DISTRIBUTION_HUB",
+   "canonical": "Alert Distribution Hub",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_PERFORMANCE_ANALYTICS_WAREHOUSE",
+   "canonical": "Performance Analytics Warehouse",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_AUDIT_EVENT_LEDGER",
+   "canonical": "Audit Event Ledger",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_IDENTITY_ACCESS_SERVICE",
+   "canonical": "Identity Access Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_CONTINGENCY_OPERATIONS_CONSOLE",
+   "canonical": "Contingency Operations Console",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_DIGITAL_BRIEFING_ROOM",
+   "canonical": "Digital Briefing Room",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_NORTH_RUNWAY_METER",
+   "canonical": "North Runway Meter",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SOUTH_RUNWAY_METER",
+   "canonical": "South Runway Meter",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_EAST_APRON_SENSOR",
+   "canonical": "East Apron Sensor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_WEST_APRON_SENSOR",
+   "canonical": "West Apron Sensor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_SECTOR_LOAD_MONITOR",
+   "canonical": "Sector Load Monitor",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_GATE_CONFLICT_DETECTOR",
+   "canonical": "Gate Conflict Detector",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_BUSINESS_RULES_REGISTRY",
+   "canonical": "Business Rules Registry",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_TIME_SYNCHRONIZATION_SERVICE",
+   "canonical": "Time Synchronization Service",
+   "kind": "part"
+  },
+  {
+   "entity_id": "E_RUNWAY_INSPECTION_NOTE",
+   "canonical": "Runway Inspection Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CREW_BUS_DELAY_SLIP",
+   "canonical": "Crew Bus Delay Slip",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DEICING_PAD_QUEUE_CARD",
+   "canonical": "Deicing Pad Queue Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_STAND_TOW_REQUEST_FORM",
+   "canonical": "Stand Tow Request Form",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TEMPORARY_RESTRICTION_NOTICE",
+   "canonical": "Temporary Restriction Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_FUEL_TRUCK_HOLD_ADVICE",
+   "canonical": "Fuel Truck Hold Advice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_GATE_REOPENING_MEMO",
+   "canonical": "Gate Reopening Memo",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PUSHBACK_WINDOW_TOKEN",
+   "canonical": "Pushback Window Token",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_LATE_BAGGAGE_TAG_LIST",
+   "canonical": "Late Baggage Tag List",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_STORM_CELL_SNAPSHOT",
+   "canonical": "Storm Cell Snapshot",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_DEPARTURE_FIX_LOAD_SHEET",
+   "canonical": "Departure Fix Load Sheet",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_MEDICAL_DIVERSION_NOTICE",
+   "canonical": "Medical Diversion Notice",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TOWBAR_SHORTAGE_REPORT",
+   "canonical": "Towbar Shortage Report",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_REMOTE_STAND_SHUTTLE_COUNT",
+   "canonical": "Remote Stand Shuttle Count",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CUSTOMS_HOLD_RELEASE_NOTE",
+   "canonical": "Customs Hold Release Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_RUNWAY_LIGHTING_OUTAGE_CARD",
+   "canonical": "Runway Lighting Outage Card",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CREW_DUTY_EXTENSION_LOG",
+   "canonical": "Crew Duty Extension Log",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_APRON_SWEEP_COMPLETION_NOTE",
+   "canonical": "Apron Sweep Completion Note",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_SLOT_SWAP_PERMISSION_EMAIL",
+   "canonical": "Slot Swap Permission Email",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_PASSENGER_MISCONNECT_COUNT",
+   "canonical": "Passenger Misconnect Count",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_FLIGHT_INTENT_MESSAGE",
+   "canonical": "Flight Intent Message",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_AIRPORT_CAPACITY_PLAN",
+   "canonical": "Airport Capacity Plan",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_CALCULATED_TAKEOFF_TIME",
+   "canonical": "Calculated Takeoff Time",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TARGET_OFF_BLOCK_TIME",
+   "canonical": "Target Off Block Time",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_GROUND_DELAY_PROGRAM",
+   "canonical": "Ground Delay Program",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_AIRPORT_ACCEPTANCE_RATE",
+   "canonical": "Airport Acceptance Rate",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_COMMON_SITUATION_DISPLAY",
+   "canonical": "Common Situation Display",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_COLLABORATIVE_DECISION_LOG",
+   "canonical": "Collaborative Decision Log",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_TACTICAL_REGULATION_PROPOSAL",
+   "canonical": "Tactical Regulation Proposal",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_POST_OPERATIONS_REPORT",
+   "canonical": "Post Operations Report",
+   "kind": "item"
+  },
+  {
+   "entity_id": "E_NORMAL_OPERATIONS",
+   "canonical": "Normal Operations",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_ADVERSE_WEATHER_MODE",
+   "canonical": "Adverse Weather Mode",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_CAPACITY_REDUCTION_STATE",
+   "canonical": "Capacity Reduction State",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_RECOVERY_PHASE",
+   "canonical": "Recovery Phase",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_CONTINGENCY_FALLBACK_STATE",
+   "canonical": "Contingency Fallback State",
+   "kind": "state"
+  },
+  {
+   "entity_id": "E_SLOT_COMPLIANCE_STATE",
+   "canonical": "Slot Compliance State",
+   "kind": "state"
+  }
+ ],
+ "aliases": [
+  {
+   "entity_id": "E_REGIONAL_FLOW_PLATFORM",
+   "alias": "Cedarbell",
+   "intro_section": 2
+  },
+  {
+   "entity_id": "E_DEMAND_PREDICTION_SERVICE",
+   "alias": "Marlinstone",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_SLOT_ALLOCATION_ENGINE",
+   "alias": "Blueharbor",
+   "intro_section": 10
+  },
+  {
+   "entity_id": "E_AIRPORT_CDM_PORTAL",
+   "alias": "Foxglove",
+   "intro_section": 7
+  },
+  {
+   "entity_id": "E_TOWER_SEQUENCE_MANAGER",
+   "alias": "Ironleaf",
+   "intro_section": 12
+  },
+  {
+   "entity_id": "E_RAMP_MOVEMENT_BOARD",
+   "alias": "Skylark",
+   "intro_section": 13
+  },
+  {
+   "entity_id": "E_DEPARTURE_METERING_SERVICE",
+   "alias": "Emberline",
+   "intro_section": 15
+  },
+  {
+   "entity_id": "E_ARRIVAL_REGULATION_CONSOLE",
+   "alias": "Nightjar",
+   "intro_section": 18
+  },
+  {
+   "entity_id": "E_REGIONAL_FLOW_MANAGER",
+   "alias": "Copperfin",
+   "intro_section": 4
+  },
+  {
+   "entity_id": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "alias": "Saffron",
+   "intro_section": 6
+  },
+  {
+   "entity_id": "E_TOWER_SUPERVISOR",
+   "alias": "Brindle",
+   "intro_section": 8
+  },
+  {
+   "entity_id": "E_RAMP_CONTROL_LEAD",
+   "alias": "Quartzline",
+   "intro_section": 9
+  },
+  {
+   "entity_id": "E_SLOT_COORDINATOR",
+   "alias": "Halcyon",
+   "intro_section": 11
+  },
+  {
+   "entity_id": "E_WEATHER_INGEST_GATEWAY",
+   "alias": "Orchard",
+   "intro_section": 5
+  },
+  {
+   "entity_id": "E_ALERT_DISTRIBUTION_HUB",
+   "alias": "Lantern",
+   "intro_section": 14
+  },
+  {
+   "entity_id": "E_CONTINGENCY_OPERATIONS_CONSOLE",
+   "alias": "Silverpine",
+   "intro_section": 30
+  }
+ ],
+ "split_flows": [
+  {
+   "probe_id": "F1",
+   "producer": "E_TOWER_SUPERVISOR",
+   "item": "E_RUNWAY_INSPECTION_NOTE",
+   "consumer": "E_AIRPORT_DUTY_MANAGER",
+   "intro_section": 3,
+   "link_section": 8,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F2",
+   "producer": "E_GROUND_HANDLING_DISPATCHER",
+   "item": "E_CREW_BUS_DELAY_SLIP",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "intro_section": 6,
+   "link_section": 10,
+   "link_ref": "short",
+   "short_ref": "the delay slip"
+  },
+  {
+   "probe_id": "F3",
+   "producer": "E_DEICING_COORDINATOR",
+   "item": "E_DEICING_PAD_QUEUE_CARD",
+   "consumer": "E_RAMP_CONTROL_LEAD",
+   "intro_section": 12,
+   "link_section": 16,
+   "link_ref": "short",
+   "short_ref": "the queue card"
+  },
+  {
+   "probe_id": "F4",
+   "producer": "E_RAMP_CONTROL_LEAD",
+   "item": "E_STAND_TOW_REQUEST_FORM",
+   "consumer": "E_HANDLING_RESOURCE_PLANNER",
+   "intro_section": 9,
+   "link_section": 13,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F5",
+   "producer": "E_MILITARY_AIRSPACE_LIAISON",
+   "item": "E_TEMPORARY_RESTRICTION_NOTICE",
+   "consumer": "E_REGIONAL_FLOW_MANAGER",
+   "intro_section": 14,
+   "link_section": 17,
+   "link_ref": "short",
+   "short_ref": "the restriction notice"
+  },
+  {
+   "probe_id": "F6",
+   "producer": "E_RAMP_MOVEMENT_BOARD",
+   "item": "E_FUEL_TRUCK_HOLD_ADVICE",
+   "consumer": "E_TOWER_SEQUENCE_MANAGER",
+   "intro_section": 15,
+   "link_section": 19,
+   "link_ref": "short",
+   "short_ref": "the hold advice"
+  },
+  {
+   "probe_id": "F7",
+   "producer": "E_GATE_CONFLICT_DETECTOR",
+   "item": "E_GATE_REOPENING_MEMO",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "intro_section": 16,
+   "link_section": 20,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F8",
+   "producer": "E_SLOT_ALLOCATION_ENGINE",
+   "item": "E_PUSHBACK_WINDOW_TOKEN",
+   "consumer": "E_AIRPORT_CDM_PORTAL",
+   "intro_section": 18,
+   "link_section": 21,
+   "link_ref": "short",
+   "short_ref": "the window token"
+  },
+  {
+   "probe_id": "F9",
+   "producer": "E_AIRLINE_INTERFACE_ADAPTER",
+   "item": "E_LATE_BAGGAGE_TAG_LIST",
+   "consumer": "E_GROUND_HANDLING_DISPATCHER",
+   "intro_section": 19,
+   "link_section": 22,
+   "link_ref": "short",
+   "short_ref": "the tag list"
+  },
+  {
+   "probe_id": "F10",
+   "producer": "E_METEOROLOGY_BRIEFING_OFFICER",
+   "item": "E_STORM_CELL_SNAPSHOT",
+   "consumer": "E_CAPACITY_ASSESSMENT_MODULE",
+   "intro_section": 4,
+   "link_section": 6,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F11",
+   "producer": "E_SECTOR_LOAD_MONITOR",
+   "item": "E_DEPARTURE_FIX_LOAD_SHEET",
+   "consumer": "E_REGIONAL_FLOW_MANAGER",
+   "intro_section": 20,
+   "link_section": 25,
+   "link_ref": "short",
+   "short_ref": "the load sheet"
+  },
+  {
+   "probe_id": "F12",
+   "producer": "E_AIRPORT_DUTY_MANAGER",
+   "item": "E_MEDICAL_DIVERSION_NOTICE",
+   "consumer": "E_ARRIVAL_REGULATION_CONSOLE",
+   "intro_section": 21,
+   "link_section": 24,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F13",
+   "producer": "E_GROUND_HANDLING_DISPATCHER",
+   "item": "E_TOWBAR_SHORTAGE_REPORT",
+   "consumer": "E_RAMP_CONTROL_LEAD",
+   "intro_section": 22,
+   "link_section": 23,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F14",
+   "producer": "E_HANDLING_RESOURCE_PLANNER",
+   "item": "E_REMOTE_STAND_SHUTTLE_COUNT",
+   "consumer": "E_AIRPORT_CDM_PORTAL",
+   "intro_section": 23,
+   "link_section": 27,
+   "link_ref": "short",
+   "short_ref": "the shuttle count"
+  },
+  {
+   "probe_id": "F15",
+   "producer": "E_AIRPORT_DUTY_MANAGER",
+   "item": "E_CUSTOMS_HOLD_RELEASE_NOTE",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "intro_section": 24,
+   "link_section": 28,
+   "link_ref": "short",
+   "short_ref": "the release note"
+  },
+  {
+   "probe_id": "F16",
+   "producer": "E_SURFACE_SURVEILLANCE_ADAPTER",
+   "item": "E_RUNWAY_LIGHTING_OUTAGE_CARD",
+   "consumer": "E_TOWER_SUPERVISOR",
+   "intro_section": 25,
+   "link_section": 29,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F17",
+   "producer": "E_AIRCRAFT_OPERATOR_REPRESENTATIVE",
+   "item": "E_CREW_DUTY_EXTENSION_LOG",
+   "consumer": "E_SLOT_COORDINATOR",
+   "intro_section": 26,
+   "link_section": 30,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F18",
+   "producer": "E_RAMP_CONTROL_LEAD",
+   "item": "E_APRON_SWEEP_COMPLETION_NOTE",
+   "consumer": "E_AIRPORT_DUTY_MANAGER",
+   "intro_section": 27,
+   "link_section": 28,
+   "link_ref": "full",
+   "short_ref": ""
+  },
+  {
+   "probe_id": "F19",
+   "producer": "E_SLOT_COORDINATOR",
+   "item": "E_SLOT_SWAP_PERMISSION_EMAIL",
+   "consumer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "intro_section": 28,
+   "link_section": 33,
+   "link_ref": "short",
+   "short_ref": "the permission email"
+  },
+  {
+   "probe_id": "F20",
+   "producer": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "item": "E_PASSENGER_MISCONNECT_COUNT",
+   "consumer": "E_DEPARTURE_METERING_SERVICE",
+   "intro_section": 31,
+   "link_section": 35,
+   "link_ref": "full",
+   "short_ref": ""
+  }
+ ],
+ "alias_refs": [
+  {
+   "probe_id": "A1",
+   "entity_id": "E_REGIONAL_FLOW_PLATFORM",
+   "link_section": 7
+  },
+  {
+   "probe_id": "A2",
+   "entity_id": "E_DEMAND_PREDICTION_SERVICE",
+   "link_section": 9
+  },
+  {
+   "probe_id": "A3",
+   "entity_id": "E_SLOT_ALLOCATION_ENGINE",
+   "link_section": 15
+  },
+  {
+   "probe_id": "A4",
+   "entity_id": "E_AIRPORT_CDM_PORTAL",
+   "link_section": 12
+  },
+  {
+   "probe_id": "A5",
+   "entity_id": "E_TOWER_SEQUENCE_MANAGER",
+   "link_section": 14
+  },
+  {
+   "probe_id": "A6",
+   "entity_id": "E_RAMP_MOVEMENT_BOARD",
+   "link_section": 18
+  },
+  {
+   "probe_id": "A7",
+   "entity_id": "E_DEPARTURE_METERING_SERVICE",
+   "link_section": 18
+  },
+  {
+   "probe_id": "A8",
+   "entity_id": "E_ARRIVAL_REGULATION_CONSOLE",
+   "link_section": 22
+  },
+  {
+   "probe_id": "A9",
+   "entity_id": "E_REGIONAL_FLOW_MANAGER",
+   "link_section": 6
+  },
+  {
+   "probe_id": "A10",
+   "entity_id": "E_AIRLINE_OPERATIONS_COORDINATOR",
+   "link_section": 11
+  },
+  {
+   "probe_id": "A11",
+   "entity_id": "E_TOWER_SUPERVISOR",
+   "link_section": 13
+  },
+  {
+   "probe_id": "A12",
+   "entity_id": "E_RAMP_CONTROL_LEAD",
+   "link_section": 16
+  },
+  {
+   "probe_id": "A13",
+   "entity_id": "E_SLOT_COORDINATOR",
+   "link_section": 15
+  },
+  {
+   "probe_id": "A14",
+   "entity_id": "E_WEATHER_INGEST_GATEWAY",
+   "link_section": 8
+  },
+  {
+   "probe_id": "A15",
+   "entity_id": "E_ALERT_DISTRIBUTION_HUB",
+   "link_section": 19
+  },
+  {
+   "probe_id": "A16",
+   "entity_id": "E_CONTINGENCY_OPERATIONS_CONSOLE",
+   "link_section": 32
+  }
+ ],
+ "homonyms": [
+  {
+   "probe_id": "H1",
+   "entity_id": "E_NORTH_RUNWAY_METER",
+   "confusable_entity_id": "E_SOUTH_RUNWAY_METER",
+   "shared_head": "Runway Meter",
+   "link_section": 19
+  },
+  {
+   "probe_id": "H2",
+   "entity_id": "E_EAST_APRON_SENSOR",
+   "confusable_entity_id": "E_WEST_APRON_SENSOR",
+   "shared_head": "Apron Sensor",
+   "link_section": 24
+  }
+ ],
+ "writer": "gpt-5.5",
+ "plan_sample": 1,
+ "domain": "a regional air traffic flow management and airport collaborative decision-making system (flow managers, airline operations centres, towers, ramp control, slot allocation)"
+}

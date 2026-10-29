@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Atlas Onboard Controller, label=stores onboard fault codes, movement authority acceptance records, propulsion cutback requests, and train interface exceptions)\n\nSource sentences (the last one is where the fact was extracted):\nS158: Marble records controller health, interface state, and fallback mode transitions in a form that can be correlated with adjacent wayside and operations records.\nS159: The South District Zone Controller maintains comparable diagnostic coverage so that boundary events can be reviewed without relying on a single source of evidence.\nS160: The East Junction Interlocking and West Junction Interlocking report route command histories, point detection changes, and protective lock status to support failure localisation.\nS161: The Atlas Onboard Controller stores onboard fault codes, movement authority acceptance records, propulsion cutback requests, and train interface exceptions for later retrieval.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S161 states that the Atlas Onboard Controller stores exactly these items (onboard fault codes, movement authority acceptance records, propulsion cutback requests, train interface exceptions), so the performer and label both match.\"}",
+ "usage": {
+  "input_tokens": 740,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 87,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 1.723,
+ "created": "2026-10-14T12:52:31"
+}

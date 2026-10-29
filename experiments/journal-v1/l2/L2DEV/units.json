@@ -1,0 +1,1565 @@
+{
+ "doc_id": "L2DEV",
+ "title": "Regional Emergency Medical Dispatch and Ambulance Coordination Operational Concept",
+ "writer": "gpt-6-luna",
+ "units": [
+  {
+   "unit_id": "S001",
+   "section": 1,
+   "text": "The Regional Dispatch Center provides continuous intake, triage support, ambulance dispatch, and regional coordination for emergency medical requests across participating jurisdictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S002",
+   "section": 1,
+   "text": "Its mandate is to translate reported emergencies into prioritized incidents and coordinate an appropriate response under approved clinical and jurisdictional protocols.",
+   "tags": []
+  },
+  {
+   "unit_id": "S003",
+   "section": 1,
+   "text": "The Regional Dispatch Center is known operationally as Juniper and serves as the region’s primary dispatch and coordination point.",
+   "tags": [
+    "ALIAS:E_REGIONAL_DISPATCH_CENTER"
+   ]
+  },
+  {
+   "unit_id": "S004",
+   "section": 1,
+   "text": "The service operates continuously and maintains a shared operational picture of incidents, available units, and known access constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S005",
+   "section": 1,
+   "text": "Call Taker Mara obtains essential incident details, confirms the reported location, and enters the request for assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S006",
+   "section": 1,
+   "text": "The Triage Supervisor reviews incident information, assigns or confirms priority, and directs cases requiring additional clinical review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S007",
+   "section": 1,
+   "text": "The Regional Medical Director establishes clinical triage policies and defines the limits of protocol-based decision making.",
+   "tags": []
+  },
+  {
+   "unit_id": "S008",
+   "section": 1,
+   "text": "Dispatch personnel apply approved protocols and seek clinical guidance when a case falls outside their delegated authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S009",
+   "section": 1,
+   "text": "The Shift Commander is the on-duty operational authority for dispatch-center coordination and service continuity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S010",
+   "section": 1,
+   "text": "The Shift Commander is known operationally as Sundial during regional coordination and command communications.",
+   "tags": [
+    "ALIAS:E_SHIFT_COMMANDER"
+   ]
+  },
+  {
+   "unit_id": "S011",
+   "section": 1,
+   "text": "The Shift Commander resolves operational conflicts, sets response priorities during surges, and escalates decisions beyond the center’s authority to the appropriate jurisdictional leadership.",
+   "tags": []
+  },
+  {
+   "unit_id": "S012",
+   "section": 1,
+   "text": "The Shift Commander does not replace the Regional Medical Director’s authority over clinical policy or a Paramedic Crew’s clinical judgment at the scene.",
+   "tags": []
+  },
+  {
+   "unit_id": "S013",
+   "section": 1,
+   "text": "The Radio Coordinator manages operational radio traffic and maintains communications discipline on the Regional Radio Network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S014",
+   "section": 1,
+   "text": "The Regional Radio Network carries dispatch and coordination communications among authorized responders.",
+   "tags": []
+  },
+  {
+   "unit_id": "S015",
+   "section": 1,
+   "text": "The Ambulance Coordination Platform supports a current view of incidents, unit assignments, and regional resource status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S016",
+   "section": 1,
+   "text": "The Computer Aided Dispatch Console is the primary workstation for incident entry, assessment, and dispatch operations.",
+   "tags": []
+  },
+  {
+   "unit_id": "S017",
+   "section": 1,
+   "text": "A Paramedic Crew retains responsibility for immediate patient assessment and care within its professional scope and applicable protocols.",
+   "tags": []
+  },
+  {
+   "unit_id": "S018",
+   "section": 1,
+   "text": "Ambulance Unit 417 is managed as part of the regional response pool when assigned to an incident.",
+   "tags": []
+  },
+  {
+   "unit_id": "S019",
+   "section": 1,
+   "text": "The Hospital Liaison Desk coordinates operational awareness of receiving capacity and destination constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S020",
+   "section": 1,
+   "text": "The Emergency Department communicates receiving considerations through established regional coordination procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S021",
+   "section": 1,
+   "text": "Riverside Trauma Center is a designated destination whose availability and suitability are considered under regional protocols.",
+   "tags": []
+  },
+  {
+   "unit_id": "S022",
+   "section": 1,
+   "text": "The North Gate Status Board and South Gate Status Board provide visible status information relevant to access and movement planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S023",
+   "section": 1,
+   "text": "The Fleet Maintenance Cell provides operational awareness of vehicle serviceability and maintenance constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S024",
+   "section": 1,
+   "text": "The Data Quality Officer reviews dispatch records for completeness, consistency, and compliance with applicable information-handling rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S025",
+   "section": 1,
+   "text": "Participating jurisdictions retain ownership of their resources and remain responsible for local policy, while the regional service coordinates agreed response activity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S026",
+   "section": 2,
+   "text": "The regional service divides its operating area into defined response zones so dispatch decisions reflect distance, road access, and available ambulance capacity.",
+   "tags": []
+  },
+  {
+   "unit_id": "S027",
+   "section": 2,
+   "text": "Zone boundaries are maintained with participating jurisdictions and reviewed when road networks, population patterns, or service agreements change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S028",
+   "section": 2,
+   "text": "Each zone has primary and alternate routes to the Emergency Department and Riverside Trauma Center, subject to clinical direction and current access conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S029",
+   "section": 2,
+   "text": "Dispatch personnel consider travel time, road restrictions, weather, and known closures when selecting a route or estimating arrival times.",
+   "tags": []
+  },
+  {
+   "unit_id": "S030",
+   "section": 2,
+   "text": "Access conditions can change rapidly around hospitals, bridge approaches, and controlled entry points, so crews verify conditions before committing to a constrained route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S031",
+   "section": 2,
+   "text": "The North Gate Status Board presents current access and queue conditions for the northern approach.",
+   "tags": []
+  },
+  {
+   "unit_id": "S032",
+   "section": 2,
+   "text": "The South Gate Status Board presents current access conditions for the southern approach, including restrictions that may affect ambulance entry.",
+   "tags": []
+  },
+  {
+   "unit_id": "S033",
+   "section": 2,
+   "text": "Both gate boards are checked at shift start and whenever a reported access change could affect response or hospital arrival.",
+   "tags": []
+  },
+  {
+   "unit_id": "S034",
+   "section": 2,
+   "text": "The North Gate Status Board produces the North Approach Queue Snapshot for use in maintaining an up-to-date view of northern approach congestion.",
+   "tags": [
+    "F7:intro"
+   ]
+  },
+  {
+   "unit_id": "S035",
+   "section": 2,
+   "text": "The Radio Coordinator is also known as Mistral in operational communications.",
+   "tags": [
+    "ALIAS:E_RADIO_COORDINATOR"
+   ]
+  },
+  {
+   "unit_id": "S036",
+   "section": 2,
+   "text": "The Radio Coordinator monitors the Regional Radio Network and helps maintain clear communications among dispatch personnel and ambulance crews.",
+   "tags": []
+  },
+  {
+   "unit_id": "S037",
+   "section": 2,
+   "text": "The Radio Coordinator confirms that assigned channels are available and that backup communications procedures are understood at the start of each shift.",
+   "tags": []
+  },
+  {
+   "unit_id": "S038",
+   "section": 2,
+   "text": "Radio checks verify coverage in known weak-signal areas and identify equipment or network problems before demand rises.",
+   "tags": []
+  },
+  {
+   "unit_id": "S039",
+   "section": 2,
+   "text": "The Fleet Maintenance Cell is also known as Bluejay in operational communications.",
+   "tags": [
+    "ALIAS:E_FLEET_MAINTENANCE_CELL"
+   ]
+  },
+  {
+   "unit_id": "S040",
+   "section": 2,
+   "text": "The Fleet Maintenance Cell monitors vehicle availability, scheduled servicing, and reported defects that could reduce zone coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S041",
+   "section": 2,
+   "text": "The Fleet Maintenance Cell produces the Battery Swap Voucher to document an authorized battery replacement.",
+   "tags": [
+    "F5:intro"
+   ]
+  },
+  {
+   "unit_id": "S042",
+   "section": 2,
+   "text": "Readiness checks confirm that each available ambulance has suitable staffing, functioning communications equipment, and required clinical supplies.",
+   "tags": []
+  },
+  {
+   "unit_id": "S043",
+   "section": 2,
+   "text": "The checks also confirm fuel status, vehicle condition, and any maintenance restrictions recorded for the unit.",
+   "tags": []
+  },
+  {
+   "unit_id": "S044",
+   "section": 2,
+   "text": "The Ambulance Coordination Platform provides a shared operational view of zone coverage and unit availability.",
+   "tags": []
+  },
+  {
+   "unit_id": "S045",
+   "section": 2,
+   "text": "The Computer Aided Dispatch Console supports dispatch work, while operational staff remain responsible for verifying that displayed information is current.",
+   "tags": []
+  },
+  {
+   "unit_id": "S046",
+   "section": 2,
+   "text": "The Shift Commander reviews readiness concerns that may require repositioning resources or adjusting local coverage plans.",
+   "tags": []
+  },
+  {
+   "unit_id": "S047",
+   "section": 2,
+   "text": "The Triage Supervisor coordinates clinical prioritization with dispatch operations when demand or access conditions change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S048",
+   "section": 2,
+   "text": "The Paramedic Crew reports new access barriers and vehicle readiness concerns through established communications procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S049",
+   "section": 2,
+   "text": "The Regional Dispatch Center compares reported conditions with current zone coverage and escalates unresolved readiness gaps to the appropriate operational lead.",
+   "tags": []
+  },
+  {
+   "unit_id": "S050",
+   "section": 2,
+   "text": "Readiness status is reassessed after significant incidents, service interruptions, or changes to routes and access conditions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S051",
+   "section": 3,
+   "text": "The Regional Dispatch Center handles incoming emergency calls through a controlled intake process that creates an incident record for coordination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S052",
+   "section": 3,
+   "text": "Call Taker Mara is also known by the radio alias Larkspur.",
+   "tags": [
+    "ALIAS:E_CALL_TAKER_MARA"
+   ]
+  },
+  {
+   "unit_id": "S053",
+   "section": 3,
+   "text": "The Hospital Liaison Desk is also known by the coordination alias Kestrel.",
+   "tags": [
+    "ALIAS:E_HOSPITAL_LIAISON_DESK"
+   ]
+  },
+  {
+   "unit_id": "S054",
+   "section": 3,
+   "text": "Call Taker Mara establishes the caller's location before collecting medical details.",
+   "tags": []
+  },
+  {
+   "unit_id": "S055",
+   "section": 3,
+   "text": "Call Taker Mara asks for the street address, municipality, and any building, floor, or entrance information needed to find the patient.",
+   "tags": []
+  },
+  {
+   "unit_id": "S056",
+   "section": 3,
+   "text": "Call Taker Mara confirms the location by repeating the address and checking it against the caller's description of nearby landmarks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S057",
+   "section": 3,
+   "text": "Call Taker Mara asks whether the caller can provide a callback number in case the connection is lost.",
+   "tags": []
+  },
+  {
+   "unit_id": "S058",
+   "section": 3,
+   "text": "Call Taker Mara gathers the patient's age, level of consciousness, breathing status, and the main reason emergency help is needed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S059",
+   "section": 3,
+   "text": "Call Taker Mara uses direct questions to distinguish observed symptoms from information reported by someone else.",
+   "tags": []
+  },
+  {
+   "unit_id": "S060",
+   "section": 3,
+   "text": "Call Taker Mara records the time symptoms began when the caller can provide a reliable estimate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S061",
+   "section": 3,
+   "text": "Call Taker Mara notes access barriers such as locked entrances, restricted roads, or difficulty reaching the patient.",
+   "tags": []
+  },
+  {
+   "unit_id": "S062",
+   "section": 3,
+   "text": "Call Taker Mara produces the Caller Location Correction Slip when the caller's address needs documented clarification.",
+   "tags": [
+    "F1:intro"
+   ]
+  },
+  {
+   "unit_id": "S063",
+   "section": 3,
+   "text": "The Computer Aided Dispatch Console checks entered location details against available address and map data.",
+   "tags": []
+  },
+  {
+   "unit_id": "S064",
+   "section": 3,
+   "text": "If the location does not resolve cleanly, Call Taker Mara asks focused follow-up questions and updates the incident record.",
+   "tags": []
+  },
+  {
+   "unit_id": "S065",
+   "section": 3,
+   "text": "Call Taker Mara remains engaged with the caller when further information could change the response priority or access plan.",
+   "tags": []
+  },
+  {
+   "unit_id": "S066",
+   "section": 3,
+   "text": "The Hospital Liaison Desk supports intake coordination by confirming facility capabilities and clarifying hospital contact pathways.",
+   "tags": []
+  },
+  {
+   "unit_id": "S067",
+   "section": 3,
+   "text": "The Hospital Liaison Desk checks whether a reported destination preference is compatible with current facility capabilities.",
+   "tags": []
+  },
+  {
+   "unit_id": "S068",
+   "section": 3,
+   "text": "When a facility constraint affects coordination, the Hospital Liaison Desk records the constraint in the incident notes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S069",
+   "section": 3,
+   "text": "The Hospital Liaison Desk produces the Bedside Arrival Receipt when an ambulance arrival has been confirmed.",
+   "tags": [
+    "F6:intro"
+   ]
+  },
+  {
+   "unit_id": "S070",
+   "section": 3,
+   "text": "The Hospital Liaison Desk provides current facility information through established coordination channels without delaying emergency call intake.",
+   "tags": []
+  },
+  {
+   "unit_id": "S071",
+   "section": 3,
+   "text": "The Triage Supervisor reviews incidents when the reported symptoms or uncertainty warrant clinical escalation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S072",
+   "section": 3,
+   "text": "The Data Quality Officer monitors intake records for recurring gaps in location or medical detail.",
+   "tags": []
+  },
+  {
+   "unit_id": "S073",
+   "section": 3,
+   "text": "Call Taker Mara updates the incident record when a caller provides new information before dispatch decisions are finalized.",
+   "tags": []
+  },
+  {
+   "unit_id": "S074",
+   "section": 3,
+   "text": "The Regional Dispatch Center preserves the original caller report alongside subsequent clarifications so responders can distinguish confirmed details from estimates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S075",
+   "section": 4,
+   "text": "Clinical triage begins after Call Taker Mara has captured the caller's reported symptoms, location, and immediate hazards.",
+   "tags": []
+  },
+  {
+   "unit_id": "S076",
+   "section": 4,
+   "text": "The recorded information provides an initial basis for assigning urgency and does not replace clinical reassessment as new information arrives.",
+   "tags": []
+  },
+  {
+   "unit_id": "S077",
+   "section": 4,
+   "text": "Triage Supervisor reviews incidents with uncertain severity, conflicting reports, or signs of rapid deterioration.",
+   "tags": []
+  },
+  {
+   "unit_id": "S078",
+   "section": 4,
+   "text": "Priority is based on the immediacy of threat to life, the likely time sensitivity of care, and the risk of deterioration while awaiting response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S079",
+   "section": 4,
+   "text": "Incidents indicating an immediate threat receive the highest available response priority and prompt dispatch action.",
+   "tags": []
+  },
+  {
+   "unit_id": "S080",
+   "section": 4,
+   "text": "Incidents without an immediate threat are prioritized according to the expected harm from delay and the patient's reported condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S081",
+   "section": 4,
+   "text": "When essential information is missing, Triage Supervisor directs focused clarification while ensuring that information gathering does not delay an urgent response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S082",
+   "section": 4,
+   "text": "Triage Supervisor escalates clinically ambiguous or unusually severe cases to Regional Medical Director for guidance when time permits.",
+   "tags": []
+  },
+  {
+   "unit_id": "S083",
+   "section": 4,
+   "text": "Regional Medical Director provides clinical policy guidance and does not replace the operational authority responsible for dispatch decisions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S084",
+   "section": 4,
+   "text": "Triage Supervisor sends the Pediatric Acuity Note.",
+   "tags": [
+    "F2:intro"
+   ]
+  },
+  {
+   "unit_id": "S085",
+   "section": 4,
+   "text": "Triage Supervisor is known operationally as Copperfield.",
+   "tags": [
+    "ALIAS:E_TRIAGE_SUPERVISOR"
+   ]
+  },
+  {
+   "unit_id": "S086",
+   "section": 4,
+   "text": "Data Quality Officer is known operationally as Pebble.",
+   "tags": [
+    "ALIAS:E_DATA_QUALITY_OFFICER"
+   ]
+  },
+  {
+   "unit_id": "S087",
+   "section": 4,
+   "text": "Data Quality Officer monitors incident records for missing, inconsistent, or duplicated information that could impair triage or dispatch.",
+   "tags": []
+  },
+  {
+   "unit_id": "S088",
+   "section": 4,
+   "text": "Data Quality Officer sends the Duplicate Incident Audit Memo.",
+   "tags": [
+    "F9:intro"
+   ]
+  },
+  {
+   "unit_id": "S089",
+   "section": 4,
+   "text": "Data Quality Officer flags data defects for review but does not independently change a clinical priority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S090",
+   "section": 4,
+   "text": "Computer Aided Dispatch Console presents the current incident details and assigned priority to authorized dispatch staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S091",
+   "section": 4,
+   "text": "Ambulance Coordination Platform uses the recorded priority alongside unit availability and operational constraints when coordinating response resources.",
+   "tags": []
+  },
+  {
+   "unit_id": "S092",
+   "section": 4,
+   "text": "Radio Coordinator communicates dispatch instructions and priority changes over Regional Radio Network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S093",
+   "section": 4,
+   "text": "Paramedic Crew reports material changes in patient condition so that the incident can be reassessed promptly.",
+   "tags": []
+  },
+  {
+   "unit_id": "S094",
+   "section": 4,
+   "text": "Ambulance Unit 417 follows the active dispatch instructions and requests clarification when the incident details do not support safe response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S095",
+   "section": 4,
+   "text": "Emergency Department may provide operationally relevant capacity information, while clinical triage remains governed by approved regional protocols.",
+   "tags": []
+  },
+  {
+   "unit_id": "S096",
+   "section": 4,
+   "text": "Riverside Trauma Center is considered for destination coordination when the patient's needs and current clinical guidance support that option.",
+   "tags": []
+  },
+  {
+   "unit_id": "S097",
+   "section": 4,
+   "text": "Shift Commander is notified when competing high-priority incidents exceed available response capacity or require an operational exception.",
+   "tags": []
+  },
+  {
+   "unit_id": "S098",
+   "section": 4,
+   "text": "Data Quality Officer reviews whether priority changes and their supporting rationale are recorded consistently for later assessment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S099",
+   "section": 4,
+   "text": "Regional Dispatch Center preserves the original caller report alongside subsequent clarifications so responders can distinguish confirmed details from estimates.",
+   "tags": []
+  },
+  {
+   "unit_id": "S100",
+   "section": 4,
+   "text": "Triage Supervisor reviews significant disagreements about urgency and records the basis for the final operational priority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S101",
+   "section": 5,
+   "text": "Resource selection begins after the operational priority and essential response requirements have been confirmed.",
+   "tags": []
+  },
+  {
+   "unit_id": "S102",
+   "section": 5,
+   "text": "The Ambulance Coordination Platform presents units whose reported status and capabilities match the incident requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S103",
+   "section": 5,
+   "text": "The Computer Aided Dispatch Console displays estimated travel times, unit availability, and relevant access constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S104",
+   "section": 5,
+   "text": "The Triage Supervisor confirms that the selected response level remains consistent with the caller information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S105",
+   "section": 5,
+   "text": "The selection decision weighs clinical need, travel time, vehicle capability, crew readiness, and regional coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S106",
+   "section": 5,
+   "text": "The Fleet Maintenance Cell provides current information about vehicles that are unavailable or restricted.",
+   "tags": []
+  },
+  {
+   "unit_id": "S107",
+   "section": 5,
+   "text": "The Radio Coordinator checks that the proposed unit can be reached on the Regional Radio Network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S108",
+   "section": 5,
+   "text": "A dispatcher may recommend a unit, but dispatch authorization must follow the current regional approval rules.",
+   "tags": []
+  },
+  {
+   "unit_id": "S109",
+   "section": 5,
+   "text": "The Shift Commander approves exceptions that would materially reduce local coverage or require a nonstandard response.",
+   "tags": []
+  },
+  {
+   "unit_id": "S110",
+   "section": 5,
+   "text": "The Regional Medical Director may advise on clinical resource requirements when the incident presents an unusual care need.",
+   "tags": []
+  },
+  {
+   "unit_id": "S111",
+   "section": 5,
+   "text": "The dispatcher records the authorized unit and any conditions attached to its assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S112",
+   "section": 5,
+   "text": "Regional Dispatch Center produces the Unit Staging Change Card when a previously selected unit must be repositioned.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "unit_id": "S113",
+   "section": 5,
+   "text": "The Radio Coordinator selects the appropriate talkgroup and confirms that it is available before transmitting.",
+   "tags": []
+  },
+  {
+   "unit_id": "S114",
+   "section": 5,
+   "text": "The dispatch transmission states the incident identifier, location, priority, response assignment, and any immediate hazard information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S115",
+   "section": 5,
+   "text": "The Paramedic Crew acknowledges the assignment and repeats the location and priority for confirmation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S116",
+   "section": 5,
+   "text": "The dispatcher corrects any discrepancy through a fresh transmission rather than relying on an unclear acknowledgment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S117",
+   "section": 5,
+   "text": "If the assigned unit does not acknowledge promptly, the Radio Coordinator attempts contact again and alerts the dispatch supervisor.",
+   "tags": []
+  },
+  {
+   "unit_id": "S118",
+   "section": 5,
+   "text": "The North Gate Status Board and South Gate Status Board support routing decisions when access conditions are changing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S119",
+   "section": 5,
+   "text": "Dispatchers state a confirmed gate or approach constraint explicitly and identify any uncertainty in the information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S120",
+   "section": 5,
+   "text": "The controlled handoff occurs when the crew has acknowledged the assignment and the dispatch floor has confirmed the essential details.",
+   "tags": []
+  },
+  {
+   "unit_id": "S121",
+   "section": 5,
+   "text": "The Paramedic Crew reports any material conflict between the transmitted route and conditions observed in the field.",
+   "tags": []
+  },
+  {
+   "unit_id": "S122",
+   "section": 5,
+   "text": "The Hospital Liaison Desk coordinates destination information with the receiving Emergency Department when required.",
+   "tags": []
+  },
+  {
+   "unit_id": "S123",
+   "section": 5,
+   "text": "Radio Coordinator sends the Coverage Gap Bulletin when available ambulance coverage falls below the regional threshold.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "unit_id": "S124",
+   "section": 5,
+   "text": "Juniper records the authorization time and the reason for selecting the assigned unit.",
+   "tags": [
+    "A1:link"
+   ]
+  },
+  {
+   "unit_id": "S125",
+   "section": 6,
+   "text": "Regional Dispatch Center maintains a regional coverage picture from current unit locations, crew reports, and readiness information.",
+   "tags": []
+  },
+  {
+   "unit_id": "S126",
+   "section": 6,
+   "text": "Ambulance Coordination Platform consolidates unit position and status so dispatchers can compare available coverage across the region.",
+   "tags": []
+  },
+  {
+   "unit_id": "S127",
+   "section": 6,
+   "text": "Computer Aided Dispatch Console presents staging options that account for response demand, travel time, and access constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S128",
+   "section": 6,
+   "text": "Paramedic Crew reports when a unit is available, responding, on scene, transporting, or temporarily unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S129",
+   "section": 6,
+   "text": "Crews update their status promptly after a material change so dispatch decisions reflect the unit's actual condition.",
+   "tags": []
+  },
+  {
+   "unit_id": "S130",
+   "section": 6,
+   "text": "Regional Radio Network carries route instructions and crew acknowledgments between dispatch and field units.",
+   "tags": []
+  },
+  {
+   "unit_id": "S131",
+   "section": 6,
+   "text": "Mistral confirms approved route changes over the Regional Radio Network before a crew diverts.",
+   "tags": [
+    "A4:link"
+   ]
+  },
+  {
+   "unit_id": "S132",
+   "section": 6,
+   "text": "Bluejay verifies maintenance clearance before a unit returns to available status.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "unit_id": "S133",
+   "section": 6,
+   "text": "Ambulance Unit 417 reports its position and operating status when it enters or leaves a staging area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S134",
+   "section": 6,
+   "text": "A crew remains at its assigned staging point until dispatch confirms a new location or a direct response assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S135",
+   "section": 6,
+   "text": "South Gate Status Board displays current access conditions for units approaching the southern entry.",
+   "tags": []
+  },
+  {
+   "unit_id": "S136",
+   "section": 6,
+   "text": "Sundial reviews the regional coverage picture before approving a staging move.",
+   "tags": [
+    "A7:link"
+   ]
+  },
+  {
+   "unit_id": "S137",
+   "section": 6,
+   "text": "Shift Commander sends the Mutual Aid Release Form when a neighboring service is released from regional coverage.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "unit_id": "S138",
+   "section": 6,
+   "text": "Regional Dispatch Center uses the swap voucher to confirm that a unit's battery readiness is current before it is placed in service.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "unit_id": "S139",
+   "section": 6,
+   "text": "Regional Dispatch Center uses the queue snapshot to account for congestion approaching the northern entry before assigning a route.",
+   "tags": [
+    "F7:link"
+   ]
+  },
+  {
+   "unit_id": "S140",
+   "section": 6,
+   "text": "North Gate Status Board displays the latest queue condition and access restriction for units approaching the northern entry.",
+   "tags": [
+    "H1:link"
+   ]
+  },
+  {
+   "unit_id": "S141",
+   "section": 6,
+   "text": "Triage Supervisor advises dispatch when changes in clinical demand may require repositioning available units.",
+   "tags": []
+  },
+  {
+   "unit_id": "S142",
+   "section": 6,
+   "text": "Regional Medical Director establishes clinical priorities that dispatch applies when assigning units during elevated demand.",
+   "tags": []
+  },
+  {
+   "unit_id": "S143",
+   "section": 6,
+   "text": "Hospital Liaison Desk provides receiving-facility capacity information for consideration during transport planning.",
+   "tags": []
+  },
+  {
+   "unit_id": "S144",
+   "section": 6,
+   "text": "Dispatchers compare projected response times with remaining coverage before moving a unit away from its current area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S145",
+   "section": 6,
+   "text": "Data Quality Officer reviews inconsistent location or status reports and routes corrections through the established operational process.",
+   "tags": []
+  },
+  {
+   "unit_id": "S146",
+   "section": 6,
+   "text": "Ambulance Coordination Platform retains time-stamped status changes so supervisors can review the sequence of unit movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S147",
+   "section": 6,
+   "text": "A crew advises dispatch when a road closure, unsafe condition, or unexpected delay makes the assigned route unsuitable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S148",
+   "section": 6,
+   "text": "Regional Dispatch Center records the approved alternative route and checks that the change does not leave a critical area without reasonable coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S149",
+   "section": 7,
+   "text": "The Hospital Liaison Desk coordinates destination consultation when a patient’s condition or the operating status of a facility may affect the assignment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S150",
+   "section": 7,
+   "text": "The consultation uses the patient’s reported condition, transport estimate, and current facility acceptance information available to the Regional Dispatch Center.",
+   "tags": []
+  },
+  {
+   "unit_id": "S151",
+   "section": 7,
+   "text": "The Regional Medical Director provides clinical guidance when destination selection involves a specialized capability or a regional care protocol.",
+   "tags": []
+  },
+  {
+   "unit_id": "S152",
+   "section": 7,
+   "text": "The Hospital Liaison Desk contacts the Emergency Department to confirm whether the proposed destination can receive the patient.",
+   "tags": []
+  },
+  {
+   "unit_id": "S153",
+   "section": 7,
+   "text": "The Regional Dispatch Center uses the correction slip to reconcile a reported destination change with the active incident record.",
+   "tags": [
+    "F1:link"
+   ]
+  },
+  {
+   "unit_id": "S154",
+   "section": 7,
+   "text": "Larkspur confirms the incident identifier and intended receiving facility before the destination request is transmitted.",
+   "tags": [
+    "A2:link"
+   ]
+  },
+  {
+   "unit_id": "S155",
+   "section": 7,
+   "text": "The Emergency Department advises the Hospital Liaison Desk of relevant capacity limits, access constraints, or changes to its receiving status.",
+   "tags": []
+  },
+  {
+   "unit_id": "S156",
+   "section": 7,
+   "text": "The Hospital Liaison Desk records the consultation outcome and communicates any destination restriction to the Regional Dispatch Center.",
+   "tags": []
+  },
+  {
+   "unit_id": "S157",
+   "section": 7,
+   "text": "The Regional Dispatch Center evaluates the consultation outcome against patient acuity, transport time, and available ambulance coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S158",
+   "section": 7,
+   "text": "The Ambulance Coordination Platform presents the approved destination and any associated operational instructions to dispatch staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S159",
+   "section": 7,
+   "text": "The Radio Coordinator relays destination instructions to the Paramedic Crew over the Regional Radio Network.",
+   "tags": []
+  },
+  {
+   "unit_id": "S160",
+   "section": 7,
+   "text": "The Paramedic Crew acknowledges the destination and advises dispatch if conditions require renewed consultation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S161",
+   "section": 7,
+   "text": "The South Gate Status Board produces the South Access Lane Notice when the south approach has a material access constraint.",
+   "tags": [
+    "F10:intro"
+   ]
+  },
+  {
+   "unit_id": "S162",
+   "section": 7,
+   "text": "The South Gate Status Board displays current access information for crews approaching the receiving facility through the south entrance.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "unit_id": "S163",
+   "section": 7,
+   "text": "The Shift Commander reviews access constraints that could affect arrival timing or safe patient transfer.",
+   "tags": []
+  },
+  {
+   "unit_id": "S164",
+   "section": 7,
+   "text": "The Regional Radio Network supports updates between dispatch and the Paramedic Crew while the ambulance is en route.",
+   "tags": []
+  },
+  {
+   "unit_id": "S165",
+   "section": 7,
+   "text": "Call Taker Mara receives the Bedside Arrival Receipt to support completion of the incident record.",
+   "tags": [
+    "F6:link"
+   ]
+  },
+  {
+   "unit_id": "S166",
+   "section": 7,
+   "text": "Call Taker Mara verifies that the recorded arrival time is consistent with the dispatch timeline and crew communications.",
+   "tags": []
+  },
+  {
+   "unit_id": "S167",
+   "section": 7,
+   "text": "Ambulance Unit 417 reports arrival at the receiving facility and confirms when patient handover is complete.",
+   "tags": []
+  },
+  {
+   "unit_id": "S168",
+   "section": 7,
+   "text": "The Emergency Department and the Paramedic Crew clarify any discrepancy in patient identity or transfer documentation before the crew clears the facility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S169",
+   "section": 7,
+   "text": "The Data Quality Officer reviews incomplete arrival or handover fields during routine record-quality checks.",
+   "tags": []
+  },
+  {
+   "unit_id": "S170",
+   "section": 7,
+   "text": "The Regional Dispatch Center updates the incident status after receiving confirmation that the patient has been transferred to facility care.",
+   "tags": []
+  },
+  {
+   "unit_id": "S171",
+   "section": 7,
+   "text": "The Hospital Liaison Desk remains available to resolve facility-level questions that arise during or immediately after handover.",
+   "tags": []
+  },
+  {
+   "unit_id": "S172",
+   "section": 7,
+   "text": "The Shift Commander escalates unresolved destination or access issues through established regional coordination procedures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S173",
+   "section": 8,
+   "text": "Surge operations begin when queue age, simultaneous high-priority calls, or staffed unit availability crosses thresholds approved by regional policy.",
+   "tags": []
+  },
+  {
+   "unit_id": "S174",
+   "section": 8,
+   "text": "Regional Dispatch Center monitors these indicators continuously and declares the applicable surge level when a threshold is met.",
+   "tags": []
+  },
+  {
+   "unit_id": "S175",
+   "section": 8,
+   "text": "Computer Aided Dispatch Console displays the current surge level and the operational constraints reported by field and facility staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S176",
+   "section": 8,
+   "text": "Triage Supervisor validates the declaration and confirms that call prioritization remains consistent with clinical protocols.",
+   "tags": []
+  },
+  {
+   "unit_id": "S177",
+   "section": 8,
+   "text": "Shift Commander assigns coordination responsibilities and reviews whether normal coverage can be maintained during the surge.",
+   "tags": []
+  },
+  {
+   "unit_id": "S178",
+   "section": 8,
+   "text": "Regional Medical Director provides clinical direction when demand exceeds routine triage guidance or requires a regional protocol adjustment.",
+   "tags": []
+  },
+  {
+   "unit_id": "S179",
+   "section": 8,
+   "text": "Hospital Liaison Desk uses the Pediatric Acuity Note to convey pediatric monitoring and destination considerations to receiving staff.",
+   "tags": [
+    "F2:link"
+   ]
+  },
+  {
+   "unit_id": "S180",
+   "section": 8,
+   "text": "Pediatric calls with concerning airway, breathing, circulation, or mental status findings receive prompt clinical escalation under approved protocols.",
+   "tags": []
+  },
+  {
+   "unit_id": "S181",
+   "section": 8,
+   "text": "Call Taker Mara obtains the age, weight when available, and caregiver observations needed to support pediatric triage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S182",
+   "section": 8,
+   "text": "Paramedic Crew reassesses pediatric patients during transport and reports material changes to the receiving facility.",
+   "tags": []
+  },
+  {
+   "unit_id": "S183",
+   "section": 8,
+   "text": "Kestrel shall confirm that facility capacity and pediatric service limitations are communicated to dispatch before a destination is finalized.",
+   "tags": [
+    "A6:link"
+   ]
+  },
+  {
+   "unit_id": "S184",
+   "section": 8,
+   "text": "Riverside Trauma Center advises Hospital Liaison Desk when trauma intake conditions may affect the suitability of an otherwise appropriate destination.",
+   "tags": []
+  },
+  {
+   "unit_id": "S185",
+   "section": 8,
+   "text": "Emergency Department staff acknowledge destination changes through the established coordination channel and identify any immediate access restrictions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S186",
+   "section": 8,
+   "text": "Hospital Liaison Desk records facility responses in the regional coordination record and keeps dispatch informed of unresolved constraints.",
+   "tags": []
+  },
+  {
+   "unit_id": "S187",
+   "section": 8,
+   "text": "Mutual aid is requested when local staffed units cannot meet the declared response objectives or when a specialized resource is unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S188",
+   "section": 8,
+   "text": "Regional Radio Network carries mutual-aid requests, acceptance confirmations, and operational updates using the agreed regional call signs.",
+   "tags": []
+  },
+  {
+   "unit_id": "S189",
+   "section": 8,
+   "text": "Copperfield shall approve any temporary triage override and document its rationale before the override is applied.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "unit_id": "S190",
+   "section": 8,
+   "text": "Ambulance Coordination Platform tracks accepted mutual-aid assignments separately from locally staffed resources to preserve an accurate coverage view.",
+   "tags": []
+  },
+  {
+   "unit_id": "S191",
+   "section": 8,
+   "text": "Ambulance Unit 417 may be reassigned only after dispatch confirms that its current patient-care and transport obligations permit the change.",
+   "tags": []
+  },
+  {
+   "unit_id": "S192",
+   "section": 8,
+   "text": "Fleet Maintenance Cell reports a vehicle restriction promptly so dispatch does not count an unavailable unit toward operational coverage.",
+   "tags": []
+  },
+  {
+   "unit_id": "S193",
+   "section": 8,
+   "text": "Triage Supervisor reviews the audit memo before closing a suspected duplicate incident.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "unit_id": "S194",
+   "section": 8,
+   "text": "Data Quality Officer reviews unresolved record discrepancies through the established quality process without delaying active patient care.",
+   "tags": []
+  },
+  {
+   "unit_id": "S195",
+   "section": 8,
+   "text": "North Gate Status Board provides a current view of access conditions that may affect ambulance approach or handover timing.",
+   "tags": []
+  },
+  {
+   "unit_id": "S196",
+   "section": 8,
+   "text": "South Gate Status Board provides the equivalent access view for routes and entry points on the southern side of the region.",
+   "tags": []
+  },
+  {
+   "unit_id": "S197",
+   "section": 8,
+   "text": "After surge conditions ease, Shift Commander confirms that outstanding assignments, destination constraints, and staffing gaps have been handed over to the next operational period.",
+   "tags": []
+  },
+  {
+   "unit_id": "S198",
+   "section": 9,
+   "text": "Regional Dispatch Center maintains a degraded-radio procedure that prioritizes emergency traffic and preserves a common operating picture.",
+   "tags": []
+  },
+  {
+   "unit_id": "S199",
+   "section": 9,
+   "text": "Regional Radio Network operators announce channel outages, affected areas, and expected restoration times over the remaining service channels.",
+   "tags": []
+  },
+  {
+   "unit_id": "S200",
+   "section": 9,
+   "text": "Radio Coordinator directs crews to approved fallback channels when the primary channel is unusable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S201",
+   "section": 9,
+   "text": "Crews acknowledge each fallback assignment and repeat critical location and destination details before moving.",
+   "tags": []
+  },
+  {
+   "unit_id": "S202",
+   "section": 9,
+   "text": "If voice contact fails, dispatchers use the approved data channel when available and record the time of each attempted contact.",
+   "tags": []
+  },
+  {
+   "unit_id": "S203",
+   "section": 9,
+   "text": "Computer Aided Dispatch Console displays the latest confirmed unit status alongside the time and source of that confirmation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S204",
+   "section": 9,
+   "text": "Ambulance Coordination Platform preserves queued status updates during brief connection interruptions and flags records that require reconciliation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S205",
+   "section": 9,
+   "text": "Coverage monitoring compares successful radio checks with the planned check interval for each operating area.",
+   "tags": []
+  },
+  {
+   "unit_id": "S206",
+   "section": 9,
+   "text": "North Gate Status Board and South Gate Status Board provide separate views of access conditions that may affect radio reach or ambulance movement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S207",
+   "section": 9,
+   "text": "Radio Coordinator uses the change card to adjust channel assignments and record the effective time of each change.",
+   "tags": [
+    "F3:link"
+   ]
+  },
+  {
+   "unit_id": "S208",
+   "section": 9,
+   "text": "Shift Commander receives the Coverage Gap Bulletin and decides whether staffing or deployment adjustments are needed.",
+   "tags": [
+    "F4:link"
+   ]
+  },
+  {
+   "unit_id": "S209",
+   "section": 9,
+   "text": "Data Quality Officer reviews Pebble for conflicting timestamps before interrupted communications are reconciled.",
+   "tags": [
+    "A8:link"
+   ]
+  },
+  {
+   "unit_id": "S210",
+   "section": 9,
+   "text": "Triage Supervisor identifies calls whose clinical priority requires immediate radio access and communicates that priority to dispatch staff.",
+   "tags": []
+  },
+  {
+   "unit_id": "S211",
+   "section": 9,
+   "text": "Call Taker Mara keeps the caller connected when feasible while dispatch staff attempt to reach the assigned crew through an approved alternate channel.",
+   "tags": []
+  },
+  {
+   "unit_id": "S212",
+   "section": 9,
+   "text": "Ambulance Unit 417 reports its last confirmed position and safe operating status as soon as contact is restored.",
+   "tags": []
+  },
+  {
+   "unit_id": "S213",
+   "section": 9,
+   "text": "Fleet Maintenance Cell reports radio equipment faults through the established maintenance escalation path.",
+   "tags": []
+  },
+  {
+   "unit_id": "S214",
+   "section": 9,
+   "text": "Hospital Liaison Desk uses available telephone channels to confirm whether receiving facilities can accept arrivals during a network disruption.",
+   "tags": []
+  },
+  {
+   "unit_id": "S215",
+   "section": 9,
+   "text": "Emergency Department staff receive concise arrival updates through the approved backup contact method when radio delivery is unavailable.",
+   "tags": []
+  },
+  {
+   "unit_id": "S216",
+   "section": 9,
+   "text": "Regional Medical Director may advise on clinical prioritization when communication limits materially affect response choices.",
+   "tags": []
+  },
+  {
+   "unit_id": "S217",
+   "section": 9,
+   "text": "Paramedic Crew members follow local safety procedures and do not enter an area where dispatch instructions cannot be confirmed if conditions are uncertain.",
+   "tags": []
+  },
+  {
+   "unit_id": "S218",
+   "section": 9,
+   "text": "Shift Commander retains operational authority until a named successor acknowledges the handover or a higher-level incident command arrangement takes effect.",
+   "tags": []
+  },
+  {
+   "unit_id": "S219",
+   "section": 9,
+   "text": "The outgoing shift records active incidents, communication failures, temporary channel assignments, and decisions awaiting review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S220",
+   "section": 9,
+   "text": "The incoming shift verifies open assignments and confirms which communication paths remain available before accepting control.",
+   "tags": []
+  },
+  {
+   "unit_id": "S221",
+   "section": 9,
+   "text": "After service is restored, dispatch staff reconcile delayed status reports against their recorded timestamps and preserve any unresolved discrepancy for review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S222",
+   "section": 10,
+   "text": "The Regional Dispatch Center maintains controlled procedures for reviewing operational records, approving system changes, and documenting corrective actions.",
+   "tags": []
+  },
+  {
+   "unit_id": "S223",
+   "section": 10,
+   "text": "The Data Quality Officer samples incident records for completeness, timestamp consistency, and alignment between dispatch decisions and recorded outcomes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S224",
+   "section": 10,
+   "text": "The Triage Supervisor reviews cases in which acuity decisions or escalation timing may have affected patient risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S225",
+   "section": 10,
+   "text": "The Regional Medical Director reviews clinical findings and approves changes to clinical guidance within the scope of regional authority.",
+   "tags": []
+  },
+  {
+   "unit_id": "S226",
+   "section": 10,
+   "text": "Audit findings identify the records examined, the criteria applied, and any limitations that affect interpretation.",
+   "tags": []
+  },
+  {
+   "unit_id": "S227",
+   "section": 10,
+   "text": "The Regional Dispatch Center retains audit evidence under approved access and retention controls.",
+   "tags": []
+  },
+  {
+   "unit_id": "S228",
+   "section": 10,
+   "text": "The Fleet Maintenance Cell uses the Mutual Aid Release Form to support accountable maintenance and availability records.",
+   "tags": [
+    "F8:link"
+   ]
+  },
+  {
+   "unit_id": "S229",
+   "section": 10,
+   "text": "Material findings are assigned to a responsible role with a due date and a documented method for verifying closure.",
+   "tags": []
+  },
+  {
+   "unit_id": "S230",
+   "section": 10,
+   "text": "The Shift Commander may restrict an operational capability when an unresolved defect creates unacceptable risk.",
+   "tags": []
+  },
+  {
+   "unit_id": "S231",
+   "section": 10,
+   "text": "The Regional Dispatch Center records the rationale, scope, and duration of each such restriction.",
+   "tags": []
+  },
+  {
+   "unit_id": "S232",
+   "section": 10,
+   "text": "Changes to the Ambulance Coordination Platform are assessed for operational, clinical, security, and continuity impacts before release.",
+   "tags": []
+  },
+  {
+   "unit_id": "S233",
+   "section": 10,
+   "text": "The Computer Aided Dispatch Console is tested against approved scenarios before a change is authorized for regional use.",
+   "tags": []
+  },
+  {
+   "unit_id": "S234",
+   "section": 10,
+   "text": "Release approval records identify the change owner, test evidence, known limitations, and rollback approach.",
+   "tags": []
+  },
+  {
+   "unit_id": "S235",
+   "section": 10,
+   "text": "The Radio Coordinator uses the South Access Lane Notice as part of accountable operational review.",
+   "tags": [
+    "F10:link"
+   ]
+  },
+  {
+   "unit_id": "S236",
+   "section": 10,
+   "text": "The Regional Radio Network and its interfaces are checked after maintenance or configuration changes before normal use resumes.",
+   "tags": []
+  },
+  {
+   "unit_id": "S237",
+   "section": 10,
+   "text": "Fleet Maintenance Cell schedules preventive work according to manufacturer guidance, service history, and regional operating requirements.",
+   "tags": []
+  },
+  {
+   "unit_id": "S238",
+   "section": 10,
+   "text": "Maintenance records include the asset identifier, work performed, parts used, and return-to-service decision.",
+   "tags": []
+  },
+  {
+   "unit_id": "S239",
+   "section": 10,
+   "text": "The Ambulance Coordination Platform is monitored for availability, response time, data integrity, and interface failures.",
+   "tags": []
+  },
+  {
+   "unit_id": "S240",
+   "section": 10,
+   "text": "The Regional Dispatch Center reviews service measures at a defined cadence and compares results with approved operating thresholds.",
+   "tags": []
+  },
+  {
+   "unit_id": "S241",
+   "section": 10,
+   "text": "Performance reviews consider demand, coverage, dispatch delay, communications availability, and unresolved data quality issues.",
+   "tags": []
+  },
+  {
+   "unit_id": "S242",
+   "section": 10,
+   "text": "The Hospital Liaison Desk contributes relevant operational observations while protecting information that is not required for the review.",
+   "tags": []
+  },
+  {
+   "unit_id": "S243",
+   "section": 10,
+   "text": "The Regional Medical Director and Shift Commander review significant events that may indicate a need for clinical or operational improvement.",
+   "tags": []
+  },
+  {
+   "unit_id": "S244",
+   "section": 10,
+   "text": "Corrective actions are tracked through verification so that completion is distinguished from demonstrated effectiveness.",
+   "tags": []
+  },
+  {
+   "unit_id": "S245",
+   "section": 10,
+   "text": "Recurring issues are evaluated for systemic causes rather than closed solely through local workarounds.",
+   "tags": []
+  },
+  {
+   "unit_id": "S246",
+   "section": 10,
+   "text": "Approved lessons are incorporated into procedures, training, maintenance plans, or release criteria as appropriate.",
+   "tags": []
+  },
+  {
+   "unit_id": "S247",
+   "section": 10,
+   "text": "The Regional Dispatch Center provides a periodic summary of assurance activities, open risks, and improvement progress to regional oversight.",
+   "tags": []
+  }
+ ]
+}

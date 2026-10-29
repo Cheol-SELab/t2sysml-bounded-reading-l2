@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Chemical Supplier Driver provides \"the Chlorine Cylinder Seal Log\" to Duty Engineer (an information or material flow).\n\nSource sentences:\nS111: Any planned change affecting the Clearwell Level Controller requires coordination with the High Service Pump Header operating plan before the change is applied.\nS112: The Chemical Supplier Driver sends the Chlorine Cylinder Seal Log before unloading any replacement cylinders at the plant.\nS222: The Maintenance Planner uses the permit to verify isolation boundaries before confined-space work is released.\nS223: The Duty Engineer reviews the Chlorine Cylinder Seal Log before accepting a change in chlorine storage status.\n\nAnswer \"supported\" only if the sentences state that Chemical Supplier Driver produces or sends this item AND that Duty Engineer receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S112 states the Chemical Supplier Driver sends the Chlorine Cylinder Seal Log, and S223 states the Duty Engineer reviews that same log, so the flow from driver to engineer is supported.\"}",
+ "usage": {
+  "input_tokens": 695,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 87,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.47,
+ "created": "2026-10-14T12:38:56"
+}

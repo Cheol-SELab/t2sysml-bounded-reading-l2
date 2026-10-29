@@ -1,0 +1,112 @@
+{
+ "sentences": [
+  {
+   "text": "The Medication Order Gateway is called Morrowglass in this concept.",
+   "tags": [
+    "ALIAS:E_ORDER_GATEWAY"
+   ]
+  },
+  {
+   "text": "The Sensor-monitored Medication Cooler is called Bluejay in this concept.",
+   "tags": [
+    "ALIAS:E_MEDICATION_COOLER"
+   ]
+  },
+  {
+   "text": "The Pharmacy Technician is called Copperfield in this concept.",
+   "tags": [
+    "ALIAS:E_PHARMACY_TECHNICIAN"
+   ]
+  },
+  {
+   "text": "The Medication Order Gateway accepts medication orders from authorized clinical systems and records their arrival times.",
+   "tags": []
+  },
+  {
+   "text": "It checks required order fields, patient identifiers, medication codes, quantities, and destination details before routing an order for pharmacy review.",
+   "tags": []
+  },
+  {
+   "text": "The gateway flags missing data, duplicate submissions, and changes that conflict with the active order record.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Order Gateway produces the Order Reconciliation Snapshot for documenting detected order discrepancies.",
+   "tags": [
+    "F3:intro"
+   ]
+  },
+  {
+   "text": "The Pharmacy Verification Station displays queued orders and their validation results for review.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist evaluates clinical appropriateness, dose limits, allergies, and relevant interactions before approving an order.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician investigates administrative discrepancies and requests clarification through approved clinical channels.",
+   "tags": []
+  },
+  {
+   "text": "Unresolved discrepancies keep an order from advancing to preparation.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Fulfillment Robot prepares only orders that have passed the required review and authorization checks.",
+   "tags": []
+  },
+  {
+   "text": "The Sensor-monitored Medication Cooler maintains refrigerated medications within the facility's approved temperature range.",
+   "tags": []
+  },
+  {
+   "text": "Continuous sensors record temperature readings and report excursions or loss of monitoring connectivity.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician checks the cooler's status and confirms that refrigerated stock remains within handling limits before use.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician produces the Cold Chain Handoff Card to document custody and handling conditions.",
+   "tags": [
+    "F4:intro"
+   ]
+  },
+  {
+   "text": "When an excursion occurs, affected stock is segregated pending assessment and disposition by authorized pharmacy staff.",
+   "tags": []
+  },
+  {
+   "text": "Temperature records are retained with timestamps so reviewers can establish the duration and extent of an excursion.",
+   "tags": []
+  },
+  {
+   "text": "The Clinical Pharmacist determines whether affected medication remains suitable for dispensing under approved procedures.",
+   "tags": []
+  },
+  {
+   "text": "The Pharmacy Technician checks packaging, product identity, lot details, and expiry information during routine stock handling.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Safety Officer reviews patterns of discrepancies and handling events for potential safety concerns.",
+   "tags": []
+  },
+  {
+   "text": "The Medication Safety Officer produces the Diversion Review Packet when a diversion concern requires documented review.",
+   "tags": [
+    "F8:intro"
+   ]
+  },
+  {
+   "text": "The Pharmacy Verification Station preserves review decisions and order status changes in an auditable record.",
+   "tags": []
+  },
+  {
+   "text": "Orders remain unavailable for dispensing until required checks are complete and their status is authorized.",
+   "tags": []
+  }
+ ]
+}

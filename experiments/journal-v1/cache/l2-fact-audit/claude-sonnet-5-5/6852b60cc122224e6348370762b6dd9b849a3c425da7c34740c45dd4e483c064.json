@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: transition(to=unavailable)\n\nSource sentences (the last one is where the fact was extracted):\nS172: Sensor-monitored Medication Cooler applies approved upper and lower temperature limits to each monitored compartment.\nS173: Calibrated probes report readings at configured intervals, and the cooler records probe identity and calibration status with each reading.\nS174: Refrigerated stock is identified by medication, lot, and expiration date so that each unit remains traceable to its storage history.\nS175: When readings exceed a limit or a probe becomes unavailable, the affected stock is marked ineligible for routine dispensing.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"partially_supported\",\"reason\":\"S175 says a probe 'becomes unavailable', which implies a transition to an unavailable state. The fact gives no source state, trigger, or effect, so only the target is supported, and the marking of stock as ineligible is not captured.\"}",
+ "usage": {
+  "input_tokens": 654,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.045,
+ "created": "2026-10-14T12:51:46"
+}

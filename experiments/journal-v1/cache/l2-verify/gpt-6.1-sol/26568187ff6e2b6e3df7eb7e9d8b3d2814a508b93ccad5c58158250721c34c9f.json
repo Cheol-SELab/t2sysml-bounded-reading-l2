@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Emergency Generator provides \"the Start Test Trace\" to Substation Operator (an information or material flow).\n\nSource sentences:\nS352: The Fire Detection Panel is checked for healthy status, active faults, and unobstructed access to response equipment.\nS353: The Emergency Generator produces the Start Test Trace during its scheduled functional test.\nS531: The Shore Control Room sends the Switching Window Acknowledgment after the approved switching period is entered in the operating log.\nS532: The Substation Operator uses the test trace to verify that the planned restoration checks have completed before requesting the next switching step.\n\nAnswer \"supported\" only if the sentences state that Emergency Generator produces or sends this item AND that Substation Operator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S353 states that the Emergency Generator produces the Start Test Trace, and S532 states that the Substation Operator uses the test trace.\"}",
+ "usage": {
+  "input_tokens": 296,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 69,
+  "output_tokens_details": {
+   "reasoning_tokens": 23
+  },
+  "total_tokens": 365
+ },
+ "attempts": 1,
+ "wall_s": 4.456,
+ "created": "2026-10-14T12:54:10"
+}

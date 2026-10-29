@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Satellite Time Receiver provides \"the Clock Drift Snapshot\" to Sequence Event Archive (an information or material flow).\n\nSource sentences:\nS043: Holdover performance varies by device and may degrade as the interval without a valid reference increases.\nS044: The Satellite Time Receiver produces the Clock Drift Snapshot when its measured offset meets the configured reporting condition.\nS139: The Station Supervisory Control System uses the status digest to review current station operating conditions.\nS140: The Sequence Event Archive receives the Clock Drift Snapshot for event-time correlation.\n\nAnswer \"supported\" only if the sentences state that Satellite Time Receiver produces or sends this item AND that Sequence Event Archive receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S044 states the Satellite Time Receiver produces the Clock Drift Snapshot, and S140 states the Sequence Event Archive receives the same Clock Drift Snapshot, so the flow from receiver to archive is supported.\"}",
+ "usage": {
+  "input_tokens": 655,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 93,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.917,
+ "created": "2026-10-14T12:37:57"
+}

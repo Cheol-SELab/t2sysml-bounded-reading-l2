@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Caldera Incident Command Portal provides \"the Crew Staging Pin\" to Helitack Crew Leader (an information or material flow).\n\nSource sentences:\nS119: Emberhall renders the current perimeter, projected spread, resource positions, and decision annotations into a common operating picture with role-based symbology.\nS120: The Caldera Incident Command Portal produces the Crew Staging Pin from the approved map layer and assigns it an effective time, location accuracy, and incident identifier.\nS208: The Helitack Crew Leader shall be trained on use of the Crewline Mobile Tablet, field acknowledgments, location updates, and communication discipline during changing fire behavior.\nS209: During field mobilization drills, the Helitack Crew Leader shall use the staging pin to confirm that the assigned crew is positioned at the exercise location.\n\nAnswer \"supported\" only if the sentences state that Caldera Incident Command Portal produces or sends this item AND that Helitack Crew Leader receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S120 states that the Caldera Incident Command Portal produces the Crew Staging Pin, and S209 states that the Helitack Crew Leader uses the staging pin to confirm crew positioning.\"}",
+ "usage": {
+  "input_tokens": 346,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 54,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 400
+ },
+ "attempts": 1,
+ "wall_s": 6.456,
+ "created": "2026-10-14T12:37:21"
+}

@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: North Aisle Stacker Crane provides \"the Aisle Occupancy Snapshot\" to Warehouse Management System (an information or material flow).\n\nSource sentences:\nS091: Duplicate induction requests are held for resolution rather than treated as new pallet movements.\nS092: The North Aisle Stacker Crane sends the Aisle Occupancy Snapshot.\nS176: Conveyor Line Controller holds transfers that could feed material into the isolated area.\nS177: Morrowglass, the Warehouse Management System, receives the occupancy snapshot for recovery planning.\n\nAnswer \"supported\" only if the sentences state that North Aisle Stacker Crane produces or sends this item AND that Warehouse Management System receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S092 states the North Aisle Stacker Crane sends the Aisle Occupancy Snapshot, and S177 states Morrowglass, the Warehouse Management System, receives the occupancy snapshot, which is the same item named more briefly.\"}",
+ "usage": {
+  "input_tokens": 652,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 97,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.077,
+ "created": "2026-10-14T12:43:05"
+}

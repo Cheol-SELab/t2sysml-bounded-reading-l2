@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: state(label=automatic control)\n\nSource sentences (the last one is where the fact was extracted):\nS065: The Laboratory Technician provides confirmation testing when online analyzers disagree with observed filter performance or with routine process samples.\nS066: The Laboratory Sample Receiving Bench is used for custody-controlled receipt of compliance and process samples collected from treatment locations.\nS067: The SCADA Historian Server retains dose changes, analyzer values, filter status changes, wash sequences, and operator comments for later review.\nS068: Manual override is permitted for chemical feed, valve sequencing, and filter start or stop actions only when automatic control is unavailable or inappropriate for the condition.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S068 refers to 'automatic control' as a condition that can be available or unavailable, which implies an automatic control mode/state in contrast to manual override, so a state labeled 'automatic control' is directly implied.\"}",
+ "usage": {
+  "input_tokens": 681,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 84,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 3.474,
+ "created": "2026-10-14T12:52:07"
+}

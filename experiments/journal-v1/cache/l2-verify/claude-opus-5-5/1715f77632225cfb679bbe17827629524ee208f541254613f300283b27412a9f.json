@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 2,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Warehouse Operations Supervisor provides \"work\" to Autonomous Forklift Fleet (an information or material flow).\n\nSource sentences:\nS135: East Transfer Conveyor and West Transfer Conveyor provide separate routes for moving pallets between operating areas.\nS136: Autonomous Forklift Fleet receives work only when a route and destination are available for the assigned vehicle.\nS170: Fire Alarm Panel and Safety Zone Controller retain authority to stop or restrict movement whenever their safety status requires it.\nS171: Warehouse Operations Supervisor releases normal work only after outstanding exceptions, maintenance holds, and access constraints have been reconciled.\nS191: Maintenance Release Terminal records the inspection outcome and any repair work required before equipment can return to service.\nS192: Warehouse Operations Supervisor reconciles outstanding exceptions, maintenance holds, and access constraints before releasing normal work.\n\nAnswer \"supported\" only if the sentences state that Warehouse Operations Supervisor produces or sends this item AND that Autonomous Forklift Fleet receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S171 and S192 state that the Warehouse Operations Supervisor releases normal work, and S136 states that the Autonomous Forklift Fleet receives work, so the same item flows from one to the other, named more briefly in S136.\"}",
+ "usage": {
+  "input_tokens": 783,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 250,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 159
+  }
+ },
+ "attempts": 1,
+ "wall_s": 5.943,
+ "created": "2026-10-14T12:42:52"
+}

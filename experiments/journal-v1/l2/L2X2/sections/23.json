@@ -1,0 +1,106 @@
+{
+ "sentences": [
+  {
+   "text": "An export restriction may arise from a grid instruction, a cable condition, or a substation operating limit.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Planner treats a confirmed restriction as a Grid Constraint until the applicable limit is clarified or withdrawn.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Gateway presents current generation, export, and equipment status to the operations team.",
+   "tags": []
+  },
+  {
+   "text": "Grid Dispatcher receives the Export Limit Advisory and uses it to set the permitted export level.",
+   "tags": [
+    "F14:link"
+   ]
+  },
+  {
+   "text": "The Control Engineer verifies the permitted level, its effective time, and any required ramp rate before changing operating targets.",
+   "tags": []
+  },
+  {
+   "text": "The Fleet Dispatch Console supports coordinated adjustment of turbine output across the affected operating area.",
+   "tags": []
+  },
+  {
+   "text": "The Control Engineer reduces active power in controlled steps and checks that measured export follows the revised target.",
+   "tags": []
+  },
+  {
+   "text": "The Turbine Controller applies the accepted output target while retaining its protective control functions.",
+   "tags": []
+  },
+  {
+   "text": "The Pitch System adjusts blade angle within its operating envelope and does not override local protection limits.",
+   "tags": []
+  },
+  {
+   "text": "The Converter Cabinet remains within its electrical and thermal ratings throughout the reduction.",
+   "tags": []
+  },
+  {
+   "text": "The Export Cable Monitor is checked for temperature, loading, and alarm status during the response.",
+   "tags": []
+  },
+  {
+   "text": "The Offshore Substation operator confirms that export equipment remains within its approved operating range.",
+   "tags": []
+  },
+  {
+   "text": "The Main Transformer is monitored for loading and temperature, and any abnormal trend is escalated without delay.",
+   "tags": []
+  },
+  {
+   "text": "The Grid Interface Relay retains its protection settings unless an authorized switching plan requires a controlled change.",
+   "tags": []
+  },
+  {
+   "text": "The Control Engineer compares actual export with the permitted level and investigates any persistent mismatch.",
+   "tags": []
+  },
+  {
+   "text": "If the restriction changes, the Duty Planner records the revised operating basis and coordinates updated targets.",
+   "tags": []
+  },
+  {
+   "text": "The Maintenance Planning Engine is used to review whether the constraint affects planned work or equipment availability.",
+   "tags": []
+  },
+  {
+   "text": "Turbines are not repeatedly ramped to chase short-lived fluctuations that fall within the agreed control tolerance.",
+   "tags": []
+  },
+  {
+   "text": "The Nacelle Condition Monitor and turbine alarms are reviewed for signs that curtailment or ramping is stressing equipment.",
+   "tags": []
+  },
+  {
+   "text": "The Weather Service information is considered when weather conditions may affect operating margins or access decisions.",
+   "tags": []
+  },
+  {
+   "text": "The SCADA Engineer investigates telemetry gaps or inconsistent measurements before the team relies on them for control decisions.",
+   "tags": []
+  },
+  {
+   "text": "The Substation Operator reports any substation limitation that could require a lower export target or local equipment action.",
+   "tags": []
+  },
+  {
+   "text": "The Control Engineer escalates any condition that threatens equipment limits, protection coordination, or safe operation.",
+   "tags": []
+  },
+  {
+   "text": "The Duty Planner maintains a clear record of the restriction, response actions, approvals, and outstanding checks for shift handover.",
+   "tags": []
+  },
+  {
+   "text": "When the restriction is released, the Control Engineer confirms authorization and restores output gradually while monitoring equipment response.",
+   "tags": []
+  }
+ ]
+}

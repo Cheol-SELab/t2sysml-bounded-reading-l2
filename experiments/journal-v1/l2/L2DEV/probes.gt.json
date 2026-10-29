@@ -1,0 +1,397 @@
+{
+ "doc_id": "L2DEV",
+ "writer": "gpt-6-luna",
+ "verifier": "gpt-5.5",
+ "budget": 1024,
+ "doc_tokens": 4825,
+ "far_share": 1.0,
+ "entities": [
+  {
+   "entity_id": "E_REGIONAL_DISPATCH_CENTER",
+   "canonical": "Regional Dispatch Center",
+   "kind": "part",
+   "aliases": [
+    "Juniper"
+   ]
+  },
+  {
+   "entity_id": "E_CALL_TAKER_MARA",
+   "canonical": "Call Taker Mara",
+   "kind": "actor",
+   "aliases": [
+    "Larkspur"
+   ]
+  },
+  {
+   "entity_id": "E_TRIAGE_SUPERVISOR",
+   "canonical": "Triage Supervisor",
+   "kind": "actor",
+   "aliases": [
+    "Copperfield"
+   ]
+  },
+  {
+   "entity_id": "E_RADIO_COORDINATOR",
+   "canonical": "Radio Coordinator",
+   "kind": "actor",
+   "aliases": [
+    "Mistral"
+   ]
+  },
+  {
+   "entity_id": "E_FLEET_MAINTENANCE_CELL",
+   "canonical": "Fleet Maintenance Cell",
+   "kind": "part",
+   "aliases": [
+    "Bluejay"
+   ]
+  },
+  {
+   "entity_id": "E_HOSPITAL_LIAISON_DESK",
+   "canonical": "Hospital Liaison Desk",
+   "kind": "part",
+   "aliases": [
+    "Kestrel"
+   ]
+  },
+  {
+   "entity_id": "E_NORTH_GATE_STATUS_BOARD",
+   "canonical": "North Gate Status Board",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_GATE_STATUS_BOARD",
+   "canonical": "South Gate Status Board",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SHIFT_COMMANDER",
+   "canonical": "Shift Commander",
+   "kind": "actor",
+   "aliases": [
+    "Sundial"
+   ]
+  },
+  {
+   "entity_id": "E_DATA_QUALITY_OFFICER",
+   "canonical": "Data Quality Officer",
+   "kind": "actor",
+   "aliases": [
+    "Pebble"
+   ]
+  },
+  {
+   "entity_id": "E_AMBULANCE_COORDINATION_PLATFORM",
+   "canonical": "Ambulance Coordination Platform",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_COMPUTER_AIDED_DISPATCH_CONSOLE",
+   "canonical": "Computer Aided Dispatch Console",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MEDICAL_DIRECTOR",
+   "canonical": "Regional Medical Director",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PARAMEDIC_CREW",
+   "canonical": "Paramedic Crew",
+   "kind": "actor",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_EMERGENCY_DEPARTMENT",
+   "canonical": "Emergency Department",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_TRAUMA_CENTER",
+   "canonical": "Riverside Trauma Center",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_REGIONAL_RADIO_NETWORK",
+   "canonical": "Regional Radio Network",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_AMBULANCE_UNIT_417",
+   "canonical": "Ambulance Unit 417",
+   "kind": "part",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_CALLER_LOCATION_CORRECTION_SLIP",
+   "canonical": "Caller Location Correction Slip",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_PEDIATRIC_ACUITY_NOTE",
+   "canonical": "Pediatric Acuity Note",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_UNIT_STAGING_CHANGE_CARD",
+   "canonical": "Unit Staging Change Card",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_COVERAGE_GAP_BULLETIN",
+   "canonical": "Coverage Gap Bulletin",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BATTERY_SWAP_VOUCHER",
+   "canonical": "Battery Swap Voucher",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_BEDSIDE_ARRIVAL_RECEIPT",
+   "canonical": "Bedside Arrival Receipt",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_NORTH_APPROACH_QUEUE_SNAPSHOT",
+   "canonical": "North Approach Queue Snapshot",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_MUTUAL_AID_RELEASE_FORM",
+   "canonical": "Mutual Aid Release Form",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_DUPLICATE_INCIDENT_AUDIT_MEMO",
+   "canonical": "Duplicate Incident Audit Memo",
+   "kind": "item",
+   "aliases": []
+  },
+  {
+   "entity_id": "E_SOUTH_ACCESS_LANE_NOTICE",
+   "canonical": "South Access Lane Notice",
+   "kind": "item",
+   "aliases": []
+  }
+ ],
+ "probes": [
+  {
+   "probe_id": "F1",
+   "type": "split_flow",
+   "producer": "E_CALL_TAKER_MARA",
+   "consumer": "E_REGIONAL_DISPATCH_CENTER",
+   "item": "E_CALLER_LOCATION_CORRECTION_SLIP",
+   "link_ref": "short",
+   "short_ref": "the correction slip",
+   "intro_unit": "S062",
+   "link_unit": "S153",
+   "distance_tokens": 1693
+  },
+  {
+   "probe_id": "F2",
+   "type": "split_flow",
+   "producer": "E_TRIAGE_SUPERVISOR",
+   "consumer": "E_HOSPITAL_LIAISON_DESK",
+   "item": "E_PEDIATRIC_ACUITY_NOTE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S084",
+   "link_unit": "S179",
+   "distance_tokens": 1772
+  },
+  {
+   "probe_id": "F3",
+   "type": "split_flow",
+   "producer": "E_REGIONAL_DISPATCH_CENTER",
+   "consumer": "E_RADIO_COORDINATOR",
+   "item": "E_UNIT_STAGING_CHANGE_CARD",
+   "link_ref": "short",
+   "short_ref": "the change card",
+   "intro_unit": "S112",
+   "link_unit": "S207",
+   "distance_tokens": 1858
+  },
+  {
+   "probe_id": "F4",
+   "type": "split_flow",
+   "producer": "E_RADIO_COORDINATOR",
+   "consumer": "E_SHIFT_COMMANDER",
+   "item": "E_COVERAGE_GAP_BULLETIN",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S123",
+   "link_unit": "S208",
+   "distance_tokens": 1671
+  },
+  {
+   "probe_id": "F5",
+   "type": "split_flow",
+   "producer": "E_FLEET_MAINTENANCE_CELL",
+   "consumer": "E_REGIONAL_DISPATCH_CENTER",
+   "item": "E_BATTERY_SWAP_VOUCHER",
+   "link_ref": "short",
+   "short_ref": "the swap voucher",
+   "intro_unit": "S041",
+   "link_unit": "S138",
+   "distance_tokens": 1804
+  },
+  {
+   "probe_id": "F6",
+   "type": "split_flow",
+   "producer": "E_HOSPITAL_LIAISON_DESK",
+   "consumer": "E_CALL_TAKER_MARA",
+   "item": "E_BEDSIDE_ARRIVAL_RECEIPT",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S069",
+   "link_unit": "S165",
+   "distance_tokens": 1790
+  },
+  {
+   "probe_id": "F7",
+   "type": "split_flow",
+   "producer": "E_NORTH_GATE_STATUS_BOARD",
+   "consumer": "E_REGIONAL_DISPATCH_CENTER",
+   "item": "E_NORTH_APPROACH_QUEUE_SNAPSHOT",
+   "link_ref": "short",
+   "short_ref": "the queue snapshot",
+   "intro_unit": "S034",
+   "link_unit": "S139",
+   "distance_tokens": 1955
+  },
+  {
+   "probe_id": "F8",
+   "type": "split_flow",
+   "producer": "E_SHIFT_COMMANDER",
+   "consumer": "E_FLEET_MAINTENANCE_CELL",
+   "item": "E_MUTUAL_AID_RELEASE_FORM",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S137",
+   "link_unit": "S228",
+   "distance_tokens": 1810
+  },
+  {
+   "probe_id": "F9",
+   "type": "split_flow",
+   "producer": "E_DATA_QUALITY_OFFICER",
+   "consumer": "E_TRIAGE_SUPERVISOR",
+   "item": "E_DUPLICATE_INCIDENT_AUDIT_MEMO",
+   "link_ref": "short",
+   "short_ref": "the audit memo",
+   "intro_unit": "S088",
+   "link_unit": "S193",
+   "distance_tokens": 2019
+  },
+  {
+   "probe_id": "F10",
+   "type": "split_flow",
+   "producer": "E_SOUTH_GATE_STATUS_BOARD",
+   "consumer": "E_RADIO_COORDINATOR",
+   "item": "E_SOUTH_ACCESS_LANE_NOTICE",
+   "link_ref": "full",
+   "short_ref": "",
+   "intro_unit": "S161",
+   "link_unit": "S235",
+   "distance_tokens": 1459
+  },
+  {
+   "probe_id": "A1",
+   "type": "alias_ref",
+   "entity_id": "E_REGIONAL_DISPATCH_CENTER",
+   "alias": "Juniper",
+   "intro_unit": "S003",
+   "link_unit": "S124",
+   "distance_tokens": 2313
+  },
+  {
+   "probe_id": "A2",
+   "type": "alias_ref",
+   "entity_id": "E_CALL_TAKER_MARA",
+   "alias": "Larkspur",
+   "intro_unit": "S052",
+   "link_unit": "S154",
+   "distance_tokens": 1914
+  },
+  {
+   "probe_id": "A3",
+   "type": "alias_ref",
+   "entity_id": "E_TRIAGE_SUPERVISOR",
+   "alias": "Copperfield",
+   "intro_unit": "S085",
+   "link_unit": "S189",
+   "distance_tokens": 1974
+  },
+  {
+   "probe_id": "A4",
+   "type": "alias_ref",
+   "entity_id": "E_RADIO_COORDINATOR",
+   "alias": "Mistral",
+   "intro_unit": "S035",
+   "link_unit": "S131",
+   "distance_tokens": 1798
+  },
+  {
+   "probe_id": "A5",
+   "type": "alias_ref",
+   "entity_id": "E_FLEET_MAINTENANCE_CELL",
+   "alias": "Bluejay",
+   "intro_unit": "S039",
+   "link_unit": "S132",
+   "distance_tokens": 1739
+  },
+  {
+   "probe_id": "A6",
+   "type": "alias_ref",
+   "entity_id": "E_HOSPITAL_LIAISON_DESK",
+   "alias": "Kestrel",
+   "intro_unit": "S053",
+   "link_unit": "S183",
+   "distance_tokens": 2476
+  },
+  {
+   "probe_id": "A7",
+   "type": "alias_ref",
+   "entity_id": "E_SHIFT_COMMANDER",
+   "alias": "Sundial",
+   "intro_unit": "S010",
+   "link_unit": "S136",
+   "distance_tokens": 2401
+  },
+  {
+   "probe_id": "H1",
+   "type": "homonym",
+   "entity_id": "E_NORTH_GATE_STATUS_BOARD",
+   "confusable_entity_id": "E_SOUTH_GATE_STATUS_BOARD",
+   "shared_head": "Gate Status Board",
+   "link_unit": "S140",
+   "distance_tokens": 0
+  },
+  {
+   "probe_id": "H2",
+   "type": "homonym",
+   "entity_id": "E_SOUTH_GATE_STATUS_BOARD",
+   "confusable_entity_id": "E_NORTH_GATE_STATUS_BOARD",
+   "shared_head": "Gate Status Board",
+   "link_unit": "S162",
+   "distance_tokens": 0
+  }
+ ]
+}

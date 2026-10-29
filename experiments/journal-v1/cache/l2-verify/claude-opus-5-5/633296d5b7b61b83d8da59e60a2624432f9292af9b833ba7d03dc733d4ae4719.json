@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-opus-5-5",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Ramp Control Lead provides \"apron congestion\" to Collaborative Decision Log (an information or material flow).\n\nSource sentences:\nS217: The Tower Sequence Manager receives the current ramp intent through system synchronization so that apron releases and runway metering remain consistent.\nS218: If apron congestion begins to affect runway delivery, the Ramp Control Lead escalates the condition to the Tower Supervisor and Airport Duty Manager for a coordinated mitigation decision.\nS465: During the Recovery Phase, the system prioritizes removal of surface holds that constrain multiple rotations before optimizing isolated punctuality impacts.\nS466: Every accepted surface equipment, fuel hold, runway metering, or apron congestion adjustment is written to the Collaborative Decision Log and the Audit Event Ledger with the actor, timestamp, affected flight, and planning rationale.\n\nAnswer \"supported\" only if the sentences state that Ramp Control Lead produces or sends this item AND that Collaborative Decision Log receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"uncertain\",\"reason\":\"S218 has the Ramp Control Lead escalating apron congestion to the Tower Supervisor and Airport Duty Manager, while S466 says accepted apron congestion adjustments are written to the Collaborative Decision Log without naming who writes them, so the source never links the Ramp Control Lead to the log.\"}",
+ "usage": {
+  "input_tokens": 757,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 396,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 276
+  }
+ },
+ "attempts": 1,
+ "wall_s": 4.827,
+ "created": "2026-10-14T12:46:41"
+}

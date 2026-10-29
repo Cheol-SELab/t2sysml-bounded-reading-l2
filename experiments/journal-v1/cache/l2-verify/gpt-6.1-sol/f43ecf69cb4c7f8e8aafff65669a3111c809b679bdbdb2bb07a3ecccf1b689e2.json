@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 0,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Offshore Substation provides \"a Transformer Tap Snapshot\" to Shore Control Room (an information or material flow).\n\nSource sentences:\nS266: The HSE Officer reviews hazards and confirms that proposed controls match the task scope and site conditions.\nS267: The Offshore Substation sends a Transformer Tap Snapshot when a transformer condition review is requested.\nS373: Wildmere applies the accepted export ceiling to control outputs and records its effective time for audit.\nS374: Shore Control Room uses the tap snapshot to check the recorded transformer position during export reviews.\n\nAnswer \"supported\" only if the sentences state that Offshore Substation produces or sends this item AND that Shore Control Room receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S267 states that Offshore Substation sends a Transformer Tap Snapshot, and S374 states that Shore Control Room uses the tap snapshot.\"}",
+ "usage": {
+  "input_tokens": 286,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 43,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 329
+ },
+ "attempts": 1,
+ "wall_s": 4.431,
+ "created": "2026-10-14T12:53:47"
+}

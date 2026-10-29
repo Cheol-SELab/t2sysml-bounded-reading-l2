@@ -1,0 +1,21 @@
+{
+ "provider_status": "openai_responses:gpt-6.1-sol",
+ "sample": 1,
+ "prompt": "Check one candidate model relation against the source sentences of a long document. The sentences come from different places in the document; unit ids show their order.\n\nCandidate: Service Operations Vessel provides \"the Recovery Basket Load Sheet\" to Rescue Coordinator (an information or material flow).\n\nSource sentences:\nS460: The Storekeeper checks repair materials and tooling against the approved repair method before mobilization.\nS461: The Service Operations Vessel prepares the Recovery Basket Load Sheet for the planned work activity.\nS645: The Service Operations Vessel provides a stable working platform when the response requires additional deck space or lifting capability.\nS646: The Rescue Coordinator uses the load sheet to confirm that recovery baskets are secured and their contents are accounted for before transfer.\n\nAnswer \"supported\" only if the sentences state that Service Operations Vessel produces or sends this item AND that Rescue Coordinator receives or uses the same item (it may be named more briefly in one sentence). Answer \"unsupported\" if they describe different items, the wrong elements or the opposite direction. Answer \"uncertain\" if the text is not clear enough. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S461 states that the Service Operations Vessel prepares the Recovery Basket Load Sheet, and S646 states that the Rescue Coordinator uses the load sheet, referring to the same item.\"}",
+ "usage": {
+  "input_tokens": 290,
+  "input_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0
+  },
+  "output_tokens": 51,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 341
+ },
+ "attempts": 1,
+ "wall_s": 5.547,
+ "created": "2026-10-14T12:54:35"
+}

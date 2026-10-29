@@ -1,0 +1,114 @@
+{
+ "sentences": [
+  {
+   "text": "Security operations for the Sentinel Vale ground segment are based on least privilege, strong authentication, network segmentation, and continuous audit collection across all operational environments.",
+   "tags": []
+  },
+  {
+   "text": "Mission Control Center maintains the authority boundary for routine spacecraft operations and confirms that elevated access is tied to an approved shift role and a time-limited operational need.",
+   "tags": []
+  },
+  {
+   "text": "Cybersecurity Desk reviews privileged access daily and challenges dormant, shared, or unexplained accounts before they can be used during a pass or processing shift.",
+   "tags": []
+  },
+  {
+   "text": "Network Control System enforces approved routing paths between ground stations, processing services, and external interfaces, and it records configuration changes in the operational log.",
+   "tags": []
+  },
+  {
+   "text": "Command Validation Gateway accepts the mask file only when the integrity check, configuration identifier, and operator approval state match the active security baseline.",
+   "tags": [
+    "F5:link"
+   ]
+  },
+  {
+   "text": "Mission Planning System treats the retroreflector window as a constrained planning input and prevents its use outside the approved scheduling interval.",
+   "tags": [
+    "F9:link"
+   ]
+  },
+  {
+   "text": "An anomaly is first classified by impact to safety, command authority, data custody, service continuity, and user-facing commitments.",
+   "tags": []
+  },
+  {
+   "text": "Spacecraft Operations Team leads triage for spacecraft safety indicators, while Ground Network Manager leads triage for antenna, link, and site-service indicators.",
+   "tags": []
+  },
+  {
+   "text": "Flight Dynamics Team assesses orbit and timing effects when tracking quality, contact geometry, or prediction freshness is suspected to be degraded.",
+   "tags": []
+  },
+  {
+   "text": "Payload Calibration Team assesses product integrity when calibration state, instrument configuration, or processing repeatability is questioned.",
+   "tags": []
+  },
+  {
+   "text": "Cybersecurity Desk assumes coordination authority when the anomaly includes suspicious authentication, unexpected data movement, unexplained service behavior, or evidence of tampering.",
+   "tags": []
+  },
+  {
+   "text": "During triage, operators preserve volatile logs, current configuration state, operator console history, and relevant message identifiers before restarting services or changing routing.",
+   "tags": []
+  },
+  {
+   "text": "Evidence is stored in write-protected case storage with a chain of custody entry that identifies the collector, collection time, source system, and reason for capture.",
+   "tags": []
+  },
+  {
+   "text": "Forgehouse must quarantine suspect input and derived output when product lineage cannot be proven during an active anomaly investigation.",
+   "tags": [
+    "A3:link"
+   ]
+  },
+  {
+   "text": "Cedar suspends automatic schedule publication when a security or continuity anomaly could invalidate contact commitments or conflict with manual recovery actions.",
+   "tags": [
+    "A5:link"
+   ]
+  },
+  {
+   "text": "Continuity modes are declared by the Mission Control Center after consultation with the affected technical leads and are recorded with the operational objective, expected duration, and exit criteria.",
+   "tags": []
+  },
+  {
+   "text": "In monitor-only mode, command release is stopped, telemetry reception continues where safe, and engineering teams focus on stabilizing observability and protecting evidence.",
+   "tags": []
+  },
+  {
+   "text": "In essential-service mode, the ground segment prioritizes spacecraft safety contacts, time-critical telemetry capture, core orbit support, and protection of unrecoverable payload data.",
+   "tags": []
+  },
+  {
+   "text": "Primary Processing Cluster can pause nonessential production queues and reserve compute capacity for validated recovery runs from known-good inputs.",
+   "tags": [
+    "H2:link"
+   ]
+  },
+  {
+   "text": "If site degradation persists, processing work is transferred to Backup Processing Cluster only after input custody, software baseline, and operator authorization have been verified.",
+   "tags": []
+  },
+  {
+   "text": "Cross-site failover is coordinated through Ground Network Manager so that antenna allocation, network routing, firewall state, and contact schedules remain consistent.",
+   "tags": []
+  },
+  {
+   "text": "North S-Band Antenna, South S-Band Antenna, Kiruna X-Band Antenna, and Svalbard X-Band Antenna are placed in the recovery plan according to current availability and the spacecraft contact priority.",
+   "tags": []
+  },
+  {
+   "text": "Long Term Archive remains the custody reference during degraded operations, and any delayed ingest or publication is reconciled before normal service status is restored.",
+   "tags": []
+  },
+  {
+   "text": "User Services Portal communicates confirmed service impacts in operational terms and avoids publishing speculative root cause information before the incident lead approves release.",
+   "tags": []
+  },
+  {
+   "text": "Recovery is accepted only when command authority is verified, telemetry and product flows are reconciled, security monitoring has returned to the approved baseline, and responsible teams have signed the incident record.",
+   "tags": []
+  }
+ ]
+}

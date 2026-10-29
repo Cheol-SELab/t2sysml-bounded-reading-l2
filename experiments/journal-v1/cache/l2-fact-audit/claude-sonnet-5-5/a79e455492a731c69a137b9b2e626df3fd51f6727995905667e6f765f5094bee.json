@@ -1,0 +1,24 @@
+{
+ "provider_status": "anthropic:claude-sonnet-5-5",
+ "sample": 0,
+ "prompt": "Judge one fact extracted for a SysML v2 model from an engineering document. The fact names elements by their full names; the document may refer to them by aliases declared elsewhere (those declarations are included).\n\nFact: action(performer=Airline Ramp Coordinator, label=confirms any flight-side constraint)\n\nSource sentences (the last one is where the fact was extracted):\nS171: Baggage Operations Supervisor approves the operational disposition when the case exceeds the operator's authority.\nS172: After the identity and flight checks pass, Baggage Control System authorizes the bag to rejoin its previously assigned screening and sort path.\nS173: Outbound Load Control Desk confirms that the bag remains eligible for inclusion in the planned flight load.\nS174: Airline Ramp Coordinator confirms any flight-side constraint that could prevent the reconciled bag from being accepted.\n\n\"supported\": every slot value is stated or directly implied by the sentences. \"partially_supported\": the main relation is right but a slot is wrong, over-specific or unsupported. \"unsupported\": the fact is not stated, contradicts the text, or assigns the wrong element. Return JSON {\"verdict\": ..., \"reason\": \"one sentence\"}.",
+ "response": "{\"verdict\":\"supported\",\"reason\":\"S174 states that Airline Ramp Coordinator confirms any flight-side constraint that could prevent the reconciled bag from being accepted, matching the performer and the action label.\"}",
+ "usage": {
+  "input_tokens": 676,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 73,
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  }
+ },
+ "attempts": 1,
+ "wall_s": 2.238,
+ "created": "2026-10-14T12:52:13"
+}
