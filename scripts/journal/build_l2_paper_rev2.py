@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the data-driven LaTeX parts of paper-long/ for the round-2 revision.
+"""Generate the data-driven LaTeX parts of paper-long/ieee-access/ for the round-2 revision.
 
     python scripts/journal/build_l2_paper_rev2.py --tag test-main --long-tag l2x-main
 
-Supersedes build_l2_paper.py (kept unchanged as history). Writes paper-long/benchmark.tex, results.tex,
+Supersedes build_l2_paper.py (kept unchanged as history). Writes paper-long/ieee-access/benchmark.tex, results.tex,
 extras.tex, abstract-results.tex and summary.json. Every number comes from frozen or post-hoc analysis
 files under experiments/journal-v1/l2/analysis/:
   <tag>.json, <long-tag>.json            frozen reports (run_l2.py report)
@@ -28,7 +28,7 @@ from analyze_l2_doclevel import boot_ci, doc_means  # noqa: E402
 
 L2 = ROOT / "experiments" / "journal-v1" / "l2"
 A = L2 / "analysis"
-OUT = ROOT / "paper-long"
+OUT = ROOT / "paper-long" / "ieee-access"
 TEST = [f"L2T{i}" for i in range(1, 9)]
 MODELS = {"gpt-6.1-sol": "Sol", "claude-opus-5-5": "Opus"}
 DOMAIN = {"L2T1": "metro CBTC", "L2T2": "hospital medication", "L2T3": "wildfire detection", "L2T4": "substation automation",

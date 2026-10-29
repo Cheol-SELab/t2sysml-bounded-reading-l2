@@ -3995,6 +3995,7 @@
 603126db27b9042750d1d4d5f1188cb2b213db23236f858a1a272beafe44f0ac       17862  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/873177da9012d93f30d22aeaaeadb4980f4b441183f4380aea77f65a1a6194ad.json
 6036e0a0e1d11178a74cc9f43b1e572fdb1bab1ae5de6cc14bc85381f8d4370a        2032  experiments/journal-v1/cache/l2-verify/claude-opus-5-5/05003c3f7d6af345d7bc0c6145ae7b21ed7a32b91b2b4631b017ba2df108d8f9.json
 6052714b06e92eaaef36519c09e2ddcccc32b6585b405104a3b4608cd53a2c54       20447  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/fb3ef5196072f7042e7f602db695dd32c7e81f1066cb202b6536edabe803f248.json
+6062f30f2dd08502e5785f73a5f0befd7e0c5cc48372c5e56e192495e4874c71       18737  scripts/journal/build_l2_archive.py
 606449c2fbd48387922256a17aea907e4665920590347ad7c0f9c432e12dfdac        2244  experiments/journal-v1/cache/l2-judge/claude-sonnet-5-5/13eee42beae1acffe9930cf78b47a42a4ab2c35acf717a575f23b366752695a1.json
 606e58ff6c12054c30654856f83cffca871a4181860c4a2cb8107e09f8f3ed89        2317  experiments/journal-v1/cache/l2-judge/claude-sonnet-5-5/44cab5a2f5c373b4d97134dabf8f2739ebe374806cdd498f2d59641fe62cefa2.json
 606eef5f387be1fabc34a7c759bf1077f660eec8459620f3dc009b86440aeabe       16871  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/1d91ea791fa6dee59b54e8f39085034f30f8816c02221efd04b7c9016bb8001f.json
@@ -4627,7 +4628,6 @@
 707e703ec1c112e1acf39dbc72c9bcb6b06874a09c2488bf71cb4a932b9cde10       16648  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/e047b74950339e37dd7eb10dff5db7150ce371edf75a8e8e7f061831c487c657.json
 708244fdea3d70b1123fbad818c3c136413d7e64f6871a9c1607f58b817b39e2        9092  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/4fb734e09057522132f3e19358d90c2c6cfe1dfa7055049353b011de49f55c25.json
 7085bb70c78f3c3a126d952c1791cec164701205d0d3b11500a54cb59732c7d0       10224  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/ae0e94a14d48973219830a0ff5f8c6d4a0c946b8ee21796e3f531ffae58c8438.json
-7087c20b46d7a5e605d549259430fe77ec85f1a2c82c81f329e87ba778a17e5e       28565  scripts/journal/build_l2_paper_rev2.py
 70881f6181634b54d48dac1b37e1750bfd222f2945b4b64df73aff89a5accaf6        2011  experiments/journal-v1/cache/l2-judge/claude-sonnet-5-5/17a112c88173574d80e0eeb4f778862323f7bf7853458fd81a9bb168d2b1fbc1.json
 708a71b6b8400c38f228e823445bcf26c3a56a2b841b717de3363cdc33bf4252        1383  src/t2m_pipeline/__init__.py
 708dfc3a853dc68b62bf4f0827c6f306606f57168ebf477636f82e1205d9f8c7       13797  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/bb59f8f6a0121e6fe0230f497eb82ed5832b3252c52e7de546ee0b54fce8861b.json
@@ -5169,7 +5169,6 @@
 7d94336a84464c1c8d148510b9cf2e31a25e493b2c9048d5e778a27c5c0fab7f        6691  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/b029889f0ab9957f9786d92dee85b5c86d4ffca59b0cec79fba8af0e52e5b829.json
 7da823c19c458d56a8fec2d9be72a6724763f26e49a6b88128864f87e716cbe5        9885  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/cbd06276fdb335dc8fd064c14384582275757902f61006733a9de9a3599deb97.json
 7dab302d5b633dc7a557784daddddd3e9ebe95c6adeb002e3709ef278859788c      231494  experiments/journal-v1/l2/L2X1/rendered/claude-opus-5-5/C2/RNV/s1.sysml
-7daf93b0438a24f4d212907b08c2ad8dca6dc1024e03dec3e244140b1aaa5e7d       18548  scripts/journal/build_l2_archive.py
 7db253d4b499ebc64cfb677fdbaef09c13925322cb5e583ed1475420c2523ec7       25808  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/3cb06c41ddec3aa051270ddc8a8ff1bf6fa8b57757d2b12e1bd04f53b55466e0.json
 7db8a681acbf1582bbdaffd767d5c23915780ff7b984e1d9b2a4e04d13d58e8c       13499  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/a75d704c9ff22b678279cee928dedd3be358d37f8583b467755d2a24d948e8ba.json
 7dbd9f2eba1f2ae7e435af55e6dba9f303d0a95a7eb094154b35e4c43960911d       25869  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/5b31ff6ced82c4ee79e8006514a05d24d88b0d07f24d3dc191d13ee51c4db73f.json
@@ -5709,6 +5708,7 @@
 89960a5273d201ccd860fe9a1baf9e3f95ee59eb4e488d0e958b1ee7eb9bd6fb       29270  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/847a90d254f80dde5134d485b58343a827955fe2ec523e4bd0bbc1e2be0a4aa2.json
 89a467bebbfb660575dc29461988a1232e5f1262211b460fa2c4dd50f4115f25       13199  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/6d0b0f7e65e27391af806e97401ffa8de850de624bce0d5c895312f63e1a3b7e.json
 89ae010e352364052721e668445589ce45ca5dd1faf0670bbf8477ca35e82ba9       16887  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/4edafc09a3df9eda56242cee099c61507f444c062058c17a1e967607e92ed107.json
+89b12bc2526f56a046352eed41329f9047ce8ee389b0066d86422c264817d614       28605  scripts/journal/build_l2_paper_rev2.py
 89c32c682966870682f5358e15677ad9525b4a4b56eb02d96fbbe7c546bf8eac        2183  experiments/journal-v1/cache/l2-verify/claude-opus-5-5/687cdbd31d6508324068743c94db1ef76426937b5f2df002da5fe70c4560d949.json
 89c787ebd3f250cb084999242f3841848bfdbc3f9580fbd6b6d9383c5f97dae5       34576  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/aa8e70240cb714508dea3e2b8a0907ad4a64de2bc42d2e74fd00c2e929e5808f.json
 89c8803c47f45d2cbef7df8e585853813461e4418e5244c95a85b5171a6c70fd        2479  experiments/journal-v1/cache/l2-fact-audit/claude-sonnet-5-5/2a803ea5df40cb070a4fcc9462e684bf4c3108be74a7ac564098918eedbdb757.json
@@ -5773,7 +5773,6 @@
 8b9e061ae6aa667785d68deca95857c0f0dda398ca0f9ea7f97a95ff2628113a      151668  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/ffcb6cee81823e506c8649b03874719bd0df055bab12340388ecd3a3994b67bb.json
 8ba1c797eb6a11732cf96734005a78d5d54675bf28b22e7789910f204292bff1        9396  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/5884cafd09ddb69abd4b70b9d0e59c0ef583803ec306af1069e9e53c2b9ca5e8.json
 8ba36ec3059ec6aa2a8c50090e736bd5297d815977e63500616b459f55ff51c5        1955  experiments/journal-v1/cache/l2-verify/claude-opus-5-5/0fd3e0f391f21741eeebfd3149c4a3fc76a3ad60894c0dbcf7556c0aa3189466.json
-8ba3cebfa0835f478711baced93c061efd590ad94f1d5e4c4f57d8527b6ba324        3138  scripts/journal/build_l2_ieee_body.py
 8ba8e1cfa46f779a9ae95d99495c6c0185357b5e1a5346aeecd5403f84fb3b7a       25824  experiments/journal-v1/cache/l2-runs/gpt-6.1-sol/49481a9762531363826f9e887cdcab2f64d9c6e67de44b535f0520dacef26d0e.json
 8bb413054baf61d3686dcc866fe2913464791f4169f41d022ef6ffc3906cd2e2       20499  experiments/journal-v1/cache/l2-runs/gpt-6-luna/befd5754c9e3731e3579f8ee0c3402a2f2626f53e55af070f7a73968ee503169.json
 8bbba2063383ccf0fe761c2b77379be5537c984e45b0c0349fb69818d2f4b37a       19353  experiments/journal-v1/cache/l2-runs/claude-opus-5-5/4d10f9f654280431ae0b79f55008bbaa2301643c637c63dbe782ae6fb0106e96.json

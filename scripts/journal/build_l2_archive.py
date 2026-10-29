@@ -10,20 +10,20 @@
     experiments/journal-v1/models-l2.json; L2T1-8 units.json and probes.gt.json) and freeze.json,
   * the 20K inputs (L2X1/L2X2 units, probes, blueprint, check, verify) and build_l2x_corpus.py,
   * the post-hoc and revision scripts (run_l2_external.py, fact_audit_l2.py, coverage_l2.py, build_l2_paper.py,
-    build_l2_paper_rev2.py, build_l2_ieee_body.py, build_l2_ieee_appendix.py, freeze_l2.py, score_l2_rendered.py,
+    build_l2_paper_rev2.py, build_l2_ieee_appendix.py, freeze_l2.py, score_l2_rendered.py,
     judge_l2_docaware.py, analyze_l2_doclevel.py, build_l2_archive.py) and the checker client sysml_graph.py,
   * every run output (L2T*/runs, L2X*/runs, L2X*/runs-quota-failed, L2DEV/runs, external/runs), every rendered
     model (L2*/rendered), the probe check/verify files,
   * the caches l2-runs, l2-verify, l2-judge, l2-fact-audit, l2-judge-docaware, l2-judge-docaware-ctx,
   * every file under experiments/journal-v1/l2/analysis and l2/external report files, and the run logs,
   * the external corpus inputs (long-source-holdout-v2/<doc>/units.json, corpus-freeze.json),
-  * the paper sources (paper-long/*.tex, refs.bib, ieee-access/*.tex, figures, cls files).
+  * the paper sources (paper-long/ieee-access/*.tex, refs.bib, figures, cls files) unless --no-manuscript.
 It writes MANIFEST.sha256 (one line per file: sha256, size, path), computes the EVIDENCE BUNDLE HASH as the
 SHA-256 of the sorted manifest lines of everything except the paper sources (so the manuscript can quote it
 without a hash cycle), a separate MANUSCRIPT-MANIFEST.sha256 for the paper sources, and
 experiments/journal-v1/l2/freeze-extension.json (hashes of the 20K inputs, post-hoc scripts, checker client and
 language-server binary; references freeze.json by hash; records that the pre-amendment run_l2.py is not retained).
-It also writes paper-long/archive-hash.tex, the Data Availability paragraph quoting the bundle hash.
+It also writes paper-long/ieee-access/archive-hash.tex, the Data Availability paragraph quoting the bundle hash.
 Nothing under the source tree is modified except these three generated files (freeze-extension.json,
 archive-hash.tex, and the copy under --dest).
 
@@ -51,17 +51,17 @@ LSP_BIN = Path(os.environ.get("SELAB_LSP_BIN", str(LSP_DEFAULT)))
 
 FROZEN_SCRIPTS = ["run_l2.py", "analyze_l2.py", "build_l2_corpus.py"]
 POSTHOC_SCRIPTS = ["build_l2x_corpus.py", "run_l2_external.py", "fact_audit_l2.py", "coverage_l2.py", "build_l2_paper.py",
-                   "build_l2_paper_rev2.py", "build_l2_ieee_body.py", "build_l2_ieee_appendix.py", "freeze_l2.py",
-                   "score_l2_rendered.py", "judge_l2_docaware.py", "analyze_l2_doclevel.py", "build_l2_archive.py",
+                   "build_l2_paper_rev2.py", "build_l2_ieee_appendix.py", "freeze_l2.py",
+                   "score_l2_rendered.py", "judge_l2_docaware.py", "analyze_l2_doclevel.py", "build_l2_archive.py",  # build_l2_ieee_body.py removed 2026-10-29 with the article version
                    "run_l2_c1_512.py", "analyze_l2_c1_512.py"]
 SRC = ["src/t2m_eval/l2_ledger.py", "src/t2m_eval/l2_sysml.py", "src/t2m_eval/long_memory.py", "src/t2m_eval/long_doc.py",
        "src/t2m_eval/adapters.py", "src/t2m_eval/normalize.py", "src/t2m_eval/dc_gt.py", "src/t2m_pipeline/llm_clients.py",
        "src/t2m_pipeline/openai_client.py", "src/t2m_eval/sysml_graph.py", "src/t2m_eval/__init__.py", "src/t2m_pipeline/__init__.py"]
 CACHES = ["l2-runs", "l2-verify", "l2-judge", "l2-fact-audit", "l2-judge-docaware", "l2-judge-docaware-ctx"]
 # generated table sources (outputs of build_l2_paper_rev2.py / build_l2_ieee_appendix.py); the public archive carries only these
-TABLE_FILES = ["paper-long/benchmark.tex", "paper-long/results.tex", "paper-long/extras.tex", "paper-long/abstract-results.tex",
-               "paper-long/summary.json", "paper-long/ieee-access/appendix.tex"]
-PAPER_GLOBS = ["paper-long/*.tex", "paper-long/refs.bib", "paper-long/main.pdf", "paper-long/ieee-access/manuscript-ieee-access.pdf", "paper-long/summary.json", "paper-long/ieee-access/*.tex",
+TABLE_FILES = ["paper-long/ieee-access/benchmark.tex", "paper-long/ieee-access/results.tex", "paper-long/ieee-access/extras.tex",
+               "paper-long/ieee-access/summary.json", "paper-long/ieee-access/appendix.tex"]
+PAPER_GLOBS = ["paper-long/ieee-access/*.tex", "paper-long/ieee-access/refs.bib", "paper-long/ieee-access/manuscript-ieee-access.pdf", "paper-long/ieee-access/summary.json",
                "paper-long/ieee-access/*.cls", "paper-long/ieee-access/figures/*", "paper-long/ieee-access/*.png"]
 
 
@@ -171,13 +171,20 @@ def write_archive_tex(bundle: str, n_files: int, size_mb: float, dest_note: str,
            "Hashes of the rendered manuscript sources are kept in a separate manifest so that the manuscript can quote the evidence hash "
            "without a self-reference.")
     )
-    (ROOT / "paper-long" / "archive-hash.tex").write_text(text + "\n", encoding="utf-8")
+    (ROOT / "paper-long" / "ieee-access" / "archive-hash.tex").write_text(text + "\n", encoding="utf-8")
 
 
 def cmd_build(args):
+    if not args.dest.strip():
+        print("refusing: --dest is empty", file=sys.stderr)
+        return 2
     dest = Path(args.dest)
     if not dest.is_absolute():
         dest = ROOT / dest
+    dest = dest.resolve()
+    if dest == ROOT.resolve() or dest in ROOT.resolve().parents or (dest / "scripts" / "journal" / "build_l2_archive.py").resolve() == Path(__file__).resolve():
+        print(f"refusing: --dest {dest} is the source tree itself", file=sys.stderr)
+        return 2
     if dest.exists():
         if not args.force:
             print(f"refusing to overwrite existing {dest}; pass --force", file=sys.stderr)
@@ -210,7 +217,7 @@ def cmd_build(args):
     (dest / "README-ARCHIVE.md").write_text(
         title +
         f"Evidence bundle SHA-256: `{bundle}` (hash of MANIFEST.sha256 content). {len(lines):,} evidence files, {size:,.0f} MB.\n" +
-        ("No manuscript material is included; the table generators write their output under paper-long/ when run.\n\n"
+        ("No manuscript material is included; the table generators write their output under paper-long/ieee-access/ when run.\n\n"
          if args.no_manuscript else
          f"Paper sources are listed separately in {pf_manifest} and are not part of the bundle hash.\n\n") +
         "Offline verification (no API key, no model call), from this directory:\n\n"

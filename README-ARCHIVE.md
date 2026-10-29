@@ -1,7 +1,7 @@
 # Evidence archive — public release (https://github.com/Cheol-SELab/t2sysml-bounded-reading-l2)
 
-Evidence bundle SHA-256: `321342de47f4ddd1e48135196c3c929fe43c03a3df2cd79c3d8491db92c15c34` (hash of MANIFEST.sha256 content). 10,588 evidence files, 286 MB.
-No manuscript material is included; the table generators write their output under paper-long/ when run.
+Evidence bundle SHA-256: `303ab1d61e0ae0c80578e4e6b751d120efe7b3399f77f46843962a4ca0a32ac5` (hash of MANIFEST.sha256 content). 10,587 evidence files, 286 MB.
+No manuscript material is included; the table generators write their output under paper-long/ieee-access/ when run.
 
 Offline verification (no API key, no model call), from this directory:
 
